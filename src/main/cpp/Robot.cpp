@@ -1,19 +1,25 @@
-/*----------------------------------------------------------------------------*/
-/* Copyright (c) 2017-2018 FIRST. All Rights Reserved.                        */
-/* Open Source Software - may be modified and shared by FRC teams. The code   */
-/* must be accompanied by the FIRST BSD license file in the root directory of */
-/* the project.                                                               */
-/*----------------------------------------------------------------------------*/
-
 #include "Robot.h"
 
 #include <Commands/Scheduler.h>
 #include <SmartDashboard/SmartDashboard.h>
+#include <iostream>
 
 DriveTrain *Robot::m_DriveTrain;
 OI *Robot::m_oi;
 
 void Robot::RobotInit() {
+  // Print out a banner to the shell
+  std::cout << \
+"   _______    ______    ______   __    __       \n"\
+"/       |  /      \\  /      \\ /  |  /  |      \n"\
+"$$$$$$$/  /$$$$$$  |/$$$$$$  |$$ |  $$ |      \n"\
+"$$ |____  $$$  \\$$ |$$____$$ |$$ |__$$ |      \n"\
+"$$      \\ $$$$  $$ | /    $$/ $$    $$ |      \n"\
+"$$$$$$$  |$$ $$ $$ |/$$$$$$/  $$$$$$$$ |      \n"\
+"/  \\__$$ |$$ \\$$$$ |$$ |_____       $$ |      \n"\
+"$$    $$/ $$   $$$/ $$       |      $$ |      \n"\
+" $$$$$$/   $$$$$$/  $$$$$$$$/       $$/    \n";
+
   // Init camera
 	CameraServer::GetInstance()->StartAutomaticCapture();
 }
