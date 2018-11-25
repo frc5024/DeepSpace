@@ -5,10 +5,13 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#pragma once
+// #pragma once
+#ifndef _DRIVEWITHJOYSTICK_HG_
+#define _DRIVEWITHJOYSTICK_HG_
 
 #include <Commands/Command.h>
-#include "Robot.h"
+#include <Subsystems/DriveTrain.h>
+// #include <Robot.h>
 
 class DriveWithJoystick : public frc::Command {
  public:
@@ -25,5 +28,8 @@ double speedMultiplier;
 double speed;
 double rotation;
 
-frc::XboxController* pJoyDrive = Robot::m_oi->GetJoystickDrive();
+frc::XboxController* pJoyDrive;
+// DriveTrain* pDriveTrain = new DriveTrain();
 };
+
+#endif

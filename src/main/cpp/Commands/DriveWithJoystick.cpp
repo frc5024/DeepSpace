@@ -7,10 +7,12 @@
 
 #include "Commands/DriveWithJoystick.h"
 
+#include "Robot.h"
+
 DriveWithJoystick::DriveWithJoystick() {
-  if (CommandBase::pDriveTrain != nullptr) {
-    Requires(CommandInterface::pDriveTrain);
-  }
+  // Use Requires() here to declare subsystem dependencies
+  Requires(Robot::m_DriveTrain);
+  this->pJoyDrive = Robot::m_oi->GetJoystickDrive();
 }
 
 // Called just before this Command runs the first time
@@ -37,7 +39,7 @@ void DriveWithJoystick::Execute() {
   this->speed    = (this->speed * this->speedMultiplier * this->directionMultiplier);
   this->rotation = (this->rotation * this->directionMultiplier);
 
-  CommandInterface::pDriveTrain->ArcadeDrive(this->speed, this->rotation);
+  Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
 }
 
 // Make this return true when this Command no longer needs to run execute()

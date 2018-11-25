@@ -7,7 +7,7 @@
 
 #include "Subsystems/DriveTrain.h"
 
-DriveTrain::DriveTrain() : Subsystem("DriveTrain") {
+DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
   // Initialize the motors
 	this->pLeftFrontMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_FRONT_MOTOR);
 	this->pLeftRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_REAR_MOTOR);
@@ -39,7 +39,7 @@ DriveTrain::DriveTrain() : Subsystem("DriveTrain") {
 }
 
 void DriveTrain::InitDefaultCommand() {
-  SetDefaultCommand(new DriveWithJoystick());;
+  // SetDefaultCommand(new DriveWithJoystick());
 }
 
 void DriveTrain::ArcadeDrive(double xSpeed, double zRotation) {

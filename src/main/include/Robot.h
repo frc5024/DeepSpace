@@ -5,23 +5,25 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#pragma once
+// #pragma once
+#ifndef _ROBOT_HG_
+#define _ROBOT_HG_
 
 #include <Commands/Command.h>
 #include <SmartDashboard/SendableChooser.h>
 #include <TimedRobot.h>
-#include <WPILib.h>	
 
 #include "Commands/DriveWithJoystick.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 
+
 class Robot : public frc::TimedRobot {
  public:
-  // static DriveTrain* m_DriveTrain;
-  // static OI* m_oi;
+  static DriveTrain *m_DriveTrain;
+  static OI *m_oi;
 
-  DriveWithJoystick* pDriveWithJoystick;
+  DriveWithJoystick pDriveWithJoystick;
 
   void RobotInit() override;
   void RobotPeriodic() override;
@@ -36,6 +38,10 @@ class Robot : public frc::TimedRobot {
  private:
   // Have it null by default so that if testing teleop it
   // doesn't have undefined behavior and potentially crash.
-  frc::Command* m_autonomousCommand = nullptr;
+  // frc::Command* m_autonomousCommand = nullptr;
+  // DriveWithJoystick m_defaultAuto;
+  // MyAutoCommand m_myAuto;
   frc::SendableChooser<frc::Command*> m_chooser;
 };
+
+#endif
