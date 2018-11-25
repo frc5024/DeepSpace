@@ -21,5 +21,9 @@ class DriveWithJoystick : public frc::Command {
 private:
 int directionMultiplier;
 double speedMultiplier;
+
+double speed;
+double rotation;
+
 frc::XboxController* pJoyDrive = Robot::m_oi->GetJoystickDrive();
 };

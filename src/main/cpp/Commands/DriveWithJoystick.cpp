@@ -13,7 +13,13 @@ DriveWithJoystick::DriveWithJoystick() {
 
 // Called just before this Command runs the first time
 void DriveWithJoystick::Initialize() {
+  // Set speed and direction multipliers
   this->directionMultiplier = 1;
+  this->speedMultiplier     = 1;
+
+  //set Speed and Rotation
+  this->speed    = 0.0;
+  this->rotation = 0.0;
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -23,13 +29,13 @@ void DriveWithJoystick::Execute() {
   this->speedMultiplier = (this->pJoyDrive->GetBumper(XboxController::kRightHand)) ? 0.5 : 1;
 
   // Get movement data form controller
-  double Speed    = pJoyDrive->GetY(XboxController::kLeftHand) * -1;
-	double Rotation = pJoyDrive->GetX(XboxController::kLeftHand);
+  this->speed    = pJoyDrive->GetY(XboxController::kLeftHand) * -1;
+	this->rotation = pJoyDrive->GetX(XboxController::kLeftHand);
 
-  Speed    = (Speed * speedMultiplier * directionMultiplier);
-  Rotation = (Rotation * directionMultiplier);
+  this->speed    = (this->speed * this->speedMultiplier * this->directionMultiplier);
+  this->rotation = (this->rotation * this->directionMultiplier);
 
-  Robot::m_DriveTrain->ArcadeDrive(Speed, Rotation);
+  Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
 }
 
 // Make this return true when this Command no longer needs to run execute()
