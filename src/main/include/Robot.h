@@ -5,9 +5,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-// #pragma once
-#ifndef _ROBOT_HG_
-#define _ROBOT_HG_
+#pragma once
 
 #include <Commands/Command.h>
 #include <SmartDashboard/SendableChooser.h>
@@ -43,5 +41,3 @@ class Robot : public frc::TimedRobot {
   // MyAutoCommand m_myAuto;
   frc::SendableChooser<frc::Command*> m_chooser;
 };
-
-#endif

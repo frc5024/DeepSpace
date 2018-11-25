@@ -5,9 +5,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-// #pragma once
-#ifndef _DRIVEWITHJOYSTICK_HG_
-#define _DRIVEWITHJOYSTICK_HG_
+#pragma once
 
 #include <Commands/Command.h>
 #include <Subsystems/DriveTrain.h>
@@ -31,5 +29,3 @@ double rotation;
 frc::XboxController* pJoyDrive;
 // DriveTrain* pDriveTrain = new DriveTrain();
 };
-
-#endif
