@@ -18,9 +18,11 @@ void Robot::RobotInit() {
 "$$$$$$$  |$$ $$ $$ |/$$$$$$/  $$$$$$$$ |      \n"\
 "/  \\__$$ |$$ \\$$$$ |$$ |_____       $$ |      \n"\
 "$$    $$/ $$   $$$/ $$       |      $$ |      \n"\
-" $$$$$$/   $$$$$$/  $$$$$$$$/       $$/    \n";
+" $$$$$$/   $$$$$$/  $$$$$$$$/       $$/    \n"\
+"Robot Starting.."<< std::endl;
 
   // Init camera
+  std::cout << "Starting CameraServer.." << std::endl;
 	CameraServer::GetInstance()->StartAutomaticCapture();
 }
 
