@@ -39,7 +39,7 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 }
 
 void DriveTrain::InitDefaultCommand() {
-  // SetDefaultCommand(new DriveWithJoystick());
+  SetDefaultCommand(new DriveWithJoystick());
 }
 
 void DriveTrain::ArcadeDrive(double xSpeed, double zRotation) {
