@@ -12,14 +12,16 @@
 #include <TimedRobot.h>
 #include <WPILib.h>	
 
-#include "Commands/ExampleCommand.h"
+#include "Commands/DriveWithJoystick.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 
 class Robot : public frc::TimedRobot {
  public:
-  static DriveTrain* m_DriveTrain;
-  static OI* m_oi;
+  // static DriveTrain* m_DriveTrain;
+  // static OI* m_oi;
+
+  DriveWithJoystick* pDriveWithJoystick;
 
   void RobotInit() override;
   void RobotPeriodic() override;

@@ -10,8 +10,8 @@
 #include <Commands/Scheduler.h>
 #include <SmartDashboard/SmartDashboard.h>
 
-DriveTrain* Robot::m_DriveTrain;
-OI* Robot::m_oi;
+// DriveTrain* Robot::m_DriveTrain;
+// OI* Robot::m_oi;
 
 void Robot::RobotInit() {
   

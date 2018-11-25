@@ -8,7 +8,9 @@
 #include "Commands/DriveWithJoystick.h"
 
 DriveWithJoystick::DriveWithJoystick() {
-  Requires(Robot::m_DriveTrain);
+  if (CommandBase::pDriveTrain != nullptr) {
+    Requires(CommandInterface::pDriveTrain);
+  }
 }
 
 // Called just before this Command runs the first time
@@ -35,7 +37,7 @@ void DriveWithJoystick::Execute() {
   this->speed    = (this->speed * this->speedMultiplier * this->directionMultiplier);
   this->rotation = (this->rotation * this->directionMultiplier);
 
-  Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
+  CommandInterface::pDriveTrain->ArcadeDrive(this->speed, this->rotation);
 }
 
 // Make this return true when this Command no longer needs to run execute()
