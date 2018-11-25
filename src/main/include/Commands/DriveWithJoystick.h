@@ -9,7 +9,6 @@
 
 #include <Commands/Command.h>
 #include <Subsystems/DriveTrain.h>
-// #include <Robot.h>
 
 class DriveWithJoystick : public frc::Command {
  public:
@@ -27,5 +26,4 @@ double speed;
 double rotation;
 
 frc::XboxController* pJoyDrive;
-// DriveTrain* pDriveTrain = new DriveTrain();
 };
