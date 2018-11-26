@@ -23,6 +23,10 @@ void Robot::RobotInit() {
 " $$$$$$/   $$$$$$/  $$$$$$$$/       $$/    \n"\
 "Robot Starting.."<< std::endl;
 
+  // Subsystems
+  this->m_DriveTrain = new DriveTrain();
+  this->m_oi = new OI();
+
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
 	CameraServer::GetInstance()->StartAutomaticCapture();
