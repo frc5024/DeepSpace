@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _ROBOT_HG_
+#define _ROBOT_HG_
 
 #include <Commands/Command.h>
 #include <SmartDashboard/SendableChooser.h>
@@ -11,11 +12,14 @@
 
 class Robot : public frc::TimedRobot {
  public:
+	// Subsystems
   static DriveTrain *m_DriveTrain;
   static OI *m_oi;
 
+	// Commands
   DriveWithJoystick* pDriveWithJoystick;
 
+	// Robot methods
   void RobotInit() override;
   void RobotPeriodic() override;
   void DisabledInit() override;
@@ -34,3 +38,5 @@ class Robot : public frc::TimedRobot {
   // MyAutoCommand m_myAuto;
   frc::SendableChooser<frc::Command*> m_chooser;
 };
+
+#endif //_ROBOT_HG_

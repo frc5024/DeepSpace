@@ -1,8 +1,8 @@
-#pragma once
+#ifndef _DRIVETRAIN_HG_
+#define _DRIVETRAIN_HG_
 
 #include <Commands/Subsystem.h>
 #include <WPILib.h>
-#include <Commands/Subsystem.h>
 #include <ctre/Phoenix.h>
 #include <Drive/DifferentialDrive.h>
 #include "RobotMap.h"
@@ -24,3 +24,5 @@ class DriveTrain : public frc::Subsystem {
 
 	frc::DifferentialDrive* pRobotDrive;
 };
+
+#endif // _DRIVETRAIN_HG_

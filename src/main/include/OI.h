@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _OI_HG_
+#define _OI_HG_
 
 #include <WPILib.h>
 
@@ -12,3 +13,5 @@ private:
 	frc::XboxController* pJoystickDrive;
 	frc::XboxController* pJoystickOperator;
 };
+
+#endif // _OI_HG_

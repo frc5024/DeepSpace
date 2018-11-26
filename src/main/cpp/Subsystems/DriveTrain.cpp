@@ -6,8 +6,8 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	this->pLeftRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_REAR_MOTOR);
 	this->pLeftRearMotor->Follow(*pLeftFrontMotor);
 
-	this->pLeftFrontMotor->SetInverted(false); // change this based on test or production robot
-	this->pLeftRearMotor->SetInverted(false); // change this based on test or production robot
+	this->pLeftFrontMotor->SetInverted(false);
+	this->pLeftRearMotor->SetInverted(false);
 	this->pLeftFrontMotor->SetNeutralMode(NeutralMode::Brake);
 	this->pLeftRearMotor->SetNeutralMode(NeutralMode::Brake);
 
@@ -24,6 +24,7 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	this->pRobotDrive = new frc::DifferentialDrive(*pLeftFrontMotor, *pRightFrontMotor);
 
   // Disable saftey modes
+  // Sounds like a bad idea, but this prevents the robot from locking up if we take too long on a loop
 	this->pLeftFrontMotor->SetSafetyEnabled(false);
 	this->pLeftRearMotor->SetSafetyEnabled(false);
 	this->pRightFrontMotor->SetSafetyEnabled(false);

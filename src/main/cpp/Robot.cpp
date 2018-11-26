@@ -4,11 +4,13 @@
 #include <SmartDashboard/SmartDashboard.h>
 #include <iostream>
 
+// Subsystems
 DriveTrain *Robot::m_DriveTrain;
 OI *Robot::m_oi;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
+  // Some backslashes are doubled in order for them to print properly
   std::cout << \
 "   _______    ______    ______   __    __       \n"\
 "/       |  /      \\  /      \\ /  |  /  |      \n"\
@@ -24,7 +26,8 @@ void Robot::RobotInit() {
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
 	CameraServer::GetInstance()->StartAutomaticCapture();
-
+	
+	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pDriveWithJoystick = new DriveWithJoystick();
 }

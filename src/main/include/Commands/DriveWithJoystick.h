@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _DRIVEWITHJOYSTICK_HG_
+#define _DRIVEWITHJOYSTICK_HG_
 
 #include <Commands/Command.h>
 #include <Subsystems/DriveTrain.h>
@@ -20,3 +21,5 @@ double rotation;
 
 frc::XboxController* pJoyDrive;
 };
+
+#endif // _DRIVEWITHJOYSTICK_HG_
