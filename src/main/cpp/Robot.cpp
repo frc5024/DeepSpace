@@ -24,6 +24,9 @@ void Robot::RobotInit() {
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
 	CameraServer::GetInstance()->StartAutomaticCapture();
+
+  std::cout << "Creating Commands.." << std::endl;
+  this->pDriveWithJoystick = new DriveWithJoystick();
 }
 
 /**
@@ -83,6 +86,10 @@ void Robot::TeleopInit() {
   //   m_autonomousCommand->Cancel();
   //   m_autonomousCommand = nullptr;
   // }
+
+  if (this->pDriveWithJoystick != nullptr) {
+		this->pDriveWithJoystick->Start();
+	}
 }
 
 void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }

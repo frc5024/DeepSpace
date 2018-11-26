@@ -14,7 +14,7 @@ class Robot : public frc::TimedRobot {
   static DriveTrain *m_DriveTrain;
   static OI *m_oi;
 
-  DriveWithJoystick pDriveWithJoystick;
+  DriveWithJoystick* pDriveWithJoystick;
 
   void RobotInit() override;
   void RobotPeriodic() override;
