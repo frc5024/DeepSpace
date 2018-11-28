@@ -17,7 +17,7 @@ class DriveTrain : public frc::Subsystem {
 	void TankDrive(double leftSpeed, double rightSpeed);
 
  private:
-  can::WPI_TalonSRX* pLeftFrontMotor;
+    can::WPI_TalonSRX* pLeftFrontMotor;
 	can::WPI_TalonSRX* pLeftRearMotor;
 	can::WPI_TalonSRX* pRightFrontMotor;
 	can::WPI_TalonSRX* pRightRearMotor;
