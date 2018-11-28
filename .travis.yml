@@ -8,6 +8,6 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install frc-toolchain -y
   - sudo apt-get install default-jdk -y
-  - ./gradlew assemble -Ptoolchain-missing-nofail
+  - sudo ./gradlew assemble -Ptoolchain-missing-nofail
 script:
-  - ./gradlew build
+  - sudo ./gradlew build
