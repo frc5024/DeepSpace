@@ -1,5 +1,5 @@
 os: Linux
-language: c++
+language: cpp
 before_install:
   - sudo apt-get update
   - sudo apt-get install software-properties-common python-software-properties -y
