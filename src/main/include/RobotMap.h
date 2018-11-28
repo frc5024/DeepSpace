@@ -22,13 +22,6 @@
 #define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT true
 #define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT  true
 
-//Elevator Vars
-#define ELEVATOR_MOTOR_ID 5
-
-//Intake Motors
-#define  INTAKE_MOTOR_LEFT_ID 6
-#define  INTAKE_MOTOR_RIGHT_ID 7
-
 // Xbox controllers
 #define XBOX_CONTROLLER_DRIVE_PORT    0
 #define XBOX_CONTROLLER_OPERATOR_PORT 1

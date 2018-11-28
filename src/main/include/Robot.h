@@ -6,22 +6,18 @@
 #include <TimedRobot.h>
 
 #include "Commands/DriveWithJoystick.h"
-#include "Commands/MoveElevator.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
-#include "Subsystems/Elevator.h"
+
 
 class Robot : public frc::TimedRobot {
  public:
 	// Subsystems
   static DriveTrain *m_DriveTrain;
   static OI *m_oi;
-  static Elevator *m_Elevator;
 
 	// Commands
   DriveWithJoystick* pDriveWithJoystick;
-  MoveElevator* pMoveElevator;
-
 
 	// Robot methods
   void RobotInit() override;
