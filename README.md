@@ -3,10 +3,3 @@ BaseBot is a complete rewrite of [BarebonesFRC](https://github.com/ewpratten/bar
 
 ## What about BarebonesFRC?
 We have not yet decided what we are going to do with the BarebonesFRC project. As of now, we are maintaining both repos, and fully support both. The decision of which one to keep will be made shortly before 2019 Kickoff.
-
-## What is being worked on
-For a more up-to-date list on the current work being done, team members should check Trello.
-
-| Branch | Description | 
-| -- | -- |
-| master | A backup of the code |
