@@ -26,8 +26,11 @@ void DriveWithJoystick::Execute() {
   this->speedMultiplier = (this->pJoyDrive->GetBumper(XboxController::kRightHand)) ? 0.5 : 1;
 
   // Get movement data form controller
-  this->speed    = pJoyDrive->GetY(XboxController::kLeftHand) * -1;
-	this->rotation = pJoyDrive->GetX(XboxController::kLeftHand);
+  this->speed    = this->pJoyDrive->GetY(XboxController::kLeftHand) * -1;
+	this->rotation = this->pJoyDrive->GetX(XboxController::kLeftHand);
+
+  // TODO: add option to control this
+  this->speed = (this->pJoyDrive->GetTriggerAxis(XboxController::kRightHand) - this->pJoyDrive->GetTriggerAxis(XboxController::kLeftHand));
 
   this->speed    = (this->speed * this->speedMultiplier * this->directionMultiplier);
   this->rotation = (this->rotation * this->speedMultiplier);
