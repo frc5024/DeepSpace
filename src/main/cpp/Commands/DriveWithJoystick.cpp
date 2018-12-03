@@ -30,9 +30,9 @@ void DriveWithJoystick::Execute() {
 	this->rotation = pJoyDrive->GetX(XboxController::kLeftHand);
 
   this->speed    = (this->speed * this->speedMultiplier * this->directionMultiplier);
-  this->rotation = (this->rotation * this->directionMultiplier);
+  this->rotation = (this->rotation * this->speedMultiplier);
 
-  Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
+  Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation * 0.8);
 }
 
 // Make this return true when this Command no longer needs to run execute()
