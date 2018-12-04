@@ -17,6 +17,14 @@ void DriveWithJoystick::Initialize() {
   //set Speed and Rotation
   this->speed    = 0.0;
   this->rotation = 0.0;
+  
+  //driverMenu selection
+  //To use driverMenu, hold a selection button while enabling teleop
+  
+  // If X held, use triggerdrive
+  if(this->pJoyDrive->GetYButton()){
+  	this->driveMode = 1;
+  }
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -29,8 +37,10 @@ void DriveWithJoystick::Execute() {
   this->speed    = this->pJoyDrive->GetY(XboxController::kLeftHand) * -1;
 	this->rotation = this->pJoyDrive->GetX(XboxController::kLeftHand);
 
-  // TODO: add option to control this
-  this->speed = (this->pJoyDrive->GetTriggerAxis(XboxController::kRightHand) - this->pJoyDrive->GetTriggerAxis(XboxController::kLeftHand));
+
+  if(this->driveMode == 1){
+	  this->speed = (this->pJoyDrive->GetTriggerAxis(XboxController::kRightHand) - this->pJoyDrive->GetTriggerAxis(XboxController::kLeftHand));
+  }
 
   this->speed    = (this->speed * this->speedMultiplier * this->directionMultiplier);
   this->rotation = (this->rotation * this->speedMultiplier);
