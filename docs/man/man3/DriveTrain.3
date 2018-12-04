@@ -1,0 +1,138 @@
+.TH "DriveTrain" 3 "Tue Dec 4 2018" "BaseBot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DriveTrain \- A subsystem that interfaces with the drivebase on the robot\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DriveTrain\&.h>\fP
+.PP
+Inherits Subsystem\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDriveTrain\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitDefaultCommand\fP () override"
+.br
+.RI "Initalizes the default command for this subsystem (\fBDriveWithJoystick\fP) "
+.ti -1c
+.RI "void \fBArcadeDrive\fP (double xSpeed, double zRotation)"
+.br
+.ti -1c
+.RI "void \fBTankDrive\fP (double leftSpeed, double rightSpeed)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "can::WPI_TalonSRX * \fBpLeftFrontMotor\fP"
+.br
+.RI "Pointer for left front motor\&. "
+.ti -1c
+.RI "can::WPI_TalonSRX * \fBpLeftRearMotor\fP"
+.br
+.RI "Pointer for left rear motor\&. "
+.ti -1c
+.RI "can::WPI_TalonSRX * \fBpRightFrontMotor\fP"
+.br
+.RI "Pointer for right front motor\&. "
+.ti -1c
+.RI "can::WPI_TalonSRX * \fBpRightRearMotor\fP"
+.br
+.RI "Pointer for right rear motor\&. "
+.ti -1c
+.RI "frc::DifferentialDrive * \fBpRobotDrive\fP"
+.br
+.RI "Pointer for a differential drivebase made up of 2 motor pairs\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A subsystem that interfaces with the drivebase on the robot\&. 
+.PP
+Definition at line 12 of file DriveTrain\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DriveTrain::DriveTrain ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 3 of file DriveTrain\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void DriveTrain::ArcadeDrive (double xSpeed, double zRotation)"
+Pass data to wpilib's ArcadeDrive
+.PP
+\fBParameters:\fP
+.RS 4
+\fIxSpeed\fP Forward speed (form -1 to 1) 
+.br
+\fIzRotation\fP Rotation (from -1 to 1) 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file DriveTrain\&.cpp\&.
+.SS "void DriveTrain::InitDefaultCommand ()\fC [override]\fP"
+
+.PP
+Initalizes the default command for this subsystem (\fBDriveWithJoystick\fP) 
+.PP
+Definition at line 35 of file DriveTrain\&.cpp\&.
+.SS "void DriveTrain::TankDrive (double leftSpeed, double rightSpeed)"
+Passes data to wpilib's TankDrive
+.PP
+\fBParameters:\fP
+.RS 4
+\fIleftSpeed\fP left motor speed 
+.br
+\fIrightSpeed\fP right motor speed 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file DriveTrain\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "can::WPI_TalonSRX* DriveTrain::pLeftFrontMotor\fC [private]\fP"
+
+.PP
+Pointer for left front motor\&. 
+.PP
+Definition at line 34 of file DriveTrain\&.h\&.
+.SS "can::WPI_TalonSRX* DriveTrain::pLeftRearMotor\fC [private]\fP"
+
+.PP
+Pointer for left rear motor\&. 
+.PP
+Definition at line 35 of file DriveTrain\&.h\&.
+.SS "can::WPI_TalonSRX* DriveTrain::pRightFrontMotor\fC [private]\fP"
+
+.PP
+Pointer for right front motor\&. 
+.PP
+Definition at line 36 of file DriveTrain\&.h\&.
+.SS "can::WPI_TalonSRX* DriveTrain::pRightRearMotor\fC [private]\fP"
+
+.PP
+Pointer for right rear motor\&. 
+.PP
+Definition at line 37 of file DriveTrain\&.h\&.
+.SS "frc::DifferentialDrive* DriveTrain::pRobotDrive\fC [private]\fP"
+
+.PP
+Pointer for a differential drivebase made up of 2 motor pairs\&. 
+.PP
+Definition at line 39 of file DriveTrain\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BaseBot from the source code\&.

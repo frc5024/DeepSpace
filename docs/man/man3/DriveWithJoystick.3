@@ -1,0 +1,150 @@
+.TH "DriveWithJoystick" 3 "Tue Dec 4 2018" "BaseBot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DriveWithJoystick \- An interface command for driving the robot with an xbox controller\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DriveWithJoystick\&.h>\fP
+.PP
+Inherits Command\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDriveWithJoystick\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitialize\fP () override"
+.br
+.RI "Runs once on initalization\&. "
+.ti -1c
+.RI "void \fBExecute\fP () override"
+.br
+.RI "Called in a loop during Teleop\&. "
+.ti -1c
+.RI "bool \fBIsFinished\fP () override"
+.br
+.ti -1c
+.RI "void \fBEnd\fP () override"
+.br
+.RI "Runs once when \fBIsFinished()\fP returns true\&. "
+.ti -1c
+.RI "void \fBInterrupted\fP () override"
+.br
+.RI "Runs once if the command is forced to stop\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBdirectionMultiplier\fP"
+.br
+.RI "Can be 1 or -1\&. Determines the direction the the robot moves in\&. "
+.ti -1c
+.RI "double \fBspeedMultiplier\fP"
+.br
+.RI "The speed of the robot is multiplied by this number\&. Used for slowmode\&. "
+.ti -1c
+.RI "double \fBspeed\fP"
+.br
+.RI "Speed value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. "
+.ti -1c
+.RI "double \fBrotation\fP"
+.br
+.RI "Rotation value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. "
+.ti -1c
+.RI "frc::XboxController * \fBpJoyDrive\fP"
+.br
+.RI "A mnemonic for the driver's controller because we are lazy\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+An interface command for driving the robot with an xbox controller\&. 
+.PP
+Definition at line 8 of file DriveWithJoystick\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DriveWithJoystick::DriveWithJoystick ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 5 of file DriveWithJoystick\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void DriveWithJoystick::End ()\fC [override]\fP"
+
+.PP
+Runs once when \fBIsFinished()\fP returns true\&. 
+.PP
+Definition at line 42 of file DriveWithJoystick\&.cpp\&.
+.SS "void DriveWithJoystick::Execute ()\fC [override]\fP"
+
+.PP
+Called in a loop during Teleop\&. 
+.PP
+Definition at line 23 of file DriveWithJoystick\&.cpp\&.
+.SS "void DriveWithJoystick::Initialize ()\fC [override]\fP"
+
+.PP
+Runs once on initalization\&. 
+.PP
+Definition at line 12 of file DriveWithJoystick\&.cpp\&.
+.SS "void DriveWithJoystick::Interrupted ()\fC [override]\fP"
+
+.PP
+Runs once if the command is forced to stop\&. 
+.PP
+Definition at line 46 of file DriveWithJoystick\&.cpp\&.
+.SS "bool DriveWithJoystick::IsFinished ()\fC [override]\fP"
+Used to tell wpilib if the command is fully finished\&. This should never return true
+.PP
+\fBReturns:\fP
+.RS 4
+True if command is finished, else false 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file DriveWithJoystick\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int DriveWithJoystick::directionMultiplier\fC [private]\fP"
+
+.PP
+Can be 1 or -1\&. Determines the direction the the robot moves in\&. 
+.PP
+Definition at line 25 of file DriveWithJoystick\&.h\&.
+.SS "frc::XboxController* DriveWithJoystick::pJoyDrive\fC [private]\fP"
+
+.PP
+A mnemonic for the driver's controller because we are lazy\&. 
+.PP
+Definition at line 31 of file DriveWithJoystick\&.h\&.
+.SS "double DriveWithJoystick::rotation\fC [private]\fP"
+
+.PP
+Rotation value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. 
+.PP
+Definition at line 29 of file DriveWithJoystick\&.h\&.
+.SS "double DriveWithJoystick::speed\fC [private]\fP"
+
+.PP
+Speed value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. 
+.PP
+Definition at line 28 of file DriveWithJoystick\&.h\&.
+.SS "double DriveWithJoystick::speedMultiplier\fC [private]\fP"
+
+.PP
+The speed of the robot is multiplied by this number\&. Used for slowmode\&. 
+.PP
+Definition at line 26 of file DriveWithJoystick\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BaseBot from the source code\&.

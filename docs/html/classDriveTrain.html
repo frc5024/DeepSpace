@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classDriveTrain.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -116,6 +140,8 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A subsystem that interfaces with the drivebase on the robot. </p>
+
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00012">12</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a90af56eee49c93d5b7d77065b42f660b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a90af56eee49c93d5b7d77065b42f660b">&#9670;&nbsp;</a></span>DriveTrain()</h2>
@@ -133,6 +159,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Class constructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00003">3</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
 
 </div>
 </div>
@@ -171,6 +199,8 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00039">39</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a999d090ed884fc00d23d294b33120938"></a>
@@ -197,6 +227,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initalizes the default command for this subsystem (<a class="el" href="classDriveWithJoystick.html" title="An interface command for driving the robot with an xbox controller. ">DriveWithJoystick</a>) </p>
+
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00035">35</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
 
 </div>
 </div>
@@ -234,6 +266,8 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00044">44</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -259,6 +293,8 @@ Private Attributes</h2></td></tr>
 
 <p>Pointer for left front motor. </p>
 
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00034">34</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
+
 </div>
 </div>
 <a id="a33a1f6f57affe0cea1184357bbccfd07"></a>
@@ -282,6 +318,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer for left rear motor. </p>
+
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00035">35</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
 
 </div>
 </div>
@@ -307,6 +345,8 @@ Private Attributes</h2></td></tr>
 
 <p>Pointer for right front motor. </p>
 
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00036">36</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
+
 </div>
 </div>
 <a id="a2298f9c2466c92b790c33bb5840664c9"></a>
@@ -330,6 +370,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pointer for right rear motor. </p>
+
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00037">37</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
 
 </div>
 </div>
@@ -355,18 +397,24 @@ Private Attributes</h2></td></tr>
 
 <p>Pointer for a differential drivebase made up of 2 motor pairs. </p>
 
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00039">39</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/main/include/Subsystems/<a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a></li>
-<li>src/main/cpp/Subsystems/<a class="el" href="DriveTrain_8cpp.html">DriveTrain.cpp</a></li>
+<li>src/main/cpp/Subsystems/<a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classDriveTrain.html">DriveTrain</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

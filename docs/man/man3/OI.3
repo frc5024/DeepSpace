@@ -1,0 +1,92 @@
+.TH "OI" 3 "Tue Dec 4 2018" "BaseBot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+OI \- Operator Interface allows various commands to access the xbox controllers through the DriverStation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <OI\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOI\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "frc::XboxController * \fBGetJoystickDrive\fP (void)"
+.br
+.ti -1c
+.RI "frc::XboxController * \fBGetJoystickOperator\fP (void)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "frc::XboxController * \fBpJoystickDrive\fP"
+.br
+.RI "Pointer for Driver's joystick\&. "
+.ti -1c
+.RI "frc::XboxController * \fBpJoystickOperator\fP"
+.br
+.RI "Pointer for Operator's joystick\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Operator Interface allows various commands to access the xbox controllers through the DriverStation\&. 
+.PP
+Definition at line 7 of file OI\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "OI::OI ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 4 of file OI\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "frc::XboxController * OI::GetJoystickDrive (void)"
+Function for getting the Driver's joystick data
+.PP
+\fBReturns:\fP
+.RS 4
+Pointer to the driver's joystick 
+.RE
+.PP
+
+.PP
+Definition at line 9 of file OI\&.cpp\&.
+.SS "frc::XboxController * OI::GetJoystickOperator (void)"
+Function for getting the Operator's joystick data
+.PP
+\fBReturns:\fP
+.RS 4
+Pointer to the operator's joystick 
+.RE
+.PP
+
+.PP
+Definition at line 13 of file OI\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "frc::XboxController* OI::pJoystickDrive\fC [private]\fP"
+
+.PP
+Pointer for Driver's joystick\&. 
+.PP
+Definition at line 26 of file OI\&.h\&.
+.SS "frc::XboxController* OI::pJoystickOperator\fC [private]\fP"
+
+.PP
+Pointer for Operator's joystick\&. 
+.PP
+Definition at line 27 of file OI\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BaseBot from the source code\&.
