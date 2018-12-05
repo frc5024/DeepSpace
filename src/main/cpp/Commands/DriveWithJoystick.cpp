@@ -21,6 +21,9 @@ void DriveWithJoystick::Initialize() {
   //driverMenu selection
   //To use driverMenu, hold a selection button while enabling teleop
   
+  // Make sure that driveMode is reset each time the bot is enabled
+  this->driveMode = 0;
+
   // If X held, use triggerdrive
   if(this->pJoyDrive->GetYButton()){
   	this->driveMode = 1;
