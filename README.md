@@ -1,4 +1,4 @@
-# BaseBot [![CodeFactor](https://www.codefactor.io/repository/github/frc5024/basebot/badge)](https://www.codefactor.io/repository/github/frc5024/basebot)[![GitHub license](https://img.shields.io/github/license/frc5024/BaseBot.svg)](https://github.com/frc5024/BaseBot/blob/master/LICENSE)
+# BaseBot [![CodeFactor](https://www.codefactor.io/repository/github/frc5024/basebot/badge)](https://www.codefactor.io/repository/github/frc5024/basebot) [![GitHub license](https://img.shields.io/github/license/frc5024/BaseBot.svg)](https://github.com/frc5024/BaseBot/blob/master/LICENSE) [![DOI](https://zenodo.org/badge/138438050.svg)](https://zenodo.org/badge/latestdoi/138438050)
 
 BaseBot is a complete rewrite of [BarebonesFRC](https://github.com/ewpratten/barebonesfrc) with 2 goals. Do it right, and do it fast. The entire codebase is written in pure c/c++ and some components are being optimized further using ARMv7-a assembly.
 
