@@ -28,6 +28,14 @@ double speedMultiplier;  //!< The speed of the robot is multiplied by this numbe
 double speed;    //!< Speed value that will be passed into DriveTrain::ArcadeDrive
 double rotation; //!< Rotation value that will be passed into DriveTrain::ArcadeDrive
 
+/**
+ * driveMode is set depending on what is selected from drivermenu
+ *
+ * 0 = Joystick
+ * 1 = Triggers
+ */
+int driveMode = 0;
+
 frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller because we are lazy
 };
 

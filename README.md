@@ -7,6 +7,6 @@ We have not yet decided what we are going to do with the BarebonesFRC project. A
 ## What is being worked on
 For a more up-to-date list on the current work being done, team members should check Trello.
 
-| Branch | Description | 
+| Branch | Description |
 | -- | -- |
-| master | A backup of the code |
+| master | The main code running on ProtoBot |
