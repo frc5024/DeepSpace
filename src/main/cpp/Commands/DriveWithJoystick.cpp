@@ -39,10 +39,11 @@ void DriveWithJoystick::Execute() {
 
 
   if(this->driveMode == 1){
+  	// speed = right trigger - left trigger
 	  this->speed = (this->pJoyDrive->GetTriggerAxis(XboxController::kRightHand) - this->pJoyDrive->GetTriggerAxis(XboxController::kLeftHand));
   }
 
-  this->speed    = (this->speed * this->speedMultiplier * this->directionMultiplier);
+  this->speed    = (this->speed    * this->speedMultiplier * this->directionMultiplier);
   this->rotation = (this->rotation * this->speedMultiplier);
 
   Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation * 0.8);
