@@ -11,17 +11,9 @@ OI *Robot::m_oi;
 void Robot::RobotInit() {
   // Print out a banner to the shell
   // Some backslashes are doubled in order for them to print properly
-  std::cout << \
-"   _______    ______    ______   __    __       \n"\
-"/       |  /      \\  /      \\ /  |  /  |      \n"\
-"$$$$$$$/  /$$$$$$  |/$$$$$$  |$$ |  $$ |      \n"\
-"$$ |____  $$$  \\$$ |$$____$$ |$$ |__$$ |      \n"\
-"$$      \\ $$$$  $$ | /    $$/ $$    $$ |      \n"\
-"$$$$$$$  |$$ $$ $$ |/$$$$$$/  $$$$$$$$ |      \n"\
-"/  \\__$$ |$$ \\$$$$ |$$ |_____       $$ |      \n"\
-"$$    $$/ $$   $$$/ $$       |      $$ |      \n"\
-" $$$$$$/   $$$$$$/  $$$$$$$$/       $$/    \n"\
-"Robot Starting.."<< std::endl;
+  std::cout << "   Welcome 5024!" << std::endl;
+  std::cout << "-------------------" << std::endl;
+  std::cout << "Robot Starting.."<< std::endl;
 
   // Subsystems
   this->m_DriveTrain = new DriveTrain();
