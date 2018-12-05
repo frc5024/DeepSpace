@@ -1,4 +1,4 @@
-# BaseBot
+# BaseBot [![CodeFactor](https://www.codefactor.io/repository/github/frc5024/basebot/badge)](https://www.codefactor.io/repository/github/frc5024/basebot)
 BaseBot is a complete rewrite of [BarebonesFRC](https://github.com/ewpratten/barebonesfrc) with 2 goals. Do it right, and do it fast. The entire codebase is written in pure c/c++ and some components are being optimized further using ARMv7-a assembly.
 
 ## What about BarebonesFRC?
