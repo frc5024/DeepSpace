@@ -1,13 +1,18 @@
-# BaseBot [![CodeFactor](https://www.codefactor.io/repository/github/frc5024/basebot/badge)](https://www.codefactor.io/repository/github/frc5024/basebot) [![GitHub license](https://img.shields.io/github/license/frc5024/BaseBot.svg)](https://github.com/frc5024/BaseBot/blob/master/LICENSE) [![DOI](https://zenodo.org/badge/138438050.svg)](https://zenodo.org/badge/latestdoi/138438050)
+# BaseBot [![CodeFactor](https://www.codefactor.io/repository/github/frc5024/basebot/badge)](https://www.codefactor.io/repository/github/frc5024/basebot) [![GitHub license](https://img.shields.io/github/license/frc5024/BaseBot.svg)](https://github.com/frc5024/BaseBot/blob/master/LICENSE) [![DOI](https://zenodo.org/badge/159041740.svg)](https://zenodo.org/badge/latestdoi/159041740)
 
 BaseBot is a complete rewrite of [BarebonesFRC](https://github.com/ewpratten/barebonesfrc) with 2 goals. Do it right, and do it fast. The entire codebase is written in pure c/c++ and some components are being optimized further using ARMv7-a assembly.
 
-## What about BarebonesFRC?
-We have not yet decided what we are going to do with the BarebonesFRC project. As of now, we are maintaining both repos, and fully support both. The decision of which one to keep will be made shortly before 2019 Kickoff.
+## Installation
+This code can be "installed" in one of two ways. First, is via an official release:
 
-## What is being worked on
-For a more up-to-date list on the current work being done, team members should check Trello.
+These are the steps:
+ - Get the latest release from github
+ - Unpack the compressed archive
+ - Open it as a folder in vscode
+ - Set your team number in wpilib
+ - Deploy using wpilib
 
-| Branch | Description |
-| -- | -- |
-| master | The main code running on ProtoBot |
+The second way is to use rolling release / waterfall. Just do the steps above, but use git to clone the master branch.
+
+NOTE: 5024 members should always use the second method.
+
