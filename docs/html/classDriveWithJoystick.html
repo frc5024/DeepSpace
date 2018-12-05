@@ -141,6 +141,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a245e42eb207a58cdb64749f01965fa7d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriveWithJoystick.html#a245e42eb207a58cdb64749f01965fa7d">rotation</a></td></tr>
 <tr class="memdesc:a245e42eb207a58cdb64749f01965fa7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation value that will be passed into <a class="el" href="classDriveTrain.html#aee63999ae98aa26e4c2866444eab2c4a">DriveTrain::ArcadeDrive</a>.  <a href="#a245e42eb207a58cdb64749f01965fa7d">More...</a><br /></td></tr>
 <tr class="separator:a245e42eb207a58cdb64749f01965fa7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d7c09c5a0bced3aa504c775cb9d7e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriveWithJoystick.html#a11d7c09c5a0bced3aa504c775cb9d7e3">driveMode</a> = 0</td></tr>
+<tr class="memdesc:a11d7c09c5a0bced3aa504c775cb9d7e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to keep track of the drive mode.  <a href="#a11d7c09c5a0bced3aa504c775cb9d7e3">More...</a><br /></td></tr>
+<tr class="separator:a11d7c09c5a0bced3aa504c775cb9d7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6671b39344988d14a6ff12939b09238e"><td class="memItemLeft" align="right" valign="top">frc::XboxController *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriveWithJoystick.html#a6671b39344988d14a6ff12939b09238e">pJoyDrive</a></td></tr>
 <tr class="memdesc:a6671b39344988d14a6ff12939b09238e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A mnemonic for the driver's controller because we are lazy.  <a href="#a6671b39344988d14a6ff12939b09238e">More...</a><br /></td></tr>
 <tr class="separator:a6671b39344988d14a6ff12939b09238e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,7 +200,7 @@ Private Attributes</h2></td></tr>
 
 <p>Runs once when <a class="el" href="classDriveWithJoystick.html#aeeb849dde20c9b7b8049eb318e7b5d90">IsFinished()</a> returns true. </p>
 
-<p class="definition">Definition at line <a class="el" href="DriveWithJoystick_8cpp_source.html#l00042">42</a> of file <a class="el" href="DriveWithJoystick_8cpp_source.html">DriveWithJoystick.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveWithJoystick_8cpp_source.html#l00056">56</a> of file <a class="el" href="DriveWithJoystick_8cpp_source.html">DriveWithJoystick.cpp</a>.</p>
 
 </div>
 </div>
@@ -226,7 +229,7 @@ Private Attributes</h2></td></tr>
 
 <p>Called in a loop during Teleop. </p>
 
-<p class="definition">Definition at line <a class="el" href="DriveWithJoystick_8cpp_source.html#l00023">23</a> of file <a class="el" href="DriveWithJoystick_8cpp_source.html">DriveWithJoystick.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveWithJoystick_8cpp_source.html#l00031">31</a> of file <a class="el" href="DriveWithJoystick_8cpp_source.html">DriveWithJoystick.cpp</a>.</p>
 
 </div>
 </div>
@@ -284,7 +287,7 @@ Private Attributes</h2></td></tr>
 
 <p>Runs once if the command is forced to stop. </p>
 
-<p class="definition">Definition at line <a class="el" href="DriveWithJoystick_8cpp_source.html#l00046">46</a> of file <a class="el" href="DriveWithJoystick_8cpp_source.html">DriveWithJoystick.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveWithJoystick_8cpp_source.html#l00060">60</a> of file <a class="el" href="DriveWithJoystick_8cpp_source.html">DriveWithJoystick.cpp</a>.</p>
 
 </div>
 </div>
@@ -313,7 +316,7 @@ Private Attributes</h2></td></tr>
 <p>Used to tell wpilib if the command is fully finished. This should never return true</p>
 <dl class="section return"><dt>Returns</dt><dd>True if command is finished, else false </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="DriveWithJoystick_8cpp_source.html#l00039">39</a> of file <a class="el" href="DriveWithJoystick_8cpp_source.html">DriveWithJoystick.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveWithJoystick_8cpp_source.html#l00053">53</a> of file <a class="el" href="DriveWithJoystick_8cpp_source.html">DriveWithJoystick.cpp</a>.</p>
 
 </div>
 </div>
@@ -344,6 +347,34 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a11d7c09c5a0bced3aa504c775cb9d7e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11d7c09c5a0bced3aa504c775cb9d7e3">&#9670;&nbsp;</a></span>driveMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DriveWithJoystick::driveMode = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used to keep track of the drive mode. </p>
+<p>driveMode is set depending on what is selected from drivermenu</p>
+<p>0 = Joystick 1 = Triggers </p>
+
+<p class="definition">Definition at line <a class="el" href="DriveWithJoystick_8h_source.html#l00037">37</a> of file <a class="el" href="DriveWithJoystick_8h_source.html">DriveWithJoystick.h</a>.</p>
+
+</div>
+</div>
 <a id="a6671b39344988d14a6ff12939b09238e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6671b39344988d14a6ff12939b09238e">&#9670;&nbsp;</a></span>pJoyDrive</h2>
 
@@ -366,7 +397,7 @@ Private Attributes</h2></td></tr>
 
 <p>A mnemonic for the driver's controller because we are lazy. </p>
 
-<p class="definition">Definition at line <a class="el" href="DriveWithJoystick_8h_source.html#l00031">31</a> of file <a class="el" href="DriveWithJoystick_8h_source.html">DriveWithJoystick.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveWithJoystick_8h_source.html#l00039">39</a> of file <a class="el" href="DriveWithJoystick_8h_source.html">DriveWithJoystick.h</a>.</p>
 
 </div>
 </div>

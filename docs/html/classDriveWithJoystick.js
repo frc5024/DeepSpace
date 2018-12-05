@@ -7,6 +7,7 @@ var classDriveWithJoystick =
     [ "Interrupted", "classDriveWithJoystick.html#a629524dff7b0a940175d5995c0511cdb", null ],
     [ "IsFinished", "classDriveWithJoystick.html#aeeb849dde20c9b7b8049eb318e7b5d90", null ],
     [ "directionMultiplier", "classDriveWithJoystick.html#a87ceb621790dae15f245fa6b559202ee", null ],
+    [ "driveMode", "classDriveWithJoystick.html#a11d7c09c5a0bced3aa504c775cb9d7e3", null ],
     [ "pJoyDrive", "classDriveWithJoystick.html#a6671b39344988d14a6ff12939b09238e", null ],
     [ "rotation", "classDriveWithJoystick.html#a245e42eb207a58cdb64749f01965fa7d", null ],
     [ "speed", "classDriveWithJoystick.html#a935d764b236fea53dc9335ad82840442", null ],

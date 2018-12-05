@@ -1,4 +1,4 @@
-.TH "DriveWithJoystick" 3 "Tue Dec 4 2018" "BaseBot" \" -*- nroff -*-
+.TH "DriveWithJoystick" 3 "Wed Dec 5 2018" "BaseBot" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -58,6 +58,10 @@ Inherits Command\&.
 .br
 .RI "Rotation value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. "
 .ti -1c
+.RI "int \fBdriveMode\fP = 0"
+.br
+.RI "Used to keep track of the drive mode\&. "
+.ti -1c
 .RI "frc::XboxController * \fBpJoyDrive\fP"
 .br
 .RI "A mnemonic for the driver's controller because we are lazy\&. "
@@ -82,13 +86,13 @@ Definition at line 5 of file DriveWithJoystick\&.cpp\&.
 .PP
 Runs once when \fBIsFinished()\fP returns true\&. 
 .PP
-Definition at line 42 of file DriveWithJoystick\&.cpp\&.
+Definition at line 56 of file DriveWithJoystick\&.cpp\&.
 .SS "void DriveWithJoystick::Execute ()\fC [override]\fP"
 
 .PP
 Called in a loop during Teleop\&. 
 .PP
-Definition at line 23 of file DriveWithJoystick\&.cpp\&.
+Definition at line 31 of file DriveWithJoystick\&.cpp\&.
 .SS "void DriveWithJoystick::Initialize ()\fC [override]\fP"
 
 .PP
@@ -100,7 +104,7 @@ Definition at line 12 of file DriveWithJoystick\&.cpp\&.
 .PP
 Runs once if the command is forced to stop\&. 
 .PP
-Definition at line 46 of file DriveWithJoystick\&.cpp\&.
+Definition at line 60 of file DriveWithJoystick\&.cpp\&.
 .SS "bool DriveWithJoystick::IsFinished ()\fC [override]\fP"
 Used to tell wpilib if the command is fully finished\&. This should never return true
 .PP
@@ -111,7 +115,7 @@ True if command is finished, else false
 .PP
 
 .PP
-Definition at line 39 of file DriveWithJoystick\&.cpp\&.
+Definition at line 53 of file DriveWithJoystick\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "int DriveWithJoystick::directionMultiplier\fC [private]\fP"
@@ -120,12 +124,20 @@ Definition at line 39 of file DriveWithJoystick\&.cpp\&.
 Can be 1 or -1\&. Determines the direction the the robot moves in\&. 
 .PP
 Definition at line 25 of file DriveWithJoystick\&.h\&.
+.SS "int DriveWithJoystick::driveMode = 0\fC [private]\fP"
+
+.PP
+Used to keep track of the drive mode\&. driveMode is set depending on what is selected from drivermenu
+.PP
+0 = Joystick 1 = Triggers 
+.PP
+Definition at line 37 of file DriveWithJoystick\&.h\&.
 .SS "frc::XboxController* DriveWithJoystick::pJoyDrive\fC [private]\fP"
 
 .PP
 A mnemonic for the driver's controller because we are lazy\&. 
 .PP
-Definition at line 31 of file DriveWithJoystick\&.h\&.
+Definition at line 39 of file DriveWithJoystick\&.h\&.
 .SS "double DriveWithJoystick::rotation\fC [private]\fP"
 
 .PP

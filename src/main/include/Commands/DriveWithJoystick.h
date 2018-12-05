@@ -34,7 +34,7 @@ double rotation; //!< Rotation value that will be passed into DriveTrain::Arcade
  * 0 = Joystick
  * 1 = Triggers
  */
-int driveMode = 0;
+int driveMode = 0; //!< Used to keep track of the drive mode
 
 frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller because we are lazy
 };
