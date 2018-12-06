@@ -1,5 +1,4 @@
 #include "Commands/DriveWithJoystick.h"
-
 #include "Robot.h"
 
 DriveWithJoystick::DriveWithJoystick() {
@@ -22,9 +21,10 @@ void DriveWithJoystick::Initialize() {
   //To use driverMenu, hold a selection button while enabling teleop
   
   // Make sure that driveMode is reset each time the bot is enabled
+  // This must be in the Initalize() function, not in the header file
   this->driveMode = 0;
 
-  // If X held, use triggerdrive
+  // If X held during teleop enable, use triggerdrive
   if(this->pJoyDrive->GetYButton()){
   	this->driveMode = 1;
   }
@@ -47,15 +47,16 @@ void DriveWithJoystick::Execute() {
   this->speed    = this->pJoyDrive->GetY(XboxController::kLeftHand) * -1;
 	this->rotation = this->pJoyDrive->GetX(XboxController::kLeftHand);
 
-  // An and statement is used, because an if didn't seem right for this use case
-  // Also, more faster = more better (or something like that)
+  // An and statement is used. One less instruction to execute in armv7-a.
+  // So it is "obviously" better. Right?
+  // More faster = more better (or something like that)
   this->driveMode == 1 && this->getTriggers();
-	  
+	
+	// Multiply each value with it's multiplier(s)
+  this->speed    *= (this->speedMultiplier * this->directionMultiplier);
+  this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
-  this->speed    = (this->speed    * this->speedMultiplier * this->directionMultiplier);
-  this->rotation = (this->rotation * this->speedMultiplier);
-
-  Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation * 0.8);
+  Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
 }
 
 // Make this return true when this Command no longer needs to run execute()
