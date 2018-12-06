@@ -14,7 +14,8 @@ void DriveWithJoystick::Initialize() {
   this->speedMultiplier     = 1;
 
   //set Speed and Rotation
-  this->speed    = 0.0;
+  this->speed    =
+   0.0;
   this->rotation = 0.0;
   
   //driverMenu selection
@@ -57,6 +58,8 @@ void DriveWithJoystick::Execute() {
   this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
   Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
+  this->speed    = 0.00;
+  this->rotation = 0.00;
 }
 
 // Make this return true when this Command no longer needs to run execute()
