@@ -1,5 +1,4 @@
 #include "Commands/DriveWithJoystick.h"
-
 #include "Robot.h"
 
 DriveWithJoystick::DriveWithJoystick() {
@@ -15,19 +14,28 @@ void DriveWithJoystick::Initialize() {
   this->speedMultiplier     = 1;
 
   //set Speed and Rotation
-  this->speed    = 0.0;
+  this->speed    =
+   0.0;
   this->rotation = 0.0;
   
   //driverMenu selection
   //To use driverMenu, hold a selection button while enabling teleop
   
   // Make sure that driveMode is reset each time the bot is enabled
+  // This must be in the Initalize() function, not in the header file
   this->driveMode = 0;
 
-  // If X held, use triggerdrive
+  // If X held during teleop enable, use triggerdrive
   if(this->pJoyDrive->GetYButton()){
   	this->driveMode = 1;
   }
+}
+
+bool inline DriveWithJoystick::getTriggers(){
+  // Speed = Right trigger - left trigger
+  this->speed = (this->pJoyDrive->GetTriggerAxis(XboxController::kRightHand) - this->pJoyDrive->GetTriggerAxis(XboxController::kLeftHand));
+  // needed for use in an and statement
+  return true;
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -40,16 +48,18 @@ void DriveWithJoystick::Execute() {
   this->speed    = this->pJoyDrive->GetY(XboxController::kLeftHand) * -1;
 	this->rotation = this->pJoyDrive->GetX(XboxController::kLeftHand);
 
+  // An and statement is used. One less instruction to execute in armv7-a.
+  // So it is "obviously" better. Right?
+  // More faster = more better (or something like that)
+  this->driveMode == 1 && this->getTriggers();
+	
+	// Multiply each value with it's multiplier(s)
+  this->speed    *= (this->speedMultiplier * this->directionMultiplier);
+  this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
-  if(this->driveMode == 1){
-  	// speed = right trigger - left trigger
-	  this->speed = (this->pJoyDrive->GetTriggerAxis(XboxController::kRightHand) - this->pJoyDrive->GetTriggerAxis(XboxController::kLeftHand));
-  }
-
-  this->speed    = (this->speed    * this->speedMultiplier * this->directionMultiplier);
-  this->rotation = (this->rotation * this->speedMultiplier);
-
-  Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation * 0.8);
+  Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
+  this->speed    = 0.00;
+  this->rotation = 0.00;
 }
 
 // Make this return true when this Command no longer needs to run execute()
