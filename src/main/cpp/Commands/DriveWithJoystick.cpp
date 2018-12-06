@@ -8,6 +8,7 @@ DriveWithJoystick::DriveWithJoystick() {
 }
 
 // Called just before this Command runs the first time
+// aka: every time teleop is enabled
 void DriveWithJoystick::Initialize() {
   // Set speed and direction multipliers
   this->directionMultiplier = 1;
@@ -33,6 +34,7 @@ void DriveWithJoystick::Initialize() {
 bool inline DriveWithJoystick::getTriggers(){
   // Speed = Right trigger - left trigger
   this->speed = (this->pJoyDrive->GetTriggerAxis(XboxController::kRightHand) - this->pJoyDrive->GetTriggerAxis(XboxController::kLeftHand));
+  
   // needed for use in an and statement
   return true;
 }
@@ -47,9 +49,9 @@ void DriveWithJoystick::Execute() {
   this->speed    = this->pJoyDrive->GetY(XboxController::kLeftHand) * -1;
 	this->rotation = this->pJoyDrive->GetX(XboxController::kLeftHand);
 
-  // An and statement is used. One less instruction to execute in armv7-a.
-  // So it is "obviously" better. Right?
-  // More faster = more better (or something like that)
+  // If trigger drive mode was enabled during teleop-init, override speed with trigger data
+  // This will only ever be called if a select few people are driving the bot.
+  // It should be as insignifigant as possible when the bot is in normal operation (3 instructions)
   this->driveMode == 1 && this->getTriggers();
 	
 	// Multiply each value with it's multiplier(s)
@@ -57,11 +59,15 @@ void DriveWithJoystick::Execute() {
   this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
   Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
+  
+  // Reset the speed and rotation
+  // while this does have some negitive side effects while driving,
+  // It is for saftey. (and so we don't have a run-away bot slam into a wall again)
   this->speed    = 0.00;
   this->rotation = 0.00;
 }
 
-// Make this return true when this Command no longer needs to run execute()
+
 bool DriveWithJoystick::IsFinished() { return false; }
 
 // Called once after isFinished returns true
