@@ -31,6 +31,7 @@ void DriveWithJoystick::Initialize() {
 }
 
 bool inline DriveWithJoystick::getTriggers(){
+  // Speed = Right trigger - left trigger
   this->speed = (this->pJoyDrive->GetTriggerAxis(XboxController::kRightHand) - this->pJoyDrive->GetTriggerAxis(XboxController::kLeftHand));
   // needed for use in an and statement
   return true;
