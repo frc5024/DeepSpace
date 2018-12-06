@@ -28,6 +28,8 @@ double speedMultiplier;  //!< The speed of the robot is multiplied by this numbe
 double speed;    //!< Speed value that will be passed into DriveTrain::ArcadeDrive
 double rotation; //!< Rotation value that will be passed into DriveTrain::ArcadeDrive
 
+bool inline getTriggers(); //!< Called only if the drivemode is set to 1
+
 /**
  * driveMode is set depending on what is selected from drivermenu
  *

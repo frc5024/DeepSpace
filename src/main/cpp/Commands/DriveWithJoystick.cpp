@@ -30,6 +30,12 @@ void DriveWithJoystick::Initialize() {
   }
 }
 
+bool inline DriveWithJoystick::getTriggers(){
+  this->speed = (this->pJoyDrive->GetTriggerAxis(XboxController::kRightHand) - this->pJoyDrive->GetTriggerAxis(XboxController::kLeftHand));
+  // needed for use in an and statement
+  return true;
+}
+
 // Called repeatedly when this Command is scheduled to run
 void DriveWithJoystick::Execute() {
   // Deal with reversing and slow mode
@@ -40,11 +46,10 @@ void DriveWithJoystick::Execute() {
   this->speed    = this->pJoyDrive->GetY(XboxController::kLeftHand) * -1;
 	this->rotation = this->pJoyDrive->GetX(XboxController::kLeftHand);
 
-
-  if(this->driveMode == 1){
-  	// speed = right trigger - left trigger
-	  this->speed = (this->pJoyDrive->GetTriggerAxis(XboxController::kRightHand) - this->pJoyDrive->GetTriggerAxis(XboxController::kLeftHand));
-  }
+  // An and statement is used, because an if didn't seem right for this use case
+  // Also, more faster = more better (or something like that)
+  this->driveMode == 1 && this->getTriggers();
+	  
 
   this->speed    = (this->speed    * this->speedMultiplier * this->directionMultiplier);
   this->rotation = (this->rotation * this->speedMultiplier);
