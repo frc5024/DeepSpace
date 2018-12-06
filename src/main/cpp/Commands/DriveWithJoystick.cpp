@@ -40,8 +40,8 @@ bool inline DriveWithJoystick::getTriggers(){
 // Called repeatedly when this Command is scheduled to run
 void DriveWithJoystick::Execute() {
   // Deal with reversing and slow mode
-	this->directionMultiplier *= (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
-  this->speedMultiplier = (this->pJoyDrive->GetBumper(XboxController::kRightHand)) ? 0.5 : 1;
+	this->directionMultiplier = (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
+  this->speedMultiplier     = (this->pJoyDrive->GetBumper(XboxController::kRightHand)) ? 0.5 : 1;
 
   // Get movement data form controller
   this->speed    = this->pJoyDrive->GetY(XboxController::kLeftHand) * -1;
