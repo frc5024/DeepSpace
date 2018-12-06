@@ -14,8 +14,7 @@ void DriveWithJoystick::Initialize() {
   this->speedMultiplier     = 1;
 
   //set Speed and Rotation
-  this->speed    =
-   0.0;
+  this->speed    = 0.0;
   this->rotation = 0.0;
   
   //driverMenu selection
