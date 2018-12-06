@@ -8,6 +8,7 @@ var RobotMap_8h =
     [ "DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT", "RobotMap_8h.html#afd29e653ec7c8c9b7e49b75e7a2a1278", null ],
     [ "DRIVETRAIN_RIGHT_REAR_MOTOR", "RobotMap_8h.html#a68427b547613236bec20a86d04321cbc", null ],
     [ "DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT", "RobotMap_8h.html#aa5e3aaf4231c5fef44403d724c5bb3d1", null ],
+    [ "DRIVEWITHJOYSTICK_ROTATION_LIMITER", "RobotMap_8h.html#acf7d7096f3e7e2ad84975e03d61be9b6", null ],
     [ "elif", "RobotMap_8h.html#a536da5a9011e776134af73232c4b3ce2", null ],
     [ "False", "RobotMap_8h.html#a306ebd41c0cd1303b1372c6153f0caf8", null ],
     [ "True", "RobotMap_8h.html#add3ca9eefe3b5b754426f51d3043e579", null ],

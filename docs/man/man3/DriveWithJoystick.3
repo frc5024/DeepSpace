@@ -1,4 +1,4 @@
-.TH "DriveWithJoystick" 3 "Wed Dec 5 2018" "BaseBot" \" -*- nroff -*-
+.TH "DriveWithJoystick" 3 "Thu Dec 6 2018" "BaseBot" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -38,6 +38,14 @@ Inherits Command\&.
 .br
 .RI "Runs once if the command is forced to stop\&. "
 .in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBgetTriggers\fP ()"
+.br
+.RI "Called only if the drivemode is set to 1\&. "
+.in -1c
 .SS "Private Attributes"
 
 .in +1c
@@ -58,7 +66,7 @@ Inherits Command\&.
 .br
 .RI "Rotation value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. "
 .ti -1c
-.RI "int \fBdriveMode\fP = 0"
+.RI "int \fBdriveMode\fP"
 .br
 .RI "Used to keep track of the drive mode\&. "
 .ti -1c
@@ -70,7 +78,7 @@ Inherits Command\&.
 .PP 
 An interface command for driving the robot with an xbox controller\&. 
 .PP
-Definition at line 8 of file DriveWithJoystick\&.h\&.
+Definition at line 9 of file DriveWithJoystick\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "DriveWithJoystick::DriveWithJoystick ()"
@@ -78,7 +86,7 @@ Definition at line 8 of file DriveWithJoystick\&.h\&.
 .PP
 Class constructor\&. 
 .PP
-Definition at line 5 of file DriveWithJoystick\&.cpp\&.
+Definition at line 4 of file DriveWithJoystick\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void DriveWithJoystick::End ()\fC [override]\fP"
@@ -86,13 +94,19 @@ Definition at line 5 of file DriveWithJoystick\&.cpp\&.
 .PP
 Runs once when \fBIsFinished()\fP returns true\&. 
 .PP
-Definition at line 56 of file DriveWithJoystick\&.cpp\&.
+Definition at line 74 of file DriveWithJoystick\&.cpp\&.
 .SS "void DriveWithJoystick::Execute ()\fC [override]\fP"
 
 .PP
 Called in a loop during Teleop\&. 
 .PP
-Definition at line 31 of file DriveWithJoystick\&.cpp\&.
+Definition at line 43 of file DriveWithJoystick\&.cpp\&.
+.SS "bool DriveWithJoystick::getTriggers ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Called only if the drivemode is set to 1\&. 
+.PP
+Definition at line 34 of file DriveWithJoystick\&.cpp\&.
 .SS "void DriveWithJoystick::Initialize ()\fC [override]\fP"
 
 .PP
@@ -104,9 +118,9 @@ Definition at line 12 of file DriveWithJoystick\&.cpp\&.
 .PP
 Runs once if the command is forced to stop\&. 
 .PP
-Definition at line 60 of file DriveWithJoystick\&.cpp\&.
+Definition at line 78 of file DriveWithJoystick\&.cpp\&.
 .SS "bool DriveWithJoystick::IsFinished ()\fC [override]\fP"
-Used to tell wpilib if the command is fully finished\&. This should never return true
+Used to tell wpilib if the command is fully finished\&. This should never return true Because we always want to be able to drive the bot during teleop
 .PP
 \fBReturns:\fP
 .RS 4
@@ -115,7 +129,7 @@ True if command is finished, else false
 .PP
 
 .PP
-Definition at line 53 of file DriveWithJoystick\&.cpp\&.
+Definition at line 71 of file DriveWithJoystick\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "int DriveWithJoystick::directionMultiplier\fC [private]\fP"
@@ -123,39 +137,39 @@ Definition at line 53 of file DriveWithJoystick\&.cpp\&.
 .PP
 Can be 1 or -1\&. Determines the direction the the robot moves in\&. 
 .PP
-Definition at line 25 of file DriveWithJoystick\&.h\&.
-.SS "int DriveWithJoystick::driveMode = 0\fC [private]\fP"
+Definition at line 27 of file DriveWithJoystick\&.h\&.
+.SS "int DriveWithJoystick::driveMode\fC [private]\fP"
 
 .PP
 Used to keep track of the drive mode\&. driveMode is set depending on what is selected from drivermenu
 .PP
 0 = Joystick 1 = Triggers 
 .PP
-Definition at line 37 of file DriveWithJoystick\&.h\&.
+Definition at line 41 of file DriveWithJoystick\&.h\&.
 .SS "frc::XboxController* DriveWithJoystick::pJoyDrive\fC [private]\fP"
 
 .PP
 A mnemonic for the driver's controller because we are lazy\&. 
 .PP
-Definition at line 39 of file DriveWithJoystick\&.h\&.
+Definition at line 43 of file DriveWithJoystick\&.h\&.
 .SS "double DriveWithJoystick::rotation\fC [private]\fP"
 
 .PP
 Rotation value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. 
 .PP
-Definition at line 29 of file DriveWithJoystick\&.h\&.
+Definition at line 31 of file DriveWithJoystick\&.h\&.
 .SS "double DriveWithJoystick::speed\fC [private]\fP"
 
 .PP
 Speed value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. 
 .PP
-Definition at line 28 of file DriveWithJoystick\&.h\&.
+Definition at line 30 of file DriveWithJoystick\&.h\&.
 .SS "double DriveWithJoystick::speedMultiplier\fC [private]\fP"
 
 .PP
 The speed of the robot is multiplied by this number\&. Used for slowmode\&. 
 .PP
-Definition at line 26 of file DriveWithJoystick\&.h\&.
+Definition at line 28 of file DriveWithJoystick\&.h\&.
 
 .SH "Author"
 .PP 

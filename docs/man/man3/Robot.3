@@ -1,4 +1,4 @@
-.TH "Robot" 3 "Wed Dec 5 2018" "BaseBot" \" -*- nroff -*-
+.TH "Robot" 3 "Thu Dec 6 2018" "BaseBot" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -92,25 +92,25 @@ Runs once at the start of auto\&. Usually while the announcer starts counting do
 .PP
 You can add additional auto modes by adding additional commands to the chooser code above (like the commented example) or additional comparisons to the if-else structure below with additional strings & commands\&. 
 .PP
-Definition at line 69 of file Robot\&.cpp\&.
+Definition at line 61 of file Robot\&.cpp\&.
 .SS "void Robot::AutonomousPeriodic ()\fC [override]\fP"
 
 .PP
 Runs in a loop during auto\&. 
 .PP
-Definition at line 85 of file Robot\&.cpp\&.
+Definition at line 77 of file Robot\&.cpp\&.
 .SS "void Robot::DisabledInit ()\fC [override]\fP"
 
 .PP
 Runs once every time the robot is disabled\&. This function is called once each time the robot enters Disabled mode\&. You can use it to reset any subsystem information you want to clear when the robot is disabled\&. 
 .PP
-Definition at line 54 of file Robot\&.cpp\&.
+Definition at line 46 of file Robot\&.cpp\&.
 .SS "void Robot::DisabledPeriodic ()\fC [override]\fP"
 
 .PP
 Runs in a loop while the robot is disabled\&. 
 .PP
-Definition at line 56 of file Robot\&.cpp\&.
+Definition at line 48 of file Robot\&.cpp\&.
 .SS "void Robot::RobotInit ()\fC [override]\fP"
 
 .PP
@@ -124,25 +124,25 @@ Runs in a loop while the robot is turned on in any mode\&. This function is call
 .PP
 This runs after the mode specific periodic functions, but before LiveWindow and SmartDashboard integrated updating\&. 
 .PP
-Definition at line 47 of file Robot\&.cpp\&.
+Definition at line 39 of file Robot\&.cpp\&.
 .SS "void Robot::TeleopInit ()\fC [override]\fP"
 
 .PP
 Runs once at the start of teleop when the bell sounds\&. 
 .PP
-Definition at line 87 of file Robot\&.cpp\&.
+Definition at line 79 of file Robot\&.cpp\&.
 .SS "void Robot::TeleopPeriodic ()\fC [override]\fP"
 
 .PP
 Runs in a loop during teleop\&. 
 .PP
-Definition at line 102 of file Robot\&.cpp\&.
+Definition at line 94 of file Robot\&.cpp\&.
 .SS "void Robot::TestPeriodic ()\fC [override]\fP"
 
 .PP
 Runs in a loop during test mode\&. 
 .PP
-Definition at line 104 of file Robot\&.cpp\&.
+Definition at line 96 of file Robot\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "frc::SendableChooser<frc::Command*> Robot::m_chooser\fC [private]\fP"

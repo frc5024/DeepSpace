@@ -3,6 +3,7 @@ var classDriveWithJoystick =
     [ "DriveWithJoystick", "classDriveWithJoystick.html#aec663d65d48661b956e8db0011092140", null ],
     [ "End", "classDriveWithJoystick.html#a8cf3328b991790b93c6615116f7c0434", null ],
     [ "Execute", "classDriveWithJoystick.html#ae47c234f069c5f4d5004dba287f47e7b", null ],
+    [ "getTriggers", "classDriveWithJoystick.html#ad71ea9e372b00ece4b89acaa93290b96", null ],
     [ "Initialize", "classDriveWithJoystick.html#a9838eb31b2afee384b26e3a9c764b4ca", null ],
     [ "Interrupted", "classDriveWithJoystick.html#a629524dff7b0a940175d5995c0511cdb", null ],
     [ "IsFinished", "classDriveWithJoystick.html#aeeb849dde20c9b7b8049eb318e7b5d90", null ],

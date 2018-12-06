@@ -17,5 +17,6 @@ var searchData=
   ['drivetrain_5fright_5frear_5fmotor_5finvert',['DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT',['../RobotMap_8h.html#aa5e3aaf4231c5fef44403d724c5bb3d1',1,'RobotMap.h']]],
   ['drivewithjoystick',['DriveWithJoystick',['../classDriveWithJoystick.html',1,'DriveWithJoystick'],['../classDriveWithJoystick.html#aec663d65d48661b956e8db0011092140',1,'DriveWithJoystick::DriveWithJoystick()']]],
   ['drivewithjoystick_2ecpp',['DriveWithJoystick.cpp',['../DriveWithJoystick_8cpp.html',1,'']]],
-  ['drivewithjoystick_2eh',['DriveWithJoystick.h',['../DriveWithJoystick_8h.html',1,'']]]
+  ['drivewithjoystick_2eh',['DriveWithJoystick.h',['../DriveWithJoystick_8h.html',1,'']]],
+  ['drivewithjoystick_5frotation_5flimiter',['DRIVEWITHJOYSTICK_ROTATION_LIMITER',['../RobotMap_8h.html#acf7d7096f3e7e2ad84975e03d61be9b6',1,'RobotMap.h']]]
 ];
