@@ -35,6 +35,6 @@
 #define elif  else if
 
 // Reasons why I shouldn't be allowed to do this
-#define WinGame frc::StartRobot
+#define WinGame(_class_) START_ROBOT_CLASS(_class_)
 
 #endif // _ROBOTMAP_HG_
