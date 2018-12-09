@@ -95,6 +95,11 @@ void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }
 
 void Robot::TestPeriodic() {}
 
-#ifndef RUNNING_FRC_TESTS
-START_ROBOT_CLASS(Robot)
-#endif
+int main(){
+	WinGame
+	
+	// The following comment should be removed once this is tested
+	// frc::StartRobot<Robot>();
+	return 1
+}
+

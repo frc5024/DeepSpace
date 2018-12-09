@@ -34,4 +34,7 @@
 #define True  true
 #define elif  else if
 
+// Reasons why I shouldn't be allowed to do this
+#define WinGame frc::StartRobot<Robot>();
+
 #endif // _ROBOTMAP_HG_
