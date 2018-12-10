@@ -26,6 +26,10 @@ void Robot::RobotInit() {
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pDriveWithJoystick = new DriveWithJoystick();
+
+  // Set robot loop speed (in seconds)
+  std::cout << "Setting Period Time.." << std::endl;
+  this->SetPeriod(0.01);
 }
 
 /**
