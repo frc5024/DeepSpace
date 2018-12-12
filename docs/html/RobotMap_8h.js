@@ -12,6 +12,7 @@ var RobotMap_8h =
     [ "elif", "RobotMap_8h.html#a536da5a9011e776134af73232c4b3ce2", null ],
     [ "False", "RobotMap_8h.html#a306ebd41c0cd1303b1372c6153f0caf8", null ],
     [ "True", "RobotMap_8h.html#add3ca9eefe3b5b754426f51d3043e579", null ],
+    [ "WinGame", "RobotMap_8h.html#a06ff4c1b825f2b61a5dcdc5e5bae9ea9", null ],
     [ "XBOX_CONTROLLER_DRIVE_PORT", "RobotMap_8h.html#aef0db07128cdb05d2eeea784a1642ed5", null ],
     [ "XBOX_CONTROLLER_OPERATOR_PORT", "RobotMap_8h.html#a1c626b8a3c165a1100790b0b4b84a1b8", null ]
 ];

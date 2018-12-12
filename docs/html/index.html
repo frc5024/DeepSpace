@@ -100,7 +100,17 @@ $(document).ready(function(){initNavTree('index.html','');});
 <li>Deploy using wpilib</li>
 </ul>
 <p>The second way is to use rolling release / waterfall. Just do the steps above, but use git to clone the master branch instead of grabbing the latest release.</p>
-<p>NOTE: 5024 members should always use the second method. </p>
+<p>NOTE: 5024 members should always use the second method.</p>
+<h2>Deployment</h2>
+<p>When deploying code to our robots we have a problem where, on the first few tries, the deployment fails due to not being able to find the RIO. Just keep trying, and it will eventually work.</p>
+<h2>DriverMenu</h2>
+<p>This codebase has a modified version of 2018's offseason DriverMenu.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Action  </th><th class="markdownTableHeadNone" colspan="3">Controlle   </th></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Hold Y button  </td><td class="markdownTableBodyNone">Driver's controller  </td><td class="markdownTableBodyNone">While enabling the robot  </td><td class="markdownTableBodyNone">Switches to TriggerDrive   </td></tr>
+</table>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
