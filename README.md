@@ -16,3 +16,14 @@ The second way is to use rolling release / waterfall. Just do the steps above, b
 
 NOTE: 5024 members should always use the second method.
 
+
+## Deployment
+When deploying code to our robots we have a problem where, on the first few tries, the deployment fails due to not being able to find the RIO. Just keep trying, and it will eventually work.
+
+## DriverMenu
+This codebase has a modified version of 2018's offseason DriverMenu.
+
+| Action | Controller | When | What it Does |
+| -- | -- | -- | -- |
+| Hold Y button | Driver's controller | While enabling the robot | Switches to TriggerDrive |
+
