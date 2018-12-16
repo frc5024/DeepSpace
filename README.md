@@ -27,3 +27,43 @@ This codebase has a modified version of 2018's offseason DriverMenu.
 | -- | -- | -- | -- |
 | Hold Y button | Driver's controller | While enabling the robot | Switches to TriggerDrive |
 
+## Building the documentation
+To build the documentation, make sure you have doxygen installed, then run:
+```sh
+doxygen ./doxygen.config 
+```
+The documentation will the be automattically pushed to the website for this repo.
+
+5024 members should not worry about this because the documentation is automatically built during our code review process.
+
+## Who Made This?
+BaseBot is a rewrite of [barebonesFRC](https://github.com/Ewpratten/barebonesFRC) which was based off of the [2017](https://github.com/frc5024/SteamWorks) and [2018](Https://github.com/frc5024/PowerUp) codebases from Team [5024](Https://github.com/frc5024)
+
+BarebonesFRC was originally designed by:
+ - [@ewpratten](Https://github.com/ewpratten)
+ - [@slownie](Https://github.com/slownie)
+
+And was tested by:
+ - [@ewpratten](Https://github.com/ewpratten)
+ - [@slownie](Https://github.com/slownie)
+ - [@b3alzach1n](https://github.com/b3alzach1n)
+ - Ethan (non-githubber)
+ - Josh (non-githubber)
+ - [@retrax24](Https://github.com/retrax24)
+ - [@Volxz](Https://github.com/Volxz)
+ - Nick (non-githubber)
+
+BaseBot is developed by the [5024 Programming Team](https://github.com/orgs/frc5024/people) and has been tested by:
+ - Aidan
+ - Andrea
+ - Jeremy
+ - Josh
+ - Mark
+ - Nick
+
+From our drive team
+
+Special thanks to our awesome mentors:
+ - [@johnlownie](https://github.com/johnlownie)
+ - [@LordMichaelmort](https://github.com/LordMichaelmort)
+ - [@awpratten](https://github.com/awpratten)
