@@ -27,6 +27,14 @@ This codebase has a modified version of 2018's offseason DriverMenu.
 | -- | -- | -- | -- |
 | Hold Y button | Driver's controller | While enabling the robot | Switches to TriggerDrive |
 
+## Active Branches
+The following branches are being activly worked on
+
+| Name | Task |
+| -- | -- | 
+| darian-motion-profiling | Writing a motion profiling system |
+| Qbert | Code being used to teach new members how to program robots |
+
 ## Building the documentation
 To build the documentation, make sure you have doxygen installed, then run:
 ```sh
