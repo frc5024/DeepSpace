@@ -11,10 +11,10 @@
 // Whenever possible, Macros and definitions are used in order to preserve memory
 
 // DriveTrain motors
-#define DRIVETRAIN_LEFT_FRONT_MOTOR  5
-#define DRIVETRAIN_LEFT_REAR_MOTOR   6
-#define DRIVETRAIN_RIGHT_FRONT_MOTOR 4
-#define DRIVETRAIN_RIGHT_REAR_MOTOR  3
+#define DRIVETRAIN_LEFT_FRONT_MOTOR  1
+#define DRIVETRAIN_LEFT_REAR_MOTOR   2
+#define DRIVETRAIN_RIGHT_FRONT_MOTOR 3
+#define DRIVETRAIN_RIGHT_REAR_MOTOR  4
 
 // DriveTrain motor invertions
 #define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT  false
