@@ -23,8 +23,7 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "BaseBot", "index.html", [
-    [ "BaseBot [![CodeFactor](https://www.codefactor.io/repository/github/frc5024/basebot/badge)](https://www.codefactor.io/repository/github/frc5024/basebot) [![GitHub license](https://img.shields.io/github/license/frc5024/BaseBot.svg)](https://github.com/frc5024/BaseBot/blob/master/LICENSE) [![DOI](https://zenodo.org/badge/159041740.svg)](https://zenodo.org/badge/latestdoi/159041740)", "index.html", null ],
+  [ "DeepSpace", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

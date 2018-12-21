@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m_5fchooser',['m_chooser',['../classRobot.html#ae8ed06b4ce167235e06332a3463d5399',1,'Robot']]],
-  ['m_5fdrivetrain',['m_DriveTrain',['../classRobot.html#a5eca8a1e1f5dd2841641c25874141abd',1,'Robot']]],
-  ['m_5foi',['m_oi',['../classRobot.html#aa73b63ec078b50244672b38e6ef2f506',1,'Robot']]]
+  ['oi',['OI',['../classOI.html',1,'OI'],['../classOI.html#a77c2c4630ca19e64a7885154f3dc202f',1,'OI::OI()']]],
+  ['oi_2ecpp',['OI.cpp',['../OI_8cpp.html',1,'']]],
+  ['oi_2eh',['OI.h',['../OI_8h.html',1,'']]]
 ];
