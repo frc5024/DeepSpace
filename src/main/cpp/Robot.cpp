@@ -1,6 +1,6 @@
 #include "Robot.h"
 
-#include <Commands/Scheduler.h>
+#include <frc/Commands/Scheduler.h>
 #include <SmartDashboard/SmartDashboard.h>
 #include <iostream>
 

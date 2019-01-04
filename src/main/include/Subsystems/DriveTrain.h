@@ -2,12 +2,12 @@
 #ifndef _DRIVETRAIN_HG_
 #define _DRIVETRAIN_HG_
 
-#include <Commands/Subsystem.h>
-#include <WPILib.h>
+#include <frc/commands/Subsystem.h>
+#include <frc/WPILib.h>
 #include <ctre/Phoenix.h>
 #include <Drive/DifferentialDrive.h>
 #include "RobotMap.h"
-#include <Commands/DriveWithJoystick.h>
+#include <frc/Commands/DriveWithJoystick.h>
 
 class DriveTrain : public frc::Subsystem {
  public:

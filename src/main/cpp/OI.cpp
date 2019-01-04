@@ -2,8 +2,8 @@
 #include "RobotMap.h"
 
 OI::OI() {
-  this->pJoystickDrive    = new XboxController(XBOX_CONTROLLER_DRIVE_PORT);
-	this->pJoystickOperator = new XboxController(XBOX_CONTROLLER_OPERATOR_PORT);
+  this->pJoystickDrive    = new frc::XboxController(XBOX_CONTROLLER_DRIVE_PORT);
+	this->pJoystickOperator = new frc::XboxController(XBOX_CONTROLLER_OPERATOR_PORT);
 }
 
 frc::XboxController* OI::GetJoystickDrive() {
