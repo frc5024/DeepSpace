@@ -2,9 +2,9 @@
 #ifndef _ROBOT_HG_
 #define _ROBOT_HG_
 
-#include <Commands/Command.h>
-#include <SmartDashboard/SendableChooser.h>
-#include <TimedRobot.h>
+#include <frc/commands/Command.h>
+#include <frc/smartdashboard/SendableChooser.h>
+#include <frc/TimedRobot.h>
 
 #include "Commands/DriveWithJoystick.h"
 #include "OI.h"

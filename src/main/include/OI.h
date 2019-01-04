@@ -2,7 +2,7 @@
 #ifndef _OI_HG_
 #define _OI_HG_
 
-#include <WPILib.h>
+#include <frc/WPILib.h>
 
 class OI {
  public:

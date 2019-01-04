@@ -12,8 +12,5 @@
     ".project": true
   },
   "C_Cpp.default.configurationProvider": "vscode-wpilib",
-  "wpilib.online": true,
-  "files.associations": {
-    "ostream": "cpp"
-  }
+  "wpilib.online": true
 }
