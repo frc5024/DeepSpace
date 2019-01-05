@@ -33,7 +33,7 @@ void DriveWithJoystick::Initialize() {
 
 bool inline DriveWithJoystick::getTriggers(){
   // Speed = Right trigger - left trigger
-  this->speed = (this->pJoyDrive->GetTriggerAxis(XboxController::kRightHand) - this->pJoyDrive->GetTriggerAxis(XboxController::kLeftHand));
+  this->speed = (this->pJoyDrive->GetTriggerAxis(Hand::kRightHand) - this->pJoyDrive->GetTriggerAxis(Hand::kLeftHand));
   
   // needed for use in an and statement
   return true;
@@ -43,11 +43,11 @@ bool inline DriveWithJoystick::getTriggers(){
 void DriveWithJoystick::Execute() {
   // Deal with reversing and slow mode
 	this->directionMultiplier = (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
-  this->speedMultiplier     = (this->pJoyDrive->GetBumper(XboxController::kRightHand)) ? 0.5 : 1;
+  this->speedMultiplier     = (this->pJoyDrive->GetBumper(Hand::kRightHand)) ? 0.5 : 1;
 
   // Get movement data form controller
-  this->speed    = this->pJoyDrive->GetY(XboxController::kLeftHand) * -1;
-	this->rotation = this->pJoyDrive->GetX(XboxController::kLeftHand);
+  this->speed    = this->pJoyDrive->GetY(Hand::kLeftHand) * -1;
+	this->rotation = this->pJoyDrive->GetX(Hand::kLeftHand);
 
   // If trigger drive mode was enabled during teleop-init, override speed with trigger data
   // This will only ever be called if a select few people are driving the bot.

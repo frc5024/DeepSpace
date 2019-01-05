@@ -5,6 +5,7 @@
 #include <frc/commands/Command.h>
 #include <frc/smartdashboard/SendableChooser.h>
 #include <frc/TimedRobot.h>
+#include <cameraserver/CameraServer.h>
 
 #include "Commands/DriveWithJoystick.h"
 #include "OI.h"

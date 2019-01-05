@@ -1,7 +1,7 @@
 #include "Robot.h"
 
-#include <frc/Commands/Scheduler.h>
-#include <SmartDashboard/SmartDashboard.h>
+#include <frc/commands/Scheduler.h>
+#include <frc/smartdashboard/SmartDashboard.h>
 #include <iostream>
 
 // Subsystems
@@ -21,7 +21,7 @@ void Robot::RobotInit() {
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
-	CameraServer::GetInstance()->StartAutomaticCapture();
+	// CameraServer::GetInstance()->StartAutomaticCapture();
 	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
@@ -29,7 +29,7 @@ void Robot::RobotInit() {
 
   // Set robot loop speed (in seconds)
   std::cout << "Setting Period Time.." << std::endl;
-  this->SetPeriod(0.01);
+  // this->SetPeriod(0.01);
 }
 
 /**
@@ -100,5 +100,9 @@ void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }
 void Robot::TestPeriodic() {}
 
 #ifndef RUNNING_FRC_TESTS
-	WinGame(Robot)
+int main(){
+  // Start the robot
+  WinGame(Robot);
+  return 1;
+}
 #endif

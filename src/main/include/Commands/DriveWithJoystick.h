@@ -5,6 +5,7 @@
 #include <frc/commands/Command.h>
 #include <Subsystems/DriveTrain.h>
 #include "RobotMap.h"
+#include <frc/GenericHID.h>
 
 class DriveWithJoystick : public frc::Command {
  public:
