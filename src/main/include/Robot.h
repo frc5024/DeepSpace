@@ -7,7 +7,7 @@
 #include <frc/TimedRobot.h>
 #include <cameraserver/CameraServer.h>
 
-#include "Commands/DriveWithJoystick.h"
+#include "Commands/TriggerDrive.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 
@@ -19,7 +19,7 @@ class Robot : public frc::TimedRobot {
   static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
 
 	// Commands
-  DriveWithJoystick* pDriveWithJoystick; //!< Pointer for the DriveWithJoystick command
+  TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
 
 	// Robot methods
   void RobotInit() override;          //!< Runs once on robot boot
@@ -35,8 +35,6 @@ class Robot : public frc::TimedRobot {
  private:
   // Have it null by default so that if testing teleop it
   // doesn't have undefined behavior and potentially crash.
-  // frc::Command* m_autonomousCommand = nullptr;
-  // DriveWithJoystick m_defaultAuto;
   // MyAutoCommand m_myAuto;
   frc::SendableChooser<frc::Command*> m_chooser;
 };

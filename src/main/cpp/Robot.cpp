@@ -25,7 +25,7 @@ void Robot::RobotInit() {
 	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
-  this->pDriveWithJoystick = new DriveWithJoystick();
+  this->pTriggerDrive = new TriggerDrive();
 
   // Set robot loop speed (in seconds)
   std::cout << "Setting Period Time.." << std::endl;
@@ -90,8 +90,8 @@ void Robot::TeleopInit() {
   //   m_autonomousCommand = nullptr;
   // }
 
-  if (this->pDriveWithJoystick != nullptr) {
-		this->pDriveWithJoystick->Start();
+  if (this->pTriggerDrive != nullptr) {
+		this->pTriggerDrive->Start();
 	}
 }
 
