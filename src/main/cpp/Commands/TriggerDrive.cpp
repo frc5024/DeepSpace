@@ -33,7 +33,7 @@ void TriggerDrive::Execute() {
 	
 	// Multiply each value with it's multiplier(s)
   this->speed    *= (this->speedMultiplier * this->directionMultiplier);
-  this->rotation *= (this->speedMultiplier * DRIVE_ROTATION_LIMITER);
+  this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
   Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
   
