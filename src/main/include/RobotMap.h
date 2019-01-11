@@ -22,6 +22,10 @@
 #define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT true
 #define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT  true
 
+//Climb Motors 
+#define CLIMB_ARM_MOTOR 3
+#define CLIMB_LEG_MOTOR 4
+
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 
