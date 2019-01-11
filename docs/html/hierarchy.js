@@ -1,7 +1,8 @@
 var hierarchy =
 [
     [ "Command", null, [
-      [ "DriveWithJoystick", "classDriveWithJoystick.html", null ]
+      [ "DriveWithJoystick", "classDriveWithJoystick.html", null ],
+      [ "TriggerDrive", "classTriggerDrive.html", null ]
     ] ],
     [ "OI", "classOI.html", null ],
     [ "Subsystem", null, [

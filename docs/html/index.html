@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DeepSpace: DeepSpace</title>
+<title>DeepSpace: DeepSpace [![CodeFactor](https://www.codefactor.io/repository/github/frc5024/deepspace/badge)](https://www.codefactor.io/repository/github/frc5024/deepspace) [![DOI](https://zenodo.org/badge/162623857.svg)](https://zenodo.org/badge/latestdoi/162623857)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,10 +86,37 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">DeepSpace </div>  </div>
+<div class="title">DeepSpace [![CodeFactor](<a href="https://www.codefactor.io/repository/github/frc5024/deepspace/badge">https://www.codefactor.io/repository/github/frc5024/deepspace/badge</a>)](<a href="https://www.codefactor.io/repository/github/frc5024/deepspace">https://www.codefactor.io/repository/github/frc5024/deepspace</a>) [![DOI](<a href="https://zenodo.org/badge/162623857.svg">https://zenodo.org/badge/162623857.svg</a>)](<a href="https://zenodo.org/badge/latestdoi/162623857">https://zenodo.org/badge/latestdoi/162623857</a>) </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This is our 2019 FRC code. Built on top of <a href="https://github.com/frc5024/basebot">BaseBot</a> </p>
+<div class="textblock"><p>Our DeepSpace code is built on top of <a href="https://github.com/frc5024/basebot">BaseBot</a>. The documentation can be found <a href="https://frc5024.github.io/DeepSpace/">HERE</a></p>
+<h2>Installation</h2>
+<p>This code can be "installed" in one of two ways. First, is via an official release:</p>
+<p>These are the steps:</p><ul>
+<li>Get the latest release from github</li>
+<li>Unpack the compressed archive</li>
+<li>Open it as a folder in vscode</li>
+<li>Set your team number in wpilib</li>
+<li>Deploy using wpilib</li>
+</ul>
+<p>The second way is to use rolling release / waterfall. Just do the steps above, but use git to clone the master branch instead of grabbing the latest release.</p>
+<p>NOTE: 5024 members should always use the second method.</p>
+<h2>Building Documentation</h2>
+<p>To build the c++ documentation, we use a custom Doxygen config. To use this config, run this command on a linux machine: </p><div class="fragment"><div class="line">doxygen ./doxygen.config</div></div><!-- fragment --><p>To build the Controller Layout files, run this command (<code>python3</code> may need to be changed to <code>python</code>): </p><div class="fragment"><div class="line">python3 ./buildcml.py ./controller_layout.cml.json</div></div><!-- fragment --><p>NOTE: Linux is required for the doxygen documents due to our use of unix-style path notation.</p>
+<h2>Pull requests</h2>
+<p>Pull requests is our prefered method of merging code. For a PR to be merged, it must:</p><ul>
+<li>Pass style checking</li>
+<li>Be approved by a mentor or team lead</li>
+<li>Compile without any errors or warnings</li>
+</ul>
+<h2>Deployment</h2>
+<p>When deploying code to our robots we have a problem where, on the first few tries, the deployment fails due to not being able to find the RIO. Just keep trying, and it will eventually work.</p>
+<h2>The team</h2>
+<p>This codebase is built and tested by the <a href="https://github.com/frc5024">5024 programming team</a> with help from our mentors:</p><ul>
+<li><a href="https://github.com/johnlownie"></a></li>
+<li><a href="https://github.com/LordMichaelmort"></a></li>
+<li><a href="https://github.com/awpratten"></a> </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

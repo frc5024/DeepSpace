@@ -1,4 +1,4 @@
-.TH "src/main/include/RobotMap.h" 3 "Thu Dec 20 2018" "DeepSpace" \" -*- nroff -*-
+.TH "src/main/include/RobotMap.h" 3 "Fri Jan 11 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -52,7 +52,10 @@ src/main/include/RobotMap.h
 .RI "#define \fBelif\fP   else if"
 .br
 .ti -1c
-.RI "#define \fBWinGame\fP(_class_)   START_ROBOT_CLASS(_class_)"
+.RI "#define \fBHand\fP   frc::GenericHID::JoystickHand"
+.br
+.ti -1c
+.RI "#define \fBWinGame\fP(_class_)   frc::StartRobot<_class_>()"
 .br
 .in -1c
 .SH "Macro Definition Documentation"
@@ -101,14 +104,18 @@ Definition at line 35 of file RobotMap\&.h\&.
 
 .PP
 Definition at line 33 of file RobotMap\&.h\&.
+.SS "#define Hand   frc::GenericHID::JoystickHand"
+
+.PP
+Definition at line 38 of file RobotMap\&.h\&.
 .SS "#define True   true"
 
 .PP
 Definition at line 34 of file RobotMap\&.h\&.
-.SS "#define WinGame(_class_)   START_ROBOT_CLASS(_class_)"
+.SS "#define WinGame(_class_)   frc::StartRobot<_class_>()"
 
 .PP
-Definition at line 38 of file RobotMap\&.h\&.
+Definition at line 41 of file RobotMap\&.h\&.
 .SS "#define XBOX_CONTROLLER_DRIVE_PORT   0"
 
 .PP

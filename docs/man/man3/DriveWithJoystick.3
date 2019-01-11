@@ -1,4 +1,4 @@
-.TH "DriveWithJoystick" 3 "Thu Dec 20 2018" "DeepSpace" \" -*- nroff -*-
+.TH "DriveWithJoystick" 3 "Fri Jan 11 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -78,7 +78,7 @@ Inherits Command\&.
 .PP 
 An interface command for driving the robot with an xbox controller\&. 
 .PP
-Definition at line 9 of file DriveWithJoystick\&.h\&.
+Definition at line 10 of file DriveWithJoystick\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "DriveWithJoystick::DriveWithJoystick ()"
@@ -137,7 +137,7 @@ Definition at line 71 of file DriveWithJoystick\&.cpp\&.
 .PP
 Can be 1 or -1\&. Determines the direction the the robot moves in\&. 
 .PP
-Definition at line 27 of file DriveWithJoystick\&.h\&.
+Definition at line 28 of file DriveWithJoystick\&.h\&.
 .SS "int DriveWithJoystick::driveMode\fC [private]\fP"
 
 .PP
@@ -145,31 +145,31 @@ Used to keep track of the drive mode\&. driveMode is set depending on what is se
 .PP
 0 = Joystick 1 = Triggers 
 .PP
-Definition at line 41 of file DriveWithJoystick\&.h\&.
+Definition at line 42 of file DriveWithJoystick\&.h\&.
 .SS "frc::XboxController* DriveWithJoystick::pJoyDrive\fC [private]\fP"
 
 .PP
 A mnemonic for the driver's controller because we are lazy\&. 
 .PP
-Definition at line 43 of file DriveWithJoystick\&.h\&.
+Definition at line 44 of file DriveWithJoystick\&.h\&.
 .SS "double DriveWithJoystick::rotation\fC [private]\fP"
 
 .PP
 Rotation value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. 
 .PP
-Definition at line 31 of file DriveWithJoystick\&.h\&.
+Definition at line 32 of file DriveWithJoystick\&.h\&.
 .SS "double DriveWithJoystick::speed\fC [private]\fP"
 
 .PP
 Speed value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. 
 .PP
-Definition at line 30 of file DriveWithJoystick\&.h\&.
+Definition at line 31 of file DriveWithJoystick\&.h\&.
 .SS "double DriveWithJoystick::speedMultiplier\fC [private]\fP"
 
 .PP
 The speed of the robot is multiplied by this number\&. Used for slowmode\&. 
 .PP
-Definition at line 28 of file DriveWithJoystick\&.h\&.
+Definition at line 29 of file DriveWithJoystick\&.h\&.
 
 .SH "Author"
 .PP 

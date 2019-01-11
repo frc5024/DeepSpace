@@ -11,6 +11,7 @@ var RobotMap_8h =
     [ "DRIVEWITHJOYSTICK_ROTATION_LIMITER", "RobotMap_8h.html#acf7d7096f3e7e2ad84975e03d61be9b6", null ],
     [ "elif", "RobotMap_8h.html#a536da5a9011e776134af73232c4b3ce2", null ],
     [ "False", "RobotMap_8h.html#a306ebd41c0cd1303b1372c6153f0caf8", null ],
+    [ "Hand", "RobotMap_8h.html#a401e131de9ff23c4f45cce5c842eb2ab", null ],
     [ "True", "RobotMap_8h.html#add3ca9eefe3b5b754426f51d3043e579", null ],
     [ "WinGame", "RobotMap_8h.html#a06ff4c1b825f2b61a5dcdc5e5bae9ea9", null ],
     [ "XBOX_CONTROLLER_DRIVE_PORT", "RobotMap_8h.html#aef0db07128cdb05d2eeea784a1642ed5", null ],

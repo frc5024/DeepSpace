@@ -1,4 +1,4 @@
-.TH "Robot" 3 "Thu Dec 20 2018" "DeepSpace" \" -*- nroff -*-
+.TH "Robot" 3 "Fri Jan 11 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -55,9 +55,9 @@ Inherits TimedRobot\&.
 
 .in +1c
 .ti -1c
-.RI "\fBDriveWithJoystick\fP * \fBpDriveWithJoystick\fP"
+.RI "\fBTriggerDrive\fP * \fBpTriggerDrive\fP"
 .br
-.RI "Pointer for the \fBDriveWithJoystick\fP command\&. "
+.RI "Pointer for the \fBTriggerDrive\fP command\&. "
 .in -1c
 .SS "Static Public Attributes"
 
@@ -82,7 +82,7 @@ Inherits TimedRobot\&.
 .PP 
 Main robot class that is called by wpilib\&. 
 .PP
-Definition at line 14 of file Robot\&.h\&.
+Definition at line 15 of file Robot\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void Robot::AutonomousInit ()\fC [override]\fP"
@@ -148,25 +148,25 @@ Definition at line 100 of file Robot\&.cpp\&.
 .SS "frc::SendableChooser<frc::Command*> Robot::m_chooser\fC [private]\fP"
 
 .PP
-Definition at line 40 of file Robot\&.h\&.
+Definition at line 39 of file Robot\&.h\&.
 .SS "\fBDriveTrain\fP * Robot::m_DriveTrain\fC [static]\fP"
 
 .PP
 Pointer for the \fBDriveTrain\fP\&. 
 .PP
-Definition at line 17 of file Robot\&.h\&.
+Definition at line 18 of file Robot\&.h\&.
 .SS "\fBOI\fP * Robot::m_oi\fC [static]\fP"
 
 .PP
 Pointer for the Operator Interface (\fBOI\fP) 
 .PP
-Definition at line 18 of file Robot\&.h\&.
-.SS "\fBDriveWithJoystick\fP* Robot::pDriveWithJoystick"
+Definition at line 19 of file Robot\&.h\&.
+.SS "\fBTriggerDrive\fP* Robot::pTriggerDrive"
 
 .PP
-Pointer for the \fBDriveWithJoystick\fP command\&. 
+Pointer for the \fBTriggerDrive\fP command\&. 
 .PP
-Definition at line 21 of file Robot\&.h\&.
+Definition at line 22 of file Robot\&.h\&.
 
 .SH "Author"
 .PP 

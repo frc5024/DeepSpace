@@ -12,5 +12,5 @@ var classRobot =
     [ "m_chooser", "classRobot.html#ae8ed06b4ce167235e06332a3463d5399", null ],
     [ "m_DriveTrain", "classRobot.html#a5eca8a1e1f5dd2841641c25874141abd", null ],
     [ "m_oi", "classRobot.html#aa73b63ec078b50244672b38e6ef2f506", null ],
-    [ "pDriveWithJoystick", "classRobot.html#a0d613b6f1c4ab6d5f809f1642207b3d6", null ]
+    [ "pTriggerDrive", "classRobot.html#adcda149d7f544a31313d8713bd7a4e5e", null ]
 ];

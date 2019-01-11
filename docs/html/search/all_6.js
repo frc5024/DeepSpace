@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m_5fchooser',['m_chooser',['../classRobot.html#ae8ed06b4ce167235e06332a3463d5399',1,'Robot']]],
-  ['m_5fdrivetrain',['m_DriveTrain',['../classRobot.html#a5eca8a1e1f5dd2841641c25874141abd',1,'Robot']]],
-  ['m_5foi',['m_oi',['../classRobot.html#aa73b63ec078b50244672b38e6ef2f506',1,'Robot']]]
+  ['getjoystickdrive',['GetJoystickDrive',['../classOI.html#a9facc170b5ac69ea63eda4ceabe4d12e',1,'OI']]],
+  ['getjoystickoperator',['GetJoystickOperator',['../classOI.html#a41cf0361ed435447b69562e79addf35c',1,'OI']]],
+  ['gettriggers',['getTriggers',['../classDriveWithJoystick.html#ad71ea9e372b00ece4b89acaa93290b96',1,'DriveWithJoystick']]]
 ];
