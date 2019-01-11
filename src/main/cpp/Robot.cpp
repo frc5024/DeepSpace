@@ -6,6 +6,7 @@
 
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
+Climb *Robot::m_Climb;
 OI *Robot::m_oi;
 
 void Robot::RobotInit() {
@@ -17,6 +18,7 @@ void Robot::RobotInit() {
 
   // Subsystems
   this->m_DriveTrain = new DriveTrain();
+  this->m_Climb = new Climb();
   this->m_oi = new OI();
 
   // Init camera
