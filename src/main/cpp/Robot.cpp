@@ -21,24 +21,8 @@ void Robot::RobotInit() {
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
-  this->frontCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Front Cam", 1);
-  this->backCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Back Cam", 0);
-
-  // this->frontServer = frc::CameraServer::GetInstance()->GetServer();
-  // this->backServer  = frc::CameraServer::GetInstance()->GetServer();
-
-  // // Sinks to keep camera connections open
-  // this->frontCvsink = new cs::CvSink("frontCam");
-  // this->frontCvsink->SetSource(this->frontCam);
-  // this->frontCvsink->SetEnabled(true);
-  
-  // this->backCvsink = new cs::CvSink("backCam");
-  // this->backCvsink->SetSource(this->backCam);
-  // this->backCvsink->SetEnabled(true);
-
-  // // Set server sources
-  // this->frontServer.SetSource(this->frontCam);
-  // this->backServer.SetSource(this->backCam);
+  this->frontCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Front Cam", CAMERASERVER_FRONT_CAMERA);
+  this->backCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Back Cam",  CAMERASERVER_BACK_CAMERA);
 	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;

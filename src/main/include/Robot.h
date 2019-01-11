@@ -5,7 +5,6 @@
 #include <frc/commands/Command.h>
 #include <frc/smartdashboard/SendableChooser.h>
 #include <frc/TimedRobot.h>
-// #include <CameraServer.h>
 #include <frc/WPILib.h>
 #include <cscore_oo.h>
 
@@ -36,16 +35,8 @@ class Robot : public frc::TimedRobot {
 
  private:
   // Define cameras
-  cs::UsbCamera frontCam;
-  cs::UsbCamera backCam;
-
-  // Define cvsinks
-  cs::CvSink* frontCvsink;
-  cs::CvSink* backCvsink;
-
-  // Videosink server
-  cs::VideoSink frontServer;
-  cs::VideoSink backServer;
+  cs::UsbCamera frontCam; //!< Variable for the front camera
+  cs::UsbCamera backCam;  //!< Variable for the Back camera
 
   // Have it null by default so that if testing teleop it
   // doesn't have undefined behavior and potentially crash.
