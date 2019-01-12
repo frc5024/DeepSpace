@@ -10,6 +10,9 @@
 
 // Whenever possible, Macros and definitions are used in order to preserve memory
 
+// This is a thing
+#define CYCLE_TIME	0.01
+
 // Camera mappings
 #define CAMERASERVER_FRONT_CAMERA 1
 #define CAMERASERVER_BACK_CAMERA  0
@@ -32,6 +35,13 @@
 // Xbox controllers
 #define XBOX_CONTROLLER_DRIVE_PORT    0
 #define XBOX_CONTROLLER_OPERATOR_PORT 1
+
+// Turn From Angle PID stuff
+#define PID_TWEAK_P		3.14 // TODO: TBD
+#define PID_TWEAK_I		3.14 // TODO: TBD
+// #define PID_TWEAK_D	3.14 // Not using
+#define PID_BUFFER		0.5 ///< Plus or minus range for target
+#define PID_TIMEOUT		5 ///< Timeout time, wut dnt u ndrstnd
 
 // Handy macros to save Python programmers from going crazy
 #define False false
