@@ -8,7 +8,6 @@ var hierarchy =
     [ "Subsystem", null, [
       [ "DriveTrain", "classDriveTrain.html", null ]
     ] ],
-    [ "TickTime", "classTickTime.html", null ],
     [ "TimedRobot", null, [
       [ "Robot", "classRobot.html", null ]
     ] ]

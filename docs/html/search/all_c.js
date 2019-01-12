@@ -1,7 +1,6 @@
 var searchData=
 [
   ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
-  ['reset',['Reset',['../classTickTime.html#aedbf6a78fb1f9ca21517940619565715',1,'TickTime']]],
   ['robot',['Robot',['../classRobot.html',1,'']]],
   ['robot_2ecpp',['Robot.cpp',['../Robot_8cpp.html',1,'']]],
   ['robot_2eh',['Robot.h',['../Robot_8h.html',1,'']]],
