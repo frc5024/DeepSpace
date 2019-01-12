@@ -21,7 +21,8 @@ void Robot::RobotInit() {
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
-	// CameraServer::GetInstance()->StartAutomaticCapture();
+  this->frontCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Front Cam", CAMERASERVER_FRONT_CAMERA);
+  this->backCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Back Cam",  CAMERASERVER_BACK_CAMERA);
 	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;

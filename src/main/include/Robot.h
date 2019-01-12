@@ -5,7 +5,8 @@
 #include <frc/commands/Command.h>
 #include <frc/smartdashboard/SendableChooser.h>
 #include <frc/TimedRobot.h>
-#include <cameraserver/CameraServer.h>
+#include <frc/WPILib.h>
+#include <cscore_oo.h>
 
 #include "Commands/TriggerDrive.h"
 #include "OI.h"
@@ -33,6 +34,10 @@ class Robot : public frc::TimedRobot {
   void TestPeriodic() override;       //!< Runs in a loop during test mode
 
  private:
+  // Define cameras
+  cs::UsbCamera frontCam; //!< Variable for the front camera
+  cs::UsbCamera backCam;  //!< Variable for the Back camera
+
   // Have it null by default so that if testing teleop it
   // doesn't have undefined behavior and potentially crash.
   // MyAutoCommand m_myAuto;
