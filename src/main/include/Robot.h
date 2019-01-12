@@ -8,6 +8,7 @@
 #include <cameraserver/CameraServer.h>
 
 #include "Commands/TriggerDrive.h"
+#include "Commands/testUltra.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/Climb.h"
@@ -24,7 +25,7 @@ class Robot : public frc::TimedRobot {
 
 	// Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
-
+  testUltra* pTestUltra;
 	// Robot methods
   void RobotInit() override;          //!< Runs once on robot boot
   void RobotPeriodic() override;      //!< Runs in a loop while the robot is turned on in any mode
