@@ -11,13 +11,15 @@
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/Climb.h"
+#include "Subsystems/Leg.h"
 
 
 class Robot : public frc::TimedRobot {
  public:
 	// Subsystems
   static DriveTrain *m_DriveTrain; //!< Pointer for the DriveTrain
-  static Climb *m_Climb;                 //!< Pointer for the Climb
+  static Climb *m_Climb;  
+  static Leg *m_Leg;               //!< Pointer for the Climb
   static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
 
 	// Commands

@@ -7,7 +7,6 @@
 #include <ctre/Phoenix.h>
 #include <frc/AnalogInput.h>
 #include <frc/PWMVictorSPX.h>
-#include <frc/TimedRobot.h>
 #include "RobotMap.h"
 
 class Climb : public frc::Subsystem {
@@ -22,12 +21,6 @@ class Climb : public frc::Subsystem {
 	 */
   void MoveArm(double Speed);
 
-  /**
-	 * Move climb leg up or down
-	 *
-	 * @param Speed speed (from -1 to 1)
-	 */
-  void MoveLeg(double Speed);
 
   /**
 	 * returns distance from floor
@@ -38,7 +31,6 @@ class Climb : public frc::Subsystem {
 
   private:
   can::WPI_TalonSRX* pArmMotor; //!< Pointer for climb arm motor
-  can::WPI_TalonSRX* pLegMotor; //!< Pointer for climb leg motor
   frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC};
   static constexpr double kValueToInches = 0.125;
 };
