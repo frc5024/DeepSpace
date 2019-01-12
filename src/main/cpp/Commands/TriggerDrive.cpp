@@ -17,6 +17,8 @@ void TriggerDrive::Initialize() {
   //set Speed and Rotation
   this->speed    = 0.0;
   this->rotation = 0.0;
+
+  this->table = NetworkTable::GetTable("SmartDashboard/Vision");
   
 }
 
@@ -34,6 +36,8 @@ void TriggerDrive::Execute() {
 	// Multiply each value with it's multiplier(s)
   this->speed    *= (this->speedMultiplier * this->directionMultiplier);
   this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
+
+  this->rotation = (this->pJoyDrive->GetAButton())? this->table->GetNumber("Motor", 0.0) : this->rotation;
 
   Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
   
