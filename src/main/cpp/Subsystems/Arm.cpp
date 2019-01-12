@@ -1,6 +1,6 @@
-#include "Subsystems/Climb.h"
+#include "Subsystems/Arm.h"
 
-Climb::Climb() : Subsystem("Climb") {
+Arm::Arm() : Subsystem("Arm") {
   // Initialize the motors
   this->pArmMotor = new can::WPI_TalonSRX(CLIMB_ARM_MOTOR);
 
@@ -10,16 +10,16 @@ Climb::Climb() : Subsystem("Climb") {
 
 }
 
-void Climb::InitDefaultCommand() {
+void Arm::InitDefaultCommand() {
   // Set the default command for a subsystem here.
   // SetDefaultCommand(new MySpecialCommand());
 }
 
-void Climb::MoveArm(double Speed) {
+void Arm::MoveArm(double Speed) {
   this->pArmMotor->Set(Speed);
 }
 
-double Climb::getDistanceFromFloor() {
+double Arm::getDistanceFromFloor() {
   double range = m_ultrasonic.GetValue() * kValueToInches;
   return range;
 }

@@ -11,7 +11,7 @@
 #include "Commands/testUltra.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
-#include "Subsystems/Climb.h"
+#include "Subsystems/Arm.h"
 #include "Subsystems/Leg.h"
 
 
@@ -19,8 +19,8 @@ class Robot : public frc::TimedRobot {
  public:
 	// Subsystems
   static DriveTrain *m_DriveTrain; //!< Pointer for the DriveTrain
-  static Climb *m_Climb;  
-  static Leg *m_Leg;               //!< Pointer for the Climb
+  static Arm *m_Arm;               //!< Pointer for the Arm
+  static Leg *m_Leg;               //!< Pointer for the Leg
   static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
 
 	// Commands

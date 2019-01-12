@@ -12,7 +12,7 @@
 testUltra::testUltra() {
   // Use Requires() here to declare subsystem dependencies
   // eg. Requires(Robot::chassis.get());
-  Requires(Robot::m_Climb);
+  Requires(Robot::m_Arm);
   Requires(Robot::m_DriveTrain);
 }
 
@@ -22,7 +22,7 @@ void testUltra::Initialize() {}
 // Called repeatedly when this Command is scheduled to run
 void testUltra::Execute() {
 
-  double distance = Robot::m_Climb->getDistanceFromFloor();
+  double distance = Robot::m_Arm->getDistanceFromFloor();
 
   std::cout << distance << std::endl;
 //  Robot::m_DriveTrain->ArcadeDrive(distance, 0);

@@ -1,6 +1,6 @@
-//! A subsystem that controls the climbing of the robot
-#ifndef _CLIMB_HG_
-#define _CLIMB_HG_
+//! A subsystem that controls the Arm of the robot
+#ifndef _ARM_HG_
+#define _ARM_HG_
 
 #include <frc/commands/Subsystem.h>
 #include <frc/WPILib.h>
@@ -9,13 +9,13 @@
 #include <frc/PWMVictorSPX.h>
 #include "RobotMap.h"
 
-class Climb : public frc::Subsystem {
+class Arm : public frc::Subsystem {
  public:
-  Climb();
-  void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (Climb)
+  Arm();
+  void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (Arm)
 
   /**
-	 * Move climb arm up or down
+	 * Move Arm arm up or down
 	 *
 	 * @param Speed speed (from -1 to 1)
 	 */
@@ -30,9 +30,9 @@ class Climb : public frc::Subsystem {
 
 
   private:
-  can::WPI_TalonSRX* pArmMotor; //!< Pointer for climb arm motor
+  can::WPI_TalonSRX* pArmMotor; //!< Pointer for Arm arm motor
   frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC};
   static constexpr double kValueToInches = 0.125;
 };
 
-#endif // _CLIMB_HG_
+#endif // _ARM_HG_
