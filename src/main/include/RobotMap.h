@@ -26,6 +26,9 @@
 #define CLIMB_ARM_MOTOR 3
 #define CLIMB_LEG_MOTOR 4
 
+//Climb Ultrasonic
+#define CLIMB_ULTRASONIC 1
+
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 

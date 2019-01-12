@@ -11,10 +11,6 @@ Climb::Climb() : Subsystem("Climb") {
   this->pArmMotor->SetSafetyEnabled(false);
 	this->pLegMotor->SetSafetyEnabled(false);
 
-  // Initialize the ultra sonic sensor
-  //this->pClimbUltra = new frc::Ultrasonic::Ultrasonic();
-  //this->pClimbUltra->SetAutomaticMode(true);
-
 }
 
 void Climb::InitDefaultCommand() {
@@ -30,7 +26,7 @@ void Climb::MoveLeg(double Speed) {
   this->pLegMotor->Set(Speed);
 }
 
-/*void Climb::getDistanceFromFloor() {
-  double range = pClimbUltra->GetRangeMM();
+double Climb::getDistanceFromFloor() {
+  double range = m_ultrasonic.GetValue() * kValueToInches;
   return range;
-}*/
+}

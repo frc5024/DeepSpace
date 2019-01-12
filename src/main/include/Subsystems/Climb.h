@@ -5,7 +5,9 @@
 #include <frc/commands/Subsystem.h>
 #include <frc/WPILib.h>
 #include <ctre/Phoenix.h>
-//#include <frc/Ultrasonic.h>
+#include <frc/AnalogInput.h>
+#include <frc/PWMVictorSPX.h>
+#include <frc/TimedRobot.h>
 #include "RobotMap.h"
 
 class Climb : public frc::Subsystem {
@@ -31,13 +33,14 @@ class Climb : public frc::Subsystem {
 	 * returns distance from floor
 	 *
 	 */
-  //void getDistanceFromFloor();
+  double getDistanceFromFloor();
 
 
   private:
   can::WPI_TalonSRX* pArmMotor; //!< Pointer for climb arm motor
   can::WPI_TalonSRX* pLegMotor; //!< Pointer for climb leg motor
- // frc::Ultrasonic* pClimbUltra; //!< Pointer for ultrasonic sensor 
+  frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC};
+  static constexpr double kValueToInches = 0.125;
 };
 
 #endif // _CLIMB_HG_
