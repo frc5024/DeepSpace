@@ -1,70 +1,71 @@
-# Driver
+# Controller Layouts
+## Driver
 Type: Xbox Controller
 
 Port: 0
 |  |  |
 | -- | -- |
-| Joysticks |  |
-| Left |  |
+| Joysticks | -- |
+| Left | -- |
 | X | Robot steering / rotation |
 | Y |  |
 | Btn |  |
-| Right |  |
+| Right | -- |
 | X |  |
 | Y |  |
 | Btn |  |
-| Dpad |  |
+| Dpad | -- |
 | Up |  |
 | Down |  |
 | Left |  |
 | Right |  |
-| Button Pad |  |
+| Button Pad | -- |
 | A | Robot vision alignment (hold) |
 | B |  |
 | X | Flip forward and backward (toggle) |
 | Y |  |
-| Triggers |  |
+| Triggers | -- |
 | Left | Robot backwards |
 | Right | Robot forwards |
-| Bumpers |  |
+| Bumpers | -- |
 | Left |  |
 | Right | Slow mode (hold) |
-| Other |  |
+| Other | -- |
 | Start |  |
 | Select |  |
 | Home |  |
-# Operator
+## Operator
 Type: Xbox Controller
 
 Port: 1
 |  |  |
 | -- | -- |
-| Joysticks |  |
-| Left |  |
+| Joysticks | -- |
+| Left | -- |
 | X |  |
 | Y |  |
 | Btn |  |
-| Right |  |
+| Right | -- |
 | X |  |
 | Y |  |
 | Btn |  |
-| Dpad |  |
+| Dpad | -- |
 | Up |  |
 | Down |  |
 | Left |  |
 | Right |  |
-| Button Pad |  |
+| Button Pad | -- |
 | A |  |
 | B |  |
 | X |  |
 | Y |  |
-| Triggers |  |
+| Triggers | -- |
 | Left |  |
 | Right |  |
-| Bumpers |  |
+| Bumpers | -- |
 | Left |  |
 | Right |  |
-| Other |  |
+| Other | -- |
 | Start |  |
 | Select |  |
 | Home |  |
