@@ -9,6 +9,8 @@ var classRobot =
     [ "TeleopInit", "classRobot.html#aa3e246794bfbbb4406fc87f351762038", null ],
     [ "TeleopPeriodic", "classRobot.html#a324322627c63b3870daf7c7ddc5bea63", null ],
     [ "TestPeriodic", "classRobot.html#af0ac44a962e609e9b042285e699d1db8", null ],
+    [ "backCam", "classRobot.html#ac8b57601626997a5f2bbbeaa7b56e808", null ],
+    [ "frontCam", "classRobot.html#a1a1d7afea01f4031a6b6cda75c0854a1", null ],
     [ "m_chooser", "classRobot.html#ae8ed06b4ce167235e06332a3463d5399", null ],
     [ "m_DriveTrain", "classRobot.html#a5eca8a1e1f5dd2841641c25874141abd", null ],
     [ "m_oi", "classRobot.html#aa73b63ec078b50244672b38e6ef2f506", null ],

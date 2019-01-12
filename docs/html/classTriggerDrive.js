@@ -10,5 +10,6 @@ var classTriggerDrive =
     [ "pJoyDrive", "classTriggerDrive.html#a6b1b210e3e3436304a750facbfc09a63", null ],
     [ "rotation", "classTriggerDrive.html#a767646defff80ac6bb7b176173620eb1", null ],
     [ "speed", "classTriggerDrive.html#a8b24bab002bba410a3753162129bc99f", null ],
-    [ "speedMultiplier", "classTriggerDrive.html#a7cf78202badfa626850364fadeee43ca", null ]
+    [ "speedMultiplier", "classTriggerDrive.html#a7cf78202badfa626850364fadeee43ca", null ],
+    [ "table", "classTriggerDrive.html#ae3cefe1eb38146fdbf522441b47faee3", null ]
 ];

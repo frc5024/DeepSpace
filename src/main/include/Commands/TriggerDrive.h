@@ -34,7 +34,8 @@ private:
 	double rotation; //!< Rotation value that will be passed into DriveTrain::ArcadeDrive
 	
 	frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller because we are lazy
-  std::shared_ptr<NetworkTable> table;
+	
+  std::shared_ptr<NetworkTable> table; //!< A pointer to the /SmartDashboard/Vision table
 };
 
 #endif // _TRIGGERDRIVE_HG_

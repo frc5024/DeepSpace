@@ -19,7 +19,7 @@ Port: 0
 | Left |  |
 | Right |  |
 | Button Pad |  |
-| A |  |
+| A | Robot vision alignment (hold) |
 | B |  |
 | X | Flip forward and backward (toggle) |
 | Y |  |

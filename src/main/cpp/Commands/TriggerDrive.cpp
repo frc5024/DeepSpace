@@ -17,9 +17,9 @@ void TriggerDrive::Initialize() {
   //set Speed and Rotation
   this->speed    = 0.0;
   this->rotation = 0.0;
-
+	
+	// Vision table
   this->table = NetworkTable::GetTable("SmartDashboard/Vision");
-  
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -36,7 +36,8 @@ void TriggerDrive::Execute() {
 	// Multiply each value with it's multiplier(s)
   this->speed    *= (this->speedMultiplier * this->directionMultiplier);
   this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
-
+	
+	// if A button, override movement with vision input
   this->rotation = (this->pJoyDrive->GetAButton())? this->table->GetNumber("Motor", 0.0) : this->rotation;
 
   Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);

@@ -10,6 +10,12 @@ src/main/include/RobotMap.h
 
 .in +1c
 .ti -1c
+.RI "#define \fBCAMERASERVER_FRONT_CAMERA\fP   1"
+.br
+.ti -1c
+.RI "#define \fBCAMERASERVER_BACK_CAMERA\fP   0"
+.br
+.ti -1c
 .RI "#define \fBDRIVETRAIN_LEFT_FRONT_MOTOR\fP   1"
 .br
 .ti -1c
@@ -60,70 +66,78 @@ src/main/include/RobotMap.h
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define DRIVETRAIN_LEFT_FRONT_MOTOR   1"
-The RobotMap is a mapping from the ports sensors and actuators are wired into to a variable name\&. This provides flexibility changing wiring, makes checking the wiring easier and significantly reduces the number of magic numbers floating around\&. 
-.PP
-Definition at line 14 of file RobotMap\&.h\&.
-.SS "#define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT   false"
-
-.PP
-Definition at line 20 of file RobotMap\&.h\&.
-.SS "#define DRIVETRAIN_LEFT_REAR_MOTOR   2"
+.SS "#define CAMERASERVER_BACK_CAMERA   0"
 
 .PP
 Definition at line 15 of file RobotMap\&.h\&.
+.SS "#define CAMERASERVER_FRONT_CAMERA   1"
+The RobotMap is a mapping from the ports sensors and actuators are wired into to a variable name\&. This provides flexibility changing wiring, makes checking the wiring easier and significantly reduces the number of magic numbers floating around\&. 
+.PP
+Definition at line 14 of file RobotMap\&.h\&.
+.SS "#define DRIVETRAIN_LEFT_FRONT_MOTOR   1"
+
+.PP
+Definition at line 18 of file RobotMap\&.h\&.
+.SS "#define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT   false"
+
+.PP
+Definition at line 24 of file RobotMap\&.h\&.
+.SS "#define DRIVETRAIN_LEFT_REAR_MOTOR   2"
+
+.PP
+Definition at line 19 of file RobotMap\&.h\&.
 .SS "#define DRIVETRAIN_LEFT_REAR_MOTOR_INVERT   false"
 
 .PP
-Definition at line 21 of file RobotMap\&.h\&.
+Definition at line 25 of file RobotMap\&.h\&.
 .SS "#define DRIVETRAIN_RIGHT_FRONT_MOTOR   3"
 
 .PP
-Definition at line 16 of file RobotMap\&.h\&.
+Definition at line 20 of file RobotMap\&.h\&.
 .SS "#define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT   true"
 
 .PP
-Definition at line 22 of file RobotMap\&.h\&.
+Definition at line 26 of file RobotMap\&.h\&.
 .SS "#define DRIVETRAIN_RIGHT_REAR_MOTOR   4"
 
 .PP
-Definition at line 17 of file RobotMap\&.h\&.
+Definition at line 21 of file RobotMap\&.h\&.
 .SS "#define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT   true"
 
 .PP
-Definition at line 23 of file RobotMap\&.h\&.
+Definition at line 27 of file RobotMap\&.h\&.
 .SS "#define DRIVEWITHJOYSTICK_ROTATION_LIMITER   0\&.95"
 
 .PP
-Definition at line 26 of file RobotMap\&.h\&.
+Definition at line 30 of file RobotMap\&.h\&.
 .SS "#define elif   else if"
 
 .PP
-Definition at line 35 of file RobotMap\&.h\&.
+Definition at line 39 of file RobotMap\&.h\&.
 .SS "#define False   false"
 
 .PP
-Definition at line 33 of file RobotMap\&.h\&.
+Definition at line 37 of file RobotMap\&.h\&.
 .SS "#define Hand   frc::GenericHID::JoystickHand"
 
 .PP
-Definition at line 38 of file RobotMap\&.h\&.
+Definition at line 42 of file RobotMap\&.h\&.
 .SS "#define True   true"
 
 .PP
-Definition at line 34 of file RobotMap\&.h\&.
+Definition at line 38 of file RobotMap\&.h\&.
 .SS "#define WinGame(_class_)   frc::StartRobot<_class_>()"
 
 .PP
-Definition at line 41 of file RobotMap\&.h\&.
+Definition at line 45 of file RobotMap\&.h\&.
 .SS "#define XBOX_CONTROLLER_DRIVE_PORT   0"
 
 .PP
-Definition at line 29 of file RobotMap\&.h\&.
+Definition at line 33 of file RobotMap\&.h\&.
 .SS "#define XBOX_CONTROLLER_OPERATOR_PORT   1"
 
 .PP
-Definition at line 30 of file RobotMap\&.h\&.
+Definition at line 34 of file RobotMap\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DeepSpace from the source code\&.

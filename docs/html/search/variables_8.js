@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['txt_5fbuffer',['txt_buffer',['../namespacebuildcml.html#a6604603518efc69cc724bf684d424cef',1,'buildcml']]]
+  ['rotation',['rotation',['../classDriveWithJoystick.html#a245e42eb207a58cdb64749f01965fa7d',1,'DriveWithJoystick::rotation()'],['../classTriggerDrive.html#a767646defff80ac6bb7b176173620eb1',1,'TriggerDrive::rotation()']]]
 ];
