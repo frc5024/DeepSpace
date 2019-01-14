@@ -13,8 +13,6 @@
 #include <AHRS.h>
 #include <Timer.h>
 
-
-
 class TurnFromAngle : public frc::Command {
 public:
 	TurnFromAngle(); ///< Dont use this one

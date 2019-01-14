@@ -9,7 +9,7 @@
 
 TurnFromAngle::TurnFromAngle(void)
 {
-	std::cout << "You must construct TurnFromAngle with a float you dummy, everything will now break...\n" ;
+	std::cout << "You must construct TurnFromAngle with a float target angle you dummy, everything will now break...\n" ;
 	delete this ;
 }
 
@@ -23,12 +23,9 @@ TurnFromAngle::TurnFromAngle(float target)
 
 	while (true)
 	{
-		if (degrees > 180.0)
-			degrees -= 180.0 ;
-		elif (degrees < -180.0)
-			degrees += 180.0 ;
-		else
-			break ;
+		if (degrees > 180.0)		degrees -= 360.0 ;
+		elif (degrees < -180.0)		degrees += 360.0 ;
+		else						break ;
 	}
 	std::cout << "Set target to "<< degrees << " deg\n" ;
 	this->target = target ;
@@ -43,7 +40,6 @@ TurnFromAngle::TurnFromAngle(float target)
 // Called just before this Command runs the first time
 void TurnFromAngle::Initialize()
 {
-	std::cout << "TurnFromAngle initialized, remember to use setTarget before using\n" ;
 	this->m_pGryo->Reset() ;
 	this->m_pTimer->Start() ;
 }
@@ -58,7 +54,7 @@ void TurnFromAngle::Execute()
 	this->integral += this->err * CYCLE_TIME ;
 	// Skip Derivative for now
 	// Derr = (err - prevErr) / CYCLE_TIME
-	double pid = this->pTweak * this->err + this->iTweak * this->integral ;
+	double pid = this->pTweak * this->err + this->iTweak * this->integral ; // + this->dTweak * Derr
 	if (abs(pid) > 1.0)
 		std::cout << "PID output was more than one: ("<<pid<<")\n" ;
 	
