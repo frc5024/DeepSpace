@@ -23,11 +23,11 @@ TurnFromAngle::TurnFromAngle(float target)
 
 	while (true)
 	{
-		if (degrees > 180.0)		degrees -= 360.0 ;
-		elif (degrees < -180.0)		degrees += 360.0 ;
+		if (target > 180.0)			target -= 360.0 ;
+		elif (target < -180.0)		target += 360.0 ;
 		else						break ;
 	}
-	std::cout << "Set target to "<< degrees << " deg\n" ;
+	std::cout << "Set target to "<< target << " deg\n" ;
 	this->target = target ;
 
 	this->pTweak = PID_TWEAK_P / target ;
