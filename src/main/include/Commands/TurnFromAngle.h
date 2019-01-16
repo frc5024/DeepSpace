@@ -5,6 +5,9 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
+#ifndef _TURNFROMANGLE_HG_
+#define _TURNFROMANGLE_HG_
+
 #include <frc/commands/Command.h>
 #include <Subsystems/DriveTrain.h>
 #include <Robot.h>
@@ -23,7 +26,9 @@ public:
 	void End() override;
 	void Interrupted() override;
 
-	AHRS* getGyro(void);
+	void SetTarget(float angle);
+	void Reset(void);
+	AHRS* GetGyro(void);
 
 private:
 	float pTweak;
@@ -36,3 +41,5 @@ private:
 	frc::Timer* m_pTimer;
 
 };
+
+#endif // _TURNFROMANGLE_HG_

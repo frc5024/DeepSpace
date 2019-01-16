@@ -8,31 +8,57 @@
 #include "Commands/TurnFromAngle.h"
 
 TurnFromAngle::TurnFromAngle(void) {
-	std::cout << "You must construct TurnFromAngle with a float target angle you dummy, everything will now break...\n" ;
-	delete this;
-}
-
-TurnFromAngle::TurnFromAngle(float target) {
 	std::cout << "TurnFromAngle constructed\n";
 
 	Requires(Robot::m_DriveTrain);
 	this->m_pGryo = new AHRS(SPI::Port::kMXP);
 	this->m_pTimer = new frc::Timer();
 
-	while (true)
-	{
-		if (target > 180.0)			target -= 360.0;
-		elif (target < -180.0)		target += 360.0;
-		else						break;
-	}
-	std::cout << "Set target to "<< target << " deg\n";
-	this->target = target;
+	this->target = 0.0 ;
 
 	this->pTweak = PID_TWEAK_P / target;
 	this->iTweak = PID_TWEAK_I / target;
 	// this->dTweak = PID_TWEAK_D / target;
 	
 	this->integral = 0.0;
+
+	return ;
+}
+
+TurnFromAngle::TurnFromAngle(float angle) {
+	Requires(Robot::m_DriveTrain);
+	this->m_pGryo = new AHRS(SPI::Port::kMXP);
+	this->m_pTimer = new frc::Timer();
+
+	this->pTweak = PID_TWEAK_P / target;
+	this->iTweak = PID_TWEAK_I / target;
+	// this->dTweak = PID_TWEAK_D / target;
+	
+	this->integral = 0.0;
+
+	this->SetTarget(angle) ;
+
+	return ;
+}
+
+void TurnFromAngle::SetTarget(float angle) {
+	while (true) {
+		if (angle > 180.0)		angle -= 360.0;
+		elif (angle < -180.0)	angle += 360.0;
+		else					break;
+	}
+	this->target = angle ;
+	std::cout << "Set target to "<< angle << " deg\n";
+
+	return ;
+}
+
+void TurnFromAngle::Reset(void) {
+	this->err = 0.0 ;
+	this->integral = 0.0 ;
+	this->m_pTimer->Reset() ;
+	
+	return ;
 }
 
 // Called just before this Command runs the first time
@@ -79,6 +105,6 @@ void TurnFromAngle::Interrupted() {
 	Robot::m_DriveTrain->ArcadeDrive(0,0); // Brake
 }
 
-AHRS* TurnFromAngle::getGyro(void) {
+AHRS* TurnFromAngle::GetGyro(void) {
 	return this->m_pGryo;
 }
