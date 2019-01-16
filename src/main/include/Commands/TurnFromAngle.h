@@ -23,16 +23,16 @@ public:
 	void End() override;
 	void Interrupted() override;
 
-	AHRS* getGyro(void) ;
+	AHRS* getGyro(void);
 
 private:
-	float pTweak ;
-	float iTweak ;
-	// float TWEAK_D ; // Not using
-	float target ; ///< target angle in degrees
-	float err ; ///< target angle in degrees minus current angle in degrees
-	float integral ; ///<  integral of current angle in degrees per sec
-	AHRS* m_pGryo ;
-	frc::Timer* m_pTimer ;
+	float pTweak;
+	float iTweak;
+	// float TWEAK_D; // Not using
+	float target; //< Target angle in degrees
+	float err; //< Target angle in degrees minus current angle in degrees
+	float integral; //< Integral of current angle in degrees per sec
+	AHRS* m_pGryo;
+	frc::Timer* m_pTimer;
 
 };
