@@ -27,7 +27,6 @@ void Robot::RobotInit() {
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
-  this->pAuto_TurnSeveralTimes = new Auto_TurnSeveralTimes() ;
 
   // Set robot loop speed (in seconds)
   std::cout << "Setting Period Time.." << std::endl;
@@ -65,40 +64,35 @@ void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
  * the if-else structure below with additional strings & commands.
  */
 void Robot::AutonomousInit() {
-  // std::string autoSelected = frc::SmartDashboard::GetString(
-  //     "Auto Selector", "Default");
-  // if (autoSelected == "My Auto") {
-  //   m_autonomousCommand = &m_myAuto;
-  // } else {
-  //   m_autonomousCommand = &m_defaultAuto;
-  // }
+	// std::string autoSelected = frc::SmartDashboard::GetString(
+	//     "Auto Selector", "Default");
+	// if (autoSelected == "My Auto") {
+	//   m_autonomousCommand = &m_myAuto;
+	// } else {
+	//   m_autonomousCommand = &m_defaultAuto;
+	// }
 
-  // m_autonomousCommand = m_chooser.GetSelected();
+	// m_autonomousCommand = m_chooser.GetSelected();
 
-  // if (m_autonomousCommand != nullptr) {
-  //   m_autonomousCommand->Start();
-  // }
-
-	std::cout << "AutonomousInit has been called\n" ;
-	if (this->pAuto_TurnSeveralTimes != nullptr) {
-		std::cout << "Calling TurnSeveralTimes\n" ;
-		this->pAuto_TurnSeveralTimes->Start() ;
-	}
+	// if (m_autonomousCommand != nullptr) {
+	//   m_autonomousCommand->Start();
+	// }
+	std::cout << "AutonomousInit called\n" ;
 }
 
 void Robot::AutonomousPeriodic() { frc::Scheduler::GetInstance()->Run(); }
 
 void Robot::TeleopInit() {
-  // This makes sure that the autonomous stops running when
-  // teleop starts running. If you want the autonomous to
-  // continue until interrupted by another command, remove
-  // this line or comment it out.
-  // if (m_autonomousCommand != nullptr) {
-  //   m_autonomousCommand->Cancel();
-  //   m_autonomousCommand = nullptr;
-  // }
+	// This makes sure that the autonomous stops running when
+	// teleop starts running. If you want the autonomous to
+	// continue until interrupted by another command, remove
+	// this line or comment it out.
+	// if (m_autonomousCommand != nullptr) {
+	//   m_autonomousCommand->Cancel();
+	//   m_autonomousCommand = nullptr;
+	// }
 
-  if (this->pTriggerDrive != nullptr) {
+	if (this->pTriggerDrive != nullptr) {
 		this->pTriggerDrive->Start();
 	}
 }
@@ -109,8 +103,8 @@ void Robot::TestPeriodic() {}
 
 #ifndef RUNNING_FRC_TESTS
 int main(){
-  // Start the robot
-  WinGame(Robot);
-  return 1;
+	// Start the robot
+	WinGame(Robot);
+	return 1;
 }
 #endif

@@ -11,7 +11,6 @@
 #include "Commands/TriggerDrive.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
-#include "Commands/Auto_TurnSeveralTimes.h"
 
 class Robot : public frc::TimedRobot {
  public:
@@ -21,7 +20,6 @@ class Robot : public frc::TimedRobot {
 
 	// Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
-  Auto_TurnSeveralTimes* pAuto_TurnSeveralTimes ; //!< Temp pointer for temp command
 
 	// Robot methods
   void RobotInit() override;          //!< Runs once on robot boot

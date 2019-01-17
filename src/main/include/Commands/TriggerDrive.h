@@ -3,6 +3,7 @@
 #define _TRIGGERDRIVE_HG_
 
 #include <frc/commands/Command.h>
+#include <Commands/TurnFromAngle.h>
 #include <Subsystems/DriveTrain.h>
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
@@ -36,6 +37,8 @@ private:
 	frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller because we are lazy
 	
   std::shared_ptr<NetworkTable> table; //!< A pointer to the /SmartDashboard/Vision table
+
+  TurnFromAngle* pTurnFromAngle ; //!< Pointer for the TurnFromAngle command, to turn with
 };
 
 #endif // _TRIGGERDRIVE_HG_
