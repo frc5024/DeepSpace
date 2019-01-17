@@ -6,6 +6,7 @@
 /*----------------------------------------------------------------------------*/
 
 #include "Commands/TurnFromAngle.h"
+#include "Robot.h"
 
 TurnFromAngle::TurnFromAngle(void) {
 	std::cout << "TurnFromAngle constructed\n";
@@ -79,6 +80,8 @@ void TurnFromAngle::Execute() {
 	double pid = this->pTweak * this->err + this->iTweak * this->integral; // + this->dTweak * Derr
 	if (abs(pid) > 1.0)
 		std::cout << "PID output was more than one: ("<<pid<<")\n";
+
+	std::cout << "Driving at zRoation: (" << pid << ")\n" ;
 	
 	Robot::m_DriveTrain->ArcadeDrive(0, pid);
 }

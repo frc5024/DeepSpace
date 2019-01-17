@@ -27,6 +27,7 @@ void Robot::RobotInit() {
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
+  this->pAuto_TurnSeveralTimes = new Auto_TurnSeveralTimes() ;
 
   // Set robot loop speed (in seconds)
   std::cout << "Setting Period Time.." << std::endl;
@@ -77,6 +78,12 @@ void Robot::AutonomousInit() {
   // if (m_autonomousCommand != nullptr) {
   //   m_autonomousCommand->Start();
   // }
+
+	std::cout << "AutonomousInit has been called\n" ;
+	if (this->pAuto_TurnSeveralTimes != nullptr) {
+		std::cout << "Calling TurnSeveralTimes\n" ;
+		this->pAuto_TurnSeveralTimes->Start() ;
+	}
 }
 
 void Robot::AutonomousPeriodic() { frc::Scheduler::GetInstance()->Run(); }
