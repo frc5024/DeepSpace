@@ -6,6 +6,7 @@
 
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
+CrawlDrive *Robot::m_CrawlDrive;
 Arm *Robot::m_Arm;
 Leg *Robot::m_Leg;
 OI *Robot::m_oi;
@@ -19,6 +20,7 @@ void Robot::RobotInit() {
 
   // Subsystems
   this->m_DriveTrain = new DriveTrain();
+  this->m_CrawlDrive = new CrawlDrive();
   this->m_Arm = new Arm();
   this->m_Leg = new Leg();
   this->m_oi = new OI();

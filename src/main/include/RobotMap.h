@@ -23,8 +23,11 @@
 #define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT  true
 
 //Climb Motors 
-#define CLIMB_ARM_MOTOR 3
+#define CLIMB_ARM_MOTOR 2
 #define CLIMB_LEG_MOTOR 4
+ 
+#define CRAWL_LEFT_MOTOR 1
+#define CRAWL_RIGHT_MOTOR 3
 
 //Climb Ultrasonic
 #define CLIMB_ULTRASONIC 1
