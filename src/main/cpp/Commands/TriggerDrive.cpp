@@ -2,10 +2,10 @@
 #include "Robot.h"
 
 TriggerDrive::TriggerDrive() {
+	std::cout << "TriggerDrive was constructed\n" ;
 	// Use Requires() here to declare subsystem dependencies
 	Requires(Robot::m_DriveTrain);
 	this->pJoyDrive = Robot::m_oi->GetJoystickDrive();
-	this->pTurnFromAngle = new TurnFromAngle() ;
 }
 
 // Called just before this Command runs the first time
@@ -25,6 +25,11 @@ void TriggerDrive::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void TriggerDrive::Execute() {
+
+	// If A is held, don't do anything, as TurnFromAngle is currently running instead
+	if (this->pJoyDrive->GetAButton())
+		return ;
+
 	// Deal with reversing and slow mode
 	this->directionMultiplier = (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
 	this->speedMultiplier     = (this->pJoyDrive->GetBumper(Hand::kRightHand)) ? 0.5 : 1;
@@ -38,24 +43,6 @@ void TriggerDrive::Execute() {
 	this->speed    *= (this->speedMultiplier * this->directionMultiplier);
 	this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
-	// if A button, override movement with vision input
-	if (this->pJoyDrive->GetAButtonPressed()) {
-		std::cout << "A button pressed!\n" ;
-		float angle = this->table->GetNumber("Motor", 0.0) ;
-		std::cout << "Turning to angle ("<<angle<<")\n" ;
-		this->pTurnFromAngle->Reset() ;
-		this->pTurnFromAngle->SetTarget(angle) ;
-		this->pTurnFromAngle->Start() ;
-	}
-	elif (this->pJoyDrive->GetAButtonReleased()) {
-		std::cout << "A button released!\n" ;
-		if (this->pTurnFromAngle->IsRunning()) {
-			std::cout << "Cancelling command.\n" ;
-			this->pTurnFromAngle->Cancel() ;
-		}
-	}
-
-
 	Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
 
 	// Reset the speed and rotation
@@ -63,7 +50,7 @@ void TriggerDrive::Execute() {
 	// It is for saftey. (and so we don't have a run-away bot slam into a wall again)
 	this->speed    = 0.00;
 	this->rotation = 0.00;
-	}
+}
 
 
 bool TriggerDrive::IsFinished() { return false; }
@@ -73,4 +60,8 @@ void TriggerDrive::End() {}
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void TriggerDrive::Interrupted() {}
+void TriggerDrive::Interrupted() {
+	std::cout << "TriggerDrive was interupted and will now End\n" ;
+
+	return ;
+}

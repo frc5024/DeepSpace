@@ -5,8 +5,8 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#ifndef _TURNFROMANGLE_HG_
-#define _TURNFROMANGLE_HG_
+#ifndef _TURNANGLE_HG_
+#define _TURNANGLE_HG_
 
 #include <frc/commands/Command.h>
 #include <Subsystems/DriveTrain.h>
@@ -16,37 +16,26 @@
 #include <frc/Timer.h>
 #include <networktables/NetworkTable.h>
 
-class TurnFromAngle : public frc::Command {
-public:
-	TurnFromAngle(); ///< Dont use this one
-	TurnFromAngle(float target) ; ///< Use this one
-	void Initialize() override;
-	void Execute() override;
-	bool IsFinished() override;
-	void End() override;
-	void Interrupted() override;
+class TurnAngle : public frc::Command {
+ public:
+  TurnAngle();
+  void Initialize() override;
+  void Execute() override;
+  bool IsFinished() override;
+  void End() override;
+  void Interrupted() override;
 
-	void Go(void) ;
-	void Stop(void) ;
-	float CalculatePID(void) ;
-	bool CheckFinished(void) ;
-
-	void SetTarget(float angle);
-	void Reset(void);
-	AHRS* GetGyro(void);
+  void SetTarget(float angle) ;
+  void Go(void) ;
+  void Stop(void) ;
+  void Turn(void) ;
 
 private:
-	float pTweak;
-	float iTweak;
-	// float TWEAK_D; // Not using
-	float target; //< Target angle in degrees
-	float err; //< Target angle in degrees minus current angle in degrees
-	float integral; //< Integral of current angle in degrees per sec
+  float target ;
 	AHRS* m_pGryo; //!< Pointer to the navX○
 	frc::Timer* m_pTimer; //!< A timer for timing things
 	frc::XboxController* pJoyDrive; //!< A pointer for the network table
 	std::shared_ptr<NetworkTable> table; //!< A pointer to the /SmartDashboard/Vision table
-
 };
 
-#endif // _TURNFROMANGLE_HG_
+#endif // _TURNANGLE_HG_

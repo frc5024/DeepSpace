@@ -3,7 +3,6 @@
 #define _TRIGGERDRIVE_HG_
 
 #include <frc/commands/Command.h>
-#include <Commands/TurnFromAngle.h>
 #include <Subsystems/DriveTrain.h>
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
@@ -38,7 +37,6 @@ private:
 	
   std::shared_ptr<NetworkTable> table; //!< A pointer to the /SmartDashboard/Vision table
 
-  TurnFromAngle* pTurnFromAngle ; //!< Pointer for the TurnFromAngle command, to turn with
 };
 
 #endif // _TRIGGERDRIVE_HG_

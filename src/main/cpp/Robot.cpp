@@ -27,6 +27,8 @@ void Robot::RobotInit() {
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
+  //this->pTurnFromAngle = new TurnFromAngle() ;
+  this->pTurnAngle = new TurnAngle() ;
 
   // Set robot loop speed (in seconds)
   std::cout << "Setting Period Time.." << std::endl;
@@ -94,6 +96,11 @@ void Robot::TeleopInit() {
 
 	if (this->pTriggerDrive != nullptr) {
 		this->pTriggerDrive->Start();
+	}
+	if (this->pTurnAngle != nullptr) {
+		this->pTurnAngle->Start();
+	}else{
+		std::cout << "you are bad\n";
 	}
 }
 
