@@ -26,9 +26,7 @@ void TriggerDrive::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void TriggerDrive::Execute() {
 
-	// If A is held, don't do anything, as TurnFromAngle is currently running instead
-	if (this->pJoyDrive->GetAButton())
-		return ;
+	
 
 	// Deal with reversing and slow mode
 	this->directionMultiplier = (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
@@ -43,6 +41,14 @@ void TriggerDrive::Execute() {
 	this->speed    *= (this->speedMultiplier * this->directionMultiplier);
 	this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
+
+	if (this->pJoyDrive->GetAButtonPressed()){
+		AUTOTURN_GetData();
+	} elif(this->pJoyDrive->GetAButton()){
+		this->rotation = AUTOTURN_Turn();
+	} elif(this->pJoyDrive->GetAButtonReleased()){
+		AUTOTURN_Stop();
+	}
 	Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
 
 	// Reset the speed and rotation

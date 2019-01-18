@@ -22,8 +22,6 @@ class Robot : public frc::TimedRobot {
 
 	// Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
-  //TurnFromAngle* pTurnFromAngle; //!< Pointer for the TurnFromAngle command
-  TurnAngle* pTurnAngle; //!<TEMPCOMMAND
 
 	// Robot methods
   void RobotInit() override;          //!< Runs once on robot boot

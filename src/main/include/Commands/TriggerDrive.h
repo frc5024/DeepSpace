@@ -7,6 +7,7 @@
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
 #include <networktables/NetworkTable.h>
+#include "Utils/AutoTurn.h"
 
 
 class TriggerDrive : public frc::Command {

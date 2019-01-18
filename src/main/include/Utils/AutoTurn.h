@@ -8,22 +8,22 @@
 #include <frc/Timer.h>
 #include <networktables/NetworkTable.h>
 
-class AutoTurn{
-  public:
-    AutoTurn(); //!< Class constructor
-    
-    /**
-     * Function for setting the target angle
-     *
-     * @param angle Angle to rotate to
-     */
-    void SetAngle(float angle);
-  
-  private:
-    float target;                        //!< Target angle
-    AHRS* m_pGryo;                       //!< Pointer to the navX
-  	frc::Timer* m_pTimer;                //!< Timer for tracking time
-  	std::shared_ptr<NetworkTable> table; //!< A pointer to the /SmartDashboard/Vision table
-}
+
+
+  extern void AUTOTURN_GetData() ;
+  extern double AUTOTURN_Turn() ;
+
+
+  /**
+   * Function for setting the target angle
+   *
+   * @param angle Angle to rotate to
+   */
+  extern void AUTOTURN_SetTarget(float angle);
+  extern void AUTOTURN_Stop() ;
+
+
+  extern float AUTOTURN_target;                        //!< Target angle
+
 
 #endif // _AUTOTURN_HG_
