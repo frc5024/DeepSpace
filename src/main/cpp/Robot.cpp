@@ -7,6 +7,7 @@
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
 OI *Robot::m_oi;
+Ultrasonic *Robot::ultral
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -18,6 +19,7 @@ void Robot::RobotInit() {
   // Subsystems
   this->m_DriveTrain = new DriveTrain();
   this->m_oi = new OI();
+  this->ultra = new Ultrasonic();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;

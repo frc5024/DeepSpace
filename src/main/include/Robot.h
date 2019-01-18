@@ -11,13 +11,14 @@
 #include "Commands/TriggerDrive.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
-
+#include "Subsystems/Ultrasonic.h"
 
 class Robot : public frc::TimedRobot {
  public:
 	// Subsystems
   static DriveTrain *m_DriveTrain; //!< Pointer for the DriveTrain
   static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
+  static Ultrasonic *ultra;
 
 	// Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command

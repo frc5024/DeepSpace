@@ -14,6 +14,10 @@
 #define CAMERASERVER_FRONT_CAMERA 1
 #define CAMERASERVER_BACK_CAMERA  0
 
+//Ultrasonic
+#define PING_CHANNEL 0
+#define ECHO_CHANNEL 0
+
 // DriveTrain motors
 #define DRIVETRAIN_LEFT_FRONT_MOTOR  1
 #define DRIVETRAIN_LEFT_REAR_MOTOR   2
