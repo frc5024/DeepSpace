@@ -33,6 +33,9 @@ void Robot::RobotInit() {
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
   this->pTestUltra = new testUltra();
+  this->pPullArm = new PullArm();
+  this->pPullLeg = new PullLeg();
+  
 
   // Set robot loop speed (in seconds)
   std::cout << "Setting Period Time.." << std::endl;
@@ -102,6 +105,12 @@ void Robot::TeleopInit() {
 	}
   if (this->pTestUltra != nullptr) {
 		this->pTestUltra->Start();
+	}
+  if (this->pPullArm != nullptr) {
+		this->pPullArm->Start();
+	}
+  if (this->pPullLeg != nullptr) {
+		this->pPullLeg->Start();
 	}
 }
 

@@ -9,6 +9,8 @@
 
 #include "Commands/TriggerDrive.h"
 #include "Commands/testUltra.h"
+#include "Commands/PullArm.h"
+#include "Commands/PullLeg.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/CrawlDrive.h"
@@ -28,6 +30,8 @@ class Robot : public frc::TimedRobot {
 	// Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
   testUltra* pTestUltra;
+  PullArm* pPullArm;
+  PullLeg* pPullLeg;
 	// Robot methods
   void RobotInit() override;          //!< Runs once on robot boot
   void RobotPeriodic() override;      //!< Runs in a loop while the robot is turned on in any mode
