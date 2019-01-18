@@ -35,6 +35,7 @@ void Robot::RobotInit() {
   this->pTestUltra = new testUltra();
   this->pPullArm = new PullArm();
   this->pPullLeg = new PullLeg();
+  this->pDeployClimb = new DeployClimb();
   
 
   // Set robot loop speed (in seconds)

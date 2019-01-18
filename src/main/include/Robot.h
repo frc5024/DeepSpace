@@ -11,6 +11,8 @@
 #include "Commands/testUltra.h"
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
+#include "Commands/DeployClimb.h"
+#include "Commands/ManageIO.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/CrawlDrive.h"
@@ -32,6 +34,8 @@ class Robot : public frc::TimedRobot {
   testUltra* pTestUltra;
   PullArm* pPullArm;
   PullLeg* pPullLeg;
+  DeployClimb* pDeployClimb;
+  ManageIO* pManageIO;
 	// Robot methods
   void RobotInit() override;          //!< Runs once on robot boot
   void RobotPeriodic() override;      //!< Runs in a loop while the robot is turned on in any mode
