@@ -11,8 +11,8 @@
 // Whenever possible, Macros and definitions are used in order to preserve memory
 
 // Camera mappings
-#define CAMERASERVER_FRONT_CAMERA 1
-#define CAMERASERVER_BACK_CAMERA  0
+#define CAMERASERVER_FRONT_CAMERA 0
+#define CAMERASERVER_BACK_CAMERA  1
 
 // DriveTrain motors
 #define DRIVETRAIN_LEFT_FRONT_MOTOR  1
