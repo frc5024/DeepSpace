@@ -26,6 +26,13 @@
 #define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT true
 #define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT  true
 
+// Talon Mode Settings
+const int SLOT_INDEX = 0;
+const int PID_LOOP_INDEX = 0;
+const int TIMEOUT_MS = 100;
+const int BASE_TRAJECTORY_PERIOD_MS = 0;
+const int NEUTRAL_DEADBAND_PERCENT = 1;
+
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 

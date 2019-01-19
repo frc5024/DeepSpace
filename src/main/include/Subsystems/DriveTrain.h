@@ -30,8 +30,15 @@ class DriveTrain : public frc::Subsystem {
    */
 	void TankDrive(double leftSpeed, double rightSpeed);
 
+	can::WPI_TalonSRX* GetLeftFrontMotor();  // Needed by Motion Profiler
+	can::WPI_TalonSRX* GetRightFrontMotor(); // Needed by Motion Profiler
+
+	void InitMotionProfilingMode(void);
+
+	void ResetDrive(void);
+
  private:
-  can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
+    can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
 	can::WPI_TalonSRX* pLeftRearMotor;  //!< Pointer for left rear motor
 	can::WPI_TalonSRX* pRightFrontMotor;//!< Pointer for right front motor
 	can::WPI_TalonSRX* pRightRearMotor; //!< Pointer for right rear motor
