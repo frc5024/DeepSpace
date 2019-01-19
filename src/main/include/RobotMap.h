@@ -36,12 +36,11 @@
 #define XBOX_CONTROLLER_DRIVE_PORT    0
 #define XBOX_CONTROLLER_OPERATOR_PORT 1
 
-// Turn From Angle PID stuff
-#define PID_TWEAK_P		0.70 // TODO: TBD
-#define PID_TWEAK_I		0.40 // TODO: TBD
-// #define PID_TWEAK_D	3.14 // Not using
-#define PID_BUFFER		1 ///< Plus or minus range for target
-#define PID_TIMEOUT		5 ///< Timeout time, wut dnt u ndrstnd
+// PID values
+#define PID_TWEAK_P		0.35	///< Tweaked multiplier for the Proportional value (degrees -> motor output)
+#define PID_TWEAK_I		0.20	///< Tweaked mulitplier for the Integral value (degrees -> motor output)
+// #define PID_TWEAK_D	6.66	///< <NOT IN USE> Tweaked multiplier for the Derivative value (degrees -> motor output)
+#define PID_BUFFER		2		///< Plus or minus buffer range for target
 
 // Handy macros to save Python programmers from going crazy
 #define False false

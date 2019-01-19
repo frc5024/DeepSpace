@@ -1,53 +1,49 @@
 #include "Utils/AutoTurn.h"
 #include "Robot.h"
 
-std::shared_ptr<NetworkTable> AUTOTURN_table = NetworkTable::GetTable("SmartDashboard/Vision"); //!< A pointer to the /SmartDashboard/Vision table
-AHRS* AUTOTURN_m_pGryo = new AHRS(SPI::Port::kMXP); //!< Pointer to the navX
-frc::Timer* AUTOTURN_m_pTimer = new frc::Timer();   //!< Timer for tracking time
-float AUTOTURN_target;
+AutoTurn::target = 0.0 ;
+AutoTurn::pGryo = new AHRS(SPI::Port::kMXP);
+AutoTurn::table = NetworkTable::GetTable("SmartDashboard/Vision");
 
-void AUTOTURN_SetTarget(float angle){
+void AutoTurn::SetTarget(float angle) {
+
+	///< Brings the angle within (-180, 180) deg 
     while (true) {
 		if (angle > 180.0)		angle -= 360.0;
 		elif (angle < -180.0)	angle += 360.0;
 		else					break;
 	} 
-	AUTOTURN_target = angle ;
-	std::cout << "Set target to ("<<AUTOTURN_target<<")\n" ;
+
+	AutoTurn::target = angle ;
+	std::cout << "Set target to ("<<angle<<")\n" ;
 
 	return ;
-  
 }
 
-void AUTOTURN_GetData(){
-    AUTOTURN_m_pTimer->Reset() ;
-	AUTOTURN_m_pGryo->Reset() ;
-
-	float angle = AUTOTURN_table->GetNumber("Motor", 0.0);
-	AUTOTURN_SetTarget(angle) ;
-
-	AUTOTURN_m_pTimer->Start() ;
+void AutoTurn::GetData(void) {
+	AutoTurn::pGyro->Reset() ;
+	float angle = AutoTurn::table->GetNumber("Motor", 0.0);
+	AutoTurn::SetTarget(angle) ;
 
 	return ;
-
 }
 
-void AUTOTURN_Stop() {
+void AutoTurn::Stop(void) {
 	Robot::m_DriveTrain->ArcadeDrive(0.0, 0.0) ;
-	AUTOTURN_target = 0.0 ;
-	AUTOTURN_m_pGryo->Reset() ;
-	AUTOTURN_m_pTimer->Reset() ;
-	AUTOTURN_m_pTimer->Stop() ;
+	AutoTurn::target = 0.0 ;
+	AutoTurn::integral = 0.0 ;
+	AutoTurn::pGyro->Reset() ;
 
 	return ;
 }
 
-double AUTOTURN_Turn() {
-	float current = AUTOTURN_m_pGryo->GetAngle() ;
-	float err = AUTOTURN_target - current ;
+double AutoTurn::Turn(void) {
+	float current = AutoTurn::pGyro->GetAngle() ;
+	float err = AutoTurn::target - current ;
 
-	if (fabs(err) < 1) {
-		AUTOTURN_Stop() ;
+	// If we're within X degrees of target, stop
+	if (fabs(err) < PID_BUFFER) {
+		AutoTurn::Stop() ;
 		return 0.0;
 	}
 
