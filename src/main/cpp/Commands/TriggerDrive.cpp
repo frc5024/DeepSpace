@@ -43,11 +43,11 @@ void TriggerDrive::Execute() {
 
 
 	if (this->pJoyDrive->GetAButtonPressed()){
-		AUTOTURN_GetData();
+		AutoTurn::GetData();
 	} elif(this->pJoyDrive->GetAButton()){
-		this->rotation = AUTOTURN_Turn();
+		this->rotation = AutoTurn::Turn();
 	} elif(this->pJoyDrive->GetAButtonReleased()){
-		AUTOTURN_Stop();
+		AutoTurn::Stop();
 	}
 	Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
 

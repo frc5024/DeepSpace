@@ -1,9 +1,10 @@
 #include "Utils/AutoTurn.h"
 #include "Robot.h"
 
-AutoTurn::target = 0.0 ;
-AutoTurn::pGryo = new AHRS(SPI::Port::kMXP);
-AutoTurn::table = NetworkTable::GetTable("SmartDashboard/Vision");
+float AutoTurn::target = 0.0 ;
+float AutoTurn::integral = 0.0 ;
+AHRS* AutoTurn::pGyro = new AHRS(SPI::Port::kMXP);
+std::shared_ptr<NetworkTable> AutoTurn::table = NetworkTable::GetTable("SmartDashboard/Vision");
 
 void AutoTurn::SetTarget(float angle) {
 
@@ -38,8 +39,11 @@ void AutoTurn::Stop(void) {
 }
 
 double AutoTurn::Turn(void) {
+
+	// Calculate values (current angle, degrees difference to target, integral of error)
 	float current = AutoTurn::pGyro->GetAngle() ;
 	float err = AutoTurn::target - current ;
+	AutoTurn::integral += err * CYCLE_TIME;
 
 	// If we're within X degrees of target, stop
 	if (fabs(err) < PID_BUFFER) {
@@ -47,12 +51,8 @@ double AutoTurn::Turn(void) {
 		return 0.0;
 	}
 
-	if (err > 0.0) {
-		std::cout << "Turning right...\n" ;
-		return 0.5 ;
-	} else {
-		std::cout << "Turning left...\n" ;
-		return -0.5 ;
-	}
-	return 0.0;
+	double PIDOutput = PID_TWEAK_P * err + PID_TWEAK_I * AutoTurn::integral;
+	/*TEMP*/std::cout<<"PID: "<<PIDOutput<<" = "<<PID_TWEAK_P<<" * "<<err<<" + "<<PID_TWEAK_I<<" * "<<AutoTurn::integral<<std::endl;/*TEMP*/
+	
+	return PIDOutput;
 }
