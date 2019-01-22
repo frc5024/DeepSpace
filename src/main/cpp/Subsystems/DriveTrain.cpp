@@ -45,3 +45,21 @@ void DriveTrain::TankDrive(double leftSpeed, double rightSpeed) {
 	this->pRobotDrive->TankDrive(leftSpeed, rightSpeed);
 	return;
 }
+
+void RadialDrive(double magnitude, double radial){
+  // set the speeds
+  double leftSpeed, rightSpeed = 0,0;
+  
+  // asign the right motor speed
+  rightSpeed = magnitude;
+  
+  // Calculate the radial
+  radial += (radial > 1)? 1 : -1;
+  
+  // calculate left speed
+  leftSpeed = rightSpeed * radial;
+  
+  // pass to tankdrive
+  this->pRobotDrive->TankDrive(leftSpeed, rightSpeed);
+  return;
+}
