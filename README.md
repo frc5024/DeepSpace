@@ -29,6 +29,9 @@ python3 ./buildcml.py ./controller_layout.cml.json
 
 NOTE: Linux is required for the doxygen documents due to our use of unix-style path notation.
 
+## RadialDrive
+**RadialDrive** is a replacement for **ArcadeDrive** that allows for finer control over rotation at high speeds with our drivebases.
+
 ## Pull requests
 Pull requests is our prefered method of merging code. For a PR to be merged, it must:
  - Pass style checking

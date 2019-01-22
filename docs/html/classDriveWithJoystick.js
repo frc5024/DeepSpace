@@ -9,8 +9,8 @@ var classDriveWithJoystick =
     [ "IsFinished", "classDriveWithJoystick.html#aeeb849dde20c9b7b8049eb318e7b5d90", null ],
     [ "directionMultiplier", "classDriveWithJoystick.html#a87ceb621790dae15f245fa6b559202ee", null ],
     [ "driveMode", "classDriveWithJoystick.html#a11d7c09c5a0bced3aa504c775cb9d7e3", null ],
+    [ "magnitude", "classDriveWithJoystick.html#a7ad4552e30f6b8f85720ecad38b7e569", null ],
+    [ "magnitudeMultiplier", "classDriveWithJoystick.html#a26d2618ee1e4145f2ce07f7843a4cffc", null ],
     [ "pJoyDrive", "classDriveWithJoystick.html#a6671b39344988d14a6ff12939b09238e", null ],
-    [ "rotation", "classDriveWithJoystick.html#a245e42eb207a58cdb64749f01965fa7d", null ],
-    [ "speed", "classDriveWithJoystick.html#a935d764b236fea53dc9335ad82840442", null ],
-    [ "speedMultiplier", "classDriveWithJoystick.html#a2e4024301ad7c5bd5c43f968fb24ae93", null ]
+    [ "radial", "classDriveWithJoystick.html#a0262b9559559ebe2ff0f68938562579a", null ]
 ];

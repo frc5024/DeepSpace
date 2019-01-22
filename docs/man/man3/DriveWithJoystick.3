@@ -1,4 +1,4 @@
-.TH "DriveWithJoystick" 3 "Fri Jan 11 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "DriveWithJoystick" 3 "Tue Jan 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -54,17 +54,17 @@ Inherits Command\&.
 .br
 .RI "Can be 1 or -1\&. Determines the direction the the robot moves in\&. "
 .ti -1c
-.RI "double \fBspeedMultiplier\fP"
+.RI "double \fBmagnitudeMultiplier\fP"
 .br
-.RI "The speed of the robot is multiplied by this number\&. Used for slowmode\&. "
+.RI "The magnitude of the robot is multiplied by this number\&. Used for slowmode\&. "
 .ti -1c
-.RI "double \fBspeed\fP"
+.RI "double \fBmagnitude\fP"
 .br
-.RI "Speed value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. "
+.RI "magnitude value that will be passed into \fBDriveTrain::RadialDrive\fP "
 .ti -1c
-.RI "double \fBrotation\fP"
+.RI "double \fBradial\fP"
 .br
-.RI "Rotation value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. "
+.RI "radial value that will be passed into \fBDriveTrain::RadialDrive\fP "
 .ti -1c
 .RI "int \fBdriveMode\fP"
 .br
@@ -146,30 +146,30 @@ Used to keep track of the drive mode\&. driveMode is set depending on what is se
 0 = Joystick 1 = Triggers 
 .PP
 Definition at line 42 of file DriveWithJoystick\&.h\&.
+.SS "double DriveWithJoystick::magnitude\fC [private]\fP"
+
+.PP
+magnitude value that will be passed into \fBDriveTrain::RadialDrive\fP 
+.PP
+Definition at line 31 of file DriveWithJoystick\&.h\&.
+.SS "double DriveWithJoystick::magnitudeMultiplier\fC [private]\fP"
+
+.PP
+The magnitude of the robot is multiplied by this number\&. Used for slowmode\&. 
+.PP
+Definition at line 29 of file DriveWithJoystick\&.h\&.
 .SS "frc::XboxController* DriveWithJoystick::pJoyDrive\fC [private]\fP"
 
 .PP
 A mnemonic for the driver's controller because we are lazy\&. 
 .PP
 Definition at line 44 of file DriveWithJoystick\&.h\&.
-.SS "double DriveWithJoystick::rotation\fC [private]\fP"
+.SS "double DriveWithJoystick::radial\fC [private]\fP"
 
 .PP
-Rotation value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. 
+radial value that will be passed into \fBDriveTrain::RadialDrive\fP 
 .PP
 Definition at line 32 of file DriveWithJoystick\&.h\&.
-.SS "double DriveWithJoystick::speed\fC [private]\fP"
-
-.PP
-Speed value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. 
-.PP
-Definition at line 31 of file DriveWithJoystick\&.h\&.
-.SS "double DriveWithJoystick::speedMultiplier\fC [private]\fP"
-
-.PP
-The speed of the robot is multiplied by this number\&. Used for slowmode\&. 
-.PP
-Definition at line 29 of file DriveWithJoystick\&.h\&.
 
 .SH "Author"
 .PP 
