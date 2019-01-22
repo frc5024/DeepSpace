@@ -56,7 +56,7 @@ void DriveWithJoystick::Execute() {
 	
 	// Multiply each value with it's multiplier(s)
   this->magnitude    *= (this->magnitudeMultiplier * this->directionMultiplier);
-  this->radial *= (this->magnitudeMultiplier * DRIVEWITHJOYSTICK_radial_LIMITER);
+  this->radial *= (this->magnitudeMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
   Robot::m_DriveTrain->ArcadeDrive(this->magnitude, this->radial);
   

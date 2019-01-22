@@ -46,9 +46,9 @@ void DriveTrain::TankDrive(double leftSpeed, double rightSpeed) {
 	return;
 }
 
-void RadialDrive(double magnitude, double radial){
+void DriveTrain::RadialDrive(double magnitude, double radial){
   // set the speeds
-  double leftSpeed, rightSpeed = 0,0;
+  double leftSpeed, rightSpeed = 0;
   
   // asign the right motor speed
   rightSpeed = magnitude;
