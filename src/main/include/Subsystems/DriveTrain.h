@@ -29,6 +29,14 @@ class DriveTrain : public frc::Subsystem {
    * @param rightSpeed right motor speed
    */
 	void TankDrive(double leftSpeed, double rightSpeed);
+	
+	/**
+	 * Drive with circles
+	 *
+	 * @param magnitude Magnitude modifier for the radius output
+	 * @param radial Value that is computed into the outside motor's basic output
+	 */
+	void RadialDrive(double magnitude, double radial);
 
  private:
   can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor

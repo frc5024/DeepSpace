@@ -25,11 +25,11 @@ class DriveWithJoystick : public frc::Command {
   void Interrupted() override; //!< Runs once if the command is forced to stop
   
 private:
-	int directionMultiplier; //!< Can be 1 or -1. Determines the direction the the robot moves in
-	double speedMultiplier;  //!< The speed of the robot is multiplied by this number. Used for slowmode
+	int directionMultiplier;     //!< Can be 1 or -1. Determines the direction the the robot moves in
+	double magnitudeMultiplier;  //!< The magnitude of the robot is multiplied by this number. Used for slowmode
 	
-	double speed;    //!< Speed value that will be passed into DriveTrain::ArcadeDrive
-	double rotation; //!< Rotation value that will be passed into DriveTrain::ArcadeDrive
+	double magnitude; //!< magnitude value that will be passed into DriveTrain::RadialDrive
+	double radial;    //!< radial value that will be passed into DriveTrain::RadialDrive
 	
 	bool inline getTriggers(); //!< Called only if the drivemode is set to 1
 	
