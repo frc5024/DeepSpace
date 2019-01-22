@@ -43,11 +43,11 @@ bool inline DriveWithJoystick::getTriggers(){
 void DriveWithJoystick::Execute() {
   // Deal with reversing and slow mode
 	this->directionMultiplier = (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
-  this->magnitudeMultiplier     = (this->pJoyDrive->GetBumper(Hand::kRightHand)) ? 0.5 : 1;
+  this->magnitudeMultiplier = (this->pJoyDrive->GetBumper(Hand::kRightHand)) ? 0.5 : 1;
 
   // Get movement data form controller
-  this->magnitude    = this->pJoyDrive->GetY(Hand::kLeftHand) * -1;
-	this->radial = this->pJoyDrive->GetX(Hand::kLeftHand);
+  this->magnitude = this->pJoyDrive->GetY(Hand::kLeftHand) * -1;
+	this->radial    = this->pJoyDrive->GetX(Hand::kLeftHand);
 
   // If trigger drive mode was enabled during teleop-init, override magnitude with trigger data
   // This will only ever be called if a select few people are driving the bot.
@@ -55,16 +55,16 @@ void DriveWithJoystick::Execute() {
   this->driveMode == 1 && this->getTriggers();
 	
 	// Multiply each value with it's multiplier(s)
-  this->magnitude    *= (this->magnitudeMultiplier * this->directionMultiplier);
-  this->radial *= (this->magnitudeMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
+  this->magnitude *= (this->magnitudeMultiplier * this->directionMultiplier);
+  this->radial    *= (this->magnitudeMultiplier);// * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
   Robot::m_DriveTrain->ArcadeDrive(this->magnitude, this->radial);
   
   // Reset the magnitude and radial
   // while this does have some negitive side effects while driving,
   // It is for saftey. (and so we don't have a run-away bot slam into a wall again)
-  this->magnitude    = 0.00;
-  this->radial = 0.00;
+  this->magnitude = 0.00;
+  this->radial    = 0.00;
 }
 
 

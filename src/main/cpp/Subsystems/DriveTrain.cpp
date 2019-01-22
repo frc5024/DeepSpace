@@ -55,6 +55,7 @@ void DriveTrain::RadialDrive(double magnitude, double radial){
   
   // Calculate the radial
   radial += (radial > 1)? 1 : -1;
+  radial *= (fabs(magnitude) > DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF)? 1 : DRIVEWITHJOYSTICK_ROTATION_LIMITER;
   
   // calculate left speed
   leftSpeed = rightSpeed * radial;
