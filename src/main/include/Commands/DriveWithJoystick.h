@@ -4,6 +4,7 @@
 
 #include <frc/commands/Command.h>
 #include <Subsystems/DriveTrain.h>
+#include <Subsystems/ClimbSonic.h>
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
 

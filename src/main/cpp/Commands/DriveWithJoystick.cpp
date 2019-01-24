@@ -1,5 +1,6 @@
 #include "Commands/DriveWithJoystick.h"
 #include "Robot.h"
+#include <iostream>
 
 DriveWithJoystick::DriveWithJoystick() {
   // Use Requires() here to declare subsystem dependencies
@@ -59,6 +60,11 @@ void DriveWithJoystick::Execute() {
   this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
   Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
+  
+  // print ultrasonic reading to log
+  double distance = Robot::m_ClimbSonic->GetDistance();
+  
+  std::cout << distance << std::endl;
   
   // Reset the speed and rotation
   // while this does have some negitive side effects while driving,
