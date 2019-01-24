@@ -1,6 +1,5 @@
 #include "Commands/DriveWithJoystick.h"
 #include "Robot.h"
-#include <iostream>
 
 DriveWithJoystick::DriveWithJoystick() {
   // Use Requires() here to declare subsystem dependencies
@@ -61,13 +60,6 @@ void DriveWithJoystick::Execute() {
 
   Robot::m_DriveTrain->ArcadeDrive(this->magnitude, this->radial);
   
-
-  // print ultrasonic reading to log
-  double distance = Robot::m_ClimbSonic->GetDistance();
-  
-  std::cout << distance << std::endl;
-  
-
   // Reset the magnitude and radial
   // while this does have some negitive side effects while driving,
   // It is for saftey. (and so we don't have a run-away bot slam into a wall again)

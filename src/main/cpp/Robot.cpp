@@ -7,7 +7,6 @@
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
 OI *Robot::m_oi;
-ClimbSonic *Robot::m_ClimbSonic;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -18,7 +17,6 @@ void Robot::RobotInit() {
 
   // Subsystems
   this->m_DriveTrain = new DriveTrain();
-  this->m_ClimbSonic = new ClimbSonic();
   this->m_oi = new OI();
 
   // Init camera
