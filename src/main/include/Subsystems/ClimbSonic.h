@@ -3,6 +3,7 @@
 #define _CLIMBSONIC_HG_
 
 #include <frc/commands/Subsystem.h>
+#include <Commands/DriveWithJoystick.h>
 #include <frc/Ultrasonic.h>
 #include "RobotMap.h"
 

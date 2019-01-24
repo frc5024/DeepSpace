@@ -1,7 +1,7 @@
 #include "Subsystems/ClimbSonic.h"
 
 ClimbSonic::ClimbSonic() : frc::Subsystem("ClimbSonic"){
-  this->sensor = new Ultrasonic(1, 1);
+  this->sensor = new frc::Ultrasonic(1, 1);
   this->sensor->SetAutomaticMode(true);
 }
 
