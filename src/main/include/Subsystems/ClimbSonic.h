@@ -19,7 +19,7 @@ class ClimbSonic : public frc::Subsystem {
   double GetDistance();
 
  private:
-  frc::Ultrasonic *sensor //!< The ultrasonic sensor
+  frc::Ultrasonic *sensor; //!< The ultrasonic sensor
 };
 
 #endif // _CLIMBSONIC_HG_
