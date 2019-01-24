@@ -3,7 +3,7 @@
 #define _CLIMBSONIC_HG_
 
 #include <frc/commands/Subsystem.h>
-#include <Ultrasonic.h>
+#include <frc/Ultrasonic.h>
 #include "RobotMap.h"
 
 class ClimbSonic : public frc::Subsystem {
@@ -19,7 +19,7 @@ class ClimbSonic : public frc::Subsystem {
   double GetDistance();
 
  private:
-  Ultrasonic *sensor //!< The ultrasonic sensor
+  frc::Ultrasonic *sensor //!< The ultrasonic sensor
 };
 
 #endif // _CLIMBSONIC_HG_
