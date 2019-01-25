@@ -4,6 +4,7 @@
 
 #include <frc/commands/Command.h>
 #include <frc/smartdashboard/SendableChooser.h>
+#include <networktables/NetworkTable.h>
 #include <frc/TimedRobot.h>
 #include <frc/WPILib.h>
 #include <cscore_oo.h>
@@ -11,6 +12,9 @@
 #include "Commands/TriggerDrive.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
+
+#include <frc/PowerDistributionPanel.h>
+#include <frc/DriverStation.h>
 
 
 class Robot : public frc::TimedRobot {
@@ -42,6 +46,11 @@ class Robot : public frc::TimedRobot {
   // doesn't have undefined behavior and potentially crash.
   // MyAutoCommand m_myAuto;
   frc::SendableChooser<frc::Command*> m_chooser;
+
+  frc::DriverStation& driverStation = frc::DriverStation::GetInstance();
+  frc::PowerDistributionPanel* pdp;
+
+  std::shared_ptr<NetworkTable> ntTelemetry; //!< A pointer to the /SmartDashboard/Telemetry table
 };
 
 #endif //_ROBOT_HG_
