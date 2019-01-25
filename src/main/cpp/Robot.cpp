@@ -28,9 +28,14 @@ void Robot::RobotInit() {
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
 
-  // Set robot loop speed (in seconds)
-  std::cout << "Setting Period Time.." << std::endl;
-  // this->SetPeriod(0.01);
+  // Create Telemetry table
+  std::cout << "Connecting to telemetry table.." << std::endl;
+  this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry");
+
+  // create ds and pdp objects
+  std::cout << "Creating Driverstation and PDP objects" << std::endl;
+  // this->driverStation = new frc::DriverStation::GetInstance();
+  this->pdp           = new frc::PowerDistributionPanel(10);
 }
 
 /**
@@ -41,7 +46,19 @@ void Robot::RobotInit() {
  * <p> This runs after the mode specific periodic functions, but before
  * LiveWindow and SmartDashboard integrated updating.
  */
-void Robot::RobotPeriodic() {}
+void Robot::RobotPeriodic() {
+  // Send information about the robot over NetworkTables
+
+  double pdpTemperature = this->pdp->GetTemperature();
+  double robotVoltage   = this->pdp->GetVoltage();
+  bool   dsAttached     = this->driverStation.IsDSAttached();
+  bool   fmsAttached    = this->driverStation.IsFMSAttached();
+
+  this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
+  this->ntTelemetry->PutNumber("voltage",  robotVoltage);
+  this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
+  this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
+}
 
 /**
  * This function is called once each time the robot enters Disabled mode. You
