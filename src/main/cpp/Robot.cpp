@@ -35,7 +35,7 @@ void Robot::RobotInit() {
   // create ds and pdp objects
   std::cout << "Creating Driverstation and PDP objects" << std::endl;
   // this->driverStation = new frc::DriverStation::GetInstance();
-  this->pdp           = new frc::PowerDistributionPanel(99);
+  this->pdp           = new frc::PowerDistributionPanel(10);
 }
 
 /**
