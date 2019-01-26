@@ -2,7 +2,7 @@
 
 Slider::Slider() : frc::Subsystem("Slider") {
   // Initialize the motors
-	this->pSliderMotor = new can::WPI_TalonSRX(Slider_LEFT_FRONT_MOTOR);
+	this->pSliderMotor = new can::WPI_TalonSRX(SLIDER_MOTOR);
 
 	this->pSliderMotor->SetInverted(false);
 
@@ -10,7 +10,7 @@ Slider::Slider() : frc::Subsystem("Slider") {
 }
 
 void Slider::InitDefaultCommand() {
-  SetDefaultCommand(new DriveWithJoystick());
+  SetDefaultCommand(new ControlSlider());
 }
 
 void Slider::Slide(double speed) {

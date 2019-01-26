@@ -1,6 +1,6 @@
 //! An interface command for driving the robot with an xbox controller
-#ifndef _TRIGGERDRIVE_HG_
-#define _TRIGGERDRIVE_HG_
+#ifndef _ControlSlider_HG_
+#define _ControlSlider_HG_
 
 #include <frc/commands/Command.h>
 #include <Subsystems/Slider.h>
@@ -8,9 +8,9 @@
 #include <frc/GenericHID.h>
 
 
-class TriggerDrive : public frc::Command {
+class ControlSlider : public frc::Command {
  public:
-  TriggerDrive();             //!< Class constructor
+  ControlSlider();             //!< Class constructor
   void Initialize() override; //!< Runs once on initalization
   void Execute() override;    //!< Called in a loop during Teleop
   
@@ -31,4 +31,4 @@ private:
 	frc::XboxController* pJoyOp; //!< A mnemonic for the driver's controller because we are lazy
 };
 
-#endif // _TRIGGERDRIVE_HG_
+#endif // _ControlSlider_HG_
