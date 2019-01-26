@@ -4,6 +4,7 @@
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <iostream>
 #include <string>
+#include <fstream>
 
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
@@ -26,7 +27,7 @@ void Robot::RobotInit() {
   this->visionCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Vision",  CAMERASERVER_BACK_CAMERA);
   
   // Set vision cam settings
-  std::ifstream visionSettingsFile("myfile.txt");
+  std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
   std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
   this->visionCam.SetConfigJson(visionSettings);
   
