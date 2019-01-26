@@ -12,6 +12,38 @@
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 
+struct RobotPosition
+{
+	typedef enum
+	{
+		UPPER_LEFT   = 1,
+		LOWER_LEFT   = 2,
+		CENTER       = 3,
+		UPPER_RIGHT  = 4,
+		LOWER_RIGHT  = 5
+	} Type;
+};
+
+struct HatchPosition
+{
+	typedef enum
+	{
+		BACK   = 10,
+		MIDDLE = 20,
+		FRONT  = 30
+	} Type;
+};
+
+struct AutonomousType
+{
+	typedef enum
+	{
+		DRIVE_CONTROLLED                  = 100,
+		TIMED_JUST_DRIVE_FORWARD          = 200,
+		MOTION_PROFILE_JUST_DRIVE_FORWARD = 300,
+		TOTAL_AUTONOMOUS                  = 400
+	} Type;
+};
 
 class Robot : public frc::TimedRobot {
  public:
@@ -38,10 +70,12 @@ class Robot : public frc::TimedRobot {
   cs::UsbCamera frontCam; //!< Variable for the front camera
   cs::UsbCamera backCam;  //!< Variable for the Back camera
 
-  // Have it null by default so that if testing teleop it
-  // doesn't have undefined behavior and potentially crash.
-  // MyAutoCommand m_myAuto;
-  frc::SendableChooser<frc::Command*> m_chooser;
+  // Autonomous Functions and Options
+	int GetAutoType();
+  frc::SendableChooser<int> scRobotPosition;
+  frc::SendableChooser<int> scHatchPosition;
+  frc::SendableChooser<int> scAutonomousType;
+	frc::Command* pAutonomousCommand;
 };
 
 #endif //_ROBOT_HG_
