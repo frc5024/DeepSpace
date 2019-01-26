@@ -3,6 +3,8 @@
 #include <frc/commands/Scheduler.h>
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <iostream>
+#include <string>
+#include <fstream>
 
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
@@ -21,8 +23,16 @@ void Robot::RobotInit() {
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
-  this->frontCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Front Cam", CAMERASERVER_FRONT_CAMERA);
-  this->backCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Back Cam",  CAMERASERVER_BACK_CAMERA);
+  this->frontCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Driver Camera", CAMERASERVER_FRONT_CAMERA);
+  this->visionCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Vision",  CAMERASERVER_BACK_CAMERA);
+  
+  // Set vision cam settings
+  std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
+  std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
+  this->visionCam.SetConfigJson(visionSettings);
+  
+  // Set camera settings
+  // this->frontCam->
 	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
@@ -35,7 +45,7 @@ void Robot::RobotInit() {
   // create ds and pdp objects
   std::cout << "Creating Driverstation and PDP objects" << std::endl;
   // this->driverStation = new frc::DriverStation::GetInstance();
-  this->pdp           = new frc::PowerDistributionPanel(10);
+  this->pdp = new frc::PowerDistributionPanel(10);
 }
 
 /**
