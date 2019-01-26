@@ -11,7 +11,7 @@
 class Slider : public frc::Subsystem {
  public:
   Slider(); //!< Class constructor
-  void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (DriveWithJoystick)
+  void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (ControlSlider)
 	
 	/**
 	 * Pass data to motor
@@ -21,7 +21,7 @@ class Slider : public frc::Subsystem {
   void Slide(double speed);
 
  private:
-  can::WPI_TalonSRX* pSliderMotor; //!< Pointer for left front motor
+  can::WPI_TalonSRX* pSliderMotor; //!< Pointer for the slider motor
 };
 
 #endif // _Slider_HG_

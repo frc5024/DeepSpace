@@ -56,7 +56,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"DriveTrain_8cpp.html"
+"ControlSlider_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

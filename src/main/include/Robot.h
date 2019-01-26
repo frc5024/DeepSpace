@@ -23,11 +23,11 @@ class Robot : public frc::TimedRobot {
  public:
 	// Subsystems
   static DriveTrain *m_DriveTrain; //!< Pointer for the DriveTrain
-  static Slider *m_Slider; //!< Pointer for the Slider
+  static Slider *m_Slider;         //!< Pointer for the Slider
   static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
 
 	// Commands
-  TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
+  TriggerDrive* pTriggerDrive;  //!< Pointer for the TriggerDrive command
   ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
 
 	// Robot methods
@@ -51,8 +51,8 @@ class Robot : public frc::TimedRobot {
   // MyAutoCommand m_myAuto;
   frc::SendableChooser<frc::Command*> m_chooser;
 
-  frc::DriverStation& driverStation = frc::DriverStation::GetInstance();
-  frc::PowerDistributionPanel* pdp;
+  frc::DriverStation& driverStation = frc::DriverStation::GetInstance(); //!< DriverStation instance
+  frc::PowerDistributionPanel* pdp; //!< Power Distrobution Panel information
 
   std::shared_ptr<NetworkTable> ntTelemetry; //!< A pointer to the /SmartDashboard/Telemetry table
 };

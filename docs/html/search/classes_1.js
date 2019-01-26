@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['oi',['OI',['../classOI.html',1,'']]]
+  ['drivetrain',['DriveTrain',['../classDriveTrain.html',1,'']]],
+  ['drivewithjoystick',['DriveWithJoystick',['../classDriveWithJoystick.html',1,'']]]
 ];

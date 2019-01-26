@@ -32,9 +32,6 @@ void Robot::RobotInit() {
   std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
   std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
   this->visionCam.SetConfigJson(visionSettings);
-  
-  // Set camera settings
-  // this->frontCam->
 	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
@@ -47,7 +44,6 @@ void Robot::RobotInit() {
 
   // create ds and pdp objects
   std::cout << "Creating Driverstation and PDP objects" << std::endl;
-  // this->driverStation = new frc::DriverStation::GetInstance();
   this->pdp = new frc::PowerDistributionPanel(10);
 }
 

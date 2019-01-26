@@ -4,6 +4,7 @@ var searchData=
   ['disabledinit',['DisabledInit',['../classRobot.html#a810e6143a208a6314491366e3c714357',1,'Robot']]],
   ['disabledperiodic',['DisabledPeriodic',['../classRobot.html#a8c7309f5f1cb242ea8c74f1abf03b540',1,'Robot']]],
   ['drivemode',['driveMode',['../classDriveWithJoystick.html#a11d7c09c5a0bced3aa504c775cb9d7e3',1,'DriveWithJoystick']]],
+  ['driverstation',['driverStation',['../classRobot.html#a6f2299fbdf5016ab845a8d68febbc08f',1,'Robot']]],
   ['drivetrain',['DriveTrain',['../classDriveTrain.html',1,'DriveTrain'],['../classDriveTrain.html#a90af56eee49c93d5b7d77065b42f660b',1,'DriveTrain::DriveTrain()']]],
   ['drivetrain_2ecpp',['DriveTrain.cpp',['../DriveTrain_8cpp.html',1,'']]],
   ['drivetrain_2eh',['DriveTrain.h',['../DriveTrain_8h.html',1,'']]],

@@ -26,9 +26,9 @@ class ControlSlider : public frc::Command {
   void Interrupted() override; //!< Runs once if the command is forced to stop
   
 private:
-	double speed;    //!< Speed value that will be passed into Slider::Slide
+	double speed; //!< Speed value that will be passed into Slider::Slide
 	
-	frc::XboxController* pJoyOp; //!< A mnemonic for the driver's controller because we are lazy
+	frc::XboxController* pJoyOp; //!< A mnemonic for the operator's controller because we are lazy
 };
 
 #endif // _ControlSlider_HG_

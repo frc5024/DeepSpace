@@ -1,0 +1,80 @@
+.TH "Slider" 3 "Sat Jan 26 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Slider \- A subsystem that interfaces with the drivebase on the robot\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Slider\&.h>\fP
+.PP
+Inherits Subsystem\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSlider\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitDefaultCommand\fP () override"
+.br
+.RI "Initalizes the default command for this subsystem (\fBControlSlider\fP) "
+.ti -1c
+.RI "void \fBSlide\fP (double speed)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "can::WPI_TalonSRX * \fBpSliderMotor\fP"
+.br
+.RI "Pointer for the slider motor\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A subsystem that interfaces with the drivebase on the robot\&. 
+.PP
+Definition at line 11 of file Slider\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Slider::Slider ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 3 of file Slider\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Slider::InitDefaultCommand ()\fC [override]\fP"
+
+.PP
+Initalizes the default command for this subsystem (\fBControlSlider\fP) 
+.PP
+Definition at line 12 of file Slider\&.cpp\&.
+.SS "void Slider::Slide (double speed)"
+Pass data to motor
+.PP
+\fBParameters:\fP
+.RS 4
+\fIspeed\fP \fBSlider\fP speed (form -1 to 1) 
+.RE
+.PP
+
+.PP
+Definition at line 16 of file Slider\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "can::WPI_TalonSRX* Slider::pSliderMotor\fC [private]\fP"
+
+.PP
+Pointer for the slider motor\&. 
+.PP
+Definition at line 24 of file Slider\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.
