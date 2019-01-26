@@ -21,7 +21,7 @@ class Leg : public frc::Subsystem {
 	 */
   void MoveLeg(double Speed);
   private:
-  can::WPI_TalonSRX* pLegMotor; //!< Pointer for climb leg motor
+  can::WPI_VictorSPX* pLegMotor; //!< Pointer for climb leg motor
 };
 
 #endif // _LEG_HG_

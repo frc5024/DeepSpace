@@ -2,9 +2,7 @@
 
 Arm::Arm() : Subsystem("Arm") {
   // Initialize the motors
-  this->pArmMotor = new can::WPI_TalonSRX(CLIMB_ARM_MOTOR);
-
-  this->pArmMotor->SetNeutralMode(NeutralMode::Brake);
+  this->pArmMotor = new frc::Spark(CLIMB_ARM_MOTOR);
 
   this->pArmMotor->SetSafetyEnabled(false);
 

@@ -5,7 +5,6 @@
 #include <frc/commands/Subsystem.h>
 #include <frc/WPILib.h>
 #include <ctre/Phoenix.h>
-#include <frc/Spark.h>
 #include "RobotMap.h"
 #include <frc/drive/DifferentialDrive.h>
 
@@ -23,8 +22,8 @@ class CrawlDrive: public frc::Subsystem {
     void ArcadeDrive(double xSpeed, double zRotation);
 
     private:
-    frc::Spark* pCrawlLeft; //!< Pointer for the left crawl motor
-    frc::Spark* pCrawlRight; //!< Pointer for the right craw motor
+    can::WPI_TalonSRX* pCrawlLeft; //!< Pointer for the left crawl motor
+    can::WPI_TalonSRX* pCrawlRight; //!< Pointer for the right craw motor
 
     frc::DifferentialDrive* pCrawlDriveTrain; //!< Pointer for a differential drivebase made up of 2 motors
 };

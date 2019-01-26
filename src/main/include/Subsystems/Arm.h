@@ -4,9 +4,10 @@
 
 #include <frc/commands/Subsystem.h>
 #include <frc/WPILib.h>
-#include <ctre/Phoenix.h>
+#include <frc/Spark.h>
 #include <frc/AnalogInput.h>
 #include <frc/PWMVictorSPX.h>
+#include <ctre/Phoenix.h>
 #include "RobotMap.h"
 
 class Arm : public frc::Subsystem {
@@ -30,7 +31,7 @@ class Arm : public frc::Subsystem {
 
 
   private:
-  can::WPI_TalonSRX* pArmMotor; //!< Pointer for Arm arm motor
+  frc::Spark* pArmMotor; //!< Pointer for Arm arm motor
   frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC};
   static constexpr double kValueToInches = 0.125;
 };
