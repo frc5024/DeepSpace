@@ -1,5 +1,5 @@
 {
-    "fps": 30,
+    "fps": 15,
     "height": 120,
     "pixel format": "mjpeg",
     "properties": [
@@ -29,7 +29,7 @@
         },
         {
             "name": "saturation",
-            "value": 94
+            "value": 100
         },
         {
             "name": "white_balance_temperature_auto",
@@ -41,7 +41,7 @@
         },
         {
             "name": "white_balance_temperature",
-            "value": 4185
+            "value": 9197
         },
         {
             "name": "raw_sharpness",
