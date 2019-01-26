@@ -9,6 +9,7 @@
 #include <cscore_oo.h>
 
 #include "Commands/TriggerDrive.h"
+#include "Commands/TestCommand.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/UltrasonicTest.h"
@@ -23,6 +24,7 @@ class Robot : public frc::TimedRobot {
 	
   // Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
+  TestCommand* tCommand; // just a test for limit switch
 
 	// Robot methods
   void RobotInit() override;          //!< Runs once on robot boot

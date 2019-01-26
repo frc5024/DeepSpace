@@ -14,6 +14,7 @@ class LimitSwitches : public frc::Subsystem {
   // mabye rename to getValue() because unknown if ls's are normally open or closed
   bool isOn1(); //!<
   bool isOn2(); //!<
+  int ChannelNumber();
 
  private:
   frc::DigitalInput* limitSwitch1; //!< The first limit switch on the robot

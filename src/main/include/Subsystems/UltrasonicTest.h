@@ -15,7 +15,7 @@ class UltrasonicTest : public frc::Subsystem {
 
   double GetDistance(); //!< Gets and returns the distance of the ultrasonic sensor.
   
-  private:
+ private:
   frc::Ultrasonic* ultraSensor; //!< The ultrasonic sensor used on the robot.
 };
 #endif // _ULTRASONICTEST_HG_

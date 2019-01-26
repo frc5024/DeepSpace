@@ -41,7 +41,7 @@ void TriggerDrive::Execute() {
   this->rotation = (this->pJoyDrive->GetAButton())? this->table->GetNumber("Motor", 0.0) : this->rotation;
 
   Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
-  
+
   // Reset the speed and rotation
   // while this does have some negitive side effects while driving,
   // It is for saftey. (and so we don't have a run-away bot slam into a wall again)

@@ -8,6 +8,7 @@
 DriveTrain *Robot::m_DriveTrain;
 OI *Robot::m_oi;
 LimitSwitches *Robot::liSwitches;
+
 void Robot::RobotInit() {
   // Print out a banner to the shell
   // Some backslashes are doubled in order for them to print properly
@@ -18,7 +19,7 @@ void Robot::RobotInit() {
   // Subsystems
   this->m_DriveTrain = new DriveTrain();
   this->m_oi = new OI();
-   this->liSwitches = new LimitSwitches();
+  this->liSwitches = new LimitSwitches();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
@@ -28,10 +29,15 @@ void Robot::RobotInit() {
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
+  this->tCommand = new TestCommand();
 
   // Set robot loop speed (in seconds)
   std::cout << "Setting Period Time.." << std::endl;
   // this->SetPeriod(0.01);
+
+    if (this->tCommand != nullptr) {
+		this->tCommand->Start();
+	}
 }
 
 /**
