@@ -14,7 +14,7 @@
 #define CAMERASERVER_FRONT_CAMERA 1
 #define CAMERASERVER_BACK_CAMERA  0
 
-//Ultrasonic
+// Ultrasonic sensor
 #define PING_CHANNEL 0
 #define ECHO_CHANNEL 0
 

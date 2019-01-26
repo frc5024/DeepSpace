@@ -11,16 +11,17 @@
 #include "Commands/TriggerDrive.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
-#include "Subsystems/Ultrasonic.h"
+#include "Subsystems/UltrasonicTest.h"
+#include "Subsystems/LimitSwitches.h"
 
 class Robot : public frc::TimedRobot {
  public:
 	// Subsystems
-  static DriveTrain *m_DriveTrain; //!< Pointer for the DriveTrain
-  static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
-  static Ultrasonic *ultra;
-
-	// Commands
+  static DriveTrain *m_DriveTrain;  //!< Pointer for the DriveTrain
+  static OI *m_oi;                  //!< Pointer for the Operator Interface (OI)
+  static LimitSwitches *liSwitches; //!< Pointer for the Limit Switches
+	
+  // Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
 
 	// Robot methods

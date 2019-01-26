@@ -7,8 +7,7 @@
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
 OI *Robot::m_oi;
-Ultrasonic *Robot::ultral
-
+LimitSwitches *Robot::liSwitches;
 void Robot::RobotInit() {
   // Print out a banner to the shell
   // Some backslashes are doubled in order for them to print properly
@@ -19,7 +18,7 @@ void Robot::RobotInit() {
   // Subsystems
   this->m_DriveTrain = new DriveTrain();
   this->m_oi = new OI();
-  this->ultra = new Ultrasonic();
+   this->liSwitches = new LimitSwitches();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
