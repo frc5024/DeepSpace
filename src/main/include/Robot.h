@@ -40,7 +40,7 @@ class Robot : public frc::TimedRobot {
  private:
   // Define cameras
   cs::UsbCamera frontCam; //!< Variable for the front camera
-  cs::UsbCamera backCam;  //!< Variable for the Back camera
+  cs::UsbCamera visionCam;  //!< Variable for the Vision camera
 
   // Have it null by default so that if testing teleop it
   // doesn't have undefined behavior and potentially crash.
