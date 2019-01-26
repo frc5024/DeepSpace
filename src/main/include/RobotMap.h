@@ -28,6 +28,9 @@
 
 #define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF 0.8
 
+// Slider
+#define SLIDER_MOTOR 5
+
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 

@@ -10,8 +10,10 @@
 #include <cscore_oo.h>
 
 #include "Commands/TriggerDrive.h"
+#include "Commands/ControlSlider.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
+#include "Subsystems/Slider.h"
 
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
@@ -21,10 +23,12 @@ class Robot : public frc::TimedRobot {
  public:
 	// Subsystems
   static DriveTrain *m_DriveTrain; //!< Pointer for the DriveTrain
+  static Slider *m_Slider; //!< Pointer for the Slider
   static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
 
 	// Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
+  ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
 
 	// Robot methods
   void RobotInit() override;          //!< Runs once on robot boot

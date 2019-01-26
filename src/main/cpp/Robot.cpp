@@ -9,6 +9,7 @@
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
 OI *Robot::m_oi;
+Slider *Robot::m_Slider;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -19,6 +20,7 @@ void Robot::RobotInit() {
 
   // Subsystems
   this->m_DriveTrain = new DriveTrain();
+  this->m_Slider = new Slider();
   this->m_oi = new OI();
 
   // Init camera
@@ -37,6 +39,7 @@ void Robot::RobotInit() {
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
+  this->pControlSlider = new ControlSlider();
 
   // Create Telemetry table
   std::cout << "Connecting to telemetry table.." << std::endl;
@@ -120,6 +123,9 @@ void Robot::TeleopInit() {
 
   if (this->pTriggerDrive != nullptr) {
 		this->pTriggerDrive->Start();
+	}
+	if (this->pControlSlider != nullptr) {
+		this->pControlSlider->Start();
 	}
 }
 
