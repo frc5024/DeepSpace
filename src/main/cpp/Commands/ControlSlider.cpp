@@ -4,7 +4,7 @@
 ControlSlider::ControlSlider() {
   // Use Requires() here to declare subsystem dependencies
   Requires(Robot::m_Slider);
-  this->pJoyDrive = Robot::m_oi->GetJoystickOperator();
+  this->pJoyOp = Robot::m_oi->GetJoystickOperator();
 }
 
 // Called just before this Command runs the first time
@@ -15,9 +15,9 @@ void ControlSlider::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ControlSlider::Execute() {
-	this->speed = this->pJoyDrive->GetX(Hand::kLeftHand);
+	this->speed = this->pJoyOp->GetX(Hand::kLeftHand);
 	
-  Robot::m_Slider->slide(this->speed);
+  Robot::m_Slider->Slide(this->speed);
   
   // Reset the speed
   this->speed    = 0.00;
