@@ -1,34 +1,56 @@
 #include "Commands/ControlSlider.h"
 #include "Robot.h"
 
-ControlSlider::ControlSlider() {
-  // Use Requires() here to declare subsystem dependencies
+/**
+ *
+ */
+ControlSlider::ControlSlider() 
+{
   Requires(Robot::m_Slider);
-  this->pJoyOp = Robot::m_oi->GetJoystickOperator();
+  this->pJoystickOperator = Robot::m_oi->GetJoystickOperator();
 }
 
-// Called just before this Command runs the first time
-// aka: every time teleop is enabled
-void ControlSlider::Initialize() {
-  this->speed    = 0.0;
-}
-
-// Called repeatedly when this Command is scheduled to run
-void ControlSlider::Execute() {
-	this->speed = this->pJoyOp->GetX(Hand::kLeftHand);
+/**
+ *
+ */
+void ControlSlider::Initialize() 
+{
+  this->speed = 0.0;
 	
-  Robot::m_Slider->Slide(this->speed);
-  
-  // Reset the speed
-  this->speed    = 0.00;
+  return;
 }
 
+/**
+ *
+ */
+void ControlSlider::Execute() 
+{
+  this->speed = this->pJoystickOperator->GetX(Hand::kLeftHand);
+  Robot::m_Slider->Slide(this->speed);
+	
+  return;
+}
 
-bool ControlSlider::IsFinished() { return false; }
+/**
+ *
+ */
+bool ControlSlider::IsFinished() 
+{ 
+  return false; 
+}
 
-// Called once after isFinished returns true
-void ControlSlider::End() {}
+/**
+ *
+ */
+void ControlSlider::End() 
+{
+  Robot::m_Slider->Slide(0.0);
+}
 
-// Called when another command which requires one or more of the same
-// subsystems is scheduled to run
-void ControlSlider::Interrupted() {}
+/**
+ *
+ */
+void ControlSlider::Interrupted() 
+{
+  Robot::m_Slider->Slide(0.0);
+}
