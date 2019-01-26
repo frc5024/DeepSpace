@@ -9,6 +9,7 @@
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
 OI *Robot::m_oi;
+Slider *Robot::m_Slider;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
