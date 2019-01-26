@@ -42,7 +42,7 @@ Port: 1
 | -- | -- |
 | Joysticks | -- |
 | Left | -- |
-| X |  |
+| X | Move slider |
 | Y |  |
 | Btn |  |
 | Right | -- |
