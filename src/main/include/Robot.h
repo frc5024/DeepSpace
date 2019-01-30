@@ -14,6 +14,7 @@
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/Slider.h"
+#include "Subsystems/Piston.h"
 
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
@@ -24,6 +25,7 @@ class Robot : public frc::TimedRobot {
 	// Subsystems
   static DriveTrain *m_DriveTrain; //!< Pointer for the DriveTrain
   static Slider *m_Slider;         //!< Pointer for the Slider
+  static Piston *m_Piston;         //!< Pointer for the Piston
   static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
 
 	// Commands

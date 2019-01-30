@@ -10,6 +10,7 @@
 DriveTrain *Robot::m_DriveTrain;
 OI *Robot::m_oi;
 Slider *Robot::m_Slider;
+Piston *Robot::m_Piston;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -22,6 +23,7 @@ void Robot::RobotInit() {
   std::cout << "Creating Subsystems..." << std::endl;
   this->m_DriveTrain = new DriveTrain();
   this->m_Slider     = new Slider();
+  this->m_Piston     = new Piston();
   this->m_oi         = new OI();
 
   // Init camera
@@ -76,7 +78,10 @@ void Robot::RobotPeriodic() {
  * can use it to reset any subsystem information you want to clear when the
  * robot is disabled.
  */
-void Robot::DisabledInit() {}
+void Robot::DisabledInit() {
+  // Release pressure from piston
+  Robot::m_Piston->Release();
+}
 
 void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
 

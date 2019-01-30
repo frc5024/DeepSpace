@@ -4,6 +4,7 @@
 
 #include <frc/commands/Command.h>
 #include <Subsystems/Slider.h>
+#include <Subsystems/Piston.h>
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
 
