@@ -28,6 +28,13 @@
 
 #define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF 0.8
 
+// Encoder constants
+#define PID_LOOP_INDEX          0
+#define TIMOUT_MS               100
+#define SLOT_INDEX              0
+#define TICKS_PER_REVOLUTION    1440
+#define WHEEL_CIRCUMFERENCE     666 //TODO: 2*pi*r
+
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 

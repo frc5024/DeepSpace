@@ -33,7 +33,7 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 }
 
 void DriveTrain::InitDefaultCommand() {
-  SetDefaultCommand(new DriveWithJoystick());
+	SetDefaultCommand(new DriveWithJoystick());
 }
 
 void DriveTrain::ArcadeDrive(double xSpeed, double zRotation) {
@@ -46,21 +46,76 @@ void DriveTrain::TankDrive(double leftSpeed, double rightSpeed) {
 	return;
 }
 
-void DriveTrain::RadialDrive(double magnitude, double radial){
-  // set the speeds
-  double leftSpeed, rightSpeed = 0;
-  
-  // asign the right motor speed
-  rightSpeed = magnitude;
-  
-  // Calculate the radial
-  radial += (radial > 1)? 1 : -1;
-  radial *= (fabs(magnitude) > DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF)? 1 : DRIVEWITHJOYSTICK_ROTATION_LIMITER;
-  
-  // calculate left speed
-  leftSpeed = rightSpeed * radial;
-  
-  // pass to tankdrive
-  this->pRobotDrive->TankDrive(leftSpeed, rightSpeed);
-  return;
+void DriveTrain::RadialDrive(double magnitude, double radial) {
+	// set the speeds
+	double leftSpeed, rightSpeed = 0;
+
+	// asign the right motor speed
+	rightSpeed = magnitude;
+
+	// Calculate the radial
+	radial += (radial > 1)? 1 : -1;
+	radial *= (fabs(magnitude) > DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF)? 1 : DRIVEWITHJOYSTICK_ROTATION_LIMITER;
+
+	// calculate left speed
+	leftSpeed = rightSpeed * radial;
+
+	// pass to tankdrive
+	this->pRobotDrive->TankDrive(leftSpeed, rightSpeed);
+	return;
+}
+
+void DriveTrain::ResetEncoders(void) {
+	this->pLeftFrontMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
+	this->pLeftRearMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
+	this->pRightFrontMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
+	this->pRightRearMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
+	
+	return ;
+}
+
+void DriveTrain::ResetLeftEncoder(void) {
+	this->pLeftFrontMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
+	this->pLeftRearMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
+	
+	return ;
+}
+
+void DriveTrain::ResetRightEncoder(void) {
+	this->pRightFrontMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
+	this->pRightRearMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
+	
+	return ;
+}
+
+float DriveTrain::GetDistance(void) {
+	float retr  = this->pLeftFrontMotor->GetSelectedSensorPosition(SLOT_INDEX)
+				+ this->pRightFrontMotor->GetSelectedSensorPosition(SLOT_INDEX)
+				+ this->pLeftRearMotor->GetSelectedSensorPosition(SLOT_INDEX)
+				+ this->pLeftFrontMotor->GetSelectedSensorPosition(SLOT_INDEX) ;
+	return (retr / 4.0 / TICKS_PER_REVOLUTION * WHEEL_CIRCUMFERENCE) ;
+}
+
+float DriveTrain::GetDistanceQuick(void) {
+	return this->pRightFrontMotor->GetSelectedSensorPosition(SLOT_INDEX) / TICKS_PER_REVOLUTION * WHEEL_CIRCUMFERENCE ;
+}
+
+float DriveTrain::GetLeftDistance(void) {
+	float retr  = this->pLeftFrontMotor->GetSelectedSensorPosition(SLOT_INDEX)
+				+ this->pLeftRearMotor->GetSelectedSensorPosition(SLOT_INDEX) ;
+	return (retr / 2.0 / TICKS_PER_REVOLUTION * WHEEL_CIRCUMFERENCE) ;
+}
+
+float DriveTrain::GetRightDistance(void) {
+	float retr  = this->pRightFrontMotor->GetSelectedSensorPosition(SLOT_INDEX)
+				+ this->pRightRearMotor->GetSelectedSensorPosition(SLOT_INDEX) ;
+	return (retr / 2.0 / TICKS_PER_REVOLUTION * WHEEL_CIRCUMFERENCE) ;
+}
+
+float DriveTrain::GetLeftDistanceQuick(void) {
+	return this->pLeftFrontMotor->GetSelectedSensorPosition(SLOT_INDEX) / TICKS_PER_REVOLUTION * WHEEL_CIRCUMFERENCE ;
+}
+
+float DriveTrain::GetRightDistanceQuick(void) {
+	return this->pRightFrontMotor->GetSelectedSensorPosition(SLOT_INDEX) / TICKS_PER_REVOLUTION * WHEEL_CIRCUMFERENCE ;
 }
