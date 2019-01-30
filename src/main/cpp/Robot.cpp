@@ -8,8 +8,9 @@
 
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
-OI *Robot::m_oi;
-Slider *Robot::m_Slider;
+OI         *Robot::m_oi;
+Slider     *Robot::m_Slider;
+Compressor *Robot::m_Compressor;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -124,6 +125,9 @@ void Robot::TeleopInit() {
 	}
 	if (this->pControlSlider != nullptr) {
 		this->pControlSlider->Start();
+	}
+  if (this->pControlCompressor != nullptr) {
+		this->pControlCompressor->Start();
 	}
 }
 

@@ -31,6 +31,9 @@
 // Slider
 #define SLIDER_MOTOR 5
 
+// Compressor
+#define COMPRESSOR_PIN 0
+
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 
