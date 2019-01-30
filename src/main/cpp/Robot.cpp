@@ -19,23 +19,25 @@ void Robot::RobotInit() {
   std::cout << "Robot Starting.."<< std::endl;
 
   // Subsystems
+  std::cout << "Creating Subsystems..." << std::endl;
   this->m_DriveTrain = new DriveTrain();
-  this->m_Slider = new Slider();
-  this->m_oi = new OI();
+  this->m_Slider     = new Slider();
+  this->m_oi         = new OI();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
-  this->frontCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Driver Camera", CAMERASERVER_FRONT_CAMERA);
-  this->visionCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Vision",  CAMERASERVER_BACK_CAMERA);
+  this->frontCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Driver Camera", CAMERASERVER_DRIVER_CAMERA);
+  this->visionCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Vision",  CAMERASERVER_VISION_CAMERA);
   
   // Set vision cam settings
+  std::cout << "Setting camera config.." << std::endl;
   std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
   std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
   this->visionCam.SetConfigJson(visionSettings);
 	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
-  this->pTriggerDrive = new TriggerDrive();
+  this->pTriggerDrive  = new TriggerDrive();
   this->pControlSlider = new ControlSlider();
 
   // Create Telemetry table
