@@ -30,7 +30,8 @@ void Robot::RobotInit() {
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
   this->tCommand = new TestCommand();
-
+  this->tglLight = new ToggleLight();
+  
   // Set robot loop speed (in seconds)
   std::cout << "Setting Period Time.." << std::endl;
   // this->SetPeriod(0.01);
