@@ -2,7 +2,7 @@
 
 Leg::Leg() : Subsystem("Leg Subsystem") {
    // Initialize the motors
-  this->pLegMotor = new can::WPI_VictorSPX(CLIMB_LEG_MOTOR);
+  this->pLegMotor = new can::WPI_TalonSRX(CLIMB_LEG_MOTOR);
   
   this->pLegMotor->SetNeutralMode(NeutralMode::Brake);
 
