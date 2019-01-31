@@ -111,7 +111,7 @@ void PFLJustDriveForward::control()
 
 		/* Get the motion profile status every loop */
 		_talonLeft.GetMotionProfileStatus(_status);
-		_heading = _talonLeft.GetActiveTrajectoryHeading();
+		_heading = _talonLeft.GetActiveTrajectoryPosition(1);
 		_pos = _talonLeft.GetActiveTrajectoryPosition();
 		_vel = _talonLeft.GetActiveTrajectoryVelocity();
 
