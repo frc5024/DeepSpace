@@ -9,7 +9,6 @@
 #include <networktables/NetworkTable.h>
 #include "Utils/AutoTurn.h"
 
-
 class TriggerDrive : public frc::Command {
  public:
   TriggerDrive();             //!< Class constructor
@@ -30,14 +29,10 @@ class TriggerDrive : public frc::Command {
 private:
 	int directionMultiplier; //!< Can be 1 or -1. Determines the direction the the robot moves in
 	double speedMultiplier;  //!< The speed of the robot is multiplied by this number. Used for slowmode
-	
 	double speed;    //!< Speed value that will be passed into DriveTrain::ArcadeDrive
 	double rotation; //!< Rotation value that will be passed into DriveTrain::ArcadeDrive
-	
 	frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller because we are lazy
-	
   std::shared_ptr<NetworkTable> table; //!< A pointer to the /SmartDashboard/Vision table
-
 };
 
 #endif // _TRIGGERDRIVE_HG_

@@ -9,7 +9,7 @@
 #include <cscore_oo.h>
 
 #include "Commands/TriggerDrive.h"
-//#include "Commands/TurnFromAngle.h"
+#include "Commands/ControlSlider.h"
 #include "Commands/TurnAngle.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"

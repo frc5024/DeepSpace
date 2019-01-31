@@ -37,10 +37,10 @@
 #define XBOX_CONTROLLER_OPERATOR_PORT 1
 
 // PID values
-#define PID_TWEAK_P		0.35	///< Tweaked multiplier for the Proportional value (degrees -> motor output)
-#define PID_TWEAK_I		0.20	///< Tweaked mulitplier for the Integral value (degrees -> motor output)
+#define PID_TWEAK_P		0.035	///< Tweaked multiplier for the Proportional value (degrees -> motor output)
+#define PID_TWEAK_I		0.020	///< Tweaked mulitplier for the Integral value (degrees -> motor output)
 // #define PID_TWEAK_D	6.66	///< <NOT IN USE> Tweaked multiplier for the Derivative value (degrees -> motor output)
-#define PID_BUFFER		2		///< Plus or minus buffer range for target
+#define PID_BUFFER		3		///< Plus or minus buffer range for target
 
 // Handy macros to save Python programmers from going crazy
 #define False false

@@ -27,9 +27,15 @@ void Robot::RobotInit() {
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
-  // Set robot loop speed (in seconds)
-  std::cout << "Setting Period Time.." << std::endl;
-  // this->SetPeriod(0.01);
+  this->pControlSlider = new ControlSlider();
+
+  // Create Telemetry table
+  std::cout << "Connecting to telemetry table.." << std::endl;
+  this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry");
+
+  // create ds and pdp objects
+  std::cout << "Creating Driverstation and PDP objects" << std::endl;
+  this->pdp = new frc::PowerDistributionPanel(10);
 }
 
 /**
