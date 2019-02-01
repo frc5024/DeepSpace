@@ -1,7 +1,7 @@
 #include "Subsystems/Piston.h"
 
 Piston::Piston() : frc::Subsystem("Piston") {
-  this->pSolenoid = new frc::DoubleSolenoid(PCM_CAN_ID, PISTON_FORWARD_ID, PISTON_BACKWARD_ID);
+  this->pSolenoid = new frc::Solenoid(PCM_CAN_ID, PISTON_ID);
 }
 
 void Piston::InitDefaultCommand() {
@@ -9,13 +9,9 @@ void Piston::InitDefaultCommand() {
 }
 
 void Piston::Deploy() {
-	this->pSolenoid->Set(frc::DoubleSolenoid::Value::kForward);
+	this->pSolenoid->Set(true);
 }
 
 void Piston::Retract() {
-	this->pSolenoid->Set(frc::DoubleSolenoid::Value::kReverse);
-}
-
-void Piston::Release() {
-	this->pSolenoid->Set(frc::DoubleSolenoid::Value::kOff);
+	this->pSolenoid->Set(false);
 }

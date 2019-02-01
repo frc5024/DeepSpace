@@ -34,8 +34,7 @@
 // Piston
 #define PCM_CAN_ID 8
 
-#define PISTON_FORWARD_ID  2
-#define PISTON_BACKWARD_ID 1
+#define PISTON_ID 1
 
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95

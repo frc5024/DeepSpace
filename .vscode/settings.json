@@ -14,6 +14,7 @@
   "C_Cpp.default.configurationProvider": "vscode-wpilib",
   "wpilib.online": true,
   "files.associations": {
-    "*.inc": "cpp"
+    "*.inc": "cpp",
+    "cstdint": "cpp"
   }
 }

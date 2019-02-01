@@ -4,7 +4,7 @@
 #include <frc/commands/Subsystem.h>
 #include "RobotMap.h"
 #include <Commands/ControlSlider.h>
-#include <frc/DoubleSolenoid.h>
+#include <frc/Solenoid.h>
 
 class Piston : public frc::Subsystem {
  public:
@@ -13,10 +13,9 @@ class Piston : public frc::Subsystem {
 	
   void Deploy();  //!< Deploy the piston
   void Retract(); //!< Retract the piston
-  void Release(); //!< Releases control of the piston to slide freely
 
  private:
-  frc::DoubleSolenoid* pSolenoid; //!< Pointer to Solenoid
+  frc::Solenoid* pSolenoid; //!< Pointer to Solenoid
 };
 
 #endif //_PISTON_HG_
