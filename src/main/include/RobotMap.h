@@ -10,6 +10,9 @@
 
 // Whenever possible, Macros and definitions are used in order to preserve memory
 
+// Robot configurations
+#define ROBOT_CYCLE_TIME    0.02 ///< Milliseconds delay between each periodic call
+
 // Camera mappings
 #define CAMERASERVER_DRIVER_CAMERA 1
 #define CAMERASERVER_VISION_CAMERA 0
@@ -37,6 +40,12 @@
 // Xbox controllers
 #define XBOX_CONTROLLER_DRIVE_PORT    0
 #define XBOX_CONTROLLER_OPERATOR_PORT 1
+
+// AutoTurn PID values
+#define PID_TWEAK_P     0.030   ///< Multiplier used to bring the proportional value to a motor output
+#define PID_TWEAK_I     0.025   ///< Multiplier used to bring the integral value to a motor output 
+#define PID_TWEAK_D     0.001   ///< Multiplier used to bring the derivative value to a motor output
+#define PID_BUFFER      2       ///< Degrees plus-or-minus range from target robot can be off of and still stop
 
 // Handy macros to save Python programmers from going crazy
 #define False false

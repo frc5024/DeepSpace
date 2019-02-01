@@ -15,5 +15,6 @@
   "wpilib.online": true,
   "files.associations": {
     "*.inc": "cpp"
-  }
+  },
+  "C_Cpp.configurationWarnings": "Disabled"
 }
