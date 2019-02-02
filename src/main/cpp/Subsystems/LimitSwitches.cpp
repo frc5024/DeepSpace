@@ -4,8 +4,8 @@
 
 LimitSwitches::LimitSwitches() : Subsystem("LimitSwitches") {
   // Initalize the limit switches used on the robot:
-  this->limitSwitch1 = new frc::DigitalInput(0);
-  this->limitSwitch2 = new frc::DigitalInput(2);
+  this->limitSwitch1 = new frc::DigitalInput(LIMITSWITCH_ONE_PORT);
+  this->limitSwitch2 = new frc::DigitalInput(LIMITSWITCH_TWO_PORT);
 }
 
 void LimitSwitches::InitDefaultCommand() {
@@ -21,5 +21,5 @@ int LimitSwitches::ChannelNumber() {
 }
 
 bool LimitSwitches::isOn2() {
-    return this->limitSwitch2->Get();;
+    return this->limitSwitch2->Get();
 }

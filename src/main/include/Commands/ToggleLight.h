@@ -1,9 +1,4 @@
-/*----------------------------------------------------------------------------*/
-/* Copyright (c) 2017-2018 FIRST. All Rights Reserved.                        */
-/* Open Source Software - may be modified and shared by FRC teams. The code   */
-/* must be accompanied by the FIRST BSD license file in the root directory of */
-/* the project.                                                               */
-/*----------------------------------------------------------------------------*/
+//! An interface command for turning the green light on the robot on or off with the B button
 
 #ifndef _TOGGLELIGHT_HG_
 #define _TOGGLELIGHT_HG_
@@ -24,9 +19,7 @@ class ToggleLight : public frc::Command {
 
  private:
  	frc::XboxController* pJoyDrive;
-
   frc::Relay *lightRelay = new frc::Relay(1);
-  
   bool relayState = false;
 };
 

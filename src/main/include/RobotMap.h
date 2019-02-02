@@ -14,10 +14,6 @@
 #define CAMERASERVER_FRONT_CAMERA 1
 #define CAMERASERVER_BACK_CAMERA  0
 
-// Ultrasonic sensor
-#define PING_CHANNEL 0
-#define ECHO_CHANNEL 0
-
 // DriveTrain motors
 #define DRIVETRAIN_LEFT_FRONT_MOTOR  1
 #define DRIVETRAIN_LEFT_REAR_MOTOR   2
@@ -32,6 +28,13 @@
 
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
+
+// Limit switches
+#define LIMITSWITCH_ONE_PORT 2
+#define LIMITSWITCH_TWO_PORT 3
+
+// Ultrasonic sensor
+#define ULTRASONIC_PORT 1
 
 // Xbox controllers
 #define XBOX_CONTROLLER_DRIVE_PORT    0

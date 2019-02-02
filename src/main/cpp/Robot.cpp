@@ -8,6 +8,8 @@
 DriveTrain *Robot::m_DriveTrain;
 OI *Robot::m_oi;
 LimitSwitches *Robot::liSwitches;
+HallEffect * Robot::hEffect;
+
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -20,6 +22,7 @@ void Robot::RobotInit() {
   this->m_DriveTrain = new DriveTrain();
   this->m_oi = new OI();
   this->liSwitches = new LimitSwitches();
+  this->hEffect = new HallEffect();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
@@ -36,7 +39,7 @@ void Robot::RobotInit() {
   std::cout << "Setting Period Time.." << std::endl;
   // this->SetPeriod(0.01);
 
-    if (this->tCommand != nullptr) {
+  if (this->tCommand != nullptr) {
 		this->tCommand->Start();
 	}
 }

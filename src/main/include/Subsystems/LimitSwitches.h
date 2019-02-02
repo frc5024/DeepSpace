@@ -1,4 +1,5 @@
-//#pragma once
+// Limit switches will NOT be used on the robot. Delete this subsystem later...
+
 #ifndef _LIMITSWITCHES_HG_
 #define _LIMITSWITCHES_HG_
 

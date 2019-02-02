@@ -13,7 +13,8 @@
 #include "Commands/ToggleLight.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
-#include "Subsystems/UltrasonicTest.h"
+#include "Subsystems/HallEffect.h"
+#include "Subsystems/UltrasonicDistance.h"
 #include "Subsystems/LimitSwitches.h"
 
 class Robot : public frc::TimedRobot {
@@ -22,7 +23,10 @@ class Robot : public frc::TimedRobot {
   static DriveTrain *m_DriveTrain;  //!< Pointer for the DriveTrain
   static OI *m_oi;                  //!< Pointer for the Operator Interface (OI)
   static LimitSwitches *liSwitches; //!< Pointer for the Limit Switches
+  static HallEffect *hEffect;
 	
+  // note: don't know if I am supposed to put m_ for other subsystem variable names. ask later...
+
   // Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
   TestCommand* tCommand; // just a test for limit switch
