@@ -1,14 +1,17 @@
-#pragma once
+#ifndef _HALLEFFECTTEST_HG_
+#define _HALLEFFECTTEST_HG_
 
 #include <frc/commands/Command.h>
-#include <Subsystems/LimitSwitches.h>
+#include <Subsystems/HallEffect.h>
 
-class TestCommand : public frc::Command {
+class HallEffectTest : public frc::Command {
  public:
-  TestCommand();
+  HallEffectTest();
   void Initialize() override;
   void Execute() override;
   bool IsFinished() override;
   void End() override;
   void Interrupted() override;
 };
+
+#endif // _HALLEFFECTTEST_HG_

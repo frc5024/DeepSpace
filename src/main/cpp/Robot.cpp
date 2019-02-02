@@ -10,7 +10,6 @@ OI *Robot::m_oi;
 LimitSwitches *Robot::liSwitches;
 HallEffect * Robot::hEffect;
 
-
 void Robot::RobotInit() {
   // Print out a banner to the shell
   // Some backslashes are doubled in order for them to print properly

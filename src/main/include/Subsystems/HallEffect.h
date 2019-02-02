@@ -1,4 +1,3 @@
-//#pragma once
 #ifndef _HALLEFFECT_HG_
 #define _HALLEFFECT_HG_
 

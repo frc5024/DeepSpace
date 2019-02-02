@@ -5,8 +5,7 @@
 HallEffect::HallEffect() : Subsystem("HallEffect") {}
 
 void HallEffect::InitDefaultCommand() {
-  //Set the default command for a subsystem here.
-   SetDefaultCommand(new DriveWithJoystick()); // todo: change later
+   SetDefaultCommand(new HallEffectTest());
 }
 
 bool HallEffect::nearMagnet1() {

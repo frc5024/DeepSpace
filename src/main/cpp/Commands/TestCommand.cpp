@@ -1,3 +1,5 @@
+// Test command for limit switches. TOOD: Delete later since limit switches won't be used on the robot.
+
 #include "iostream"
 #include "Commands/TestCommand.h"
 #include "Robot.h"
@@ -18,7 +20,6 @@ void TestCommand::Execute() {
   // Test code for the limit switch #1:
   bool test2 = Robot::liSwitches->isOn2();
   std::cout << "The value of limit switch #2 is" << test2 << std::endl;
-
 }
 
 // Make this return true when this Command no longer needs to run execute()

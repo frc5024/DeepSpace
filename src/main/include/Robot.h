@@ -11,6 +11,7 @@
 #include "Commands/TriggerDrive.h"
 #include "Commands/TestCommand.h"
 #include "Commands/ToggleLight.h"
+#include "Commands/HallEffectTest.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/HallEffect.h"
