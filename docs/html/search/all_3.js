@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['devices_2emd',['devices.md',['../devices_8md.html',1,'']]],
   ['directionmultiplier',['directionMultiplier',['../classDriveWithJoystick.html#a87ceb621790dae15f245fa6b559202ee',1,'DriveWithJoystick::directionMultiplier()'],['../classTriggerDrive.html#abc836db7bd8464e344c3d318f9da3f9c',1,'TriggerDrive::directionMultiplier()']]],
   ['disabledinit',['DisabledInit',['../classRobot.html#a810e6143a208a6314491366e3c714357',1,'Robot']]],
   ['disabledperiodic',['DisabledPeriodic',['../classRobot.html#a8c7309f5f1cb242ea8c74f1abf03b540',1,'Robot']]],
@@ -21,5 +22,6 @@ var searchData=
   ['drivewithjoystick_2ecpp',['DriveWithJoystick.cpp',['../DriveWithJoystick_8cpp.html',1,'']]],
   ['drivewithjoystick_2eh',['DriveWithJoystick.h',['../DriveWithJoystick_8h.html',1,'']]],
   ['drivewithjoystick_5frotation_5flimiter',['DRIVEWITHJOYSTICK_ROTATION_LIMITER',['../RobotMap_8h.html#acf7d7096f3e7e2ad84975e03d61be9b6',1,'RobotMap.h']]],
-  ['deepspace_20_5b_21_5bcodefactor_5d_28https_3a_2f_2fwww_2ecodefactor_2eio_2frepository_2fgithub_2ffrc5024_2fdeepspace_2fbadge_29_5d_28https_3a_2f_2fwww_2ecodefactor_2eio_2frepository_2fgithub_2ffrc5024_2fdeepspace_29_20_5b_21_5bdoi_5d_28https_3a_2f_2fzenodo_2eorg_2fbadge_2f162623857_2esvg_29_5d_28https_3a_2f_2fzenodo_2eorg_2fbadge_2flatestdoi_2f162623857_29',['DeepSpace [![CodeFactor](https://www.codefactor.io/repository/github/frc5024/deepspace/badge)](https://www.codefactor.io/repository/github/frc5024/deepspace) [![DOI](https://zenodo.org/badge/162623857.svg)](https://zenodo.org/badge/latestdoi/162623857)',['../index.html',1,'']]]
+  ['deepspace_20_5b_21_5bcodefactor_5d_28https_3a_2f_2fwww_2ecodefactor_2eio_2frepository_2fgithub_2ffrc5024_2fdeepspace_2fbadge_29_5d_28https_3a_2f_2fwww_2ecodefactor_2eio_2frepository_2fgithub_2ffrc5024_2fdeepspace_29_20_5b_21_5bdoi_5d_28https_3a_2f_2fzenodo_2eorg_2fbadge_2f162623857_2esvg_29_5d_28https_3a_2f_2fzenodo_2eorg_2fbadge_2flatestdoi_2f162623857_29',['DeepSpace [![CodeFactor](https://www.codefactor.io/repository/github/frc5024/deepspace/badge)](https://www.codefactor.io/repository/github/frc5024/deepspace) [![DOI](https://zenodo.org/badge/162623857.svg)](https://zenodo.org/badge/latestdoi/162623857)',['../index.html',1,'']]],
+  ['devices',['Devices',['../md_docs_devices.html',1,'']]]
 ];
