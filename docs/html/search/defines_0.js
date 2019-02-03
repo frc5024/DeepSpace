@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['cameraserver_5fback_5fcamera',['CAMERASERVER_BACK_CAMERA',['../RobotMap_8h.html#ac3b2ddd06c2a3c6aff0795afd1ec1a14',1,'RobotMap.h']]],
-  ['cameraserver_5ffront_5fcamera',['CAMERASERVER_FRONT_CAMERA',['../RobotMap_8h.html#a5cb52092d1648ee424b1a6ad7d59b7e4',1,'RobotMap.h']]]
+  ['cameraserver_5fdriver_5fcamera',['CAMERASERVER_DRIVER_CAMERA',['../RobotMap_8h.html#ac23a6cdb4a4eac82f49aa3f45ce06168',1,'RobotMap.h']]],
+  ['cameraserver_5fvision_5fcamera',['CAMERASERVER_VISION_CAMERA',['../RobotMap_8h.html#a3e1f6ad3dc982521bec442024dcde5f8',1,'RobotMap.h']]]
 ];
