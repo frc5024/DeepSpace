@@ -4,8 +4,10 @@
 
 #include <frc/commands/Command.h>
 #include <frc/smartdashboard/SendableChooser.h>
+#include <networktables/NetworkTable.h>
 #include <frc/TimedRobot.h>
-#include <cameraserver/CameraServer.h>
+#include <frc/WPILib.h>
+#include <cscore_oo.h>
 
 #include "Commands/TriggerDrive.h"
 #include "Commands/testUltra.h"
@@ -17,6 +19,11 @@
 #include "Subsystems/CrawlDrive.h"
 #include "Subsystems/Arm.h"
 #include "Subsystems/Leg.h"
+#include "Commands/ControlSlider.h"
+#include "Subsystems/Slider.h"
+
+#include <frc/PowerDistributionPanel.h>
+#include <frc/DriverStation.h>
 
 
 class Robot : public frc::TimedRobot {
@@ -27,6 +34,7 @@ class Robot : public frc::TimedRobot {
   static Arm *m_Arm;               //!< Pointer for the Arm
   static Leg *m_Leg;               //!< Pointer for the Leg
   static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
+  static Slider *m_Slider;         //!< Pointer for the Slider
 
 	// Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
@@ -34,6 +42,8 @@ class Robot : public frc::TimedRobot {
   PullArm* pPullArm;
   PullLeg* pPullLeg;
   DeployClimb* pDeployClimb;
+  ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
+
 	// Robot methods
   void RobotInit() override;          //!< Runs once on robot boot
   void RobotPeriodic() override;      //!< Runs in a loop while the robot is turned on in any mode
@@ -46,10 +56,19 @@ class Robot : public frc::TimedRobot {
   void TestPeriodic() override;       //!< Runs in a loop during test mode
 
  private:
+  // Define cameras
+  cs::UsbCamera frontCam; //!< Variable for the front camera
+  cs::UsbCamera visionCam;  //!< Variable for the Vision camera
+
   // Have it null by default so that if testing teleop it
   // doesn't have undefined behavior and potentially crash.
   // MyAutoCommand m_myAuto;
   frc::SendableChooser<frc::Command*> m_chooser;
+
+  frc::DriverStation& driverStation = frc::DriverStation::GetInstance(); //!< DriverStation instance
+  frc::PowerDistributionPanel* pdp; //!< Power Distrobution Panel information
+
+  std::shared_ptr<NetworkTable> ntTelemetry; //!< A pointer to the /SmartDashboard/Telemetry table
 };
 
 #endif //_ROBOT_HG_

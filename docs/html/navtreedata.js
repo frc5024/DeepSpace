@@ -25,7 +25,8 @@ var NAVTREE =
 [
   [ "DeepSpace", "index.html", [
     [ "DeepSpace [![CodeFactor](https://www.codefactor.io/repository/github/frc5024/deepspace/badge)](https://www.codefactor.io/repository/github/frc5024/deepspace) [![DOI](https://zenodo.org/badge/162623857.svg)](https://zenodo.org/badge/latestdoi/162623857)", "index.html", null ],
-    [ "Driver", "md_docs_controller_layout.html", null ],
+    [ "Controller Layouts", "md_docs_controller_layout.html", null ],
+    [ "Devices", "md_docs_devices.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -56,7 +57,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"DriveTrain_8cpp.html"
+"ControlSlider_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

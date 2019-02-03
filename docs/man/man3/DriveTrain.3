@@ -1,4 +1,4 @@
-.TH "DriveTrain" 3 "Fri Jan 11 2019" "DeepSpace" \" -*- nroff -*-
+.TH "DriveTrain" 3 "Sun Feb 3 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -27,6 +27,9 @@ Inherits Subsystem\&.
 .br
 .ti -1c
 .RI "void \fBTankDrive\fP (double leftSpeed, double rightSpeed)"
+.br
+.ti -1c
+.RI "void \fBRadialDrive\fP (double magnitude, double radial)"
 .br
 .in -1c
 .SS "Private Attributes"
@@ -87,6 +90,19 @@ Definition at line 39 of file DriveTrain\&.cpp\&.
 Initalizes the default command for this subsystem (\fBDriveWithJoystick\fP) 
 .PP
 Definition at line 35 of file DriveTrain\&.cpp\&.
+.SS "void DriveTrain::RadialDrive (double magnitude, double radial)"
+Drive with circles
+.PP
+\fBParameters:\fP
+.RS 4
+\fImagnitude\fP Magnitude modifier for the radius output 
+.br
+\fIradial\fP Value that is computed into the outside motor's basic output 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file DriveTrain\&.cpp\&.
 .SS "void DriveTrain::TankDrive (double leftSpeed, double rightSpeed)"
 Passes data to wpilib's TankDrive
 .PP
@@ -107,31 +123,31 @@ Definition at line 44 of file DriveTrain\&.cpp\&.
 .PP
 Pointer for left front motor\&. 
 .PP
-Definition at line 34 of file DriveTrain\&.h\&.
+Definition at line 42 of file DriveTrain\&.h\&.
 .SS "can::WPI_TalonSRX* DriveTrain::pLeftRearMotor\fC [private]\fP"
 
 .PP
 Pointer for left rear motor\&. 
 .PP
-Definition at line 35 of file DriveTrain\&.h\&.
+Definition at line 43 of file DriveTrain\&.h\&.
 .SS "can::WPI_TalonSRX* DriveTrain::pRightFrontMotor\fC [private]\fP"
 
 .PP
 Pointer for right front motor\&. 
 .PP
-Definition at line 36 of file DriveTrain\&.h\&.
+Definition at line 44 of file DriveTrain\&.h\&.
 .SS "can::WPI_TalonSRX* DriveTrain::pRightRearMotor\fC [private]\fP"
 
 .PP
 Pointer for right rear motor\&. 
 .PP
-Definition at line 37 of file DriveTrain\&.h\&.
+Definition at line 45 of file DriveTrain\&.h\&.
 .SS "frc::DifferentialDrive* DriveTrain::pRobotDrive\fC [private]\fP"
 
 .PP
 Pointer for a differential drivebase made up of 2 motor pairs\&. 
 .PP
-Definition at line 39 of file DriveTrain\&.h\&.
+Definition at line 47 of file DriveTrain\&.h\&.
 
 .SH "Author"
 .PP 

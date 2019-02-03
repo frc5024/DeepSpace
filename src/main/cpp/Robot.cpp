@@ -3,6 +3,8 @@
 #include <frc/commands/Scheduler.h>
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <iostream>
+#include <string>
+#include <fstream>
 
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
@@ -10,6 +12,7 @@ CrawlDrive *Robot::m_CrawlDrive;
 Arm *Robot::m_Arm;
 Leg *Robot::m_Leg;
 OI *Robot::m_oi;
+Slider *Robot::m_Slider;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -19,15 +22,24 @@ void Robot::RobotInit() {
   std::cout << "Robot Starting.."<< std::endl;
 
   // Subsystems
+  std::cout << "Creating Subsystems..." << std::endl;
   this->m_DriveTrain = new DriveTrain();
   this->m_CrawlDrive = new CrawlDrive();
   this->m_Arm = new Arm();
   this->m_Leg = new Leg();
-  this->m_oi = new OI();
+  this->m_Slider     = new Slider();
+  this->m_oi         = new OI();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
-	// CameraServer::GetInstance()->StartAutomaticCapture();
+  this->frontCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Driver Camera", CAMERASERVER_DRIVER_CAMERA);
+  this->visionCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Vision",  CAMERASERVER_VISION_CAMERA);
+  
+  // Set vision cam settings
+  std::cout << "Setting camera config.." << std::endl;
+  std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
+  std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
+  this->visionCam.SetConfigJson(visionSettings);
 	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
@@ -36,11 +48,15 @@ void Robot::RobotInit() {
   this->pPullArm = new PullArm();
   this->pPullLeg = new PullLeg();
   this->pDeployClimb = new DeployClimb();
-  
+  this->pControlSlider = new ControlSlider();
 
-  // Set robot loop speed (in seconds)
-  std::cout << "Setting Period Time.." << std::endl;
-  // this->SetPeriod(0.01);
+  // Create Telemetry table
+  std::cout << "Connecting to telemetry table.." << std::endl;
+  this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry");
+
+  // create ds and pdp objects
+  std::cout << "Creating Driverstation and PDP objects" << std::endl;
+  this->pdp = new frc::PowerDistributionPanel(10);
 }
 
 /**
@@ -51,7 +67,19 @@ void Robot::RobotInit() {
  * <p> This runs after the mode specific periodic functions, but before
  * LiveWindow and SmartDashboard integrated updating.
  */
-void Robot::RobotPeriodic() {}
+void Robot::RobotPeriodic() {
+  // Send information about the robot over NetworkTables
+
+  double pdpTemperature = this->pdp->GetTemperature();
+  double robotVoltage   = this->pdp->GetVoltage();
+  bool   dsAttached     = this->driverStation.IsDSAttached();
+  bool   fmsAttached    = this->driverStation.IsFMSAttached();
+
+  this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
+  this->ntTelemetry->PutNumber("voltage",  robotVoltage);
+  this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
+  this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
+}
 
 /**
  * This function is called once each time the robot enters Disabled mode. You
@@ -112,6 +140,9 @@ void Robot::TeleopInit() {
 	}
   if (this->pPullLeg != nullptr) {
 		this->pPullLeg->Start();
+  }
+	if (this->pControlSlider != nullptr) {
+		this->pControlSlider->Start();
 	}
 }
 

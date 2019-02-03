@@ -17,14 +17,13 @@ void TriggerDrive::Initialize() {
   //set Speed and Rotation
   this->speed    = 0.0;
   this->rotation = 0.0;
-  
 }
 
 // Called repeatedly when this Command is scheduled to run
 void TriggerDrive::Execute() {
   // Deal with reversing and slow mode
-	this->directionMultiplier = (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
-  this->speedMultiplier     = (this->pJoyDrive->GetBumper(Hand::kRightHand)) ? 0.5 : 1;
+	this->directionMultiplier *= (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
+  this->speedMultiplier      = (this->pJoyDrive->GetBumper(Hand::kRightHand)) ? 0.6 : 1;
 
   // Get movement data form controller
   // Speed = Right trigger - left trigger

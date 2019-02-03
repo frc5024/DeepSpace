@@ -7,6 +7,7 @@
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
 
+
 class TriggerDrive : public frc::Command {
  public:
   TriggerDrive();             //!< Class constructor

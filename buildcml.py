@@ -11,7 +11,7 @@ outfile_md = "docs/" + infile.split(".")[0] + ".md"
 outfile_txt = infile.split(".")[0] + ".txt"
 
 # file buffers
-md_buffer = ""
+md_buffer = "# Controller Layouts\n"
 txt_buffer = ""
 
 with open(infile, "r") as f:
@@ -21,7 +21,7 @@ with open(infile, "r") as f:
 for controller in cml:
 	print(f"Parsing {controller} controller")
 	# add data to buffers
-	md_buffer += f"# {controller}\nType: {cml[controller]['Type']}\n\nPort: {cml[controller]['Port']}\n|  |  |\n| -- | -- |\n"
+	md_buffer += f"## {controller}\nType: {cml[controller]['Type']}\n\nPort: {cml[controller]['Port']}\n|  |  |\n| -- | -- |\n"
 	txt_buffer += f"-- {controller} --\nType: {cml[controller]['Type']}\nPort: {cml[controller]['Port']}\n"
 	
 	# parse through inputs
@@ -30,14 +30,14 @@ for controller in cml:
 			# Skip non iterable items
 			continue
 		# add data to buffers
-		md_buffer += f"| {input_type} |  |\n"
+		md_buffer += f"| {input_type} | -- |\n"
 		txt_buffer += f" {input_type}:\n"
 		
 		# parse items
 		for item in cml[controller][input_type]:
 			# deal with extra nesting
 			if type(cml[controller][input_type][item]) == type({}):
-				md_buffer += f"| {item} |  |\n"
+				md_buffer += f"| {item} | -- |\n"
 				txt_buffer += f"  {item}:\n"
 				for subitem in cml[controller][input_type][item]:
 					md_buffer += f"| {subitem} | {cml[controller][input_type][item][subitem]} |\n"

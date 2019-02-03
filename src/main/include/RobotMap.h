@@ -10,6 +10,10 @@
 
 // Whenever possible, Macros and definitions are used in order to preserve memory
 
+// Camera mappings
+#define CAMERASERVER_DRIVER_CAMERA 1
+#define CAMERASERVER_VISION_CAMERA 0
+
 // DriveTrain motors
 #define DRIVETRAIN_LEFT_FRONT_MOTOR  1
 #define DRIVETRAIN_LEFT_REAR_MOTOR   2
@@ -31,6 +35,10 @@
 
 //Climb Ultrasonic
 #define CLIMB_ULTRASONIC 1
+#define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF 0.8
+
+// Slider
+#define SLIDER_MOTOR 5
 
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95

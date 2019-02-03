@@ -16,7 +16,7 @@ Port: 0
   Left: 
   Right: 
  Button Pad:
-  A: 
+  A: Robot vision alignment (hold)
   B: 
   X: Flip forward and backward (toggle)
   Y: 
@@ -35,7 +35,7 @@ Type: Xbox Controller
 Port: 1
  Joysticks:
   Left:
-   X: 
+   X: Move slider
    Y: 
    Btn: 
   Right:

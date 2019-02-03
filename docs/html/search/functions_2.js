@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['end',['End',['../classDriveWithJoystick.html#a8cf3328b991790b93c6615116f7c0434',1,'DriveWithJoystick::End()'],['../classTriggerDrive.html#affac8f87144c911be3c3ed40ed828ba3',1,'TriggerDrive::End()']]],
-  ['execute',['Execute',['../classDriveWithJoystick.html#ae47c234f069c5f4d5004dba287f47e7b',1,'DriveWithJoystick::Execute()'],['../classTriggerDrive.html#a452d665729c476c5883d6a2bb80e67d0',1,'TriggerDrive::Execute()']]]
+  ['disabledinit',['DisabledInit',['../classRobot.html#a810e6143a208a6314491366e3c714357',1,'Robot']]],
+  ['disabledperiodic',['DisabledPeriodic',['../classRobot.html#a8c7309f5f1cb242ea8c74f1abf03b540',1,'Robot']]],
+  ['drivetrain',['DriveTrain',['../classDriveTrain.html#a90af56eee49c93d5b7d77065b42f660b',1,'DriveTrain']]],
+  ['drivewithjoystick',['DriveWithJoystick',['../classDriveWithJoystick.html#aec663d65d48661b956e8db0011092140',1,'DriveWithJoystick']]]
 ];

@@ -1,0 +1,70 @@
+.TH "TickTime" 3 "Fri Jan 11 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TickTime \- A simple timer that uses the robot period to track time\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TickTime\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTickTime\fP ()"
+.br
+.ti -1c
+.RI "void \fBReset\fP ()"
+.br
+.RI "Resets the ticker\&. "
+.ti -1c
+.RI "void \fBTick\fP ()"
+.br
+.RI "Ticks the timer\&. "
+.ti -1c
+.RI "double \fBGetSeconds\fP ()"
+.br
+.RI "returns the number of seconds since the first tick "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBtick_count\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A simple timer that uses the robot period to track time\&. 
+.PP
+Definition at line 5 of file TickTime\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TickTime::TickTime ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "double TickTime::GetSeconds ()"
+
+.PP
+returns the number of seconds since the first tick 
+.SS "void TickTime::Reset ()"
+
+.PP
+Resets the ticker\&. 
+.SS "void TickTime::Tick ()"
+
+.PP
+Ticks the timer\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "int TickTime::tick_count = 0\fC [private]\fP"
+
+.PP
+Definition at line 12 of file TickTime\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.
