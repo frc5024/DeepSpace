@@ -7,11 +7,12 @@
 
 class DeployArm : public frc::TimedCommand {
  public:
-  explicit DeployArm(double timeout);
+  explicit DeployArm(double timeout, double speed);
   void Initialize() override;
   void Execute() override;
   void End() override;
   void Interrupted() override;
+  double speed;
 };
 
 #endif // _DEPLOYARM_HG_

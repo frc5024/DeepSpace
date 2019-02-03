@@ -16,7 +16,7 @@ void PullLeg::Initialize() {
 
 //Called repeatedly when this Command is scheduled to run
 void PullLeg::Execute() {
-    this->speed = (this->speedMultiplier) * (this->pJoyDrive->GetTriggerAxis(Hand::kRightHand));
+    this->speed = (this->speedMultiplier) * (this->pJoyDrive->GetY(Hand::kRightHand));
 
     Robot::m_Leg->MoveLeg(this->speed);
 }

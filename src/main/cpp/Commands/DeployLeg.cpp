@@ -1,9 +1,10 @@
 #include "Commands/DeployLeg.h"
 #include "Robot.h"
 
-DeployLeg::DeployLeg(double timeout)
+DeployLeg::DeployLeg(double timeout, double speed)
     : TimedCommand(timeout) {
     Requires(Robot::m_Leg);
+    this->speed = speed;
 }
 
 // Called just before this Command runs the first time
@@ -11,7 +12,7 @@ void DeployLeg::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
 void DeployLeg::Execute() {
-    Robot::m_Leg->MoveLeg(0.2);
+    Robot::m_Leg->MoveLeg(this->speed);
 }
 
 // Called once after command times out

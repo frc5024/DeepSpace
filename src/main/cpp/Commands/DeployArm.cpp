@@ -1,9 +1,10 @@
 #include "Commands/DeployArm.h"
 #include "Robot.h"
 
-DeployArm::DeployArm(double timeout)
+DeployArm::DeployArm(double timeout, double speed)
     : TimedCommand(timeout) {
     Requires(Robot::m_Arm);
+    this->speed = speed;
 }
 
 // Called just before this Command runs the first time
@@ -11,7 +12,7 @@ void DeployArm::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
 void DeployArm::Execute() {
-    Robot::m_Arm->MoveArm(0.2);
+    Robot::m_Arm->MoveArm(this->speed);
 }
 
 // Called once after command times out

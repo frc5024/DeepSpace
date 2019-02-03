@@ -7,7 +7,7 @@ DeployClimb::DeployClimb() {
   // e.g. AddSequential(new Command1());
   //      AddSequential(new Command2());
   // these will run in order.
-  AddSequential(new DeployArm(2));
-  AddParallel(new DeployLeg(4));
-  AddSequential(new DeployArm(4));
+  AddSequential(new DeployArm(2, 0.2));
+  AddParallel(new DeployLeg(4, 0.8));
+  AddSequential(new DeployArm(4, 0.1));
 }
