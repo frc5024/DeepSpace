@@ -21,6 +21,7 @@
 #include "Subsystems/Leg.h"
 #include "Commands/ControlSlider.h"
 #include "Subsystems/Slider.h"
+#include "Subsystems/Piston.h"
 
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
@@ -30,6 +31,7 @@ class Robot : public frc::TimedRobot {
  public:
 	// Subsystems
   static DriveTrain *m_DriveTrain; //!< Pointer for the DriveTrain
+  static Piston *m_Piston;         //!< Pointer for the Piston
   static CrawlDrive *m_CrawlDrive; //!< Pointer for the DriveTrain
   static Arm *m_Arm;               //!< Pointer for the Arm
   static Leg *m_Leg;               //!< Pointer for the Leg

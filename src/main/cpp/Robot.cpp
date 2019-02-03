@@ -13,6 +13,7 @@ Arm *Robot::m_Arm;
 Leg *Robot::m_Leg;
 OI *Robot::m_oi;
 Slider *Robot::m_Slider;
+Piston *Robot::m_Piston;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -28,6 +29,7 @@ void Robot::RobotInit() {
   this->m_Arm = new Arm();
   this->m_Leg = new Leg();
   this->m_Slider     = new Slider();
+  this->m_Piston     = new Piston();
   this->m_oi         = new OI();
 
   // Init camera
