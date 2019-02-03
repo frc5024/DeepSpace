@@ -7,9 +7,9 @@
 | Drivetrain right front motor | Motor | DriveTrain |  Driving, Climb | Done | 0 |
 | Drivetrain right rear motor | Motor | DriveTrain |  Driving, Climb | Done | 0 |
 | Slider motor | Motor | Slider | Moving slider | Done | 0 |
-| Arm motors | Motors | Climb | Lifts front half of robot | 9 |
-| Leg motor | motor | Climb | Lifts back of robot, and controls cargo | 10 |
-| Hatch piston | Solenoid | Piston | Shoots hatch onto port | 10 |
+| Arm motors | Motors | Climb | Lifts front half of robot | Waiting testing | 9 |
+| Leg motor | motor | Climb | Lifts back of robot, and controls cargo | Waiting testing | 10 |
+| Hatch piston | Solenoid | Piston | Shoots hatch onto port | Waiting testing | 10 |
 | Drivetrain left front encoder | Encoder | DriveTrain | Not Used | N/A | 1 |
 | Drivetrain right front encoder | Encoder | DriveTrain | Not Used | N/A | 1 |
 | Slider encoder | Encoder | Slider | Not Used | N/A | 1 |
