@@ -40,6 +40,8 @@
 // Slider
 #define SLIDER_MOTOR 5
 
+// Compressor
+#define COMPRESSOR_PIN 0
 // Piston
 #define PCM_CAN_ID 8
 

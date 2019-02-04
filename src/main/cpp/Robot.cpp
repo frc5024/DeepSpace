@@ -8,6 +8,7 @@
 
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
+Compressor *Robot::m_Compressor;
 CrawlDrive *Robot::m_CrawlDrive;
 Arm *Robot::m_Arm;
 Leg *Robot::m_Leg;
@@ -145,6 +146,9 @@ void Robot::TeleopInit() {
   }
 	if (this->pControlSlider != nullptr) {
 		this->pControlSlider->Start();
+	}
+  if (this->pControlCompressor != nullptr) {
+		this->pControlCompressor->Start();
 	}
 }
 
