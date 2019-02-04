@@ -1,0 +1,102 @@
+.TH "CrawlDrive" 3 "Mon Feb 4 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CrawlDrive \- A subsytem that interfaces with the climberbase on the robot\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CrawlDrive\&.h>\fP
+.PP
+Inherits Subsystem\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCrawlDrive\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitDefaultCommand\fP () override"
+.br
+.RI "Initalizes the default command for this subsystem () "
+.ti -1c
+.RI "void \fBArcadeDrive\fP (double xSpeed, double zRotation)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "can::WPI_TalonSRX * \fBpCrawlLeft\fP"
+.br
+.RI "Pointer for the left crawl motor\&. "
+.ti -1c
+.RI "can::WPI_TalonSRX * \fBpCrawlRight\fP"
+.br
+.RI "Pointer for the right craw motor\&. "
+.ti -1c
+.RI "frc::DifferentialDrive * \fBpCrawlDriveTrain\fP"
+.br
+.RI "Pointer for a differential drivebase made up of 2 motors\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A subsytem that interfaces with the climberbase on the robot\&. 
+.PP
+Definition at line 11 of file CrawlDrive\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CrawlDrive::CrawlDrive ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 3 of file CrawlDrive\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void CrawlDrive::ArcadeDrive (double xSpeed, double zRotation)"
+Pass data to wpilib's ArcadeDrive
+.PP
+\fBParameters:\fP
+.RS 4
+\fIxSpeed\fP Forward speed (form -1 to 1) 
+.br
+\fIzRotation\fP Rotation (from -1 to 1) 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file CrawlDrive\&.cpp\&.
+.SS "void CrawlDrive::InitDefaultCommand ()\fC [override]\fP"
+
+.PP
+Initalizes the default command for this subsystem () 
+.PP
+Definition at line 23 of file CrawlDrive\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "frc::DifferentialDrive* CrawlDrive::pCrawlDriveTrain\fC [private]\fP"
+
+.PP
+Pointer for a differential drivebase made up of 2 motors\&. 
+.PP
+Definition at line 28 of file CrawlDrive\&.h\&.
+.SS "can::WPI_TalonSRX* CrawlDrive::pCrawlLeft\fC [private]\fP"
+
+.PP
+Pointer for the left crawl motor\&. 
+.PP
+Definition at line 25 of file CrawlDrive\&.h\&.
+.SS "can::WPI_TalonSRX* CrawlDrive::pCrawlRight\fC [private]\fP"
+
+.PP
+Pointer for the right craw motor\&. 
+.PP
+Definition at line 26 of file CrawlDrive\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

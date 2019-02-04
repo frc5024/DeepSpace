@@ -35,8 +35,8 @@
 			"Right":"Slow mode (hold)"
 		},
 		"Other":{
-			"Start":"",
-			"Select":"",
+			"Start":"Enable Compressor",
+			"Select":"Disable Compressor",
 			"Home":""
 		}
 	},
@@ -52,7 +52,7 @@
 			},
 			"Right":{
 				"X":"",
-				"Y":"",
+				"Y":"Move legs",
 				"Btn":""
 			}
 		},
@@ -69,16 +69,16 @@
 			"Y":""
 		},
 		"Triggers":{
-			"Left":"",
-			"Right":""
+			"Left":"Deploy arms",
+			"Right":"Shoot hatch (85% pull)"
 		},
 		"Bumpers":{
 			"Left":"",
 			"Right":""
 		},
 		"Other":{
-			"Start":"",
-			"Select":"",
+			"Start":"Enable Compressor",
+			"Select":"Disable Compressor",
 			"Home":""
 		}
 	}

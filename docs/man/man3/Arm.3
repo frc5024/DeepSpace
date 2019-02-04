@@ -1,0 +1,102 @@
+.TH "Arm" 3 "Mon Feb 4 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Arm \- A subsystem that controls the \fBArm\fP of the robot\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Arm\&.h>\fP
+.PP
+Inherits Subsystem\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBArm\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitDefaultCommand\fP () override"
+.br
+.RI "Initalizes the default command for this subsystem (\fBArm\fP) "
+.ti -1c
+.RI "void \fBMoveArm\fP (double Speed)"
+.br
+.ti -1c
+.RI "double \fBgetDistanceFromFloor\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "frc::Spark * \fBpArmMotor\fP"
+.br
+.RI "Pointer for \fBArm\fP arm motor\&. "
+.ti -1c
+.RI "frc::AnalogInput \fBm_ultrasonic\fP {\fBCLIMB_ULTRASONIC\fP}"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr double \fBkValueToInches\fP = 0\&.125"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A subsystem that controls the \fBArm\fP of the robot\&. 
+.PP
+Definition at line 13 of file Arm\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Arm::Arm ()"
+
+.PP
+Definition at line 3 of file Arm\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double Arm::getDistanceFromFloor ()"
+returns distance from floor 
+.PP
+Definition at line 20 of file Arm\&.cpp\&.
+.SS "void Arm::InitDefaultCommand ()\fC [override]\fP"
+
+.PP
+Initalizes the default command for this subsystem (\fBArm\fP) 
+.PP
+Definition at line 11 of file Arm\&.cpp\&.
+.SS "void Arm::MoveArm (double Speed)"
+Move \fBArm\fP arm up or down
+.PP
+\fBParameters:\fP
+.RS 4
+\fISpeed\fP speed (from -1 to 1) 
+.RE
+.PP
+
+.PP
+Definition at line 16 of file Arm\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "constexpr double Arm::kValueToInches = 0\&.125\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 36 of file Arm\&.h\&.
+.SS "frc::AnalogInput Arm::m_ultrasonic {\fBCLIMB_ULTRASONIC\fP}\fC [private]\fP"
+
+.PP
+Definition at line 35 of file Arm\&.h\&.
+.SS "frc::Spark* Arm::pArmMotor\fC [private]\fP"
+
+.PP
+Pointer for \fBArm\fP arm motor\&. 
+.PP
+Definition at line 34 of file Arm\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

@@ -26,10 +26,28 @@
 #define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT true
 #define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT  true
 
+//Climb Motors
+#define CLIMB_ARM_MOTOR 5
+
+#define CLIMB_ARM_MOTOR_2 6
+#define CLIMB_LEG_MOTOR 8
+ 
+#define CRAWL_LEFT_MOTOR 20
+#define CRAWL_RIGHT_MOTOR 21
+
+//Climb Ultrasonic
+#define CLIMB_ULTRASONIC 1
 #define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF 0.8
 
 // Slider
-#define SLIDER_MOTOR 5
+#define SLIDER_MOTOR 7
+
+// Compressor
+#define COMPRESSOR_PIN 0
+// Piston
+#define PCM_CAN_ID 11
+
+#define PISTON_ID 1
 
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95

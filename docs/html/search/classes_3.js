@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['robot',['Robot',['../classRobot.html',1,'']]]
+  ['leg',['Leg',['../classLeg.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
-.TH "src/main/include/RobotMap.h" 3 "Sun Feb 3 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "src/main/include/RobotMap.h" 3 "Mon Feb 4 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -40,10 +40,34 @@ src/main/include/RobotMap.h
 .RI "#define \fBDRIVETRAIN_RIGHT_REAR_MOTOR_INVERT\fP   true"
 .br
 .ti -1c
+.RI "#define \fBCLIMB_ARM_MOTOR\fP   2"
+.br
+.ti -1c
+.RI "#define \fBCLIMB_LEG_MOTOR\fP   4"
+.br
+.ti -1c
+.RI "#define \fBCRAWL_LEFT_MOTOR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBCRAWL_RIGHT_MOTOR\fP   3"
+.br
+.ti -1c
+.RI "#define \fBCLIMB_ULTRASONIC\fP   1"
+.br
+.ti -1c
 .RI "#define \fBDRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF\fP   0\&.8"
 .br
 .ti -1c
 .RI "#define \fBSLIDER_MOTOR\fP   5"
+.br
+.ti -1c
+.RI "#define \fBCOMPRESSOR_PIN\fP   0"
+.br
+.ti -1c
+.RI "#define \fBPCM_CAN_ID\fP   8"
+.br
+.ti -1c
+.RI "#define \fBPISTON_ID\fP   1"
 .br
 .ti -1c
 .RI "#define \fBDRIVEWITHJOYSTICK_ROTATION_LIMITER\fP   0\&.95"
@@ -80,6 +104,30 @@ Definition at line 14 of file RobotMap\&.h\&.
 
 .PP
 Definition at line 15 of file RobotMap\&.h\&.
+.SS "#define CLIMB_ARM_MOTOR   2"
+
+.PP
+Definition at line 30 of file RobotMap\&.h\&.
+.SS "#define CLIMB_LEG_MOTOR   4"
+
+.PP
+Definition at line 31 of file RobotMap\&.h\&.
+.SS "#define CLIMB_ULTRASONIC   1"
+
+.PP
+Definition at line 37 of file RobotMap\&.h\&.
+.SS "#define COMPRESSOR_PIN   0"
+
+.PP
+Definition at line 44 of file RobotMap\&.h\&.
+.SS "#define CRAWL_LEFT_MOTOR   1"
+
+.PP
+Definition at line 33 of file RobotMap\&.h\&.
+.SS "#define CRAWL_RIGHT_MOTOR   3"
+
+.PP
+Definition at line 34 of file RobotMap\&.h\&.
 .SS "#define DRIVETRAIN_LEFT_FRONT_MOTOR   1"
 
 .PP
@@ -99,7 +147,7 @@ Definition at line 25 of file RobotMap\&.h\&.
 .SS "#define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF   0\&.8"
 
 .PP
-Definition at line 29 of file RobotMap\&.h\&.
+Definition at line 38 of file RobotMap\&.h\&.
 .SS "#define DRIVETRAIN_RIGHT_FRONT_MOTOR   3"
 
 .PP
@@ -119,39 +167,47 @@ Definition at line 27 of file RobotMap\&.h\&.
 .SS "#define DRIVEWITHJOYSTICK_ROTATION_LIMITER   0\&.95"
 
 .PP
-Definition at line 35 of file RobotMap\&.h\&.
+Definition at line 51 of file RobotMap\&.h\&.
 .SS "#define elif   else if"
 
 .PP
-Definition at line 44 of file RobotMap\&.h\&.
+Definition at line 60 of file RobotMap\&.h\&.
 .SS "#define False   false"
 
 .PP
-Definition at line 42 of file RobotMap\&.h\&.
+Definition at line 58 of file RobotMap\&.h\&.
 .SS "#define Hand   frc::GenericHID::JoystickHand"
 
 .PP
-Definition at line 47 of file RobotMap\&.h\&.
+Definition at line 63 of file RobotMap\&.h\&.
+.SS "#define PCM_CAN_ID   8"
+
+.PP
+Definition at line 46 of file RobotMap\&.h\&.
+.SS "#define PISTON_ID   1"
+
+.PP
+Definition at line 48 of file RobotMap\&.h\&.
 .SS "#define SLIDER_MOTOR   5"
 
 .PP
-Definition at line 32 of file RobotMap\&.h\&.
+Definition at line 41 of file RobotMap\&.h\&.
 .SS "#define True   true"
 
 .PP
-Definition at line 43 of file RobotMap\&.h\&.
+Definition at line 59 of file RobotMap\&.h\&.
 .SS "#define WinGame(_class_)   frc::StartRobot<_class_>()"
 
 .PP
-Definition at line 50 of file RobotMap\&.h\&.
+Definition at line 66 of file RobotMap\&.h\&.
 .SS "#define XBOX_CONTROLLER_DRIVE_PORT   0"
 
 .PP
-Definition at line 38 of file RobotMap\&.h\&.
+Definition at line 54 of file RobotMap\&.h\&.
 .SS "#define XBOX_CONTROLLER_OPERATOR_PORT   1"
 
 .PP
-Definition at line 39 of file RobotMap\&.h\&.
+Definition at line 55 of file RobotMap\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DeepSpace from the source code\&.

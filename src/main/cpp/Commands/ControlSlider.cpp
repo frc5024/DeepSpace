@@ -4,6 +4,7 @@
 ControlSlider::ControlSlider() {
   // Use Requires() here to declare subsystem dependencies
   Requires(Robot::m_Slider);
+  Requires(Robot::m_Piston);
   this->pJoyOp = Robot::m_oi->GetJoystickOperator();
 }
 
@@ -15,12 +16,19 @@ void ControlSlider::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ControlSlider::Execute() {
+  // Slide slider
 	this->speed = this->pJoyOp->GetX(Hand::kLeftHand);
-	
   Robot::m_Slider->Slide(this->speed);
+
+  // Control piston
+  if(this->pJoyOp->GetTriggerAxis(Hand::kRightHand) > 85.00){
+    Robot::m_Piston->Deploy();
+  }else{
+    Robot::m_Piston->Retract();
+  }
   
   // Reset the speed
-  this->speed    = 0.00;
+  this->speed = 0.00;
 }
 
 

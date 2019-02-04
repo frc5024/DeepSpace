@@ -57,7 +57,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"ControlSlider_8cpp.html"
+"Arm_8cpp.html",
+"classRobot.html#ab1877ba35293a8925ef347e5f64ceef3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
