@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['slider',['Slider',['../classSlider.html',1,'']]]
+  ['oi',['OI',['../classOI.html',1,'']]]
 ];

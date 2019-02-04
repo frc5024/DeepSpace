@@ -1,0 +1,71 @@
+.TH "Leg" 3 "Mon Feb 4 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Leg
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Leg\&.h>\fP
+.PP
+Inherits Subsystem\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLeg\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitDefaultCommand\fP () override"
+.br
+.ti -1c
+.RI "void \fBMoveLeg\fP (double Speed)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "can::WPI_TalonSRX * \fBpLegMotor\fP"
+.br
+.RI "Pointer for climb leg motor\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 9 of file Leg\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Leg::Leg ()"
+
+.PP
+Definition at line 3 of file Leg\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Leg::InitDefaultCommand ()\fC [override]\fP"
+
+.PP
+Definition at line 12 of file Leg\&.cpp\&.
+.SS "void Leg::MoveLeg (double Speed)"
+Move climb leg up or down
+.PP
+\fBParameters:\fP
+.RS 4
+\fISpeed\fP speed (from -1 to 1) 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file Leg\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "can::WPI_TalonSRX* Leg::pLegMotor\fC [private]\fP"
+
+.PP
+Pointer for climb leg motor\&. 
+.PP
+Definition at line 24 of file Leg\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

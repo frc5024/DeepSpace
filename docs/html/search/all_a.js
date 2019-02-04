@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['nttelemetry',['ntTelemetry',['../classRobot.html#a319fd97d8e8e484f6aedf7a4a265b47d',1,'Robot']]]
+  ['leg',['Leg',['../classLeg.html',1,'Leg'],['../classLeg.html#ac93ab869ff3014ae19ced4e0e6da36ce',1,'Leg::Leg()']]],
+  ['leg_2ecpp',['Leg.cpp',['../Leg_8cpp.html',1,'']]],
+  ['leg_2eh',['Leg.h',['../Leg_8h.html',1,'']]]
 ];
