@@ -26,7 +26,7 @@
 #define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT true
 #define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT  true
 
-//Climb Motors 
+//Climb Motors
 #define CLIMB_ARM_MOTOR 2
 #define CLIMB_LEG_MOTOR 4
  
@@ -43,7 +43,7 @@
 // Compressor
 #define COMPRESSOR_PIN 0
 // Piston
-#define PCM_CAN_ID 8
+#define PCM_CAN_ID 11
 
 #define PISTON_ID 1
 
