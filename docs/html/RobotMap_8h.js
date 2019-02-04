@@ -1,7 +1,7 @@
 var RobotMap_8h =
 [
-    [ "CAMERASERVER_BACK_CAMERA", "RobotMap_8h.html#ac3b2ddd06c2a3c6aff0795afd1ec1a14", null ],
-    [ "CAMERASERVER_FRONT_CAMERA", "RobotMap_8h.html#a5cb52092d1648ee424b1a6ad7d59b7e4", null ],
+    [ "CAMERASERVER_DRIVER_CAMERA", "RobotMap_8h.html#ac23a6cdb4a4eac82f49aa3f45ce06168", null ],
+    [ "CAMERASERVER_VISION_CAMERA", "RobotMap_8h.html#a3e1f6ad3dc982521bec442024dcde5f8", null ],
     [ "DRIVETRAIN_LEFT_FRONT_MOTOR", "RobotMap_8h.html#a93ee73d141525c1decc8dd63f205cbe4", null ],
     [ "DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT", "RobotMap_8h.html#ab53fe26a24673fbfd067b86d7c63fd5a", null ],
     [ "DRIVETRAIN_LEFT_REAR_MOTOR", "RobotMap_8h.html#a743c19e1786a80e59de71c354cbecd91", null ],

@@ -10,12 +10,20 @@
 #include <cscore_oo.h>
 
 #include "Commands/TriggerDrive.h"
-#include "Commands/ControlSlider.h"
 #include "Commands/ControlCompressor.h"
+#include "Commands/testUltra.h"
+#include "Commands/PullArm.h"
+#include "Commands/PullLeg.h"
+#include "Commands/DeployClimb.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
+#include "Subsystems/CrawlDrive.h"
+#include "Subsystems/Arm.h"
+#include "Subsystems/Leg.h"
+#include "Commands/ControlSlider.h"
 #include "Subsystems/Slider.h"
 #include "Subsystems/Compressor.h"
+#include "Subsystems/Piston.h"
 
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
@@ -24,14 +32,22 @@
 class Robot : public frc::TimedRobot {
  public:
 	// Subsystems
-  static DriveTrain  *m_DriveTrain; //!< Pointer for the DriveTrain
-  static Slider      *m_Slider;     //!< Pointer for the Slider
   static Compressor *m_Compressor; //!< Pointer for the Compressor
-  static OI          *m_oi;         //!< Pointer for the Operator Interface (OI)
+  static DriveTrain *m_DriveTrain; //!< Pointer for the DriveTrain
+  static Piston *m_Piston;         //!< Pointer for the Piston
+  static CrawlDrive *m_CrawlDrive; //!< Pointer for the DriveTrain
+  static Arm *m_Arm;               //!< Pointer for the Arm
+  static Leg *m_Leg;               //!< Pointer for the Leg
+  static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
+  static Slider *m_Slider;         //!< Pointer for the Slider
 
 	// Commands
-  TriggerDrive*      pTriggerDrive;      //!< Pointer for the TriggerDrive command
-  ControlSlider*     pControlSlider;     //!< Pointer for the ControlSlider command
+  TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
+  testUltra* pTestUltra;
+  PullArm* pPullArm;
+  PullLeg* pPullLeg;
+  DeployClimb* pDeployClimb;
+  ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
   ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
 
 	// Robot methods

@@ -8,9 +8,13 @@
 
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
-OI         *Robot::m_oi;
-Slider     *Robot::m_Slider;
 Compressor *Robot::m_Compressor;
+CrawlDrive *Robot::m_CrawlDrive;
+Arm *Robot::m_Arm;
+Leg *Robot::m_Leg;
+OI *Robot::m_oi;
+Slider *Robot::m_Slider;
+Piston *Robot::m_Piston;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -22,7 +26,11 @@ void Robot::RobotInit() {
   // Subsystems
   std::cout << "Creating Subsystems..." << std::endl;
   this->m_DriveTrain = new DriveTrain();
+  this->m_CrawlDrive = new CrawlDrive();
+  this->m_Arm = new Arm();
+  this->m_Leg = new Leg();
   this->m_Slider     = new Slider();
+  this->m_Piston     = new Piston();
   this->m_oi         = new OI();
 
   // Init camera
@@ -38,7 +46,11 @@ void Robot::RobotInit() {
 	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
-  this->pTriggerDrive  = new TriggerDrive();
+  this->pTriggerDrive = new TriggerDrive();
+  this->pTestUltra = new testUltra();
+  this->pPullArm = new PullArm();
+  this->pPullLeg = new PullLeg();
+  this->pDeployClimb = new DeployClimb();
   this->pControlSlider = new ControlSlider();
 
   // Create Telemetry table
@@ -123,6 +135,15 @@ void Robot::TeleopInit() {
   if (this->pTriggerDrive != nullptr) {
 		this->pTriggerDrive->Start();
 	}
+  if (this->pTestUltra != nullptr) {
+		this->pTestUltra->Start();
+	}
+  if (this->pPullArm != nullptr) {
+		this->pPullArm->Start();
+	}
+  if (this->pPullLeg != nullptr) {
+		this->pPullLeg->Start();
+  }
 	if (this->pControlSlider != nullptr) {
 		this->pControlSlider->Start();
 	}
