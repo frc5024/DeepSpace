@@ -3,6 +3,7 @@ var RobotMap_8h =
     [ "CAMERASERVER_DRIVER_CAMERA", "RobotMap_8h.html#ac23a6cdb4a4eac82f49aa3f45ce06168", null ],
     [ "CAMERASERVER_VISION_CAMERA", "RobotMap_8h.html#a3e1f6ad3dc982521bec442024dcde5f8", null ],
     [ "CLIMB_ARM_MOTOR", "RobotMap_8h.html#ac2a53531f41cd32dc0c4e356f96abc38", null ],
+    [ "CLIMB_ARM_MOTOR_2", "RobotMap_8h.html#a021f5b9905a9e5af9e70d939a4671ebd", null ],
     [ "CLIMB_LEG_MOTOR", "RobotMap_8h.html#a1d4434e8398186183f9563467894c3dc", null ],
     [ "CLIMB_ULTRASONIC", "RobotMap_8h.html#adb4df0426b06ba5efb4972e37b704647", null ],
     [ "COMPRESSOR_PIN", "RobotMap_8h.html#a0193d6b9a03dc1330b5390d3f1df4f19", null ],

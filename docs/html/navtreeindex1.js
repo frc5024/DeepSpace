@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"classRobot.html#aa8a06c70bde4869e292aaddb68e5051d":[4,0,15,21],
+"classRobot.html#aa964d2c37a74f213d9fd3e2203bb3447":[4,0,15,23],
 "classRobot.html#ab1877ba35293a8925ef347e5f64ceef3":[4,0,15,11],
 "classRobot.html#ab4d6610b6bcc1b1d1e16078b79c1c2fe":[4,0,15,16],
 "classRobot.html#ab88487f3f905fffd75caa7b21a325861":[4,0,15,22],

@@ -3,6 +3,7 @@ var searchData=
   ['cameraserver_5fdriver_5fcamera',['CAMERASERVER_DRIVER_CAMERA',['../RobotMap_8h.html#ac23a6cdb4a4eac82f49aa3f45ce06168',1,'RobotMap.h']]],
   ['cameraserver_5fvision_5fcamera',['CAMERASERVER_VISION_CAMERA',['../RobotMap_8h.html#a3e1f6ad3dc982521bec442024dcde5f8',1,'RobotMap.h']]],
   ['climb_5farm_5fmotor',['CLIMB_ARM_MOTOR',['../RobotMap_8h.html#ac2a53531f41cd32dc0c4e356f96abc38',1,'RobotMap.h']]],
+  ['climb_5farm_5fmotor_5f2',['CLIMB_ARM_MOTOR_2',['../RobotMap_8h.html#a021f5b9905a9e5af9e70d939a4671ebd',1,'RobotMap.h']]],
   ['climb_5fleg_5fmotor',['CLIMB_LEG_MOTOR',['../RobotMap_8h.html#a1d4434e8398186183f9563467894c3dc',1,'RobotMap.h']]],
   ['climb_5fultrasonic',['CLIMB_ULTRASONIC',['../RobotMap_8h.html#adb4df0426b06ba5efb4972e37b704647',1,'RobotMap.h']]],
   ['cml',['cml',['../namespacebuildcml.html#a9a25c9a0b15692804f8fd45b324099f7',1,'buildcml']]],

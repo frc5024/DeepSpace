@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['parmmotor',['pArmMotor',['../classArm.html#ab445ec72702976d94748928ff8b256f5',1,'Arm']]],
+  ['parmmotor',['pArmMotor',['../classArm.html#a85ba9dd5e2ab8dc1634ec1fc522be102',1,'Arm']]],
+  ['parmmotor2',['pArmMotor2',['../classArm.html#aa4ebde9ace145953abda99c849480d30',1,'Arm']]],
   ['pcompressor',['pCompressor',['../classCompressor.html#a1b4fe6041081bcf46376485128f6ae6f',1,'Compressor']]],
   ['pcontrolcompressor',['pControlCompressor',['../classRobot.html#aa8a06c70bde4869e292aaddb68e5051d',1,'Robot']]],
   ['pcontrolslider',['pControlSlider',['../classRobot.html#ab88487f3f905fffd75caa7b21a325861',1,'Robot']]],
