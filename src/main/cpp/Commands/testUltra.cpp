@@ -21,7 +21,6 @@ void testUltra::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
 void testUltra::Execute() {
-
   double distance = Robot::m_Arm->getDistanceFromFloor();
 
   std::cout << distance << std::endl;

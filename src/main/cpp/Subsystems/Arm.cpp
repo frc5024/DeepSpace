@@ -11,7 +11,6 @@ Arm::Arm() : Subsystem("Arm") {
   this->pArmMotor2->SetNeutralMode(NeutralMode::Brake);
 
   this->pArmMotor2->SetSafetyEnabled(false);
-
 }
 
 void Arm::InitDefaultCommand() {
@@ -27,4 +26,4 @@ void Arm::MoveArm(double Speed) {
 double Arm::getDistanceFromFloor() {
   double range = m_ultrasonic.GetValue() * kValueToInches;
   return range;
-} 
+}

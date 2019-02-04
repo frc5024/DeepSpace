@@ -8,7 +8,7 @@
 #include <frc/GenericHID.h>
 
 class PullArm : public frc::Command {
-    public:
+  public:
     PullArm();                  //!< Class constructor
     void Initialize() override; //!< Runs once on initalization
     void Execute() override;    //!< Called in a loop during Teleop
@@ -22,15 +22,13 @@ class PullArm : public frc::Command {
     bool IsFinished() override;
     
     void End() override;         //!< Runs once when IsFinished() returns true
-    void Interrupted() override; //!< Runs once if the command is forced to stop                
-
-
-    private:
+    void Interrupted() override; //!< Runs once if the command is forced to stop
+    
+  private:
     double speedMultiplier;
 
     double speed;
 
     frc::XboxController* pJoyDrive;
-
-};    
+};
 #endif // _PULLARM_HG_
