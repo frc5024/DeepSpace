@@ -18,6 +18,7 @@ CrawlDrive::CrawlDrive() : frc::Subsystem("CrawlDrive") {
 
     // Create a DifferentialDrive class using our motors
     this->pCrawlDriveTrain = new frc::DifferentialDrive(*pCrawlLeft, *pCrawlRight);
+    this->pCrawlDriveTrain->SetSafetyEnabled(false);
 }
 
 void CrawlDrive::InitDefaultCommand() {

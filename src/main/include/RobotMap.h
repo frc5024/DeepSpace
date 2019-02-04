@@ -28,17 +28,19 @@
 
 //Climb Motors
 #define CLIMB_ARM_MOTOR 5
-#define CLIMB_LEG_MOTOR 6
+
+#define CLIMB_ARM_MOTOR_2 6
+#define CLIMB_LEG_MOTOR 8
  
-#define CRAWL_LEFT_MOTOR 7
-#define CRAWL_RIGHT_MOTOR 8
+#define CRAWL_LEFT_MOTOR 20
+#define CRAWL_RIGHT_MOTOR 21
 
 //Climb Ultrasonic
 #define CLIMB_ULTRASONIC 1
 #define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF 0.8
 
 // Slider
-#define SLIDER_MOTOR 5
+#define SLIDER_MOTOR 7
 
 // Compressor
 #define COMPRESSOR_PIN 0

@@ -16,7 +16,7 @@ void PullArm::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void PullArm::Execute() {    
-    this->speed = (this->speedMultiplier) * (this->pJoyDrive->GetTriggerAxis(Hand::kLeftHand));
+    this->speed =(this->pJoyDrive->GetY(Hand::kLeftHand));
 
     Robot::m_Arm->MoveArm(this->speed);
 }

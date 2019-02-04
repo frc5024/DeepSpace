@@ -31,7 +31,8 @@ class Arm : public frc::Subsystem {
 
 
   private:
-  frc::Spark* pArmMotor; //!< Pointer for Arm arm motor
+  can::WPI_TalonSRX* pArmMotor; //!< Pointer for Arm arm motor
+  can::WPI_TalonSRX* pArmMotor2; //!< Pointer for Arm arm motor
   frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC};
   static constexpr double kValueToInches = 0.125;
 };
