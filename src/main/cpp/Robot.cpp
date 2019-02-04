@@ -129,15 +129,15 @@ void Robot::TeleopInit() {
   // this line or comment it out.
   // if (m_autonomousCommand != nullptr) {
   //   m_autonomousCommand->Cancel();
-  //   m_autonomousCommand = nullptr; 
+  //   m_autonomousCommand = nullptr;
   // }
 
   if (this->pTriggerDrive != nullptr) {
 		this->pTriggerDrive->Start();
 	}
-  if (this->pTestUltra != nullptr) {
-		this->pTestUltra->Start();
-	}
+//   if (this->pTestUltra != nullptr) {
+// 		this->pTestUltra->Start();
+// 	}
   if (this->pPullArm != nullptr) {
 		this->pPullArm->Start();
 	}
