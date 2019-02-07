@@ -17,3 +17,7 @@ void Slider::Slide(double speed) {
 	this->pSliderMotor->Set(speed);
 	return;
 }
+
+void Slider::ResetEncoders(void) {
+	
+}
