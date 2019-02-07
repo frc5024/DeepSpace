@@ -15,6 +15,7 @@ Leg *Robot::m_Leg;
 OI *Robot::m_oi;
 Slider *Robot::m_Slider;
 Piston *Robot::m_Piston;
+Cargo *Robot::m_Cargo;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -32,6 +33,7 @@ void Robot::RobotInit() {
   this->m_Slider     = new Slider();
   this->m_Piston     = new Piston();
   this->m_oi         = new OI();
+  this->m_Cargo      = new Cargo();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
@@ -52,6 +54,7 @@ void Robot::RobotInit() {
   this->pPullLeg = new PullLeg();
   this->pDeployClimb = new DeployClimb();
   this->pControlSlider = new ControlSlider();
+  this->pDropCargo = new DropCargo();
 
   // Create Telemetry table
   std::cout << "Connecting to telemetry table.." << std::endl;
@@ -149,7 +152,7 @@ void Robot::TeleopInit() {
 	}
   if (this->pControlCompressor != nullptr) {
 		this->pControlCompressor->Start();
-	}
+  }
 }
 
 void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }

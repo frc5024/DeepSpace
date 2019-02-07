@@ -42,6 +42,9 @@
 // Slider
 #define SLIDER_MOTOR 7
 
+// Cargo
+#define CARGO_SOLENOID 2
+
 // Compressor
 #define COMPRESSOR_PIN 0
 // Piston
