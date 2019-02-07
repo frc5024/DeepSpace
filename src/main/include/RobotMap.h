@@ -49,6 +49,13 @@
 
 #define PISTON_ID 1
 
+// Encoder Constants
+#define PID_LOOP_INDEX          0
+#define TIMOUT_MS               100
+#define SLOT_INDEX              0
+#define TICKS_PER_REVOLUTION    1440
+#define WHEEL_CIRCUMFERENCE     10 //TODO: 2*pi*r
+
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 

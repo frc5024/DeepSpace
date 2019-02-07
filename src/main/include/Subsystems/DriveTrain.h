@@ -4,6 +4,7 @@
 
 #include <frc/commands/Subsystem.h>
 #include <frc/WPILib.h>
+#include <frc/Encoder.h>
 #include <ctre/Phoenix.h>
 #include <frc/drive/DifferentialDrive.h>
 #include "RobotMap.h"
@@ -38,8 +39,64 @@ class DriveTrain : public frc::Subsystem {
 	 */
 	void RadialDrive(double magnitude, double radial);
 
+	/**
+	 * @brief Resets all encoder sensor positions to 0
+	 */
+	void ResetEncoders(void);
+
+	/**
+	 * @brief Resets the left side encoder sensor positions to 0
+	 */
+	void ResetLeftEncoder(void);
+
+	/**
+	 * @brief Resets the right side encoder sensor positions to 0
+	 */
+	void ResetRightEncoder(void);
+
+	/**
+	 * @brief Get's the average of all encoder values in cm
+	 * @return Distance delta in centimetres
+	 */
+	float GetDistance(void);
+
+	/**
+	 * @brief Gets the distance of ONLY the FRONT RIGHT motor
+	 * @remark Only uses FRONT RIGHT motor
+	 * @remark Equivalent to GetRightDistanceQuick(void)
+	 * @return Distance delta in centimetres
+	 */
+	float GetDistanceQuick(void);
+
+	/**
+	 * @brief Get's the average of all left side encoder values in cm
+	 * @return Distance delta in centimetres
+	 */
+	float GetLeftDistance(void);
+
+	/**
+	 * @brief Get's the average of all right side encoder values in cm
+	 * @return Distance delta in centimetres
+	 */
+	float GetRightDistance(void);
+
+	/**
+	 * @brief Gets the distance of ONLY the FONT LEFT motor
+	 * @remark Only uses the FRONT LEFT motor
+	 * @return Distance delta in centimetres
+	 */
+	float GetLeftDistanceQuick(void);
+
+	/**
+	 * @brief Gets the distance of ONLY the FONT RIGHT motor
+	 * @remark Only uses the FRONT RIGHT motor
+	 * @remark Equivalent to GetDistanceQuick(void)
+	 * @return Distance delta in centimetres
+	 */
+	float GetRightDistanceQuick(void);
+
  private:
-  can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
+    can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
 	can::WPI_TalonSRX* pLeftRearMotor;  //!< Pointer for left rear motor
 	can::WPI_TalonSRX* pRightFrontMotor;//!< Pointer for right front motor
 	can::WPI_TalonSRX* pRightRearMotor; //!< Pointer for right rear motor
