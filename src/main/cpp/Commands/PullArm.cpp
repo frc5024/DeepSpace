@@ -3,6 +3,7 @@
 
 PullArm::PullArm() {
     Requires(Robot::m_Arm);
+     Requires(Robot::m_CrawlDrive);
     this->pJoyDrive = Robot::m_oi->GetJoystickOperator();
 }
 
@@ -19,6 +20,8 @@ void PullArm::Execute() {
     this->speed =(this->pJoyDrive->GetY(Hand::kLeftHand));
 
     Robot::m_Arm->MoveArm(this->speed);
+
+    Robot::m_CrawlDrive->Move(this->pJoyDrive->GetX(Hand::kRightHand));
 }
 
 // Make this return true when this Command no longer needs to run execute()

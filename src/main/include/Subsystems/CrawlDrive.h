@@ -6,7 +6,6 @@
 #include <frc/WPILib.h>
 #include <frc/Spark.h>
 #include "RobotMap.h"
-#include <frc/drive/DifferentialDrive.h>
 
 class CrawlDrive: public frc::Subsystem {
     public:
@@ -19,13 +18,11 @@ class CrawlDrive: public frc::Subsystem {
 	 * @param xSpeed Forward speed (form -1 to 1)
 	 * @param zRotation Rotation (from -1 to 1)
 	 */
-    void ArcadeDrive(double xSpeed, double zRotation);
+    void Move(double Speed);
 
     private:
     frc::Spark* pCrawlLeft; //!< Pointer for the left crawl motor
     frc::Spark* pCrawlRight; //!< Pointer for the right crawl motor
-
-    frc::DifferentialDrive* pCrawlDriveTrain; //!< Pointer for a differential drivebase made up of 2 motors
 };
 
 #endif // _CRAWLDRIVE_HG_

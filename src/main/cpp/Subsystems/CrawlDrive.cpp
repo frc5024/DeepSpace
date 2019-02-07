@@ -16,16 +16,14 @@ CrawlDrive::CrawlDrive() : frc::Subsystem("CrawlDrive") {
     this->pCrawlLeft->SetSafetyEnabled(false);
     this->pCrawlRight->SetSafetyEnabled(false);
 
-    // Create a DifferentialDrive class using our motors
-    this->pCrawlDriveTrain = new frc::DifferentialDrive(*pCrawlLeft, *pCrawlRight);
-    this->pCrawlDriveTrain->SetSafetyEnabled(false);
 }
 
 void CrawlDrive::InitDefaultCommand() {
     //SetDefaultCommand(new DriveWithJoystick());
 }
 
-void CrawlDrive::ArcadeDrive(double xSpeed, double zRotation) {
-	this->pCrawlDriveTrain->ArcadeDrive(zRotation, xSpeed);
+void CrawlDrive::Move(double Speed) {
+	this->pCrawlRight->Set(Speed);
+    this->pCrawlLeft->Set(Speed);
 	return;
 }
