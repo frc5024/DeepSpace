@@ -30,6 +30,8 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	this->pRightFrontMotor->SetSafetyEnabled(false);
 	this->pRightRearMotor->SetSafetyEnabled(false);
 	this->pRobotDrive->SetSafetyEnabled(false);
+
+	
 }
 
 void DriveTrain::InitDefaultCommand() {

@@ -2,6 +2,7 @@
 #ifndef _DRIVETRAIN_HG_
 #define _DRIVETRAIN_HG_
 
+#include <AHRS.h>
 #include <frc/commands/Subsystem.h>
 #include <frc/WPILib.h>
 #include <ctre/Phoenix.h>
@@ -39,12 +40,14 @@ class DriveTrain : public frc::Subsystem {
 	void RadialDrive(double magnitude, double radial);
 
  private:
-  can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
+	can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
 	can::WPI_TalonSRX* pLeftRearMotor;  //!< Pointer for left rear motor
 	can::WPI_TalonSRX* pRightFrontMotor;//!< Pointer for right front motor
 	can::WPI_TalonSRX* pRightRearMotor; //!< Pointer for right rear motor
 
 	frc::DifferentialDrive* pRobotDrive; //!< Pointer for a differential drivebase made up of 2 motor pairs
+
+	AHRS* pGyro; //!< Pointer for the gyro object
 };
 
 #endif // _DRIVETRAIN_HG_

@@ -10,33 +10,38 @@
 
 // Whenever possible, Macros and definitions are used in order to preserve memory
 
+// Robot values
+#define ROBOT_CYCLE_TIME	0.02
+#define ROBOT_LENGTH		666 //TODO: set robot width macro
+#define ROBOT_WIDTH_WHEEL	666 // TODO: set robot width, from wheels to wheels, macro
+
 // Camera mappings
 #define CAMERASERVER_DRIVER_CAMERA 1
 #define CAMERASERVER_VISION_CAMERA 0
 
 // DriveTrain motors
-#define DRIVETRAIN_LEFT_FRONT_MOTOR  1
-#define DRIVETRAIN_LEFT_REAR_MOTOR   2
-#define DRIVETRAIN_RIGHT_FRONT_MOTOR 3
-#define DRIVETRAIN_RIGHT_REAR_MOTOR  4
+#define DRIVETRAIN_LEFT_FRONT_MOTOR		1
+#define DRIVETRAIN_LEFT_REAR_MOTOR		2
+#define DRIVETRAIN_RIGHT_FRONT_MOTOR	3
+#define DRIVETRAIN_RIGHT_REAR_MOTOR		4
 
 // DriveTrain motor invertions
-#define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT  false
-#define DRIVETRAIN_LEFT_REAR_MOTOR_INVERT   false
-#define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT true
-#define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT  true
+#define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT	false
+#define DRIVETRAIN_LEFT_REAR_MOTOR_INVERT	false
+#define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT	true
+#define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT	true
 
-#define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF 0.8
+#define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF	0.8
 
 // Slider
-#define SLIDER_MOTOR 5
+#define SLIDER_MOTOR	5
 
 // DriveWithJoystick Settings
-#define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
+#define DRIVEWITHJOYSTICK_ROTATION_LIMITER	0.95
 
 // Xbox controllers
-#define XBOX_CONTROLLER_DRIVE_PORT    0
-#define XBOX_CONTROLLER_OPERATOR_PORT 1
+#define XBOX_CONTROLLER_DRIVE_PORT		0
+#define XBOX_CONTROLLER_OPERATOR_PORT	1
 
 // Handy macros to save Python programmers from going crazy
 #define False false
