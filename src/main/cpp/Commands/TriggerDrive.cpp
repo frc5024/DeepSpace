@@ -43,7 +43,6 @@ void TriggerDrive::Execute() {
   this->rotation = 0.00;
 }
 
-
 bool TriggerDrive::IsFinished() { return false; }
 
 // Called once after isFinished returns true
