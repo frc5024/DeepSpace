@@ -2,12 +2,12 @@
 
 CrawlDrive::CrawlDrive() : frc::Subsystem("CrawlDrive") {
     //Initialize the motors
-    this->pCrawlLeft  = new can::WPI_TalonSRX(CRAWL_LEFT_MOTOR);
+    this->pCrawlLeft  = new frc::Spark(CRAWL_LEFT_MOTOR);
 
     this->pCrawlLeft->SetInverted(false);
     //this->pCrawlLeft->SetNeutralMode(NeutralMode::Brake);
 
-    this->pCrawlRight = new can::WPI_TalonSRX(CRAWL_RIGHT_MOTOR);
+    this->pCrawlRight = new frc::Spark(CRAWL_RIGHT_MOTOR);
     this->pCrawlRight->SetInverted(true);
     //this->pCrawlRight->SetNeutralMode(NeutralMode::Brake);
 
