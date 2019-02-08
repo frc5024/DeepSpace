@@ -20,7 +20,7 @@
 #define _AUTODRIVE_HG_
 
 #include <RobotMap.h>
-#include 
+#include <networktables/NetworkTable.h>
 #include <Subsystems/DriveTrain.h>
 
 class AutoDrive
@@ -60,13 +60,13 @@ public:
 private:
 
 	/**
-	 * @var Angle used to subtract from to grab current angle in relavence to start of turn
+	 * @var Angle used to subtract from to grab current angle relative to start of turn
 	 * Offset is set when Start() is called
 	 */
 	float offset ;
 
 	/**
-	 * @var The angle to the target, relevent to the robot
+	 * @var The angle to the target, relative to the robot
      * Used to determine path, stored just in case, don't actually NEED to
 	 */
 	float target ;

@@ -31,11 +31,16 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	this->pRightRearMotor->SetSafetyEnabled(false);
 	this->pRobotDrive->SetSafetyEnabled(false);
 
-	
+	this->pGyro = new AHRS(SPI::Port::kMXP) ;
+	this->pGyro->Reset() ;
 }
 
 void DriveTrain::InitDefaultCommand() {
   SetDefaultCommand(new DriveWithJoystick());
+}
+
+float DriveTrain::GetAngle(void) {
+	return this->pGyro->GetAngle() ;
 }
 
 void DriveTrain::ArcadeDrive(double xSpeed, double zRotation) {

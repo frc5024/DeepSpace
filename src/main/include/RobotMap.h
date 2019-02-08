@@ -12,12 +12,14 @@
 
 // Robot values
 #define ROBOT_CYCLE_TIME	0.02
-#define ROBOT_LENGTH		666 //TODO: set robot width macro
-#define ROBOT_WIDTH_WHEEL	666 // TODO: set robot width, from wheels to wheels, macro
+
+// RadialTurn
+#define RADIAL_LENGTH				666 // TODO: Measure: Horizontal distance from camera to front bumper
+#define RADIAL_WIDTH_WHEEL_2		666 // TODO: Measure: Horizontal distance from left side wheels to right side wheels divided by two
 
 // Camera mappings
-#define CAMERASERVER_DRIVER_CAMERA 1
-#define CAMERASERVER_VISION_CAMERA 0
+#define CAMERASERVER_DRIVER_CAMERA		1
+#define CAMERASERVER_VISION_CAMERA		0
 
 // DriveTrain motors
 #define DRIVETRAIN_LEFT_FRONT_MOTOR		1

@@ -38,7 +38,6 @@ void TriggerDrive::Execute() {
   
   // Reset the speed and rotation
   // while this does have some negitive side effects while driving,
-  // It is for saftey. (and so we don't have a run-away bot slam into a wall again)
   this->speed    = 0.00;
   this->rotation = 0.00;
 }
@@ -46,8 +45,18 @@ void TriggerDrive::Execute() {
 bool TriggerDrive::IsFinished() { return false; }
 
 // Called once after isFinished returns true
-void TriggerDrive::End() {}
+void TriggerDrive::End() {
+
+  // It is for saftey. (and so we don't have a run-away bot slam into a wall again)
+  Robot::m_DriveTrain->ArcadeDrive(0.0, 0.0);
+
+}
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void TriggerDrive::Interrupted() {}
+void TriggerDrive::Interrupted() {
+
+   // It is for saftey. (and so we don't have a run-away bot slam into a wall again)
+  Robot::m_DriveTrain->ArcadeDrive(0.0, 0.0);
+  
+}

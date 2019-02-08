@@ -39,6 +39,12 @@ class DriveTrain : public frc::Subsystem {
 	 */
 	void RadialDrive(double magnitude, double radial);
 
+	/**
+	 * @brief Returns current angle, relative to game start
+	 * @return Current angle relative to game start
+	 */
+	float GetAngle(void);
+
  private:
 	can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
 	can::WPI_TalonSRX* pLeftRearMotor;  //!< Pointer for left rear motor
