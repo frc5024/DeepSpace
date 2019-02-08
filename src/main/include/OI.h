@@ -25,6 +25,7 @@ class OI {
 private:
 	frc::XboxController* pJoystickDrive;    //!< Pointer for Driver's joystick
 	frc::XboxController* pJoystickOperator; //!< Pointer for Operator's joystick
+	frc::XboxController* pJoystickDebug;    //!< Pointer for Debug joystick
 };
 
 #endif // _OI_HG_

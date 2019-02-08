@@ -2,7 +2,7 @@
 
 Compressor::Compressor() : frc::Subsystem("Compressor") {
   // Initialize the motors
-	this->pCompressor = new frc::Compressor(COMPRESSOR_PIN);
+	this->pCompressor = new frc::Compressor();
 }
 
 void Compressor::InitDefaultCommand() {
