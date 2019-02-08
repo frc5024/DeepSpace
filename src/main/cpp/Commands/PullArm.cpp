@@ -1,9 +1,10 @@
+//< Manual arm override
 #include "Commands/PullArm.h"
 #include "Robot.h"
 
 PullArm::PullArm() {
     Requires(Robot::m_Arm);
-    this->pJoyDrive = Robot::m_oi->GetJoystickOperator();
+    this->pJoyDebug = Robot::m_oi->GetJoystickDebug();
 }
 
 // Called just before this Command runs the first time
@@ -15,8 +16,8 @@ void PullArm::Initialize() {
 }
 
 // Called repeatedly when this Command is scheduled to run
-void PullArm::Execute() {    
-    this->speed =(this->pJoyDrive->GetY(Hand::kLeftHand));
+void PullArm::Execute() {
+    this->speed =(this->pJoyDebug->GetY(Hand::kLeftHand));
 
     Robot::m_Arm->MoveArm(this->speed);
 }
