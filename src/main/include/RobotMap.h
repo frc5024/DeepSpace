@@ -32,8 +32,8 @@
 #define CLIMB_ARM_MOTOR_2 6
 #define CLIMB_LEG_MOTOR 8
  
-#define CRAWL_LEFT_MOTOR 20
-#define CRAWL_RIGHT_MOTOR 21
+#define CRAWL_LEFT_MOTOR 1
+#define CRAWL_RIGHT_MOTOR 0
 
 //Climb Ultrasonic
 #define CLIMB_ULTRASONIC 1

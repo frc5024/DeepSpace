@@ -4,6 +4,7 @@
 
 PullArm::PullArm() {
     Requires(Robot::m_Arm);
+     Requires(Robot::m_CrawlDrive);
     this->pJoyDebug = Robot::m_oi->GetJoystickDebug();
 }
 
@@ -20,6 +21,8 @@ void PullArm::Execute() {
     this->speed =(this->pJoyDebug->GetY(Hand::kLeftHand));
 
     Robot::m_Arm->MoveArm(this->speed);
+
+    Robot::m_CrawlDrive->Move(this->pJoyDebug->GetTriggers(Hand::kRightHand) - this->pJoyDebug->GetTriggers(Hand::kLeftHand));
 }
 
 // Make this return true when this Command no longer needs to run execute()
