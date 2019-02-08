@@ -21,10 +21,18 @@ class OI {
    * @return Pointer to the operator's joystick
    */
 	frc::XboxController* GetJoystickOperator(void);
+	
+	/**
+   * Function for getting the Debug joystick data
+   *
+   * @return Pointer to the debug joystick
+   */
+	frc::XboxController* GetJoystickDebug(void);
 
 private:
 	frc::XboxController* pJoystickDrive;    //!< Pointer for Driver's joystick
 	frc::XboxController* pJoystickOperator; //!< Pointer for Operator's joystick
+	frc::XboxController* pJoystickDebug;    //!< Pointer for Debug joystick
 };
 
 #endif // _OI_HG_

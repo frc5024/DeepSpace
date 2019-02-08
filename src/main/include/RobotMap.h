@@ -42,8 +42,6 @@
 // Slider
 #define SLIDER_MOTOR 7
 
-// Compressor
-#define COMPRESSOR_PIN 11
 // Piston
 #define PCM_CAN_ID 11
 
@@ -55,6 +53,7 @@
 // Xbox controllers
 #define XBOX_CONTROLLER_DRIVE_PORT    0
 #define XBOX_CONTROLLER_OPERATOR_PORT 1
+#define XBOX_CONTROLLER_DEBUG_PORT    2
 
 // Handy macros to save Python programmers from going crazy
 #define False false
