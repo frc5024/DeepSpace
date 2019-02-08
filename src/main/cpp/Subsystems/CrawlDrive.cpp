@@ -8,7 +8,7 @@ CrawlDrive::CrawlDrive() : frc::Subsystem("CrawlDrive") {
     //this->pCrawlLeft->SetNeutralMode(NeutralMode::Brake);
 
     this->pCrawlRight = new frc::Spark(CRAWL_RIGHT_MOTOR);
-    this->pCrawlRight->SetInverted(true);
+    this->pCrawlRight->SetInverted(false);
     //this->pCrawlRight->SetNeutralMode(NeutralMode::Brake);
 
     // Disable saftey modes
