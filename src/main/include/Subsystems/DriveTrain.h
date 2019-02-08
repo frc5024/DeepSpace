@@ -101,6 +101,8 @@ class DriveTrain : public frc::Subsystem {
 	can::WPI_TalonSRX* pRightFrontMotor;//!< Pointer for right front motor
 	can::WPI_TalonSRX* pRightRearMotor; //!< Pointer for right rear motor
 
+	frc::Encoder* pLeftEncoder;  //!< Pointer for the left encoder
+	frc::Encoder* pRightEncoder; //!< Pointer for the right encoder
 	frc::DifferentialDrive* pRobotDrive; //!< Pointer for a differential drivebase made up of 2 motor pairs
 };
 
