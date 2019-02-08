@@ -29,6 +29,6 @@ class PullArm : public frc::Command {
 
     double speed;
 
-    frc::XboxController* pJoyDrive;
+    frc::XboxController* pJoyDebug;
 };
 #endif // _PULLARM_HG_

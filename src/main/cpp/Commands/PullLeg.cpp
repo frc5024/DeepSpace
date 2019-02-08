@@ -1,22 +1,21 @@
+//< Manual leg override
 #include "Commands/PullLeg.h"
 #include "Robot.h"
 
 PullLeg::PullLeg() {
     Requires(Robot::m_Leg);
-    this->pJoyDrive = Robot::m_oi->GetJoystickOperator();
+    this->pJoyDebug = Robot::m_oi->GetJoystickDebug();
 }
 
 // Called just before this Command runs the first time
 void PullLeg::Initialize() {
-    //set Speed Multiplyer
-    this->speedMultiplier = 1;
     //set Speed
     this->speed = 0.0;
 }
 
 //Called repeatedly when this Command is scheduled to run
 void PullLeg::Execute() {
-    this->speed = (this->speedMultiplier) * (this->pJoyDrive->GetY(Hand::kRightHand));
+    this->speed = this->pJoyDebug->GetY(Hand::kRightHand);
 
     Robot::m_Leg->MoveLeg(this->speed);
 }
