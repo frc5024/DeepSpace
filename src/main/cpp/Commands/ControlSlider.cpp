@@ -21,7 +21,7 @@ void ControlSlider::Execute() {
   Robot::m_Slider->Slide(this->speed);
 
   // Control piston
-  if(this->pJoyOp->GetTriggerAxis(Hand::kRightHand) > 85.00){
+  if(this->pJoyOp->GetTriggerAxis(Hand::kRightHand) > 0.8){
     Robot::m_Piston->Deploy();
   }else{
     Robot::m_Piston->Retract();

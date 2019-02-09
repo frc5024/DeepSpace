@@ -22,7 +22,7 @@ void PullArm::Execute() {
 
     Robot::m_Arm->MoveArm(this->speed);
 
-    Robot::m_CrawlDrive->Move(this->pJoyDebug->GetTriggers(Hand::kRightHand) - this->pJoyDebug->GetTriggers(Hand::kLeftHand));
+    Robot::m_CrawlDrive->Move(this->pJoyDebug->GetTriggerAxis(Hand::kRightHand) - this->pJoyDebug->GetTriggerAxis(Hand::kLeftHand));
 }
 
 // Make this return true when this Command no longer needs to run execute()

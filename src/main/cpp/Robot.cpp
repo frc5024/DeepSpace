@@ -32,6 +32,7 @@ void Robot::RobotInit() {
   this->m_Slider     = new Slider();
   this->m_Piston     = new Piston();
   this->m_oi         = new OI();
+  this->m_Compressor = new Compressor();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
@@ -52,6 +53,7 @@ void Robot::RobotInit() {
   this->pPullLeg = new PullLeg();
   this->pDeployClimb = new DeployClimb();
   this->pControlSlider = new ControlSlider();
+  this->pControlCompressor = new ControlCompressor();
 
   // Create Telemetry table
   std::cout << "Connecting to telemetry table.." << std::endl;

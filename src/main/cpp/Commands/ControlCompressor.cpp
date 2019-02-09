@@ -20,7 +20,7 @@ void ControlCompressor::Execute() {
     }
 
     // Disable on back button
-    else if(this->pJoyDrive->GetBackButtonReleased() || this->pJoyOp->GetBackButtonReleased()){
+    if(this->pJoyDrive->GetBackButtonReleased() || this->pJoyOp->GetBackButtonReleased()){
         Robot::m_Compressor->SetState(false);
     }
 }
