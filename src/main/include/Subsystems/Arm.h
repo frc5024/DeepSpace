@@ -9,6 +9,7 @@
 #include <frc/PWMVictorSPX.h>
 #include <ctre/Phoenix.h>
 #include "RobotMap.h"
+#include <AHRS.h>
 
 class Arm : public frc::Subsystem {
  public:
@@ -29,12 +30,19 @@ class Arm : public frc::Subsystem {
 	 */
   double getDistanceFromFloor();
 
+  /**
+	 * returns gyro pitch
+	 *
+	 */
+  float GetAngle();
 
   private:
   can::WPI_TalonSRX* pArmMotor; //!< Pointer for Arm arm motor
   can::WPI_TalonSRX* pArmMotor2; //!< Pointer for Arm arm motor
   frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC};
   static constexpr double kValueToInches = 0.125;
+
+  AHRS* pGyro;
 };
 
 #endif // _ARM_HG_

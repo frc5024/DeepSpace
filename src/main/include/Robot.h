@@ -32,7 +32,7 @@
 class Robot : public frc::TimedRobot {
  public:
 	// Subsystems
-  static Compressor *m_Compressor; //!< Pointer for the Compressor
+  static cCompressor *m_Compressor; //!< Pointer for the Compressor
   static DriveTrain *m_DriveTrain; //!< Pointer for the DriveTrain
   static Piston *m_Piston;         //!< Pointer for the Piston
   static CrawlDrive *m_CrawlDrive; //!< Pointer for the DriveTrain

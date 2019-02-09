@@ -11,6 +11,9 @@ Arm::Arm() : Subsystem("Arm") {
   this->pArmMotor2->SetNeutralMode(NeutralMode::Brake);
 
   this->pArmMotor2->SetSafetyEnabled(false);
+
+  this->pGyro = new AHRS(SPI::Port::kMXP);
+  this->pGyro->Reset();
 }
 
 void Arm::InitDefaultCommand() {
@@ -26,4 +29,8 @@ void Arm::MoveArm(double Speed) {
 double Arm::getDistanceFromFloor() {
   double range = m_ultrasonic.GetValue() * kValueToInches;
   return range;
+}
+
+float Arm::GetAngle() {
+  return this->pGyro->GetPitch();
 }

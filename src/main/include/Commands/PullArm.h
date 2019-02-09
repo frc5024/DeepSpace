@@ -7,6 +7,7 @@
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
 
+
 class PullArm : public frc::Command {
   public:
     PullArm();                  //!< Class constructor
@@ -28,6 +29,12 @@ class PullArm : public frc::Command {
     double speedMultiplier;
 
     double speed;
+
+    double gyro;
+
+    double m;
+
+    double b;
 
     frc::XboxController* pJoyDebug;
 };

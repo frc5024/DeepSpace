@@ -7,9 +7,9 @@
 #include <Commands/ControlCompressor.h>
 #include <frc/Compressor.h>
 
-class Compressor : public frc::Subsystem {
+class cCompressor : public frc::Subsystem {
  public:
-  Compressor(); //!< Class constructor
+  cCompressor(); //!< Class constructor
   void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (DriveWithJoystick)
 	
 	/**

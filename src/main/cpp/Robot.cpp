@@ -5,10 +5,10 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-
+ 
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
-Compressor *Robot::m_Compressor;
+cCompressor *Robot::m_Compressor;
 CrawlDrive *Robot::m_CrawlDrive;
 Arm *Robot::m_Arm;
 Leg *Robot::m_Leg;
@@ -32,7 +32,7 @@ void Robot::RobotInit() {
   this->m_Slider     = new Slider();
   this->m_Piston     = new Piston();
   this->m_oi         = new OI();
-  this->m_Compressor = new Compressor();
+  this->m_Compressor = new cCompressor();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
