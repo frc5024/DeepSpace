@@ -24,8 +24,12 @@ void ControlCargo::Execute() {
 bool ControlCargo::IsFinished() { return false; }
 
 // Called once after isFinished returns true
-void ControlCargo::End() {}
+void ControlCargo::End() {
+  Robot::m_Cargo->Retract();
+}
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void ControlCargo::Interrupted() {}
+void ControlCargo::Interrupted() { 
+  ControlCargo::End();
+}

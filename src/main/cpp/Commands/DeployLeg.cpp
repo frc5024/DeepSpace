@@ -16,8 +16,12 @@ void DeployLeg::Execute() {
 }
 
 // Called once after command times out
-void DeployLeg::End() {}
+void DeployLeg::End() {
+    Robot::m_Leg->MoveLeg(0.0);
+}
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void DeployLeg::Interrupted() {}
+void DeployLeg::Interrupted() {
+    DeployLeg::End();
+}

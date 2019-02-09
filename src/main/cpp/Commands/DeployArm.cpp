@@ -16,8 +16,12 @@ void DeployArm::Execute() {
 }
 
 // Called once after command times out
-void DeployArm::End() {}
+void DeployArm::End() {
+    Robot::m_Arm->MoveArm(0.0);
+}
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void DeployArm::Interrupted() {}
+void DeployArm::Interrupted() {
+    DeployArm::End();
+}

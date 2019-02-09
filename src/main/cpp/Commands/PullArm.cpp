@@ -29,8 +29,13 @@ void PullArm::Execute() {
 bool PullArm::IsFinished() { return false; }
 
 // Called once after isFinished returns true
-void PullArm::End() {}
+void PullArm::End() {
+    Robot::m_Arm->MoveArm(0.0);
+    Robot::m_CrawlDrive->Move(0.0);
+}
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void PullArm::Interrupted() {}
+void PullArm::Interrupted() {
+    PullArm::End();
+}

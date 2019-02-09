@@ -35,8 +35,13 @@ void ControlSlider::Execute() {
 bool ControlSlider::IsFinished() { return false; }
 
 // Called once after isFinished returns true
-void ControlSlider::End() {}
+void ControlSlider::End() {
+  Robot::m_Piston->Retract();
+  Robot::m_Slider->Slide(0.0);
+}
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void ControlSlider::Interrupted() {}
+void ControlSlider::Interrupted() {
+  ControlSlider::End();
+}

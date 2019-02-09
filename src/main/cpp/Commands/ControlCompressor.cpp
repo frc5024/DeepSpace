@@ -29,8 +29,12 @@ void ControlCompressor::Execute() {
 bool ControlCompressor::IsFinished() { return false; }
 
 // Called once after isFinished returns true
-void ControlCompressor::End() {}
+void ControlCompressor::End() {
+    Robot::m_Compressor->SetState(false);
+}
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void ControlCompressor::Interrupted() {}
+void ControlCompressor::Interrupted() { 
+    ControlCompressor::End();
+}
