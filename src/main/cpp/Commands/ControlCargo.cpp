@@ -14,9 +14,9 @@ void ControlCargo::Initialize() {}
 // Called repeatedly when this Command is scheduled to run
 void ControlCargo::Execute() {
   if(this->pJoyOp->GetTriggerAxis(Hand::kLeftHand) > 0.8){
-    Robot::m_Cargo->Deploy();
-  }else{
     Robot::m_Cargo->Retract();
+  }else{
+    Robot::m_Cargo->Deploy();
   }
 }
 
