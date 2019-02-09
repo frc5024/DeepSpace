@@ -15,6 +15,7 @@ Leg *Robot::m_Leg;
 OI *Robot::m_oi;
 Slider *Robot::m_Slider;
 Piston *Robot::m_Piston;
+Cargo *Robot::m_Cargo;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -27,12 +28,13 @@ void Robot::RobotInit() {
   std::cout << "Creating Subsystems..." << std::endl;
   this->m_DriveTrain = new DriveTrain();
   this->m_CrawlDrive = new CrawlDrive();
-  this->m_Arm = new Arm();
-  this->m_Leg = new Leg();
+  this->m_Arm        = new Arm();
+  this->m_Leg        = new Leg();
   this->m_Slider     = new Slider();
   this->m_Piston     = new Piston();
   this->m_oi         = new OI();
   this->m_Compressor = new Compressor();
+  this->m_Cargo      = new Cargo();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
@@ -54,6 +56,7 @@ void Robot::RobotInit() {
   this->pDeployClimb = new DeployClimb();
   this->pControlSlider = new ControlSlider();
   this->pControlCompressor = new ControlCompressor();
+  this->pControlCargo = new ControlCargo();
 
   // Create Telemetry table
   std::cout << "Connecting to telemetry table.." << std::endl;
@@ -151,6 +154,9 @@ void Robot::TeleopInit() {
 	}
   if (this->pControlCompressor != nullptr) {
 		this->pControlCompressor->Start();
+	}
+  if (this->pControlCargo != nullptr) {
+		this->pControlCargo->Start();
 	}
 }
 

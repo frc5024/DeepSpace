@@ -15,15 +15,18 @@
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
 #include "Commands/DeployClimb.h"
+
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/CrawlDrive.h"
 #include "Subsystems/Arm.h"
 #include "Subsystems/Leg.h"
 #include "Commands/ControlSlider.h"
+#include "Commands/ControlCargo.h"
 #include "Subsystems/Slider.h"
 #include "Subsystems/Compressor.h"
 #include "Subsystems/Piston.h"
+#include "Subsystems/Cargo.h"
 
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
@@ -40,15 +43,17 @@ class Robot : public frc::TimedRobot {
   static Leg *m_Leg;               //!< Pointer for the Leg
   static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
   static Slider *m_Slider;         //!< Pointer for the Slider
+  static Cargo *m_Cargo;           //!< Pointer for the Cargo
 
 	// Commands
-  TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
+  TriggerDrive* pTriggerDrive;           //!< Pointer for the TriggerDrive command
   testUltra* pTestUltra;
   PullArm* pPullArm;
   PullLeg* pPullLeg;
   DeployClimb* pDeployClimb;
-  ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
+  ControlSlider* pControlSlider;         //!< Pointer for the ControlSlider command
   ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
+  ControlCargo* pControlCargo;           //!< Pointer for the ControlCargo command
 
 	// Robot methods
   void RobotInit()          override; //!< Runs once on robot boot

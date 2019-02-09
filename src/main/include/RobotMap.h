@@ -47,6 +47,9 @@
 
 #define PISTON_ID 7
 
+//Cargo
+#define CARGO_PISTON_ID 8 //TODO: find real cargo piston ID
+
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 
