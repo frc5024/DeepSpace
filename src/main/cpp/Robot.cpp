@@ -1,3 +1,16 @@
+// pins for hall effect:
+// back bottom: 6
+// back plastic (right): 5  
+// top back: 1
+// from botoom up
+
+// front MIDDLE: 2
+// front right strafe: 0
+// front left: 3
+// front arm left: 4
+
+// optical sensor: 8
+
 #include "Robot.h"
 
 #include <frc/commands/Scheduler.h>
@@ -33,17 +46,22 @@ void Robot::RobotInit() {
   this->pTriggerDrive = new TriggerDrive();
   this->liCommand = new LimitSwitchCommand();
   this->tglLight = new ToggleLight();
-  
+  this->heTest = new HallEffectTest();
+
   // Set robot loop speed (in seconds)
   std::cout << "Setting Period Time.." << std::endl;
   // this->SetPeriod(0.01);
 
-  if (this->liCommand != nullptr) {
+  /*if (this->liCommand != nullptr) {
 		this->liCommand->Start();
 	}
 
   if (this->tglLight != nullptr) {
 		this->tglLight->Start();
+	}*/
+
+  if (this->heTest != nullptr) {
+		this->heTest->Start();
 	}
 }
 

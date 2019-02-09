@@ -11,7 +11,7 @@ ToggleLight::ToggleLight() {
 void ToggleLight::Initialize() {
   this->relayState = false;
   this->lightRelay->Set(frc::Relay::Value::kOff);
-  this->exampleSolenoid.Set(false);
+ // this->exampleSolenoid.Set(false);
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -26,12 +26,12 @@ void ToggleLight::Execute() {
     if (relayState)
     {
       //this->lightRelay->Set(frc::Relay::Value::kOn);  
-      this->exampleSolenoid.Set(true);
+      //this->exampleSolenoid.Set(true);
     }
     else
     {
       //this->lightRelay->Set(frc::Relay::Value::kOff);
-      this->exampleSolenoid.Set(false);
+      //this->exampleSolenoid.Set(false);
     }
   }
 

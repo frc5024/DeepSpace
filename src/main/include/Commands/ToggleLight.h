@@ -21,7 +21,7 @@ class ToggleLight : public frc::Command {
  private:
  	frc::XboxController* pJoyDrive;
   frc::Relay *lightRelay = new frc::Relay(1);
-  frc::Solenoid exampleSolenoid {1};
+  //frc::Solenoid exampleSolenoid {1};
 
   bool relayState = false;
 

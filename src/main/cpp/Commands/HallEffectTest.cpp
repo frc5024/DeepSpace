@@ -11,10 +11,30 @@ HallEffectTest::HallEffectTest() {
 // Called just before this Command runs the first time
 void HallEffectTest::Initialize() {}
 
-// Called repeatedly when this Command is scheduled to run
+// Called repeatedly when this Command is scheduled to runP
 void HallEffectTest::Execute() {
   bool test1 = Robot::m_hEffect->nearMagnet1();
-  std::cout << "The value of the first hall effect sensor is: " << test1 << std::endl;
+  std::cout << "The value of the hall effect sensor one is: " << test1 << std::endl;
+
+  bool test2 = Robot::m_hEffect->nearMagnet2();
+  std::cout << "The value of the hall effect sensor two is: " << test2 << std::endl;
+  
+  bool test3 = Robot::m_hEffect->nearMagnet3();
+  std::cout << "The value of the hall effect sensor three is: " << test3 << std::endl;
+  
+  bool test4 = Robot::m_hEffect->nearMagnet4();
+  std::cout << "The value of the hall effect sensor four is: " << test4 << std::endl;
+
+  bool test5 = Robot::m_hEffect->nearMagnet5();
+  std::cout << "The value of the hall effect sensor five is: " << test5 << std::endl;
+  
+  bool test6 = Robot::m_hEffect->nearMagnet6();
+  std::cout << "The value of the hall effect sensor six is: " << test6 << std::endl;
+  
+  bool test7 = Robot::m_hEffect->nearMagnet7();
+  std::cout << "The value of the hall effect sensor seven is: " << test7 << std::endl;
+
+
 
   // Test code for the limit switch #1:
   //bool test2 = Robot::hEffect->nearMagnet1();

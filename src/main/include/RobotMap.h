@@ -33,8 +33,26 @@
 #define LIGHT_RELAY 0 // Todo: put relay port here.
 
 // Limit switches
-#define LIMITSWITCH_ONE_PORT 5
+#define LIMITSWITCH_ONE_PORT 4
 #define LIMITSWITCH_TWO_PORT 3
+// pins for hall effect:
+// back bottom: 6
+// back plastic (right): 5  
+// top back: 1
+// from botoom up
+
+// front MIDDLE: 2
+// front right strafe: 0
+// front left: 3
+// front arm left: 4
+
+// optical sensor: 8
+
+// Hall effect
+#define BACK_BOTTOM_HALLEFFECT 6
+#define BACK_RIGHT_TOP_HALLEFFECT 5
+#define BACK_TOP_HALLEFFECT 1
+#define FRONT_MIDDLE_HALLEFFECT 2
 
 // Ultrasonic sensor
 #define ULTRASONIC_PORT 1

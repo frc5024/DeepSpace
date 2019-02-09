@@ -15,11 +15,13 @@ void LimitSwitchCommand::Initialize() {}
 void LimitSwitchCommand::Execute() {
   // Test code for the limit switch #1:
   bool test1 = Robot::m_liSwitches->isOn1();
-  std::cout << "The value of limit switch #1 is: " << test1 << "(" << Robot::m_liSwitches->ChannelNumber() << ")" << std::endl;
+  // std::cout << "The value of limit switch #1 is: " << test1 << "(" << Robot::m_liSwitches->ChannelNumber() << ")" << std::endl;
 
-  // Test code for the limit switch #1:
-  bool test2 = Robot::m_liSwitches->isOn2();
-  std::cout << "The value of limit switch #2 is" << test2 << std::endl;
+  // // Test code for the limit switch #1:
+  // bool test2 = Robot::m_liSwitches->isOn2();
+  // std::cout << "value of limit switch #2 is" << test2 << std::endl;
+  //std::cout << "The Value of the Hall effect is :" << test1 << std::endl;
+  
 }
 
 // Make this return true when this Command no longer needs to run execute()

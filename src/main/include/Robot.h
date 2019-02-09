@@ -32,7 +32,7 @@ class Robot : public frc::TimedRobot {
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
   LimitSwitchCommand* liCommand; // just a test for limit switch
   ToggleLight* tglLight; //!< Pointer for the ToggleLight command
-
+  HallEffectTest *heTest;
 	// Robot methods
   void RobotInit() override;          //!< Runs once on robot boot
   void RobotPeriodic() override;      //!< Runs in a loop while the robot is turned on in any mode
