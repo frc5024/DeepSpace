@@ -3,9 +3,9 @@
 #include <frc/commands/Command.h>
 #include <Subsystems/LimitSwitches.h>
 
-class TestCommand : public frc::Command {
+class LimitSwitchCommand : public frc::Command {
  public:
-  TestCommand();
+  LimitSwitchCommand();
   void Initialize() override;
   void Execute() override;
   bool IsFinished() override;

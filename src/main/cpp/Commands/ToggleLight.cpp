@@ -1,3 +1,4 @@
+#include "iostream"
 #include "Commands/ToggleLight.h"
 #include <Robot.h>
 
@@ -8,22 +9,29 @@ ToggleLight::ToggleLight() {
 
 // Called just before this Command runs the first time
 void ToggleLight::Initialize() {
+  this->relayState = false;
   this->lightRelay->Set(frc::Relay::Value::kOff);
+  this->exampleSolenoid.Set(false);
 }
 
 // Called repeatedly when this Command is scheduled to run
 void ToggleLight::Execute() {
   if (this->pJoyDrive->GetBButtonReleased())
   {
+    // Used for testing:
+    std::cout << "B button pressed! Light toggleed" << std::endl;
+    
     relayState = !relayState;
 
     if (relayState)
     {
-      this->lightRelay->Set(frc::Relay::Value::kOn);  
+      //this->lightRelay->Set(frc::Relay::Value::kOn);  
+      this->exampleSolenoid.Set(true);
     }
     else
     {
-      this->lightRelay->Set(frc::Relay::Value::kOff);
+      //this->lightRelay->Set(frc::Relay::Value::kOff);
+      this->exampleSolenoid.Set(false);
     }
   }
 

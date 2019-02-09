@@ -7,8 +7,8 @@
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
 OI *Robot::m_oi;
-LimitSwitches *Robot::liSwitches;
-HallEffect * Robot::hEffect;
+LimitSwitches *Robot::m_liSwitches;
+HallEffect * Robot::m_hEffect;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -20,8 +20,8 @@ void Robot::RobotInit() {
   // Subsystems
   this->m_DriveTrain = new DriveTrain();
   this->m_oi = new OI();
-  this->liSwitches = new LimitSwitches();
-  this->hEffect = new HallEffect();
+  this->m_liSwitches = new LimitSwitches();
+  this->m_hEffect = new HallEffect();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
@@ -31,15 +31,19 @@ void Robot::RobotInit() {
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
-  this->tCommand = new TestCommand();
+  this->liCommand = new LimitSwitchCommand();
   this->tglLight = new ToggleLight();
   
   // Set robot loop speed (in seconds)
   std::cout << "Setting Period Time.." << std::endl;
   // this->SetPeriod(0.01);
 
-  if (this->tCommand != nullptr) {
-		this->tCommand->Start();
+  if (this->liCommand != nullptr) {
+		this->liCommand->Start();
+	}
+
+  if (this->tglLight != nullptr) {
+		this->tglLight->Start();
 	}
 }
 

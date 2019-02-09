@@ -9,7 +9,7 @@ LimitSwitches::LimitSwitches() : Subsystem("LimitSwitches") {
 }
 
 void LimitSwitches::InitDefaultCommand() {
-  SetDefaultCommand(new TestCommand()); // TODO: this should be changed
+  SetDefaultCommand(new LimitSwitchCommand()); // TODO: this should be changed
 }
 
 bool LimitSwitches::isOn1() {

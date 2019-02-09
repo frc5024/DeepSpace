@@ -29,8 +29,11 @@
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 
+// Light relay
+#define LIGHT_RELAY 0 // Todo: put relay port here.
+
 // Limit switches
-#define LIMITSWITCH_ONE_PORT 2
+#define LIMITSWITCH_ONE_PORT 5
 #define LIMITSWITCH_TWO_PORT 3
 
 // Ultrasonic sensor

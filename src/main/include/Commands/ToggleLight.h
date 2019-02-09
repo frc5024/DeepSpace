@@ -5,6 +5,7 @@
 
 #include <frc/commands/Command.h>
 #include <frc/Relay.h>
+#include <frc/Solenoid.h>
 #include <Subsystems/DriveTrain.h>
 #include "RobotMap.h"
 
@@ -20,7 +21,10 @@ class ToggleLight : public frc::Command {
  private:
  	frc::XboxController* pJoyDrive;
   frc::Relay *lightRelay = new frc::Relay(1);
+  frc::Solenoid exampleSolenoid {1};
+
   bool relayState = false;
+
 };
 
 #endif // _TOGGLELIGHT_HG_

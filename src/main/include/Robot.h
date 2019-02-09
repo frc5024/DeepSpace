@@ -9,7 +9,7 @@
 #include <cscore_oo.h>
 
 #include "Commands/TriggerDrive.h"
-#include "Commands/TestCommand.h"
+#include "Commands/LimitSwitchCommand.h"
 #include "Commands/ToggleLight.h"
 #include "Commands/HallEffectTest.h"
 #include "OI.h"
@@ -23,14 +23,14 @@ class Robot : public frc::TimedRobot {
 	// Subsystems
   static DriveTrain *m_DriveTrain;  //!< Pointer for the DriveTrain
   static OI *m_oi;                  //!< Pointer for the Operator Interface (OI)
-  static LimitSwitches *liSwitches; //!< Pointer for the Limit Switches
-  static HallEffect *hEffect;
+  static LimitSwitches *m_liSwitches; //!< Pointer for the Limit Switches
+  static HallEffect *m_hEffect;       //!< Pointer for the Hall Effect
 	
   // note: don't know if I am supposed to put m_ for other subsystem variable names. ask later...
 
   // Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
-  TestCommand* tCommand; // just a test for limit switch
+  LimitSwitchCommand* liCommand; // just a test for limit switch
   ToggleLight* tglLight; //!< Pointer for the ToggleLight command
 
 	// Robot methods

@@ -5,8 +5,7 @@
 #include "Robot.h"
 
 HallEffectTest::HallEffectTest() {
-  // Use Requires() here to declare subsystem dependencies
-  // eg. Requires(Robot::chassis.get());
+  Requires(Robot::m_hEffect);
 }
 
 // Called just before this Command runs the first time
@@ -14,12 +13,12 @@ void HallEffectTest::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
 void HallEffectTest::Execute() {
-  bool test1 = Robot::hEffect->nearMagnet1();
+  bool test1 = Robot::m_hEffect->nearMagnet1();
   std::cout << "The value of the first hall effect sensor is: " << test1 << std::endl;
 
   // Test code for the limit switch #1:
-  bool test2 = Robot::hEffect->nearMagnet1();
-  std::cout << "The value of the first hall effect sensor is: " << test2 << std::endl;
+  //bool test2 = Robot::hEffect->nearMagnet1();
+  // std::cout << "The value of the first hall effect sensor is: " << test2 << std::endl;
 }
 
 // Make this return true when this Command no longer needs to run execute()

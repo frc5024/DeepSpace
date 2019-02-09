@@ -2,7 +2,10 @@
 #include "Robot.h"
 #include "RobotMap.h"
 
-HallEffect::HallEffect() : Subsystem("HallEffect") {}
+HallEffect::HallEffect() : Subsystem("HallEffect") {
+  this->hallSensor1 = new frc::DigitalInput(3);
+  this->hallSensor2 = new frc::DigitalInput(4);
+}
 
 void HallEffect::InitDefaultCommand() {
    SetDefaultCommand(new HallEffectTest());
