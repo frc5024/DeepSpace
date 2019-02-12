@@ -1,7 +1,7 @@
 #include "Subsystems/Cargo.h"
 
 Cargo::Cargo() : frc::Subsystem("Cargo") {
-  this->pSolenoid = new frc::Solenoid(PCM_CAN_ID, CARGO_PISTON_ID);
+  this->pSolenoid = new frc::DoubleSolenoid(CARGO_PISTON_FORWARD_ID, CARGO_PISTON_BACKWARD_ID);
 }
 
 void Cargo::InitDefaultCommand() {
@@ -9,9 +9,13 @@ void Cargo::InitDefaultCommand() {
 }
 
 void Cargo::Deploy() {
-	this->pSolenoid->Set(true);
+	this->pSolenoid->Set(frc::DoubleSolenoid::Value::kForward);
 }
 
 void Cargo::Retract() {
-	this->pSolenoid->Set(false);
+	this->pSolenoid->Set(frc::DoubleSolenoid::Value::kReverse);
+}
+
+void Cargo::Release(){
+  this->pSolenoid->Set(frc::DoubleSolenoid::Value::kOff);
 }

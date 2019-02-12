@@ -4,7 +4,7 @@
 #include <frc/commands/Subsystem.h>
 #include "RobotMap.h"
 #include <Commands/ControlCargo.h>
-#include <frc/Solenoid.h>
+#include <frc/DoubleSolenoid.h>
 #include <frc/WPILib.h>
 
 class Cargo : public frc::Subsystem {
@@ -14,9 +14,10 @@ class Cargo : public frc::Subsystem {
 	
   void Deploy();  //!< Deploy the piston
   void Retract(); //!< Retract the piston
+  void Release(); //!< Releases pressure from the piston
 
  private:
-  frc::Solenoid* pSolenoid; //!< Pointer to Solenoid
+  frc::DoubleSolenoid* pSolenoid; //!< Pointer to Solenoid
 };
 
 #endif // _CARGO_HG_
