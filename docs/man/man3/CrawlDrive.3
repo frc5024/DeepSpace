@@ -1,4 +1,4 @@
-.TH "CrawlDrive" 3 "Mon Feb 4 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "CrawlDrive" 3 "Tue Feb 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,30 +23,26 @@ Inherits Subsystem\&.
 .br
 .RI "Initalizes the default command for this subsystem () "
 .ti -1c
-.RI "void \fBArcadeDrive\fP (double xSpeed, double zRotation)"
+.RI "void \fBMove\fP (double Speed)"
 .br
 .in -1c
 .SS "Private Attributes"
 
 .in +1c
 .ti -1c
-.RI "can::WPI_TalonSRX * \fBpCrawlLeft\fP"
+.RI "frc::Spark * \fBpCrawlLeft\fP"
 .br
 .RI "Pointer for the left crawl motor\&. "
 .ti -1c
-.RI "can::WPI_TalonSRX * \fBpCrawlRight\fP"
+.RI "frc::Spark * \fBpCrawlRight\fP"
 .br
-.RI "Pointer for the right craw motor\&. "
-.ti -1c
-.RI "frc::DifferentialDrive * \fBpCrawlDriveTrain\fP"
-.br
-.RI "Pointer for a differential drivebase made up of 2 motors\&. "
+.RI "Pointer for the right crawl motor\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 A subsytem that interfaces with the climberbase on the robot\&. 
 .PP
-Definition at line 11 of file CrawlDrive\&.h\&.
+Definition at line 10 of file CrawlDrive\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "CrawlDrive::CrawlDrive ()"
@@ -57,7 +53,13 @@ Class constructor\&.
 Definition at line 3 of file CrawlDrive\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void CrawlDrive::ArcadeDrive (double xSpeed, double zRotation)"
+.SS "void CrawlDrive::InitDefaultCommand ()\fC [override]\fP"
+
+.PP
+Initalizes the default command for this subsystem () 
+.PP
+Definition at line 20 of file CrawlDrive\&.cpp\&.
+.SS "void CrawlDrive::Move (double Speed)"
 Pass data to wpilib's ArcadeDrive
 .PP
 \fBParameters:\fP
@@ -69,33 +71,21 @@ Pass data to wpilib's ArcadeDrive
 .PP
 
 .PP
-Definition at line 28 of file CrawlDrive\&.cpp\&.
-.SS "void CrawlDrive::InitDefaultCommand ()\fC [override]\fP"
-
-.PP
-Initalizes the default command for this subsystem () 
-.PP
 Definition at line 24 of file CrawlDrive\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
-.SS "frc::DifferentialDrive* CrawlDrive::pCrawlDriveTrain\fC [private]\fP"
-
-.PP
-Pointer for a differential drivebase made up of 2 motors\&. 
-.PP
-Definition at line 28 of file CrawlDrive\&.h\&.
-.SS "can::WPI_TalonSRX* CrawlDrive::pCrawlLeft\fC [private]\fP"
+.SS "frc::Spark* CrawlDrive::pCrawlLeft\fC [private]\fP"
 
 .PP
 Pointer for the left crawl motor\&. 
 .PP
-Definition at line 25 of file CrawlDrive\&.h\&.
-.SS "can::WPI_TalonSRX* CrawlDrive::pCrawlRight\fC [private]\fP"
+Definition at line 24 of file CrawlDrive\&.h\&.
+.SS "frc::Spark* CrawlDrive::pCrawlRight\fC [private]\fP"
 
 .PP
-Pointer for the right craw motor\&. 
+Pointer for the right crawl motor\&. 
 .PP
-Definition at line 26 of file CrawlDrive\&.h\&.
+Definition at line 25 of file CrawlDrive\&.h\&.
 
 .SH "Author"
 .PP 

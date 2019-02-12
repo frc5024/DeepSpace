@@ -6,7 +6,7 @@ var classPullLeg =
     [ "Initialize", "classPullLeg.html#ab9cb6ff407de7c65f3426e853c30da45", null ],
     [ "Interrupted", "classPullLeg.html#a993a67d7235c0306c9642d4560fe9b3f", null ],
     [ "IsFinished", "classPullLeg.html#ac827e1e15c2494436f6c42cd95349094", null ],
-    [ "pJoyDrive", "classPullLeg.html#a47e3be50d7f1b79bb2e12e7d2625d953", null ],
+    [ "pJoyDebug", "classPullLeg.html#a9164ecbf2e340d4f21bc37c3884fccc6", null ],
     [ "speed", "classPullLeg.html#a4b0f5defe760793c86d1ff1fcc4c3429", null ],
     [ "speedMultiplier", "classPullLeg.html#a255e7406292da93d898a6ee3010787b2", null ]
 ];

@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classRobot.html#aa73b63ec078b50244672b38e6ef2f506":[4,0,15,17],
 "classRobot.html#aa8a06c70bde4869e292aaddb68e5051d":[4,0,15,21],
 "classRobot.html#aa964d2c37a74f213d9fd3e2203bb3447":[4,0,15,23],
 "classRobot.html#ab1877ba35293a8925ef347e5f64ceef3":[4,0,15,11],
@@ -52,8 +53,8 @@ var NAVTREEINDEX1 =
 "globals_defs.html":[5,1,2],
 "globals_func.html":[5,1,1],
 "hierarchy.html":[4,2],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "md_docs_controller_layout.html":[1],
 "md_docs_devices.html":[2],
 "namespacebuildcml.html":[3,0,0],

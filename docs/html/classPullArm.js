@@ -6,7 +6,7 @@ var classPullArm =
     [ "Initialize", "classPullArm.html#a084986b7f82e5fed56fe0e8916993b6f", null ],
     [ "Interrupted", "classPullArm.html#abf14ac18317ed2c4987b497c14d9d849", null ],
     [ "IsFinished", "classPullArm.html#a603d41c1b00c939f7be37c05bfd7d88b", null ],
-    [ "pJoyDrive", "classPullArm.html#ab51e612b9d20678ea44f2cc9f383576b", null ],
+    [ "pJoyDebug", "classPullArm.html#a77c73ab34a5853967882303fa04bcca0", null ],
     [ "speed", "classPullArm.html#a4c447afa17d7ebd3a0c92a7fdf8beb5e", null ],
     [ "speedMultiplier", "classPullArm.html#a9f04a3605c77477823d9814b0b7f7329", null ]
 ];

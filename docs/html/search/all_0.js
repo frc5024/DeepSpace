@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['arcadedrive',['ArcadeDrive',['../classCrawlDrive.html#abf1c4afb47a27eed15516c237467f4a0',1,'CrawlDrive::ArcadeDrive()'],['../classDriveTrain.html#aee63999ae98aa26e4c2866444eab2c4a',1,'DriveTrain::ArcadeDrive()']]],
+  ['arcadedrive',['ArcadeDrive',['../classDriveTrain.html#aee63999ae98aa26e4c2866444eab2c4a',1,'DriveTrain']]],
   ['arm',['Arm',['../classArm.html',1,'Arm'],['../classArm.html#a920d0f828c6e76188827cf0c073963de',1,'Arm::Arm()']]],
   ['arm_2ecpp',['Arm.cpp',['../Arm_8cpp.html',1,'']]],
   ['arm_2eh',['Arm.h',['../Arm_8h.html',1,'']]],

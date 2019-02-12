@@ -6,7 +6,6 @@ var RobotMap_8h =
     [ "CLIMB_ARM_MOTOR_2", "RobotMap_8h.html#a021f5b9905a9e5af9e70d939a4671ebd", null ],
     [ "CLIMB_LEG_MOTOR", "RobotMap_8h.html#a1d4434e8398186183f9563467894c3dc", null ],
     [ "CLIMB_ULTRASONIC", "RobotMap_8h.html#adb4df0426b06ba5efb4972e37b704647", null ],
-    [ "COMPRESSOR_PIN", "RobotMap_8h.html#a0193d6b9a03dc1330b5390d3f1df4f19", null ],
     [ "CRAWL_LEFT_MOTOR", "RobotMap_8h.html#a1dfa803bd82207845f754e8f9d1134b4", null ],
     [ "CRAWL_RIGHT_MOTOR", "RobotMap_8h.html#a566075319790055dba04f1386020bbab", null ],
     [ "DRIVETRAIN_LEFT_FRONT_MOTOR", "RobotMap_8h.html#a93ee73d141525c1decc8dd63f205cbe4", null ],
@@ -27,6 +26,7 @@ var RobotMap_8h =
     [ "SLIDER_MOTOR", "RobotMap_8h.html#aa904ac443cb51bcd6c3ccd6799065890", null ],
     [ "True", "RobotMap_8h.html#add3ca9eefe3b5b754426f51d3043e579", null ],
     [ "WinGame", "RobotMap_8h.html#a06ff4c1b825f2b61a5dcdc5e5bae9ea9", null ],
+    [ "XBOX_CONTROLLER_DEBUG_PORT", "RobotMap_8h.html#a0dafa0d89714a468d705c2e56770e404", null ],
     [ "XBOX_CONTROLLER_DRIVE_PORT", "RobotMap_8h.html#aef0db07128cdb05d2eeea784a1642ed5", null ],
     [ "XBOX_CONTROLLER_OPERATOR_PORT", "RobotMap_8h.html#a1c626b8a3c165a1100790b0b4b84a1b8", null ]
 ];
