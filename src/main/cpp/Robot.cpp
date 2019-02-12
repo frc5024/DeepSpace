@@ -44,7 +44,11 @@ void Robot::RobotInit() {
   std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
   std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
   this->visionCam.SetConfigJson(visionSettings);
+  this->visionCam.SetConnectionStrategy(cs::VideoSource::ConnectionStrategy::kConnectionKeepOpen);
 	
+  // Set driver cam settings
+  this->frontCam.SetConnectionStrategy(cs::VideoSource::ConnectionStrategy::kConnectionKeepOpen);
+
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
