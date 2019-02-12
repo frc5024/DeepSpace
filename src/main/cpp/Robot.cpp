@@ -57,7 +57,7 @@ void Robot::RobotInit() {
 
   // Create Telemetry table
   std::cout << "Connecting to telemetry table.." << std::endl;
-  this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry");
+  this->ntTelemetry = this->telemetryTableInstance.GetTable("SmartDashboard/Telemetry");
 
   // create ds and pdp objects
   std::cout << "Creating Driverstation and PDP objects" << std::endl;

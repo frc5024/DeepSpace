@@ -5,6 +5,7 @@
 #include <frc/commands/Command.h>
 #include <frc/smartdashboard/SendableChooser.h>
 #include <networktables/NetworkTable.h>
+#include <networktables/NetworkTableInstance.h>
 #include <frc/TimedRobot.h>
 #include <frc/WPILib.h>
 #include <cscore_oo.h>
@@ -74,6 +75,8 @@ class Robot : public frc::TimedRobot {
   frc::DriverStation& driverStation = frc::DriverStation::GetInstance(); //!< DriverStation instance
   frc::PowerDistributionPanel* pdp; //!< Power Distrobution Panel information
 
+  // nt::NetworkTable *ntInterface = new NetworkTable();
+  nt::NetworkTableInstance telemetryTableInstance = NetworkTable::GetInstance();
   std::shared_ptr<NetworkTable> ntTelemetry; //!< A pointer to the /SmartDashboard/Telemetry table
 };
 
