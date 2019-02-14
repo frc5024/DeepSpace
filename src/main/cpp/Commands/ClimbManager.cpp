@@ -2,11 +2,15 @@
 #include "Robot.h"
 #include <frc/commands/Scheduler.h>
 
+ClimbManager::ClimbState ClimbManager::CurrentClimbState;
+
 ClimbManager::ClimbManager() {
   // Use Requires() here to declare subsystem dependencies
   // eg. Requires(Robot::chassis.get());
   this->pJoyDrive = Robot::m_oi->GetJoystickDrive();
   this->pJoyOp    = Robot::m_oi->GetJoystickOperator();
+
+  this->CurrentClimbState = this->ClimbState::kInactive;
 }
 
 // Called just before this Command runs the first time
@@ -18,8 +22,11 @@ void ClimbManager::Execute() {
     return;
   }
 
-  // Robot::CancelTeleop();
-  frc::Scheduler::GetInstance();
+  // Signal all commands to kill themselves
+  this->CurrentClimbState = this->ClimbState::kSemiAuto;
+
+  // Start vibrating driver controller
+  this->pJoyDrive->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 0.5);
 }
 
 // Make this return true when this Command no longer needs to run execute()

@@ -1,6 +1,6 @@
 //! An interface command for activating the Pull Arm on the robot
-#ifndef _PULLARM_HG_
-#define _PULLARM_HG_
+#ifndef _RaiseBot_HG_
+#define _RaiseBot_HG_
 
 #include <frc/commands/Command.h>
 #include <Subsystems/CrawlDrive.h>
@@ -8,9 +8,9 @@
 #include <frc/GenericHID.h>
 #include "Commands/ClimbManager.h"
 
-class PullArm : public frc::Command {
+class RaiseBot : public frc::Command {
   public:
-    PullArm();                  //!< Class constructor
+    RaiseBot();                  //!< Class constructor
     void Initialize() override; //!< Runs once on initalization
     void Execute() override;    //!< Called in a loop during Teleop
     
@@ -26,10 +26,9 @@ class PullArm : public frc::Command {
     void Interrupted() override; //!< Runs once if the command is forced to stop
     
   private:
-    double speedMultiplier;
-
     double speed;
+    double gyro;
 
-    frc::XboxController* pJoyDebug;
+    frc::XboxController* pJoyDrive;
 };
-#endif // _PULLARM_HG_
+#endif // _RaiseBot_HG_

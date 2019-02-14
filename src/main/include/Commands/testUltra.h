@@ -7,6 +7,7 @@
 #include <Subsystems/Arm.h>
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
+#include "Commands/ClimbManager.h"
 
 class testUltra : public frc::Command {
  public:

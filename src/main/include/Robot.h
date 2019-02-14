@@ -15,6 +15,8 @@
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
 #include "Commands/DeployClimb.h"
+#include "Commands/ClimbManager.h"
+#include "Commands/RaiseBot.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/CrawlDrive.h"
@@ -49,6 +51,8 @@ class Robot : public frc::TimedRobot {
   DeployClimb* pDeployClimb;
   ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
   ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
+  ClimbManager* pClimbManager;
+  RaiseBot* pRaiseBot;
 
 	// Robot methods
   void RobotInit()          override; //!< Runs once on robot boot

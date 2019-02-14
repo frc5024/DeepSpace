@@ -26,7 +26,9 @@ void PullArm::Execute() {
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool PullArm::IsFinished() { return false; }
+bool PullArm::IsFinished() { 
+    return !(ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kInactive); 
+}
 
 // Called once after isFinished returns true
 void PullArm::End() {}

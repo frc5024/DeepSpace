@@ -54,6 +54,8 @@ void Robot::RobotInit() {
   this->pDeployClimb = new DeployClimb();
   this->pControlSlider = new ControlSlider();
   this->pControlCompressor = new ControlCompressor();
+  this->pClimbManager = new ClimbManager();
+  this->pRaiseBot = new RaiseBot();
 
   // Create Telemetry table
   std::cout << "Connecting to telemetry table.." << std::endl;
@@ -84,6 +86,8 @@ void Robot::RobotPeriodic() {
   this->ntTelemetry->PutNumber("voltage",  robotVoltage);
   this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
   this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
+
+  
 }
 
 /**
@@ -152,9 +156,24 @@ void Robot::TeleopInit() {
   if (this->pControlCompressor != nullptr) {
 		this->pControlCompressor->Start();
 	}
+  if (this->pClimbManager != nullptr) {
+		this->pClimbManager->Start();
+	}
 }
 
-void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }
+void Robot::TeleopPeriodic() { 
+  // Restart TriggerDrive once climb is done
+  if (this->pTriggerDrive != nullptr && !this->pTriggerDrive->IsRunning() && ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kInactive){
+    this->pTriggerDrive->Start();
+  }
+
+  // Enable RaiseBot when kSemiAuto
+  if (this->pRaiseBot != nullptr && !this->pRaiseBot->IsRunning() && ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kSemiAuto){
+    this->pRaiseBot->Start();
+  }
+
+  frc::Scheduler::GetInstance()->Run(); 
+}
 
 void Robot::TestPeriodic() {}
 

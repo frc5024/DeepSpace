@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _CLIMBMANAGER_HG_
+#define _CLIMBMANAGER_HG_
 
 #include <frc/commands/Command.h>
 #include <frc/GenericHID.h>
@@ -6,6 +7,15 @@
 
 class ClimbManager : public frc::Command {
   public:
+    enum ClimbState {
+      kInactive,
+      kSemiAuto,
+      kAuto
+    };
+
+    static ClimbState CurrentClimbState;
+
+
     ClimbManager();//!< Class constructor
     void Initialize() override; //!< Runs once on initalization
     void Execute() override;    //!< Called in a loop during Teleop
@@ -24,3 +34,5 @@ class ClimbManager : public frc::Command {
     frc::XboxController* pJoyDrive;
     frc::XboxController* pJoyOp;
 };
+
+#endif //__CLIMBMANAGER_HG_

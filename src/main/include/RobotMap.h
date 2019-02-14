@@ -39,6 +39,10 @@
 #define CLIMB_ULTRASONIC 1
 #define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF 0.8
 
+// Climb settings
+#define CLIMB_M 0.6
+#define CLIMB_B 0.3
+
 // Slider
 #define SLIDER_MOTOR 7
 
