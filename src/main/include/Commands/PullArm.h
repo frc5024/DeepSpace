@@ -6,6 +6,7 @@
 #include <Subsystems/CrawlDrive.h>
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
+#include <networktables/NetworkTable.h>
 
 
 class PullArm : public frc::Command {
@@ -37,5 +38,6 @@ class PullArm : public frc::Command {
     double b;
 
     frc::XboxController* pJoyDebug;
+    std::shared_ptr<NetworkTable> sd;
 };
 #endif // _PULLARM_HG_

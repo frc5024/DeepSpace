@@ -9,6 +9,8 @@ PullArm::PullArm() {
     Requires(Robot::m_Arm);
      Requires(Robot::m_CrawlDrive);
     this->pJoyDebug = Robot::m_oi->GetJoystickDebug();
+
+    this->sd = NetworkTable::GetTable("SmartDashboard");
 }
 
 // Called just before this Command runs the first time
@@ -32,9 +34,13 @@ void PullArm::Execute() {
 
     this->gyro = Robot::m_Arm->GetAngle();
 
-    Robot::m_Arm->MoveArm((this->speed-(this->gyro*this->m)-(100-this->b)));
+    double output = (this->speed-((this->gyro*this->m)/100)-(1.00-this->b));
+
+    // Robot::m_Arm->MoveArm(output);
 
     Robot::m_CrawlDrive->Move(this->pJoyDebug->GetTriggerAxis(Hand::kRightHand) - this->pJoyDebug->GetTriggerAxis(Hand::kLeftHand));
+
+    this->sd->PutNumber("Arm_Output", output);
 }
 
 // Make this return true when this Command no longer needs to run execute()
