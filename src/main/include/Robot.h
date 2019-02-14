@@ -27,6 +27,7 @@
 
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
+#include <frc/DigitalInput.h>
 
 
 class Robot : public frc::TimedRobot {
@@ -75,6 +76,16 @@ class Robot : public frc::TimedRobot {
   frc::PowerDistributionPanel* pdp; //!< Power Distrobution Panel information
 
   std::shared_ptr<NetworkTable> ntTelemetry; //!< A pointer to the /SmartDashboard/Telemetry table
+  frc::DigitalInput* pin0;
+	frc::DigitalInput* pin1;
+	frc::DigitalInput* pin2;
+	frc::DigitalInput* pin3;
+	frc::DigitalInput* pin4;
+	frc::DigitalInput* pin5;
+	frc::DigitalInput* pin6;
+	frc::DigitalInput* pin7;
+	frc::DigitalInput* pin8;
+	frc::DigitalInput* pin9;
 };
 
 #endif //_ROBOT_HG_

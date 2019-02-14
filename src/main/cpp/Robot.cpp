@@ -23,6 +23,17 @@ void Robot::RobotInit() {
   std::cout << "-------------------" << std::endl;
   std::cout << "Robot Starting.."<< std::endl;
 
+  this->pin0 = new frc::DigitalInput(0);
+	this->pin1 = new frc::DigitalInput(1);
+	this->pin2 = new frc::DigitalInput(2);
+	this->pin3 = new frc::DigitalInput(3);
+	this->pin4 = new frc::DigitalInput(4);
+	this->pin5 = new frc::DigitalInput(5);
+	this->pin6 = new frc::DigitalInput(6);
+	this->pin7 = new frc::DigitalInput(7);
+	this->pin8 = new frc::DigitalInput(8);
+	this->pin9 = new frc::DigitalInput(9);
+
   // Subsystems
   std::cout << "Creating Subsystems..." << std::endl;
   this->m_DriveTrain = new DriveTrain();
@@ -84,6 +95,17 @@ void Robot::RobotPeriodic() {
   this->ntTelemetry->PutNumber("voltage",  robotVoltage);
   this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
   this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
+
+  std::cout << "p0: " << this->pin0->Get() << //STRAFE RIGHT
+              " p1: " << this->pin1->Get() << //LEG TOP SENSOR
+              " p2: " << this->pin2->Get() << //STRAFE CENTER
+              " p3: " << this->pin3->Get() << //STRAFE LEFT
+              " p4: " << this->pin4->Get() << //ARM DOWN POSITION
+              " p5: " << this->pin5->Get() << //LEG CENTRE SENSOR
+              " p6: " << this->pin6->Get() << //LEG BOTTEM SENSOR
+              " p7: " << this->pin7->Get() << //OPTICAL
+              " p8: " << this->pin8->Get() <<
+              " p9: " << this->pin9->Get() << std::endl;
 }
 
 /**
