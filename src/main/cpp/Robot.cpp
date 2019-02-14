@@ -51,7 +51,7 @@ void Robot::RobotInit() {
   this->pTestUltra = new testUltra();
   this->pPullArm = new PullArm();
   this->pPullLeg = new PullLeg();
-  this->pDeployClimb = new DeployClimb();
+  this->pClimb = new Climb();
   this->pControlSlider = new ControlSlider();
   this->pControlCompressor = new ControlCompressor();
   this->pClimbManager = new ClimbManager();

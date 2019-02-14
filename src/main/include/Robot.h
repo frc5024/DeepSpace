@@ -14,7 +14,7 @@
 #include "Commands/testUltra.h"
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
-#include "Commands/DeployClimb.h"
+#include "Commands/Climb.h"
 #include "Commands/ClimbManager.h"
 #include "Commands/RaiseBot.h"
 #include "OI.h"
@@ -48,7 +48,7 @@ class Robot : public frc::TimedRobot {
   testUltra* pTestUltra;
   PullArm* pPullArm;
   PullLeg* pPullLeg;
-  DeployClimb* pDeployClimb;
+  Climb* pClimb;
   ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
   ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
   ClimbManager* pClimbManager;

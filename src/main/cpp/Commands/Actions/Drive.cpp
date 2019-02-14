@@ -1,23 +1,22 @@
-#include "Commands/DeployArm.h"
+#include "Commands/Actions/Drive.h"
 #include "Robot.h"
 
-DeployArm::DeployArm(double timeout, double speed)
-    : TimedCommand(timeout) {
-    Requires(Robot::m_Arm);
+Drive::Drive(double speed, double timeout) : TimedCommand(timeout) {
+    Requires(Robot::m_DriveTrain);
     this->speed = speed;
 }
 
 // Called just before this Command runs the first time
-void DeployArm::Initialize() {}
+void Drive::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
-void DeployArm::Execute() {
-    Robot::m_Arm->MoveArm(this->speed);
+void Drive::Execute() {
+    Robot::m_DriveTrain->ArcadeDrive(this->speed, 0.0);
 }
 
 // Called once after command times out
-void DeployArm::End() {}
+void Drive::End() {}
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void DeployArm::Interrupted() {}
+void Drive::Interrupted() {}
