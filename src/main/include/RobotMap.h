@@ -14,8 +14,11 @@
 #define ROBOT_CYCLE_TIME	0.02
 
 // RadialTurn
-#define RADIAL_LENGTH				666 // TODO: Measure: Horizontal distance from camera to front bumper
-#define RADIAL_WIDTH_WHEEL_2		666 // TODO: Measure: Horizontal distance from left side wheels to right side wheels divided by two
+#define RADIAL_LENGTH				666     // TODO: Measure: Horizontal distance from camera to front bumper
+#define RADIAL_WIDTH_WHEEL_2		666     // TODO: Measure: Horizontal distance from left side wheels to right side wheels divided by two
+#define RADIAL_MAX_VEL              466.4   // Maximum velocity of robot (cm/s)
+#define RADIAL_MAX_ACCEL            19.2    // Maximum acceleration of robot (cm/s/s)
+//#define RADIAL_MAX_JERK             666   // TODO: Measure: Maximum jerk of robot (cm/s/s/s)
 
 // Camera mappings
 #define CAMERASERVER_DRIVER_CAMERA		1
