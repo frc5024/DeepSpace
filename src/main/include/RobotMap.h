@@ -45,6 +45,10 @@
 
 #define CLIMB_MAX_HEIGHT 100
 
+// Motor hold speeds
+#define ARM_HOLD_SPEED 0.2
+#define LEG_HOLD_SPEED 0.1
+
 // Slider
 #define SLIDER_MOTOR 7
 
