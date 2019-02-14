@@ -43,6 +43,8 @@
 #define CLIMB_M 0.6
 #define CLIMB_B 0.3
 
+#define CLIMB_MAX_HEIGHT 100
+
 // Slider
 #define SLIDER_MOTOR 7
 

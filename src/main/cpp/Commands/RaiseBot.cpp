@@ -28,7 +28,11 @@ void RaiseBot::Execute() {
 
 // Make this return true when this Command no longer needs to run execute()
 bool RaiseBot::IsFinished() { 
-    return (ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kAuto); 
+    if(Robot::m_Arm->getDistanceFromFloor >= CLIMB_MAX_HEIGHT){
+        ClimbManager::CurrentClimbState = ClimbManager::ClimbState::kAuto;
+        return true; 
+    }
+    
 }
 
 // Called once after isFinished returns true
