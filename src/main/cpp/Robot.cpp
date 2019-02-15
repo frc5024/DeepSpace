@@ -15,6 +15,7 @@ Leg *Robot::m_Leg;
 OI *Robot::m_oi;
 Slider *Robot::m_Slider;
 Piston *Robot::m_Piston;
+Flap *Robot::m_Flap;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -54,6 +55,7 @@ void Robot::RobotInit() {
   this->pDeployClimb = new DeployClimb();
   this->pControlSlider = new ControlSlider();
   this->pControlCompressor = new ControlCompressor();
+  this->pControlCargo = new ControlCargo();
 
   // Create Telemetry table
   std::cout << "Connecting to telemetry table.." << std::endl;
@@ -91,7 +93,9 @@ void Robot::RobotPeriodic() {
  * can use it to reset any subsystem information you want to clear when the
  * robot is disabled.
  */
-void Robot::DisabledInit() {}
+void Robot::DisabledInit() {
+  Robot::m_Flap->Release();
+}
 
 void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
 
@@ -152,6 +156,9 @@ void Robot::TeleopInit() {
   if (this->pControlCompressor != nullptr) {
 		this->pControlCompressor->Start();
 	}
+  if (this->pControlCargo != nullptr){
+    this->pControlCargo->Start();
+  }
 }
 
 void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }
