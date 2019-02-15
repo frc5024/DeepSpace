@@ -26,7 +26,7 @@ void PullArm::Initialize() {
     // Climb settings
     // TODO: move these to ROBOTMAP.h
     this->m = 0.6;
-    this->b = 0.65;
+    this->b = 0.624;
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -34,7 +34,8 @@ void PullArm::Execute() {
     this->speed =(this->pJoyDebug->GetY(Hand::kRightHand)*-1);
 
     if (fabs(this->speed) < 0.1){
-        this->speed = 0.0;
+        Robot::m_Arm->MoveArm(0.0);
+        Robot::m_CrawlDrive->Move(0.0);
         return;
     }
 

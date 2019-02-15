@@ -19,6 +19,9 @@ void PullLeg::Execute() {
 
     //temp
     // this->speed = 0.0;
+    if(frc::RobotController::GetUserButton()){
+        this->speed = 100;
+    }
 
     Robot::m_Leg->MoveLeg(this->speed);
 }
