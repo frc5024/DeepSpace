@@ -15,16 +15,16 @@
 #define ROBOT_WHEEL_DIAMETER		19.25	//!< centimetres
 #define ROBOT_WHEEL_RADIUS			9.625	//!< centimetres
 #define ROBOT_WHEEL_CIRCUMFERENCE	60.48	//!< centimetres
+#define ROBOT_WHEEL_RPM				456		//!< RPM of the main-bot and mini-bot
 
 // Radial Turning Constants
 #define RADIAL_LENGTH				23		//!< centimetres, distance from vision camera to front of robot
 #define RADIAL_WHEELBASE_WIDTH_2	24.91	//!< centimetres, distance from centre of robot to wheels
-#define RADIAL_RPM					456		//!< RPM of both mini-bot and main-bot's motors
 
 // Encoders
 #define ENCODER_TICKS_PER_REVOLUTION	1440	//!< Also known as the resolution, as this is how precise we can be within one rotation
-#define ENCODER_SLOT_INDEX				0		//!< 1 if we do auxillery stuff. we don't
-#define ENCODER_TIMEOUT					100		//1< milliseconds, program will wait AT MOST this long for the encoders to reset before continuing, this 
+//!< TODO: Remaining Encoder constants
+//!< Other encoder constants aren't here as they are not confirmed to be correct or required
 
 // Camera mappings
 #define CAMERASERVER_DRIVER_CAMERA 1
