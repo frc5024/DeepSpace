@@ -1,8 +1,8 @@
 #include "Commands/DeployLeg.h"
 #include "Robot.h"
 
-DeployLeg::DeployLeg(double timeout, double speed)
-    : TimedCommand(timeout) {
+DeployLeg::DeployLeg(double timeout, double speed) : TimedCommand(timeout) {
+    // Use Requires() here to declare subsystem dependencies
     Requires(Robot::m_Leg);
     this->speed = speed;
 }
@@ -12,6 +12,7 @@ void DeployLeg::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
 void DeployLeg::Execute() {
+    // Moves the Leg
     Robot::m_Leg->MoveLeg(this->speed);
 }
 

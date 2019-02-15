@@ -3,16 +3,17 @@
 #include "Robot.h"
 
 PullArm::PullArm() {
+    // Use Requires() here to declare subsystem dependencies
     Requires(Robot::m_Arm);
-     Requires(Robot::m_CrawlDrive);
+    Requires(Robot::m_CrawlDrive);
     this->pJoyDebug = Robot::m_oi->GetJoystickDebug();
 }
 
 // Called just before this Command runs the first time
 void PullArm::Initialize() {
-    //set Speed Multiplyer
+    // Set Speed Multiplyer
     this->speedMultiplier = 1;
-    //set Speed
+    // Set Speed
     this->speed = 0.0;
 }
 

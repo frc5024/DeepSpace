@@ -1,6 +1,6 @@
 #include "Subsystems/Leg.h"
 
-Leg::Leg() : Subsystem("Leg Subsystem") {
+Leg::Leg() : frc::Subsystem("Leg Subsystem") {
    // Initialize the motors
   this->pLegMotor = new can::WPI_TalonSRX(CLIMB_LEG_MOTOR);
   

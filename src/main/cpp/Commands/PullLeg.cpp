@@ -3,6 +3,7 @@
 #include "Robot.h"
 
 PullLeg::PullLeg() {
+    // Use Requires() here to declare subsystem dependencies
     Requires(Robot::m_Leg);
     this->pJoyDebug = Robot::m_oi->GetJoystickDebug();
 }

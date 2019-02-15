@@ -48,7 +48,6 @@ void Robot::RobotInit() {
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
-  this->pTestUltra = new testUltra();
   this->pPullArm = new PullArm();
   this->pPullLeg = new PullLeg();
   this->pDeployClimb = new DeployClimb();

@@ -11,7 +11,6 @@
 
 #include "Commands/TriggerDrive.h"
 #include "Commands/ControlCompressor.h"
-#include "Commands/testUltra.h"
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
 #include "Commands/DeployClimb.h"
@@ -42,15 +41,14 @@ class Robot : public frc::TimedRobot {
   static Slider *m_Slider;         //!< Pointer for the Slider
 
 	// Commands
-  TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
-  testUltra* pTestUltra;
-  PullArm* pPullArm;
-  PullLeg* pPullLeg;
-  DeployClimb* pDeployClimb;
-  ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
+  TriggerDrive* pTriggerDrive;           //!< Pointer for the TriggerDrive command
+  PullArm* pPullArm;                     //!< Pointer for the PullArm command
+  PullLeg* pPullLeg;                     //!< Pointer for the PullLeg command
+  DeployClimb* pDeployClimb;             //!< Pointer for the DeployClimb command
+  ControlSlider* pControlSlider;         //!< Pointer for the ControlSlider command
   ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
 
-	// Robot methods
+	// Robot Methods
   void RobotInit()          override; //!< Runs once on robot boot
   void RobotPeriodic()      override; //!< Runs in a loop while the robot is turned on in any mode
   void DisabledInit()       override; //!< Runs once every time the robot is disabled
@@ -62,8 +60,8 @@ class Robot : public frc::TimedRobot {
   void TestPeriodic()       override; //!< Runs in a loop during test mode
 
  private:
-  // Define cameras
-  cs::UsbCamera frontCam;  //!< Variable for the front camera
+  // Define Cameras
+  cs::UsbCamera frontCam;  //!< Variable for the Front camera
   cs::UsbCamera visionCam; //!< Variable for the Vision camera
 
   // Have it null by default so that if testing teleop it

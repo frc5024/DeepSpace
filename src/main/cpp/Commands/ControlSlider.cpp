@@ -16,7 +16,7 @@ void ControlSlider::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ControlSlider::Execute() {
-  // Slide slider
+  // Slide the slider
 	this->speed = this->pJoyOp->GetX(Hand::kLeftHand);
   Robot::m_Slider->Slide(this->speed);
 

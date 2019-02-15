@@ -12,7 +12,7 @@ DriveWithJoystick::DriveWithJoystick() {
 void DriveWithJoystick::Initialize() {
   // Set magnitude and direction multipliers
   this->directionMultiplier = 1;
-  this->magnitudeMultiplier     = 1;
+  this->magnitudeMultiplier = 1;
 
   //set magnitude and radial
   this->magnitude    = 0.0;

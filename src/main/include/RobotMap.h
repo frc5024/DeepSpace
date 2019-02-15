@@ -10,17 +10,17 @@
 
 // Whenever possible, Macros and definitions are used in order to preserve memory
 
-// Camera mappings
+// Camera Mappings
 #define CAMERASERVER_DRIVER_CAMERA 1
 #define CAMERASERVER_VISION_CAMERA 0
 
-// DriveTrain motors
+// DriveTrain Motors
 #define DRIVETRAIN_LEFT_FRONT_MOTOR  1
 #define DRIVETRAIN_LEFT_REAR_MOTOR   2
 #define DRIVETRAIN_RIGHT_FRONT_MOTOR 3
 #define DRIVETRAIN_RIGHT_REAR_MOTOR  4
 
-// DriveTrain motor invertions
+// DriveTrain Motor Invertions
 #define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT  false
 #define DRIVETRAIN_LEFT_REAR_MOTOR_INVERT   false
 #define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT true
@@ -50,7 +50,7 @@
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 
-// Xbox controllers
+// Xbox Controllers
 #define XBOX_CONTROLLER_DRIVE_PORT    0
 #define XBOX_CONTROLLER_OPERATOR_PORT 1
 #define XBOX_CONTROLLER_DEBUG_PORT    2

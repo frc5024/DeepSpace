@@ -1,9 +1,10 @@
 #include "Subsystems/Arm.h"
 
-Arm::Arm() : Subsystem("Arm") {
+Arm::Arm() : frc::Subsystem("Arm") {
   // Initialize the motors
   this->pArmMotor = new can::WPI_TalonSRX(CLIMB_ARM_MOTOR);
   this->pArmMotor->SetNeutralMode(NeutralMode::Brake);
+
 
   this->pArmMotor->SetSafetyEnabled(false);
 
@@ -19,11 +20,6 @@ void Arm::InitDefaultCommand() {
 }
 
 void Arm::MoveArm(double Speed) {
-  this->pArmMotor->Set(Speed);
+  this->pArmMotor-> Set(Speed);
   this->pArmMotor2->Set(Speed);
-}
-
-double Arm::getDistanceFromFloor() {
-  double range = m_ultrasonic.GetValue() * kValueToInches;
-  return range;
 }

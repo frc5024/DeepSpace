@@ -11,11 +11,11 @@ class Piston : public frc::Subsystem {
   Piston(); //!< Class constructor
   void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (ControlPiston)
 	
-  void Deploy();  //!< Deploy the piston
-  void Retract(); //!< Retract the piston
+  void Deploy();  //!< Deploy the Piston
+  void Retract(); //!< Retract the Piston
 
  private:
-  frc::Solenoid* pSolenoid; //!< Pointer to Solenoid
+  frc::Solenoid* pSolenoid; //!< Pointer for the Solenoid
 };
 
 #endif //_PISTON_HG_
