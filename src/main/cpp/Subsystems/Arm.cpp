@@ -32,5 +32,5 @@ double Arm::getDistanceFromFloor() {
 }
 
 float Arm::GetAngle() {
-  return this->pGyro->GetRoll() * -1;
+  return this->pGyro->GetPitch() * -1;
 }

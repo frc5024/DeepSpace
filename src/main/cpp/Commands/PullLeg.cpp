@@ -18,7 +18,7 @@ void PullLeg::Execute() {
     this->speed = this->pJoyDebug->GetY(Hand::kRightHand);
 
     //temp
-    this->speed = 0.0;
+    // this->speed = 0.0;
 
     Robot::m_Leg->MoveLeg(this->speed);
 }
