@@ -1,6 +1,7 @@
 #include "Commands/TriggerDrive.h"
 #include "Robot.h"
 
+
 TriggerDrive::TriggerDrive() {
   // Use Requires() here to declare subsystem dependencies
   Requires(Robot::m_DriveTrain);
@@ -27,6 +28,8 @@ void TriggerDrive::Execute() {
   // Deal with reversing and slow mode
 	this->directionMultiplier = (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
   this->speedMultiplier     = (this->pJoyDrive->GetBumper(Hand::kRightHand)) ? 0.5 : 1;
+
+  std::printf("%f\n",Robot::m_DriveTrain->GetDistanceQuick());
 
   // Get movement data form controller
   // Speed = Right trigger - left trigger
