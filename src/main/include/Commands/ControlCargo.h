@@ -6,6 +6,7 @@
 #include <Subsystems/Flap.h>
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
+#include <frc/XboxController.h>
 
 
 class ControlCargo : public frc::Command {

@@ -34,6 +34,7 @@ void Robot::RobotInit() {
   this->m_Piston     = new Piston();
   this->m_oi         = new OI();
   this->m_Compressor = new Compressor();
+  this->m_Flap       = new Flap();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;

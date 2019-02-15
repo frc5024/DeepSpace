@@ -3,7 +3,7 @@
 
 #include <frc/commands/Subsystem.h>
 #include "RobotMap.h"
-#include <Commands/ControlSlider.h>
+#include <Commands/ControlCargo.h>
 #include <frc/DoubleSolenoid.h>
 
 class Flap : public frc::Subsystem {
