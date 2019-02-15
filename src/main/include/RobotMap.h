@@ -19,7 +19,6 @@
 #define DRIVETRAIN_LEFT_REAR_MOTOR   2
 #define DRIVETRAIN_RIGHT_FRONT_MOTOR 3
 #define DRIVETRAIN_RIGHT_REAR_MOTOR  4
-#define TIMEOUT_MS 100
 
 // DriveTrain motor invertions
 #define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT  false
@@ -31,7 +30,7 @@
 
 // Encoder constants
 #define PID_LOOP_INDEX          0
-#define TIMOUT_MS               100
+#define TIMEOUT_MS              100
 #define SLOT_INDEX              0
 #define TICKS_PER_REVOLUTION    1440
 #define WHEEL_CIRCUMFERENCE     666 //TODO: 2*pi*r

@@ -61,11 +61,7 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	pRightFrontMotor->ConfigPeakOutputForward(1, TIMEOUT_MS);
 	pRightFrontMotor->ConfigPeakOutputReverse(-1, TIMEOUT_MS);
 
-	/* set closed loop gains in slot0 */
-	pRightFrontMotor->Config_kP(PID_LOOP_INDEX, 0.5, TIMEOUT_MS);
-	pRightFrontMotor->Config_kI(PID_LOOP_INDEX, 0.0, TIMEOUT_MS);
-	pRightFrontMotor->Config_kD(PID_LOOP_INDEX, 0.0, TIMEOUT_MS);
-	pRightFrontMotor->Config_kF(PID_LOOP_INDEX, 0.0, TIMEOUT_MS);
+
 
 //	int abRightPosition = this->pRightFrontMotor->GetSelectedSensorPosition(SLOT_INDEX) & 0xFFF;
 	int abRightPosition = this->pRightFrontMotor->GetSensorCollection().GetPulseWidthPosition();
@@ -109,24 +105,24 @@ void DriveTrain::RadialDrive(double magnitude, double radial) {
 }
 
 void DriveTrain::ResetEncoders(void) {
-	this->pLeftFrontMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
-	this->pLeftRearMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
-	this->pRightFrontMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
-	this->pRightRearMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
+	this->pLeftFrontMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMEOUT_MS) ;
+	this->pLeftRearMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMEOUT_MS) ;
+	this->pRightFrontMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMEOUT_MS) ;
+	this->pRightRearMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMEOUT_MS) ;
 	
 	return ;
 }
 
 void DriveTrain::ResetLeftEncoder(void) {
-	this->pLeftFrontMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
-	this->pLeftRearMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
+	this->pLeftFrontMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMEOUT_MS) ;
+	this->pLeftRearMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMEOUT_MS) ;
 	
 	return ;
 }
 
 void DriveTrain::ResetRightEncoder(void) {
-	this->pRightFrontMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
-	this->pRightRearMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMOUT_MS) ;
+	this->pRightFrontMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMEOUT_MS) ;
+	this->pRightRearMotor->SetSelectedSensorPosition(0, PID_LOOP_INDEX, TIMEOUT_MS) ;
 	
 	return ;
 }
