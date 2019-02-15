@@ -5,7 +5,6 @@
 #include <frc/commands/Subsystem.h>
 #include <frc/WPILib.h>
 #include <ctre/Phoenix.h>
-#include <Encoder.h>
 #include <frc/drive/DifferentialDrive.h>
 #include "RobotMap.h"
 #include <Commands/DriveWithJoystick.h>

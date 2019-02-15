@@ -30,10 +30,53 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	this->pRightFrontMotor->SetSafetyEnabled(false);
 	this->pRightRearMotor->SetSafetyEnabled(false);
 	this->pRobotDrive->SetSafetyEnabled(false);
+
+
+	/* choose the sensor and sensor direction */
+	pLeftFrontMotor->ConfigSelectedFeedbackSensor(FeedbackDevice::CTRE_MagEncoder_Relative, PID_LOOP_INDEX, TIMEOUT_MS);
+	pLeftFrontMotor->SetSensorPhase(false);
+
+	/* set the peak and nominal outputs, 12V means full */
+	pLeftFrontMotor->ConfigNominalOutputForward(0, TIMEOUT_MS);
+	pLeftFrontMotor->ConfigNominalOutputReverse(0, TIMEOUT_MS);
+	pLeftFrontMotor->ConfigPeakOutputForward(1, TIMEOUT_MS);
+	pLeftFrontMotor->ConfigPeakOutputReverse(-1, TIMEOUT_MS);
+
+	/* set closed loop gains in slot0 */
+	pLeftFrontMotor->Config_kP(PID_LOOP_INDEX, 0.5, TIMEOUT_MS);
+	pLeftFrontMotor->Config_kI(PID_LOOP_INDEX, 0.0, TIMEOUT_MS);
+	pLeftFrontMotor->Config_kD(PID_LOOP_INDEX, 0.0, TIMEOUT_MS);
+	pLeftFrontMotor->Config_kF(PID_LOOP_INDEX, 0.0, TIMEOUT_MS);
+
+//	int absLeftPosition = pLeftFrontMotor->GetSelectedSensorPosition(SLOT_INDEX) & 0xFFF; /* mask out the bottom12 bits, we don't care about the wrap arounds */
+	int abLeftPosition = this->pLeftFrontMotor->GetSensorCollection().GetPulseWidthPosition();
+	this->pLeftFrontMotor->SetSelectedSensorPosition(abLeftPosition, PID_LOOP_INDEX, TIMEOUT_MS);
+
+	pRightFrontMotor->ConfigSelectedFeedbackSensor(FeedbackDevice::CTRE_MagEncoder_Relative, PID_LOOP_INDEX, TIMEOUT_MS);
+	pRightFrontMotor->SetSensorPhase(false);
+
+	/* set the peak and nominal outputs, 12V means full */
+	pRightFrontMotor->ConfigNominalOutputForward(0, TIMEOUT_MS);
+	pRightFrontMotor->ConfigNominalOutputReverse(0, TIMEOUT_MS);
+	pRightFrontMotor->ConfigPeakOutputForward(1, TIMEOUT_MS);
+	pRightFrontMotor->ConfigPeakOutputReverse(-1, TIMEOUT_MS);
+
+	/* set closed loop gains in slot0 */
+	pRightFrontMotor->Config_kP(PID_LOOP_INDEX, 0.5, TIMEOUT_MS);
+	pRightFrontMotor->Config_kI(PID_LOOP_INDEX, 0.0, TIMEOUT_MS);
+	pRightFrontMotor->Config_kD(PID_LOOP_INDEX, 0.0, TIMEOUT_MS);
+	pRightFrontMotor->Config_kF(PID_LOOP_INDEX, 0.0, TIMEOUT_MS);
+
+//	int abRightPosition = this->pRightFrontMotor->GetSelectedSensorPosition(SLOT_INDEX) & 0xFFF;
+	int abRightPosition = this->pRightFrontMotor->GetSensorCollection().GetPulseWidthPosition();
+	this->pRightFrontMotor->SetSelectedSensorPosition(abRightPosition, PID_LOOP_INDEX, TIMEOUT_MS);
+
+
 }
 
 void DriveTrain::InitDefaultCommand() {
 	SetDefaultCommand(new DriveWithJoystick());
+
 }
 
 void DriveTrain::ArcadeDrive(double xSpeed, double zRotation) {
