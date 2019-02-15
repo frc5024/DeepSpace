@@ -23,7 +23,7 @@ void ClimbManager::Execute() {
   }
 
   // Signal all commands to kill themselves
-  this->CurrentClimbState = this->ClimbState::kSemiAuto;
+  this->CurrentClimbState = this->ClimbState::kAuto;
 
   // Start vibrating driver controller
   this->pJoyDrive->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 0.5);

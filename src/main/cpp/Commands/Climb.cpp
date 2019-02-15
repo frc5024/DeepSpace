@@ -18,10 +18,8 @@ Climb::Climb() {
   // a CommandGroup containing them would require both the chassis and the
   // arm.
 
-  AddSequential( new Crawl     (100, 1 ));
-  AddParallel  ( new HoldArms  (1      ));
-  AddParallel  ( new HoldLegs  (1.5    ));
-  AddSequential( new RaiseArms (30, 1  ));
-  AddSequential( new Drive     (30, 0.5));
-  AddParallel  ( new EndClimb  (0.03   ));
+  AddSequential ( new Crawl     (100,  12 ));
+  AddParallel   ( new RaiseArms (0.63, 12 ));
+  AddParallel   ( new RaiseLegs (1.00, 12 ));
+  AddSequential ( new EndClimb  (0.03     ));
 }

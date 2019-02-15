@@ -172,6 +172,11 @@ void Robot::TeleopPeriodic() {
     this->pRaiseBot->Start();
   }
 
+  // Enable command group on kAuto
+  if (this->pClimb != nullptr && !this->pClimb->IsRunning() && ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kAuto){
+    this->pClimb->Start();
+  }
+
   frc::Scheduler::GetInstance()->Run(); 
 }
 

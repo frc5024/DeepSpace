@@ -11,7 +11,7 @@ void RaiseLegs::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
 void RaiseLegs::Execute() {
-    Robot::m_Leg->MoveLeg(this->speed);
+    Robot::m_Leg->MoveLeg(this->speed *-1);
 }
 
 // Called once after command times out

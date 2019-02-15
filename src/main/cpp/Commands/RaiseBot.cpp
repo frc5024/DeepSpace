@@ -16,14 +16,12 @@ void RaiseBot::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void RaiseBot::Execute() {
-    this->speed =(this->pJoyDrive->GetY(Hand::kLeftHand));
+    this->speed =(this->pJoyDrive->GetY(Hand::kLeftHand) * -1);
 
-    this->gyro = 0.0; // TODO: set this with gyro roll
-
-    double output = (this->speed-((this->gyro*CLIMB_M)/100)-(1.00-CLIMB_B));
+    double output = (this->speed*0.63);
 
     Robot::m_Arm->MoveArm(output);
-    Robot::m_Leg->MoveLeg(this->speed);
+    Robot::m_Leg->MoveLeg(this->speed * -1);
 }
 
 // Make this return true when this Command no longer needs to run execute()
