@@ -47,6 +47,10 @@
 
 #define PISTON_ID 7
 
+// Hatch Gripper 
+#define HatchGripper_FORWARD_ID 1
+#define HatchGripper_REVERSE_ID 2
+
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 
