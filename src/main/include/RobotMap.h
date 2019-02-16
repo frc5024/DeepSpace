@@ -11,14 +11,18 @@
 // Whenever possible, Macros and definitions are used in order to preserve memory
 
 // Robot values
-#define ROBOT_CYCLE_TIME	0.02
+#define ROBOT_CYCLE_TIME			0.02    //!< seconds
+#define ROBOT_WHEEL_DIAMETER		19.25   //!< centimetres
+#define ROBOT_WHEEL_RADIUS			9.625   //!< centimetres
+#define ROBOT_WHEEL_CIRCUMFERENCE	60.48	//!< centimetres
+#define ROBOT_WHEEL_RPM				456 //!< maximum rpm of motor
 
 // RadialTurn
-#define RADIAL_LENGTH				666     // TODO: Measure: Horizontal distance from camera to front bumper
-#define RADIAL_WIDTH_WHEEL_2		666     // TODO: Measure: Horizontal distance from left side wheels to right side wheels divided by two
-#define RADIAL_MAX_VEL              466.4   // Maximum velocity of robot (cm/s)
-#define RADIAL_MAX_ACCEL            19.2    // Maximum acceleration of robot (cm/s/s)
-//#define RADIAL_MAX_JERK             666   // TODO: Measure: Maximum jerk of robot (cm/s/s/s)
+#define RADIAL_LENGTH				23		//!< TODO: Measure: Horizontal distance from camera to front bumper
+#define RADIAL_WIDTH_WHEEL_2		24.91	//!< TODO: Measure: Horizontal distance from left side wheels to right side wheels divided by two
+#define RADIAL_MAX_VEL				466.4	//!< Maximum velocity of robot (cm/s)
+#define RADIAL_MAX_ACCEL			19.2	// Maximum acceleration of robot (cm/s/s)
+//#define RADIAL_MAX_JERK			666	// TODO: Measure: Maximum jerk of robot (cm/s/s/s)
 
 // Camera mappings
 #define CAMERASERVER_DRIVER_CAMERA		1
@@ -31,10 +35,10 @@
 #define DRIVETRAIN_RIGHT_REAR_MOTOR		4
 
 // DriveTrain motor invertions
-#define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT	false
-#define DRIVETRAIN_LEFT_REAR_MOTOR_INVERT	false
-#define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT	true
-#define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT	true
+#define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT		false
+#define DRIVETRAIN_LEFT_REAR_MOTOR_INVERT		false
+#define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT		true
+#define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT		true
 
 #define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF	0.8
 
@@ -49,9 +53,9 @@
 #define XBOX_CONTROLLER_OPERATOR_PORT	1
 
 // Handy macros to save Python programmers from going crazy
-#define False false
-#define True  true
-#define elif  else if
+#define False	false
+#define True	true
+#define elif	else if
 
 // frc::GenericHID::JoystickHand is too long
 #define Hand frc::GenericHID::JoystickHand

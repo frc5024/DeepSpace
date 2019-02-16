@@ -140,12 +140,15 @@ void RadialTurn::Start(void)
 		this->distancePathSideRight = c0 ;
 	}
 
+
+	//TODO: Make trajectory constant for now, add em all to talon motion profile thing
+	
+
 }
 
 void RadialTurn::Execute(void)
 {
 	
-
 	return ;
 }
 
