@@ -2,7 +2,7 @@
 
 Slider::Slider() : frc::Subsystem("Slider") {
   // Initialize the motors
-	this->pSliderMotor = new can::WPI_TalonSRX(SLIDER_MOTOR);
+	this->pSliderMotor = new can::WPI_VictorSPX(SLIDER_MOTOR);
 
 	this->pSliderMotor->SetInverted(false);
 

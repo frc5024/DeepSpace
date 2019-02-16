@@ -21,7 +21,7 @@ class Slider : public frc::Subsystem {
   void Slide(double speed);
 
  private:
-  can::WPI_TalonSRX* pSliderMotor; //!< Pointer for the slider motor
+  can::WPI_VictorSPX* pSliderMotor; //!< Pointer for the slider motor
 };
 
 #endif // _Slider_HG_
