@@ -7,6 +7,7 @@
 #include <ctre/Phoenix.h>
 #include "RobotMap.h"
 #include <Commands/ControlSlider.h>
+#include <frc/DigitalInput.h>
 
 class Slider : public frc::Subsystem {
  public:
@@ -20,8 +21,13 @@ class Slider : public frc::Subsystem {
 	 */
   void Slide(double speed);
 
+  void Center();
  private:
+  double sliderSide;
   can::WPI_TalonSRX* pSliderMotor; //!< Pointer for the slider motor
+  frc::DigitalInput* pLeftHall;
+  frc::DigitalInput* pRightHall;
+  frc::DigitalInput* pCenterHall;
 };
 
 #endif // _Slider_HG_

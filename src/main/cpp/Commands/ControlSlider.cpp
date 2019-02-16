@@ -23,12 +23,17 @@ void ControlSlider::Execute() {
   // Control piston
   if(this->pJoyOp->GetTriggerAxis(Hand::kRightHand) > 0.8){
     Robot::m_Piston->Deploy();
-  }else{
+  } else {
     Robot::m_Piston->Retract();
   }
   
   // Reset the speed
   this->speed = 0.00;
+
+  // Move slider to center if   button is pressed
+  if(this->pJoyOp->GetBButton()) {
+    Robot::m_Slider->Center();
+  } 
 }
 
 

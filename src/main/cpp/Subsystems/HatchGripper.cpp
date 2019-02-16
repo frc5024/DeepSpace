@@ -1,7 +1,7 @@
 #include "Subsystems/HatchGripper.h"
 
 HatchGripper::HatchGripper() : frc::Subsystem("HatchGripper") {
-  this->pHatchSolenoid = new frc::DoubleSolenoid(HatchGripper_FORWARD_ID, HatchGripper_REVERSE_ID);
+  this->pHatchSolenoid = new frc::DoubleSolenoid(PCM_CAN_ID, HatchGripper_FORWARD_ID, HatchGripper_REVERSE_ID);
 }
 
 void HatchGripper::InitDefaultCommand() {
