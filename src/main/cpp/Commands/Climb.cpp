@@ -20,7 +20,7 @@ Climb::Climb() {
 
 	AddSequential ( new RaiseArms (0.5, 0.1 ));  //!< Touch arms to platform
 
-	AddParallel		( new RaiseArms (0.63, 2  )); //!< Pull the front of the bot up onto the platform
+	AddParallel		( new RaiseArms (0.63, 4)); //!< Pull the front of the bot up onto the platform
 	AddParallel		( new MoveLegsTo(MoveLegsTo::P_BOT, -1.0, 12.0)) ; //!< Move legs to bottom position
 	AddSequential	( new Crawl     (1.00,  12 )); //!< Crawl onto the platform
 	

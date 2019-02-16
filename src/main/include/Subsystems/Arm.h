@@ -12,34 +12,37 @@
 #include <frc/DigitalInput.h>
 
 class Arm : public frc::Subsystem {
- public:
-  Arm();
-  void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (Arm)
+public:
+	Arm();
+	void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (Arm)
 
-  /**
+	/**
 	 * Move Arm arm up or down
 	 *
 	 * @param Speed speed (from -1 to 1)
 	 */
-  void MoveArm(double Speed);
+	void MoveArm(double Speed);
 
 
-  /**
+	/**
 	 * returns distance from floor
 	 *
 	 */
-  double getDistanceFromFloor();
+	double getDistanceFromFloor();
+
+	
+	bool GetSensor(void) ;
+
+private:
+	can::WPI_TalonSRX* pArmMotor; //!< Pointer for Arm arm motor
+	can::WPI_TalonSRX* pArmMotor2; //!< Pointer for Arm arm motor
+
+	frc::DigitalInput* pArmHall ; //!< hall effects for arm is lowered enough
 
 
-  private:
-  can::WPI_TalonSRX* pArmMotor; //!< Pointer for Arm arm motor
-  can::WPI_TalonSRX* pArmMotor2; //!< Pointer for Arm arm motor
-
-  frc::DigitalInput* pFloorSensor;
-
-  frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC};
-  frc::DigitalInput* pDeployLimit;
-  static constexpr double kValueToInches = 0.125;
+	frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC};
+	frc::DigitalInput* pDeployLimit;
+	static constexpr double kValueToInches = 0.125;
 };
 
 #endif // _ARM_HG_

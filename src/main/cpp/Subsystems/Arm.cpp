@@ -32,3 +32,7 @@ double Arm::getDistanceFromFloor() {
   double range = m_ultrasonic.GetValue() * kValueToInches;
   return range;
 }
+
+bool Arm::GetSensor(void) {
+  return ! this->pArmHall->Get() ;
+}

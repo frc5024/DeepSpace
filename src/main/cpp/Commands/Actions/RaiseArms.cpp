@@ -14,9 +14,18 @@ void RaiseArms::Execute() {
     Robot::m_Arm->MoveArm(this->speed);
 }
 
+bool RaiseArms::IsFinished()
+{
+    return Robot::m_Arm->GetSensor() ;
+}
+
 // Called once after command times out
-void RaiseArms::End() {}
+void RaiseArms::End() {
+    Robot::m_Arm->MoveArm(0.0); //brake
+}
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void RaiseArms::Interrupted() {}
+void RaiseArms::Interrupted() {
+    Robot::m_Arm->MoveArm(0.0); //brake
+}
