@@ -20,10 +20,9 @@ Climb::Climb() {
 
 	AddSequential ( new RaiseArms (0.5, 0.1 ));  //!< Touch arms to platform
 
-	AddParallel   ( new RaiseLegs (1.00, 5  )); //!< Raise the bot with the legs
-	AddParallel   ( new RaiseArms (0.63, 2  )); //!< Pull the front of the bot up onto the platform
-	AddSequential ( new Crawl     (100,  12 )); //!< Crawl onto the platform
-
+	AddParallel		( new RaiseArms (0.63, 2  )); //!< Pull the front of the bot up onto the platform
+	AddParallel		( new Crawl     (100,  12 )); //!< Crawl onto the platform
+	AddSequential	( new MoveLegsTo(MoveLegsTo::P_BOT, -1.0, 12.0)) ; //!< Move legs to bottom position
 
 	// Stop crawling. random timeout
 	AddParallel		(new Crawl(0, 0.03));
@@ -34,7 +33,7 @@ Climb::Climb() {
 	AddSequential(new Drive(0.3, 0.5));
 
 	// Bring legs back up
-	AddSequential( new RaiseLegs(-1.00, 5));
+	AddSequential( new RaiseLegs(1.00, 5));
 
   //!< reset all hardware components
   AddSequential ( new EndClimb  (0.03     ));

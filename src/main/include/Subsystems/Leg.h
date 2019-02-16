@@ -38,7 +38,7 @@ public:
 	/**
 	 * @brief Move climb leg up or down
 	 *
-	 * @param Speed range:(-1.00, 1.00) where 1.00 or 100% is downwards
+	 * @param Speed range:(-1.00, 1.00) where 1.00 or 100% is upwards
 	 */
 	void MoveLeg(double Speed);
 
@@ -47,23 +47,6 @@ public:
 	 * @return Quadrant the quadrant it was last known in
 	 */
 	Quadrant GetPosition(void) ;
-
-private:
-
-	/**
-	 * @brief Pointer for the climb leg motor
-	 * Works off a winch system to pull up and down
-	 * But is used like a talon motor
-	 */
-	can::WPI_TalonSRX* pLegMotor;
-
-	/**
-	 * @brief Sensor for when the leg is as far up as it can go
-	 * If this sensor is tripped, the legs are above the wheels
-	 * and it is now safe to drive.
-	 * @remark When moving the leg up, stop when this gets tripped
-	 */
-	frc::DigitalInput* pTopHall ;
 
 	/**
 	 * @brief Returns whether the legs are at the top most position
@@ -85,6 +68,23 @@ private:
 	 * @return false Sensor is not tripped, we are not at the bottom
 	 */
 	bool AtBottom(void) ;
+
+private:
+
+	/**
+	 * @brief Pointer for the climb leg motor
+	 * Works off a winch system to pull up and down
+	 * But is used like a talon motor
+	 */
+	can::WPI_TalonSRX* pLegMotor;
+
+	/**
+	 * @brief Sensor for when the leg is as far up as it can go
+	 * If this sensor is tripped, the legs are above the wheels
+	 * and it is now safe to drive.
+	 * @remark When moving the leg up, stop when this gets tripped
+	 */
+	frc::DigitalInput* pTopHall ;
 
 	/**
 	 * @brief Sensor for when the leg is at the middle position

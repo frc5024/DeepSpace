@@ -5,7 +5,8 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#pragma once
+#ifndef _CLIMB_HG_
+#define _CLIMB_HG_
 
 #include <frc/commands/CommandGroup.h>
 
@@ -13,6 +14,7 @@
 #include <Commands/Actions/Crawl.h>
 #include <Commands/Actions/HoldArms.h>
 #include <Commands/Actions/HoldLegs.h>
+#include <Commands/Actions/MoveLegsTo.h>
 #include <Commands/Actions/RaiseArms.h>
 #include <Commands/Actions/RaiseLegs.h>
 #include <Commands/Actions/Drive.h>
@@ -22,3 +24,5 @@ class Climb : public frc::CommandGroup {
  public:
   Climb();
 };
+
+#endif /* _CLIMB_HG_ */

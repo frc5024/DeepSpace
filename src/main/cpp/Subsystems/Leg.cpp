@@ -33,7 +33,7 @@ void Leg::MoveLeg(double spd) {
 	switch (this->legPosition)
 	{
 		case Q_TOP_MIDDLE :
-			if (spd > 0.0) // If we're going down
+			if (spd < 0.0) // If we're going down
 			{ 
 				this->pLegMotor->Set(spd) ; // Go down
 				if (this->AtMiddle()) // If we're at the middle
@@ -55,7 +55,7 @@ void Leg::MoveLeg(double spd) {
 			}
 			break;
 		case Q_MIDDLE_BOTTOM :
-			if (spd > 0.0) // If we're going down
+			if (spd < 0.0) // If we're going down
 			{
 				if (this->AtBottom()) // If we're at the bottom
 				{
@@ -77,7 +77,7 @@ void Leg::MoveLeg(double spd) {
 			}
 			break;
 		case Q_TOP :
-			if (spd > 0.0) // If we're going down
+			if (spd < 0.0) // If we're going down
 			{
 				this->pLegMotor->Set(spd) ; // Go down
 				this->legPosition = Q_TOP_MIDDLE ; // We're somewhere in here
@@ -85,7 +85,7 @@ void Leg::MoveLeg(double spd) {
 			break;
 		case Q_MIDDLE :
 			this->pLegMotor->Set(spd) ; // Safe to move either direction
-			if (spd > 0.0) // If we're going down
+			if (spd < 0.0) // If we're going down
 			{
 				this->legPosition = Q_MIDDLE_BOTTOM ; // We're somewhere in here
 			}
@@ -95,7 +95,7 @@ void Leg::MoveLeg(double spd) {
 			}
 			break;
 		case Q_BOTTOM :
-			if (spd < 0.0) // If we're going up
+			if (spd > 0.0) // If we're going up
 			{
 				this->pLegMotor->Set(spd) ; // Go up
 				this->legPosition = Q_MIDDLE_BOTTOM ; // We're somewhere in here
