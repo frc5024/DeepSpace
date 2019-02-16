@@ -17,3 +17,4 @@ void Leg::InitDefaultCommand() {
 void Leg::MoveLeg(double Speed) {
   this->pLegMotor->Set(Speed);
 }
+

@@ -18,18 +18,23 @@ Climb::Climb() {
   // a CommandGroup containing them would require both the chassis and the
   // arm.
 
-  AddSequential ( new RaiseArms (0.5, 0.1 ));  //!< Touch arms to platform
+	AddSequential ( new RaiseArms (0.5, 0.1 ));  //!< Touch arms to platform
 
-  AddParallel   ( new RaiseLegs (1.00, 5  )); //!< Raise the bot with the legs
-  AddParallel   ( new RaiseArms (0.63, 2  )); //!< Pull the front of the bot up onto the platform
-  AddSequential ( new Crawl     (100,  12 )); //!< Crawl onto the platform
+	AddParallel   ( new RaiseLegs (1.00, 5  )); //!< Raise the bot with the legs
+	AddParallel   ( new RaiseArms (0.63, 2  )); //!< Pull the front of the bot up onto the platform
+	AddSequential ( new Crawl     (100,  12 )); //!< Crawl onto the platform
 
-  AddParallel(new Crawl(0,0.03));
-  AddSequential(new RaiseArms(-0.5, 0.3));
 
-  AddSequential(new Drive(0.3, 0.5));
+	// Stop crawling. random timeout
+	AddParallel		(new Crawl(0, 0.03));
+	// Raise arm back up at 50% speed for 0.3 seconds
+	AddSequential	(new RaiseArms(-0.5, 0.3));
 
-  AddSequential( new RaiseLegs(-100, 5));
+	// Drive at 30% speed for half a second
+	AddSequential(new Drive(0.3, 0.5));
+
+	// Bring legs back up
+	AddSequential( new RaiseLegs(-1.00, 5));
 
   //!< reset all hardware components
   AddSequential ( new EndClimb  (0.03     ));
