@@ -27,15 +27,13 @@
 #define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT  true
 
 //Climb Motors
-#define CLIMB_ARM_MOTOR 5
+#define CLIMB_ARM_MOTOR			5
+#define CLIMB_ARM_MOTOR_2		6
+#define CLIMB_LEG_MOTOR			8
+#define CRAWL_LEFT_MOTOR		1
+#define CRAWL_RIGHT_MOTOR		0
 
-#define CLIMB_ARM_MOTOR_2 6
-#define CLIMB_LEG_MOTOR 8
- 
-#define CRAWL_LEFT_MOTOR 1
-#define CRAWL_RIGHT_MOTOR 0
-
-//Climb Ultrasonic
+//Climb ultrasonic (rangefinder)
 #define CLIMB_ULTRASONIC 1
 #define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF 0.8
 
@@ -46,9 +44,9 @@
 #define CLIMB_MAX_HEIGHT 100
 
 // Leg hall effect
-#define LEG_TOP 1
-#define LEG_CENTER 5
-#define LEG_BOTTOM 6
+#define LEG_PIN_TOP			1
+#define LEG_PIN_MIDDLE		5
+#define LEG_PIN_BOTTOM		6
 
 // Motor hold speeds
 #define ARM_HOLD_SPEED 0.2
