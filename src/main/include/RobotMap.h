@@ -33,8 +33,9 @@
 #define CRAWL_LEFT_MOTOR		1
 #define CRAWL_RIGHT_MOTOR		0
 
-//Climb ultrasonic (rangefinder)
-#define CLIMB_ULTRASONIC 1
+//Climb ultrasonic
+#define CLIMB_ULTRASONIC	1
+#define OPTICAL_PIN			7
 #define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF 0.8
 
 // Climb settings

@@ -10,10 +10,12 @@ class Crawl : public frc::TimedCommand {
   explicit Crawl(double speed, double timeout);
   void Initialize() override;
   void Execute() override;
+  bool IsFinished() override ;
   void End() override;
   void Interrupted() override;
  private:
   double speed;
+  bool onFloor ;
 };
 
 #endif // _Crawl_HG_
