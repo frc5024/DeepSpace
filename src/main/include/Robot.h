@@ -61,6 +61,8 @@ class Robot : public frc::TimedRobot {
   void TeleopPeriodic()     override; //!< Runs in a loop during teleop
   void TestPeriodic()       override; //!< Runs in a loop during test mode
 
+  void SetPeriod(double seconds); //Fix Watchdog plz
+
  private:
   // Define cameras
   cs::UsbCamera frontCam;  //!< Variable for the front camera

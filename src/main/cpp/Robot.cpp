@@ -62,8 +62,14 @@ void Robot::RobotInit() {
   // create ds and pdp objects
   std::cout << "Creating Driverstation and PDP objects" << std::endl;
   this->pdp = new frc::PowerDistributionPanel(10);
+
 }
 
+void Robot::SetPeriod(double seconds) {
+
+  this->SetPeriod(0.025);
+
+}
 /**
  * This function is called every robot packet, no matter the mode. Use
  * this for items like diagnostics that you want ran during disabled,
