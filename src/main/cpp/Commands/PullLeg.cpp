@@ -17,6 +17,10 @@ void PullLeg::Initialize() {
 void PullLeg::Execute() {
     this->speed = this->pJoyDebug->GetY(Hand::kRightHand);
 
+    if(frc::RobotController::GetUserButton()){
+        this->speed = 1;
+    }
+
     Robot::m_Leg->MoveLeg(this->speed);
 }
 

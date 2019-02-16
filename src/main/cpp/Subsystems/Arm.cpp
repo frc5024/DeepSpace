@@ -11,6 +11,8 @@ Arm::Arm() : Subsystem("Arm") {
   this->pArmMotor2->SetNeutralMode(NeutralMode::Brake);
 
   this->pArmMotor2->SetSafetyEnabled(false);
+
+  this->pDeployLimit = new frc::DigitalInput(4);
 }
 
 void Arm::InitDefaultCommand() {
@@ -19,6 +21,9 @@ void Arm::InitDefaultCommand() {
 }
 
 void Arm::MoveArm(double Speed) {
+  if(this->pDeployLimit->Get() == 0 && Speed >= 0){
+    Speed = 0.0;
+  }
   this->pArmMotor->Set(Speed);
   this->pArmMotor2->Set(Speed);
 }

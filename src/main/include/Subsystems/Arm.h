@@ -9,6 +9,7 @@
 #include <frc/PWMVictorSPX.h>
 #include <ctre/Phoenix.h>
 #include "RobotMap.h"
+#include <frc/DigitalInput.h>
 
 class Arm : public frc::Subsystem {
  public:
@@ -34,6 +35,7 @@ class Arm : public frc::Subsystem {
   can::WPI_TalonSRX* pArmMotor; //!< Pointer for Arm arm motor
   can::WPI_TalonSRX* pArmMotor2; //!< Pointer for Arm arm motor
   frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC};
+  frc::DigitalInput* pDeployLimit;
   static constexpr double kValueToInches = 0.125;
 };
 
