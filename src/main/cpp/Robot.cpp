@@ -57,6 +57,10 @@ void Robot::RobotInit() {
   this->pClimbManager = new ClimbManager();
   this->pRaiseBot = new RaiseBot();
 
+  /*TEMP*/
+  this->pMoveLegsTo = new MoveLegsTo(MoveLegsTo::P_BOT, -1.0, 12.0) ;
+  /*TEMP*/
+
   // Create Telemetry table
   std::cout << "Connecting to telemetry table.." << std::endl;
   this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry");
@@ -111,6 +115,7 @@ void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
  * the if-else structure below with additional strings & commands.
  */
 void Robot::AutonomousInit() {
+  this->pMoveLegsTo->Start() ;
   // std::string autoSelected = frc::SmartDashboard::GetString(
   //     "Auto Selector", "Default");
   // if (autoSelected == "My Auto") {

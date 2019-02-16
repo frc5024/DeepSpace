@@ -9,6 +9,10 @@
 #include <frc/WPILib.h>
 #include <cscore_oo.h>
 
+/* TEMP*/
+#include "Commands/Actions/MoveLegsTo.h" 
+/* TEMP*/
+
 #include "Commands/TriggerDrive.h"
 #include "Commands/ControlCompressor.h"
 #include "Commands/testUltra.h"
@@ -53,6 +57,10 @@ class Robot : public frc::TimedRobot {
   ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
   ClimbManager* pClimbManager;
   RaiseBot* pRaiseBot;
+
+  /*TEMP*/
+  MoveLegsTo* pMoveLegsTo ;
+  /*TEMP*/
 
 	// Robot methods
   void RobotInit()          override; //!< Runs once on robot boot
