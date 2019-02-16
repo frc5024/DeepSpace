@@ -9,7 +9,7 @@ Slider::Slider() : frc::Subsystem("Slider") {
 
 	this->pRightHall = new frc::DigitalInput(0);		
 
-	this->pCenterHall = new frc::DigitalInput(2);	
+	this->pCenterHall = new frc::DigitalInput(8);	
 
 	/*
 	* If sliderSide is 1 it is on the left side.
@@ -57,6 +57,8 @@ void Slider::Center() {
 		} else {
 			this->pSliderMotor->Set(1);
 		}
+	} else {
+		this->pSliderMotor->Set(0);
 	}
 	
 	return;
