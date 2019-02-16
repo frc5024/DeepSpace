@@ -27,8 +27,8 @@ void Robot::RobotInit() {
   std::cout << "Creating Subsystems..." << std::endl;
   this->m_DriveTrain = new DriveTrain();
   this->m_CrawlDrive = new CrawlDrive();
-  this->m_Arm = new Arm();
-  this->m_Leg = new Leg();
+  this->m_Arm        = new Arm();
+  this->m_Leg        = new Leg();
   this->m_Slider     = new Slider();
   this->m_Piston     = new Piston();
   this->m_oi         = new OI();

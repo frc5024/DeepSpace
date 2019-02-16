@@ -45,6 +45,11 @@
 
 #define CLIMB_MAX_HEIGHT 100
 
+// Leg hall effect
+#define LEG_TOP 1
+#define LEG_CENTER 5
+#define LEG_BOTTOM 6
+
 // Motor hold speeds
 #define ARM_HOLD_SPEED 0.2
 #define LEG_HOLD_SPEED 0.1
