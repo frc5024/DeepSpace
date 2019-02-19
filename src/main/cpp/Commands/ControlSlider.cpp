@@ -20,6 +20,11 @@ void ControlSlider::Execute() {
 	this->speed = this->pJoyOp->GetX(Hand::kLeftHand);
   Robot::m_Slider->Slide(this->speed);
 
+  if (fabs(this->speed) <= XBOX_DEADZONE_LEFT_JOY)
+	{
+		this->speed = 0.0;
+	}
+
   // Control piston
   if(this->pJoyOp->GetTriggerAxis(Hand::kRightHand) > 0.8){
     Robot::m_Piston->Deploy();
