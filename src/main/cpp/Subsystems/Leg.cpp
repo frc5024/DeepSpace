@@ -125,3 +125,8 @@ Leg::Quadrant Leg::GetPosition(void)
 {
 	return this->legPosition ;
 }
+
+void Leg::SetPos(Quadrant q)
+{
+	this->legPosition = q ;
+}

@@ -14,45 +14,27 @@ RaiseBotHigh::RaiseBotHigh(void)
 	Requires(Robot::m_Leg) ;
 	Requires(Robot::m_CrawlDrive) ;
 
-	// Construct all to 0, is initialized later
-	this->armSpd = 0.0 ;
-	this->legSpd = 0.0 ;
-	this->crawlSpd = 0.0 ;
-	this->onFloor = false ;
+	this->pTimer = new frc::Timer();
+
+	this->onFloor = true ;
 }
 
 void RaiseBotHigh::Initialize()
 {
-	this->armSpd = 0.63 ; // mAgIc nUmBeR
-	this->legSpd = -1.0 ; // full speed = slowly down
-	this->crawlSpd = 1.0 ; // full speed = crawl forward
 	this->onFloor = true ; // Assume robot starts grounded, I'd hope
+	this->pTimer->Start();
 }
 
 void RaiseBotHigh::Execute()
 {
-	// Check if Arm is done
-	if (Robot::m_Arm->GetSensor()) {
-		this->armSpd = 0.0 ; // Not HOLD_SPEED becuase there's no failsafe if it goes past the sensor
-	} else {
-		this->armSpd = 0.63 ;
-	}
+	// MoveArm and MoveLeg auto-stop when they reach a sensor
 
-	// Check if leg is done
-	if (Robot::m_Leg->AtBottom()) {
-		this->legSpd = 0.0 ; // Not hold_speed becuase there's no failsafe if it goes past the sensor
-	} else {
-		this->legSpd = -1.0 ;
-	}
-
-	// DRIVE! BRRRRRRRR BRR BRR BRRRRR
-	Robot::m_Arm->MoveArm(this->armSpd) ;
-	Robot::m_Leg->MoveLeg(this->legSpd) ;
-	Robot::m_CrawlDrive->Move(this->crawlSpd) ;
-
+	Robot::m_Arm->MoveArm(0.75) ;
+	Robot::m_Leg->MoveLeg(-1.0) ;
+	Robot::m_CrawlDrive->Move(1.0) ;
 }
 
-void RaiseBotHigh::IsFinished()
+bool RaiseBotHigh::IsFinished()
 {
 	// Check if we WERE in the air and are NOW on the floor
 	bool nowOnFloor = Robot::m_CrawlDrive->GetSensor() ;
@@ -63,6 +45,10 @@ void RaiseBotHigh::IsFinished()
 	} else {
 		this->onFloor = nowOnFloor ;
 	}
+
+	// Timeout if it's been too long
+	if (this->pTimer->Get() > 6.0)
+		return true ;
 	return false ;
 }
 
@@ -71,6 +57,8 @@ void RaiseBotHigh::End()
 	Robot::m_Arm->MoveArm(0.0) ;
 	Robot::m_Leg->MoveLeg(0.0) ;
 	Robot::m_CrawlDrive->Move(0.0) ;
+	this->pTimer->Stop();
+	this->pTimer->Reset();
 }
 
 void RaiseBotHigh::Interrupted()
@@ -78,4 +66,6 @@ void RaiseBotHigh::Interrupted()
 	Robot::m_Arm->MoveArm(0.0) ;
 	Robot::m_Leg->MoveLeg(0.0) ;
 	Robot::m_CrawlDrive->Move(0.0) ;
+	this->pTimer->Stop();
+	this->pTimer->Reset();
 }

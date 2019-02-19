@@ -9,6 +9,7 @@
 #define _RAISEBOTHIGH_HG_
 
 #include <frc/commands/Command.h>
+#include <frc/Timer.h>
 
 class RaiseBotHigh : public frc::Command {
 public:
@@ -19,9 +20,7 @@ public:
 	void End() override;
 	void Interrupted() override;
 private:
-	float armSpd ; //!< Motor output of arm to use
-	float legSpd ; //!< Motor output of leg to use
-	float crawlSpd ; //!< Motor output of crawlDrive to use
+	frc::Timer* pTimer; //!< Timer to timeout the command if sensors fail
 	bool  onFloor ; //!< Is robot currently on the floor?
 };
 

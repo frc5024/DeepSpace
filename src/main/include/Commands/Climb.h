@@ -14,7 +14,6 @@
 #include <Commands/Actions/Crawl.h>
 #include <Commands/Actions/HoldArms.h>
 #include <Commands/Actions/HoldLegs.h>
-#include <Commands/Actions/MoveLegsTo.h>
 #include <Commands/Actions/RaiseArms.h>
 #include <Commands/Actions/RaiseLegs.h>
 #include <Commands/Actions/Drive.h>

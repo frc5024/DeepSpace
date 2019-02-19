@@ -13,6 +13,8 @@ Arm::Arm() : Subsystem("Arm") {
   this->pArmMotor2->SetSafetyEnabled(false);
 
   this->pDeployLimit = new frc::DigitalInput(4);
+
+  this->pArmHall = new frc::DigitalInput(ARM_PIN_LOWERED) ;
 }
 
 void Arm::InitDefaultCommand() {
@@ -20,12 +22,17 @@ void Arm::InitDefaultCommand() {
   // SetDefaultCommand(new MySpecialCommand());
 }
 
-void Arm::MoveArm(double Speed) {
-  if(this->pDeployLimit->Get() == 0 && Speed >= 0){
-    Speed = 0.0;
+void Arm::MoveArm(double speed) {
+  if(this->pDeployLimit->Get() == 0 && speed >= 0){
+    speed = 0.0;
   }
-  this->pArmMotor->Set(Speed);
-  this->pArmMotor2->Set(Speed);
+
+  if (speed > 0.0)
+	if (this->GetSensor())
+		speed = 0.0 ;
+
+  this->pArmMotor->Set(speed);
+  this->pArmMotor2->Set(speed);
 }
 
 double Arm::getDistanceFromFloor() {
@@ -33,6 +40,7 @@ double Arm::getDistanceFromFloor() {
   return range;
 }
 
-bool Arm::GetSensor(void) {
-  return ! this->pArmHall->Get() ;
+bool Arm::GetSensor(void)
+{
+	return this->pArmHall->Get() ;
 }

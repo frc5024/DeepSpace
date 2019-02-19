@@ -57,6 +57,12 @@ void Robot::RobotInit() {
 	this->pControlCompressor = new ControlCompressor();
 	this->pClimbManager = new ClimbManager();
 	this->pRaiseBot = new RaiseBot();
+	
+	/*TEMP{*/
+	this->pLowerArm = new LowerArm();
+	this->pRaiseBotHigh = new RaiseBotHigh();
+	this->pFinishClimb = new FinishClimb();
+	/*}TEMP*/
 
 	// Create Telemetry table
 	std::cout << "Connecting to telemetry table.." << std::endl;
@@ -87,6 +93,10 @@ void Robot::RobotPeriodic() {
 	this->ntTelemetry->PutNumber("voltage",  robotVoltage);
 	this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
 	this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
+
+	if(frc::RobotController::GetUserButton()){
+		this->m_Leg->MoveLeg(1.0) ;
+	}
 }
 
 /**
@@ -96,7 +106,12 @@ void Robot::RobotPeriodic() {
  */
 void Robot::DisabledInit() {}
 
-void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
+void Robot::DisabledPeriodic() {
+	frc::Scheduler::GetInstance()->Run();
+	if(frc::RobotController::GetUserButton()){
+		this->m_Leg->MoveLeg(1.0) ;
+	}
+}
 
 /**
  * This autonomous (along with the chooser code above) shows how to select
@@ -110,6 +125,15 @@ void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
  * the if-else structure below with additional strings & commands.
  */
 void Robot::AutonomousInit() {
+	std::cout << "Initting auto!\n" ;
+
+	if (this->pAutoHighClimb != nullptr) {
+		std::cout << "Starting pLowerArm!\n" ;
+		this->pAutoHighClimb->Start() ;
+	} else {
+		std::cout << "LowerArm was null!\n";
+	}
+
 	// std::string autoSelected = frc::SmartDashboard::GetString(
 	//     "Auto Selector", "Default");
 	// if (autoSelected == "My Auto") {
@@ -125,7 +149,7 @@ void Robot::AutonomousInit() {
 	// }
 }
 
-void Robot::AutonomousPeriodic() { frc::Scheduler::GetInstance()->Run(); }
+void Robot::AutonomousPeriodic() {frc::Scheduler::GetInstance()->Run();}
 
 void Robot::TeleopInit() {
 	// This makes sure that the autonomous stops running when
@@ -162,17 +186,17 @@ void Robot::TeleopInit() {
 
 void Robot::TeleopPeriodic()
 {
-	switch (ClimbManager::ClimbState)
+	switch (ClimbManager::CurrentClimbState)
 	{
-		case kInactive :
-			if (this->pTriggerDrive != nullptr && !this->IsRunning()) // Restart TriggerDrive once climb is done
+		case ClimbManager::kInactive :
+			if (this->pTriggerDrive != nullptr && !this->pTriggerDrive->IsRunning()) // Restart TriggerDrive once climb is done
 				this->pTriggerDrive->Start();
 			break;
-		case kSemiAuto :
+		case ClimbManager::kSemiAuto :
 			if (this->pRaiseBot != nullptr && !this->pRaiseBot->IsRunning()) // Enable RaiseBot when kSemiAuto
 				this->pRaiseBot->Start();
 			break;
-		case kAuto :
+		case ClimbManager::kAuto :
 			/* if (this->pClimb != nullptr && !this->pClimb->IsRunning())
 				this->pClimb->Start(); */
 			if (this->pAutoHighClimb != nullptr && !this->pAutoHighClimb->IsRunning()) // Enable command group on kAuto

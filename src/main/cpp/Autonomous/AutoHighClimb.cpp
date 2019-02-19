@@ -9,10 +9,14 @@
 
 AutoHighClimb::AutoHighClimb()
 {
+	std::cout << "Starting AutoHighClimb...\n";
+
 	/* Lowers arm to platform by	 *
 	 * moving the armm at half speed *
 	 * for a tenth of a second		 */
 	AddSequential(new LowerArm()) ;
+
+	std::cout << "Successfully lowered the arm...\nRaising the robot...\n";
 
 	/* Does the following . . .				*
 	 * A Brings arms down and stops when	*
@@ -25,11 +29,15 @@ AutoHighClimb::AutoHighClimb()
 	 * ! Command stops when C passes !		*/
 	AddSequential(new RaiseBotHigh()) ;
 
+	std::cout << "Successfully raised the robot...\nFinishing climb...\n";
+
 	/* Consists of 3 stages controlled		*
 	 * by the passage of time...			*
 	 * 1: Bring arms up and drive forward	*
 	 * 2: Stop the arms, keep driving		*
 	 * 3: Stop driving, bring legs up		*/
 	AddSequential(new FinishClimb()) ;
+
+	std::cout << "Successfully finished climbing... Yay!\n";
 
 }

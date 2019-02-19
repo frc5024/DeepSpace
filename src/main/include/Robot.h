@@ -8,10 +8,7 @@
 #include <frc/TimedRobot.h>
 #include <frc/WPILib.h>
 #include <cscore_oo.h>
-
-/* TEMP*/
-#include "Commands/Actions/MoveLegsTo.h" 
-/* TEMP*/
+#include <iostream>
 
 #include "Commands/TriggerDrive.h"
 #include "Commands/ControlCompressor.h"
@@ -31,6 +28,12 @@
 #include "Subsystems/Slider.h"
 #include "Subsystems/Compressor.h"
 #include "Subsystems/Piston.h"
+
+/*TEMP{*/
+#include "Autonomous/Actions/LowerArm.h"
+#include "Autonomous/Actions/RaiseBotHigh.h"
+#include "Autonomous/Actions/FinishClimb.h"
+/*}TEMP*/
 
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
@@ -59,6 +62,12 @@ class Robot : public frc::TimedRobot {
   ClimbManager* pClimbManager;
   RaiseBot* pRaiseBot;
   AutoHighClimb* pAutoHighClimb;
+
+  /*TEMP{*/
+  LowerArm* pLowerArm;
+  RaiseBotHigh* pRaiseBotHigh;
+  FinishClimb* pFinishClimb;
+  /*}TEMP*/
 
 	// Robot methods
   void RobotInit()          override; //!< Runs once on robot boot

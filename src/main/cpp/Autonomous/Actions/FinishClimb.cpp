@@ -20,13 +20,14 @@ FinishClimb::FinishClimb()
 void FinishClimb::Initialize()
 {
 	this->pTimer->Start();
+	Robot::m_Leg->SetPos(Leg::Quadrant::Q_BOTTOM) ;
 }
 
 void FinishClimb::Execute()
 {
 	float time = this->pTimer->Get() ;
 	
-	if (time > 2.3)
+	if (time > 2.0)
 	{
 		/*	----==== STAGE 3 ====----	*
 		 * Stop driving and raise legs	*/
@@ -34,7 +35,7 @@ void FinishClimb::Execute()
 		Robot::m_DriveTrain->ArcadeDrive(0.0, 0.0);
 		Robot::m_Leg->MoveLeg(1.0); // Legs won't go past top
 	} else
-	if (time > 0.3)
+	if (time > 1.0)
 	{
 		/*		----==== STAGE 2 ====----		*
 		 * Stop arms and keep moving forward	*/
@@ -53,7 +54,7 @@ void FinishClimb::Execute()
 
 bool FinishClimb::IsFinished()
 {
-	if (this->pTimer->Get() > 8.3)
+	if (this->pTimer->Get() > 8.0)
 		return true ;
 	return false;
 }

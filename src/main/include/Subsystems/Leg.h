@@ -8,6 +8,7 @@
 #include "RobotMap.h"
 
 class Leg : public frc::Subsystem {
+public:
 
 	/**
 	 * @brief The last known position of the leg
@@ -21,10 +22,10 @@ class Leg : public frc::Subsystem {
 		Q_MIDDLE,
 		Q_MIDDLE_BOTTOM,
 		Q_BOTTOM
-	} legPosition ;
+	} ;
 
+private: Quadrant legPosition ;
 public:
-
 	/**
 	 * @brief Construct a new Leg object
 	 */
@@ -68,6 +69,14 @@ public:
 	 * @return false Sensor is not tripped, we are not at the bottom
 	 */
 	bool AtBottom(void) ;
+
+	/**
+	 * @brief DO NOT USE. Only used for testing.
+	 * Used for testing, becuase the arm will be manually set, and therefore throw off the last known position
+	 * @remark If you use this then yousafook
+	 * @param q Position to set to
+	 */
+	void SetPos(Quadrant q);
 
 private:
 

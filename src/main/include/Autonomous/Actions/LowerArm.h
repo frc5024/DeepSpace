@@ -10,8 +10,8 @@
 
 #include <frc/commands/TimedCommand.h>
 
-#define PREDEFINED_ARM_SPEED	0.5	//whole-percent
-#define TIMEOUT_TIME	0.1	//seconds
+#define PREDEFINED_ARM_SPEED	0.4	//whole-percent
+#define TIMEOUT_TIME	0.5	//seconds
 
 class LowerArm : public frc::TimedCommand {
 public:

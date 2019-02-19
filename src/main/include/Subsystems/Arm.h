@@ -2,14 +2,15 @@
 #ifndef _ARM_HG_
 #define _ARM_HG_
 
+#include <iostream>
 #include <frc/commands/Subsystem.h>
+#include <frc/DigitalInput.h>
 #include <frc/WPILib.h>
 #include <frc/Spark.h>
 #include <frc/AnalogInput.h>
 #include <frc/PWMVictorSPX.h>
 #include <ctre/Phoenix.h>
 #include "RobotMap.h"
-#include <frc/DigitalInput.h>
 
 class Arm : public frc::Subsystem {
 public:
@@ -17,9 +18,9 @@ public:
 	void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (Arm)
 
 	/**
-	 * Move Arm arm up or down
+	 * @brief Move Arm arm up or down
 	 *
-	 * @param Speed speed (from -1 to 1)
+	 * @param Speed speed (from -1 to 1), where 1 is forward-down
 	 */
 	void MoveArm(double Speed);
 
@@ -30,7 +31,12 @@ public:
 	 */
 	double getDistanceFromFloor();
 
-	
+	/**
+	 * @brief Returns whether the hall effects is tripped
+	 * This is the sensor for when the arm is lowered
+	 * @return true The arm is fully lowers, the sensor is tripped
+	 * @return false Sensor is not tripped
+	 */
 	bool GetSensor(void) ;
 
 private:
