@@ -51,6 +51,9 @@
 #define HatchGripper_FORWARD_ID 1
 #define HatchGripper_REVERSE_ID 2
 
+#define FLAP_ID_FORWARD 5
+#define FLAP_ID_REVERSE 6
+
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 

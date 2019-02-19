@@ -16,6 +16,7 @@ OI *Robot::m_oi;
 Slider *Robot::m_Slider;
 Piston *Robot::m_Piston;
 HatchGripper *Robot::m_HatchGripper;
+Flap *Robot::m_Flap;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -35,6 +36,7 @@ void Robot::RobotInit() {
   this->m_oi         = new OI();
   this->m_Compressor = new Compressor();
   this->m_HatchGripper = new HatchGripper();
+  this->m_Flap       = new Flap();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
@@ -57,6 +59,7 @@ void Robot::RobotInit() {
   this->pControlSlider = new ControlSlider();
   this->pControlCompressor = new ControlCompressor();
   this->pControlHatchGripper = new ControlHatchGripper();
+  this->pControlCargo = new ControlCargo();
 
   // Create Telemetry table
   std::cout << "Connecting to telemetry table.." << std::endl;
@@ -94,7 +97,9 @@ void Robot::RobotPeriodic() {
  * can use it to reset any subsystem information you want to clear when the
  * robot is disabled.
  */
-void Robot::DisabledInit() {}
+void Robot::DisabledInit() {
+  Robot::m_Flap->Release();
+}
 
 void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
 
@@ -158,6 +163,9 @@ void Robot::TeleopInit() {
   if (this->pControlHatchGripper != nullptr) {
 		this->pControlHatchGripper->Start();
 	}
+  if (this->pControlCargo != nullptr){
+    this->pControlCargo->Start();
+  }
 }
 
 void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }
