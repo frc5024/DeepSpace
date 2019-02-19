@@ -33,7 +33,7 @@ void RaiseBotHigh::Execute()
 {
 	// Check if Arm is done
 	if (Robot::m_Arm->GetSensor()) {
-		this->armSpd = ARM_HOLD_SPEED ;
+		this->armSpd = 0.0 ; // Not HOLD_SPEED becuase there's no failsafe if it goes past the sensor
 	} else {
 		this->armSpd = 0.63 ;
 	}
