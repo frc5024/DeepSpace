@@ -13,7 +13,8 @@ void ControlLight::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
 void ControlLight::Execute() {
-  if(this->pJoyOp->GetXButtonPressed()){
+  // Check if the X button on the controller is pressed, if it is toggle the state of the green light
+  if (this->pJoyOp->GetXButtonPressed()) {
       if(this->state==true) {
         Robot::m_Light->Off();
         this->state = false;

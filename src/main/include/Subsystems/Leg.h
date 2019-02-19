@@ -1,3 +1,4 @@
+//! A subsystem for controlling the leg on the robot
 #ifndef _LEG_HG_
 #define _LEG_HG_
 
@@ -8,8 +9,8 @@
 
 class Leg : public frc::Subsystem {
   public:
-    Leg();
-    void InitDefaultCommand() override;
+    Leg(); //<! Class constructor
+    void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem ()
   
     /**
   	 * Move climb leg up or down

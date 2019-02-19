@@ -9,10 +9,7 @@ Leg::Leg() : Subsystem("Leg Subsystem") {
 	this->pLegMotor->SetSafetyEnabled(false);
 }
 
-void Leg::InitDefaultCommand() {
-  // Set the default command for a subsystem here.
-  // SetDefaultCommand(new MySpecialCommand());
-}
+void Leg::InitDefaultCommand() { }
 
 void Leg::MoveLeg(double Speed) {
   this->pLegMotor->Set(Speed);

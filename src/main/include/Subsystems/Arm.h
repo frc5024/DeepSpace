@@ -12,7 +12,7 @@
 
 class Arm : public frc::Subsystem {
  public:
-  Arm();
+  Arm(); //!< Class constructor
   void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (Arm)
 
   /**
@@ -22,19 +22,16 @@ class Arm : public frc::Subsystem {
 	 */
   void MoveArm(double Speed);
 
-
   /**
-	 * returns distance from floor
-	 *
+	 * Returns distance from floor
 	 */
   double getDistanceFromFloor();
 
-
   private:
-  can::WPI_TalonSRX* pArmMotor; //!< Pointer for Arm arm motor
-  can::WPI_TalonSRX* pArmMotor2; //!< Pointer for Arm arm motor
-  frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC};
-  static constexpr double kValueToInches = 0.125;
+   can::WPI_TalonSRX* pArmMotor; //!< Pointer for Arm arm motor
+   can::WPI_TalonSRX* pArmMotor2; //!< Pointer for Arm arm motor
+   frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC}; //!< Pointer for the climb ultrasonic sensor
+   static constexpr double kValueToInches = 0.125;
 };
 
 #endif // _ARM_HG_

@@ -30,7 +30,7 @@
 #define XBOX_DEADZONE_RIGHT_JOY 0.1
 #define XBOX_DEADZONE_LEFT_JOY 0.1
 
-//Climb Motors
+// Climb Motors
 #define CLIMB_ARM_MOTOR 5
 
 #define CLIMB_ARM_MOTOR_2 6
@@ -48,7 +48,6 @@
 
 // Piston
 #define PCM_CAN_ID 11
-
 #define PISTON_ID 7
 
 // Light

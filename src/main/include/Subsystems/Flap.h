@@ -1,3 +1,4 @@
+//! A subsystem that interfaces with the robot's flap that holds and releases the cargo
 #ifndef _Flap_HG_
 #define _Flap_HG_
 
@@ -11,8 +12,8 @@ class Flap : public frc::Subsystem {
   Flap(); //!< Class constructor
   void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (ControlFlap)
 	
-  void Deploy();  //!< Deploy the Flap
-  void Retract(); //!< Retract the Flap
+  void Deploy();  //!< Deploy the flap
+  void Retract(); //!< Retract the flap
   void Release(); //!< Release pressure
 
  private:

@@ -28,7 +28,7 @@ class ControlCompressor : public frc::Command {
   
 private:
 	frc::XboxController* pJoyOp;    //!< A mnemonic for the operator's controller
-    frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller
+  frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller
 };
 
 #endif // _CONTROLCOMPRESSOR_HG_

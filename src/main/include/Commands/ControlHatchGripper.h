@@ -19,7 +19,7 @@ class ControlHatchGripper : public frc::Command {
   
 private:
 	double speed;
-	frc::XboxController* pJoyOp;
+	frc::XboxController* pJoyOp; //!< A mnemonic for the operator's controller
 };
 
 #endif // _CONTROLHATCHGRIPPER_HG_

@@ -38,29 +38,29 @@
 class Robot : public frc::TimedRobot {
  public:
 	// Subsystems
-  static Compressor *m_Compressor; //!< Pointer for the Compressor
-  static DriveTrain *m_DriveTrain; //!< Pointer for the DriveTrain
-  static Piston *m_Piston;         //!< Pointer for the Piston
-  static CrawlDrive *m_CrawlDrive; //!< Pointer for the DriveTrain
-  static Arm *m_Arm;               //!< Pointer for the Arm
-  static Leg *m_Leg;               //!< Pointer for the Leg
-  static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
-  static Slider *m_Slider;         //!< Pointer for the Slider
-  static HatchGripper *m_HatchGripper;//!< Pointer for the Hatch Gripper
-  static Flap *m_Flap;             //!< Pointer for the Cargo Flap
-  static Light *m_Light;           //!< Pointer for the Light
+  static Compressor   *m_Compressor;   //!< Pointer for the Compressor
+  static DriveTrain   *m_DriveTrain;   //!< Pointer for the DriveTrain
+  static Piston       *m_Piston;       //!< Pointer for the Piston
+  static CrawlDrive   *m_CrawlDrive;   //!< Pointer for the DriveTrain
+  static Arm          *m_Arm;          //!< Pointer for the Arm
+  static Leg          *m_Leg;          //!< Pointer for the Leg
+  static OI           *m_oi;           //!< Pointer for the Operator Interface (OI)
+  static Slider       *m_Slider;       //!< Pointer for the Slider
+  static HatchGripper *m_HatchGripper; //!< Pointer for the Hatch Gripper
+  static Flap         *m_Flap;         //!< Pointer for the Cargo Flap
+  static Light        *m_Light;        //!< Pointer for the Light
 
 	// Commands
-  TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
-  testUltra* pTestUltra;
-  PullArm* pPullArm;
-  PullLeg* pPullLeg;
-  DeployClimb* pDeployClimb;
-  ControlHatchGripper* pControlHatchGripper;
-  ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
-  ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
-  ControlCargo* pControlCargo;
-  ControlLight* pControlLight;
+  TriggerDrive*        pTriggerDrive;        //!< Pointer for the TriggerDrive command
+  testUltra*           pTestUltra;           //!< Pointer for the TestUltra command
+  PullArm*             pPullArm;             //!< Pointer for the PullArm command
+  PullLeg*             pPullLeg;             //!< Pointer for the PullLeg command
+  DeployClimb*         pDeployClimb;         //!< Pointer for the DeployClimb command
+  ControlHatchGripper* pControlHatchGripper; //!< Pointer for the ControlHatchGripper command
+  ControlSlider*       pControlSlider;       //!< Pointer for the ControlSlider command
+  ControlCompressor*   pControlCompressor;   //!< Pointer for the ControlCompressor command
+  ControlCargo*        pControlCargo;        //!< Pointer for the ControlCargo command
+  ControlLight*        pControlLight;        //!< Pointer for the ControlLight command
 
 	// Robot methods
   void RobotInit()          override; //!< Runs once on robot boot

@@ -1,3 +1,4 @@
+//! A subsystem that interfaces with the robot's piston
 #ifndef _PISTON_HG_
 #define _PISTON_HG_
 
@@ -15,7 +16,7 @@ class Piston : public frc::Subsystem {
   void Retract(); //!< Retract the piston
 
  private:
-  frc::Solenoid* pSolenoid; //!< Pointer to Solenoid
+  frc::Solenoid* pSolenoid; //!< Pointer to solenoid the piston is attached too
 };
 
 #endif //_PISTON_HG_

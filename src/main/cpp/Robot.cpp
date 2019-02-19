@@ -7,17 +7,17 @@
 #include <fstream>
 
 // Subsystems
-DriveTrain *Robot::m_DriveTrain;
-Compressor *Robot::m_Compressor;
-CrawlDrive *Robot::m_CrawlDrive;
-Arm *Robot::m_Arm;
-Leg *Robot::m_Leg;
-OI *Robot::m_oi;
-Slider *Robot::m_Slider;
-Piston *Robot::m_Piston;
+DriveTrain   *Robot::m_DriveTrain;
+Compressor   *Robot::m_Compressor;
+CrawlDrive   *Robot::m_CrawlDrive;
+Arm          *Robot::m_Arm;
+Leg          *Robot::m_Leg;
+OI           *Robot::m_oi;
+Slider       *Robot::m_Slider;
+Piston       *Robot::m_Piston;
 HatchGripper *Robot::m_HatchGripper;
-Flap *Robot::m_Flap;
-Light *Robot::m_Light;
+Flap         *Robot::m_Flap;
+Light        *Robot::m_Light;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -28,17 +28,17 @@ void Robot::RobotInit() {
 
   // Subsystems
   std::cout << "Creating Subsystems..." << std::endl;
-  this->m_DriveTrain = new DriveTrain();
-  this->m_CrawlDrive = new CrawlDrive();
-  this->m_Arm = new Arm();
-  this->m_Leg = new Leg();
-  this->m_Slider     = new Slider();
-  this->m_Piston     = new Piston();
-  this->m_oi         = new OI();
-  this->m_Compressor = new Compressor();
+  this->m_DriveTrain   = new DriveTrain();
+  this->m_CrawlDrive   = new CrawlDrive();
+  this->m_Arm          = new Arm();
+  this->m_Leg          = new Leg();
+  this->m_Slider       = new Slider();
+  this->m_Piston       = new Piston();
+  this->m_oi           = new OI();
+  this->m_Compressor   = new Compressor();
   this->m_HatchGripper = new HatchGripper();
-  this->m_Flap       = new Flap();
-  this->m_Light       = new Light();
+  this->m_Flap         = new Flap();
+  this->m_Light        = new Light();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
@@ -53,16 +53,16 @@ void Robot::RobotInit() {
 	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
-  this->pTriggerDrive = new TriggerDrive();
-  this->pTestUltra = new testUltra();
-  this->pPullArm = new PullArm();
-  this->pPullLeg = new PullLeg();
-  this->pDeployClimb = new DeployClimb();
-  this->pControlSlider = new ControlSlider();
-  this->pControlCompressor = new ControlCompressor();
+  this->pTriggerDrive        = new TriggerDrive();
+  this->pTestUltra           = new testUltra();
+  this->pPullArm             = new PullArm();
+  this->pPullLeg             = new PullLeg();
+  this->pDeployClimb         = new DeployClimb();
+  this->pControlSlider       = new ControlSlider();
+  this->pControlCompressor   = new ControlCompressor();
   this->pControlHatchGripper = new ControlHatchGripper();
-  this->pControlCargo = new ControlCargo();
-  this->pControlLight = new ControlLight();
+  this->pControlCargo        = new ControlCargo();
+  this->pControlLight        = new ControlLight();
 
   // Create Telemetry table
   std::cout << "Connecting to telemetry table.." << std::endl;
@@ -148,27 +148,31 @@ void Robot::TeleopInit() {
   if (this->pTriggerDrive != nullptr) {
 		this->pTriggerDrive->Start();
 	}
-//   if (this->pTestUltra != nullptr) {
-// 		this->pTestUltra->Start();
-// 	}
+
   if (this->pPullArm != nullptr) {
 		this->pPullArm->Start();
 	}
+
   if (this->pPullLeg != nullptr) {
 		this->pPullLeg->Start();
   }
+
 	if (this->pControlSlider != nullptr) {
 		this->pControlSlider->Start();
 	}
+
   if (this->pControlCompressor != nullptr) {
 		this->pControlCompressor->Start();
 	}
+
   if (this->pControlHatchGripper != nullptr) {
 		this->pControlHatchGripper->Start();
 	}
+
   if (this->pControlCargo != nullptr){
     this->pControlCargo->Start();
   }
+  
   if (this->pControlLight != nullptr){
     this->pControlLight->Start();
   }

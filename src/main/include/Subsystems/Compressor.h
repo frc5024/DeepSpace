@@ -15,7 +15,7 @@ class Compressor : public frc::Subsystem {
 	/**
 	 * Pass data to Compressor
 	 *
-	 * @param enabled Bool to determine if the compressor should be enabled or not
+	 * @param Enabled boolean to determine if the compressor should be enabled or not
 	 */
   void SetState(bool enabled);
 

@@ -13,13 +13,13 @@ class DriveTrain : public frc::Subsystem {
  public:
   DriveTrain(); //!< Class constructor
   void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (DriveWithJoystick)
-	
-	/**
-	 * Pass data to wpilib's ArcadeDrive
-	 *
-	 * @param xSpeed Forward speed (form -1 to 1)
-	 * @param zRotation Rotation (from -1 to 1)
-	 */
+
+  /** 
+   * Pass data to wpilib's ArcadeDrive
+   * 
+   * @param xSpeed Forward speed (from -1 to 1)
+   * @param zRotation Rotation (from -1 to 1)
+   */
   void ArcadeDrive(double xSpeed, double zRotation);
   
   /**
@@ -28,7 +28,7 @@ class DriveTrain : public frc::Subsystem {
    * @param leftSpeed left motor speed
    * @param rightSpeed right motor speed
    */
-	void TankDrive(double leftSpeed, double rightSpeed);
+  void TankDrive(double leftSpeed, double rightSpeed);
 	
 	/**
 	 * Drive with circles
@@ -36,15 +36,15 @@ class DriveTrain : public frc::Subsystem {
 	 * @param magnitude Magnitude modifier for the radius output
 	 * @param radial Value that is computed into the outside motor's basic output
 	 */
-	void RadialDrive(double magnitude, double radial);
+  void RadialDrive(double magnitude, double radial);
 
  private:
-  can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
-	can::WPI_TalonSRX* pLeftRearMotor;  //!< Pointer for left rear motor
-	can::WPI_TalonSRX* pRightFrontMotor;//!< Pointer for right front motor
-	can::WPI_TalonSRX* pRightRearMotor; //!< Pointer for right rear motor
+  can::WPI_TalonSRX* pLeftFrontMotor;  //!< Pointer for left front motor
+  can::WPI_TalonSRX* pLeftRearMotor;   //!< Pointer for left rear motor
+  can::WPI_TalonSRX* pRightFrontMotor; //!< Pointer for right front motor
+  can::WPI_TalonSRX* pRightRearMotor;  //!< Pointer for right rear motor
 
-	frc::DifferentialDrive* pRobotDrive; //!< Pointer for a differential drivebase made up of 2 motor pairs
+  frc::DifferentialDrive* pRobotDrive; //!< Pointer for a differential drivebase made up of 2 motor pairs
 };
 
 #endif // _DRIVETRAIN_HG_

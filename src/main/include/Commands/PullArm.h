@@ -29,6 +29,6 @@ class PullArm : public frc::Command {
 
     double speed;
 
-    frc::XboxController* pJoyDebug;
+    frc::XboxController* pJoyDebug; //!< A mnemonic for the debug controller
 };
 #endif // _PULLARM_HG_

@@ -15,12 +15,12 @@ void ControlCompressor::Initialize() {}
 // Called repeatedly when this Command is scheduled to run
 void ControlCompressor::Execute() {
     // Enable on start button
-    if(this->pJoyDrive->GetStartButtonReleased() || this->pJoyOp->GetStartButtonReleased()){
+    if(this->pJoyDrive->GetStartButtonReleased() || this->pJoyOp->GetStartButtonReleased()) {
         Robot::m_Compressor->SetState(true);
     }
 
     // Disable on back button
-    if(this->pJoyDrive->GetBackButtonReleased() || this->pJoyOp->GetBackButtonReleased()){
+    if(this->pJoyDrive->GetBackButtonReleased() || this->pJoyOp->GetBackButtonReleased()) {
         Robot::m_Compressor->SetState(false);
     }
 }

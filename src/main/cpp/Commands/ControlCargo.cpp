@@ -15,9 +15,9 @@ void ControlCargo::Initialize() {}
 void ControlCargo::Execute() {
 
   // Control piston
-  if(this->pJoyOp->GetTriggerAxis(Hand::kLeftHand) > 0.8){
+  if (this->pJoyOp->GetTriggerAxis(Hand::kLeftHand) > 0.8) {
     Robot::m_Flap->Deploy();
-  }else{
+  } else {
     Robot::m_Flap->Retract();
   }
 }

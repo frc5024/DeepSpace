@@ -29,6 +29,6 @@ class PullLeg : public frc::Command {
 
     double speed;
 
-    frc::XboxController* pJoyDebug;
+    frc::XboxController* pJoyDebug; //!< A mnemonic for the test controller
 };
 #endif // _PULLLEG_HG_
