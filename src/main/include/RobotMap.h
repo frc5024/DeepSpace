@@ -47,6 +47,9 @@
 
 #define PISTON_ID 7
 
+// Light
+#define LIGHT_ID 0
+
 // Hatch Gripper 
 #define HatchGripper_FORWARD_ID 1
 #define HatchGripper_REVERSE_ID 2
