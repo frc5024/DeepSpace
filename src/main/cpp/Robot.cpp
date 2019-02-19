@@ -85,11 +85,15 @@ void Robot::RobotPeriodic() {
   double robotVoltage   = this->pdp->GetVoltage();
   bool   dsAttached     = this->driverStation.IsDSAttached();
   bool   fmsAttached    = this->driverStation.IsFMSAttached();
+  double sliderPosition = this->m_Slider->sliderSide;
 
   this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
   this->ntTelemetry->PutNumber("voltage",  robotVoltage);
   this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
   this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
+
+  // Send information about the Slider position over NetworkTables
+  this->ntTelemetry->PutNumber("SliderPosition", sliderPosition);
 }
 
 /**
