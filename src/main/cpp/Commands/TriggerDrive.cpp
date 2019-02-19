@@ -34,7 +34,7 @@ void TriggerDrive::Execute() {
   this->speed    *= (this->speedMultiplier * this->directionMultiplier);
   this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
-  Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
+  Robot::m_DriveTrain->RadialDrive(this->speed, this->rotation);
   
   // Reset the speed and rotation
   // while this does have some negitive side effects while driving,
