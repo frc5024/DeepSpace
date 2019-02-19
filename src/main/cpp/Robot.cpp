@@ -85,7 +85,7 @@ void Robot::RobotPeriodic() {
   double robotVoltage   = this->pdp->GetVoltage();
   bool   dsAttached     = this->driverStation.IsDSAttached();
   bool   fmsAttached    = this->driverStation.IsFMSAttached();
-  double sliderPosition = this->m_Slider->sliderSide;
+  double sliderPosition = this->m_Slider.sliderSide;
 
   this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
   this->ntTelemetry->PutNumber("voltage",  robotVoltage);
