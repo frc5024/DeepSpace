@@ -17,6 +17,7 @@ Slider *Robot::m_Slider;
 Piston *Robot::m_Piston;
 HatchGripper *Robot::m_HatchGripper;
 Flap *Robot::m_Flap;
+Light *Robot::m_Light;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -37,6 +38,7 @@ void Robot::RobotInit() {
   this->m_Compressor = new Compressor();
   this->m_HatchGripper = new HatchGripper();
   this->m_Flap       = new Flap();
+  this->m_Light       = new Light();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
@@ -60,6 +62,7 @@ void Robot::RobotInit() {
   this->pControlCompressor = new ControlCompressor();
   this->pControlHatchGripper = new ControlHatchGripper();
   this->pControlCargo = new ControlCargo();
+  this->pControlLight = new ControlLight();
 
   // Create Telemetry table
   std::cout << "Connecting to telemetry table.." << std::endl;
@@ -165,6 +168,9 @@ void Robot::TeleopInit() {
 	}
   if (this->pControlCargo != nullptr){
     this->pControlCargo->Start();
+  }
+  if (this->pControlLight != nullptr){
+    this->pControlLight->Start();
   }
 }
 
