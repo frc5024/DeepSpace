@@ -21,9 +21,11 @@
 #include "Subsystems/Arm.h"
 #include "Subsystems/Leg.h"
 #include "Commands/ControlSlider.h"
+#include "Commands/ControlCargo.h"
 #include "Subsystems/Slider.h"
 #include "Subsystems/Compressor.h"
 #include "Subsystems/Piston.h"
+#include "Subsystems/Flap.h"
 
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
@@ -40,6 +42,7 @@ class Robot : public frc::TimedRobot {
   static Leg *m_Leg;               //!< Pointer for the Leg
   static OI *m_oi;                 //!< Pointer for the Operator Interface (OI)
   static Slider *m_Slider;         //!< Pointer for the Slider
+  static Flap *m_Flap;             //!< Pointer for the Cargo Flap
 
 	// Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
@@ -49,6 +52,7 @@ class Robot : public frc::TimedRobot {
   DeployClimb* pDeployClimb;
   ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
   ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
+  ControlCargo* pControlCargo;
 
 	// Robot methods
   void RobotInit()          override; //!< Runs once on robot boot

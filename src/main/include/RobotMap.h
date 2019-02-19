@@ -47,6 +47,9 @@
 
 #define PISTON_ID 7
 
+#define FLAP_ID_FORWARD 6
+#define FLAP_ID_REVERSE 5
+
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 
