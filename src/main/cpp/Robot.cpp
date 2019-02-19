@@ -17,57 +17,54 @@ Slider *Robot::m_Slider;
 Piston *Robot::m_Piston;
 
 void Robot::RobotInit() {
-  // Print out a banner to the shell
-  // Some backslashes are doubled in order for them to print properly
-  std::cout << "   Welcome 5024!" << std::endl;
-  std::cout << "-------------------" << std::endl;
-  std::cout << "Robot Starting.."<< std::endl;
+	// Print out a banner to the shell
+	// Some backslashes are doubled in order for them to print properly
+	std::cout << "   Welcome 5024!" << std::endl;
+	std::cout << "-------------------" << std::endl;
+	std::cout << "Robot Starting.."<< std::endl;
 
-  // Subsystems
-  std::cout << "Creating Subsystems..." << std::endl;
-  this->m_DriveTrain = new DriveTrain();
-  this->m_CrawlDrive = new CrawlDrive();
-  this->m_Arm        = new Arm();
-  this->m_Leg        = new Leg();
-  this->m_Slider     = new Slider();
-  this->m_Piston     = new Piston();
-  this->m_oi         = new OI();
-  this->m_Compressor = new Compressor();
+	// Subsystems
+	std::cout << "Creating Subsystems..." << std::endl;
+	this->m_DriveTrain = new DriveTrain();
+	this->m_CrawlDrive = new CrawlDrive();
+	this->m_Arm        = new Arm();
+	this->m_Leg        = new Leg();
+	this->m_Slider     = new Slider();
+	this->m_Piston     = new Piston();
+	this->m_oi         = new OI();
+	this->m_Compressor = new Compressor();
 
-  // Init camera
-  std::cout << "Starting CameraServer.." << std::endl;
-  this->frontCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Driver Camera", CAMERASERVER_DRIVER_CAMERA);
-  this->visionCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Vision",  CAMERASERVER_VISION_CAMERA);
-  
-  // Set vision cam settings
-  std::cout << "Setting camera config.." << std::endl;
-  std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
-  std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
-  this->visionCam.SetConfigJson(visionSettings);
-	
+	// Init camera
+	std::cout << "Starting CameraServer.." << std::endl;
+	this->frontCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Driver Camera", CAMERASERVER_DRIVER_CAMERA);
+	this->visionCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Vision",  CAMERASERVER_VISION_CAMERA);
+
+	// Set vision cam settings
+	std::cout << "Setting camera config.." << std::endl;
+	std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
+	std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
+	this->visionCam.SetConfigJson(visionSettings);
+
 	// Init commands
-  std::cout << "Creating Commands.." << std::endl;
-  this->pTriggerDrive = new TriggerDrive();
-  this->pTestUltra = new testUltra();
-  this->pPullArm = new PullArm();
-  this->pPullLeg = new PullLeg();
-  this->pClimb = new Climb();
-  this->pControlSlider = new ControlSlider();
-  this->pControlCompressor = new ControlCompressor();
-  this->pClimbManager = new ClimbManager();
-  this->pRaiseBot = new RaiseBot();
+	std::cout << "Creating Commands.." << std::endl;
+	this->pTriggerDrive = new TriggerDrive();
+	this->pTestUltra = new testUltra();
+	this->pPullArm = new PullArm();
+	this->pPullLeg = new PullLeg();
+	this->pClimb = new Climb();
+	this->pAutoHighClimb = new AutoHighClimb();
+	this->pControlSlider = new ControlSlider();
+	this->pControlCompressor = new ControlCompressor();
+	this->pClimbManager = new ClimbManager();
+	this->pRaiseBot = new RaiseBot();
 
-  /*TEMP*/
-  this->pMoveLegsTo = new MoveLegsTo(MoveLegsTo::P_BOT, -1.0, 12.0) ;
-  /*TEMP*/
+	// Create Telemetry table
+	std::cout << "Connecting to telemetry table.." << std::endl;
+	this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry");
 
-  // Create Telemetry table
-  std::cout << "Connecting to telemetry table.." << std::endl;
-  this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry");
-
-  // create ds and pdp objects
-  std::cout << "Creating Driverstation and PDP objects" << std::endl;
-  this->pdp = new frc::PowerDistributionPanel(10);
+	// create ds and pdp objects
+	std::cout << "Creating Driverstation and PDP objects" << std::endl;
+	this->pdp = new frc::PowerDistributionPanel(10);
 }
 
 /**
@@ -79,19 +76,17 @@ void Robot::RobotInit() {
  * LiveWindow and SmartDashboard integrated updating.
  */
 void Robot::RobotPeriodic() {
-  // Send information about the robot over NetworkTables
+	// Send information about the robot over NetworkTables
 
-  double pdpTemperature = this->pdp->GetTemperature();
-  double robotVoltage   = this->pdp->GetVoltage();
-  bool   dsAttached     = this->driverStation.IsDSAttached();
-  bool   fmsAttached    = this->driverStation.IsFMSAttached();
+	double pdpTemperature = this->pdp->GetTemperature();
+	double robotVoltage   = this->pdp->GetVoltage();
+	bool   dsAttached     = this->driverStation.IsDSAttached();
+	bool   fmsAttached    = this->driverStation.IsFMSAttached();
 
-  this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
-  this->ntTelemetry->PutNumber("voltage",  robotVoltage);
-  this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
-  this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
-
-  
+	this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
+	this->ntTelemetry->PutNumber("voltage",  robotVoltage);
+	this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
+	this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
 }
 
 /**
@@ -115,74 +110,78 @@ void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
  * the if-else structure below with additional strings & commands.
  */
 void Robot::AutonomousInit() {
-  this->pMoveLegsTo->Start() ;
-  // std::string autoSelected = frc::SmartDashboard::GetString(
-  //     "Auto Selector", "Default");
-  // if (autoSelected == "My Auto") {
-  //   m_autonomousCommand = &m_myAuto;
-  // } else {
-  //   m_autonomousCommand = &m_defaultAuto;
-  // }
+	// std::string autoSelected = frc::SmartDashboard::GetString(
+	//     "Auto Selector", "Default");
+	// if (autoSelected == "My Auto") {
+	//   m_autonomousCommand = &m_myAuto;
+	// } else {
+	//   m_autonomousCommand = &m_defaultAuto;
+	// }
 
-  // m_autonomousCommand = m_chooser.GetSelected();
+	// m_autonomousCommand = m_chooser.GetSelected();
 
-  // if (m_autonomousCommand != nullptr) {
-  //   m_autonomousCommand->Start();
-  // }
+	// if (m_autonomousCommand != nullptr) {
+	//   m_autonomousCommand->Start();
+	// }
 }
 
 void Robot::AutonomousPeriodic() { frc::Scheduler::GetInstance()->Run(); }
 
 void Robot::TeleopInit() {
-  // This makes sure that the autonomous stops running when
-  // teleop starts running. If you want the autonomous to
-  // continue until interrupted by another command, remove
-  // this line or comment it out.
-  // if (m_autonomousCommand != nullptr) {
-  //   m_autonomousCommand->Cancel();
-  //   m_autonomousCommand = nullptr;
-  // }
+	// This makes sure that the autonomous stops running when
+	// teleop starts running. If you want the autonomous to
+	// continue until interrupted by another command, remove
+	// this line or comment it out.
+	// if (m_autonomousCommand != nullptr) {
+	//   m_autonomousCommand->Cancel();
+	//   m_autonomousCommand = nullptr;
+	// }
 
-  if (this->pTriggerDrive != nullptr) {
+	if (this->pTriggerDrive != nullptr) {
 		this->pTriggerDrive->Start();
 	}
-//   if (this->pTestUltra != nullptr) {
-// 		this->pTestUltra->Start();
-// 	}
-  if (this->pPullArm != nullptr) {
+	//   if (this->pTestUltra != nullptr) {
+	// 		this->pTestUltra->Start();
+	// 	}
+	if (this->pPullArm != nullptr) {
 		this->pPullArm->Start();
 	}
-  if (this->pPullLeg != nullptr) {
+	if (this->pPullLeg != nullptr) {
 		this->pPullLeg->Start();
-  }
+	}
 	if (this->pControlSlider != nullptr) {
 		this->pControlSlider->Start();
 	}
-  if (this->pControlCompressor != nullptr) {
+	if (this->pControlCompressor != nullptr) {
 		this->pControlCompressor->Start();
 	}
-  if (this->pClimbManager != nullptr) {
+	if (this->pClimbManager != nullptr) {
 		this->pClimbManager->Start();
 	}
 }
 
-void Robot::TeleopPeriodic() { 
-  // Restart TriggerDrive once climb is done
-  if (this->pTriggerDrive != nullptr && !this->pTriggerDrive->IsRunning() && ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kInactive){
-    this->pTriggerDrive->Start();
-  }
+void Robot::TeleopPeriodic()
+{
+	switch (ClimbManager::ClimbState)
+	{
+		case kInactive :
+			if (this->pTriggerDrive != nullptr && !this->IsRunning()) // Restart TriggerDrive once climb is done
+				this->pTriggerDrive->Start();
+			break;
+		case kSemiAuto :
+			if (this->pRaiseBot != nullptr && !this->pRaiseBot->IsRunning()) // Enable RaiseBot when kSemiAuto
+				this->pRaiseBot->Start();
+			break;
+		case kAuto :
+			/* if (this->pClimb != nullptr && !this->pClimb->IsRunning())
+				this->pClimb->Start(); */
+			if (this->pAutoHighClimb != nullptr && !this->pAutoHighClimb->IsRunning()) // Enable command group on kAuto
+				this->pAutoHighClimb->Start();
+		default:
+			break;
+	}
 
-  // Enable RaiseBot when kSemiAuto
-  if (this->pRaiseBot != nullptr && !this->pRaiseBot->IsRunning() && ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kSemiAuto){
-    this->pRaiseBot->Start();
-  }
-
-  // Enable command group on kAuto
-  if (this->pClimb != nullptr && !this->pClimb->IsRunning() && ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kAuto){
-    this->pClimb->Start();
-  }
-
-  frc::Scheduler::GetInstance()->Run(); 
+	frc::Scheduler::GetInstance()->Run(); 
 }
 
 void Robot::TestPeriodic() {}
@@ -190,8 +189,8 @@ void Robot::TestPeriodic() {}
 
 #ifndef RUNNING_FRC_TESTS
 int main(){
-  // Start the robot
-  WinGame(Robot);
-  return 1;
+	// Start the robot
+	WinGame(Robot);
+	return 1;
 }
 #endif

@@ -13,17 +13,15 @@ class CrawlDrive: public frc::Subsystem {
      CrawlDrive(); //!< Class constructor
      void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem () 
 
-    /**
-	 * Pass data to wpilib's ArcadeDrive
-	 *
-	 * @param xSpeed Forward speed (form -1 to 1)
-	 * @param zRotation Rotation (from -1 to 1)
+   /**
+	 * @brief Drive, (or crawl), forwards or backwards
+	 * Moves the wheels attached to the arms. What wheels do.
+	 * @param Speed Percent power to go. 100% drives forwards
 	 */
     void Move(double Speed);
 
     /**
      * @brief Returns true if its on the floor
-     * 
      * @return true Something is right in front of it (on the floor)
      * @return false Nothing in front of it (in the air)
      */

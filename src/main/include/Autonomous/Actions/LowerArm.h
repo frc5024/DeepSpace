@@ -5,43 +5,21 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#ifndef _MOVELEGSTO_HG_
-#define _MOVELEGSTO_HG_
+#ifndef _LOWERARM_HG_
+#define _LOWERARM_HG_
 
 #include <frc/commands/TimedCommand.h>
-#include <frc/DigitalInput.h>
 
-class MoveLegsTo : public frc::TimedCommand {
+#define PREDEFINED_ARM_SPEED	0.5	//whole-percent
+#define TIMEOUT_TIME	0.1	//seconds
+
+class LowerArm : public frc::TimedCommand {
 public:
-
-	/**
-	 * @brief Position to move to
-	 */
-	enum Pos {
-		P_TOP,
-		P_MID,
-		P_BOT
-	} pos ;
-
-	/**
-	 * @brief Construct a new Move Legs To object
-	 * @param position Enum position to move to
-	 * @param spd Speed percent of motor output to move at
-	 * @param timeout Time seconds to wait until timeout
-	 */
-	explicit MoveLegsTo(Pos position, double spd, double timeout);
+	explicit LowerArm();
 	void Initialize() override;
 	void Execute() override;
-	bool IsFinished() override;
 	void End() override;
 	void Interrupted() override;
-private:
-	
-	/**
-	 * @brief Speed to maintain
-	 */
-	double spd ;
+};
 
-} ;
-
-#endif /* _MOVELEGSTO_HG_ */
+#endif /* _LOWERARM_HG_ */

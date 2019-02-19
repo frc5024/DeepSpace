@@ -19,6 +19,7 @@
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
 #include "Commands/Climb.h"
+#include "Autonomous/AutoHighClimb.h"
 #include "Commands/ClimbManager.h"
 #include "Commands/RaiseBot.h"
 #include "OI.h"
@@ -57,10 +58,7 @@ class Robot : public frc::TimedRobot {
   ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
   ClimbManager* pClimbManager;
   RaiseBot* pRaiseBot;
-
-  /*TEMP*/
-  MoveLegsTo* pMoveLegsTo ;
-  /*TEMP*/
+  AutoHighClimb* pAutoHighClimb;
 
 	// Robot methods
   void RobotInit()          override; //!< Runs once on robot boot
