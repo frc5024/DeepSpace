@@ -25,7 +25,7 @@ AutoHighClimb::AutoHighClimb()
 	 * are on the platform		*/
 	AddSequential(new Crawl()) ;
 
-	/* Consists of 3 stages controlled		*
+	/* Consists of 2 stages controlled		*
 	 * by the passage of time...			*
 	 * 1: Bring arms up and drive forward	*
 	 * 2: Stop the arms and drivetrain		*
