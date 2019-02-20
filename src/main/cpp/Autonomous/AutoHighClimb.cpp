@@ -15,7 +15,7 @@ AutoHighClimb::AutoHighClimb()
 
 	/* Pull front of robot up	*
 	 * above the platform		*/
-	AddSequential(new LowerArm(0.8, 6.0)) ;
+	AddSequential(new LowerArm(1.0, 6.0)) ;
 
 	/* Bring back of robot up	*
 	 * to be level, to drive	*/

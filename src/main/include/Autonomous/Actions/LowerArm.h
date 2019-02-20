@@ -8,18 +8,21 @@
 #ifndef _LOWERARM_HG_
 #define _LOWERARM_HG_
 
-#include <frc/commands/TimedCommand.h>
+#include <frc/commands/Command.h>
+#include <frc/Timer.h>
 
-class LowerArm : public frc::TimedCommand {
+class LowerArm : public frc::Command {
 public:
-	explicit LowerArm(float speed, float timeout);
-	void Initialize() override;
-	void Execute() override;
-	bool IsFinished() override;
-	void End() override;
-	void Interrupted() override;
+	LowerArm(float speed, float timeout);
+	void Initialize()	override;
+	void Execute()		override;
+	bool IsFinished()	override;
+	void End()			override;
+	void Interrupted()	override;
 private:
 	float speed; //!< Whole-percent power to use for arm
+	float timeout; //!< Maximum time to run command for in seconds. The 'timeout' time.
+	frc::Timer* pTimer; //!< Timer for timeing out the command
 };
 
 #endif /* _LOWERARM_HG_ */
