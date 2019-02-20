@@ -5,23 +5,19 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#ifndef _RAISEBOTHIGH_HG_
-#define _RAISEBOTHIGH_HG_
+#ifndef _LOWERLEG_HG_
+#define _LOWERLEG_HG_
 
 #include <frc/commands/Command.h>
-#include <frc/Timer.h>
 
-class RaiseBotHigh : public frc::Command {
+class LowerLeg : public frc::Command {
 public:
-	RaiseBotHigh(void);
+	LowerLeg();
 	void Initialize() override;
 	void Execute() override;
 	bool IsFinished() override;
 	void End() override;
-	void Interrupted() override;
-private:
-	frc::Timer* pTimer; //!< Timer to timeout the command if sensors fail
-	bool  onFloor ; //!< Is robot currently on the floor?
+  void Interrupted() override;
 };
 
-#endif /* _RAISEBOTHIGH_HG_ */
+#endif /* _LOWERLEG_HG_ */

@@ -10,8 +10,9 @@
 
 #include <frc/commands/CommandGroup.h>
 #include "Autonomous/Actions/LowerArm.h"
-#include "Autonomous/Actions/RaiseBotHigh.h"
+#include "Autonomous/Actions/Crawl.h"
 #include "Autonomous/Actions/FinishClimb.h"
+#include "Autonomous/Actions/LowerLeg.h"
 #include <iostream>
 
 class AutoHighClimb : public frc::CommandGroup {

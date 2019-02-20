@@ -8,16 +8,22 @@
 #include "Autonomous/Actions/LowerArm.h"
 #include "Robot.h"
 
-LowerArm::LowerArm() : frc::TimedCommand(TIMEOUT_TIME)
+LowerArm::LowerArm(float speed, float timeout) : frc::TimedCommand(timeout)
 {
 	Requires(Robot::m_Arm);
+	this->speed = speed;
 }
 
 void LowerArm::Initialize() {}
 
 void LowerArm::Execute()
 {
-	Robot::m_Arm->MoveArm(PREDEFINED_ARM_SPEED) ;
+	Robot::m_Arm->MoveArm(this->speed) ;
+}
+
+bool LowerArm::IsFinished()
+{
+	return Robot::m_Arm->GetSensor();
 }
 
 void LowerArm::End()

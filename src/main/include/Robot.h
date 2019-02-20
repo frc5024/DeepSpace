@@ -15,10 +15,8 @@
 #include "Commands/testUltra.h"
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
-#include "Commands/Climb.h"
 #include "Autonomous/AutoHighClimb.h"
 #include "Commands/ClimbManager.h"
-#include "Commands/RaiseBot.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/CrawlDrive.h"
@@ -28,12 +26,6 @@
 #include "Subsystems/Slider.h"
 #include "Subsystems/Compressor.h"
 #include "Subsystems/Piston.h"
-
-/*TEMP{*/
-#include "Autonomous/Actions/LowerArm.h"
-#include "Autonomous/Actions/RaiseBotHigh.h"
-#include "Autonomous/Actions/FinishClimb.h"
-/*}TEMP*/
 
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
@@ -56,19 +48,11 @@ class Robot : public frc::TimedRobot {
   testUltra* pTestUltra;
   PullArm* pPullArm;
   PullLeg* pPullLeg;
-  Climb* pClimb;
   ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
   ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
   ClimbManager* pClimbManager;
-  RaiseBot* pRaiseBot;
   AutoHighClimb* pAutoHighClimb;
-
-  /*TEMP{*/
-  LowerArm* pLowerArm;
-  RaiseBotHigh* pRaiseBotHigh;
-  FinishClimb* pFinishClimb;
-  /*}TEMP*/
-
+	
 	// Robot methods
   void RobotInit()          override; //!< Runs once on robot boot
   void RobotPeriodic()      override; //!< Runs in a loop while the robot is turned on in any mode

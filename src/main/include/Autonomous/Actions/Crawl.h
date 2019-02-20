@@ -5,23 +5,21 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#ifndef _CLIMB_HG_
-#define _CLIMB_HG_
+#ifndef _CRAWL_HG_
+#define _CRAWL_HG_
 
-#include <frc/commands/CommandGroup.h>
+#include <frc/commands/Command.h>
 
-// Acions
-#include <Commands/Actions/Crawl.h>
-#include <Commands/Actions/HoldArms.h>
-#include <Commands/Actions/HoldLegs.h>
-#include <Commands/Actions/RaiseArms.h>
-#include <Commands/Actions/RaiseLegs.h>
-#include <Commands/Actions/Drive.h>
-#include <Commands/Actions/EndClimb.h>
-
-class Climb : public frc::CommandGroup {
- public:
-  Climb();
+class Crawl : public frc::Command {
+public:
+	Crawl();
+	void Initialize() override;
+	void Execute() override;
+	bool IsFinished() override;
+	void End() override;
+	void Interrupted() override;
+private:
+	bool wasOnFloor;
 };
 
-#endif /* _CLIMB_HG_ */
+#endif /* _CRAWL_HG_ */

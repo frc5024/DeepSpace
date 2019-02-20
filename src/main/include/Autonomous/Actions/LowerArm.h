@@ -10,16 +10,16 @@
 
 #include <frc/commands/TimedCommand.h>
 
-#define PREDEFINED_ARM_SPEED	0.4	//whole-percent
-#define TIMEOUT_TIME	0.5	//seconds
-
 class LowerArm : public frc::TimedCommand {
 public:
-	explicit LowerArm();
+	explicit LowerArm(float speed, float timeout);
 	void Initialize() override;
 	void Execute() override;
+	bool IsFinished() override;
 	void End() override;
 	void Interrupted() override;
+private:
+	float speed; //!< Whole-percent power to use for arm
 };
 
 #endif /* _LOWERARM_HG_ */

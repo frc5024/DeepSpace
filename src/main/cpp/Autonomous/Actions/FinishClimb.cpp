@@ -27,21 +27,13 @@ void FinishClimb::Execute()
 {
 	float time = this->pTimer->Get() ;
 	
-	if (time > 2.0)
+	if (time > 1.0)
 	{
-		/*	----==== STAGE 3 ====----	*
+		/*	----==== STAGE 2 ====----	*
 		 * Stop driving and raise legs	*/
 		Robot::m_Arm->MoveArm(0.0);
 		Robot::m_DriveTrain->ArcadeDrive(0.0, 0.0);
 		Robot::m_Leg->MoveLeg(1.0); // Legs won't go past top
-	} else
-	if (time > 1.0)
-	{
-		/*		----==== STAGE 2 ====----		*
-		 * Stop arms and keep moving forward	*/
-		Robot::m_Arm->MoveArm(0.0);
-		Robot::m_DriveTrain->ArcadeDrive(0.5, 0.0);
-		Robot::m_Leg->MoveLeg(0.0);
 	} else
 	{
 		/*	----==== STAGE 1 ====----		*
@@ -54,7 +46,7 @@ void FinishClimb::Execute()
 
 bool FinishClimb::IsFinished()
 {
-	if (this->pTimer->Get() > 8.0)
+	if (this->pTimer->Get() > 7.0)
 		return true ;
 	return false;
 }

@@ -51,19 +51,11 @@ void Robot::RobotInit() {
 	this->pTestUltra = new testUltra();
 	this->pPullArm = new PullArm();
 	this->pPullLeg = new PullLeg();
-	this->pClimb = new Climb();
 	this->pAutoHighClimb = new AutoHighClimb();
 	this->pControlSlider = new ControlSlider();
 	this->pControlCompressor = new ControlCompressor();
 	this->pClimbManager = new ClimbManager();
-	this->pRaiseBot = new RaiseBot();
 	
-	/*TEMP{*/
-	this->pLowerArm = new LowerArm();
-	this->pRaiseBotHigh = new RaiseBotHigh();
-	this->pFinishClimb = new FinishClimb();
-	/*}TEMP*/
-
 	// Create Telemetry table
 	std::cout << "Connecting to telemetry table.." << std::endl;
 	this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry");
@@ -106,12 +98,7 @@ void Robot::RobotPeriodic() {
  */
 void Robot::DisabledInit() {}
 
-void Robot::DisabledPeriodic() {
-	frc::Scheduler::GetInstance()->Run();
-	if(frc::RobotController::GetUserButton()){
-		this->m_Leg->MoveLeg(1.0) ;
-	}
-}
+void Robot::DisabledPeriodic() {frc::Scheduler::GetInstance()->Run();}
 
 /**
  * This autonomous (along with the chooser code above) shows how to select
@@ -193,12 +180,8 @@ void Robot::TeleopPeriodic()
 				this->pTriggerDrive->Start();
 			break;
 		case ClimbManager::kSemiAuto :
-			if (this->pRaiseBot != nullptr && !this->pRaiseBot->IsRunning()) // Enable RaiseBot when kSemiAuto
-				this->pRaiseBot->Start();
 			break;
 		case ClimbManager::kAuto :
-			/* if (this->pClimb != nullptr && !this->pClimb->IsRunning())
-				this->pClimb->Start(); */
 			if (this->pAutoHighClimb != nullptr && !this->pAutoHighClimb->IsRunning()) // Enable command group on kAuto
 				this->pAutoHighClimb->Start();
 		default:

@@ -9,33 +9,27 @@
 
 AutoHighClimb::AutoHighClimb()
 {
-	std::cout << "Starting AutoHighClimb...\n";
+	/* Lowers arm to platform	*
+	 * before going full power	*/
+	AddSequential(new LowerArm(0.4, 0.5)) ;
 
-	/* Lowers arm to platform by	 *
-	 * moving the armm at half speed *
-	 * for a tenth of a second		 */
-	AddSequential(new LowerArm()) ;
+	/* Pull front of robot up	*
+	 * above the platform		*/
+	AddSequential(new LowerArm(0.8, 6.0)) ;
 
-	std::cout << "Successfully lowered the arm...\nRaising the robot...\n";
+	/* Bring back of robot up	*
+	 * to be level, to drive	*/
+	AddSequential(new LowerLeg()) ;
 
-	/* Does the following . . .				*
-	 * A Brings arms down and stops when	*
-	 *    the hall effects is tripped		*
-	 * B. Brings legs down and stops when	*
-	 *    the hall effects is tripped		*
-	 * C. Crawls forward until optical		*
-	 *    sensor detects we are on the		*
-	 *    ground and were in the air.		*
-	 * ! Command stops when C passes !		*/
-	AddSequential(new RaiseBotHigh()) ;
-
-	std::cout << "Successfully raised the robot...\nFinishing climb...\n";
+	/* Crawl forward until we	*
+	 * are on the platform		*/
+	AddSequential(new Crawl()) ;
 
 	/* Consists of 3 stages controlled		*
 	 * by the passage of time...			*
 	 * 1: Bring arms up and drive forward	*
-	 * 2: Stop the arms, keep driving		*
-	 * 3: Stop driving, bring legs up		*/
+	 * 2: Stop the arms and drivetrain		*
+	 *	  and bring the legs up				*/
 	AddSequential(new FinishClimb()) ;
 
 	std::cout << "Successfully finished climbing... Yay!\n";
