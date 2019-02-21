@@ -174,7 +174,24 @@ void Robot::TeleopInit() {
   }
 }
 
-void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }
+void Robot::TeleopPeriodic() { 
+switch (ClimbManager::CurrentClimbState)
+	{
+		case ClimbManager::kInactive :
+			if (this->pTriggerDrive != nullptr && !this->pTriggerDrive->IsRunning()) // Restart TriggerDrive once climb is done
+				this->pTriggerDrive->Start();
+			break;
+		case ClimbManager::kSemiAuto :
+			break;
+		case ClimbManager::kAuto :
+			if (this->pAutoHighClimb != nullptr && !this->pAutoHighClimb->IsRunning()) // Enable command group on kAuto
+				this->pAutoHighClimb->Start();
+		default:
+			break;
+	}
+
+	frc::Scheduler::GetInstance()->Run(); 
+}
 
 void Robot::TestPeriodic() {}
 
