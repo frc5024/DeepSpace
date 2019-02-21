@@ -148,23 +148,20 @@ void Robot::TeleopInit() {
   if (this->pTriggerDrive != nullptr) {
 		this->pTriggerDrive->Start();
 	}
-//   if (this->pTestUltra != nullptr) {
-// 		this->pTestUltra->Start();
-// 	}
   if (this->pPullArm != nullptr) {
 		this->pPullArm->Start();
 	}
   if (this->pPullLeg != nullptr) {
 		this->pPullLeg->Start();
   }
+  if (this->pControlHatchGripper != nullptr) { // This must be before pControlSlider
+		this->pControlHatchGripper->Start();
+	}
 	if (this->pControlSlider != nullptr) {
 		this->pControlSlider->Start();
 	}
   if (this->pControlCompressor != nullptr) {
 		this->pControlCompressor->Start();
-	}
-  if (this->pControlHatchGripper != nullptr) {
-		this->pControlHatchGripper->Start();
 	}
   if (this->pControlCargo != nullptr){
     this->pControlCargo->Start();

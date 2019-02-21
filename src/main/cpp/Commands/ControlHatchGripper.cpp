@@ -14,7 +14,7 @@ void ControlHatchGripper::Initialize() {}
 // Called repeatedly when this Command is scheduled to run
 void ControlHatchGripper::Execute() {
   // hold onto hatch if y button is pressed
-	if(this->pJoyOp->GetYButton()) {
+	if(this->pJoyOp->GetYButton() || this->pJoyOp->GetBumper(Hand::kRightHand)) {
     Robot::m_HatchGripper->Deploy();
   } else {
     Robot::m_HatchGripper->Retract();

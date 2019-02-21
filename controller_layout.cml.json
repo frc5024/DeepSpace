@@ -66,15 +66,15 @@
 			"A":"",
 			"B":"",
 			"X":"",
-			"Y":""
+			"Y":"Move finger"
 		},
 		"Triggers":{
-			"Left":"",
+			"Left":"Release cargo",
 			"Right":"Shoot hatch (85% pull)"
 		},
 		"Bumpers":{
 			"Left":"",
-			"Right":""
+			"Right":"Quick deploy hatch"
 		},
 		"Other":{
 			"Start":"Enable Compressor",
