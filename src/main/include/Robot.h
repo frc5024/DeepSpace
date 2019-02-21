@@ -10,6 +10,7 @@
 #include <cscore_oo.h>
 
 #include "Commands/TriggerDrive.h"
+#include "Commands/JoystickTankDrive.h"
 #include "Commands/ControlCompressor.h"
 #include "Commands/testUltra.h"
 #include "Commands/PullArm.h"
@@ -52,6 +53,7 @@ class Robot : public frc::TimedRobot {
 
 	// Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
+  JoystickTankDrive* pJoystickTankDrive; //!< Pointer for the Tank Drive command
   testUltra* pTestUltra;
   PullArm* pPullArm;
   PullLeg* pPullLeg;

@@ -54,6 +54,7 @@ void Robot::RobotInit() {
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
+  this->pJoystickTankDrive = new JoystickTankDrive();
   this->pTestUltra = new testUltra();
   this->pPullArm = new PullArm();
   this->pPullLeg = new PullLeg();
@@ -144,10 +145,19 @@ void Robot::TeleopInit() {
   //   m_autonomousCommand->Cancel();
   //   m_autonomousCommand = nullptr;
   // }
-
-  if (this->pTriggerDrive != nullptr) {
-		this->pTriggerDrive->Start();
+	std::string gameData = frc::DriverStation::GetInstance().GetGameSpecificMessage();
+	for (char c : gameData) c = std::tolower(c) ; // Make it all lowercase
+	if (gameData == "tank") {
+		if (this->pJoystickTankDrive != nullptr) {
+			this->pJoystickTankDrive->Start() ;
+		}
+	} else {
+		if (this->pTriggerDrive != nullptr) {
+			this->pTriggerDrive->Start();
+		}
 	}
+
+  
 //   if (this->pTestUltra != nullptr) {
 // 		this->pTestUltra->Start();
 // 	}
