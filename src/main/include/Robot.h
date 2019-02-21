@@ -12,10 +12,10 @@
 
 #include "Commands/TriggerDrive.h"
 #include "Commands/ControlCompressor.h"
-#include "Commands/testUltra.h"
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
 #include "Autonomous/AutoHighClimb.h"
+#include "Autonomous/AutoClimbHigh.h" // the new command
 #include "Commands/ClimbManager.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
@@ -45,13 +45,13 @@ class Robot : public frc::TimedRobot {
 
 	// Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
-  testUltra* pTestUltra;
   PullArm* pPullArm;
   PullLeg* pPullLeg;
   ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
   ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
   ClimbManager* pClimbManager;
   AutoHighClimb* pAutoHighClimb;
+  AutoClimbHigh* pAutoClimbHigh; // the new command
 	
 	// Robot methods
   void RobotInit()          override; //!< Runs once on robot boot

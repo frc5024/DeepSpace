@@ -18,14 +18,7 @@ void LowerLeg::Initialize() {}
 
 void LowerLeg::Execute()
 {	
-	// Make sure arm is holding position
-	if (Robot::m_Arm->GetSensor()) {
-		Robot::m_Arm->MoveArm(ARM_HOLD_SPEED);
-	} else {
-		Robot::m_Arm->MoveArm(0.8);
-	}
-
-	// Move legs, checked if done in IsFinished()
+	Robot::m_Arm->MoveArm(1.0);
 	Robot::m_Leg->MoveLeg(-1.0);
 }
 

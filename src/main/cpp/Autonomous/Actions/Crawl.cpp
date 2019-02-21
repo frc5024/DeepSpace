@@ -19,16 +19,9 @@ void Crawl::Initialize() {
 }
 
 void Crawl::Execute() {
-	
-	// Make sure Arm holds position
-	if (Robot::m_Arm->GetSensor()) {
-		Robot::m_Arm->MoveArm(ARM_HOLD_SPEED);
-	} else {
-		Robot::m_Arm->MoveArm(0.7);
-	}
 
+	Robot::m_Arm->MoveArm(0.75);
 	// Leg should hold position well
-
 	Robot::m_CrawlDrive->Move(1.0);
 }
 

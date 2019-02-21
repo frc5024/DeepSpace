@@ -24,17 +24,10 @@ public:
 	 */
 	void MoveArm(double Speed);
 
-
-	/**
-	 * returns distance from floor
-	 *
-	 */
-	double getDistanceFromFloor();
-
 	/**
 	 * @brief Returns whether the hall effects is tripped
 	 * This is the sensor for when the arm is lowered
-	 * @return true The arm is fully lowers, the sensor is tripped
+	 * @return true The arm is fully lowered, the sensor is tripped
 	 * @return false Sensor is not tripped
 	 */
 	bool GetSensor(void) ;
@@ -44,11 +37,6 @@ private:
 	can::WPI_TalonSRX* pArmMotor2; //!< Pointer for Arm arm motor
 
 	frc::DigitalInput* pArmHall ; //!< hall effects for arm is lowered enough
-
-
-	frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC};
-	frc::DigitalInput* pDeployLimit;
-	static constexpr double kValueToInches = 0.125;
 };
 
 #endif // _ARM_HG_

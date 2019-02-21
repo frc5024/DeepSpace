@@ -20,6 +20,8 @@ void PullArm::Initialize() {
 void PullArm::Execute() {
     this->speed =(this->pJoyDebug->GetY(Hand::kLeftHand));
 
+	std::cout << "SensorTripped: ("<<Robot::m_Arm->GetSensor()<<")\n" ;
+
     Robot::m_Arm->MoveArm(this->speed);
 
     Robot::m_CrawlDrive->Move(this->pJoyDebug->GetTriggerAxis(Hand::kRightHand) - this->pJoyDebug->GetTriggerAxis(Hand::kLeftHand));

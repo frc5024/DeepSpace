@@ -23,13 +23,21 @@ void LowerArm::Initialize()
 
 void LowerArm::Execute()
 {
-	Robot::m_Arm->MoveArm(this->speed) ;
+	// Increase speed by 25% from 0 to 2 seconds
+	float speedIncrease = std::min(this->pTimer->Get(), 2.0) / 8.0 ;
+
+	// Apply our speed increase to our base speed of 75%
+	float speedTotal = speedIncrease + this->speed ;
+
+	// VROOM
+	Robot::m_Arm->MoveArm(speedTotal) ;
 }
 
 bool LowerArm::IsFinished()
 {
-	return	Robot::m_Arm->GetSensor()
-		||	this->pTimer->Get() > timeout ;
+	return	(this->pTimer->Get() > timeout) ;
+//	Robot::m_Arm->GetSensor()
+//		||
 	
 }
 

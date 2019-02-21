@@ -48,10 +48,10 @@ void Robot::RobotInit() {
 	// Init commands
 	std::cout << "Creating Commands.." << std::endl;
 	this->pTriggerDrive = new TriggerDrive();
-	this->pTestUltra = new testUltra();
 	this->pPullArm = new PullArm();
 	this->pPullLeg = new PullLeg();
 	this->pAutoHighClimb = new AutoHighClimb();
+	this->pAutoClimbHigh = new AutoClimbHigh(); // the new command
 	this->pControlSlider = new ControlSlider();
 	this->pControlCompressor = new ControlCompressor();
 	this->pClimbManager = new ClimbManager();
@@ -112,13 +112,10 @@ void Robot::DisabledPeriodic() {frc::Scheduler::GetInstance()->Run();}
  * the if-else structure below with additional strings & commands.
  */
 void Robot::AutonomousInit() {
-	std::cout << "Initting auto!\n" ;
-
-	if (this->pAutoHighClimb != nullptr) {
-		std::cout << "Starting pLowerArm!\n" ;
-		this->pAutoHighClimb->Start() ;
+	if (this->pAutoClimbHigh != nullptr) {
+		this->pAutoClimbHigh->Start() ;
 	} else {
-		std::cout << "LowerArm was null!\n";
+		std::cout << "AutoClimbHigh was null!\n";
 	}
 
 	// std::string autoSelected = frc::SmartDashboard::GetString(
