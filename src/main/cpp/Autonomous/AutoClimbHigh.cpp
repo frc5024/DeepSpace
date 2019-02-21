@@ -52,7 +52,7 @@ void AutoClimbHigh::Execute_LowerArm(void)
 	Robot::m_Arm->MoveArm(speed) ; // Bring arm down
 
 	if (Robot::m_Arm->GetSensor()  // We are fully lowered if the sensor trips
-	||  this->pTimer->Get() > 6.0) // Time out if it's been 6 seconds
+	||  this->pTimer->Get() > 5.0) // Time out if it's been 6 seconds
 	{
 		this->stage = S_LOWER_LEG ;
 		this->pTimer->Reset() ;
@@ -61,7 +61,7 @@ void AutoClimbHigh::Execute_LowerArm(void)
 
 void AutoClimbHigh::Execute_LowerLeg(void)
 {
-	Robot::m_Arm->MoveArm(1.0) ; // Keep arm down
+	Robot::m_Arm->MoveArm(0.8) ; // Keep arm down
 	Robot::m_Leg->MoveLeg(-1.0) ; // Bring leg down
 
 	if (Robot::m_Leg->AtBottom() // We are fully lowered if sensor trips
@@ -74,7 +74,7 @@ void AutoClimbHigh::Execute_LowerLeg(void)
 
 void AutoClimbHigh::Execute_Crawl(void)
 {
-	Robot::m_Arm->MoveArm(1.0) ; // Keep arm down
+	Robot::m_Arm->MoveArm(0.8) ; // Keep arm down
 	Robot::m_Leg->MoveLeg(-1.0) ; // Keep leg down
 	Robot::m_CrawlDrive->Move(1.0) ; // Crawl forward
 

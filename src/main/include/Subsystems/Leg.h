@@ -9,23 +9,6 @@
 
 class Leg : public frc::Subsystem {
 public:
-
-	/**
-	 * @brief The last known position of the leg
-	 * So we know where we are when we are trying to be somwhere else
-	 * @remark Should be updated everytime the leg is moved
-	 */
-	enum Quadrant
-	{
-		Q_TOP,
-		Q_TOP_MIDDLE,
-		Q_MIDDLE,
-		Q_MIDDLE_BOTTOM,
-		Q_BOTTOM
-	} ;
-
-private: Quadrant legPosition ;
-public:
 	/**
 	 * @brief Construct a new Leg object
 	 */
@@ -42,12 +25,6 @@ public:
 	 * @param Speed range:(-1.00, 1.00) where 1.00 or 100% is upwards
 	 */
 	void MoveLeg(double Speed);
-
-	/**
-	 * @brief Get the last known position
-	 * @return Quadrant the quadrant it was last known in
-	 */
-	Quadrant GetPosition(void) ;
 
 	/**
 	 * @brief Returns whether the legs are at the top most position
@@ -69,14 +46,6 @@ public:
 	 * @return false Sensor is not tripped, we are not at the bottom
 	 */
 	bool AtBottom(void) ;
-
-	/**
-	 * @brief DO NOT USE. Only used for testing.
-	 * Used for testing, becuase the arm will be manually set, and therefore throw off the last known position
-	 * @remark If you use this then yousafook
-	 * @param q Position to set to
-	 */
-	void SetPos(Quadrant q);
 
 private:
 
