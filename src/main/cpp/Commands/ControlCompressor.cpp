@@ -3,7 +3,7 @@
 
 ControlCompressor::ControlCompressor() {
   // Use Requires() here to declare subsystem dependencies
-  Requires(Robot::m_Compressor);
+  Requires(Robot::m_cCompressor);
   this->pJoyOp    = Robot::m_oi->GetJoystickOperator();
   this->pJoyDrive = Robot::m_oi->GetJoystickDrive();
 }
@@ -16,12 +16,12 @@ void ControlCompressor::Initialize() {}
 void ControlCompressor::Execute() {
     // Enable on start button
     if(this->pJoyDrive->GetStartButtonReleased() || this->pJoyOp->GetStartButtonReleased()){
-        Robot::m_Compressor->SetState(true);
+        Robot::m_cCompressor->SetState(true);
     }
 
     // Disable on back button
     if(this->pJoyDrive->GetBackButtonReleased() || this->pJoyOp->GetBackButtonReleased()){
-        Robot::m_Compressor->SetState(false);
+        Robot::m_cCompressor->SetState(false);
     }
 }
 

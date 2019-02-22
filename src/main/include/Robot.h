@@ -33,12 +33,12 @@
 
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
-
+#include "AHRS.h"
 
 class Robot : public frc::TimedRobot {
  public:
 	// Subsystems
-  static Compressor *m_Compressor; //!< Pointer for the Compressor
+  static cCompressor *m_cCompressor; //!< Pointer for the cCompressor
   static DriveTrain *m_DriveTrain; //!< Pointer for the DriveTrain
   static Piston *m_Piston;         //!< Pointer for the Piston
   static CrawlDrive *m_CrawlDrive; //!< Pointer for the DriveTrain
@@ -87,6 +87,8 @@ class Robot : public frc::TimedRobot {
   frc::PowerDistributionPanel* pdp; //!< Power Distrobution Panel information
 
   std::shared_ptr<NetworkTable> ntTelemetry; //!< A pointer to the /SmartDashboard/Telemetry table
+
+  AHRS* pGyro;
 };
 
 #endif //_ROBOT_HG_
