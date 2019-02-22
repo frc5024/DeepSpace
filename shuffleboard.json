@@ -285,6 +285,45 @@
               "_source0": "network_table:///SmartDashboard/Telemetry/Angle",
               "_title": "Telemetry/Angle"
             }
+          },
+          "11,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///SmartDashboard/Telemetry/Slider/centre",
+              "_title": "Telemetry/Slider/centre",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "12,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///SmartDashboard/Telemetry/Slider/left",
+              "_title": "Telemetry/Slider/left",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "0,2": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///SmartDashboard/Telemetry/Slider/right",
+              "_title": "Telemetry/Slider/right",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
           }
         }
       }
@@ -569,42 +608,6 @@
         "hgap": 16.0,
         "vgap": 16.0,
         "tiles": {
-          "4,3": {
-            "size": [
-              1,
-              1
-            ],
-            "content": {
-              "_type": "Boolean Box",
-              "_title": "Slider Left",
-              "Colors/Color when true": "#7CFC00FF",
-              "Colors/Color when false": "#8B0000FF"
-            }
-          },
-          "5,3": {
-            "size": [
-              1,
-              1
-            ],
-            "content": {
-              "_type": "Boolean Box",
-              "_title": "Slider Centre",
-              "Colors/Color when true": "#7CFC00FF",
-              "Colors/Color when false": "#8B0000FF"
-            }
-          },
-          "6,3": {
-            "size": [
-              1,
-              1
-            ],
-            "content": {
-              "_type": "Boolean Box",
-              "_title": "Slider Right",
-              "Colors/Color when true": "#7CFC00FF",
-              "Colors/Color when false": "#8B0000FF"
-            }
-          },
           "0,0": {
             "size": [
               4,
@@ -702,10 +705,49 @@
             "content": {
               "_type": "Simple Dial",
               "_source0": "network_table:///SmartDashboard/Telemetry/Angle",
-              "_title": "SmartDashboard/Telemetry/Angle",
+              "_title": "/SmartDashboard/Telemetry/Angle",
               "Range/Min": 0.0,
               "Range/Max": 100.0,
               "Visuals/Show value": true
+            }
+          },
+          "5,3": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///SmartDashboard/Telemetry/Slider/centre",
+              "_title": "SmartDashboard/Telemetry/Slider/centre",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "4,3": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///SmartDashboard/Telemetry/Slider/left",
+              "_title": "SmartDashboard/Telemetry/Slider/left",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "6,3": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///SmartDashboard/Telemetry/Slider/right",
+              "_title": "SmartDashboard/Telemetry/Slider/right",
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
             }
           }
         }
