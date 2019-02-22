@@ -4,11 +4,11 @@
 Slider::Slider() : frc::Subsystem("Slider") {
   // Initialize the motors
 	this->pSliderMotor = new can::WPI_TalonSRX(SLIDER_MOTOR);
+	this->pSliderMotor->SetInverted(false);
+	this->pSliderMotor->SetSafetyEnabled(false);
 
-	this->pLeftHall = new frc::DigitalInput(3);
-
-	this->pRightHall = new frc::DigitalInput(0);		
-
+	this->pLeftHall   = new frc::DigitalInput(3);
+	this->pRightHall  = new frc::DigitalInput(0);		
 	this->pCenterHall = new frc::DigitalInput(8);	
 
 	/*
@@ -17,9 +17,7 @@ Slider::Slider() : frc::Subsystem("Slider") {
 	*/
 	this->sliderSide = 0;
 
-	this->pSliderMotor->SetInverted(false);
-
-	this->pSliderMotor->SetSafetyEnabled(false);
+	this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry/Slider");
 }
 
 void Slider::InitDefaultCommand() {
@@ -27,14 +25,13 @@ void Slider::InitDefaultCommand() {
 }
 
 void Slider::Slide(double speed) {
-	this->pSliderMotor->Set(speed);
-
+	// Make sure the slider is not doing anything bad
 	if(speed < 0 && this->pLeftHall->Get()==0) {
 		this->pSliderMotor->Set(0);
-	}
-		
-	if(speed > 0 && this->pRightHall->Get()==0) {
+	}else if(speed > 0 && this->pRightHall->Get()==0) {
 		this->pSliderMotor->Set(0);
+	}else{
+		this->pSliderMotor->Set(speed);
 	}
 //std::cout << this->pCenterHall->Get() << std::endl;
 	if(speed > 0 && this->pCenterHall->Get()==0) {
@@ -44,7 +41,12 @@ void Slider::Slide(double speed) {
 	if (speed < 0 && this->pCenterHall->Get()==0) {
 		this->sliderSide = -1;		
 	}
-	//std::cout << this->sliderSide << std::endl;
+	
+	// Report slider data to NetworkTables 
+	this->ntTelemetry->PutBoolean("centre", !this->pCenterHall->Get()); // is centred
+	this->ntTelemetry->PutBoolean("left",    this->sliderSide == -1);   // is left
+	this->ntTelemetry->PutBoolean("right",   this->sliderSide == 1);    // is right
+
 	return;
 }
 
