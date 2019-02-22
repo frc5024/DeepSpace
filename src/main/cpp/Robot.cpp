@@ -8,7 +8,7 @@
 
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
-Compressor *Robot::m_Compressor;
+cCompressor *Robot::m_cCompressor;
 CrawlDrive *Robot::m_CrawlDrive;
 Arm *Robot::m_Arm;
 Leg *Robot::m_Leg;
@@ -35,7 +35,7 @@ void Robot::RobotInit() {
   this->m_Slider     = new Slider();
   this->m_Piston     = new Piston();
   this->m_oi         = new OI();
-  this->m_Compressor = new Compressor();
+  this->m_cCompressor = new cCompressor();
   this->m_HatchGripper = new HatchGripper();
   this->m_Flap       = new Flap();
   this->m_Light       = new Light();
@@ -50,6 +50,11 @@ void Robot::RobotInit() {
   std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
   std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
   this->visionCam.SetConfigJson(visionSettings);
+
+  // Init Gyro
+  std::cout << "Gyro init..." << std::endl;
+  this->pGyro = new AHRS(frc::SPI::kMXP);
+  this->pGyro->Reset();
 	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
@@ -88,11 +93,13 @@ void Robot::RobotPeriodic() {
   double robotVoltage   = this->pdp->GetVoltage();
   bool   dsAttached     = this->driverStation.IsDSAttached();
   bool   fmsAttached    = this->driverStation.IsFMSAttached();
+  float  gyroAngle      = this->pGyro->GetAngle();
 
   this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
   this->ntTelemetry->PutNumber("voltage",  robotVoltage);
   this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
   this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
+  this->ntTelemetry->PutNumber("Angle", gyroAngle);
 }
 
 /**
@@ -131,26 +138,9 @@ void Robot::AutonomousInit() {
   // if (m_autonomousCommand != nullptr) {
   //   m_autonomousCommand->Start();
   // }
-}
-
-void Robot::AutonomousPeriodic() { frc::Scheduler::GetInstance()->Run(); }
-
-void Robot::TeleopInit() {
-  // This makes sure that the autonomous stops running when
-  // teleop starts running. If you want the autonomous to
-  // continue until interrupted by another command, remove
-  // this line or comment it out.
-  // if (m_autonomousCommand != nullptr) {
-  //   m_autonomousCommand->Cancel();
-  //   m_autonomousCommand = nullptr;
-  // }
-
   if (this->pTriggerDrive != nullptr) {
 		this->pTriggerDrive->Start();
 	}
-//   if (this->pTestUltra != nullptr) {
-// 		this->pTestUltra->Start();
-// 	}
   if (this->pPullArm != nullptr) {
 		this->pPullArm->Start();
 	}
@@ -172,6 +162,21 @@ void Robot::TeleopInit() {
   if (this->pControlLight != nullptr){
     this->pControlLight->Start();
   }
+
+  this->pGyro->Reset();
+}
+
+void Robot::AutonomousPeriodic() { frc::Scheduler::GetInstance()->Run(); }
+
+void Robot::TeleopInit() {
+  // This makes sure that the autonomous stops running when
+  // teleop starts running. If you want the autonomous to
+  // continue until interrupted by another command, remove
+  // this line or comment it out.
+  // if (m_autonomousCommand != nullptr) {
+  //   m_autonomousCommand->Cancel();
+  //   m_autonomousCommand = nullptr;
+  // }
 }
 
 void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }
