@@ -1,21 +1,21 @@
-//! A subsystem that interfaces with the robot's compressor
-#ifndef _COMPRESSOR_HG_
-#define _COMPRESSOR_HG_
+//! A subsystem that interfaces with the robot's cCompressor
+#ifndef _cCompressor_HG_
+#define _cCompressor_HG_
 
 #include <frc/commands/Subsystem.h>
 #include "RobotMap.h"
 #include <Commands/ControlCompressor.h>
 #include <frc/Compressor.h>
 
-class Compressor : public frc::Subsystem {
+class cCompressor : public frc::Subsystem {
  public:
-  Compressor(); //!< Class constructor
+  cCompressor(); //!< Class constructor
   void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (DriveWithJoystick)
 	
 	/**
-	 * Pass data to Compressor
+	 * Pass data to cCompressor
 	 *
-	 * @param enabled Bool to determine if the compressor should be enabled or not
+	 * @param enabled Bool to determine if the cCompressor should be enabled or not
 	 */
   void SetState(bool enabled);
 
@@ -23,4 +23,4 @@ class Compressor : public frc::Subsystem {
   frc::Compressor* pCompressor;
 };
 
-#endif // _COMPRESSOR_HG_
+#endif // _cCompressor_HG_
