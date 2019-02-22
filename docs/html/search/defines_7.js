@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['true',['True',['../RobotMap_8h.html#add3ca9eefe3b5b754426f51d3043e579',1,'RobotMap.h']]]
+  ['slider_5fmotor',['SLIDER_MOTOR',['../RobotMap_8h.html#aa904ac443cb51bcd6c3ccd6799065890',1,'RobotMap.h']]]
 ];

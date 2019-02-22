@@ -1,7 +1,16 @@
 var dir_cc1209c02c45230b6482516732d65751 =
 [
+    [ "ControlCargo.h", "ControlCargo_8h.html", [
+      [ "ControlCargo", "classControlCargo.html", "classControlCargo" ]
+    ] ],
     [ "ControlCompressor.h", "ControlCompressor_8h.html", [
       [ "ControlCompressor", "classControlCompressor.html", "classControlCompressor" ]
+    ] ],
+    [ "ControlHatchGripper.h", "ControlHatchGripper_8h.html", [
+      [ "ControlHatchGripper", "classControlHatchGripper.html", "classControlHatchGripper" ]
+    ] ],
+    [ "ControlLight.h", "ControlLight_8h.html", [
+      [ "ControlLight", "classControlLight.html", "classControlLight" ]
     ] ],
     [ "ControlSlider.h", "ControlSlider_8h.html", [
       [ "ControlSlider", "classControlSlider.html", "classControlSlider" ]

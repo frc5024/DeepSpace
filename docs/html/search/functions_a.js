@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['radialdrive',['RadialDrive',['../classDriveTrain.html#a4956c96e32ae9d405f15676112fa7b23',1,'DriveTrain']]],
-  ['retract',['Retract',['../classPiston.html#a37038045cb847723f935f625f4ff6d84',1,'Piston']]],
-  ['robotinit',['RobotInit',['../classRobot.html#a66f23dae271748d525cf3ab046375f79',1,'Robot']]],
-  ['robotperiodic',['RobotPeriodic',['../classRobot.html#a8fad82c2250bcfb83b743b5c0dd6ed27',1,'Robot']]]
+  ['off',['Off',['../classLight.html#a3f216ad5f3b9b72f3f3db283b443e334',1,'Light']]],
+  ['oi',['OI',['../classOI.html#a77c2c4630ca19e64a7885154f3dc202f',1,'OI']]],
+  ['on',['On',['../classLight.html#af0ee3df3cc3bf7819a6d3c9dee6b2e82',1,'Light']]]
 ];

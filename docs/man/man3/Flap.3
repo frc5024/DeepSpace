@@ -1,0 +1,93 @@
+.TH "Flap" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Flap
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Flap\&.h>\fP
+.PP
+Inherits Subsystem\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFlap\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitDefaultCommand\fP () override"
+.br
+.RI "Initalizes the default command for this subsystem (ControlFlap) "
+.ti -1c
+.RI "void \fBDeploy\fP ()"
+.br
+.RI "Deploy the \fBFlap\fP\&. "
+.ti -1c
+.RI "void \fBRetract\fP ()"
+.br
+.RI "Retract the \fBFlap\fP\&. "
+.ti -1c
+.RI "void \fBRelease\fP ()"
+.br
+.RI "Release pressure\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "frc::DoubleSolenoid * \fBpSolenoid\fP"
+.br
+.RI "Pointer to Solenoid\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 9 of file Flap\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Flap::Flap ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 3 of file Flap\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Flap::Deploy ()"
+
+.PP
+Deploy the \fBFlap\fP\&. 
+.PP
+Definition at line 11 of file Flap\&.cpp\&.
+.SS "void Flap::InitDefaultCommand ()\fC [override]\fP"
+
+.PP
+Initalizes the default command for this subsystem (ControlFlap) 
+.PP
+Definition at line 7 of file Flap\&.cpp\&.
+.SS "void Flap::Release ()"
+
+.PP
+Release pressure\&. 
+.PP
+Definition at line 19 of file Flap\&.cpp\&.
+.SS "void Flap::Retract ()"
+
+.PP
+Retract the \fBFlap\fP\&. 
+.PP
+Definition at line 15 of file Flap\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "frc::DoubleSolenoid* Flap::pSolenoid\fC [private]\fP"
+
+.PP
+Pointer to Solenoid\&. 
+.PP
+Definition at line 19 of file Flap\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

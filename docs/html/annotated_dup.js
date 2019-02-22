@@ -1,8 +1,11 @@
 var annotated_dup =
 [
     [ "Arm", "classArm.html", "classArm" ],
-    [ "Compressor", "classCompressor.html", "classCompressor" ],
+    [ "cCompressor", "classcCompressor.html", "classcCompressor" ],
+    [ "ControlCargo", "classControlCargo.html", "classControlCargo" ],
     [ "ControlCompressor", "classControlCompressor.html", "classControlCompressor" ],
+    [ "ControlHatchGripper", "classControlHatchGripper.html", "classControlHatchGripper" ],
+    [ "ControlLight", "classControlLight.html", "classControlLight" ],
     [ "ControlSlider", "classControlSlider.html", "classControlSlider" ],
     [ "CrawlDrive", "classCrawlDrive.html", "classCrawlDrive" ],
     [ "DeployArm", "classDeployArm.html", "classDeployArm" ],
@@ -10,7 +13,10 @@ var annotated_dup =
     [ "DeployLeg", "classDeployLeg.html", "classDeployLeg" ],
     [ "DriveTrain", "classDriveTrain.html", "classDriveTrain" ],
     [ "DriveWithJoystick", "classDriveWithJoystick.html", "classDriveWithJoystick" ],
+    [ "Flap", "classFlap.html", "classFlap" ],
+    [ "HatchGripper", "classHatchGripper.html", "classHatchGripper" ],
     [ "Leg", "classLeg.html", "classLeg" ],
+    [ "Light", "classLight.html", "classLight" ],
     [ "OI", "classOI.html", "classOI" ],
     [ "Piston", "classPiston.html", "classPiston" ],
     [ "PullArm", "classPullArm.html", "classPullArm" ],

@@ -112,17 +112,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab07258b179a7a3cd7574cec4bd8d4d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b1fff4e38f52cb032da79e78e56e3ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlider.html#a1b1fff4e38f52cb032da79e78e56e3ee">Slide</a> (double speed)</td></tr>
 <tr class="separator:a1b1fff4e38f52cb032da79e78e56e3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b229e46d635a54c9b06b8c1d0ca45f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlider.html#a7b229e46d635a54c9b06b8c1d0ca45f4">Center</a> ()</td></tr>
+<tr class="separator:a7b229e46d635a54c9b06b8c1d0ca45f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a776e9096790f7c7571fcdde6b2a9df13"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlider.html#a776e9096790f7c7571fcdde6b2a9df13">sliderSide</a></td></tr>
+<tr class="separator:a776e9096790f7c7571fcdde6b2a9df13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0ca5ad163ff0c031e6a4ab765ae03d3"><td class="memItemLeft" align="right" valign="top">can::WPI_TalonSRX *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlider.html#ac0ca5ad163ff0c031e6a4ab765ae03d3">pSliderMotor</a></td></tr>
 <tr class="memdesc:ac0ca5ad163ff0c031e6a4ab765ae03d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer for the slider motor.  <a href="#ac0ca5ad163ff0c031e6a4ab765ae03d3">More...</a><br /></td></tr>
 <tr class="separator:ac0ca5ad163ff0c031e6a4ab765ae03d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07cb2824a97bc2be740715c455f9131b"><td class="memItemLeft" align="right" valign="top">frc::DigitalInput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlider.html#a07cb2824a97bc2be740715c455f9131b">pLeftHall</a></td></tr>
+<tr class="separator:a07cb2824a97bc2be740715c455f9131b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf9492183899156ac1f563458c9ed96"><td class="memItemLeft" align="right" valign="top">frc::DigitalInput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlider.html#a5cf9492183899156ac1f563458c9ed96">pRightHall</a></td></tr>
+<tr class="separator:a5cf9492183899156ac1f563458c9ed96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7222722c93ae98943336b4a4f21ee861"><td class="memItemLeft" align="right" valign="top">frc::DigitalInput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlider.html#a7222722c93ae98943336b4a4f21ee861">pCenterHall</a></td></tr>
+<tr class="separator:a7222722c93ae98943336b4a4f21ee861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6b957521305a22c4fe36795a4a2f266"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; NetworkTable &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlider.html#ab6b957521305a22c4fe36795a4a2f266">ntTelemetry</a></td></tr>
+<tr class="memdesc:ab6b957521305a22c4fe36795a4a2f266"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the /SmartDashboard/Telemetry table.  <a href="#ab6b957521305a22c4fe36795a4a2f266">More...</a><br /></td></tr>
+<tr class="separator:ab6b957521305a22c4fe36795a4a2f266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A subsystem that interfaces with the drivebase on the robot. </p>
 
-<p class="definition">Definition at line <a class="el" href="Slider_8h_source.html#l00011">11</a> of file <a class="el" href="Slider_8h_source.html">Slider.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Slider_8h_source.html#l00013">13</a> of file <a class="el" href="Slider_8h_source.html">Slider.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a535033fada8e25ef7291d2a52e6e437b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a535033fada8e25ef7291d2a52e6e437b">&#9670;&nbsp;</a></span>Slider()</h2>
@@ -141,11 +154,30 @@ Private Attributes</h2></td></tr>
 
 <p>Class constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Slider_8cpp_source.html#l00003">3</a> of file <a class="el" href="Slider_8cpp_source.html">Slider.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Slider_8cpp_source.html#l00004">4</a> of file <a class="el" href="Slider_8cpp_source.html">Slider.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7b229e46d635a54c9b06b8c1d0ca45f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b229e46d635a54c9b06b8c1d0ca45f4">&#9670;&nbsp;</a></span>Center()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Slider::Center </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Slider_8cpp_source.html#l00053">53</a> of file <a class="el" href="Slider_8cpp_source.html">Slider.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ab07258b179a7a3cd7574cec4bd8d4d21"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab07258b179a7a3cd7574cec4bd8d4d21">&#9670;&nbsp;</a></span>InitDefaultCommand()</h2>
 
@@ -171,7 +203,7 @@ Private Attributes</h2></td></tr>
 
 <p>Initalizes the default command for this subsystem (<a class="el" href="classControlSlider.html" title="An interface command for driving the robot with an xbox controller. ">ControlSlider</a>) </p>
 
-<p class="definition">Definition at line <a class="el" href="Slider_8cpp_source.html#l00012">12</a> of file <a class="el" href="Slider_8cpp_source.html">Slider.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Slider_8cpp_source.html#l00023">23</a> of file <a class="el" href="Slider_8cpp_source.html">Slider.cpp</a>.</p>
 
 </div>
 </div>
@@ -198,11 +230,109 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Slider_8cpp_source.html#l00016">16</a> of file <a class="el" href="Slider_8cpp_source.html">Slider.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Slider_8cpp_source.html#l00027">27</a> of file <a class="el" href="Slider_8cpp_source.html">Slider.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab6b957521305a22c4fe36795a4a2f266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6b957521305a22c4fe36795a4a2f266">&#9670;&nbsp;</a></span>ntTelemetry</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;NetworkTable&gt; Slider::ntTelemetry</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A pointer to the /SmartDashboard/Telemetry table. </p>
+
+<p class="definition">Definition at line <a class="el" href="Slider_8h_source.html#l00032">32</a> of file <a class="el" href="Slider_8h_source.html">Slider.h</a>.</p>
+
+</div>
+</div>
+<a id="a7222722c93ae98943336b4a4f21ee861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7222722c93ae98943336b4a4f21ee861">&#9670;&nbsp;</a></span>pCenterHall</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">frc::DigitalInput* Slider::pCenterHall</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Slider_8h_source.html#l00031">31</a> of file <a class="el" href="Slider_8h_source.html">Slider.h</a>.</p>
+
+</div>
+</div>
+<a id="a07cb2824a97bc2be740715c455f9131b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07cb2824a97bc2be740715c455f9131b">&#9670;&nbsp;</a></span>pLeftHall</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">frc::DigitalInput* Slider::pLeftHall</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Slider_8h_source.html#l00029">29</a> of file <a class="el" href="Slider_8h_source.html">Slider.h</a>.</p>
+
+</div>
+</div>
+<a id="a5cf9492183899156ac1f563458c9ed96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf9492183899156ac1f563458c9ed96">&#9670;&nbsp;</a></span>pRightHall</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">frc::DigitalInput* Slider::pRightHall</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Slider_8h_source.html#l00030">30</a> of file <a class="el" href="Slider_8h_source.html">Slider.h</a>.</p>
+
+</div>
+</div>
 <a id="ac0ca5ad163ff0c031e6a4ab765ae03d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac0ca5ad163ff0c031e6a4ab765ae03d3">&#9670;&nbsp;</a></span>pSliderMotor</h2>
 
@@ -225,7 +355,31 @@ Private Attributes</h2></td></tr>
 
 <p>Pointer for the slider motor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Slider_8h_source.html#l00024">24</a> of file <a class="el" href="Slider_8h_source.html">Slider.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Slider_8h_source.html#l00028">28</a> of file <a class="el" href="Slider_8h_source.html">Slider.h</a>.</p>
+
+</div>
+</div>
+<a id="a776e9096790f7c7571fcdde6b2a9df13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a776e9096790f7c7571fcdde6b2a9df13">&#9670;&nbsp;</a></span>sliderSide</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Slider::sliderSide</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Slider_8h_source.html#l00027">27</a> of file <a class="el" href="Slider_8h_source.html">Slider.h</a>.</p>
 
 </div>
 </div>

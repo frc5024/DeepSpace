@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['leg',['Leg',['../classLeg.html',1,'']]]
+  ['flap',['Flap',['../classFlap.html',1,'']]]
 ];

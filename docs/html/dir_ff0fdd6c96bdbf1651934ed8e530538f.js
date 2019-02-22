@@ -1,6 +1,9 @@
 var dir_ff0fdd6c96bdbf1651934ed8e530538f =
 [
+    [ "ControlCargo.cpp", "ControlCargo_8cpp.html", null ],
     [ "ControlCompressor.cpp", "ControlCompressor_8cpp.html", null ],
+    [ "ControlHatchGripper.cpp", "ControlHatchGripper_8cpp.html", null ],
+    [ "ControlLight.cpp", "ControlLight_8cpp.html", null ],
     [ "ControlSlider.cpp", "ControlSlider_8cpp.html", null ],
     [ "DeployArm.cpp", "DeployArm_8cpp.html", null ],
     [ "DeployClimb.cpp", "DeployClimb_8cpp.html", null ],

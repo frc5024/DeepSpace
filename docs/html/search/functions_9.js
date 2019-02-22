@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['piston',['Piston',['../classPiston.html#ab1231c8e04b52580dc9d812f854dd510',1,'Piston']]],
-  ['pullarm',['PullArm',['../classPullArm.html#a7b94a60a5a0d5582d2e45cb2bb790c9c',1,'PullArm']]],
-  ['pullleg',['PullLeg',['../classPullLeg.html#a930ff46b9b47fccb84e4a2293e93c844',1,'PullLeg']]]
+  ['main',['main',['../Robot_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'Robot.cpp']]],
+  ['move',['Move',['../classCrawlDrive.html#a7f00671849091b27df42b216bf059afd',1,'CrawlDrive']]],
+  ['movearm',['MoveArm',['../classArm.html#a3d1db8ec48f7d59cf9f9dafcf721e50b',1,'Arm']]],
+  ['moveleg',['MoveLeg',['../classLeg.html#a03748c9b50e84f2318aed6b160fbef13',1,'Leg']]]
 ];

@@ -1,4 +1,4 @@
-.TH "src/main/include/Robot.h" 3 "Tue Feb 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "src/main/include/Robot.h" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -30,6 +30,10 @@ src/main/include/Robot.h
 .br
 \fC#include 'Commands/DeployClimb\&.h'\fP
 .br
+\fC#include 'Commands/ControlHatchGripper\&.h'\fP
+.br
+\fC#include 'Commands/ControlLight\&.h'\fP
+.br
 \fC#include 'OI\&.h'\fP
 .br
 \fC#include 'Subsystems/DriveTrain\&.h'\fP
@@ -42,15 +46,25 @@ src/main/include/Robot.h
 .br
 \fC#include 'Commands/ControlSlider\&.h'\fP
 .br
+\fC#include 'Commands/ControlCargo\&.h'\fP
+.br
 \fC#include 'Subsystems/Slider\&.h'\fP
 .br
 \fC#include 'Subsystems/Compressor\&.h'\fP
 .br
 \fC#include 'Subsystems/Piston\&.h'\fP
 .br
+\fC#include 'Subsystems/HatchGripper\&.h'\fP
+.br
+\fC#include 'Subsystems/Flap\&.h'\fP
+.br
+\fC#include 'Subsystems/Light\&.h'\fP
+.br
 \fC#include <frc/PowerDistributionPanel\&.h>\fP
 .br
 \fC#include <frc/DriverStation\&.h>\fP
+.br
+\fC#include 'AHRS\&.h'\fP
 .br
 
 .SS "Classes"
