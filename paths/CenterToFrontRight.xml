@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><Path GeneratorType="PATHFINDER_V1" acceleration="36.0" driveBase="TANK" dt="0.05" fitMethod="HERMITE_CUBIC" jerk="5.0" reversed="false" unit="INCHES" velocity="48.0" wheelBaseD="24.0" wheelBaseW="19.625">
+    <Waypoint>
+        <X>68.75</X>
+        <Y>162.0</Y>
+        <Angle>0.0</Angle>
+    </Waypoint>
+    <Waypoint>
+        <X>202.0</X>
+        <Y>150.0</Y>
+        <Angle>0.0</Angle>
+    </Waypoint>
+</Path>
