@@ -18,6 +18,7 @@ Piston *Robot::m_Piston;
 HatchGripper *Robot::m_HatchGripper;
 Flap *Robot::m_Flap;
 Light *Robot::m_Light;
+Lighting *Robot::m_Lighting;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -39,6 +40,7 @@ void Robot::RobotInit() {
   this->m_HatchGripper = new HatchGripper();
   this->m_Flap       = new Flap();
   this->m_Light       = new Light();
+  this->m_Lighting = new Lighting();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
@@ -100,6 +102,18 @@ void Robot::RobotPeriodic() {
   this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
   this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
   this->ntTelemetry->PutNumber("Angle", gyroAngle);
+
+  //Disabled lighting
+
+  if(this->driverStation.IsDisabled()){
+    if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kBlue){
+      this->m_Lighting->Set(LedColour::kCHASE_BLUE);
+    }else if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kBlue){
+      this->m_Lighting->Set(LedColour::kCHASE_RED);
+    }else{
+      this->m_Lighting->Set(LedColour::kSOLID_WHITE);
+    }
+  }
 }
 
 /**
@@ -111,7 +125,9 @@ void Robot::DisabledInit() {
   Robot::m_Flap->Release();
 }
 
-void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
+void Robot::DisabledPeriodic() { 
+  frc::Scheduler::GetInstance()->Run(); 
+}
 
 /**
  * This autonomous (along with the chooser code above) shows how to select

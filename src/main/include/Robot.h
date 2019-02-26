@@ -30,6 +30,7 @@
 #include "Subsystems/HatchGripper.h"
 #include "Subsystems/Flap.h"
 #include "Subsystems/Light.h"
+#include "Subsystems/Lighting.h"
 
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
@@ -49,6 +50,7 @@ class Robot : public frc::TimedRobot {
   static HatchGripper *m_HatchGripper;//!< Pointer for the Hatch Gripper
   static Flap *m_Flap;             //!< Pointer for the Cargo Flap
   static Light *m_Light;           //!< Pointer for the Light
+  static Lighting * m_Lighting;
 
 	// Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
