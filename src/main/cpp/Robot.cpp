@@ -107,7 +107,8 @@ void Robot::RobotPeriodic() {
   //flip image
   this->cvSink.GrabFrame(this->source);
   cv::flip(this->source,this->output, 1);
-  //cv::flip(this->output,this->output,0);
+  this->source = this->output;
+  cv::flip(this->source,this->output,1);
   this->outputStreamStd.PutFrame(this->output);
 }
 
