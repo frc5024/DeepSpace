@@ -20,7 +20,6 @@ FinishClimb::FinishClimb()
 void FinishClimb::Initialize()
 {
 	this->pTimer->Start();
-	Robot::m_Leg->SetPos(Leg::Quadrant::Q_BOTTOM) ;
 }
 
 void FinishClimb::Execute()
