@@ -8,8 +8,16 @@
 
 // Subsystems
 DriveTrain *Robot::m_DriveTrain;
+cCompressor *Robot::m_cCompressor;
+CrawlDrive *Robot::m_CrawlDrive;
+Arm *Robot::m_Arm;
+Leg *Robot::m_Leg;
 OI *Robot::m_oi;
 Slider *Robot::m_Slider;
+Piston *Robot::m_Piston;
+HatchGripper *Robot::m_HatchGripper;
+Flap *Robot::m_Flap;
+Light *Robot::m_Light;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -21,8 +29,16 @@ void Robot::RobotInit() {
   // Subsystems
   std::cout << "Creating Subsystems..." << std::endl;
   this->m_DriveTrain = new DriveTrain();
+  this->m_CrawlDrive = new CrawlDrive();
+  this->m_Arm = new Arm();
+  this->m_Leg = new Leg();
   this->m_Slider     = new Slider();
+  this->m_Piston     = new Piston();
   this->m_oi         = new OI();
+  this->m_cCompressor = new cCompressor();
+  this->m_HatchGripper = new HatchGripper();
+  this->m_Flap       = new Flap();
+  this->m_Light       = new Light();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
@@ -34,11 +50,24 @@ void Robot::RobotInit() {
   std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
   std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
   this->visionCam.SetConfigJson(visionSettings);
+
+  // Init Gyro
+  std::cout << "Gyro init..." << std::endl;
+  this->pGyro = new AHRS(frc::SPI::kMXP);
+  this->pGyro->Reset();
 	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
-  this->pTriggerDrive  = new TriggerDrive();
+  this->pTriggerDrive = new TriggerDrive();
+  this->pTestUltra = new testUltra();
+  this->pPullArm = new PullArm();
+  this->pPullLeg = new PullLeg();
+  this->pDeployClimb = new DeployClimb();
   this->pControlSlider = new ControlSlider();
+  this->pControlCompressor = new ControlCompressor();
+  this->pControlHatchGripper = new ControlHatchGripper();
+  this->pControlCargo = new ControlCargo();
+  this->pControlLight = new ControlLight();
 
   // Create Telemetry table
   std::cout << "Connecting to telemetry table.." << std::endl;
@@ -64,11 +93,13 @@ void Robot::RobotPeriodic() {
   double robotVoltage   = this->pdp->GetVoltage();
   bool   dsAttached     = this->driverStation.IsDSAttached();
   bool   fmsAttached    = this->driverStation.IsFMSAttached();
+  float  gyroAngle      = this->pGyro->GetAngle();
 
   this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
   this->ntTelemetry->PutNumber("voltage",  robotVoltage);
   this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
   this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
+  this->ntTelemetry->PutNumber("Angle", gyroAngle);
 }
 
 /**
@@ -76,7 +107,9 @@ void Robot::RobotPeriodic() {
  * can use it to reset any subsystem information you want to clear when the
  * robot is disabled.
  */
-void Robot::DisabledInit() {}
+void Robot::DisabledInit() {
+  Robot::m_Flap->Release();
+}
 
 void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
 
@@ -105,6 +138,32 @@ void Robot::AutonomousInit() {
   // if (m_autonomousCommand != nullptr) {
   //   m_autonomousCommand->Start();
   // }
+  if (this->pTriggerDrive != nullptr) {
+		this->pTriggerDrive->Start();
+	}
+  if (this->pPullArm != nullptr) {
+		this->pPullArm->Start();
+	}
+  if (this->pPullLeg != nullptr) {
+		this->pPullLeg->Start();
+  }
+	if (this->pControlSlider != nullptr) {
+		this->pControlSlider->Start();
+	}
+  if (this->pControlCompressor != nullptr) {
+		this->pControlCompressor->Start();
+	}
+  if (this->pControlHatchGripper != nullptr) {
+		this->pControlHatchGripper->Start();
+	}
+  if (this->pControlCargo != nullptr){
+    this->pControlCargo->Start();
+  }
+  if (this->pControlLight != nullptr){
+    this->pControlLight->Start();
+  }
+
+  this->pGyro->Reset();
 }
 
 void Robot::AutonomousPeriodic() { frc::Scheduler::GetInstance()->Run(); }
@@ -118,13 +177,6 @@ void Robot::TeleopInit() {
   //   m_autonomousCommand->Cancel();
   //   m_autonomousCommand = nullptr;
   // }
-
-  if (this->pTriggerDrive != nullptr) {
-		this->pTriggerDrive->Start();
-	}
-	if (this->pControlSlider != nullptr) {
-		this->pControlSlider->Start();
-	}
 }
 
 void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }

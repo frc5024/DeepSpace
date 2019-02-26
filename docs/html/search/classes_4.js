@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['slider',['Slider',['../classSlider.html',1,'']]]
+  ['hatchgripper',['HatchGripper',['../classHatchGripper.html',1,'']]]
 ];

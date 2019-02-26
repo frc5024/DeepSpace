@@ -1,0 +1,93 @@
+.TH "HatchGripper" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HatchGripper
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <HatchGripper\&.h>\fP
+.PP
+Inherits Subsystem\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHatchGripper\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitDefaultCommand\fP () override"
+.br
+.RI "Initalizes the default command for this subsystem (\fBControlHatchGripper\fP) "
+.ti -1c
+.RI "void \fBDeploy\fP ()"
+.br
+.RI "Deploy the gripper\&. "
+.ti -1c
+.RI "void \fBRetract\fP ()"
+.br
+.RI "Retract the gripper\&. "
+.ti -1c
+.RI "void \fBTurnOff\fP ()"
+.br
+.RI "Turn of gripper\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "frc::DoubleSolenoid * \fBpHatchSolenoid\fP"
+.br
+.RI "Pointer to double solenoid\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 10 of file HatchGripper\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "HatchGripper::HatchGripper ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 3 of file HatchGripper\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void HatchGripper::Deploy ()"
+
+.PP
+Deploy the gripper\&. 
+.PP
+Definition at line 11 of file HatchGripper\&.cpp\&.
+.SS "void HatchGripper::InitDefaultCommand ()\fC [override]\fP"
+
+.PP
+Initalizes the default command for this subsystem (\fBControlHatchGripper\fP) 
+.PP
+Definition at line 7 of file HatchGripper\&.cpp\&.
+.SS "void HatchGripper::Retract ()"
+
+.PP
+Retract the gripper\&. 
+.PP
+Definition at line 15 of file HatchGripper\&.cpp\&.
+.SS "void HatchGripper::TurnOff ()"
+
+.PP
+Turn of gripper\&. 
+.PP
+Definition at line 19 of file HatchGripper\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "frc::DoubleSolenoid* HatchGripper::pHatchSolenoid\fC [private]\fP"
+
+.PP
+Pointer to double solenoid\&. 
+.PP
+Definition at line 20 of file HatchGripper\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

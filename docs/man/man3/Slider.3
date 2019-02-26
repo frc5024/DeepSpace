@@ -1,4 +1,4 @@
-.TH "Slider" 3 "Sat Jan 26 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "Slider" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,20 +25,39 @@ Inherits Subsystem\&.
 .ti -1c
 .RI "void \fBSlide\fP (double speed)"
 .br
+.ti -1c
+.RI "void \fBCenter\fP ()"
+.br
 .in -1c
 .SS "Private Attributes"
 
 .in +1c
 .ti -1c
+.RI "double \fBsliderSide\fP"
+.br
+.ti -1c
 .RI "can::WPI_TalonSRX * \fBpSliderMotor\fP"
 .br
 .RI "Pointer for the slider motor\&. "
+.ti -1c
+.RI "frc::DigitalInput * \fBpLeftHall\fP"
+.br
+.ti -1c
+.RI "frc::DigitalInput * \fBpRightHall\fP"
+.br
+.ti -1c
+.RI "frc::DigitalInput * \fBpCenterHall\fP"
+.br
+.ti -1c
+.RI "std::shared_ptr< NetworkTable > \fBntTelemetry\fP"
+.br
+.RI "A pointer to the /SmartDashboard/Telemetry table\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 A subsystem that interfaces with the drivebase on the robot\&. 
 .PP
-Definition at line 11 of file Slider\&.h\&.
+Definition at line 13 of file Slider\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Slider::Slider ()"
@@ -46,15 +65,19 @@ Definition at line 11 of file Slider\&.h\&.
 .PP
 Class constructor\&. 
 .PP
-Definition at line 3 of file Slider\&.cpp\&.
+Definition at line 4 of file Slider\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
+.SS "void Slider::Center ()"
+
+.PP
+Definition at line 53 of file Slider\&.cpp\&.
 .SS "void Slider::InitDefaultCommand ()\fC [override]\fP"
 
 .PP
 Initalizes the default command for this subsystem (\fBControlSlider\fP) 
 .PP
-Definition at line 12 of file Slider\&.cpp\&.
+Definition at line 23 of file Slider\&.cpp\&.
 .SS "void Slider::Slide (double speed)"
 Pass data to motor
 .PP
@@ -65,15 +88,37 @@ Pass data to motor
 .PP
 
 .PP
-Definition at line 16 of file Slider\&.cpp\&.
+Definition at line 27 of file Slider\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
+.SS "std::shared_ptr<NetworkTable> Slider::ntTelemetry\fC [private]\fP"
+
+.PP
+A pointer to the /SmartDashboard/Telemetry table\&. 
+.PP
+Definition at line 32 of file Slider\&.h\&.
+.SS "frc::DigitalInput* Slider::pCenterHall\fC [private]\fP"
+
+.PP
+Definition at line 31 of file Slider\&.h\&.
+.SS "frc::DigitalInput* Slider::pLeftHall\fC [private]\fP"
+
+.PP
+Definition at line 29 of file Slider\&.h\&.
+.SS "frc::DigitalInput* Slider::pRightHall\fC [private]\fP"
+
+.PP
+Definition at line 30 of file Slider\&.h\&.
 .SS "can::WPI_TalonSRX* Slider::pSliderMotor\fC [private]\fP"
 
 .PP
 Pointer for the slider motor\&. 
 .PP
-Definition at line 24 of file Slider\&.h\&.
+Definition at line 28 of file Slider\&.h\&.
+.SS "double Slider::sliderSide\fC [private]\fP"
+
+.PP
+Definition at line 27 of file Slider\&.h\&.
 
 .SH "Author"
 .PP 

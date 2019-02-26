@@ -1,0 +1,77 @@
+.TH "cCompressor" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cCompressor \- A subsystem that interfaces with the robot's \fBcCompressor\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Compressor\&.h>\fP
+.PP
+Inherits Subsystem\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcCompressor\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitDefaultCommand\fP () override"
+.br
+.RI "Initalizes the default command for this subsystem (\fBDriveWithJoystick\fP) "
+.ti -1c
+.RI "void \fBSetState\fP (bool enabled)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "frc::Compressor * \fBpCompressor\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A subsystem that interfaces with the robot's \fBcCompressor\fP\&. 
+.PP
+Definition at line 10 of file Compressor\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "cCompressor::cCompressor ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 4 of file Compressor\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void cCompressor::InitDefaultCommand ()\fC [override]\fP"
+
+.PP
+Initalizes the default command for this subsystem (\fBDriveWithJoystick\fP) 
+.PP
+Definition at line 9 of file Compressor\&.cpp\&.
+.SS "void cCompressor::SetState (bool enabled)"
+Pass data to \fBcCompressor\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIenabled\fP Bool to determine if the \fBcCompressor\fP should be enabled or not 
+.RE
+.PP
+
+.PP
+Definition at line 13 of file Compressor\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "frc::Compressor* cCompressor::pCompressor\fC [private]\fP"
+
+.PP
+Definition at line 23 of file Compressor\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

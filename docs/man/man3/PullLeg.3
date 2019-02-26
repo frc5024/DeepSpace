@@ -1,0 +1,121 @@
+.TH "PullLeg" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PullLeg \- An interface command for activating the Pull \fBArm\fP on the robot\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PullLeg\&.h>\fP
+.PP
+Inherits Command\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPullLeg\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitialize\fP () override"
+.br
+.RI "Runs once on initalization\&. "
+.ti -1c
+.RI "void \fBExecute\fP () override"
+.br
+.RI "Called in a loop during Teleop\&. "
+.ti -1c
+.RI "bool \fBIsFinished\fP () override"
+.br
+.ti -1c
+.RI "void \fBEnd\fP () override"
+.br
+.RI "Runs once when \fBIsFinished()\fP returns true\&. "
+.ti -1c
+.RI "void \fBInterrupted\fP () override"
+.br
+.RI "Runs once if the command is forced to stop\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBspeedMultiplier\fP"
+.br
+.ti -1c
+.RI "double \fBspeed\fP"
+.br
+.ti -1c
+.RI "frc::XboxController * \fBpJoyDebug\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An interface command for activating the Pull \fBArm\fP on the robot\&. 
+.PP
+Definition at line 10 of file PullLeg\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PullLeg::PullLeg ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 5 of file PullLeg\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void PullLeg::End ()\fC [override]\fP"
+
+.PP
+Runs once when \fBIsFinished()\fP returns true\&. 
+.PP
+Definition at line 27 of file PullLeg\&.cpp\&.
+.SS "void PullLeg::Execute ()\fC [override]\fP"
+
+.PP
+Called in a loop during Teleop\&. 
+.PP
+Definition at line 17 of file PullLeg\&.cpp\&.
+.SS "void PullLeg::Initialize ()\fC [override]\fP"
+
+.PP
+Runs once on initalization\&. 
+.PP
+Definition at line 11 of file PullLeg\&.cpp\&.
+.SS "void PullLeg::Interrupted ()\fC [override]\fP"
+
+.PP
+Runs once if the command is forced to stop\&. 
+.PP
+Definition at line 31 of file PullLeg\&.cpp\&.
+.SS "bool PullLeg::IsFinished ()\fC [override]\fP"
+Used to tell wpilib if the command is fully finished\&. This should never return true Because we always want to be able to drive the bot during teleop
+.PP
+\fBReturns:\fP
+.RS 4
+True if command is finished, else false 
+.RE
+.PP
+
+.PP
+Definition at line 24 of file PullLeg\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "frc::XboxController* PullLeg::pJoyDebug\fC [private]\fP"
+
+.PP
+Definition at line 32 of file PullLeg\&.h\&.
+.SS "double PullLeg::speed\fC [private]\fP"
+
+.PP
+Definition at line 30 of file PullLeg\&.h\&.
+.SS "double PullLeg::speedMultiplier\fC [private]\fP"
+
+.PP
+Definition at line 28 of file PullLeg\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

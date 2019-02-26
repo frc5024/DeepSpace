@@ -1,0 +1,110 @@
+.TH "ControlCargo" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ControlCargo \- An interface command for driving the robot with an xbox controller\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ControlCargo\&.h>\fP
+.PP
+Inherits Command\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBControlCargo\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitialize\fP () override"
+.br
+.RI "Runs once on initalization\&. "
+.ti -1c
+.RI "void \fBExecute\fP () override"
+.br
+.RI "Called in a loop during Teleop\&. "
+.ti -1c
+.RI "bool \fBIsFinished\fP () override"
+.br
+.ti -1c
+.RI "void \fBEnd\fP () override"
+.br
+.RI "Runs once when \fBIsFinished()\fP returns true\&. "
+.ti -1c
+.RI "void \fBInterrupted\fP () override"
+.br
+.RI "Runs once if the command is forced to stop\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "frc::XboxController * \fBpJoyOp\fP"
+.br
+.RI "A mnemonic for the operator's controller because we are lazy\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+An interface command for driving the robot with an xbox controller\&. 
+.PP
+Definition at line 12 of file ControlCargo\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ControlCargo::ControlCargo ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 4 of file ControlCargo\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ControlCargo::End ()\fC [override]\fP"
+
+.PP
+Runs once when \fBIsFinished()\fP returns true\&. 
+.PP
+Definition at line 29 of file ControlCargo\&.cpp\&.
+.SS "void ControlCargo::Execute ()\fC [override]\fP"
+
+.PP
+Called in a loop during Teleop\&. 
+.PP
+Definition at line 15 of file ControlCargo\&.cpp\&.
+.SS "void ControlCargo::Initialize ()\fC [override]\fP"
+
+.PP
+Runs once on initalization\&. 
+.PP
+Definition at line 12 of file ControlCargo\&.cpp\&.
+.SS "void ControlCargo::Interrupted ()\fC [override]\fP"
+
+.PP
+Runs once if the command is forced to stop\&. 
+.PP
+Definition at line 33 of file ControlCargo\&.cpp\&.
+.SS "bool ControlCargo::IsFinished ()\fC [override]\fP"
+Used to tell wpilib if the command is fully finished\&. This should never return true Because we always want to be able to drive the bot during teleop
+.PP
+\fBReturns:\fP
+.RS 4
+True if command is finished, else false 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file ControlCargo\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "frc::XboxController* ControlCargo::pJoyOp\fC [private]\fP"
+
+.PP
+A mnemonic for the operator's controller because we are lazy\&. 
+.PP
+Definition at line 30 of file ControlCargo\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

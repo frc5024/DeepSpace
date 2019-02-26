@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['controlslider',['ControlSlider',['../classControlSlider.html',1,'']]]
+  ['arm',['Arm',['../classArm.html',1,'']]]
 ];

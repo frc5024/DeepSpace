@@ -1,4 +1,4 @@
-.TH "OI" 3 "Sat Jan 26 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "OI" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,6 +22,9 @@ OI \- Operator Interface allows various commands to access the xbox controllers 
 .ti -1c
 .RI "frc::XboxController * \fBGetJoystickOperator\fP (void)"
 .br
+.ti -1c
+.RI "frc::XboxController * \fBGetJoystickDebug\fP (void)"
+.br
 .in -1c
 .SS "Private Attributes"
 
@@ -34,6 +37,10 @@ OI \- Operator Interface allows various commands to access the xbox controllers 
 .RI "frc::XboxController * \fBpJoystickOperator\fP"
 .br
 .RI "Pointer for Operator's joystick\&. "
+.ti -1c
+.RI "frc::XboxController * \fBpJoystickDebug\fP"
+.br
+.RI "Pointer for Debug joystick\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -50,6 +57,17 @@ Class constructor\&.
 Definition at line 4 of file OI\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
+.SS "frc::XboxController * OI::GetJoystickDebug (void)"
+Function for getting the Debug joystick data
+.PP
+\fBReturns:\fP
+.RS 4
+Pointer to the debug joystick 
+.RE
+.PP
+
+.PP
+Definition at line 18 of file OI\&.cpp\&.
 .SS "frc::XboxController * OI::GetJoystickDrive (void)"
 Function for getting the Driver's joystick data
 .PP
@@ -60,7 +78,7 @@ Pointer to the driver's joystick
 .PP
 
 .PP
-Definition at line 9 of file OI\&.cpp\&.
+Definition at line 10 of file OI\&.cpp\&.
 .SS "frc::XboxController * OI::GetJoystickOperator (void)"
 Function for getting the Operator's joystick data
 .PP
@@ -71,21 +89,27 @@ Pointer to the operator's joystick
 .PP
 
 .PP
-Definition at line 13 of file OI\&.cpp\&.
+Definition at line 14 of file OI\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
+.SS "frc::XboxController* OI::pJoystickDebug\fC [private]\fP"
+
+.PP
+Pointer for Debug joystick\&. 
+.PP
+Definition at line 35 of file OI\&.h\&.
 .SS "frc::XboxController* OI::pJoystickDrive\fC [private]\fP"
 
 .PP
 Pointer for Driver's joystick\&. 
 .PP
-Definition at line 26 of file OI\&.h\&.
+Definition at line 33 of file OI\&.h\&.
 .SS "frc::XboxController* OI::pJoystickOperator\fC [private]\fP"
 
 .PP
 Pointer for Operator's joystick\&. 
 .PP
-Definition at line 27 of file OI\&.h\&.
+Definition at line 34 of file OI\&.h\&.
 
 .SH "Author"
 .PP 

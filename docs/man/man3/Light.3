@@ -1,0 +1,77 @@
+.TH "Light" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Light
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Light\&.h>\fP
+.PP
+Inherits Subsystem\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLight\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitDefaultCommand\fP () override"
+.br
+.RI "Initalizes the default command for this subsystem (\fBControlLight\fP) "
+.ti -1c
+.RI "void \fBOn\fP ()"
+.br
+.ti -1c
+.RI "void \fBOff\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "frc::Solenoid * \fBpLight\fP"
+.br
+.RI "Pointer to Solenoid\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 9 of file Light\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Light::Light ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 3 of file Light\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Light::InitDefaultCommand ()\fC [override]\fP"
+
+.PP
+Initalizes the default command for this subsystem (\fBControlLight\fP) 
+.PP
+Definition at line 7 of file Light\&.cpp\&.
+.SS "void Light::Off ()"
+
+.PP
+Definition at line 15 of file Light\&.cpp\&.
+.SS "void Light::On ()"
+
+.PP
+Definition at line 11 of file Light\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "frc::Solenoid* Light::pLight\fC [private]\fP"
+
+.PP
+Pointer to Solenoid\&. 
+.PP
+Definition at line 18 of file Light\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

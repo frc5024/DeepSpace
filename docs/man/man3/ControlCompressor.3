@@ -1,0 +1,120 @@
+.TH "ControlCompressor" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ControlCompressor \- An interface command for driving the robot with an xbox controller\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ControlCompressor\&.h>\fP
+.PP
+Inherits Command\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBControlCompressor\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitialize\fP () override"
+.br
+.RI "Runs once on initalization\&. "
+.ti -1c
+.RI "void \fBExecute\fP () override"
+.br
+.RI "Called in a loop during Teleop\&. "
+.ti -1c
+.RI "bool \fBIsFinished\fP () override"
+.br
+.ti -1c
+.RI "void \fBEnd\fP () override"
+.br
+.RI "Runs once when \fBIsFinished()\fP returns true\&. "
+.ti -1c
+.RI "void \fBInterrupted\fP () override"
+.br
+.RI "Runs once if the command is forced to stop\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "frc::XboxController * \fBpJoyOp\fP"
+.br
+.RI "A mnemonic for the operator's controller\&. "
+.ti -1c
+.RI "frc::XboxController * \fBpJoyDrive\fP"
+.br
+.RI "A mnemonic for the driver's controller\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+An interface command for driving the robot with an xbox controller\&. 
+.PP
+Definition at line 12 of file ControlCompressor\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ControlCompressor::ControlCompressor ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 4 of file ControlCompressor\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ControlCompressor::End ()\fC [override]\fP"
+
+.PP
+Runs once when \fBIsFinished()\fP returns true\&. 
+.PP
+Definition at line 32 of file ControlCompressor\&.cpp\&.
+.SS "void ControlCompressor::Execute ()\fC [override]\fP"
+
+.PP
+Called in a loop during Teleop\&. 
+.PP
+Definition at line 16 of file ControlCompressor\&.cpp\&.
+.SS "void ControlCompressor::Initialize ()\fC [override]\fP"
+
+.PP
+Runs once on initalization\&. 
+.PP
+Definition at line 13 of file ControlCompressor\&.cpp\&.
+.SS "void ControlCompressor::Interrupted ()\fC [override]\fP"
+
+.PP
+Runs once if the command is forced to stop\&. 
+.PP
+Definition at line 36 of file ControlCompressor\&.cpp\&.
+.SS "bool ControlCompressor::IsFinished ()\fC [override]\fP"
+Used to tell wpilib if the command is fully finished\&. This should never return true Because we always want to be able to drive the bot during teleop
+.PP
+\fBReturns:\fP
+.RS 4
+True if command is finished, else false 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file ControlCompressor\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "frc::XboxController* ControlCompressor::pJoyDrive\fC [private]\fP"
+
+.PP
+A mnemonic for the driver's controller\&. 
+.PP
+Definition at line 31 of file ControlCompressor\&.h\&.
+.SS "frc::XboxController* ControlCompressor::pJoyOp\fC [private]\fP"
+
+.PP
+A mnemonic for the operator's controller\&. 
+.PP
+Definition at line 30 of file ControlCompressor\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

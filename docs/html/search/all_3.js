@@ -1,5 +1,16 @@
 var searchData=
 [
+  ['deploy',['Deploy',['../classFlap.html#a0cdea0282233f2577b0c1deb4a78cf36',1,'Flap::Deploy()'],['../classHatchGripper.html#a1b04c75f807fd1d4edd061c07432c314',1,'HatchGripper::Deploy()'],['../classPiston.html#acb73e8a01121170782cbbec40e98b5f9',1,'Piston::Deploy()']]],
+  ['deployarm',['DeployArm',['../classDeployArm.html',1,'DeployArm'],['../classDeployArm.html#ab475a6d2a716bce5d47167bcb27daede',1,'DeployArm::DeployArm()']]],
+  ['deployarm_2ecpp',['DeployArm.cpp',['../DeployArm_8cpp.html',1,'']]],
+  ['deployarm_2eh',['DeployArm.h',['../DeployArm_8h.html',1,'']]],
+  ['deployclimb',['DeployClimb',['../classDeployClimb.html',1,'DeployClimb'],['../classDeployClimb.html#a7f15f7655a4b5f98b8750aa333d5aa22',1,'DeployClimb::DeployClimb()']]],
+  ['deployclimb_2ecpp',['DeployClimb.cpp',['../DeployClimb_8cpp.html',1,'']]],
+  ['deployclimb_2eh',['DeployClimb.h',['../DeployClimb_8h.html',1,'']]],
+  ['deployleg',['DeployLeg',['../classDeployLeg.html',1,'DeployLeg'],['../classDeployLeg.html#a01d71d54f3b67c2522b419cc7281d198',1,'DeployLeg::DeployLeg()']]],
+  ['deployleg_2ecpp',['DeployLeg.cpp',['../DeployLeg_8cpp.html',1,'']]],
+  ['deployleg_2eh',['DeployLeg.h',['../DeployLeg_8h.html',1,'']]],
+  ['devices_2emd',['devices.md',['../devices_8md.html',1,'']]],
   ['directionmultiplier',['directionMultiplier',['../classDriveWithJoystick.html#a87ceb621790dae15f245fa6b559202ee',1,'DriveWithJoystick::directionMultiplier()'],['../classTriggerDrive.html#abc836db7bd8464e344c3d318f9da3f9c',1,'TriggerDrive::directionMultiplier()']]],
   ['disabledinit',['DisabledInit',['../classRobot.html#a810e6143a208a6314491366e3c714357',1,'Robot']]],
   ['disabledperiodic',['DisabledPeriodic',['../classRobot.html#a8c7309f5f1cb242ea8c74f1abf03b540',1,'Robot']]],
@@ -21,5 +32,6 @@ var searchData=
   ['drivewithjoystick_2ecpp',['DriveWithJoystick.cpp',['../DriveWithJoystick_8cpp.html',1,'']]],
   ['drivewithjoystick_2eh',['DriveWithJoystick.h',['../DriveWithJoystick_8h.html',1,'']]],
   ['drivewithjoystick_5frotation_5flimiter',['DRIVEWITHJOYSTICK_ROTATION_LIMITER',['../RobotMap_8h.html#acf7d7096f3e7e2ad84975e03d61be9b6',1,'RobotMap.h']]],
-  ['deepspace_20_5b_21_5bcodefactor_5d_28https_3a_2f_2fwww_2ecodefactor_2eio_2frepository_2fgithub_2ffrc5024_2fdeepspace_2fbadge_29_5d_28https_3a_2f_2fwww_2ecodefactor_2eio_2frepository_2fgithub_2ffrc5024_2fdeepspace_29_20_5b_21_5bdoi_5d_28https_3a_2f_2fzenodo_2eorg_2fbadge_2f162623857_2esvg_29_5d_28https_3a_2f_2fzenodo_2eorg_2fbadge_2flatestdoi_2f162623857_29',['DeepSpace [![CodeFactor](https://www.codefactor.io/repository/github/frc5024/deepspace/badge)](https://www.codefactor.io/repository/github/frc5024/deepspace) [![DOI](https://zenodo.org/badge/162623857.svg)](https://zenodo.org/badge/latestdoi/162623857)',['../index.html',1,'']]]
+  ['deepspace_20_5b_21_5bcodefactor_5d_28https_3a_2f_2fwww_2ecodefactor_2eio_2frepository_2fgithub_2ffrc5024_2fdeepspace_2fbadge_29_5d_28https_3a_2f_2fwww_2ecodefactor_2eio_2frepository_2fgithub_2ffrc5024_2fdeepspace_29_20_5b_21_5bdoi_5d_28https_3a_2f_2fzenodo_2eorg_2fbadge_2f162623857_2esvg_29_5d_28https_3a_2f_2fzenodo_2eorg_2fbadge_2flatestdoi_2f162623857_29',['DeepSpace [![CodeFactor](https://www.codefactor.io/repository/github/frc5024/deepspace/badge)](https://www.codefactor.io/repository/github/frc5024/deepspace) [![DOI](https://zenodo.org/badge/162623857.svg)](https://zenodo.org/badge/latestdoi/162623857)',['../index.html',1,'']]],
+  ['devices',['Devices',['../md_docs_devices.html',1,'']]]
 ];

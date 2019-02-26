@@ -1,0 +1,83 @@
+.TH "Piston" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Piston
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Piston\&.h>\fP
+.PP
+Inherits Subsystem\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPiston\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitDefaultCommand\fP () override"
+.br
+.RI "Initalizes the default command for this subsystem (ControlPiston) "
+.ti -1c
+.RI "void \fBDeploy\fP ()"
+.br
+.RI "Deploy the piston\&. "
+.ti -1c
+.RI "void \fBRetract\fP ()"
+.br
+.RI "Retract the piston\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "frc::Solenoid * \fBpSolenoid\fP"
+.br
+.RI "Pointer to Solenoid\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 9 of file Piston\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Piston::Piston ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 3 of file Piston\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Piston::Deploy ()"
+
+.PP
+Deploy the piston\&. 
+.PP
+Definition at line 11 of file Piston\&.cpp\&.
+.SS "void Piston::InitDefaultCommand ()\fC [override]\fP"
+
+.PP
+Initalizes the default command for this subsystem (ControlPiston) 
+.PP
+Definition at line 7 of file Piston\&.cpp\&.
+.SS "void Piston::Retract ()"
+
+.PP
+Retract the piston\&. 
+.PP
+Definition at line 15 of file Piston\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "frc::Solenoid* Piston::pSolenoid\fC [private]\fP"
+
+.PP
+Pointer to Solenoid\&. 
+.PP
+Definition at line 18 of file Piston\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

@@ -6,7 +6,7 @@
 #include <Subsystems/DriveTrain.h>
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
-#include <Utils/AutoTurn.h>
+
 
 class TriggerDrive : public frc::Command {
  public:
@@ -32,8 +32,6 @@ private:
 	double speed;    //!< Speed value that will be passed into DriveTrain::ArcadeDrive
 	double rotation; //!< Rotation value that will be passed into DriveTrain::ArcadeDrive
 	
-	AutoTurn* m_pAutoTurn ; ///< Instance of AutoTurn which does the Automatic vision Turning when A is held
-
 	frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller because we are lazy
 };
 

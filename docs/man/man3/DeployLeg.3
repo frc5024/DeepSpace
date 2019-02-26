@@ -1,0 +1,78 @@
+.TH "DeployLeg" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DeployLeg \- An interface command for activating the Pull \fBArm\fP on the robot\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DeployLeg\&.h>\fP
+.PP
+Inherits TimedCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDeployLeg\fP (double timeout, double \fBspeed\fP)"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP () override"
+.br
+.ti -1c
+.RI "void \fBExecute\fP () override"
+.br
+.ti -1c
+.RI "void \fBEnd\fP () override"
+.br
+.ti -1c
+.RI "void \fBInterrupted\fP () override"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBspeed\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An interface command for activating the Pull \fBArm\fP on the robot\&. 
+.PP
+Definition at line 8 of file DeployLeg\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DeployLeg::DeployLeg (double timeout, double speed)\fC [explicit]\fP"
+
+.PP
+Definition at line 4 of file DeployLeg\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void DeployLeg::End ()\fC [override]\fP"
+
+.PP
+Definition at line 19 of file DeployLeg\&.cpp\&.
+.SS "void DeployLeg::Execute ()\fC [override]\fP"
+
+.PP
+Definition at line 14 of file DeployLeg\&.cpp\&.
+.SS "void DeployLeg::Initialize ()\fC [override]\fP"
+
+.PP
+Definition at line 11 of file DeployLeg\&.cpp\&.
+.SS "void DeployLeg::Interrupted ()\fC [override]\fP"
+
+.PP
+Definition at line 23 of file DeployLeg\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "double DeployLeg::speed"
+
+.PP
+Definition at line 15 of file DeployLeg\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

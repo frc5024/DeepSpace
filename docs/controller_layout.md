@@ -31,8 +31,8 @@ Port: 0
 | Left |  |
 | Right | Slow mode (hold) |
 | Other | -- |
-| Start |  |
-| Select |  |
+| Start | Enable Compressor |
+| Select | Disable Compressor |
 | Home |  |
 ## Operator
 Type: Xbox Controller
@@ -61,11 +61,46 @@ Port: 1
 | Y |  |
 | Triggers | -- |
 | Left |  |
-| Right |  |
+| Right | Shoot hatch (85% pull) |
 | Bumpers | -- |
 | Left |  |
 | Right |  |
 | Other | -- |
-| Start |  |
-| Select |  |
+| Start | Enable Compressor |
+| Select | Disable Compressor |
+| Home |  |
+## Debug
+Type: Xbox Controller
+
+Port: 2
+|  |  |
+| -- | -- |
+| Joysticks | -- |
+| Left | -- |
+| X |  |
+| Y | Raw arm control |
+| Btn |  |
+| Right | -- |
+| X |  |
+| Y | Raw leg control |
+| Btn |  |
+| Dpad | -- |
+| Up |  |
+| Down |  |
+| Left |  |
+| Right |  |
+| Button Pad | -- |
+| A |  |
+| B |  |
+| X |  |
+| Y |  |
+| Triggers | -- |
+| Left | Crawl backwards |
+| Right | Crawl forwards |
+| Bumpers | -- |
+| Left |  |
+| Right |  |
+| Other | -- |
+| Start | Enable Compressor |
+| Select | Disable Compressor |
 | Home |  |

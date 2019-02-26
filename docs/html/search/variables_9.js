@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['speed',['speed',['../classControlSlider.html#ace23052274a523b84eff7fcb39308a38',1,'ControlSlider::speed()'],['../classTriggerDrive.html#a8b24bab002bba410a3753162129bc99f',1,'TriggerDrive::speed()']]],
-  ['speedmultiplier',['speedMultiplier',['../classTriggerDrive.html#a7cf78202badfa626850364fadeee43ca',1,'TriggerDrive']]]
+  ['radial',['radial',['../classDriveWithJoystick.html#a0262b9559559ebe2ff0f68938562579a',1,'DriveWithJoystick']]],
+  ['rotation',['rotation',['../classTriggerDrive.html#a767646defff80ac6bb7b176173620eb1',1,'TriggerDrive']]]
 ];

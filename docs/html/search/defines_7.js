@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wingame',['WinGame',['../RobotMap_8h.html#a06ff4c1b825f2b61a5dcdc5e5bae9ea9',1,'RobotMap.h']]]
+  ['slider_5fmotor',['SLIDER_MOTOR',['../RobotMap_8h.html#aa904ac443cb51bcd6c3ccd6799065890',1,'RobotMap.h']]]
 ];

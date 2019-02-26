@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['triggerdrive',['TriggerDrive',['../classTriggerDrive.html',1,'']]]
+  ['leg',['Leg',['../classLeg.html',1,'']]],
+  ['light',['Light',['../classLight.html',1,'']]]
 ];
