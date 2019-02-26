@@ -16,5 +16,6 @@
   "files.associations": {
     "condition_variable": "cpp",
     "*.inc": "cpp"
-  }
+  },
+  "C_Cpp.configurationWarnings": "Disabled"
 }
