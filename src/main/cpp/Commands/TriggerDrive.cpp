@@ -2,9 +2,9 @@
 #include "Robot.h"
 
 TriggerDrive::TriggerDrive() {
-  // Use Requires() here to declare subsystem dependencies
   Requires(Robot::m_DriveTrain);
   this->pJoyDrive = Robot::m_oi->GetJoystickDrive();
+  this->pAutoTurn = new AutoTurn();
 }
 
 // Called just before this Command runs the first time
@@ -21,9 +21,23 @@ void TriggerDrive::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void TriggerDrive::Execute() {
-  // Deal with reversing and slow mode
+
+	// Case check starting/doing/stopping auto-turning when we hold (A) button
+	if (this->pJoyDrive->GetAButtonPressed()) {
+		this->pAutoTurn->Start();
+		this->pJoyDrive->SetRumble(GenericHID::RumbleType::kRightRumble, 0.5);
+	} else if (this->pJoyDrive->GetAButton()) {
+		float spd = this->pAutoTurn->Execute();
+		Robot::m_DriveTrain->ArcadeDrive(0.0, spd);
+		if (spd == 0.0) this->pJoyDrive->SetRumble(GenericHID::RumbleType::kRightRumble, 0.0);
+	} else if (this->pJoyDrive->GetAButtonReleased()) {
+		this->pAutoTurn->Stop();
+		this->pJoyDrive->SetRumble(GenericHID::RumbleType::kRightRumble, 0.0);
+	}
+
+	// Deal with reversing and slow mode
 	this->directionMultiplier *= (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
-  this->speedMultiplier      = (this->pJoyDrive->GetBumper(Hand::kRightHand)) ? 0.6 : 1;
+	this->speedMultiplier      = (this->pJoyDrive->GetBumper(Hand::kRightHand)) ? 0.6 : 1;
 
   // Get movement data form controller
   // Speed = Right trigger - left trigger

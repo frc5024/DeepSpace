@@ -4,6 +4,7 @@
 
 #include <frc/commands/Command.h>
 #include <Subsystems/DriveTrain.h>
+#include <Utils/AutoTurn.h>
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
 
@@ -33,6 +34,8 @@ private:
 	double rotation; //!< Rotation value that will be passed into DriveTrain::ArcadeDrive
 	
 	frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller because we are lazy
+
+	AutoTurn* pAutoTurn; //!< Instance of the auto-turn object to do auto-turning without switching commands
 };
 
 #endif // _TRIGGERDRIVE_HG_
