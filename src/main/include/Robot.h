@@ -26,6 +26,7 @@
 #include "Commands/ControlCargo.h"
 #include "Subsystems/Slider.h"
 #include "Subsystems/Compressor.h"
+#include "Subsystems/ConstGyro.h"
 #include "Subsystems/Piston.h"
 #include "Subsystems/HatchGripper.h"
 #include "Subsystems/Flap.h"
@@ -33,7 +34,6 @@
 
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
-#include "AHRS.h"
 
 class Robot : public frc::TimedRobot {
  public:
@@ -49,6 +49,7 @@ class Robot : public frc::TimedRobot {
   static HatchGripper *m_HatchGripper;//!< Pointer for the Hatch Gripper
   static Flap *m_Flap;             //!< Pointer for the Cargo Flap
   static Light *m_Light;           //!< Pointer for the Light
+  static ConstGyro* m_ConstGyro;    //!< Pointer for the gyro, stays constistant
 
 	// Commands
   TriggerDrive* pTriggerDrive; //!< Pointer for the TriggerDrive command
@@ -88,7 +89,6 @@ class Robot : public frc::TimedRobot {
 
   std::shared_ptr<NetworkTable> ntTelemetry; //!< A pointer to the /SmartDashboard/Telemetry table
 
-  AHRS* pGyro;
 };
 
 #endif //_ROBOT_HG_

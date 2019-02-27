@@ -18,6 +18,7 @@ Piston *Robot::m_Piston;
 HatchGripper *Robot::m_HatchGripper;
 Flap *Robot::m_Flap;
 Light *Robot::m_Light;
+ConstGyro* Robot::m_ConstGyro;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -39,6 +40,7 @@ void Robot::RobotInit() {
   this->m_HatchGripper = new HatchGripper();
   this->m_Flap       = new Flap();
   this->m_Light       = new Light();
+  this->m_ConstGyro = new ConstGyro();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
@@ -51,11 +53,6 @@ void Robot::RobotInit() {
   std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
   this->visionCam.SetConfigJson(visionSettings);
 
-  // Init Gyro
-  std::cout << "Gyro init..." << std::endl;
-  this->pGyro = new AHRS(frc::SPI::kMXP);
-  this->pGyro->Reset();
-	
 	// Init commands
   std::cout << "Creating Commands.." << std::endl;
   this->pTriggerDrive = new TriggerDrive();
@@ -93,7 +90,7 @@ void Robot::RobotPeriodic() {
   double robotVoltage   = this->pdp->GetVoltage();
   bool   dsAttached     = this->driverStation.IsDSAttached();
   bool   fmsAttached    = this->driverStation.IsFMSAttached();
-  float  gyroAngle      = this->pGyro->GetAngle();
+  float  gyroAngle      = this->m_ConstGyro->GetAngle();
 
   this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
   this->ntTelemetry->PutNumber("voltage",  robotVoltage);
@@ -125,19 +122,16 @@ void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
  * the if-else structure below with additional strings & commands.
  */
 void Robot::AutonomousInit() {
-  // std::string autoSelected = frc::SmartDashboard::GetString(
-  //     "Auto Selector", "Default");
-  // if (autoSelected == "My Auto") {
-  //   m_autonomousCommand = &m_myAuto;
-  // } else {
-  //   m_autonomousCommand = &m_defaultAuto;
-  // }
 
-  // m_autonomousCommand = m_chooser.GetSelected();
+	//Robot::m_ConstGyro->Reset(); // Zero the yaw axis
+	this->m_ConstGyro->GetGyro()->Reset();
 
-  // if (m_autonomousCommand != nullptr) {
-  //   m_autonomousCommand->Start();
-  // }
+	// If we're on blue team, set offset to 180 (we're facing the other direction)
+	if (this->driverStation.GetAlliance() == DriverStation::Alliance::kBlue)
+		this->m_ConstGyro->GetGyro()->SetAngleAdjustment(180.0);
+
+
+
   if (this->pTriggerDrive != nullptr) {
 		this->pTriggerDrive->Start();
 	}
@@ -163,7 +157,6 @@ void Robot::AutonomousInit() {
     this->pControlLight->Start();
   }
 
-  this->pGyro->Reset();
 }
 
 void Robot::AutonomousPeriodic() { frc::Scheduler::GetInstance()->Run(); }

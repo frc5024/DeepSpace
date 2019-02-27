@@ -23,7 +23,6 @@
 
 #include <iostream>
 #include <RobotMap.h>
-#include <AHRS.h>
 #include <networktables/NetworkTable.h>
 
 class AutoTurn {
@@ -90,10 +89,9 @@ private:
 	float integral ;
 
 	/**
-	 * @var Pointer to the gyro (navX) which can getAngle, and other cool stuff
-	 * This object lets us grab out current angle to do PID calculations
+	 * @brief ID used to get OUR angle from ConstGyro
 	 */
-	AHRS* pGyro;
+	int8_t offsetID;
 
 	/**
 	 * @var Object used to access the NetworkTable(s)

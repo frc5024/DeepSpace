@@ -9,8 +9,7 @@ AutoTurn::AutoTurn(void) {
     this->turning   = false ;
     this->integral  = 0.0 ;
     
-    // Create the gyro
-    this->pGyro = new AHRS(SPI::Port::kMXP) ;
+	this->offsetID = -1 ;
 
     // Init the Vision net table
     this->table = NetworkTable::GetTable("SmartDashboard/Vision") ;
@@ -20,17 +19,14 @@ AutoTurn::AutoTurn(void) {
 
 void AutoTurn::Start(void) {
     
-	// Let Zero where the the robot is looking without resetting the gyro
-	this->offset = this->pGyro->GetAngle() ;
+	// Set an angle offset to effectively zero our yaw
+	this->offsetID = Robot::m_ConstGyro->CreateAngleGetter();
 
-	// Get the angle to target
-	float angle = this->table->GetNumber("Motor", 0.0) ;
-	
 	// Set this target to the angle to target
-	this->target = angle ;
+	this->target = this->table->GetNumber("Motor", 0.0) ;
 
 	// Log it
-	std::cout << "Starting AutoTurn with angle: ("<<angle<<").\n" ;
+	std::cout << "Starting AutoTurn with angle: ("<<this->target<<").\n" ;
 
 	// Turning is now active
 	this->turning = true ;
@@ -45,6 +41,9 @@ void AutoTurn::Stop(void) {
 	this->offset = 0.0 ;
 	this->target = 0.0 ;
 	this->integral = 0.0 ;
+
+	Robot::m_ConstGyro->DeleteAngleGetter(this->offsetID);
+	this->offsetID = -1;
 	
 	// This didn't break it before though it should
 	Robot::m_DriveTrain->ArcadeDrive(0.0, 0.0) ;
@@ -59,7 +58,7 @@ double AutoTurn::Execute(void) {
 	}
 
 	// Get current angle, relevent to where we started
-	float current = this->pGyro->GetAngle() - this->offset ;
+	float current = Robot::m_ConstGyro->GetAngle(this->offsetID);
 
 	// Get error, degrees remaining to target
 	float error = this->target - current ;
