@@ -8,8 +8,6 @@
 #include <frc/TimedRobot.h>
 #include <frc/WPILib.h>
 #include <cscore_oo.h>
-#include <opencv2/imgproc/imgproc.hpp>
-#include <opencv2/core/core.hpp>
 
 #include "Commands/TriggerDrive.h"
 #include "Commands/ControlCompressor.h"
@@ -76,16 +74,9 @@ class Robot : public frc::TimedRobot {
   void TestPeriodic()       override; //!< Runs in a loop during test mode
 
  private:
-    // Define cameras
+  // Define cameras
   cs::UsbCamera frontCam;  //!< Variable for the front camera
   cs::UsbCamera visionCam; //!< Variable for the Vision camera
-  cs::CvSink cvSink;       //!< get video for openCV flip
-  cs::CvSource outputStreamStd; //!<output video for openCV flip
-
-  
-  //openCv matrices for flip
-  cv::Mat source;
-  cv::Mat output;
 
   // Have it null by default so that if testing teleop it
   // doesn't have undefined behavior and potentially crash.
