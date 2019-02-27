@@ -49,7 +49,10 @@ void Robot::RobotInit() {
   std::cout << "Setting camera config.." << std::endl;
   std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
   std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
+  
   this->visionCam.SetConfigJson(visionSettings);
+  this->cvSink = frc::CameraServer::GetInstance()->GetVideo();
+  this->outputStreamStd = frc::CameraServer::GetInstance()->PutVideo("flipped", 640, 480); 
 
   // Init Gyro
   std::cout << "Gyro init..." << std::endl;
@@ -100,6 +103,13 @@ void Robot::RobotPeriodic() {
   this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
   this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
   this->ntTelemetry->PutNumber("Angle", gyroAngle);
+
+  //flip image
+  this->cvSink.GrabFrame(this->source);
+  cv::flip(this->source,this->output, 1);
+  this->source = this->output;
+  cv::flip(this->source,this->output,1);
+  this->outputStreamStd.PutFrame(this->output);
 }
 
 /**
