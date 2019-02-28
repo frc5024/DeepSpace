@@ -1,5 +1,6 @@
 #include "Subsystems/Slider.h"
 #include <iostream>
+#include "Timer.h"
 
 Slider::Slider() : frc::Subsystem("Slider") {
   // Initialize the motors
@@ -20,6 +21,11 @@ Slider::Slider() : frc::Subsystem("Slider") {
 	this->pSliderMotor->SetInverted(false);
 
 	this->pSliderMotor->SetSafetyEnabled(false);
+
+	this->distence = 0.0;
+
+	this->start = 0.0;
+	this->end	= 0.0;
 }
 
 void Slider::InitDefaultCommand() {
@@ -28,7 +34,18 @@ void Slider::InitDefaultCommand() {
 
 void Slider::Slide(double speed) {
 	this->pSliderMotor->Set(speed);
-
+	Timer timer;
+	if(speed!=0)
+	{
+		this->start = timer.startTime();
+	}
+	else
+	{
+		this->end = timer.elapsed();
+		this->distence = sliderSide ? ((end-start)*20.25) : ((end-start)*20.25)*-1;
+	}
+	
+	
 	if(speed < 0 && this->pLeftHall->Get()==0) {
 		this->pSliderMotor->Set(0);
 	}
@@ -62,4 +79,8 @@ void Slider::Center() {
 	}
 	
 	return;
+}
+void Slider::TotalCountedTime()
+{
+	
 }

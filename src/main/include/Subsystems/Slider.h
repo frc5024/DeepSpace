@@ -8,6 +8,7 @@
 #include "RobotMap.h"
 #include <Commands/ControlSlider.h>
 #include <frc/DigitalInput.h>
+#include "Timer.h"
 
 class Slider : public frc::Subsystem {
  public:
@@ -20,10 +21,13 @@ class Slider : public frc::Subsystem {
 	 * @param speed Slider speed (form -1 to 1)
 	 */
   void Slide(double speed);
-
+  void TotalCountedTime();
   void Center();
  private:
   double sliderSide;
+  double distence;
+  double start;
+  double end;
   can::WPI_TalonSRX* pSliderMotor; //!< Pointer for the slider motor
   frc::DigitalInput* pLeftHall;
   frc::DigitalInput* pRightHall;

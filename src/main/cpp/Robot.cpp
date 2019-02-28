@@ -18,6 +18,7 @@ Piston *Robot::m_Piston;
 HatchGripper *Robot::m_HatchGripper;
 Flap *Robot::m_Flap;
 Light *Robot::m_Light;
+Timer *Robot::m_Timer;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -39,6 +40,7 @@ void Robot::RobotInit() {
   this->m_HatchGripper = new HatchGripper();
   this->m_Flap       = new Flap();
   this->m_Light       = new Light();
+  this->m_Timer       = new Timer();
 
   // Init camera
   std::cout << "Starting CameraServer.." << std::endl;
