@@ -49,7 +49,7 @@ void Robot::RobotInit() {
   std::cout << "Setting camera config.." << std::endl;
   std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
   std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
-  this->visionCam.SetConfigJson(visionSettings);
+  // this->visionCam.SetConfigJson(visionSettings);
 
   // Init Gyro
   std::cout << "Gyro init..." << std::endl;
@@ -74,8 +74,8 @@ void Robot::RobotInit() {
   this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry");
 
   // create ds and pdp objects
-  std::cout << "Creating Driverstation and PDP objects" << std::endl;
-  this->pdp = new frc::PowerDistributionPanel(10);
+  // std::cout << "Creating Driverstation and PDP objects" << std::endl;
+  // this->pdp = new frc::PowerDistributionPanel(10);
 }
 
 /**
@@ -89,14 +89,14 @@ void Robot::RobotInit() {
 void Robot::RobotPeriodic() {
   // Send information about the robot over NetworkTables
 
-  double pdpTemperature = this->pdp->GetTemperature();
-  double robotVoltage   = this->pdp->GetVoltage();
+  // double pdpTemperature = this->pdp->GetTemperature();
+  // double robotVoltage   = this->pdp->GetVoltage();
   bool   dsAttached     = this->driverStation.IsDSAttached();
   bool   fmsAttached    = this->driverStation.IsFMSAttached();
   float  gyroAngle      = this->pGyro->GetAngle();
 
-  this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
-  this->ntTelemetry->PutNumber("voltage",  robotVoltage);
+  // this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
+  // this->ntTelemetry->PutNumber("voltage",  robotVoltage);
   this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
   this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
   this->ntTelemetry->PutNumber("Angle", gyroAngle);

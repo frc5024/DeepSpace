@@ -84,7 +84,7 @@ class Robot : public frc::TimedRobot {
   frc::SendableChooser<frc::Command*> m_chooser;
 
   frc::DriverStation& driverStation = frc::DriverStation::GetInstance(); //!< DriverStation instance
-  frc::PowerDistributionPanel* pdp; //!< Power Distrobution Panel information
+  // frc::PowerDistributionPanel* pdp; //!< Power Distrobution Panel information
 
   std::shared_ptr<NetworkTable> ntTelemetry; //!< A pointer to the /SmartDashboard/Telemetry table
 
