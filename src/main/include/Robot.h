@@ -15,7 +15,6 @@
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
 #include "Commands/DeployClimb.h"
-#include "Commands/ControlHatchGripper.h"
 #include "Commands/ControlLight.h"
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
@@ -56,7 +55,6 @@ class Robot : public frc::TimedRobot {
   PullArm* pPullArm;
   PullLeg* pPullLeg;
   DeployClimb* pDeployClimb;
-  ControlHatchGripper* pControlHatchGripper;
   ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
   ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
   ControlCargo* pControlCargo;

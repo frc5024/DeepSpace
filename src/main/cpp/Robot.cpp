@@ -65,7 +65,6 @@ void Robot::RobotInit() {
   this->pDeployClimb = new DeployClimb();
   this->pControlSlider = new ControlSlider();
   this->pControlCompressor = new ControlCompressor();
-  this->pControlHatchGripper = new ControlHatchGripper();
   this->pControlCargo = new ControlCargo();
   this->pControlLight = new ControlLight();
 
@@ -152,9 +151,6 @@ void Robot::AutonomousInit() {
 	}
   if (this->pControlCompressor != nullptr) {
 		this->pControlCompressor->Start();
-	}
-  if (this->pControlHatchGripper != nullptr) {
-		this->pControlHatchGripper->Start();
 	}
   if (this->pControlCargo != nullptr){
     this->pControlCargo->Start();
