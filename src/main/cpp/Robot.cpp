@@ -7,17 +7,17 @@
 #include <fstream>
 
 // Subsystems
-DriveTrain *Robot::m_DriveTrain;
-cCompressor *Robot::m_cCompressor;
-CrawlDrive *Robot::m_CrawlDrive;
-Arm *Robot::m_Arm;
-Leg *Robot::m_Leg;
-OI *Robot::m_oi;
-Slider *Robot::m_Slider;
-Piston *Robot::m_Piston;
+DriveTrain   *Robot::m_DriveTrain;
+cCompressor  *Robot::m_cCompressor;
+CrawlDrive   *Robot::m_CrawlDrive;
+Arm          *Robot::m_Arm;
+Leg          *Robot::m_Leg;
+OI           *Robot::m_oi;
+Slider       *Robot::m_Slider;
+Piston       *Robot::m_Piston;
 HatchGripper *Robot::m_HatchGripper;
-Flap *Robot::m_Flap;
-Light *Robot::m_Light;
+Flap         *Robot::m_Flap;
+Light        *Robot::m_Light;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -41,6 +41,21 @@ void Robot::RobotInit() {
   this->m_Light        = new Light();
   EndHeader();
 
+  // Init commands
+  Header("Creating Commands.. ");
+  this->pTriggerDrive        = new TriggerDrive();
+  this->pPullArm             = new PullArm();
+  this->pPullLeg             = new PullLeg();
+  this->pDeployClimb         = new DeployClimb();
+  this->pControlSlider       = new ControlSlider();
+  this->pControlCompressor   = new ControlCompressor();
+  this->pControlHatchGripper = new ControlHatchGripper();
+  this->pControlCargo        = new ControlCargo();
+  this->pControlLight        = new ControlLight();
+  this->pClimbManager        = new ClimbManager();
+  this->pClimb               = new Climb();
+  EndHeader();
+
   // Init camera
   Header("Starting CameraServer.. ");
   this->frontCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Driver Camera", CAMERASERVER_DRIVER_CAMERA);
@@ -58,21 +73,6 @@ void Robot::RobotInit() {
   Header("Resetting Gyro.. ");
   this->pGyro = new AHRS(frc::SPI::kMXP);
   this->pGyro->Reset();
-  EndHeader();
-
-  // Init commands
-  Header("Creating Commands.. ");
-  this->pTriggerDrive        = new TriggerDrive();
-  this->pPullArm             = new PullArm();
-  this->pPullLeg             = new PullLeg();
-  this->pDeployClimb         = new DeployClimb();
-  this->pControlSlider       = new ControlSlider();
-  this->pControlCompressor   = new ControlCompressor();
-  this->pControlHatchGripper = new ControlHatchGripper();
-  this->pControlCargo        = new ControlCargo();
-  this->pControlLight        = new ControlLight();
-  this->pClimbManager        = new ClimbManager();
-  this->pClimb               = new Climb();
   EndHeader();
 
   // Create Telemetry table
