@@ -1,5 +1,6 @@
 //< Manual arm override
 #include "Commands/PullArm.h"
+#include "Commands/ClimbManager.h"
 #include "Robot.h"
 
 PullArm::PullArm() {
@@ -26,7 +27,7 @@ void PullArm::Execute() {
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool PullArm::IsFinished() { return false; }
+bool PullArm::IsFinished() { return ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kActive; }
 
 // Called once after isFinished returns true
 void PullArm::End() {}

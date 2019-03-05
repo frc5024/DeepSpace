@@ -1,5 +1,6 @@
 //< Manual leg override
 #include "Commands/PullLeg.h"
+#include "Commands/ClimbManager.h"
 #include "Robot.h"
 
 PullLeg::PullLeg() {
@@ -21,7 +22,7 @@ void PullLeg::Execute() {
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool PullLeg::IsFinished() { return false; }
+bool PullLeg::IsFinished() { return ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kActive; }
 
 // Called once after isFinished returns true
 void PullLeg::End() {}

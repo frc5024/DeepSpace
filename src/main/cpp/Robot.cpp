@@ -7,17 +7,17 @@
 #include <fstream>
 
 // Subsystems
-DriveTrain *Robot::m_DriveTrain;
-cCompressor *Robot::m_cCompressor;
-CrawlDrive *Robot::m_CrawlDrive;
-Arm *Robot::m_Arm;
-Leg *Robot::m_Leg;
-OI *Robot::m_oi;
-Slider *Robot::m_Slider;
-Piston *Robot::m_Piston;
+DriveTrain   *Robot::m_DriveTrain;
+cCompressor  *Robot::m_cCompressor;
+CrawlDrive   *Robot::m_CrawlDrive;
+Arm          *Robot::m_Arm;
+Leg          *Robot::m_Leg;
+OI           *Robot::m_oi;
+Slider       *Robot::m_Slider;
+Piston       *Robot::m_Piston;
 HatchGripper *Robot::m_HatchGripper;
-Flap *Robot::m_Flap;
-Light *Robot::m_Light;
+Flap         *Robot::m_Flap;
+Light        *Robot::m_Light;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
@@ -27,51 +27,57 @@ void Robot::RobotInit() {
   std::cout << "Robot Starting.."<< std::endl;
 
   // Subsystems
-  std::cout << "Creating Subsystems..." << std::endl;
-  this->m_DriveTrain = new DriveTrain();
-  this->m_CrawlDrive = new CrawlDrive();
-  this->m_Arm = new Arm();
-  this->m_Leg = new Leg();
-  this->m_Slider     = new Slider();
-  this->m_Piston     = new Piston();
-  this->m_oi         = new OI();
-  this->m_cCompressor = new cCompressor();
+  Header("Creating Subsystems.. ");
+  this->m_DriveTrain   = new DriveTrain();
+  this->m_CrawlDrive   = new CrawlDrive();
+  this->m_Arm          = new Arm();
+  this->m_Leg          = new Leg();
+  this->m_Slider       = new Slider();
+  this->m_Piston       = new Piston();
+  this->m_oi           = new OI();
+  this->m_cCompressor  = new cCompressor();
   this->m_HatchGripper = new HatchGripper();
-  this->m_Flap       = new Flap();
-  this->m_Light       = new Light();
+  this->m_Flap         = new Flap();
+  this->m_Light        = new Light();
+  EndHeader();
+
+  // Init commands
+  Header("Creating Commands.. ");
+  this->pTriggerDrive        = new TriggerDrive();
+  this->pPullArm             = new PullArm();
+  this->pPullLeg             = new PullLeg();
+  this->pControlSlider       = new ControlSlider();
+  this->pControlCompressor   = new ControlCompressor();
+  this->pControlHatchGripper = new ControlHatchGripper();
+  this->pControlCargo        = new ControlCargo();
+  this->pControlLight        = new ControlLight();
+  this->pClimbManager        = new ClimbManager();
+  this->pClimb               = new Climb();
+  EndHeader();
 
   // Init camera
-  std::cout << "Starting CameraServer.." << std::endl;
+  Header("Starting CameraServer.. ");
   this->frontCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Driver Camera", CAMERASERVER_DRIVER_CAMERA);
-  this->visionCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Vision",  CAMERASERVER_VISION_CAMERA);
-  
+  this->visionCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Vision",        CAMERASERVER_VISION_CAMERA);
+  EndHeader();
+
   // Set vision cam settings
-  std::cout << "Setting camera config.." << std::endl;
+  Header("Setting camera config.. ");
   std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
   std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
   // this->visionCam.SetConfigJson(visionSettings);
+  EndHeader();
 
   // Init Gyro
-  std::cout << "Gyro init..." << std::endl;
+  Header("Resetting Gyro.. ");
   this->pGyro = new AHRS(frc::SPI::kMXP);
   this->pGyro->Reset();
-	
-	// Init commands
-  std::cout << "Creating Commands.." << std::endl;
-  this->pTriggerDrive = new TriggerDrive();
-  this->pTestUltra = new testUltra();
-  this->pPullArm = new PullArm();
-  this->pPullLeg = new PullLeg();
-  this->pDeployClimb = new DeployClimb();
-  this->pControlSlider = new ControlSlider();
-  this->pControlCompressor = new ControlCompressor();
-  this->pControlHatchGripper = new ControlHatchGripper();
-  this->pControlCargo = new ControlCargo();
-  this->pControlLight = new ControlLight();
+  EndHeader();
 
   // Create Telemetry table
-  std::cout << "Connecting to telemetry table.." << std::endl;
+  Header("Connecting to telemetry table.. ");
   this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry");
+  EndHeader();
 
   // create ds and pdp objects
   // std::cout << "Creating Driverstation and PDP objects" << std::endl;
@@ -109,6 +115,11 @@ void Robot::RobotPeriodic() {
  */
 void Robot::DisabledInit() {
   Robot::m_Flap->Release();
+
+  // Stop controller vibration once match ends
+  if(this->pClimbManager != nullptr){
+    this->pClimbManager->pJoyOp->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 0.0);
+  }
 }
 
 void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
@@ -162,11 +173,17 @@ void Robot::AutonomousInit() {
   if (this->pControlLight != nullptr){
     this->pControlLight->Start();
   }
+  if (this->pClimbManager != nullptr){
+    this->pClimbManager->Start();
+  }
 
   this->pGyro->Reset();
 }
 
-void Robot::AutonomousPeriodic() { frc::Scheduler::GetInstance()->Run(); }
+void Robot::AutonomousPeriodic() { 
+  frc::Scheduler::GetInstance()->Run();
+  this->SharedPeriodic();
+}
 
 void Robot::TeleopInit() {
   // This makes sure that the autonomous stops running when
@@ -179,7 +196,19 @@ void Robot::TeleopInit() {
   // }
 }
 
-void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }
+void Robot::TeleopPeriodic() { 
+  frc::Scheduler::GetInstance()->Run();
+  this->SharedPeriodic();
+}
+
+void Robot::SharedPeriodic(){
+  if(ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kActive){
+    // Start the climb commands
+    if (this->pClimb != nullptr){
+      this->pClimb->Start();
+    }
+  }
+}
 
 void Robot::TestPeriodic() {}
 
