@@ -46,7 +46,6 @@ void Robot::RobotInit() {
   this->pTriggerDrive        = new TriggerDrive();
   this->pPullArm             = new PullArm();
   this->pPullLeg             = new PullLeg();
-  this->pDeployClimb         = new DeployClimb();
   this->pControlSlider       = new ControlSlider();
   this->pControlCompressor   = new ControlCompressor();
   this->pControlHatchGripper = new ControlHatchGripper();

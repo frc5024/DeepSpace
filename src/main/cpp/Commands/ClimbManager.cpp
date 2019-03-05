@@ -1,5 +1,6 @@
 #include "Commands/ClimbManager.h"
 #include "Robot.h"
+#include <iostream>
 #include <frc/commands/Scheduler.h>
 
 ClimbManager::ClimbState ClimbManager::CurrentClimbState;
@@ -15,12 +16,13 @@ void ClimbManager::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
 void ClimbManager::Execute() {
-	if (!( (this->pJoyOp->GetPOV() == 90) && (this->pJoyOp->GetTriggerAxis(Hand::kLeftHand) > 0.8) )){
-		return;
+    if (!( (this->pJoyOp->GetPOV() == 90) &&  (this->pJoyOp->GetTriggerAxis(Hand::kLeftHand) > 0.8)))
+    {
+        return;
 	}
-
-	// Signal all commands to kill themselves
-	this->CurrentClimbState = this->ClimbState::kActive;
+    
+    // Signal all commands to kill themselves
+    this->CurrentClimbState = this->ClimbState::kActive;
 
 	// Start vibrating driver controller
 	this->pJoyOp->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 0.5);

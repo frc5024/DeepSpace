@@ -16,7 +16,6 @@
 #include "Commands/testUltra.h"
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
-#include "Commands/DeployClimb.h"
 #include "Commands/ControlHatchGripper.h"
 #include "Commands/ControlLight.h"
 #include "Commands/ClimbManager.h"
@@ -62,16 +61,15 @@ class Robot : public frc::TimedRobot {
 
 	// Commands
   TriggerDrive        *pTriggerDrive;        //!< Pointer for the TriggerDrive command
-  PullArm             *pPullArm;
-  PullLeg             *pPullLeg;
-  DeployClimb         *pDeployClimb;
-  ControlHatchGripper *pControlHatchGripper; 
+  PullArm             *pPullArm;             //!< Pointer for the arm debugging command
+  PullLeg             *pPullLeg;             //!< Pointer for the leg debugging command
+  ControlHatchGripper *pControlHatchGripper; //!< Pointer for the finger control command
   ControlSlider       *pControlSlider;       //!< Pointer for the ControlSlider command
   ControlCompressor   *pControlCompressor;   //!< Pointer for the ControlCompressor command
-  ControlCargo        *pControlCargo;
-  ControlLight        *pControlLight;
-  ClimbManager        *pClimbManager;
-  Climb               *pClimb;
+  ControlCargo        *pControlCargo;        //!< Pointer for the cargo control command
+  ControlLight        *pControlLight;        //!< Pointer for the vision light control command
+  ClimbManager        *pClimbManager;        //!< Pointer for the climb management command
+  Climb               *pClimb;               //!< Pointer for the climb control command
 
   // Robot methods
   void RobotInit()          override; //!< Runs once on robot boot
