@@ -1,6 +1,8 @@
 var hierarchy =
 [
     [ "Command", null, [
+      [ "Climb", "classClimb.html", null ],
+      [ "ClimbManager", "classClimbManager.html", null ],
       [ "ControlCargo", "classControlCargo.html", null ],
       [ "ControlCompressor", "classControlCompressor.html", null ],
       [ "ControlHatchGripper", "classControlHatchGripper.html", null ],

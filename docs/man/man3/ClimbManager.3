@@ -1,0 +1,135 @@
+.TH "ClimbManager" 3 "Tue Mar 5 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClimbManager
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ClimbManager\&.h>\fP
+.PP
+Inherits Command\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBClimbState\fP { \fBkInactive\fP, \fBkActive\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClimbManager\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitialize\fP () override"
+.br
+.RI "Runs once on initalization\&. "
+.ti -1c
+.RI "void \fBExecute\fP () override"
+.br
+.RI "Called in a loop during Teleop\&. "
+.ti -1c
+.RI "bool \fBIsFinished\fP () override"
+.br
+.ti -1c
+.RI "void \fBEnd\fP () override"
+.br
+.RI "Runs once when \fBIsFinished()\fP returns true\&. "
+.ti -1c
+.RI "void \fBInterrupted\fP () override"
+.br
+.RI "Runs once if the command is forced to stop\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "frc::XboxController * \fBpJoyOp\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBClimbState\fP \fBCurrentClimbState\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 8 of file ClimbManager\&.h\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBClimbManager::ClimbState\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIkInactive \fP\fP
+.TP
+\fB\fIkActive \fP\fP
+.PP
+Definition at line 10 of file ClimbManager\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ClimbManager::ClimbManager ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 8 of file ClimbManager\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ClimbManager::End ()\fC [override]\fP"
+
+.PP
+Runs once when \fBIsFinished()\fP returns true\&. 
+.PP
+Definition at line 35 of file ClimbManager\&.cpp\&.
+.SS "void ClimbManager::Execute ()\fC [override]\fP"
+
+.PP
+Called in a loop during Teleop\&. 
+.PP
+Definition at line 18 of file ClimbManager\&.cpp\&.
+.SS "void ClimbManager::Initialize ()\fC [override]\fP"
+
+.PP
+Runs once on initalization\&. 
+.PP
+Definition at line 15 of file ClimbManager\&.cpp\&.
+.SS "void ClimbManager::Interrupted ()\fC [override]\fP"
+
+.PP
+Runs once if the command is forced to stop\&. 
+.PP
+Definition at line 40 of file ClimbManager\&.cpp\&.
+.SS "bool ClimbManager::IsFinished ()\fC [override]\fP"
+Used to tell wpilib if the command is fully finished\&. This should never return true Because we always want to be able to drive the bot during teleop
+.PP
+\fBReturns:\fP
+.RS 4
+True if command is finished, else false 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file ClimbManager\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBClimbManager::ClimbState\fP ClimbManager::CurrentClimbState\fC [static]\fP"
+
+.PP
+Definition at line 15 of file ClimbManager\&.h\&.
+.SS "frc::XboxController* ClimbManager::pJoyOp"
+
+.PP
+Definition at line 33 of file ClimbManager\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

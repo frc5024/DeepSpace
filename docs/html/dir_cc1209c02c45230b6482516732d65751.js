@@ -1,5 +1,11 @@
 var dir_cc1209c02c45230b6482516732d65751 =
 [
+    [ "Climb.h", "Climb_8h.html", [
+      [ "Climb", "classClimb.html", "classClimb" ]
+    ] ],
+    [ "ClimbManager.h", "ClimbManager_8h.html", [
+      [ "ClimbManager", "classClimbManager.html", "classClimbManager" ]
+    ] ],
     [ "ControlCargo.h", "ControlCargo_8h.html", [
       [ "ControlCargo", "classControlCargo.html", "classControlCargo" ]
     ] ],

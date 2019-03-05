@@ -18,7 +18,9 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Variables", "functions_vars.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Enumerator", "functions_eval.html", null ]
       ] ]
     ] ],
     [ "Files", null, [
@@ -35,7 +37,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Arm_8cpp.html",
-"classFlap.html#afca98604f8e0a325a272b6b6b24768f4"
+"classDeployLeg.html#adf3a47885299ebcf5d90472932800959"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
