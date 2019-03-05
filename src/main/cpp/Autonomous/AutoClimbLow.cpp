@@ -5,10 +5,10 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#include "Autonomous/AutoClimbHigh.h"
+#include "Autonomous/AutoClimbLow.h"
 #include "Robot.h"
 
-AutoClimbHigh::AutoClimbHigh() {
+AutoClimbLow::AutoClimbLow() {
 	Requires(Robot::m_Arm);
 	Requires(Robot::m_Leg);
 	Requires(Robot::m_CrawlDrive);
@@ -18,14 +18,14 @@ AutoClimbHigh::AutoClimbHigh() {
 	this->onFloor = true;
 }
 
-void AutoClimbHigh::Initialize() {
+void AutoClimbLow::Initialize() {
 	this->stage = S_LOWER_ARM;
 	this->onFloor = true;
 	this->pTimer->Reset();
 	this->pTimer->Start();
 }
 
-void AutoClimbHigh::Execute() {
+void AutoClimbLow::Execute() {
 	// Execute the appropriate function for the current stage of climb
 	switch (this->stage) {
 		case S_LOWER_ARM : this->Execute_LowerArm() ; break;
@@ -37,7 +37,7 @@ void AutoClimbHigh::Execute() {
 	}
 }
 
-void AutoClimbHigh::Execute_LowerArm(void) {
+void AutoClimbLow::Execute_LowerArm(void) {
 	/* Power is 0% to 90% throughout 3 seconds,	 	*
 	 * Then caps out at 90% until sensor is tripped */
 	float speed = std::min(this->pTimer->Get(), 3.0) * 0.3 ;
@@ -46,26 +46,26 @@ void AutoClimbHigh::Execute_LowerArm(void) {
 
 	// If arm is lowered or it's been 5 seconds, go to next stage
 	if (Robot::m_Arm->GetSensor()
-	||  this->pTimer->Get() > 5.0) {
+	||  this->pTimer->Get() > 4.0) {
 		this->stage = S_LOWER_LEG;
 		this->pTimer->Reset();
 	}
 }
 
-void AutoClimbHigh::Execute_LowerLeg(void) {
+void AutoClimbLow::Execute_LowerLeg(void) {
 	Robot::m_Arm->MoveArm(0.75); // Keep arm down
 	Robot::m_Leg->MoveLeg(-1.0); // Bring leg down
 
 	// If leg is at bottom or it's been 6 seconds, go to the next stage
-	if (Robot::m_Leg->AtBottom()
-	||  this->pTimer->Get() > 6.0) {
+	if (Robot::m_Leg->AtMiddle()
+	||  this->pTimer->Get() > 4.0) {
 		this->stage = S_CRAWL;
 		this->pTimer->Reset();
 	}
 }
 
-void AutoClimbHigh::Execute_Crawl(void) {
-	Robot::m_Arm->MoveArm(0.75); // Keep arm down
+void AutoClimbLow::Execute_Crawl(void) {
+	Robot::m_Arm->MoveArm(1.0); // Keep arm down
 	Robot::m_Leg->MoveLeg(-1.0); // Keep leg down
 	Robot::m_CrawlDrive->Move(1.0); // Crawl forward
 
@@ -88,7 +88,7 @@ void AutoClimbHigh::Execute_Crawl(void) {
 	}
 }
 
-void AutoClimbHigh::Execute_Drive(void) {
+void AutoClimbLow::Execute_Drive(void) {
 	Robot::m_Arm->MoveArm(-0.4); // Bring arm up slowly
 	Robot::m_Leg->MoveLeg(1.0); // Keep leg down
 	Robot::m_CrawlDrive->Move(0.0); // Brake the crawlDrive
@@ -101,7 +101,7 @@ void AutoClimbHigh::Execute_Drive(void) {
 	}
 }
 
-void AutoClimbHigh::Execute_Raiseleg(void) {
+void AutoClimbLow::Execute_Raiseleg(void) {
 	Robot::m_Arm->MoveArm(0.0); // Brake
 	Robot::m_DriveTrain->TankDrive(0.0,0.0); // Brake
 	Robot::m_Leg->MoveLeg(-1.0); // Bring legs back up
@@ -113,11 +113,11 @@ void AutoClimbHigh::Execute_Raiseleg(void) {
 	}	
 }
 
-bool AutoClimbHigh::IsFinished() {
+bool AutoClimbLow::IsFinished() {
 	return this->stage == S_FINISHED;
 }
 
-void AutoClimbHigh::End() {
+void AutoClimbLow::End() {
 	// Brake all subsystems and stop timer
 	Robot::m_Arm->MoveArm(0.0);
 	Robot::m_Leg->MoveLeg(0.0);
@@ -126,7 +126,7 @@ void AutoClimbHigh::End() {
 	this->pTimer->Stop();
 }
 
-void AutoClimbHigh::Interrupted() {
+void AutoClimbLow::Interrupted() {
 	// Brake all subsystems and stop timer
 	Robot::m_Arm->MoveArm(0.0);
 	Robot::m_Leg->MoveLeg(0.0);
