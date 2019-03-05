@@ -22,23 +22,26 @@ void ControlSlider::Execute() {
 	this->speed = this->pJoyOp->GetX(Hand::kLeftHand);
   Robot::m_Slider->Slide(this->speed);
 
-  // Control piston
-  if(this->pJoyOp->GetTriggerAxis(Hand::kRightHand) > 0.8){
+  // Control piston and finger
+  if(this->pJoyOp->GetTriggerAxis(Hand::kRightHand) > 0.1) {
     Robot::m_HatchGripper->Deploy();
+  } else {
+    Robot::m_HatchGripper->Retract();
+  }
+  if(this->pJoyOp->GetTriggerAxis(Hand::kRightHand) > 0.8){
     Robot::m_Piston->Deploy();
   } else {
     Robot::m_Piston->Retract();
-    Robot::m_HatchGripper->Retract();
   }
-
   // Control light and finger
+  if (!(this->pJoyOp->GetTriggerAxis(Hand::kRightHand) > 0.1)){
   if(this->pJoyOp->GetYButton()) {
     Robot::m_Light->On();
     Robot::m_HatchGripper->Deploy();
   } else {
     Robot::m_HatchGripper->Retract();
     Robot::m_Light->Off();
-  }
+  }}
   
   // Reset the speed
   this->speed = 0.00;
