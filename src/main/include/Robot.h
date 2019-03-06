@@ -14,7 +14,6 @@
 #include "Commands/ControlCompressor.h"
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
-#include "Autonomous/AutoHighClimb.h"
 #include "Autonomous/AutoClimbHigh.h" // the new command
 #include "Commands/ClimbManager.h"
 #include "OI.h"
@@ -50,7 +49,6 @@ class Robot : public frc::TimedRobot {
   ControlSlider* pControlSlider; //!< Pointer for the ControlSlider command
   ControlCompressor* pControlCompressor; //!< Pointer for the ControlCompressor command
   ClimbManager* pClimbManager;
-  AutoHighClimb* pAutoHighClimb;
   AutoClimbHigh* pAutoClimbHigh; // the new command
 	
 	// Robot methods

@@ -50,7 +50,6 @@ void Robot::RobotInit() {
 	this->pTriggerDrive = new TriggerDrive();
 	this->pPullArm = new PullArm();
 	this->pPullLeg = new PullLeg();
-	this->pAutoHighClimb = new AutoHighClimb();
 	this->pAutoClimbHigh = new AutoClimbHigh(); // the new command
 	this->pControlSlider = new ControlSlider();
 	this->pControlCompressor = new ControlCompressor();
@@ -179,8 +178,8 @@ void Robot::TeleopPeriodic()
 		case ClimbManager::kSemiAuto :
 			break;
 		case ClimbManager::kAuto :
-			if (this->pAutoHighClimb != nullptr && !this->pAutoHighClimb->IsRunning()) // Enable command group on kAuto
-				this->pAutoHighClimb->Start();
+			if (this->pAutoClimbHigh != nullptr && !this->pAutoClimbHigh->IsRunning()) // Enable command group on kAuto
+				this->pAutoClimbHigh->Start();
 		default:
 			break;
 	}

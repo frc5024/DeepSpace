@@ -65,9 +65,10 @@ void AutoClimbHigh::Execute_LowerLeg(void) {
 }
 
 void AutoClimbHigh::Execute_Crawl(void) {
-	Robot::m_Arm->MoveArm(0.75); // Keep arm down
+	Robot::m_Arm->MoveArm(1.0); // Keep arm down
 	Robot::m_Leg->MoveLeg(-1.0); // Keep leg down
 	Robot::m_CrawlDrive->Move(1.0); // Crawl forward
+	Robot::m_DriveTrain->TankDrive(0.6, -0.6); // Drive forward
 
 	// Get if we are now on the floor
 	bool nowOnFloor = Robot::m_CrawlDrive->GetSensor();
@@ -89,13 +90,13 @@ void AutoClimbHigh::Execute_Crawl(void) {
 }
 
 void AutoClimbHigh::Execute_Drive(void) {
-	Robot::m_Arm->MoveArm(-0.4); // Bring arm up slowly
-	Robot::m_Leg->MoveLeg(1.0); // Keep leg down
+	Robot::m_Arm->MoveArm(-0.7); // Bring arm up slowly
+	Robot::m_Leg->MoveLeg(-1.0); // Keep leg down
 	Robot::m_CrawlDrive->Move(0.0); // Brake the crawlDrive
-	Robot::m_DriveTrain->TankDrive(0.4, 0.4); // Drive at 40% speed
-
+	Robot::m_DriveTrain->TankDrive(
+		0.4, -0.4); // Drive at 40% speed
 	// We do this for only 1 seconds, no sensors for this part
-	if (this->pTimer->Get() > 1.0) {
+	if (this->pTimer->Get() > 0.5) {
 		this->stage = S_RAISE_LEG;
 		this->pTimer->Reset();
 	}
