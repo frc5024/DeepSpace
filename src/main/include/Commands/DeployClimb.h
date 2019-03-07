@@ -5,7 +5,7 @@
 
 class DeployClimb : public frc::CommandGroup {
  public:
-  DeployClimb();
+  DeployClimb(); // !< Class constructor
 };
 
 #endif // _DEPLOYCLIMB_HG_

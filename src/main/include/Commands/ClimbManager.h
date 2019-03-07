@@ -1,3 +1,4 @@
+//! An interface command for managing the climb mechanism
 #ifndef _CLIMBMANAGER_HG_
 #define _CLIMBMANAGER_HG_
 
@@ -7,15 +8,17 @@
 
 class ClimbManager : public frc::Command {
   public:
+   /**
+    * Enum for all the possible climb state's 
+    */
     enum ClimbState {
       kInactive,
       kActive
     };
 
-    static ClimbState CurrentClimbState;
+    static ClimbState CurrentClimbState; //!< States the current climb state of the robot
 
-
-    ClimbManager();//!< Class constructor
+    ClimbManager();             //!< Class constructor
     void Initialize() override; //!< Runs once on initalization
     void Execute() override;    //!< Called in a loop during Teleop
     
@@ -30,8 +33,7 @@ class ClimbManager : public frc::Command {
     void End() override;         //!< Runs once when IsFinished() returns true
     void Interrupted() override; //!< Runs once if the command is forced to stop
 
-    frc::XboxController* pJoyOp;
-    
+	  frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller because we are lazy 
 };
 
 #endif //__CLIMBMANAGER_HG_

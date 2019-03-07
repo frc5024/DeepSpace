@@ -1,3 +1,4 @@
+//! A subsystem that interfaces with the robot's piston
 #ifndef _PISTON_HG_
 #define _PISTON_HG_
 

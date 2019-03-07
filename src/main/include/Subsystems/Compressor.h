@@ -20,7 +20,7 @@ class cCompressor : public frc::Subsystem {
   void SetState(bool enabled);
 
  private:
-  frc::Compressor* pCompressor;
+  frc::Compressor* pCompressor; //!< Pointer to the compressor
 };
 
 #endif // _cCompressor_HG_

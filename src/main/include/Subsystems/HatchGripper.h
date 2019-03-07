@@ -1,3 +1,4 @@
+//! A subsystem that interfaces the hatch gripper on the robot
 #ifndef _HATCHGRIPPER_HG_
 #define _HATCHGRIPPER_HG_
 

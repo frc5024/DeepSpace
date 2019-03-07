@@ -10,10 +10,10 @@
 
 class ControlHatchGripper : public frc::Command {
  public:
-  ControlHatchGripper();             //!< Class constructor
-  void Initialize() override; //!< Runs once on initalization
-  void Execute() override;    //!< Called in a loop during Teleop
-  bool IsFinished() override;
+  ControlHatchGripper();       //!< Class constructor
+  void Initialize() override;  //!< Runs once on initalization
+  void Execute() override;     //!< Called in a loop during Teleop
+  bool IsFinished() override;  //!< Runs once when IsFinished() returns true
   void End() override;         //!< Runs once when IsFinished() returns true
   void Interrupted() override; //!< Runs once if the command is forced to stop
   

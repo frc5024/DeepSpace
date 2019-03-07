@@ -14,12 +14,12 @@ class DriveTrain : public frc::Subsystem {
   DriveTrain(); //!< Class constructor
   void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (DriveWithJoystick)
 	
-	/**
-	 * Pass data to wpilib's ArcadeDrive
-	 *
-	 * @param xSpeed Forward speed (form -1 to 1)
-	 * @param zRotation Rotation (from -1 to 1)
-	 */
+  /**
+   * Pass data to wpilib's ArcadeDrive
+   *
+   * @param xSpeed Forward speed (form -1 to 1)
+   * @param zRotation Rotation (from -1 to 1)
+   */
   void ArcadeDrive(double xSpeed, double zRotation);
   
   /**
@@ -28,7 +28,7 @@ class DriveTrain : public frc::Subsystem {
    * @param leftSpeed left motor speed
    * @param rightSpeed right motor speed
    */
-	void TankDrive(double leftSpeed, double rightSpeed);
+   void TankDrive(double leftSpeed, double rightSpeed);
 	
 	/**
 	 * Drive with circles

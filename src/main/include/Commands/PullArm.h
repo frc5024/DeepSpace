@@ -25,9 +25,9 @@ class PullArm : public frc::Command {
     void Interrupted() override; //!< Runs once if the command is forced to stop
     
   private:
-    double speedMultiplier;
+    double speedMultiplier; //!< A number to multiply the speed by
 
-    double speed;
+    double speed; // The speed that the arm should move at
 
     frc::XboxController* pJoyDebug;
 };

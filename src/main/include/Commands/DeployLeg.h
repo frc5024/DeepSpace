@@ -7,11 +7,11 @@
 
 class DeployLeg : public frc::TimedCommand {
  public:
-  explicit DeployLeg(double timeout, double speed);
-  void Initialize() override;
+  explicit DeployLeg(double timeout, double speed); //!< Class constructor
+  void Initialize() override;                       //!< Runs once on initalization
   void Execute() override;
   void End() override;
-  void Interrupted() override;
+  void Interrupted() override; //!< Runs once if the command is forced to stop
   double speed;
 };
 

@@ -22,13 +22,13 @@ class Slider : public frc::Subsystem {
 	 */
   void Slide(double speed);
 
-  void Center();
+  void Center(); //!< Centers the slider
  private:
   double sliderSide;
   can::WPI_TalonSRX* pSliderMotor; //!< Pointer for the slider motor
-  frc::DigitalInput* pLeftHall;
-  frc::DigitalInput* pRightHall;
-  frc::DigitalInput* pCenterHall;
+  frc::DigitalInput* pLeftHall; //!< Pointer to the left hall sensor for the slider
+  frc::DigitalInput* pRightHall; //!< Pointer to the right hall sensor for the slider
+  frc::DigitalInput* pCenterHall; //!< Pointer to the center hall sensor for the slider
   std::shared_ptr<NetworkTable> ntTelemetry; //!< A pointer to the /SmartDashboard/Telemetry table
 };
 

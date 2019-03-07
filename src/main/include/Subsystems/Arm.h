@@ -12,7 +12,7 @@
 
 class Arm : public frc::Subsystem {
  public:
-  Arm();
+  Arm(); //!< Class constructor
   void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (Arm)
 
   /**

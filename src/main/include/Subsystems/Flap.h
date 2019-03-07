@@ -1,3 +1,4 @@
+//! A subsystem that interfaces with the robot's flap that holds and releases the cargo
 #ifndef _Flap_HG_
 #define _Flap_HG_
 

@@ -1,3 +1,4 @@
+//! A subsystem that interfaces the green light on the robot
 #ifndef _LIGHT_HG_
 #define _LIGHT_HG_
 
@@ -11,8 +12,8 @@ class Light : public frc::Subsystem {
   Light(); //!< Class constructor
   void InitDefaultCommand() override; //!< Initalizes the default command for this subsystem (ControlLight)
 	
-  void On(); 
-  void Off();
+  void On(); //!< Turns the green light on
+  void Off(); //!< Turns the green light off
 
  private:
   frc::Solenoid* pLight; //!< Pointer to Solenoid

@@ -1,3 +1,4 @@
+//! A subsystem for controlling the leg on the robot
 #ifndef _LEG_HG_
 #define _LEG_HG_
 
