@@ -6,6 +6,7 @@
 /*----------------------------------------------------------------------------*/
 
 #include "Subsystems/Lighting.h"
+#include <iostream>
 
 Lighting::Lighting() : Subsystem("Lighting") {
   this->pLightController = new frc::Spark(LEDCONTROLLER_ID);
@@ -17,5 +18,6 @@ void Lighting::InitDefaultCommand() {
 }
 
 void Lighting::Set(LedColour colour){
-  this->pLightController->Set(colour / 100);
+  std::cout << "LED COLOUR: " << colour / (double)100 << std::endl;
+  this->pLightController->Set(colour / (double)100);
 }

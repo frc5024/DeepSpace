@@ -103,17 +103,17 @@ void Robot::RobotPeriodic() {
   this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
   this->ntTelemetry->PutNumber("Angle", gyroAngle);
 
-  //Disabled lighting
+  // Robot::m_Lighting->Set(LedColour::kCHASE_RED);
 
-  if(this->driverStation.IsDisabled()){
+  // if(this->driverStation.IsDisabled()){
     if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kBlue){
       this->m_Lighting->Set(LedColour::kCHASE_BLUE);
-    }else if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kBlue){
+    }else if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kRed){
       this->m_Lighting->Set(LedColour::kCHASE_RED);
     }else{
       this->m_Lighting->Set(LedColour::kSOLID_WHITE);
     }
-  }
+  // }
 }
 
 /**
@@ -123,6 +123,9 @@ void Robot::RobotPeriodic() {
  */
 void Robot::DisabledInit() {
   Robot::m_Flap->Release();
+  // if (this->pLightingController != nullptr){
+  //   this->pLightingController->Start();
+  // }
 }
 
 void Robot::DisabledPeriodic() { 
@@ -178,6 +181,7 @@ void Robot::AutonomousInit() {
   if (this->pControlLight != nullptr){
     this->pControlLight->Start();
   }
+  
 
   this->pGyro->Reset();
 }

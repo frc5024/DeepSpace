@@ -8,7 +8,8 @@
 enum LedColour{
   kSOLID_WHITE =  93,
   kCHASE_RED   = -31,
-  kCHASE_BLUE  = -29
+  kCHASE_BLUE  = -29,
+  kSOLID_GREEN =  73
 };
 
 class Lighting : public frc::Subsystem {

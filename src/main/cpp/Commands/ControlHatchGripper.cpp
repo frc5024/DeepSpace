@@ -1,4 +1,5 @@
 #include "Commands/ControlHatchGripper.h"
+#include "Subsystems/Lighting.h"
 #include "Robot.h"
 
 ControlHatchGripper::ControlHatchGripper() {
@@ -16,7 +17,10 @@ void ControlHatchGripper::Execute() {
   // hold onto hatch if y button is pressed
 	if(this->pJoyOp->GetYButton()) {
     Robot::m_HatchGripper->Deploy();
-  } else {
+    Robot::m_Lighting->Set(LedColour::kSOLID_GREEN);
+  }
+  else
+  {
     Robot::m_HatchGripper->Retract();
   }
 }
