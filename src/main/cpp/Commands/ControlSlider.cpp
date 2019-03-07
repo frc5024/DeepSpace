@@ -31,6 +31,8 @@ void ControlSlider::Execute() {
   } else {
     Robot::m_Piston->Retract();
   }
+
+  
   
   // Reset the speed
   this->speed = 0.00;
