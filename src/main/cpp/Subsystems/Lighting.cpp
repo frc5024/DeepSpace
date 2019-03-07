@@ -17,7 +17,12 @@ void Lighting::InitDefaultCommand() {
   // SetDefaultCommand(new MySpecialCommand());
 }
 
-void Lighting::Set(LedColour colour){
+void Lighting::Set(){
+  LedColour colour = this->buffer;
   std::cout << "LED COLOUR: " << colour / (double)100 << std::endl;
   this->pLightController->Set(colour / (double)100);
+}
+
+void Lighting::SetBuffer(LedColour colour){
+  this->buffer = colour;
 }

@@ -74,8 +74,9 @@ class Robot : public frc::TimedRobot {
   void TeleopInit()         override; //!< Runs once at the start of teleop when the bell sounds
   void TeleopPeriodic()     override; //!< Runs in a loop during teleop
   void TestPeriodic()       override; //!< Runs in a loop during test mode
+  void SetLighting();
 
- private:
+private:
   // Define cameras
   cs::UsbCamera frontCam;  //!< Variable for the front camera
   cs::UsbCamera visionCam; //!< Variable for the Vision camera

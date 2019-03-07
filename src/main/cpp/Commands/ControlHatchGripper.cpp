@@ -17,7 +17,7 @@ void ControlHatchGripper::Execute() {
   // hold onto hatch if y button is pressed
 	if(this->pJoyOp->GetYButton()) {
     Robot::m_HatchGripper->Deploy();
-    Robot::m_Lighting->Set(LedColour::kSOLID_GREEN);
+    Robot::m_Lighting->SetBuffer(LedColour::kSOLID_GREEN);
   }
   else
   {

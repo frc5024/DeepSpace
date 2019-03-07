@@ -106,14 +106,15 @@ void Robot::RobotPeriodic() {
   // Robot::m_Lighting->Set(LedColour::kCHASE_RED);
 
   // if(this->driverStation.IsDisabled()){
-    if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kBlue){
-      this->m_Lighting->Set(LedColour::kCHASE_BLUE);
-    }else if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kRed){
-      this->m_Lighting->Set(LedColour::kCHASE_RED);
-    }else{
-      this->m_Lighting->Set(LedColour::kSOLID_WHITE);
-    }
+    // if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kBlue){
+    //   this->m_Lighting->Set(LedColour::kCHASE_BLUE);
+    // }else if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kRed){
+    //   this->m_Lighting->Set(LedColour::kCHASE_RED);
+    // }else{
+    //   this->m_Lighting->Set(LedColour::kSOLID_WHITE);
+    // }
   // }
+  this->m_Lighting->Set();
 }
 
 /**
@@ -130,6 +131,7 @@ void Robot::DisabledInit() {
 
 void Robot::DisabledPeriodic() { 
   frc::Scheduler::GetInstance()->Run(); 
+  
 }
 
 /**
@@ -186,7 +188,20 @@ void Robot::AutonomousInit() {
   this->pGyro->Reset();
 }
 
-void Robot::AutonomousPeriodic() { frc::Scheduler::GetInstance()->Run(); }
+void Robot::SetLighting(){
+  if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kBlue){
+    this->m_Lighting->SetBuffer(LedColour::kCHASE_BLUE);
+  }else if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kRed){
+    this->m_Lighting->SetBuffer(LedColour::kCHASE_RED);
+  }else{
+    this->m_Lighting->SetBuffer(LedColour::kSOLID_WHITE);
+  }
+}
+
+void Robot::AutonomousPeriodic() {
+  this->SetLighting();
+  frc::Scheduler::GetInstance()->Run(); 
+}
 
 void Robot::TeleopInit() {
   // This makes sure that the autonomous stops running when
@@ -199,7 +214,10 @@ void Robot::TeleopInit() {
   // }
 }
 
-void Robot::TeleopPeriodic() { frc::Scheduler::GetInstance()->Run(); }
+void Robot::TeleopPeriodic() {
+  this->SetLighting();
+  frc::Scheduler::GetInstance()->Run(); 
+}
 
 void Robot::TestPeriodic() {}
 

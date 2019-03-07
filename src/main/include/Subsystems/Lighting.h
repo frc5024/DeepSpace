@@ -16,9 +16,12 @@ class Lighting : public frc::Subsystem {
  public:
   Lighting();
   void InitDefaultCommand() override;
-  void Set(LedColour colour);
- private:
+  void SetBuffer(LedColour colour);
+  void Set();
+
+private:
   frc::Spark* pLightController;
+  LedColour buffer = LedColour::kSOLID_WHITE;
 };
 
 #endif // _SUBSYSTEMS_LIGHTING_H
