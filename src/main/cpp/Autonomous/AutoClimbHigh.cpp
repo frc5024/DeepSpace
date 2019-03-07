@@ -58,7 +58,7 @@ void AutoClimbHigh::Execute_LowerLeg(void) {
 
 	// If leg is at bottom or it's been 6 seconds, go to the next stage
 	if (Robot::m_Leg->AtBottom()
-	||  this->pTimer->Get() > 6.0) {
+	||  this->pTimer->Get() > 10.0) {
 		this->stage = S_CRAWL;
 		this->pTimer->Reset();
 	}
@@ -96,7 +96,7 @@ void AutoClimbHigh::Execute_Drive(void) {
 	Robot::m_DriveTrain->TankDrive(
 		0.4, -0.4); // Drive at 40% speed
 	// We do this for only 1 seconds, no sensors for this part
-	if (this->pTimer->Get() > 0.5) {
+	if (this->pTimer->Get() > 2.4) {
 		this->stage = S_RAISE_LEG;
 		this->pTimer->Reset();
 	}
@@ -105,11 +105,11 @@ void AutoClimbHigh::Execute_Drive(void) {
 void AutoClimbHigh::Execute_Raiseleg(void) {
 	Robot::m_Arm->MoveArm(0.0); // Brake
 	Robot::m_DriveTrain->TankDrive(0.0,0.0); // Brake
-	Robot::m_Leg->MoveLeg(-1.0); // Bring legs back up
+	Robot::m_Leg->MoveLeg(1.0); // Bring legs back up
 
 	// If leg is at top or it's been 6 seconds, we are finished
 	if (Robot::m_Leg->AtTop()
-	||	this->pTimer->Get() > 6.0) {
+	||	this->pTimer->Get() > 10.0) {
 		this->stage = S_FINISHED ;
 	}	
 }
