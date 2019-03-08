@@ -13,15 +13,11 @@ void ControlLight::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
 void ControlLight::Execute() {
-  if(this->pJoyOp->GetXButtonPressed()){
-      if(this->state==true) {
-        Robot::m_Light->Off();
-        this->state = false;
-      } else {
-        Robot::m_Light->On();
-        this->state = true;
-      }
-    }
+  if(this->pJoyOp->GetYButton()){
+    Robot::m_Light->On();
+  }else{
+    Robot::m_Light->Off();
+  }
 }
 
 
