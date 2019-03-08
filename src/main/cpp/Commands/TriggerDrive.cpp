@@ -24,8 +24,12 @@ void TriggerDrive::Execute() {
 
 	// Case check starting/doing/stopping auto-turning when we hold (A) button
 	if (this->pJoyDrive->GetAButtonPressed()) {
+        std::cout << "A button pressed!\n" ;
 		this->pAutoTurn->Start();
-	} else if (this->pJoyDrive->GetAButton()) {
+        return;
+	}
+    if (this->pJoyDrive->GetAButton()) {
+        std::cout << "A button held!\n" ;
 		float autoTurnRotation = this->pAutoTurn->Execute();
 		Robot::m_DriveTrain->ArcadeDrive(0.0, autoTurnRotation);
 		if (this->pAutoTurn->IsTurning()) {
@@ -33,34 +37,35 @@ void TriggerDrive::Execute() {
 		} else {
 			this->pJoyDrive->SetRumble(GenericHID::RumbleType::kRightRumble, 0.0);
 		}
-	} else if (this->pJoyDrive->GetAButtonReleased()) {
+        return ;
+	}
+    if (this->pJoyDrive->GetAButtonReleased()) {
+        std::cout << "A button released!\n" ;
 		this->pAutoTurn->Stop();
 		this->pJoyDrive->SetRumble(GenericHID::RumbleType::kRightRumble, 0.0);
-	} else
-	{
+        return ;
+	} 
 
-		// Deal with reversing and slow mode
-		this->directionMultiplier *= (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
-		this->speedMultiplier      = (this->pJoyDrive->GetBumper(Hand::kRightHand)) ? 0.6 : 1;
+    // Deal with reversing and slow mode
+    this->directionMultiplier *= (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
+    this->speedMultiplier      = (this->pJoyDrive->GetBumper(Hand::kRightHand)) ? 0.6 : 1;
 
-		// Get movement data form controller
-		// Speed = Right trigger - left trigger
-		this->speed = (this->pJoyDrive->GetTriggerAxis(Hand::kRightHand) - this->pJoyDrive->GetTriggerAxis(Hand::kLeftHand));
-		this->rotation = this->pJoyDrive->GetX(Hand::kLeftHand);
-		
-		// Multiply each value with it's multiplier(s)
-		this->speed    *= (this->speedMultiplier * this->directionMultiplier);
-		this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
+    // Get movement data form controller
+    // Speed = Right trigger - left trigger
+    this->speed = (this->pJoyDrive->GetTriggerAxis(Hand::kRightHand) - this->pJoyDrive->GetTriggerAxis(Hand::kLeftHand));
+    this->rotation = this->pJoyDrive->GetX(Hand::kLeftHand);
+    
+    // Multiply each value with it's multiplier(s)
+    this->speed    *= (this->speedMultiplier * this->directionMultiplier);
+    this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
-		Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
-		
-		// Reset the speed and rotation
-		// while this does have some negitive side effects while driving,
-		// It is for saftey. (and so we don't have a run-away bot slam into a wall again)
-		this->speed    = 0.00;
-		this->rotation = 0.00;
-	
-	} // AutoTurn Else
+    Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
+    
+    // Reset the speed and rotation
+    // while this does have some negitive side effects while driving,
+    // It is for saftey. (and so we don't have a run-away bot slam into a wall again)
+    this->speed    = 0.00;
+    this->rotation = 0.00;
 }
 
 
