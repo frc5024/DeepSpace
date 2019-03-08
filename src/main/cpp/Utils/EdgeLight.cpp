@@ -12,6 +12,6 @@ void Utils::EdgeLight::Push(){
     if(DODEBUG){
         std::cout << "LED COLOUR: " << Utils::EdgeLight::ledbuffer / (double)100 << std::endl;
     }
-    Utils::EdgeLight::pLEDController->Set(Utils::EdgeLight::ledbuffer);
+    Utils::EdgeLight::pLEDController->Set(Utils::EdgeLight::ledbuffer / (double)100);
 }
 
