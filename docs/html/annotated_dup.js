@@ -2,6 +2,8 @@ var annotated_dup =
 [
     [ "Arm", "classArm.html", "classArm" ],
     [ "cCompressor", "classcCompressor.html", "classcCompressor" ],
+    [ "Climb", "classClimb.html", "classClimb" ],
+    [ "ClimbManager", "classClimbManager.html", "classClimbManager" ],
     [ "ControlCargo", "classControlCargo.html", "classControlCargo" ],
     [ "ControlCompressor", "classControlCompressor.html", "classControlCompressor" ],
     [ "ControlHatchGripper", "classControlHatchGripper.html", "classControlHatchGripper" ],

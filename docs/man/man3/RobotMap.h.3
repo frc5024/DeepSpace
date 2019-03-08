@@ -1,4 +1,4 @@
-.TH "src/main/include/RobotMap.h" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "src/main/include/RobotMap.h" 3 "Tue Mar 5 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -117,6 +117,12 @@ src/main/include/RobotMap.h
 .ti -1c
 .RI "#define \fBWinGame\fP(_class_)   frc::StartRobot<_class_>()"
 .br
+.ti -1c
+.RI "#define \fBHeader\fP(x)   std::cout << x"
+.br
+.ti -1c
+.RI "#define \fBEndHeader\fP()   std::cout << 'DONE' << std::endl"
+.br
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
@@ -196,6 +202,10 @@ Definition at line 65 of file RobotMap\&.h\&.
 
 .PP
 Definition at line 75 of file RobotMap\&.h\&.
+.SS "#define EndHeader()   std::cout << 'DONE' << std::endl"
+
+.PP
+Definition at line 84 of file RobotMap\&.h\&.
 .SS "#define False   false"
 
 .PP
@@ -220,6 +230,10 @@ Definition at line 58 of file RobotMap\&.h\&.
 
 .PP
 Definition at line 59 of file RobotMap\&.h\&.
+.SS "#define Header(x)   std::cout << x"
+
+.PP
+Definition at line 83 of file RobotMap\&.h\&.
 .SS "#define LIGHT_ID   0"
 
 .PP

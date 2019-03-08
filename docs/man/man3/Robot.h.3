@@ -1,4 +1,4 @@
-.TH "src/main/include/Robot.h" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "src/main/include/Robot.h" 3 "Tue Mar 5 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,13 +10,13 @@ src/main/include/Robot.h
 .br
 \fC#include <frc/smartdashboard/SendableChooser\&.h>\fP
 .br
-\fC#include <networktables/NetworkTable\&.h>\fP
-.br
 \fC#include <frc/TimedRobot\&.h>\fP
 .br
 \fC#include <frc/WPILib\&.h>\fP
 .br
 \fC#include <cscore_oo\&.h>\fP
+.br
+\fC#include <networktables/NetworkTable\&.h>\fP
 .br
 \fC#include 'Commands/TriggerDrive\&.h'\fP
 .br
@@ -28,11 +28,17 @@ src/main/include/Robot.h
 .br
 \fC#include 'Commands/PullLeg\&.h'\fP
 .br
-\fC#include 'Commands/DeployClimb\&.h'\fP
-.br
 \fC#include 'Commands/ControlHatchGripper\&.h'\fP
 .br
 \fC#include 'Commands/ControlLight\&.h'\fP
+.br
+\fC#include 'Commands/ClimbManager\&.h'\fP
+.br
+\fC#include 'Commands/Climb\&.h'\fP
+.br
+\fC#include 'Commands/ControlSlider\&.h'\fP
+.br
+\fC#include 'Commands/ControlCargo\&.h'\fP
 .br
 \fC#include 'OI\&.h'\fP
 .br
@@ -43,10 +49,6 @@ src/main/include/Robot.h
 \fC#include 'Subsystems/Arm\&.h'\fP
 .br
 \fC#include 'Subsystems/Leg\&.h'\fP
-.br
-\fC#include 'Commands/ControlSlider\&.h'\fP
-.br
-\fC#include 'Commands/ControlCargo\&.h'\fP
 .br
 \fC#include 'Subsystems/Slider\&.h'\fP
 .br

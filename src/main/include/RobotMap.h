@@ -89,4 +89,7 @@
 // Reasons why I shouldn't be allowed to program
 #define WinGame(_class_) frc::StartRobot<_class_>()
 
+#define Header(x) std::cout << x
+#define EndHeader() std::cout << "DONE" << std::endl
+
 #endif // _ROBOTMAP_HG_

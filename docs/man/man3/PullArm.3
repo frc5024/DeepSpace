@@ -1,4 +1,4 @@
-.TH "PullArm" 3 "Fri Feb 22 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "PullArm" 3 "Tue Mar 5 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -63,7 +63,7 @@ Definition at line 10 of file PullArm\&.h\&.
 .PP
 Class constructor\&. 
 .PP
-Definition at line 5 of file PullArm\&.cpp\&.
+Definition at line 6 of file PullArm\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void PullArm::End ()\fC [override]\fP"
@@ -71,25 +71,25 @@ Definition at line 5 of file PullArm\&.cpp\&.
 .PP
 Runs once when \fBIsFinished()\fP returns true\&. 
 .PP
-Definition at line 32 of file PullArm\&.cpp\&.
+Definition at line 33 of file PullArm\&.cpp\&.
 .SS "void PullArm::Execute ()\fC [override]\fP"
 
 .PP
 Called in a loop during Teleop\&. 
 .PP
-Definition at line 20 of file PullArm\&.cpp\&.
+Definition at line 21 of file PullArm\&.cpp\&.
 .SS "void PullArm::Initialize ()\fC [override]\fP"
 
 .PP
 Runs once on initalization\&. 
 .PP
-Definition at line 12 of file PullArm\&.cpp\&.
+Definition at line 13 of file PullArm\&.cpp\&.
 .SS "void PullArm::Interrupted ()\fC [override]\fP"
 
 .PP
 Runs once if the command is forced to stop\&. 
 .PP
-Definition at line 36 of file PullArm\&.cpp\&.
+Definition at line 37 of file PullArm\&.cpp\&.
 .SS "bool PullArm::IsFinished ()\fC [override]\fP"
 Used to tell wpilib if the command is fully finished\&. This should never return true Because we always want to be able to drive the bot during teleop
 .PP
@@ -100,7 +100,7 @@ True if command is finished, else false
 .PP
 
 .PP
-Definition at line 29 of file PullArm\&.cpp\&.
+Definition at line 30 of file PullArm\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "frc::XboxController* PullArm::pJoyDebug\fC [private]\fP"
