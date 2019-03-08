@@ -10,6 +10,8 @@
 
 // Whenever possible, Macros and definitions are used in order to preserve memory
 
+#define DODEBUG 0
+
 // Camera mappings
 #define CAMERASERVER_DRIVER_CAMERA 1
 #define CAMERASERVER_VISION_CAMERA 0
@@ -53,6 +55,7 @@
 
 // Light
 #define LIGHT_ID 0
+#define LEDCONTROLLER_ID 2
 
 // Hatch Gripper 
 #define HatchGripper_FORWARD_ID 1

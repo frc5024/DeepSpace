@@ -19,15 +19,6 @@ void ControlHatchGripper::Execute() {
   } else {
     Robot::m_HatchGripper->Retract();
   }
-
-  if (!(this->pJoyOp->GetTriggerAxis(Hand::kRightHand) > 0.1)){
-    if(this->pJoyOp->GetYButton()) {
-      Robot::m_Light->On();
-      Robot::m_HatchGripper->Deploy();
-  }else {
-    Robot::m_HatchGripper->Retract();
-    Robot::m_Light->Off();
-  }}
 }
 
 

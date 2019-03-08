@@ -6,6 +6,8 @@
 #include <string>
 #include <fstream>
 
+#include "Utils/EdgeLight.h"
+
 // Subsystems
 DriveTrain   *Robot::m_DriveTrain;
 cCompressor  *Robot::m_cCompressor;
@@ -181,8 +183,9 @@ void Robot::AutonomousInit() {
 }
 
 void Robot::AutonomousPeriodic() { 
-  frc::Scheduler::GetInstance()->Run();
   this->SharedPeriodic();
+  frc::Scheduler::GetInstance()->Run();
+  Utils::EdgeLight::Push();
 }
 
 void Robot::TeleopInit() {
@@ -197,8 +200,9 @@ void Robot::TeleopInit() {
 }
 
 void Robot::TeleopPeriodic() { 
-  frc::Scheduler::GetInstance()->Run();
   this->SharedPeriodic();
+  frc::Scheduler::GetInstance()->Run();
+  Utils::EdgeLight::Push();
 }
 
 void Robot::SharedPeriodic(){
@@ -207,6 +211,14 @@ void Robot::SharedPeriodic(){
     if (this->pClimb != nullptr){
       this->pClimb->Start();
     }
+  }
+
+  if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kBlue){
+    Utils::EdgeLight::Append(LedColour::kCHASE_BLUE);
+  }else if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kRed){
+    Utils::EdgeLight::Append(LedColour::kCHASE_RED);
+  }else{
+    Utils::EdgeLight::Append(LedColour::kSOLID_WHITE);
   }
 }
 
