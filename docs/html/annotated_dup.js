@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "Utils", "namespaceUtils.html", null ],
     [ "Arm", "classArm.html", "classArm" ],
     [ "cCompressor", "classcCompressor.html", "classcCompressor" ],
     [ "Climb", "classClimb.html", "classClimb" ],

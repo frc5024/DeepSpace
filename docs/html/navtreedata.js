@@ -8,6 +8,7 @@ var NAVTREE =
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
@@ -28,6 +29,8 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -37,7 +40,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Arm_8cpp.html",
-"classDeployLeg.html#adf3a47885299ebcf5d90472932800959"
+"classCrawlDrive.html#a7f00671849091b27df42b216bf059afd"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -21,6 +21,7 @@ var searchData=
   ['pjoystickdebug',['pJoystickDebug',['../classOI.html#a64075957564f2c4b97dd859948f7c102',1,'OI']]],
   ['pjoystickdrive',['pJoystickDrive',['../classOI.html#a3063072af8d1fe9c59b674e8498ef0ae',1,'OI']]],
   ['pjoystickoperator',['pJoystickOperator',['../classOI.html#ab79eb664ad1895f9c5ab5a1b17ae60eb',1,'OI']]],
+  ['pledcontroller',['pLEDController',['../namespaceUtils_1_1EdgeLight.html#a15c71373e52e83d039741853800c64b0',1,'Utils::EdgeLight']]],
   ['pleftfrontmotor',['pLeftFrontMotor',['../classDriveTrain.html#afb83a3f5cedd6d9d293edbc07f12b47a',1,'DriveTrain']]],
   ['plefthall',['pLeftHall',['../classSlider.html#a07cb2824a97bc2be740715c455f9131b',1,'Slider']]],
   ['pleftrearmotor',['pLeftRearMotor',['../classDriveTrain.html#a33a1f6f57affe0cea1184357bbccfd07',1,'DriveTrain']]],

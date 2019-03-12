@@ -136,6 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9227a6080183da46d2c9765c1fce5a16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a9227a6080183da46d2c9765c1fce5a16">SharedPeriodic</a> ()</td></tr>
 <tr class="memdesc:a9227a6080183da46d2c9765c1fce5a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs during teleop and auto.  <a href="#a9227a6080183da46d2c9765c1fce5a16">More...</a><br /></td></tr>
 <tr class="separator:a9227a6080183da46d2c9765c1fce5a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e69f8fd43864f651164992a546a57ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html#a4e69f8fd43864f651164992a546a57ec">SharedInit</a> ()</td></tr>
+<tr class="memdesc:a4e69f8fd43864f651164992a546a57ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to initalize commands for both auto and teleop. (2019 only)  <a href="#a4e69f8fd43864f651164992a546a57ec">More...</a><br /></td></tr>
+<tr class="separator:a4e69f8fd43864f651164992a546a57ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -257,7 +260,7 @@ Private Attributes</h2></td></tr>
 <p>This autonomous (along with the chooser code above) shows how to select between different autonomous modes using the dashboard. The sendable chooser code works with the Java SmartDashboard. If you prefer the LabVIEW Dashboard, remove all of the chooser code and uncomment the GetString code to get the auto name from the text box below the Gyro.</p>
 <p>You can add additional auto modes by adding additional commands to the chooser code above (like the commented example) or additional comparisons to the if-else structure below with additional strings &amp; commands. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00138">138</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00135">135</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +289,7 @@ Private Attributes</h2></td></tr>
 
 <p>Runs in a loop during auto. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00183">183</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00158">158</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
 
 </div>
 </div>
@@ -316,7 +319,7 @@ Private Attributes</h2></td></tr>
 <p>Runs once every time the robot is disabled. </p>
 <p>This function is called once each time the robot enters Disabled mode. You can use it to reset any subsystem information you want to clear when the robot is disabled. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00116">116</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00113">113</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
 
 </div>
 </div>
@@ -345,7 +348,7 @@ Private Attributes</h2></td></tr>
 
 <p>Runs in a loop while the robot is disabled. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00125">125</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00122">122</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
 
 </div>
 </div>
@@ -374,7 +377,7 @@ Private Attributes</h2></td></tr>
 
 <p>Runs once on robot boot. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00022">22</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00024">24</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
 
 </div>
 </div>
@@ -405,7 +408,28 @@ Private Attributes</h2></td></tr>
 <p>This function is called every robot packet, no matter the mode. Use this for items like diagnostics that you want ran during disabled, autonomous, teleoperated and test.</p>
 <p>This runs after the mode specific periodic functions, but before LiveWindow and SmartDashboard integrated updating. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00095">95</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00096">96</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4e69f8fd43864f651164992a546a57ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e69f8fd43864f651164992a546a57ec">&#9670;&nbsp;</a></span>SharedInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Robot::SharedInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used to initalize commands for both auto and teleop. (2019 only) </p>
+
+<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00184">184</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
 
 </div>
 </div>
@@ -426,7 +450,7 @@ Private Attributes</h2></td></tr>
 
 <p>Runs during teleop and auto. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00204">204</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00196">196</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
 
 </div>
 </div>
@@ -455,7 +479,7 @@ Private Attributes</h2></td></tr>
 
 <p>Runs once at the start of teleop when the bell sounds. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00188">188</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00164">164</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
 
 </div>
 </div>
@@ -484,7 +508,7 @@ Private Attributes</h2></td></tr>
 
 <p>Runs in a loop during teleop. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00199">199</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00178">178</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
 
 </div>
 </div>
@@ -513,7 +537,7 @@ Private Attributes</h2></td></tr>
 
 <p>Runs in a loop during test mode. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00213">213</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8cpp_source.html#l00223">223</a> of file <a class="el" href="Robot_8cpp_source.html">Robot.cpp</a>.</p>
 
 </div>
 </div>
@@ -540,7 +564,7 @@ Private Attributes</h2></td></tr>
 
 <p>DriverStation instance. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8h_source.html#l00096">96</a> of file <a class="el" href="Robot_8h_source.html">Robot.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8h_source.html#l00097">97</a> of file <a class="el" href="Robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -566,7 +590,7 @@ Private Attributes</h2></td></tr>
 
 <p>Variable for the front camera. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8h_source.html#l00088">88</a> of file <a class="el" href="Robot_8h_source.html">Robot.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8h_source.html#l00089">89</a> of file <a class="el" href="Robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -642,7 +666,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Robot_8h_source.html#l00094">94</a> of file <a class="el" href="Robot_8h_source.html">Robot.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8h_source.html#l00095">95</a> of file <a class="el" href="Robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -902,7 +926,7 @@ Private Attributes</h2></td></tr>
 
 <p>A pointer to the /SmartDashboard/Telemetry table. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8h_source.html#l00099">99</a> of file <a class="el" href="Robot_8h_source.html">Robot.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8h_source.html#l00100">100</a> of file <a class="el" href="Robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -1052,7 +1076,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Robot_8h_source.html#l00101">101</a> of file <a class="el" href="Robot_8h_source.html">Robot.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8h_source.html#l00102">102</a> of file <a class="el" href="Robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>
@@ -1132,7 +1156,7 @@ Private Attributes</h2></td></tr>
 
 <p>Variable for the Vision camera. </p>
 
-<p class="definition">Definition at line <a class="el" href="Robot_8h_source.html#l00089">89</a> of file <a class="el" href="Robot_8h_source.html">Robot.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Robot_8h_source.html#l00090">90</a> of file <a class="el" href="Robot_8h_source.html">Robot.h</a>.</p>
 
 </div>
 </div>

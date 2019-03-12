@@ -6,6 +6,7 @@ var classRobot =
     [ "DisabledPeriodic", "classRobot.html#a8c7309f5f1cb242ea8c74f1abf03b540", null ],
     [ "RobotInit", "classRobot.html#a66f23dae271748d525cf3ab046375f79", null ],
     [ "RobotPeriodic", "classRobot.html#a8fad82c2250bcfb83b743b5c0dd6ed27", null ],
+    [ "SharedInit", "classRobot.html#a4e69f8fd43864f651164992a546a57ec", null ],
     [ "SharedPeriodic", "classRobot.html#a9227a6080183da46d2c9765c1fce5a16", null ],
     [ "TeleopInit", "classRobot.html#aa3e246794bfbbb4406fc87f351762038", null ],
     [ "TeleopPeriodic", "classRobot.html#a324322627c63b3870daf7c7ddc5bea63", null ],

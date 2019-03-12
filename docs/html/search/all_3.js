@@ -14,6 +14,7 @@ var searchData=
   ['directionmultiplier',['directionMultiplier',['../classDriveWithJoystick.html#a87ceb621790dae15f245fa6b559202ee',1,'DriveWithJoystick::directionMultiplier()'],['../classTriggerDrive.html#abc836db7bd8464e344c3d318f9da3f9c',1,'TriggerDrive::directionMultiplier()']]],
   ['disabledinit',['DisabledInit',['../classRobot.html#a810e6143a208a6314491366e3c714357',1,'Robot']]],
   ['disabledperiodic',['DisabledPeriodic',['../classRobot.html#a8c7309f5f1cb242ea8c74f1abf03b540',1,'Robot']]],
+  ['dodebug',['DODEBUG',['../RobotMap_8h.html#aefc47346bd5140a39b6d744385796e56',1,'RobotMap.h']]],
   ['drivemode',['driveMode',['../classDriveWithJoystick.html#a11d7c09c5a0bced3aa504c775cb9d7e3',1,'DriveWithJoystick']]],
   ['driverstation',['driverStation',['../classRobot.html#a6f2299fbdf5016ab845a8d68febbc08f',1,'Robot']]],
   ['drivetrain',['DriveTrain',['../classDriveTrain.html',1,'DriveTrain'],['../classDriveTrain.html#a90af56eee49c93d5b7d77065b42f660b',1,'DriveTrain::DriveTrain()']]],

@@ -1,0 +1,74 @@
+.TH "src/main/include/Utils/EdgeLight.h" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/main/include/Utils/EdgeLight.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <frc/Spark\&.h>\fP
+.br
+\fC#include 'RobotMap\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBUtils\fP"
+.br
+.ti -1c
+.RI " \fBUtils::EdgeLight\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBLedColour\fP { \fBkSOLID_WHITE\fP = 93, \fBkCHASE_RED\fP = -31, \fBkCHASE_BLUE\fP = -29, \fBkSOLID_GREEN\fP = 75, \fBkBEAT_BLUE\fP = -23, \fBkBEAT_RED\fP = -25 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBUtils::EdgeLight::Push\fP ()"
+.br
+.ti -1c
+.RI "void \fBUtils::EdgeLight::Append\fP (\fBLedColour\fP colour)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBLedColour\fP \fBUtils::EdgeLight::ledbuffer\fP = \fBLedColour::kSOLID_WHITE\fP"
+.br
+.ti -1c
+.RI "frc::Spark * \fBUtils::EdgeLight::pLEDController\fP = new frc::Spark(\fBLEDCONTROLLER_ID\fP)"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBLedColour\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIkSOLID_WHITE \fP\fP
+.TP
+\fB\fIkCHASE_RED \fP\fP
+.TP
+\fB\fIkCHASE_BLUE \fP\fP
+.TP
+\fB\fIkSOLID_GREEN \fP\fP
+.TP
+\fB\fIkBEAT_BLUE \fP\fP
+.TP
+\fB\fIkBEAT_RED \fP\fP
+.PP
+Definition at line 7 of file EdgeLight\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.
