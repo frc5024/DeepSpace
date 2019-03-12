@@ -82,6 +82,7 @@ class Robot : public frc::TimedRobot {
   void TeleopPeriodic()     override; //!< Runs in a loop during teleop
   void TestPeriodic()       override; //!< Runs in a loop during test mode
   void SharedPeriodic();              //!< Runs during teleop and auto
+  void SharedInit();                  //!< Used to initalize commands for both auto and teleop. (2019 only)
 
 private:
   // Define cameras

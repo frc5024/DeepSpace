@@ -23,10 +23,9 @@ Light        *Robot::m_Light;
 
 void Robot::RobotInit() {
   // Print out a banner to the shell
-  // Some backslashes are doubled in order for them to print properly
-  std::cout << "   Welcome 5024!" << std::endl;
+  std::cout << "   Welcome 5024!"    << std::endl;
   std::cout << "-------------------" << std::endl;
-  std::cout << "Robot Starting.."<< std::endl;
+  std::cout << "Robot Starting.."    << std::endl;
 
   // Subsystems
   Header("Creating Subsystems.. ");
@@ -59,8 +58,8 @@ void Robot::RobotInit() {
 
   // Init camera
   Header("Starting CameraServer.. ");
-  this->frontCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Driver Camera", CAMERASERVER_DRIVER_CAMERA);
-  this->visionCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Vision",        CAMERASERVER_VISION_CAMERA);
+  this->frontCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Back",  CAMERASERVER_DRIVER_CAMERA);
+  this->visionCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Front", CAMERASERVER_VISION_CAMERA);
   EndHeader();
 
   // Set vision cam settings
@@ -97,14 +96,10 @@ void Robot::RobotInit() {
 void Robot::RobotPeriodic() {
   // Send information about the robot over NetworkTables
 
-  // double pdpTemperature = this->pdp->GetTemperature();
-  // double robotVoltage   = this->pdp->GetVoltage();
   bool   dsAttached     = this->driverStation.IsDSAttached();
   bool   fmsAttached    = this->driverStation.IsFMSAttached();
   float  gyroAngle      = this->pGyro->GetAngle();
 
-  // this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
-  // this->ntTelemetry->PutNumber("voltage",  robotVoltage);
   this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
   this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
   this->ntTelemetry->PutNumber("Angle", gyroAngle);
@@ -151,35 +146,13 @@ void Robot::AutonomousInit() {
   // if (m_autonomousCommand != nullptr) {
   //   m_autonomousCommand->Start();
   // }
-  if (this->pTriggerDrive != nullptr) {
-		this->pTriggerDrive->Start();
-	}
-  if (this->pPullArm != nullptr) {
-		this->pPullArm->Start();
-	}
-  if (this->pPullLeg != nullptr) {
-		this->pPullLeg->Start();
-  }
-	if (this->pControlSlider != nullptr) {
-		this->pControlSlider->Start();
-	}
-  if (this->pControlCompressor != nullptr) {
-		this->pControlCompressor->Start();
-	}
-  if (this->pControlHatchGripper != nullptr) {
-		this->pControlHatchGripper->Start();
-	}
-  if (this->pControlCargo != nullptr){
-    this->pControlCargo->Start();
-  }
-  if (this->pControlLight != nullptr){
-    this->pControlLight->Start();
-  }
-  if (this->pClimbManager != nullptr){
-    this->pClimbManager->Start();
-  }
+  Header("Auto commands starting.. ");
+  this->SharedInit();
+  EndHeader();
 
+  Header("Resetting gyro.. ");
   this->pGyro->Reset();
+  EndHeader();
 }
 
 void Robot::AutonomousPeriodic() { 
@@ -197,39 +170,27 @@ void Robot::TeleopInit() {
   //   m_autonomousCommand->Cancel();
   //   m_autonomousCommand = nullptr;
   // }
-  if (this->pTriggerDrive != nullptr) {
-		this->pTriggerDrive->Start();
-	}
-  if (this->pPullArm != nullptr) {
-		this->pPullArm->Start();
-	}
-  if (this->pPullLeg != nullptr) {
-		this->pPullLeg->Start();
-  }
-	if (this->pControlSlider != nullptr) {
-		this->pControlSlider->Start();
-	}
-  if (this->pControlCompressor != nullptr) {
-		this->pControlCompressor->Start();
-	}
-  if (this->pControlHatchGripper != nullptr) {
-		this->pControlHatchGripper->Start();
-	}
-  if (this->pControlCargo != nullptr){
-    this->pControlCargo->Start();
-  }
-  if (this->pControlLight != nullptr){
-    this->pControlLight->Start();
-  }
-  if (this->pClimbManager != nullptr){
-    this->pClimbManager->Start();
-  }
+  Header("Teleop commands starting.. ");
+  this->SharedInit();
+  EndHeader();
 }
 
 void Robot::TeleopPeriodic() { 
   this->SharedPeriodic();
   frc::Scheduler::GetInstance()->Run();
   Utils::EdgeLight::Push();
+}
+
+void Robot::SharedInit(){
+  if (this->pTriggerDrive        != nullptr) { this->pTriggerDrive->Start();        }
+  if (this->pPullArm             != nullptr) { this->pPullArm->Start();             }
+  if (this->pPullLeg             != nullptr) { this->pPullLeg->Start();             }
+	if (this->pControlSlider       != nullptr) { this->pControlSlider->Start();	      }
+  if (this->pControlCompressor   != nullptr) { this->pControlCompressor->Start();	  }
+  if (this->pControlHatchGripper != nullptr) { this->pControlHatchGripper->Start();	}
+  if (this->pControlCargo        != nullptr) { this->pControlCargo->Start();        }
+  if (this->pControlLight        != nullptr) { this->pControlLight->Start();        }
+  if (this->pClimbManager        != nullptr) { this->pClimbManager->Start();        }
 }
 
 void Robot::SharedPeriodic(){
@@ -241,9 +202,19 @@ void Robot::SharedPeriodic(){
   }
 
   if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kBlue){
-    Utils::EdgeLight::Append(LedColour::kCHASE_BLUE);
+    if(this->driverStation.IsOperatorControl()){
+      Utils::EdgeLight::Append(LedColour::kCHASE_BLUE);
+    }else{
+      Utils::EdgeLight::Append(LedColour::kBEAT_BLUE);
+    }
+    
   }else if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kRed){
-    Utils::EdgeLight::Append(LedColour::kCHASE_RED);
+    if(this->driverStation.IsOperatorControl()){
+      Utils::EdgeLight::Append(LedColour::kCHASE_RED);
+    }else{
+      Utils::EdgeLight::Append(LedColour::kBEAT_RED);
+    }
+
   }else{
     Utils::EdgeLight::Append(LedColour::kSOLID_WHITE);
   }

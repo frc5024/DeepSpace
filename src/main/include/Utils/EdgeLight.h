@@ -8,7 +8,9 @@ enum LedColour{
   kSOLID_WHITE =  93,
   kCHASE_RED   = -31,
   kCHASE_BLUE  = -29,
-  kSOLID_GREEN =  75
+  kSOLID_GREEN =  75,
+  kBEAT_BLUE   = -23,
+  kBEAT_RED    = -25
 };
 
 namespace Utils{
