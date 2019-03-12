@@ -197,6 +197,33 @@ void Robot::TeleopInit() {
   //   m_autonomousCommand->Cancel();
   //   m_autonomousCommand = nullptr;
   // }
+  if (this->pTriggerDrive != nullptr) {
+		this->pTriggerDrive->Start();
+	}
+  if (this->pPullArm != nullptr) {
+		this->pPullArm->Start();
+	}
+  if (this->pPullLeg != nullptr) {
+		this->pPullLeg->Start();
+  }
+	if (this->pControlSlider != nullptr) {
+		this->pControlSlider->Start();
+	}
+  if (this->pControlCompressor != nullptr) {
+		this->pControlCompressor->Start();
+	}
+  if (this->pControlHatchGripper != nullptr) {
+		this->pControlHatchGripper->Start();
+	}
+  if (this->pControlCargo != nullptr){
+    this->pControlCargo->Start();
+  }
+  if (this->pControlLight != nullptr){
+    this->pControlLight->Start();
+  }
+  if (this->pClimbManager != nullptr){
+    this->pClimbManager->Start();
+  }
 }
 
 void Robot::TeleopPeriodic() { 
