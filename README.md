@@ -22,7 +22,7 @@ To build the c++ documentation, we use a custom Doxygen config. To use this conf
 doxygen ./doxygen.config
 ```
 
-To build the Controller Layout files, run this command (`python3` may need to be changed to `python`):
+To build the Controller Layout files, run this command (`python3` may need to be changed to `python`or `py3` depending on the system):
 ```sh
 python3 ./buildcml.py ./controller_layout.cml.json
 ```
