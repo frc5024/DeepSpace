@@ -23,8 +23,9 @@ void ClimbManager::Execute() {
     
     // Signal all commands to kill themselves
     this->CurrentClimbState = this->ClimbState::kActive;
+    Log("Climb mode active!");
 
-	// Start vibrating driver controller
+    // Start vibrating driver controller
 	this->pJoyOp->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 0.5);
 }
 

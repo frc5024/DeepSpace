@@ -13,7 +13,7 @@ void Climb::Initialize() {
     this->armSpeed = 0.0;
     this->crawlSpeed = 0.0;
     this->legSpeed = 0.0;
-}
+} 
 
 // Called repeatedly when this Command is scheduled to run
 void Climb::Execute() {
@@ -27,6 +27,10 @@ void Climb::Execute() {
     // Set leg speed
     this->legSpeed = this->pJoyOp->GetBumper(Hand::kRightHand)? -1 : 0; 
     this->legSpeed = this->pJoyOp->GetBumper(Hand::kLeftHand) ?  1 : this->legSpeed; 
+
+    if(this->legSpeed < 0.0){
+        Utils::EdgeLight::Append(LedColour::kSOLID_GREEN);
+    }
 
     // Set motor outputs
     Robot::m_Arm->MoveArm(this->armSpeed);

@@ -4,6 +4,7 @@
 #include <frc/commands/Command.h>
 
 #include <Subsystems/CrawlDrive.h>
+#include <Utils/EdgeLight.h>
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
 
