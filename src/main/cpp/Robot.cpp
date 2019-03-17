@@ -7,6 +7,7 @@
 #include <fstream>
 
 #include "Utils/EdgeLight.h"
+
 // /home/lvuser/FRC_UserProgram.log
 
 // Subsystems
@@ -65,9 +66,10 @@ void Robot::RobotInit() {
 
   // Set vision cam settings
   Header("Setting camera config.. ");
-  std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
+  std::ifstream visionSettingsFile("/home/lvuser/deploy/config.json");
   std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
-  // this->visionCam.SetConfigJson(visionSettings);
+  this->visionCam.SetConfigJson(visionSettings);
+  this->frontCam.SetConfigJson(visionSettings);
   EndHeader();
 
   // Init Gyro
@@ -112,12 +114,14 @@ void Robot::RobotPeriodic() {
  * robot is disabled.
  */
 void Robot::DisabledInit() {
+  Header("Robot disabling.. ");
   Robot::m_Flap->Release();
 
   // Stop controller vibration once match ends
   if(this->pClimbManager != nullptr){
     this->pClimbManager->pJoyOp->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 0.0);
   }
+  EndHeader();
 }
 
 void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
@@ -227,6 +231,7 @@ void Robot::TestPeriodic() {}
 int main(){
   // Start the robot
   WinGame(Robot);
+  Log("FATAL!!! Robot program finished!!!");
   return 1;
 }
 #endif

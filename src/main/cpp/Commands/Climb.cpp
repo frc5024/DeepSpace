@@ -30,6 +30,7 @@ void Climb::Execute() {
 
     if(this->legSpeed < 0.0){
         Utils::EdgeLight::Append(LedColour::kSOLID_GREEN);
+        Log("Pushing legs down!");
     }
 
     // Set motor outputs
