@@ -1,0 +1,1118 @@
+********** Robot program starting **********
+   Welcome 5024!
+-------------------
+Robot Starting..
+Creating Subsystems.. DONE
+Creating Commands.. DONE
+CS: Back: Connecting to USB camera on /dev/video1
+Starting CameraServer.. DONE
+CS: Front: Connecting to USB camera on /dev/video0
+CS: Front: SetConfigJson: setting pixelFormat 1
+CS: Front: set format 1 res 160x120
+CS: Front: SetConfigJson: setting width 160, height 120
+CS: Back: set format 1 res 160x120
+CS: Front: SetConfigJson: setting property 'connect_verbose' to 1
+CS: Front: SetConfigJson: setting property 'raw_brightness' to 50
+CS: Front: SetConfigJson: setting property 'brightness' to 9
+CS: Front: SetConfigJson: setting property 'raw_contrast' to 10
+CS: Front: SetConfigJson: setting property 'contrast' to 100
+CS: Front: SetConfigJson: setting property 'raw_saturation' to 20
+CS: Front: SetConfigJson: setting property 'saturation' to 10
+CS: Front: SetConfigJson: setting property 'white_balance_temperature_auto' to 0
+CS: Front: SetConfigJson: setting property 'power_line_frequency' to 2
+CS: Front: SetConfigJson: setting property 'white_balance_temperature' to 2800
+CS: Front: SetConfigJson: setting property 'raw_sharpness' to 0
+CS: Front: SetConfigJson: setting property 'sharpness' to 0
+CS: Front: SetConfigJson: setting property 'backlight_compensation' to 0
+CS: Front: SetConfigJson: setting property 'exposure_auto' to 1
+CS: Front: SetConfigJson: setting property 'raw_exposure_absolute' to 78
+CS: Front: SetConfigJson: setting property 'exposure_absolute' to 32
+CS: Front: SetConfigJson: setting property 'pan_absolute' to 0
+CS: Front: SetConfigJson: setting property 'tilt_absolute' to 0
+CS: Front: SetConfigJson: setting property 'zoom_absolute' to 0
+CS: Back: SetConfigJson: setting pixelFormat 1
+CS: Back: SetConfigJson: setting width 160, height 120
+CS: Back: SetConfigJson: setting property 'connect_verbose' to 1
+CS: Back: SetConfigJson: setting property 'raw_brightness' to 50
+CS: Back: SetConfigJson: setting property 'brightness' to 9
+CS: Back: SetConfigJson: setting property 'raw_contrast' to 10
+CS: Back: SetConfigJson: setting property 'contrast' to 100
+CS: Back: SetConfigJson: setting property 'raw_saturation' to 20
+CS: Back: SetConfigJson: setting property 'saturation' to 10
+CS: Back: SetConfigJson: setting property 'white_balance_temperature_auto' to 0
+CS: Back: SetConfigJson: setting property 'power_line_frequency' to 2
+CS: Back: SetConfigJson: setting property 'white_balance_temperature' to 2800
+CS: Back: SetConfigJson: setting property 'raw_sharpness' to 0
+CS: Back: SetConfigJson: setting property 'sharpness' to 0
+CS: Back: SetConfigJson: setting property 'backlight_compensation' to 0
+CS: Back: SetConfigJson: setting property 'exposure_auto' to 1
+CS: Back: SetConfigJson: setting property 'raw_exposure_absolute' to 78
+CS: Back: SetConfigJson: setting property 'exposure_absolute' to 32
+CS: Back: SetConfigJson: setting property 'pan_absolute' to 0
+CS: Back: SetConfigJson: setting property 'tilt_absolute' to 0
+CS: Back: SetConfigJson: setting property 'zoom_absolute' to 0
+Setting camera config.. DONE
+Resetting Gyro.. Instantiating navX-Sensor on SPI Port 4.
+navX-Sensor Yaw Reset request ignored - startup calibration is currently in progress.
+DONE
+Connecting to telemetry table.. DONE
+navX-Sensor startup initialization and startup calibration complete.
+navX-Sensor onboard startup calibration complete.
+navX-Sensor Yaw angle auto-reset to 0.0 due to startup calibration.
+Robot disabling.. DONE
+NT: server: client CONNECTED: 169.254.48.36 port 47948
+NT: server: client CONNECTED: 10.50.24.22 port 51914
+Auto commands starting.. DONE
+Resetting gyro.. navX-Sensor Software Yaw Reset completed.
+DONE
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000088s
+	AutonomousPeriodic(): 0.028236s
+	AutonomousInit(): 0.000201s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000220s
+	AutonomousPeriodic(): 0.020960s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000082s
+	AutonomousPeriodic(): 0.023224s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000954s
+	AutonomousPeriodic(): 0.024493s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000457s
+	AutonomousPeriodic(): 0.029875s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000291s
+	AutonomousPeriodic(): 0.038287s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000080s
+	AutonomousPeriodic(): 0.023703s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000082s
+	AutonomousPeriodic(): 0.027044s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000080s
+	AutonomousPeriodic(): 0.022812s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000100s
+	AutonomousPeriodic(): 0.026169s
+	RobotPeriodic(): 0.000318s
+	AutonomousPeriodic(): 0.022994s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000086s
+	AutonomousPeriodic(): 0.022636s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000072s
+	AutonomousPeriodic(): 0.024679s
+Joystick Axis missing, check if all controllers are plugged in
+Robot disabling.. DONE
+Teleop commands starting.. DONE
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000113s
+	TeleopPeriodic(): 0.025700s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000671s
+	TeleopPeriodic(): 0.020602s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000082s
+	TeleopPeriodic(): 0.027700s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000174s
+	TeleopPeriodic(): 0.027428s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000084s
+	TeleopPeriodic(): 0.026563s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000111s
+	TeleopPeriodic(): 0.026553s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000086s
+	TeleopPeriodic(): 0.025376s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000091s
+	TeleopPeriodic(): 0.023481s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000100s
+	TeleopPeriodic(): 0.025766s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000131s
+	TeleopPeriodic(): 0.028509s
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000082s
+	TeleopPeriodic(): 0.034490s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000092s
+	TeleopPeriodic(): 0.024678s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000841s
+	TeleopPeriodic(): 0.034579s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000152s
+	TeleopPeriodic(): 0.024726s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000221s
+	TeleopPeriodic(): 0.028133s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000097s
+	TeleopPeriodic(): 0.027374s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000328s
+	TeleopPeriodic(): 0.025454s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000080s
+	TeleopPeriodic(): 0.032108s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000087s
+	TeleopPeriodic(): 0.022582s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000539s
+	TeleopPeriodic(): 0.023036s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000101s
+	TeleopPeriodic(): 0.026156s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000108s
+	TeleopPeriodic(): 0.024166s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000107s
+	TeleopPeriodic(): 0.023473s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000086s
+	TeleopPeriodic(): 0.030635s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000097s
+	TeleopPeriodic(): 0.020138s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000082s
+	TeleopPeriodic(): 0.034330s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000082s
+	TeleopPeriodic(): 0.028494s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000644s
+	TeleopPeriodic(): 0.022133s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000133s
+	TeleopPeriodic(): 0.022064s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000092s
+	TeleopPeriodic(): 0.025696s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000084s
+	TeleopPeriodic(): 0.024621s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000084s
+	TeleopPeriodic(): 0.031244s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000082s
+	TeleopPeriodic(): 0.024686s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000157s
+	TeleopPeriodic(): 0.029997s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000119s
+	TeleopPeriodic(): 0.024308s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000098s
+	TeleopPeriodic(): 0.033907s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000087s
+	TeleopPeriodic(): 0.024357s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000074s
+	TeleopPeriodic(): 0.027562s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000100s
+	TeleopPeriodic(): 0.023168s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000081s
+	TeleopPeriodic(): 0.033157s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000088s
+	TeleopPeriodic(): 0.027905s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000104s
+	TeleopPeriodic(): 0.036039s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000082s
+	TeleopPeriodic(): 0.031690s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000081s
+	TeleopPeriodic(): 0.021761s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000086s
+	TeleopPeriodic(): 0.030964s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000105s
+	TeleopPeriodic(): 0.029234s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000086s
+	TeleopPeriodic(): 0.021505s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000085s
+	TeleopPeriodic(): 0.027006s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000099s
+	TeleopPeriodic(): 0.022143s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000102s
+	TeleopPeriodic(): 0.030074s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000078s
+	TeleopPeriodic(): 0.028405s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000086s
+	TeleopPeriodic(): 0.027265s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000087s
+	TeleopPeriodic(): 0.031514s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000110s
+	TeleopPeriodic(): 0.024303s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000098s
+	TeleopPeriodic(): 0.033826s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000087s
+	TeleopPeriodic(): 0.021142s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000086s
+	TeleopPeriodic(): 0.030492s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.001061s
+	TeleopPeriodic(): 0.024799s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000083s
+	TeleopPeriodic(): 0.021461s
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000078s
+	TeleopPeriodic(): 0.023080s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000083s
+	TeleopPeriodic(): 0.023287s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000094s
+	TeleopPeriodic(): 0.021499s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000086s
+	TeleopPeriodic(): 0.029995s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000083s
+	TeleopPeriodic(): 0.031239s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000083s
+	TeleopPeriodic(): 0.030411s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000112s
+	TeleopPeriodic(): 0.020539s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000081s
+	TeleopPeriodic(): 0.022600s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000083s
+	TeleopPeriodic(): 0.023835s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000154s
+	TeleopPeriodic(): 0.028003s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000089s
+	TeleopPeriodic(): 0.022742s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000084s
+	TeleopPeriodic(): 0.023427s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000240s
+	TeleopPeriodic(): 0.023754s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000100s
+	TeleopPeriodic(): 0.025315s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000140s
+	TeleopPeriodic(): 0.025102s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000080s
+	TeleopPeriodic(): 0.033129s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000088s
+	TeleopPeriodic(): 0.024633s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000171s
+	TeleopPeriodic(): 0.020911s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000093s
+	TeleopPeriodic(): 0.020584s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000084s
+	TeleopPeriodic(): 0.030470s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000083s
+	TeleopPeriodic(): 0.022152s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000080s
+	TeleopPeriodic(): 0.027859s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000098s
+	TeleopPeriodic(): 0.030138s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000084s
+	TeleopPeriodic(): 0.025284s
+Climb mode active! Button combo being held!
+Climb mode active! Button combo being held!
+Climb mode active! Button combo being held!
+Climb mode active! Button combo being held!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000081s
+	TeleopPeriodic(): 0.042098s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000082s
+	TeleopPeriodic(): 0.025857s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000104s
+	TeleopPeriodic(): 0.028332s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000116s
+	TeleopPeriodic(): 0.025475s
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Pushing legs down!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000093s
+	TeleopPeriodic(): 0.020693s
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Pushing legs down!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000129s
+	TeleopPeriodic(): 0.029814s
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000206s
+	TeleopPeriodic(): 0.022054s
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Pushing legs down!
+	RobotPeriodic(): 0.000082s
+	TeleopPeriodic(): 0.027141s
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Pushing legs down!
+	RobotPeriodic(): 0.000082s
+	TeleopPeriodic(): 0.026745s
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Pushing legs down!
+	RobotPeriodic(): 0.000074s
+	TeleopPeriodic(): 0.025090s
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Pushing legs down!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000070s
+	TeleopPeriodic(): 0.026781s
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000086s
+	TeleopPeriodic(): 0.024736s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000102s
+	TeleopPeriodic(): 0.039470s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000383s
+	TeleopPeriodic(): 0.028138s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000067s
+	TeleopPeriodic(): 0.032569s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000068s
+	TeleopPeriodic(): 0.023193s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000072s
+	TeleopPeriodic(): 0.023798s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000066s
+	TeleopPeriodic(): 0.027083s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000458s
+	TeleopPeriodic(): 0.022705s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000065s
+	TeleopPeriodic(): 0.023503s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000065s
+	TeleopPeriodic(): 0.021115s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000070s
+	TeleopPeriodic(): 0.021018s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000089s
+	TeleopPeriodic(): 0.041137s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000069s
+	TeleopPeriodic(): 0.031903s
+Pushing legs down!
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000067s
+	TeleopPeriodic(): 0.023890s
+Pushing legs down!
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000063s
+	TeleopPeriodic(): 0.021165s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000067s
+	TeleopPeriodic(): 0.028059s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000067s
+	TeleopPeriodic(): 0.023574s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000120s
+	TeleopPeriodic(): 0.026999s
+Robot disabling.. DONE

@@ -4,6 +4,7 @@
 cCompressor::cCompressor() : frc::Subsystem("cCompressor") {
   // Initialize the motors
 	this->pCompressor = new frc::Compressor(PCM_CAN_ID);
+  this->pCompressor->SetClosedLoopControl(false);
 }
 
 void cCompressor::InitDefaultCommand() {
