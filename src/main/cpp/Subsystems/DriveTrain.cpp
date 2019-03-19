@@ -1,7 +1,8 @@
 #include "Subsystems/DriveTrain.h"
+#include <string>
 
 DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
-  // Initialize the motors
+  // Initialize the motors 
 	this->pLeftFrontMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_FRONT_MOTOR);
 	this->pLeftRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_REAR_MOTOR);
 	this->pLeftRearMotor->Follow(*pLeftFrontMotor);
@@ -30,6 +31,36 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	this->pRightFrontMotor->SetSafetyEnabled(false);
 	this->pRightRearMotor->SetSafetyEnabled(false);
 	this->pRobotDrive->SetSafetyEnabled(false);
+
+	this->pLeftFrontMotor->ConfigSelectedFeedbackSensor(FeedbackDevice::CTRE_MagEncoder_Relative, PID_LOOP_INDEX, TIMEOUT_MS);
+	this->pLeftFrontMotor->SetSensorPhase(true);
+	this->pLeftFrontMotor->ConfigNeutralDeadband(NEUTRAL_DEADBAND_PERCENT * 0.01, TIMEOUT_MS);
+
+	this->pLeftFrontMotor->Config_kF(SLOT_INDEX, 0.0, TIMEOUT_MS);
+	this->pLeftFrontMotor->Config_kP(SLOT_INDEX, 0.0, TIMEOUT_MS);
+	this->pLeftFrontMotor->Config_kI(SLOT_INDEX, 0.0, TIMEOUT_MS);
+	this->pLeftFrontMotor->Config_kD(SLOT_INDEX, 0.0, TIMEOUT_MS);
+
+	this->pLeftFrontMotor->ConfigMotionProfileTrajectoryPeriod(10, TIMEOUT_MS); //Our profile uses 10 ms timing
+	/* status 10 provides the trajectory target for motion profile AND motion magic */
+	this->pLeftFrontMotor->SetStatusFramePeriod(StatusFrameEnhanced::Status_10_MotionMagic, 10, TIMEOUT_MS);
+	this->pLeftFrontMotor->ConfigMotionCruiseVelocity(6800, TIMEOUT_MS);
+	this->pLeftFrontMotor->ConfigMotionAcceleration(6800, TIMEOUT_MS);
+
+	this->pRightFrontMotor->ConfigSelectedFeedbackSensor(FeedbackDevice::CTRE_MagEncoder_Relative, PID_LOOP_INDEX, TIMEOUT_MS);
+	this->pRightFrontMotor->SetSensorPhase(true);
+	this->pRightFrontMotor->ConfigNeutralDeadband(NEUTRAL_DEADBAND_PERCENT * 0.01, TIMEOUT_MS);
+
+	this->pRightFrontMotor->Config_kF(SLOT_INDEX, 0.0, TIMEOUT_MS);
+	this->pRightFrontMotor->Config_kP(SLOT_INDEX, 0.0, TIMEOUT_MS);
+	this->pRightFrontMotor->Config_kI(SLOT_INDEX, 0.0, TIMEOUT_MS);
+	this->pRightFrontMotor->Config_kD(SLOT_INDEX, 0.0, TIMEOUT_MS);
+
+	this->pRightFrontMotor->ConfigMotionProfileTrajectoryPeriod(10, TIMEOUT_MS); //Our profile uses 10 ms timing
+	/* status 10 provides the trajectory target for motion profile AND motion magic */
+	this->pRightFrontMotor->SetStatusFramePeriod(StatusFrameEnhanced::Status_10_MotionMagic, 10, TIMEOUT_MS);
+	this->pRightFrontMotor->ConfigMotionCruiseVelocity(6800, TIMEOUT_MS);
+	this->pRightFrontMotor->ConfigMotionAcceleration(6800, TIMEOUT_MS);
 }
 
 void DriveTrain::InitDefaultCommand() {
@@ -63,4 +94,12 @@ void DriveTrain::RadialDrive(double magnitude, double radial){
   // pass to tankdrive
   this->pRobotDrive->TankDrive(leftSpeed, rightSpeed);
   return;
+}
+
+void DriveTrain::InitFollow(string path){
+	
+}
+
+void DriveTrain::Follow(){
+	
 }

@@ -4,7 +4,7 @@
   "maxVelocity": 4.65,
   "maxAcceleration": 2.0,
   "maxJerk": 60.0,
-  "wheelBase": 0.7874,
+  "wheelBase": 0.508,
   "gameName": "Destination: Deep Space",
   "outputDir": ""
 }

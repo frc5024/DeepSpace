@@ -8,6 +8,8 @@
 #include <frc/drive/DifferentialDrive.h>
 #include "RobotMap.h"
 #include <Commands/DriveWithJoystick.h>
+#include <string>
+#include <pathfinder.h>
 
 class DriveTrain : public frc::Subsystem {
  public:
@@ -38,8 +40,15 @@ class DriveTrain : public frc::Subsystem {
 	 */
 	void RadialDrive(double magnitude, double radial);
 
- private:
-  can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
+	/**
+	 * Follow path specified
+	 * @param path name
+	 */
+	void InitFollow(string path);
+	void Follow();
+
+  private:
+	can::WPI_TalonSRX *pLeftFrontMotor; //!< Pointer for left front motor
 	can::WPI_TalonSRX* pLeftRearMotor;  //!< Pointer for left rear motor
 	can::WPI_TalonSRX* pRightFrontMotor;//!< Pointer for right front motor
 	can::WPI_TalonSRX* pRightRearMotor; //!< Pointer for right rear motor
