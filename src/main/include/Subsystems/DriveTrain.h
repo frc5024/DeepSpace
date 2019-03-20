@@ -3,8 +3,8 @@
 #define _DRIVETRAIN_HG_
 
 #include <frc/commands/Subsystem.h>
-#include <frc/WPILib.h>
-#include <ctre/Phoenix.h>
+// #include <frc/WPILib.h>
+#include <Interfaces/ESC.h>
 #include <frc/drive/DifferentialDrive.h>
 #include "RobotMap.h"
 #include <Commands/DriveWithJoystick.h>
@@ -39,10 +39,13 @@ class DriveTrain : public frc::Subsystem {
 	void RadialDrive(double magnitude, double radial);
 
  private:
-  can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
-	can::WPI_TalonSRX* pLeftRearMotor;  //!< Pointer for left rear motor
-	can::WPI_TalonSRX* pRightFrontMotor;//!< Pointer for right front motor
-	can::WPI_TalonSRX* pRightRearMotor; //!< Pointer for right rear motor
+  	ESC::TalonSRX *pLeftFrontMotor; //!< Pointer for left front motor
+	ESC::TalonSRX *pLeftRearMotor;  //!< Pointer for left rear motor
+	ESC::TalonSRX *pRightFrontMotor;//!< Pointer for right front motor
+	ESC::TalonSRX *pRightRearMotor; //!< Pointer for right rear motor
+
+	frc::SpeedController *pLeftSide;
+	frc::SpeedController *pRightSide;
 
 	frc::DifferentialDrive* pRobotDrive; //!< Pointer for a differential drivebase made up of 2 motor pairs
 };
