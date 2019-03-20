@@ -2,8 +2,8 @@
 
 DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
   // Initialize the motors
-	this->pLeftFrontMotor = new ESC::TalonSRX(DRIVETRAIN_LEFT_FRONT_MOTOR);
-	this->pLeftRearMotor = new ESC::TalonSRX(DRIVETRAIN_LEFT_REAR_MOTOR);
+	this->pLeftFrontMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_FRONT_MOTOR);
+	this->pLeftRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_REAR_MOTOR);
 	// this->pLeftRearMotor->Follow(*pLeftFrontMotor);
 
 	this->pLeftFrontMotor->SetInverted(false);
@@ -11,8 +11,8 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	// this->pLeftFrontMotor->SetNeutralMode(NeutralMode::Brake);
 	// this->pLeftRearMotor->SetNeutralMode(NeutralMode::Brake);
 
-	this->pRightFrontMotor = new ESC::TalonSRX(DRIVETRAIN_RIGHT_FRONT_MOTOR);
-	this->pRightRearMotor = new ESC::TalonSRX(DRIVETRAIN_RIGHT_REAR_MOTOR);
+	this->pRightFrontMotor = new can::WPI_TalonSRX(DRIVETRAIN_RIGHT_FRONT_MOTOR);
+	this->pRightRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_RIGHT_REAR_MOTOR);
 	// this->pRightRearMotor->Follow(*pRightFrontMotor);
 
 	this->pRightFrontMotor->SetInverted(true); // change this based on test or production robot
@@ -32,6 +32,13 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	// this->pRightFrontMotor->SetSafetyEnabled(false);
 	// this->pRightRearMotor->SetSafetyEnabled(false);
 	this->pRobotDrive->SetSafetyEnabled(false);
+
+	// Configure encoders
+	this->pLeftFrontMotor->ConfigFactoryDefault();
+	this->pRightFrontMotor->ConfigFactoryDefault();
+
+	this->pLeftFrontMotor->SetSensorPhase(true);
+	this->pRightFrontMotor->SetSensorPhase(true);
 }
 
 void DriveTrain::InitDefaultCommand() {
@@ -65,4 +72,12 @@ void DriveTrain::RadialDrive(double magnitude, double radial){
   // pass to tankdrive
   this->pRobotDrive->TankDrive(leftSpeed, rightSpeed);
   return;
+}
+
+int DriveTrain::GetLeftEncoderPosition(){
+	return this->pLeftFrontMotor->GetSelectedSensorPosition();
+}
+
+int DriveTrain::GetRightEncoderPosition(){
+	return this->pRightFrontMotor->GetSelectedSensorPosition();
 }
