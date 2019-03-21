@@ -10,7 +10,7 @@
 #include <ctre/Phoenix.h>
 #include "RobotMap.h"
 
-#include <Components/GearBox.h>
+#include <rrlib/Components/GearBox.h>
 #include <frc/SpeedControllerGroup.h>
 
 class Arm : public frc::Subsystem {

@@ -9,8 +9,8 @@
 #include "RobotMap.h"
 #include <Commands/DriveWithJoystick.h>
 
-#include <Components/GearBox.h>
-#include <Components/Encoder.h>
+#include <rrlib/Components/GearBox.h>
+#include <rrlib/Components/Encoder.h>
 
 
 class DriveTrain : public frc::Subsystem {

@@ -1,4 +1,4 @@
-#include <Components/Encoder.h>
+#include <rrlib/Components/Encoder.h>
 
 /* EncodingDevice */
 rr::components::EncodingDevice::EncodingDevice(double circumferenceCM){

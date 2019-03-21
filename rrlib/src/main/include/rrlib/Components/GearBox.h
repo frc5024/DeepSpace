@@ -4,7 +4,7 @@
 #include <ctre/Phoenix.h>
 #include <frc/SpeedController.h>
 #include <frc/DigitalInput.h>
-#include <Components/Encoder.h>
+#include <rrlib/Components/Encoder.h>
 
 namespace rr {
     namespace components {
