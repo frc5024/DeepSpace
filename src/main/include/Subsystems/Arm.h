@@ -10,6 +10,9 @@
 #include <ctre/Phoenix.h>
 #include "RobotMap.h"
 
+#include <Components/GearBox.h>
+#include <frc/SpeedControllerGroup.h>
+
 class Arm : public frc::Subsystem {
  public:
   Arm();
@@ -33,6 +36,9 @@ class Arm : public frc::Subsystem {
   private:
   can::WPI_TalonSRX* pArmMotor; //!< Pointer for Arm arm motor
   can::WPI_TalonSRX* pArmMotor2; //!< Pointer for Arm arm motor
+
+  rr::components::GearBox *pArmGearBox;
+
   frc::AnalogInput m_ultrasonic{CLIMB_ULTRASONIC};
   static constexpr double kValueToInches = 0.125;
 };

@@ -25,6 +25,7 @@
 #define DRIVETRAIN_RIGHT_REAR_MOTOR  4
 
 #define TALLON_TPR 4096
+#define WHEEL_CIRCUM_CM 25.13
 
 // DriveTrain motor invertions
 #define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT  false

@@ -54,12 +54,15 @@ model {
             sources.cpp {
                 source {
                     srcDir 'src/main/cpp'
+                    srcDir  'rrlib/src/main/cpp'
                     include '**/*.cpp', '**/*.cc'
                 }
                 exportedHeaders {
                     srcDir 'src/main/include'
+                    srcDir  'rrlib/src/main/include'
                     if (includeSrcInIncludeRoot) {
                         srcDir 'src/main/cpp'
+                        srcDir  'rrlib/src/main/cpp'
                     }
                 }
             }

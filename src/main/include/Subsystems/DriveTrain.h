@@ -9,6 +9,10 @@
 #include "RobotMap.h"
 #include <Commands/DriveWithJoystick.h>
 
+#include <Components/GearBox.h>
+#include <Components/Encoder.h>
+
+
 class DriveTrain : public frc::Subsystem {
  public:
   DriveTrain(); //!< Class constructor
@@ -42,13 +46,13 @@ class DriveTrain : public frc::Subsystem {
 	int GetRightEncoderPosition();
 
   private:
-  	can::WPI_TalonSRX *pLeftFrontMotor; //!< Pointer for left front motor
-	can::WPI_TalonSRX *pLeftRearMotor;  //!< Pointer for left rear motor
-	can::WPI_TalonSRX *pRightFrontMotor;//!< Pointer for right front motor
-	can::WPI_TalonSRX *pRightRearMotor; //!< Pointer for right rear motor
+  	can::WPI_TalonSRX *pLeftFrontMotor;  //!< Pointer for left front motor
+	can::WPI_TalonSRX *pLeftRearMotor;   //!< Pointer for left rear motor
+	can::WPI_TalonSRX *pRightFrontMotor; //!< Pointer for right front motor
+	can::WPI_TalonSRX *pRightRearMotor;  //!< Pointer for right rear motor
 
-	frc::SpeedController *pLeftSide;
-	frc::SpeedController *pRightSide;
+	rr::components::GearBox *pLeftGearBox;  //!< Left gear box
+	rr::components::GearBox *pRightGearBox; //!< Right gear box
 
 	frc::DifferentialDrive* pRobotDrive; //!< Pointer for a differential drivebase made up of 2 motor pairs
 };
