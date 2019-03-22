@@ -38,25 +38,11 @@ class DriveTrain : public frc::Subsystem {
 	 */
 	void RadialDrive(double magnitude, double radial);
 
-<<<<<<< HEAD
  private:
   can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
 	can::WPI_TalonSRX* pLeftRearMotor;  //!< Pointer for left rear motor
 	can::WPI_TalonSRX* pRightFrontMotor;//!< Pointer for right front motor
 	can::WPI_TalonSRX* pRightRearMotor; //!< Pointer for right rear motor
-=======
-	int GetLeftEncoderPosition();
-	int GetRightEncoderPosition();
-
-  private:
-  	can::WPI_TalonSRX *pLeftFrontMotor; //!< Pointer for left front motor
-	can::WPI_TalonSRX *pLeftRearMotor;  //!< Pointer for left rear motor
-	can::WPI_TalonSRX *pRightFrontMotor;//!< Pointer for right front motor
-	can::WPI_TalonSRX *pRightRearMotor; //!< Pointer for right rear motor
-
-	frc::SpeedController *pLeftSide;
-	frc::SpeedController *pRightSide;
->>>>>>> parent of 816d01c... implemented GearBoxes, EncodingDevices, EncoderAdapters, New drive code, New arm code, Encoders, ane much more
 
 	frc::DifferentialDrive* pRobotDrive; //!< Pointer for a differential drivebase made up of 2 motor pairs
 };

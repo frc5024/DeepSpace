@@ -24,11 +24,8 @@
 #define DRIVETRAIN_RIGHT_FRONT_MOTOR 3
 #define DRIVETRAIN_RIGHT_REAR_MOTOR  4
 
-<<<<<<< HEAD
-=======
 #define TALLON_TPR 4096
 
->>>>>>> parent of 816d01c... implemented GearBoxes, EncodingDevices, EncoderAdapters, New drive code, New arm code, Encoders, ane much more
 // DriveTrain motor invertions
 #define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT  false
 #define DRIVETRAIN_LEFT_REAR_MOTOR_INVERT   false

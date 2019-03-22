@@ -4,11 +4,7 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
   // Initialize the motors
 	this->pLeftFrontMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_FRONT_MOTOR);
 	this->pLeftRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_REAR_MOTOR);
-<<<<<<< HEAD
 	this->pLeftRearMotor->Follow(*pLeftFrontMotor);
-=======
-	// this->pLeftRearMotor->Follow(*pLeftFrontMotor);
->>>>>>> parent of 816d01c... implemented GearBoxes, EncodingDevices, EncoderAdapters, New drive code, New arm code, Encoders, ane much more
 
 	this->pLeftFrontMotor->SetInverted(false);
 	this->pLeftRearMotor->SetInverted(false);
@@ -17,11 +13,7 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 
 	this->pRightFrontMotor = new can::WPI_TalonSRX(DRIVETRAIN_RIGHT_FRONT_MOTOR);
 	this->pRightRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_RIGHT_REAR_MOTOR);
-<<<<<<< HEAD
 	this->pRightRearMotor->Follow(*pRightFrontMotor);
-=======
-	// this->pRightRearMotor->Follow(*pRightFrontMotor);
->>>>>>> parent of 816d01c... implemented GearBoxes, EncodingDevices, EncoderAdapters, New drive code, New arm code, Encoders, ane much more
 
 	this->pRightFrontMotor->SetInverted(true); // change this based on test or production robot
 	this->pRightRearMotor->SetInverted(true); // change this based on test or production robot
@@ -29,13 +21,7 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	// this->pRightRearMotor->SetNeutralMode(NeutralMode::Brake);
 
   // Create a DifferentialDrive class using our motors
-<<<<<<< HEAD
 	this->pRobotDrive = new frc::DifferentialDrive(*pLeftFrontMotor, *pRightFrontMotor);
-=======
-	this->pLeftSide = new frc::SpeedControllerGroup(*this->pLeftFrontMotor, *this->pLeftRearMotor);
-	this->pRightSide = new frc::SpeedControllerGroup(*this->pRightFrontMotor, *this->pRightRearMotor);
-	this->pRobotDrive = new frc::DifferentialDrive(*pLeftSide, *pRightSide);
->>>>>>> parent of 816d01c... implemented GearBoxes, EncodingDevices, EncoderAdapters, New drive code, New arm code, Encoders, ane much more
 
   // Disable saftey modes
   // Sounds like a bad idea, but this prevents the robot from locking up if we take too long on a loop
@@ -84,15 +70,4 @@ void DriveTrain::RadialDrive(double magnitude, double radial){
   // pass to tankdrive
   this->pRobotDrive->TankDrive(leftSpeed, rightSpeed);
   return;
-<<<<<<< HEAD
-=======
-}
-
-int DriveTrain::GetLeftEncoderPosition(){
-	return this->pLeftFrontMotor->GetSelectedSensorPosition();
-}
-
-int DriveTrain::GetRightEncoderPosition(){
-	return this->pRightFrontMotor->GetSelectedSensorPosition();
->>>>>>> parent of 816d01c... implemented GearBoxes, EncodingDevices, EncoderAdapters, New drive code, New arm code, Encoders, ane much more
 }
