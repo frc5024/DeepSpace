@@ -18,6 +18,10 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	this->pRightFrontMotor->SetInverted(false);
 	this->pRightRearMotor->SetInverted(false);
 
+	// Set back motors to follow front motors for motion-related uses
+	this->pLeftRearMotor->Follow(*this->pLeftFrontMotor);
+	this->pRightRearMotor->Follow(*this->pRightFrontMotor);
+
   // Create a DifferentialDrive class using our motors
 	this->pLeftGearBox->motor = new frc::SpeedControllerGroup(*this->pLeftFrontMotor, *this->pLeftRearMotor);
 	this->pLeftGearBox->sensor = new rr::components::TalonAdapter(this->pLeftFrontMotor, WHEEL_CIRCUM_CM, TALLON_TPR, false);
