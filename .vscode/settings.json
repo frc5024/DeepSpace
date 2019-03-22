@@ -14,9 +14,7 @@
   "C_Cpp.default.configurationProvider": "vscode-wpilib",
   "wpilib.online": true,
   "files.associations": {
-    "*.tidal": "haskell",
     "condition_variable": "cpp",
-    "*.inc": "cpp",
-    "iostream": "cpp"
+    "*.inc": "cpp"
   }
 }

@@ -1,32 +1,27 @@
 #include "Subsystems/DriveTrain.h"
-#include "DeviceMap.h"
-#include <iostream>
 
-
-/* DriveTrain */
 DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
   // Initialize the motors
 	this->pLeftFrontMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_FRONT_MOTOR);
 	this->pLeftRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_REAR_MOTOR);
+	this->pLeftRearMotor->Follow(*pLeftFrontMotor);
 
 	this->pLeftFrontMotor->SetInverted(false);
 	this->pLeftRearMotor->SetInverted(false);
+	// this->pLeftFrontMotor->SetNeutralMode(NeutralMode::Brake);
+	// this->pLeftRearMotor->SetNeutralMode(NeutralMode::Brake);
 
 	this->pRightFrontMotor = new can::WPI_TalonSRX(DRIVETRAIN_RIGHT_FRONT_MOTOR);
 	this->pRightRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_RIGHT_REAR_MOTOR);
+	this->pRightRearMotor->Follow(*pRightFrontMotor);
 
-	this->pRightFrontMotor->SetInverted(false);
-	this->pRightRearMotor->SetInverted(false);
+	this->pRightFrontMotor->SetInverted(true); // change this based on test or production robot
+	this->pRightRearMotor->SetInverted(true); // change this based on test or production robot
+	// this->pRightFrontMotor->SetNeutralMode(NeutralMode::Brake);
+	// this->pRightRearMotor->SetNeutralMode(NeutralMode::Brake);
 
   // Create a DifferentialDrive class using our motors
-	this->pLeftGearBox->motor = new frc::SpeedControllerGroup(*this->pLeftFrontMotor, *this->pLeftRearMotor);
-	this->pLeftGearBox->sensor = new rr::components::TalonAdapter(this->pLeftFrontMotor, WHEEL_CIRCUM_CM, TALLON_TPR, false);
-	this->pLeftGearBox->sensor->Reset();
-
-	this->pRightGearBox->motor = new frc::SpeedControllerGroup(*this->pRightFrontMotor, *this->pRightRearMotor);
-	this->pRightGearBox->sensor = new rr::components::TalonAdapter(this->pRightFrontMotor, WHEEL_CIRCUM_CM, TALLON_TPR, true);
-
-	this->pRobotDrive = new frc::DifferentialDrive(*this->pLeftGearBox->motor, *this->pRightGearBox->motor);
+	this->pRobotDrive = new frc::DifferentialDrive(*pLeftFrontMotor, *pRightFrontMotor);
 
   // Disable saftey modes
   // Sounds like a bad idea, but this prevents the robot from locking up if we take too long on a loop
@@ -42,9 +37,7 @@ void DriveTrain::InitDefaultCommand() {
 }
 
 void DriveTrain::ArcadeDrive(double xSpeed, double zRotation) {
-	this->pRobotDrive->ArcadeDrive(xSpeed, zRotation); // Pass through to robot drive
-	// The following line is for debugging encoders
-	// std::cout << "Left: " << this->pLeftGearBox->sensor->GetTicks() << " Right: " << this->pRightGearBox->sensor->GetTicks() << std::endl;
+	this->pRobotDrive->ArcadeDrive(zRotation, xSpeed); // API parameter order is incorrect
 	return;
 }
 
@@ -70,12 +63,4 @@ void DriveTrain::RadialDrive(double magnitude, double radial){
   // pass to tankdrive
   this->pRobotDrive->TankDrive(leftSpeed, rightSpeed);
   return;
-}
-
-int DriveTrain::GetLeftEncoderPosition(){
-	return this->pLeftGearBox->sensor->GetTicks();
-}
-
-int DriveTrain::GetRightEncoderPosition(){
-	return this->pRightGearBox->sensor->GetTicks();
 }

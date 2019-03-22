@@ -3,15 +3,11 @@
 #define _DRIVETRAIN_HG_
 
 #include <frc/commands/Subsystem.h>
-// #include <frc/WPILib.h>
+#include <frc/WPILib.h>
 #include <ctre/Phoenix.h>
 #include <frc/drive/DifferentialDrive.h>
 #include "RobotMap.h"
 #include <Commands/DriveWithJoystick.h>
-
-#include <Components/GearBox.h>
-#include <Components/Encoder.h>
-
 
 class DriveTrain : public frc::Subsystem {
  public:
@@ -42,17 +38,11 @@ class DriveTrain : public frc::Subsystem {
 	 */
 	void RadialDrive(double magnitude, double radial);
 
-	int GetLeftEncoderPosition();
-	int GetRightEncoderPosition();
-
-  private:
-  	can::WPI_TalonSRX *pLeftFrontMotor;  //!< Pointer for left front motor
-	can::WPI_TalonSRX *pLeftRearMotor;   //!< Pointer for left rear motor
-	can::WPI_TalonSRX *pRightFrontMotor; //!< Pointer for right front motor
-	can::WPI_TalonSRX *pRightRearMotor;  //!< Pointer for right rear motor
-
-	rr::components::GearBox *pLeftGearBox;  //!< Left gear box
-	rr::components::GearBox *pRightGearBox; //!< Right gear box
+ private:
+  can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
+	can::WPI_TalonSRX* pLeftRearMotor;  //!< Pointer for left rear motor
+	can::WPI_TalonSRX* pRightFrontMotor;//!< Pointer for right front motor
+	can::WPI_TalonSRX* pRightRearMotor; //!< Pointer for right rear motor
 
 	frc::DifferentialDrive* pRobotDrive; //!< Pointer for a differential drivebase made up of 2 motor pairs
 };

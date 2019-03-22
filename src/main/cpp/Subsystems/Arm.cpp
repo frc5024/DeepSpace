@@ -11,8 +11,6 @@ Arm::Arm() : Subsystem("Arm") {
   this->pArmMotor2->SetNeutralMode(NeutralMode::Brake);
 
   this->pArmMotor2->SetSafetyEnabled(false);
-
-  this->pArmGearBox->motor = new frc::SpeedControllerGroup(*this->pArmMotor, *this->pArmMotor2);
 }
 
 void Arm::InitDefaultCommand() {
@@ -21,7 +19,8 @@ void Arm::InitDefaultCommand() {
 }
 
 void Arm::MoveArm(double Speed) {
-  this->pArmGearBox->motor->Set(Speed);
+  this->pArmMotor->Set(Speed);
+  this->pArmMotor2->Set(Speed);
 }
 
 double Arm::getDistanceFromFloor() {
