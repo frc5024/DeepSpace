@@ -38,8 +38,18 @@ class DriveTrain : public frc::Subsystem {
 	 */
 	void RadialDrive(double magnitude, double radial);
 
- private:
-  can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
+	int GetLeftTicks();
+	int GetRightTicks();
+
+	void ResetLeft();
+	void ResetRight();
+
+	void MagicDrive(double left, double right, double magnitude);
+
+	void RawDrive(double l, double r);
+
+  private:
+	can::WPI_TalonSRX *pLeftFrontMotor; //!< Pointer for left front motor
 	can::WPI_TalonSRX* pLeftRearMotor;  //!< Pointer for left rear motor
 	can::WPI_TalonSRX* pRightFrontMotor;//!< Pointer for right front motor
 	can::WPI_TalonSRX* pRightRearMotor; //!< Pointer for right rear motor

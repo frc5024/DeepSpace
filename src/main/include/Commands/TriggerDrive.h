@@ -7,6 +7,9 @@
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
 
+#include <pathfinder.h>
+#include <AHRS.h>
+
 
 class TriggerDrive : public frc::Command {
  public:
@@ -33,6 +36,25 @@ private:
 	double rotation; //!< Rotation value that will be passed into DriveTrain::ArcadeDrive
 	
 	frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller because we are lazy
+
+  
+  Segment trajectory[1024];     // Over allocate as we don't know the length yet
+  int legnth = 13;
+  double wheelbase_width = 0.5017;
+
+  Segment leftTrajectory[13];
+  Segment rightTrajectory[13];
+  EncoderFollower followerL;
+  // = new EncoderFollower;
+  EncoderFollower followerR;
+  // = new EncoderFollower;
+  // followerL->last_error = 0; followerL->segment = 0; followerL->finished = 0;
+  // followerR.last_error = 0; followerR.segment = 0; followerR.finished = 0;
+
+  EncoderConfig configL;
+  EncoderConfig configR;
+
+  AHRS *pGyro;
 };
 
 #endif // _TRIGGERDRIVE_HG_

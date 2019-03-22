@@ -4,18 +4,18 @@
 ControlCargo::ControlCargo() {
   // Use Requires() here to declare subsystem dependencies
   Requires(Robot::m_Flap);
-  this->pJoyOp = Robot::m_oi->GetJoystickOperator();
+  this->pJoyDrive = Robot::m_oi->GetJoystickOperator();
 }
 
 // Called just before this Command runs the first time
 // aka: every time teleop is enabled
 void ControlCargo::Initialize() {}
 
-// Called repeatedly when this Command is scheduled to run
+// Called repeatedly when this Command is scheduled  to run
 void ControlCargo::Execute() {
 
   // Control piston
-  if(this->pJoyOp->GetTriggerAxis(Hand::kLeftHand) > 0.8){
+  if(this->pJoyDrive->GetAButton()){
     Robot::m_Flap->Deploy();
   }else{
     Robot::m_Flap->Retract();
