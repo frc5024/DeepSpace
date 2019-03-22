@@ -12,6 +12,7 @@ Arm::Arm() : Subsystem("Arm") {
 
   this->pArmMotor2->SetSafetyEnabled(false);
 
+  Log("Building GearBox");
   this->pArmGearBox->motor = new frc::SpeedControllerGroup(*this->pArmMotor, *this->pArmMotor2);
 }
 

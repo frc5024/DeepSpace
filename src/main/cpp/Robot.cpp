@@ -33,6 +33,7 @@ void Robot::RobotInit() {
   Header("Creating Subsystems.. ");
   this->m_DriveTrain   = new DriveTrain();
   this->m_CrawlDrive   = new CrawlDrive();
+  Log("CrawlDrive");
   this->m_Arm          = new Arm();
   this->m_Leg          = new Leg();
   this->m_Slider       = new Slider();
