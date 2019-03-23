@@ -24,7 +24,11 @@
 #define DRIVETRAIN_RIGHT_FRONT_MOTOR 3
 #define DRIVETRAIN_RIGHT_REAR_MOTOR  4
 
+// Motion Profiling and encoders
 #define TALLON_TPR 4096
+#define ROBOT_WIDTH 0.5017 // in meters
+#define WHEEL_CIRC 0.638
+#define MAX_VELOCITY 3
 
 // DriveTrain motor invertions
 #define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT  false

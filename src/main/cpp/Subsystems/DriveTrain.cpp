@@ -79,6 +79,9 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	/* Set acceleration and vcruise velocity - see documentation */
 	this->pLeftFrontMotor->ConfigMotionCruiseVelocity(1500, 10);
 	this->pLeftFrontMotor->ConfigMotionAcceleration(1500, 10);
+
+	this->pGyro = new AHRS(frc::SPI::kMXP);
+  this->pGyro->Reset();
 }
 
 void DriveTrain::InitDefaultCommand() {
@@ -143,4 +146,82 @@ void DriveTrain::MagicDrive(double left, double right, double magnitude){
 void DriveTrain::RawDrive(double l, double r){
 	this->pLeftFrontMotor->Set(l);
 	this->pRightFrontMotor->Set(r);
+}
+
+TankProfile DriveTrain::LoadProfile(const char * path){
+	double P = 0.0;
+	double I = 0.0;
+	double D = 0.0;
+	double A = 0.0;
+
+	// Create a TankProfile to return
+	TankProfile output;
+
+	// Over-sized Trajectory to store raw input
+	Segment trajectory[1024];
+
+	// Load the file
+	FILE *fp = fopen(path, "r");
+  output.length = pathfinder_deserialize_csv(fp, trajectory);
+  fclose(fp);
+
+	// Parse left and right sides
+	pathfinder_modify_tank(trajectory, output.length, output.leftTrajectory, output.rightTrajectory, ROBOT_WIDTH);
+
+	// Create encoder configs
+	output.leftConfig = {
+			this->GetLeftTicks(),
+			TALLON_TPR,
+			WHEEL_CIRC,
+			P,
+			I,
+			D,
+			1.0 / MAX_VELOCITY,
+			A
+	};
+
+	output.rightConfig = {
+			this->GetRightTicks(),
+			TALLON_TPR,
+			WHEEL_CIRC,
+			P,
+			I,
+			D,
+			1.0 / MAX_VELOCITY,
+			A
+	};
+
+}
+
+void DriveTrain::ResetProfile(TankProfile *profile){
+	// Goto first point
+	profile->leftFollower.segment = 0;
+	profile->rightFollower.segment = 0;
+
+	// Set finished to false
+	profile->leftFollower.finished = 0;
+	profile->rightFollower.finished = 0;
+}
+
+void DriveTrain::Follow(TankProfile *profile){
+	// Get motor speeds for point
+	double l = pathfinder_follow_encoder(profile->leftConfig, &profile->leftFollower, profile->leftTrajectory, profile->length, this->GetLeftTicks());
+  double r = pathfinder_follow_encoder(profile->rightConfig, &profile->rightFollower, profile->rightTrajectory, profile->length, this->GetRightTicks());
+
+	// find gyro error
+	double gyro_heading = this->pGyro->GetAngle();
+  double desired_heading = r2d(profile->leftFollower.heading);
+	double angle_difference = desired_heading - gyro_heading;
+
+	// wrap angle around 360
+	angle_difference = std::fmod(angle_difference, 360.0);
+	if (std::abs(angle_difference) > 180.0) {
+		angle_difference = (angle_difference > 0) ? angle_difference - 360 : angle_difference + 360;
+	}
+
+	// Get amount to turn
+	double turn = 0.8 * (-1.0/80.0) * angle_difference;
+
+	// drive
+	this->RawDrive(l + turn, r - turn);
 }

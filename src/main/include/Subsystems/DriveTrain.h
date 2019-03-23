@@ -9,6 +9,23 @@
 #include "RobotMap.h"
 #include <Commands/DriveWithJoystick.h>
 
+#include <pathfinder.h>
+#include <AHRS.h>
+
+
+struct TankProfile{
+	int length;
+
+	Segment leftTrajectory[1024];
+	Segment rightTrajectory[1024];
+
+	EncoderConfig leftConfig;
+	EncoderConfig rightConfig;
+
+	EncoderFollower leftFollower;
+	EncoderFollower rightFollower;
+};
+
 class DriveTrain : public frc::Subsystem {
  public:
   DriveTrain(); //!< Class constructor
@@ -48,6 +65,10 @@ class DriveTrain : public frc::Subsystem {
 
 	void RawDrive(double l, double r);
 
+	TankProfile LoadProfile(const char * path);
+	void Follow(TankProfile *profile);
+	void ResetProfile(TankProfile *profile);
+
   private:
 	can::WPI_TalonSRX *pLeftFrontMotor; //!< Pointer for left front motor
 	can::WPI_TalonSRX* pLeftRearMotor;  //!< Pointer for left rear motor
@@ -55,6 +76,8 @@ class DriveTrain : public frc::Subsystem {
 	can::WPI_TalonSRX* pRightRearMotor; //!< Pointer for right rear motor
 
 	frc::DifferentialDrive* pRobotDrive; //!< Pointer for a differential drivebase made up of 2 motor pairs
+
+	AHRS *pGyro;
 };
 
 #endif // _DRIVETRAIN_HG_
