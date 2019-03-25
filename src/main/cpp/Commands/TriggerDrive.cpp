@@ -20,6 +20,7 @@ void TriggerDrive::Initialize() {
 
   // Load test profile
   Log("Load file");
+  Log(Robot::m_DriveTrain->GetLeftTicks());
   this->testProfile = Robot::m_DriveTrain->LoadProfile("/home/lvuser/deploy/paths/Unnamed.pf1.csv");
 }
 
@@ -49,10 +50,10 @@ void TriggerDrive::Execute() {
 
   // Follow profile test
   if(this->pJoyDrive->GetAButton()){
-    Robot::m_DriveTrain->ResetProfile(&this->testProfile);
+    Robot::m_DriveTrain->ResetProfile(this->testProfile);
   }
   if(this->pJoyDrive->GetBButton()){
-    Robot::m_DriveTrain->Follow(&this->testProfile);
+    Robot::m_DriveTrain->Follow(this->testProfile);
   }
 
   // Reset the speed and rotation

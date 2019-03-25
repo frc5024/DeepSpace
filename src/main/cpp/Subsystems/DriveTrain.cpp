@@ -149,11 +149,13 @@ void DriveTrain::RawDrive(double l, double r){
 }
 
 TankProfile DriveTrain::LoadProfile(const char * path){
+	Log("Config PID");
 	double P = 0.0;
 	double I = 0.0;
 	double D = 0.0;
 	double A = 0.0;
 
+	Log("Build TankProfile");
 	// Create a TankProfile to return
 	TankProfile output;
 
@@ -161,9 +163,11 @@ TankProfile DriveTrain::LoadProfile(const char * path){
 	Segment trajectory[1024];
 
 	// Load the file
+	Log("Opening csv");
+	Log(path);
 	FILE *fp = fopen(path, "r");
-  output.length = pathfinder_deserialize_csv(fp, trajectory);
-  fclose(fp);
+	output.length = pathfinder_deserialize_csv(fp, trajectory);
+	fclose(fp);
 
 	// Parse left and right sides
 	pathfinder_modify_tank(trajectory, output.length, output.leftTrajectory, output.rightTrajectory, ROBOT_WIDTH);
@@ -191,26 +195,29 @@ TankProfile DriveTrain::LoadProfile(const char * path){
 			A
 	};
 
+	return output;
 }
 
-void DriveTrain::ResetProfile(TankProfile *profile){
+void DriveTrain::ResetProfile(TankProfile &profile){
 	// Goto first point
-	profile->leftFollower.segment = 0;
-	profile->rightFollower.segment = 0;
+	profile.leftFollower.segment = 0;
+	profile.rightFollower.segment = 0;
 
 	// Set finished to false
-	profile->leftFollower.finished = 0;
-	profile->rightFollower.finished = 0;
+	profile.leftFollower.finished = 0;
+	profile.rightFollower.finished = 0;
 }
 
-void DriveTrain::Follow(TankProfile *profile){
+void DriveTrain::Follow(TankProfile &profile){
 	// Get motor speeds for point
-	double l = pathfinder_follow_encoder(profile->leftConfig, &profile->leftFollower, profile->leftTrajectory, profile->length, this->GetLeftTicks());
-  double r = pathfinder_follow_encoder(profile->rightConfig, &profile->rightFollower, profile->rightTrajectory, profile->length, this->GetRightTicks());
+	double l = pathfinder_follow_encoder(profile.leftConfig, &profile.leftFollower, profile.leftTrajectory, profile.length, this->GetLeftTicks());
+	Log("Built left speed");
+	double r = pathfinder_follow_encoder(profile.rightConfig, &profile.rightFollower, profile.rightTrajectory, profile.length, this->GetRightTicks());
 
 	// find gyro error
+	Log("Converting gyro to output");
 	double gyro_heading = this->pGyro->GetAngle();
-  double desired_heading = r2d(profile->leftFollower.heading);
+  	double desired_heading = r2d(profile.leftFollower.heading);
 	double angle_difference = desired_heading - gyro_heading;
 
 	// wrap angle around 360
