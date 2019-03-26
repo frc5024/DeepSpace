@@ -6,6 +6,7 @@
 #include <Subsystems/DriveTrain.h>
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
+#include "Commands/ClimbManager.h"
 
 
 class TriggerDrive : public frc::Command {

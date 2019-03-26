@@ -55,6 +55,7 @@ void Robot::RobotInit() {
   this->pControlCargo        = new ControlCargo();
   this->pControlLight        = new ControlLight();
   this->pClimbManager        = new ClimbManager();
+  this->pAutoClimbHigh       = new AutoClimbHigh();
   this->pClimb               = new Climb();
   EndHeader();
 
@@ -97,7 +98,7 @@ void Robot::RobotInit() {
  * LiveWindow and SmartDashboard integrated updating.
  */
 void Robot::RobotPeriodic() {
-  // Send information about the robot over NetworkTables
+	// Send information about the robot over NetworkTables
 
   bool   dsAttached     = this->driverStation.IsDSAttached();
   bool   fmsAttached    = this->driverStation.IsFMSAttached();
@@ -124,7 +125,7 @@ void Robot::DisabledInit() {
   EndHeader();
 }
 
-void Robot::DisabledPeriodic() { frc::Scheduler::GetInstance()->Run(); }
+void Robot::DisabledPeriodic() {frc::Scheduler::GetInstance()->Run();}
 
 /**
  * This autonomous (along with the chooser code above) shows how to select
@@ -199,10 +200,16 @@ void Robot::SharedInit(){
 }
 
 void Robot::SharedPeriodic(){
-  if(ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kActive){
+  if (ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kActive){
     // Start the climb commands
     if (this->pClimb != nullptr){
       this->pClimb->Start();
+    }
+  }
+  if (ClimbManager::CurrentClimbSate == ClimbManager::ClimbSate::kAuto) {
+    // Start the auto climb
+    if (this->pAutoClimbHigh != nullptr) {
+      this->pAutoClimbHigh->Start();
     }
   }
 
@@ -226,6 +233,7 @@ void Robot::SharedPeriodic(){
 }
 
 void Robot::TestPeriodic() {}
+
 
 #ifndef RUNNING_FRC_TESTS
 int main(){

@@ -8,17 +8,18 @@
 #include <frc/TimedRobot.h>
 #include <frc/WPILib.h>
 #include <cscore_oo.h>
+#include <iostream>
 #include <networktables/NetworkTable.h>
 
 // Commands
 #include "Commands/TriggerDrive.h"
 #include "Commands/ControlCompressor.h"
-#include "Commands/testUltra.h"
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
+#include "Autonomous/AutoClimbHigh.h"
+#include "Commands/ClimbManager.h"
 #include "Commands/ControlHatchGripper.h"
 #include "Commands/ControlLight.h"
-#include "Commands/ClimbManager.h"
 #include "Commands/Climb.h"
 #include "Commands/ControlSlider.h"
 #include "Commands/ControlCargo.h"
@@ -69,6 +70,7 @@ class Robot : public frc::TimedRobot {
   ControlCargo        *pControlCargo;        //!< Pointer for the cargo control command
   ControlLight        *pControlLight;        //!< Pointer for the vision light control command
   ClimbManager        *pClimbManager;        //!< Pointer for the climb management command
+  AutoClimbHigh       *pAutoClimbHigh;       //!< Pointer for the auto high climb command
   Climb               *pClimb;               //!< Pointer for the climb control command
 
   // Robot methods

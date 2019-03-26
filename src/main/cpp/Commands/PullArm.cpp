@@ -5,7 +5,7 @@
 
 PullArm::PullArm() {
     Requires(Robot::m_Arm);
-     Requires(Robot::m_CrawlDrive);
+    Requires(Robot::m_CrawlDrive);
     this->pJoyDebug = Robot::m_oi->GetJoystickDebug();
 }
 

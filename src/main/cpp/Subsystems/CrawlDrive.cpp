@@ -15,10 +15,18 @@ CrawlDrive::CrawlDrive() : frc::Subsystem("CrawlDrive") {
     // Sounds like a bad idea, but this prevents the robot from lockingup if we take too long on a loop
     this->pCrawlLeft->SetSafetyEnabled(false);
     this->pCrawlRight->SetSafetyEnabled(false);
+
+    this->pFloorSensor = new frc::DigitalInput(OPTICAL_PIN) ;
+
 }
 
 void CrawlDrive::InitDefaultCommand() {
     //SetDefaultCommand(new DriveWithJoystick());
+}
+
+bool CrawlDrive::GetSensor(void)
+{
+    return this->pFloorSensor->Get() ;
 }
 
 void CrawlDrive::Move(double Speed) {

@@ -37,17 +37,32 @@
 #define XBOX_DEADZONE_LEFT_JOY 0.1
 
 //Climb Motors
-#define CLIMB_ARM_MOTOR 5
+#define CLIMB_ARM_MOTOR			5
+#define CLIMB_ARM_MOTOR_2		6
+#define CLIMB_LEG_MOTOR			8
+#define CRAWL_LEFT_MOTOR		1
+#define CRAWL_RIGHT_MOTOR		0
 
-#define CLIMB_ARM_MOTOR_2 6
-#define CLIMB_LEG_MOTOR 8
- 
-#define CRAWL_LEFT_MOTOR 1
-#define CRAWL_RIGHT_MOTOR 0
-
-//Climb Ultrasonic
-#define CLIMB_ULTRASONIC 1
+//Climb ultrasonic
+#define CLIMB_ULTRASONIC	1
+#define OPTICAL_PIN			7
 #define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF 0.8
+
+// Climb settings
+#define CLIMB_M 0.6
+#define CLIMB_B 0.3
+
+#define CLIMB_MAX_HEIGHT 100
+
+// Hall effects
+#define LEG_PIN_TOP			1
+#define LEG_PIN_MIDDLE		5
+#define LEG_PIN_BOTTOM		6
+#define ARM_PIN_LOWERED		4
+
+// Motor hold speeds
+#define ARM_HOLD_SPEED 0.2
+#define LEG_HOLD_SPEED 0.1
 
 // Slider
 #define SLIDER_MOTOR 7
