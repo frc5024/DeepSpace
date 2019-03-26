@@ -150,7 +150,7 @@ void DriveTrain::RawDrive(double l, double r){
 
 TankProfile DriveTrain::LoadProfile(const char * path){
 	Log("Config PID");
-	double P = 0.0;
+	double P = 1.0;
 	double I = 0.0;
 	double D = 0.0;
 	double A = 0.0;
@@ -161,6 +161,7 @@ TankProfile DriveTrain::LoadProfile(const char * path){
 
 	// Over-sized Trajectory to store raw input
 	Segment trajectory[1024];
+	memset(trajectory, 0, sizeof(Segment) * 1024);
 
 	// Load the file
 	Log("Opening csv");
@@ -168,6 +169,19 @@ TankProfile DriveTrain::LoadProfile(const char * path){
 	FILE *fp = fopen(path, "r");
 	output.length = pathfinder_deserialize_csv(fp, trajectory);
 	fclose(fp);
+// malloc()
+	// output.leftTrajectory  = (Segment*) malloc(sizeof(Segment) * output.length);
+	// if (output.leftTrajectory == nullptr)
+	// 	Log("It bad.");
+	// output.rightTrajectory = (Segment*) malloc(sizeof(Segment) * output.length);
+	// if (output.leftTrajectory == nullptr)
+	// 	Log("It bad 2.");
+
+	// *(output.leftTrajectory + output.length) = NULL;
+
+	memset(output.leftTrajectory, 0, sizeof(Segment) * output.length);
+	memset(output.rightTrajectory, 0, sizeof(Segment) * output.length);
+
 
 	// Parse left and right sides
 	pathfinder_modify_tank(trajectory, output.length, output.leftTrajectory, output.rightTrajectory, ROBOT_WIDTH);
@@ -198,26 +212,31 @@ TankProfile DriveTrain::LoadProfile(const char * path){
 	return output;
 }
 
-void DriveTrain::ResetProfile(TankProfile &profile){
+void DriveTrain::ResetProfile(TankProfile *profile){
 	// Goto first point
-	profile.leftFollower.segment = 0;
-	profile.rightFollower.segment = 0;
+	profile->leftFollower.segment = 0;
+	profile->rightFollower.segment = 0;
 
 	// Set finished to false
-	profile.leftFollower.finished = 0;
-	profile.rightFollower.finished = 0;
+	profile->leftFollower.finished = 0;
+	profile->rightFollower.finished = 0;
 }
 
-void DriveTrain::Follow(TankProfile &profile){
+void DriveTrain::Follow(TankProfile *profile){
+	if(profile->leftFollower.finished && profile->rightFollower.finished){
+		Log(profile->length);
+		return;
+	}
 	// Get motor speeds for point
-	double l = pathfinder_follow_encoder(profile.leftConfig, &profile.leftFollower, profile.leftTrajectory, profile.length, this->GetLeftTicks());
-	Log("Built left speed");
-	double r = pathfinder_follow_encoder(profile.rightConfig, &profile.rightFollower, profile.rightTrajectory, profile.length, this->GetRightTicks());
+	// std::cout << "config: " << sizeof(profile->leftConfig) << " follower: " << sizeof(profile->leftFollower) << " trajectory: " << sizeof(profile->leftTrajectory) << std::endl;
+	double l = pathfinder_follow_encoder(profile->leftConfig, &profile->leftFollower, profile->leftTrajectory, profile->length, this->GetLeftTicks());
+	// Log("Built left speed");
+	double r = pathfinder_follow_encoder(profile->rightConfig, &profile->rightFollower, profile->rightTrajectory, profile->length, this->GetRightTicks());
 
 	// find gyro error
 	Log("Converting gyro to output");
 	double gyro_heading = this->pGyro->GetAngle();
-  	double desired_heading = r2d(profile.leftFollower.heading);
+  	double desired_heading = r2d(profile->leftFollower.heading);
 	double angle_difference = desired_heading - gyro_heading;
 
 	// wrap angle around 360

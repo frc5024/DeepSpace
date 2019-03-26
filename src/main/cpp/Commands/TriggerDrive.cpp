@@ -50,10 +50,10 @@ void TriggerDrive::Execute() {
 
   // Follow profile test
   if(this->pJoyDrive->GetAButton()){
-    Robot::m_DriveTrain->ResetProfile(this->testProfile);
+    Robot::m_DriveTrain->ResetProfile(&this->testProfile);
   }
   if(this->pJoyDrive->GetBButton()){
-    Robot::m_DriveTrain->Follow(this->testProfile);
+    Robot::m_DriveTrain->Follow(&this->testProfile);
   }
 
   // Reset the speed and rotation

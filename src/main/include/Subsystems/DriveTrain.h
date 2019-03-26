@@ -66,8 +66,8 @@ class DriveTrain : public frc::Subsystem {
 	void RawDrive(double l, double r);
 
 	TankProfile LoadProfile(const char * path);
-	void Follow(TankProfile &profile);
-	void ResetProfile(TankProfile &profile);
+	void Follow(TankProfile *profile);
+	void ResetProfile(TankProfile *profile);
 
   private:
 	can::WPI_TalonSRX *pLeftFrontMotor; //!< Pointer for left front motor
