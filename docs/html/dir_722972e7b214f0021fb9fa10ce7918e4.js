@@ -4,7 +4,7 @@ var dir_722972e7b214f0021fb9fa10ce7918e4 =
       [ "Arm", "classArm.html", "classArm" ]
     ] ],
     [ "Compressor.h", "Compressor_8h.html", [
-      [ "Compressor", "classCompressor.html", "classCompressor" ]
+      [ "cCompressor", "classcCompressor.html", "classcCompressor" ]
     ] ],
     [ "CrawlDrive.h", "CrawlDrive_8h.html", [
       [ "CrawlDrive", "classCrawlDrive.html", "classCrawlDrive" ]
@@ -12,8 +12,17 @@ var dir_722972e7b214f0021fb9fa10ce7918e4 =
     [ "DriveTrain.h", "DriveTrain_8h.html", [
       [ "DriveTrain", "classDriveTrain.html", "classDriveTrain" ]
     ] ],
+    [ "Flap.h", "Flap_8h.html", [
+      [ "Flap", "classFlap.html", "classFlap" ]
+    ] ],
+    [ "HatchGripper.h", "HatchGripper_8h.html", [
+      [ "HatchGripper", "classHatchGripper.html", "classHatchGripper" ]
+    ] ],
     [ "Leg.h", "Leg_8h.html", [
       [ "Leg", "classLeg.html", "classLeg" ]
+    ] ],
+    [ "Light.h", "Light_8h.html", [
+      [ "Light", "classLight.html", "classLight" ]
     ] ],
     [ "Piston.h", "Piston_8h.html", [
       [ "Piston", "classPiston.html", "classPiston" ]

@@ -1,0 +1,107 @@
+.TH "ControlLight" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ControlLight \- An interface command for toggleing the gripper\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ControlLight\&.h>\fP
+.PP
+Inherits Command\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBControlLight\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitialize\fP () override"
+.br
+.RI "Runs once on initalization\&. "
+.ti -1c
+.RI "void \fBExecute\fP () override"
+.br
+.RI "Called in a loop during Teleop\&. "
+.ti -1c
+.RI "bool \fBIsFinished\fP () override"
+.br
+.ti -1c
+.RI "void \fBEnd\fP () override"
+.br
+.RI "Runs once when \fBIsFinished()\fP returns true\&. "
+.ti -1c
+.RI "void \fBInterrupted\fP () override"
+.br
+.RI "Runs once if the command is forced to stop\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBstate\fP"
+.br
+.ti -1c
+.RI "frc::XboxController * \fBpJoyOp\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An interface command for toggleing the gripper\&. 
+.PP
+Definition at line 11 of file ControlLight\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ControlLight::ControlLight ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 4 of file ControlLight\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ControlLight::End ()\fC [override]\fP"
+
+.PP
+Runs once when \fBIsFinished()\fP returns true\&. 
+.PP
+Definition at line 27 of file ControlLight\&.cpp\&.
+.SS "void ControlLight::Execute ()\fC [override]\fP"
+
+.PP
+Called in a loop during Teleop\&. 
+.PP
+Definition at line 15 of file ControlLight\&.cpp\&.
+.SS "void ControlLight::Initialize ()\fC [override]\fP"
+
+.PP
+Runs once on initalization\&. 
+.PP
+Definition at line 12 of file ControlLight\&.cpp\&.
+.SS "void ControlLight::Interrupted ()\fC [override]\fP"
+
+.PP
+Runs once if the command is forced to stop\&. 
+.PP
+Definition at line 31 of file ControlLight\&.cpp\&.
+.SS "bool ControlLight::IsFinished ()\fC [override]\fP"
+
+.PP
+Definition at line 24 of file ControlLight\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "frc::XboxController* ControlLight::pJoyOp\fC [private]\fP"
+
+.PP
+Definition at line 22 of file ControlLight\&.h\&.
+.SS "bool ControlLight::state\fC [private]\fP"
+
+.PP
+Definition at line 21 of file ControlLight\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

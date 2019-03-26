@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['append',['Append',['../namespaceUtils_1_1EdgeLight.html#a75105ef33a496164571e0f06c29abdda',1,'Utils::EdgeLight']]],
   ['arcadedrive',['ArcadeDrive',['../classDriveTrain.html#aee63999ae98aa26e4c2866444eab2c4a',1,'DriveTrain']]],
   ['arm',['Arm',['../classArm.html#a920d0f828c6e76188827cf0c073963de',1,'Arm']]],
   ['autonomousinit',['AutonomousInit',['../classRobot.html#a2136cfc015936285218c8a8db984d6bc',1,'Robot']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['dodebug',['DODEBUG',['../RobotMap_8h.html#aefc47346bd5140a39b6d744385796e56',1,'RobotMap.h']]],
   ['drivetrain_5fleft_5ffront_5fmotor',['DRIVETRAIN_LEFT_FRONT_MOTOR',['../RobotMap_8h.html#a93ee73d141525c1decc8dd63f205cbe4',1,'RobotMap.h']]],
   ['drivetrain_5fleft_5ffront_5fmotor_5finvert',['DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT',['../RobotMap_8h.html#ab53fe26a24673fbfd067b86d7c63fd5a',1,'RobotMap.h']]],
   ['drivetrain_5fleft_5frear_5fmotor',['DRIVETRAIN_LEFT_REAR_MOTOR',['../RobotMap_8h.html#a743c19e1786a80e59de71c354cbecd91',1,'RobotMap.h']]],

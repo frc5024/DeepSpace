@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['slider_2ecpp',['Slider.cpp',['../Slider_8cpp.html',1,'']]],
-  ['slider_2eh',['Slider.h',['../Slider_8h.html',1,'']]]
+  ['oi_2ecpp',['OI.cpp',['../OI_8cpp.html',1,'']]],
+  ['oi_2eh',['OI.h',['../OI_8h.html',1,'']]]
 ];

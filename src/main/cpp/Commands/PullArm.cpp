@@ -1,5 +1,6 @@
 //< Manual arm override
 #include "Commands/PullArm.h"
+#include "Commands/ClimbManager.h"
 #include "Robot.h"
 
 PullArm::PullArm() {
@@ -20,17 +21,13 @@ void PullArm::Initialize() {
 void PullArm::Execute() {
     this->speed =(this->pJoyDebug->GetY(Hand::kLeftHand));
 
-	std::cout << "SensorTripped: ("<<Robot::m_Arm->GetSensor()<<")\n" ;
-
     Robot::m_Arm->MoveArm(this->speed);
 
     Robot::m_CrawlDrive->Move(this->pJoyDebug->GetTriggerAxis(Hand::kRightHand) - this->pJoyDebug->GetTriggerAxis(Hand::kLeftHand));
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool PullArm::IsFinished() { 
-    return !(ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kInactive); 
-}
+bool PullArm::IsFinished() { return ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kActive; }
 
 // Called once after isFinished returns true
 void PullArm::End() {}

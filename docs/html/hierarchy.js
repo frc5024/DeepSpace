@@ -1,7 +1,12 @@
 var hierarchy =
 [
     [ "Command", null, [
+      [ "Climb", "classClimb.html", null ],
+      [ "ClimbManager", "classClimbManager.html", null ],
+      [ "ControlCargo", "classControlCargo.html", null ],
       [ "ControlCompressor", "classControlCompressor.html", null ],
+      [ "ControlHatchGripper", "classControlHatchGripper.html", null ],
+      [ "ControlLight", "classControlLight.html", null ],
       [ "ControlSlider", "classControlSlider.html", null ],
       [ "DriveWithJoystick", "classDriveWithJoystick.html", null ],
       [ "PullArm", "classPullArm.html", null ],
@@ -15,10 +20,13 @@ var hierarchy =
     [ "OI", "classOI.html", null ],
     [ "Subsystem", null, [
       [ "Arm", "classArm.html", null ],
-      [ "Compressor", "classCompressor.html", null ],
+      [ "cCompressor", "classcCompressor.html", null ],
       [ "CrawlDrive", "classCrawlDrive.html", null ],
       [ "DriveTrain", "classDriveTrain.html", null ],
+      [ "Flap", "classFlap.html", null ],
+      [ "HatchGripper", "classHatchGripper.html", null ],
       [ "Leg", "classLeg.html", null ],
+      [ "Light", "classLight.html", null ],
       [ "Piston", "classPiston.html", null ],
       [ "Slider", "classSlider.html", null ]
     ] ],

@@ -8,6 +8,7 @@ var RobotMap_8h =
     [ "CLIMB_ULTRASONIC", "RobotMap_8h.html#adb4df0426b06ba5efb4972e37b704647", null ],
     [ "CRAWL_LEFT_MOTOR", "RobotMap_8h.html#a1dfa803bd82207845f754e8f9d1134b4", null ],
     [ "CRAWL_RIGHT_MOTOR", "RobotMap_8h.html#a566075319790055dba04f1386020bbab", null ],
+    [ "DODEBUG", "RobotMap_8h.html#aefc47346bd5140a39b6d744385796e56", null ],
     [ "DRIVETRAIN_LEFT_FRONT_MOTOR", "RobotMap_8h.html#a93ee73d141525c1decc8dd63f205cbe4", null ],
     [ "DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT", "RobotMap_8h.html#ab53fe26a24673fbfd067b86d7c63fd5a", null ],
     [ "DRIVETRAIN_LEFT_REAR_MOTOR", "RobotMap_8h.html#a743c19e1786a80e59de71c354cbecd91", null ],
@@ -19,8 +20,16 @@ var RobotMap_8h =
     [ "DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT", "RobotMap_8h.html#aa5e3aaf4231c5fef44403d724c5bb3d1", null ],
     [ "DRIVEWITHJOYSTICK_ROTATION_LIMITER", "RobotMap_8h.html#acf7d7096f3e7e2ad84975e03d61be9b6", null ],
     [ "elif", "RobotMap_8h.html#a536da5a9011e776134af73232c4b3ce2", null ],
+    [ "EndHeader", "RobotMap_8h.html#a4d88ee8d6095ded78f78e7eabaecf648", null ],
     [ "False", "RobotMap_8h.html#a306ebd41c0cd1303b1372c6153f0caf8", null ],
+    [ "FLAP_ID_FORWARD", "RobotMap_8h.html#a5b3f8b8d689a9bf39c27447a44393ede", null ],
+    [ "FLAP_ID_REVERSE", "RobotMap_8h.html#a77b7a6aa701be9546d33dc55ffb6c272", null ],
     [ "Hand", "RobotMap_8h.html#a401e131de9ff23c4f45cce5c842eb2ab", null ],
+    [ "HatchGripper_FORWARD_ID", "RobotMap_8h.html#a2332299078e9bc9ce3ce59e2a5339fd6", null ],
+    [ "HatchGripper_REVERSE_ID", "RobotMap_8h.html#ac581f63240b4822eaae84c79cfacd978", null ],
+    [ "Header", "RobotMap_8h.html#a6c3816b59db0016a0e10d76413919ec9", null ],
+    [ "LEDCONTROLLER_ID", "RobotMap_8h.html#a753a79f68e4ef4405602dd388469f3e1", null ],
+    [ "LIGHT_ID", "RobotMap_8h.html#af412c7c71aca1be1fc6329cfbeb67fbe", null ],
     [ "PCM_CAN_ID", "RobotMap_8h.html#a5c2a39bc44ce849f651bed17725eaca7", null ],
     [ "PISTON_ID", "RobotMap_8h.html#a021d9ffd6cc0b24dc031bcac0c6d84a8", null ],
     [ "SLIDER_MOTOR", "RobotMap_8h.html#aa904ac443cb51bcd6c3ccd6799065890", null ],
@@ -28,5 +37,7 @@ var RobotMap_8h =
     [ "WinGame", "RobotMap_8h.html#a06ff4c1b825f2b61a5dcdc5e5bae9ea9", null ],
     [ "XBOX_CONTROLLER_DEBUG_PORT", "RobotMap_8h.html#a0dafa0d89714a468d705c2e56770e404", null ],
     [ "XBOX_CONTROLLER_DRIVE_PORT", "RobotMap_8h.html#aef0db07128cdb05d2eeea784a1642ed5", null ],
-    [ "XBOX_CONTROLLER_OPERATOR_PORT", "RobotMap_8h.html#a1c626b8a3c165a1100790b0b4b84a1b8", null ]
+    [ "XBOX_CONTROLLER_OPERATOR_PORT", "RobotMap_8h.html#a1c626b8a3c165a1100790b0b4b84a1b8", null ],
+    [ "XBOX_DEADZONE_LEFT_JOY", "RobotMap_8h.html#a4f09f1ab95a40f7ca6f96834cabc3521", null ],
+    [ "XBOX_DEADZONE_RIGHT_JOY", "RobotMap_8h.html#a853ed92f714e0f645459a874e7d9ae08", null ]
 ];

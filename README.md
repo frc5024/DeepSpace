@@ -22,15 +22,24 @@ To build the c++ documentation, we use a custom Doxygen config. To use this conf
 doxygen ./doxygen.config
 ```
 
-To build the Controller Layout files, run this command (`python3` may need to be changed to `python`):
+To build the Controller Layout files, run this command (`python3` may need to be changed to `python`or `py3` depending on the system):
 ```sh
 python3 ./buildcml.py ./controller_layout.cml.json
 ```
 
 NOTE: Linux is required for the doxygen documents due to our use of unix-style path notation.
 
-## RadialDrive
-**RadialDrive** is a replacement for **ArcadeDrive** that allows for finer control over rotation at high speeds with our drivebases.
+## EdgeLight
+Our 2019 robots both have RGB LED strips along their sides. These are used to disply robot status and also just to look cool. The current funciton of the lights are as follows:
+
+| Colour | Pattern | Meaning |
+| -- | -- | -- |
+| Red | Heartbeat | Red alliance auto enabled |
+| Blue | Heartbeat | Blue alliance auto enabled |
+| Red | Solid | Red alliance teleop enabled |
+| Blue | Solid | Blue alliance teleop enabled |
+| Green | Solid | Vision / Finger indication |
+
 
 ## Pull requests
 Pull requests is our prefered method of merging code. For a PR to be merged, it must:

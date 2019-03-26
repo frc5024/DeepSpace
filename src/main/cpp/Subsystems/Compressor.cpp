@@ -1,16 +1,17 @@
 #include "Subsystems/Compressor.h"
 #include <iostream>
 
-Compressor::Compressor() : frc::Subsystem("Compressor") {
+cCompressor::cCompressor() : frc::Subsystem("cCompressor") {
   // Initialize the motors
 	this->pCompressor = new frc::Compressor(PCM_CAN_ID);
+  this->pCompressor->SetClosedLoopControl(false);
 }
 
-void Compressor::InitDefaultCommand() {
+void cCompressor::InitDefaultCommand() {
   SetDefaultCommand(new ControlCompressor());
 }
 
-void Compressor::SetState(bool enabled){
+void cCompressor::SetState(bool enabled){
   std::cout << "Compressor set to: " << enabled << std::endl;
     this->pCompressor->SetClosedLoopControl(enabled);
 }

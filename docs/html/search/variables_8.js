@@ -1,30 +1,4 @@
 var searchData=
 [
-  ['parmmotor',['pArmMotor',['../classArm.html#a85ba9dd5e2ab8dc1634ec1fc522be102',1,'Arm']]],
-  ['parmmotor2',['pArmMotor2',['../classArm.html#aa4ebde9ace145953abda99c849480d30',1,'Arm']]],
-  ['pcompressor',['pCompressor',['../classCompressor.html#a1b4fe6041081bcf46376485128f6ae6f',1,'Compressor']]],
-  ['pcontrolcompressor',['pControlCompressor',['../classRobot.html#aa8a06c70bde4869e292aaddb68e5051d',1,'Robot']]],
-  ['pcontrolslider',['pControlSlider',['../classRobot.html#ab88487f3f905fffd75caa7b21a325861',1,'Robot']]],
-  ['pcrawlleft',['pCrawlLeft',['../classCrawlDrive.html#a8caf0fdc24171933f2a7308e6e84811f',1,'CrawlDrive']]],
-  ['pcrawlright',['pCrawlRight',['../classCrawlDrive.html#a2d6b035a0c4648277001a862b969a030',1,'CrawlDrive']]],
-  ['pdeployclimb',['pDeployClimb',['../classRobot.html#aa964d2c37a74f213d9fd3e2203bb3447',1,'Robot']]],
-  ['pdp',['pdp',['../classRobot.html#a66951d118adde216cde379a760069336',1,'Robot']]],
-  ['pjoydebug',['pJoyDebug',['../classPullArm.html#a77c73ab34a5853967882303fa04bcca0',1,'PullArm::pJoyDebug()'],['../classPullLeg.html#a9164ecbf2e340d4f21bc37c3884fccc6',1,'PullLeg::pJoyDebug()']]],
-  ['pjoydrive',['pJoyDrive',['../classControlCompressor.html#a076b3b8f8d211354edf7a14b088274dc',1,'ControlCompressor::pJoyDrive()'],['../classDriveWithJoystick.html#a6671b39344988d14a6ff12939b09238e',1,'DriveWithJoystick::pJoyDrive()'],['../classTriggerDrive.html#a6b1b210e3e3436304a750facbfc09a63',1,'TriggerDrive::pJoyDrive()']]],
-  ['pjoyop',['pJoyOp',['../classControlCompressor.html#a91d593a67407bcc0c05f2233da96e42c',1,'ControlCompressor::pJoyOp()'],['../classControlSlider.html#a2f9c8ee74e9f80234b83ce012c63a195',1,'ControlSlider::pJoyOp()']]],
-  ['pjoystickdebug',['pJoystickDebug',['../classOI.html#a64075957564f2c4b97dd859948f7c102',1,'OI']]],
-  ['pjoystickdrive',['pJoystickDrive',['../classOI.html#a3063072af8d1fe9c59b674e8498ef0ae',1,'OI']]],
-  ['pjoystickoperator',['pJoystickOperator',['../classOI.html#ab79eb664ad1895f9c5ab5a1b17ae60eb',1,'OI']]],
-  ['pleftfrontmotor',['pLeftFrontMotor',['../classDriveTrain.html#afb83a3f5cedd6d9d293edbc07f12b47a',1,'DriveTrain']]],
-  ['pleftrearmotor',['pLeftRearMotor',['../classDriveTrain.html#a33a1f6f57affe0cea1184357bbccfd07',1,'DriveTrain']]],
-  ['plegmotor',['pLegMotor',['../classLeg.html#a101e07a459125e3b649b9bedae5a9e16',1,'Leg']]],
-  ['ppullarm',['pPullArm',['../classRobot.html#a880efefc024fe9993e585747da4048d5',1,'Robot']]],
-  ['ppullleg',['pPullLeg',['../classRobot.html#a7f773f6d930dc2cd72dd2c9674953789',1,'Robot']]],
-  ['prightfrontmotor',['pRightFrontMotor',['../classDriveTrain.html#acb66db7164b520869682a90d73be9c78',1,'DriveTrain']]],
-  ['prightrearmotor',['pRightRearMotor',['../classDriveTrain.html#a2298f9c2466c92b790c33bb5840664c9',1,'DriveTrain']]],
-  ['probotdrive',['pRobotDrive',['../classDriveTrain.html#abede5f4bb190b30133f496c6742c6eac',1,'DriveTrain']]],
-  ['pslidermotor',['pSliderMotor',['../classSlider.html#ac0ca5ad163ff0c031e6a4ab765ae03d3',1,'Slider']]],
-  ['psolenoid',['pSolenoid',['../classPiston.html#a1f68ce52f8dffdb89799a3b7b2f46034',1,'Piston']]],
-  ['ptestultra',['pTestUltra',['../classRobot.html#a289c47d3bc6fce78a2760f1b3da12fc5',1,'Robot']]],
-  ['ptriggerdrive',['pTriggerDrive',['../classRobot.html#adcda149d7f544a31313d8713bd7a4e5e',1,'Robot']]]
+  ['nttelemetry',['ntTelemetry',['../classRobot.html#a319fd97d8e8e484f6aedf7a4a265b47d',1,'Robot::ntTelemetry()'],['../classSlider.html#ab6b957521305a22c4fe36795a4a2f266',1,'Slider::ntTelemetry()']]]
 ];

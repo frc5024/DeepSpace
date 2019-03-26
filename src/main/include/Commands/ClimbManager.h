@@ -9,8 +9,8 @@ class ClimbManager : public frc::Command {
   public:
     enum ClimbState {
       kInactive,
-      kSemiAuto,
-      kAuto
+      kAuto,
+      kActive
     };
 
     static ClimbState CurrentClimbState;
@@ -30,9 +30,7 @@ class ClimbManager : public frc::Command {
     
     void End() override;         //!< Runs once when IsFinished() returns true
     void Interrupted() override; //!< Runs once if the command is forced to stop
-  private:
-    frc::XboxController* pJoyDrive;
-    frc::XboxController* pJoyOp;
+    frc::XboxController* pJoyOp;    
 };
 
 #endif //__CLIMBMANAGER_HG_

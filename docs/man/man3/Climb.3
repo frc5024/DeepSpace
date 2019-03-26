@@ -1,0 +1,125 @@
+.TH "Climb" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Climb
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Climb\&.h>\fP
+.PP
+Inherits Command\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClimb\fP ()"
+.br
+.RI "Class constructor\&. "
+.ti -1c
+.RI "void \fBInitialize\fP () override"
+.br
+.RI "Runs once on initalization\&. "
+.ti -1c
+.RI "void \fBExecute\fP () override"
+.br
+.RI "Called in a loop during Teleop\&. "
+.ti -1c
+.RI "bool \fBIsFinished\fP () override"
+.br
+.ti -1c
+.RI "void \fBEnd\fP () override"
+.br
+.RI "Runs once when \fBIsFinished()\fP returns true\&. "
+.ti -1c
+.RI "void \fBInterrupted\fP () override"
+.br
+.RI "Runs once if the command is forced to stop\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBarmSpeed\fP"
+.br
+.ti -1c
+.RI "double \fBcrawlSpeed\fP"
+.br
+.ti -1c
+.RI "double \fBlegSpeed\fP"
+.br
+.ti -1c
+.RI "frc::XboxController * \fBpJoyOp\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 10 of file Climb\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Climb::Climb ()"
+
+.PP
+Class constructor\&. 
+.PP
+Definition at line 4 of file Climb\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Climb::End ()\fC [override]\fP"
+
+.PP
+Runs once when \fBIsFinished()\fP returns true\&. 
+.PP
+Definition at line 46 of file Climb\&.cpp\&.
+.SS "void Climb::Execute ()\fC [override]\fP"
+
+.PP
+Called in a loop during Teleop\&. 
+.PP
+Definition at line 19 of file Climb\&.cpp\&.
+.SS "void Climb::Initialize ()\fC [override]\fP"
+
+.PP
+Runs once on initalization\&. 
+.PP
+Definition at line 12 of file Climb\&.cpp\&.
+.SS "void Climb::Interrupted ()\fC [override]\fP"
+
+.PP
+Runs once if the command is forced to stop\&. 
+.PP
+Definition at line 50 of file Climb\&.cpp\&.
+.SS "bool Climb::IsFinished ()\fC [override]\fP"
+Used to tell wpilib if the command is fully finished\&. This should never return true Because we always want to be able to drive the bot during teleop
+.PP
+\fBReturns:\fP
+.RS 4
+True if command is finished, else false 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file Climb\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "double Climb::armSpeed\fC [private]\fP"
+
+.PP
+Definition at line 28 of file Climb\&.h\&.
+.SS "double Climb::crawlSpeed\fC [private]\fP"
+
+.PP
+Definition at line 29 of file Climb\&.h\&.
+.SS "double Climb::legSpeed\fC [private]\fP"
+
+.PP
+Definition at line 30 of file Climb\&.h\&.
+.SS "frc::XboxController* Climb::pJoyOp\fC [private]\fP"
+
+.PP
+Definition at line 32 of file Climb\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

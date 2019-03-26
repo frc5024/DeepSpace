@@ -10,6 +10,10 @@
 
 // Whenever possible, Macros and definitions are used in order to preserve memory
 
+#include <iostream>
+
+#define DODEBUG 0
+
 // Camera mappings
 #define CAMERASERVER_DRIVER_CAMERA 1
 #define CAMERASERVER_VISION_CAMERA 0
@@ -20,11 +24,17 @@
 #define DRIVETRAIN_RIGHT_FRONT_MOTOR 3
 #define DRIVETRAIN_RIGHT_REAR_MOTOR  4
 
+#define TALLON_TPR 4096
+
 // DriveTrain motor invertions
 #define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT  false
 #define DRIVETRAIN_LEFT_REAR_MOTOR_INVERT   false
 #define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT true
 #define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT  true
+
+// DEADZONES
+#define XBOX_DEADZONE_RIGHT_JOY 0.1
+#define XBOX_DEADZONE_LEFT_JOY 0.1
 
 //Climb Motors
 #define CLIMB_ARM_MOTOR			5
@@ -62,6 +72,17 @@
 
 #define PISTON_ID 7
 
+// Light
+#define LIGHT_ID 0
+#define LEDCONTROLLER_ID 2
+
+// Hatch Gripper 
+#define HatchGripper_FORWARD_ID 1
+#define HatchGripper_REVERSE_ID 2
+
+#define FLAP_ID_FORWARD 5
+#define FLAP_ID_REVERSE 6
+
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
 
@@ -80,5 +101,10 @@
 
 // Reasons why I shouldn't be allowed to program
 #define WinGame(_class_) frc::StartRobot<_class_>()
+
+#define Header(x) std::cout << x
+#define EndHeader() std::cout << "DONE" << std::endl
+
+#define Log(x) std::cout << x << std::endl;
 
 #endif // _ROBOTMAP_HG_

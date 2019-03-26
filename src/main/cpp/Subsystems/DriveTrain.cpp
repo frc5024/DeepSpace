@@ -25,11 +25,18 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 
   // Disable saftey modes
   // Sounds like a bad idea, but this prevents the robot from locking up if we take too long on a loop
-	this->pLeftFrontMotor->SetSafetyEnabled(false);
-	this->pLeftRearMotor->SetSafetyEnabled(false);
-	this->pRightFrontMotor->SetSafetyEnabled(false);
-	this->pRightRearMotor->SetSafetyEnabled(false);
+	// this->pLeftFrontMotor->SetSafetyEnabled(false);
+	// this->pLeftRearMotor->SetSafetyEnabled(false);
+	// this->pRightFrontMotor->SetSafetyEnabled(false);
+	// this->pRightRearMotor->SetSafetyEnabled(false);
 	this->pRobotDrive->SetSafetyEnabled(false);
+
+	// Configure encoders
+	this->pLeftFrontMotor->ConfigFactoryDefault();
+	this->pRightFrontMotor->ConfigFactoryDefault();
+
+	this->pLeftFrontMotor->SetSensorPhase(true);
+	this->pRightFrontMotor->SetSensorPhase(true);
 }
 
 void DriveTrain::InitDefaultCommand() {

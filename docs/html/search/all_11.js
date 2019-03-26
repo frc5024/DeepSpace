@@ -11,5 +11,6 @@ var searchData=
   ['triggerdrive_2ecpp',['TriggerDrive.cpp',['../TriggerDrive_8cpp.html',1,'']]],
   ['triggerdrive_2eh',['TriggerDrive.h',['../TriggerDrive_8h.html',1,'']]],
   ['true',['True',['../RobotMap_8h.html#add3ca9eefe3b5b754426f51d3043e579',1,'RobotMap.h']]],
+  ['turnoff',['TurnOff',['../classHatchGripper.html#ad473eed3437c7d5ec4be8b55de288505',1,'HatchGripper']]],
   ['txt_5fbuffer',['txt_buffer',['../namespacebuildcml.html#a6604603518efc69cc724bf684d424cef',1,'buildcml']]]
 ];

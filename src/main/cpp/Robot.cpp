@@ -6,62 +6,87 @@
 #include <string>
 #include <fstream>
 
+#include "Utils/EdgeLight.h"
+
+// /home/lvuser/FRC_UserProgram.log
+
 // Subsystems
-DriveTrain *Robot::m_DriveTrain;
-Compressor *Robot::m_Compressor;
-CrawlDrive *Robot::m_CrawlDrive;
-Arm *Robot::m_Arm;
-Leg *Robot::m_Leg;
-OI *Robot::m_oi;
-Slider *Robot::m_Slider;
-Piston *Robot::m_Piston;
+DriveTrain   *Robot::m_DriveTrain;
+cCompressor  *Robot::m_cCompressor;
+CrawlDrive   *Robot::m_CrawlDrive;
+Arm          *Robot::m_Arm;
+Leg          *Robot::m_Leg;
+OI           *Robot::m_oi;
+Slider       *Robot::m_Slider;
+Piston       *Robot::m_Piston;
+HatchGripper *Robot::m_HatchGripper;
+Flap         *Robot::m_Flap;
+Light        *Robot::m_Light;
 
 void Robot::RobotInit() {
-	// Print out a banner to the shell
-	// Some backslashes are doubled in order for them to print properly
-	std::cout << "   Welcome 5024!" << std::endl;
-	std::cout << "-------------------" << std::endl;
-	std::cout << "Robot Starting.."<< std::endl;
+  // Print out a banner to the shell
+  std::cout << "   Welcome 5024!"    << std::endl;
+  std::cout << "-------------------" << std::endl;
+  std::cout << "Robot Starting.."    << std::endl;
 
-	// Subsystems
-	std::cout << "Creating Subsystems..." << std::endl;
-	this->m_DriveTrain = new DriveTrain();
-	this->m_CrawlDrive = new CrawlDrive();
-	this->m_Arm        = new Arm();
-	this->m_Leg        = new Leg();
-	this->m_Slider     = new Slider();
-	this->m_Piston     = new Piston();
-	this->m_oi         = new OI();
-	this->m_Compressor = new Compressor();
+  // Subsystems
+  Header("Creating Subsystems.. ");
+  this->m_DriveTrain   = new DriveTrain();
+  this->m_CrawlDrive   = new CrawlDrive();
+  this->m_Arm          = new Arm();
+  this->m_Leg          = new Leg();
+  this->m_Slider       = new Slider();
+  this->m_Piston       = new Piston();
+  this->m_oi           = new OI();
+  this->m_cCompressor  = new cCompressor();
+  this->m_HatchGripper = new HatchGripper();
+  this->m_Flap         = new Flap();
+  this->m_Light        = new Light();
+  EndHeader();
 
-	// Init camera
-	std::cout << "Starting CameraServer.." << std::endl;
-	this->frontCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Driver Camera", CAMERASERVER_DRIVER_CAMERA);
-	this->visionCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Vision",  CAMERASERVER_VISION_CAMERA);
+  // Init commands
+  Header("Creating Commands.. ");
+  this->pTriggerDrive        = new TriggerDrive();
+  this->pPullArm             = new PullArm();
+  this->pPullLeg             = new PullLeg();
+  this->pControlSlider       = new ControlSlider();
+  this->pControlCompressor   = new ControlCompressor();
+  this->pControlHatchGripper = new ControlHatchGripper();
+  this->pControlCargo        = new ControlCargo();
+  this->pControlLight        = new ControlLight();
+  this->pClimbManager        = new ClimbManager();
+  this->pAutoClimbHigh       = new AutoClimbHigh();
+  this->pClimb               = new Climb();
+  EndHeader();
 
-	// Set vision cam settings
-	std::cout << "Setting camera config.." << std::endl;
-	std::ifstream visionSettingsFile("/home/lvuser/deploy/vision_camera_settings.json");
-	std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
-	this->visionCam.SetConfigJson(visionSettings);
+  // Init camera
+  Header("Starting CameraServer.. ");
+  this->frontCam  = frc::CameraServer::GetInstance()->StartAutomaticCapture("Back",  CAMERASERVER_DRIVER_CAMERA);
+  this->visionCam = frc::CameraServer::GetInstance()->StartAutomaticCapture("Front", CAMERASERVER_VISION_CAMERA);
+  EndHeader();
 
-	// Init commands
-	std::cout << "Creating Commands.." << std::endl;
-	this->pTriggerDrive = new TriggerDrive();
-	this->pPullArm = new PullArm();
-	this->pPullLeg = new PullLeg();
-	this->pAutoClimbHigh = new AutoClimbHigh(); // the new command
-	this->pControlSlider = new ControlSlider();
-	this->pControlCompressor = new ControlCompressor();
-	this->pClimbManager = new ClimbManager();
-	
-	// Create Telemetry table
-	std::cout << "Connecting to telemetry table.." << std::endl;
-	this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry");
+  // Set vision cam settings
+  Header("Setting camera config.. ");
+  std::ifstream visionSettingsFile("/home/lvuser/deploy/config.json");
+  std::string visionSettings((std::istreambuf_iterator<char>(visionSettingsFile)), (std::istreambuf_iterator<char>()));
+  this->visionCam.SetConfigJson(visionSettings);
+  this->frontCam.SetConfigJson(visionSettings);
+  EndHeader();
 
-	// create ds and pdp objects
-	std::cout << "Creating Driverstation and PDP objects" << std::endl;
-	this->pdp = new frc::PowerDistributionPanel(10);
+  // Init Gyro
+  Header("Resetting Gyro.. ");
+  this->pGyro = new AHRS(frc::SPI::kMXP);
+  this->pGyro->Reset();
+  EndHeader();
+
+  // Create Telemetry table
+  Header("Connecting to telemetry table.. ");
+  this->ntTelemetry = NetworkTable::GetTable("SmartDashboard/Telemetry");
+  EndHeader();
+
+  // create ds and pdp objects
+  // std::cout << "Creating Driverstation and PDP objects" << std::endl;
+  // this->pdp = new frc::PowerDistributionPanel(10);
 }
 
 /**
@@ -75,19 +100,13 @@ void Robot::RobotInit() {
 void Robot::RobotPeriodic() {
 	// Send information about the robot over NetworkTables
 
-	double pdpTemperature = this->pdp->GetTemperature();
-	double robotVoltage   = this->pdp->GetVoltage();
-	bool   dsAttached     = this->driverStation.IsDSAttached();
-	bool   fmsAttached    = this->driverStation.IsFMSAttached();
+  bool   dsAttached     = this->driverStation.IsDSAttached();
+  bool   fmsAttached    = this->driverStation.IsFMSAttached();
+  float  gyroAngle      = this->pGyro->GetAngle();
 
-	this->ntTelemetry->PutNumber("pdp_temp", pdpTemperature);
-	this->ntTelemetry->PutNumber("voltage",  robotVoltage);
-	this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
-	this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
-
-	if(frc::RobotController::GetUserButton()){
-		this->m_Leg->MoveLeg(1.0) ;
-	}
+  this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
+  this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
+  this->ntTelemetry->PutNumber("Angle", gyroAngle);
 }
 
 /**
@@ -95,7 +114,16 @@ void Robot::RobotPeriodic() {
  * can use it to reset any subsystem information you want to clear when the
  * robot is disabled.
  */
-void Robot::DisabledInit() {}
+void Robot::DisabledInit() {
+  Header("Robot disabling.. ");
+  Robot::m_Flap->Release();
+
+  // Stop controller vibration once match ends
+  if(this->pClimbManager != nullptr){
+    this->pClimbManager->pJoyOp->SetRumble(frc::GenericHID::RumbleType::kRightRumble, 0.0);
+  }
+  EndHeader();
+}
 
 void Robot::DisabledPeriodic() {frc::Scheduler::GetInstance()->Run();}
 
@@ -111,80 +139,97 @@ void Robot::DisabledPeriodic() {frc::Scheduler::GetInstance()->Run();}
  * the if-else structure below with additional strings & commands.
  */
 void Robot::AutonomousInit() {
-	if (this->pAutoClimbHigh != nullptr) {
-		this->pAutoClimbHigh->Start() ;
-	} else {
-		std::cout << "AutoClimbHigh was null!\n";
-	}
+  // std::string autoSelected = frc::SmartDashboard::GetString(
+  //     "Auto Selector", "Default");
+  // if (autoSelected == "My Auto") {
+  //   m_autonomousCommand = &m_myAuto;
+  // } else {
+  //   m_autonomousCommand = &m_defaultAuto;
+  // }
 
-	// std::string autoSelected = frc::SmartDashboard::GetString(
-	//     "Auto Selector", "Default");
-	// if (autoSelected == "My Auto") {
-	//   m_autonomousCommand = &m_myAuto;
-	// } else {
-	//   m_autonomousCommand = &m_defaultAuto;
-	// }
+  // m_autonomousCommand = m_chooser.GetSelected();
 
-	// m_autonomousCommand = m_chooser.GetSelected();
+  // if (m_autonomousCommand != nullptr) {
+  //   m_autonomousCommand->Start();
+  // }
+  Header("Auto commands starting.. ");
+  this->SharedInit();
+  EndHeader();
 
-	// if (m_autonomousCommand != nullptr) {
-	//   m_autonomousCommand->Start();
-	// }
+  Header("Resetting gyro.. ");
+  this->pGyro->Reset();
+  EndHeader();
 }
 
-void Robot::AutonomousPeriodic() {frc::Scheduler::GetInstance()->Run();}
+void Robot::AutonomousPeriodic() { 
+  this->SharedPeriodic();
+  frc::Scheduler::GetInstance()->Run();
+  Utils::EdgeLight::Push();
+}
 
 void Robot::TeleopInit() {
-	// This makes sure that the autonomous stops running when
-	// teleop starts running. If you want the autonomous to
-	// continue until interrupted by another command, remove
-	// this line or comment it out.
-	// if (m_autonomousCommand != nullptr) {
-	//   m_autonomousCommand->Cancel();
-	//   m_autonomousCommand = nullptr;
-	// }
-
-	if (this->pTriggerDrive != nullptr) {
-		this->pTriggerDrive->Start();
-	}
-	//   if (this->pTestUltra != nullptr) {
-	// 		this->pTestUltra->Start();
-	// 	}
-	if (this->pPullArm != nullptr) {
-		this->pPullArm->Start();
-	}
-	if (this->pPullLeg != nullptr) {
-		this->pPullLeg->Start();
-	}
-	if (this->pControlSlider != nullptr) {
-		this->pControlSlider->Start();
-	}
-	if (this->pControlCompressor != nullptr) {
-		this->pControlCompressor->Start();
-	}
-	if (this->pClimbManager != nullptr) {
-		this->pClimbManager->Start();
-	}
+  // This makes sure that the autonomous stops running when
+  // teleop starts running. If you want the autonomous to
+  // continue until interrupted by another command, remove
+  // this line or comment it out.
+  // if (m_autonomousCommand != nullptr) {
+  //   m_autonomousCommand->Cancel();
+  //   m_autonomousCommand = nullptr;
+  // }
+  Header("Teleop commands starting.. ");
+  this->SharedInit();
+  EndHeader();
 }
 
-void Robot::TeleopPeriodic()
-{
-	switch (ClimbManager::CurrentClimbState)
-	{
-		case ClimbManager::kInactive :
-			if (this->pTriggerDrive != nullptr && !this->pTriggerDrive->IsRunning()) // Restart TriggerDrive once climb is done
-				this->pTriggerDrive->Start();
-			break;
-		case ClimbManager::kSemiAuto :
-			break;
-		case ClimbManager::kAuto :
-			if (this->pAutoClimbHigh != nullptr && !this->pAutoClimbHigh->IsRunning()) // Enable command group on kAuto
-				this->pAutoClimbHigh->Start();
-		default:
-			break;
-	}
+void Robot::TeleopPeriodic() { 
+  this->SharedPeriodic();
+  frc::Scheduler::GetInstance()->Run();
+  Utils::EdgeLight::Push();
+}
 
-	frc::Scheduler::GetInstance()->Run(); 
+void Robot::SharedInit(){
+  if (this->pTriggerDrive        != nullptr) { this->pTriggerDrive->Start();        }
+  if (this->pPullArm             != nullptr) { this->pPullArm->Start();             }
+  if (this->pPullLeg             != nullptr) { this->pPullLeg->Start();             }
+	if (this->pControlSlider       != nullptr) { this->pControlSlider->Start();	      }
+  if (this->pControlCompressor   != nullptr) { this->pControlCompressor->Start();	  }
+  if (this->pControlHatchGripper != nullptr) { this->pControlHatchGripper->Start();	}
+  if (this->pControlCargo        != nullptr) { this->pControlCargo->Start();        }
+  if (this->pControlLight        != nullptr) { this->pControlLight->Start();        }
+  if (this->pClimbManager        != nullptr) { this->pClimbManager->Start();        }
+}
+
+void Robot::SharedPeriodic(){
+  if (ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kActive){
+    // Start the climb commands
+    if (this->pClimb != nullptr){
+      this->pClimb->Start();
+    }
+  }
+  if (ClimbManager::CurrentClimbSate == ClimbManager::ClimbSate::kAuto) {
+    // Start the auto climb
+    if (this->pAutoClimbHigh != nullptr) {
+      this->pAutoClimbHigh->Start();
+    }
+  }
+
+  if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kBlue){
+    if(this->driverStation.IsOperatorControl()){
+      Utils::EdgeLight::Append(LedColour::kCHASE_BLUE);
+    }else{
+      Utils::EdgeLight::Append(LedColour::kBEAT_BLUE);
+    }
+    
+  }else if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kRed){
+    if(this->driverStation.IsOperatorControl()){
+      Utils::EdgeLight::Append(LedColour::kCHASE_RED);
+    }else{
+      Utils::EdgeLight::Append(LedColour::kBEAT_RED);
+    }
+
+  }else{
+    Utils::EdgeLight::Append(LedColour::kSOLID_WHITE);
+  }
 }
 
 void Robot::TestPeriodic() {}
@@ -192,8 +237,9 @@ void Robot::TestPeriodic() {}
 
 #ifndef RUNNING_FRC_TESTS
 int main(){
-	// Start the robot
-	WinGame(Robot);
-	return 1;
+  // Start the robot
+  WinGame(Robot);
+  Log("FATAL!!! Robot program finished!!!");
+  return 1;
 }
 #endif
