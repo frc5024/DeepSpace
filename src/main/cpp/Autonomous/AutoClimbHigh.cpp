@@ -38,9 +38,9 @@ void AutoClimbHigh::Execute() {
 }
 
 void AutoClimbHigh::Execute_LowerArm(void) {
-	/* Power is 0% to 90% throughout 3 seconds,	 	*
-	 * Then caps out at 90% until sensor is tripped */
-	float speed = std::min(this->pTimer->Get(), 3.0) * 0.3 ;
+	/* Power is 35% to 100% throughout 2 seconds,	 	*
+	 * Then caps out at 100% until sensor is tripped */
+	float speed = 0.35 + std::min(this->pTimer->Get(), 2.0) * 0.325 ;
 
 	Robot::m_Arm->MoveArm(speed); // Bring arm down
 
@@ -93,10 +93,13 @@ void AutoClimbHigh::Execute_Drive(void) {
 	Robot::m_Arm->MoveArm(-0.7); // Bring arm up slowly
 	Robot::m_Leg->MoveLeg(-1.0); // Keep leg down
 	Robot::m_CrawlDrive->Move(0.0); // Brake the crawlDrive
-	Robot::m_DriveTrain->TankDrive(
-		0.4, -0.4); // Drive at 40% speed
+
+    // Drives from 60% to 30% throughout 2 seconds then flatlines at 30%
+    double power = 0.6 - std::min(this->pTimer->Get(), 2.0) * 0.15 ;
+
+	Robot::m_DriveTrain->TankDrive(power, -power); // Drive at 40% speed
 	// We do this for only 1 seconds, no sensors for this part
-	if (this->pTimer->Get() > 2.4) {
+	if (this->pTimer->Get() > 2.0) {
 		this->stage = S_RAISE_LEG;
 		this->pTimer->Reset();
 	}
@@ -109,7 +112,7 @@ void AutoClimbHigh::Execute_Raiseleg(void) {
 
 	// If leg is at top or it's been 6 seconds, we are finished
 	if (Robot::m_Leg->AtTop()
-	||	this->pTimer->Get() > 10.0) {
+	||	this->pTimer->Get() > 3.0) {
 		this->stage = S_FINISHED ;
 	}	
 }
