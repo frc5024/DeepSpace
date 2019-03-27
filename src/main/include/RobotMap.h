@@ -102,7 +102,7 @@
 // Reasons why I shouldn't be allowed to program
 #define WinGame(_class_) frc::StartRobot<_class_>()
 
-#define Header(x) std::cout << x << std::endl
+#define Header(x) std::cout << x
 #define EndHeader() std::cout << "DONE" << std::endl
 
 #define Log(x) std::cout << x << std::endl;

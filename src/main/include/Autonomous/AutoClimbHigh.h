@@ -15,7 +15,7 @@ class AutoClimbHigh : public frc::Command {
 public:
 	AutoClimbHigh();
 	void Initialize() override;
-	void Execute() override; //!< Switch checks the stage and then calls the appropriate Execute_<Stage>() function
+	void Execute() override;        //!< Switch checks the stage and then calls the appropriate Execute_<Stage>() function
 	bool IsFinished() override;
 	void End() override;
 	void Interrupted() override;
@@ -24,8 +24,7 @@ public:
 	void Execute_Crawl(void);		//!< Execute stage CRAWL stuff
 	void Execute_Drive(void);		//!< Execute stage DRIVE stuff
 	void Execute_Raiseleg(void);	//!< Execute stage RAISE_LEG stuff
-
-    bool IsClimbing() ;
+    bool IsClimbing() ;             //!< Returns whether the robot is in the middle of climbing
 private:
 	/**
 	 * @brief Enum for tracking which stage of climb the robot is on
@@ -40,11 +39,9 @@ private:
 		S_FINISHED
 	} stage ;
 
-	frc::Timer* pTimer;
-
-	bool onFloor ;
-
-    bool climbing ;
+	frc::Timer* pTimer; //!< Timer for timing out stages if it takes too long
+	bool onFloor ;      //!< Bool for tracking whether the robot is off the floor or not
+    bool climbing ;     //!< Bool for tracking whether the robot is in the middle of auto climb
 };
 
 #endif /* _AUTOCLIMBHIGH_HG_ */

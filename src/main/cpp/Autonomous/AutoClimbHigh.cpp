@@ -44,11 +44,10 @@ void AutoClimbHigh::Execute() {
 }
 
 void AutoClimbHigh::Execute_LowerArm(void) {
-	/* Power is 35% to 100% throughout 2 seconds,	 	*
-	 * Then caps out at 100% until sensor is tripped */
-	float speed = 0.35 + std::min(this->pTimer->Get(), 2.0) * 0.325 ;
 
-	Robot::m_Arm->MoveArm(speed); // Bring arm down
+    // Moves arm from 35% to 100% throughout 2 seconds, then caps at 100%
+	float speed = 0.35 + std::min(this->pTimer->Get(), 2.0) * 0.325 ;
+    Robot::m_Arm->MoveArm(speed);
 
 	// If arm is lowered or it's been 5 seconds, go to next stage
 	if (Robot::m_Arm->GetSensor()
@@ -59,6 +58,7 @@ void AutoClimbHigh::Execute_LowerArm(void) {
 }
 
 void AutoClimbHigh::Execute_LowerLeg(void) {
+
 	Robot::m_Arm->MoveArm(0.75); // Keep arm down
 	Robot::m_Leg->MoveLeg(-1.0); // Bring leg down
 
@@ -71,12 +71,13 @@ void AutoClimbHigh::Execute_LowerLeg(void) {
 }
 
 void AutoClimbHigh::Execute_Crawl(void) {
-	Robot::m_Arm->MoveArm(1.0); // Keep arm down
-	Robot::m_Leg->MoveLeg(-1.0); // Keep leg down
-	Robot::m_CrawlDrive->Move(1.0); // Crawl forward
-	Robot::m_DriveTrain->TankDrive(0.6, -0.6); // Drive forward
 
-	// Get if we are now on the floor
+	Robot::m_Arm->MoveArm(1.0);                 // Keep arm down
+	Robot::m_Leg->MoveLeg(-1.0);                // Keep leg down
+	Robot::m_CrawlDrive->Move(1.0);             // Crawl forward
+	Robot::m_DriveTrain->ArcadeDrive(0.6, 0.0); // Drive forward
+
+	// Get if we are NOW on the floor
 	bool nowOnFloor = Robot::m_CrawlDrive->GetSensor();
 
 	// If we were in the air and are now on the floor, go to the next stage
@@ -96,8 +97,9 @@ void AutoClimbHigh::Execute_Crawl(void) {
 }
 
 void AutoClimbHigh::Execute_Drive(void) {
-	Robot::m_Arm->MoveArm(-0.2); // Bring arm up slowly
-	Robot::m_Leg->MoveLeg(-1.0); // Keep leg down
+
+	Robot::m_Arm->MoveArm(-0.2);    // Bring arm up slowly
+	Robot::m_Leg->MoveLeg(-1.0);    // Keep leg down
 	Robot::m_CrawlDrive->Move(0.0); // Brake the crawlDrive
 
     // Drives from 60% to 30% throughout 2 seconds then flatlines at 30%
@@ -112,9 +114,10 @@ void AutoClimbHigh::Execute_Drive(void) {
 }
 
 void AutoClimbHigh::Execute_Raiseleg(void) {
-	Robot::m_Arm->MoveArm(0.0); // Brake
-	Robot::m_DriveTrain->TankDrive(0.0,0.0); // Brake
-	Robot::m_Leg->MoveLeg(1.0); // Bring legs back up
+
+	Robot::m_Arm->MoveArm(0.0);                 // Brake
+	Robot::m_DriveTrain->TankDrive(0.0,0.0);    // Brake
+	Robot::m_Leg->MoveLeg(1.0);                 // Bring legs back up
 
 	// If leg is at top or it's been 3 seconds, we are finished
 	if (Robot::m_Leg->AtTop()
@@ -134,7 +137,7 @@ bool AutoClimbHigh::IsFinished() {
     if (this->stage == S_FINISHED) {
         
         // cannot change climbState in above scenario, hence why we change it here and not in End()
-        ClimbManager::CurrentClimbState = ClimbManager::ClimbState::kInactive;
+        ClimbManager::CurrentClimbState = ClimbManager::kInactive;
 
         return true;
     }
@@ -152,13 +155,13 @@ void AutoClimbHigh::End() {
 }
 
 void AutoClimbHigh::Interrupted() {
-    this->climbing = false;
-	// Brake all subsystems and stop timer
+    // Brake all subsystems and stop timer
 	Robot::m_Arm->MoveArm(0.0);
 	Robot::m_Leg->MoveLeg(0.0);
 	Robot::m_DriveTrain->TankDrive(0.0, 0.0);
 	Robot::m_CrawlDrive->Move(0.0);
     this->pTimer->Stop();
+    this->climbing = false;
 }
 
 bool AutoClimbHigh::IsClimbing() {
