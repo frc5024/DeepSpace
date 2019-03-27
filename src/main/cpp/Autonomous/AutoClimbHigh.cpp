@@ -8,7 +8,6 @@
 #include "Autonomous/AutoClimbHigh.h"
 #include "Robot.h"
 
-
 AutoClimbHigh::AutoClimbHigh() {
 	Requires(Robot::m_Arm);
 	Requires(Robot::m_Leg);
@@ -17,10 +16,11 @@ AutoClimbHigh::AutoClimbHigh() {
 	this->pTimer = new frc::Timer();
 	this->stage = S_LOWER_ARM;
 	this->onFloor = true;
-    this->hasClimbed = false;
+    this->climbing = false;
 }
 
 void AutoClimbHigh::Initialize() {
+    this->climbing = true;
 	this->stage = S_LOWER_ARM;
 	this->onFloor = true;
 	this->pTimer->Reset();
@@ -29,15 +29,17 @@ void AutoClimbHigh::Initialize() {
 
 void AutoClimbHigh::Execute() {
 	// Execute the appropriate function for the current stage of climb
-    if (!this->hasClimbed) {
-        switch (this->stage) {
-            case S_LOWER_ARM : this->Execute_LowerArm() ; break;
-            case S_LOWER_LEG : this->Execute_LowerLeg() ; break;
-            case S_CRAWL	 : this->Execute_Crawl()	; break;
-            case S_DRIVE	 : this->Execute_Drive()	; break;
-            case S_RAISE_LEG : this->Execute_Raiseleg() ; break;
-            default : this->stage = S_FINISHED ; break;
-        }
+    switch (this->stage) {
+        case S_LOWER_ARM : this->Execute_LowerArm() ; break;
+        case S_LOWER_LEG : this->Execute_LowerLeg() ; break;
+        case S_CRAWL	 : this->Execute_Crawl()	; break;
+        case S_DRIVE	 : this->Execute_Drive()	; break;
+        case S_RAISE_LEG : this->Execute_Raiseleg() ; break;
+        case S_FINISHED  : return;
+        default :
+            Log("AutoClimbHigh has an invalid stage") ;
+            this->stage = S_FINISHED ;
+            break;
     }
 }
 
@@ -94,15 +96,15 @@ void AutoClimbHigh::Execute_Crawl(void) {
 }
 
 void AutoClimbHigh::Execute_Drive(void) {
-	Robot::m_Arm->MoveArm(-0.7); // Bring arm up slowly
+	Robot::m_Arm->MoveArm(-0.2); // Bring arm up slowly
 	Robot::m_Leg->MoveLeg(-1.0); // Keep leg down
 	Robot::m_CrawlDrive->Move(0.0); // Brake the crawlDrive
 
     // Drives from 60% to 30% throughout 2 seconds then flatlines at 30%
     double power = 0.6 - std::min(this->pTimer->Get(), 2.0) * 0.15 ;
+    Robot::m_DriveTrain->ArcadeDrive(power, 0.0);
 
-	Robot::m_DriveTrain->TankDrive(power, -power); // Drive at 40% speed
-	// We do this for only 1 seconds, no sensors for this part
+	// We do this for only 2 seconds, no sensors for this part
 	if (this->pTimer->Get() > 2.0) {
 		this->stage = S_RAISE_LEG;
 		this->pTimer->Reset();
@@ -114,7 +116,7 @@ void AutoClimbHigh::Execute_Raiseleg(void) {
 	Robot::m_DriveTrain->TankDrive(0.0,0.0); // Brake
 	Robot::m_Leg->MoveLeg(1.0); // Bring legs back up
 
-	// If leg is at top or it's been 6 seconds, we are finished
+	// If leg is at top or it's been 3 seconds, we are finished
 	if (Robot::m_Leg->AtTop()
 	||	this->pTimer->Get() > 3.0) {
 		this->stage = S_FINISHED ;
@@ -122,7 +124,21 @@ void AutoClimbHigh::Execute_Raiseleg(void) {
 }
 
 bool AutoClimbHigh::IsFinished() {
-	return this->stage == S_FINISHED;
+
+    // Stop if we're no longer in auto climb mode
+    if (ClimbManager::CurrentClimbState != ClimbManager::kAuto) {
+        return true;
+    }
+
+    // Stop if we've reached the end of the climb process
+    if (this->stage == S_FINISHED) {
+        
+        // cannot change climbState in above scenario, hence why we change it here and not in End()
+        ClimbManager::CurrentClimbState = ClimbManager::ClimbState::kInactive;
+
+        return true;
+    }
+    return false;
 }
 
 void AutoClimbHigh::End() {
@@ -131,18 +147,20 @@ void AutoClimbHigh::End() {
 	Robot::m_Leg->MoveLeg(0.0);
 	Robot::m_DriveTrain->TankDrive(0.0, 0.0);
 	Robot::m_CrawlDrive->Move(0.0);
-    ClimbManager::CurrentClimbState = ClimbManager::ClimbState::kInactive;
-    this->hasClimbed = true;
-	this->pTimer->Stop();
+    this->pTimer->Stop();
+    this->climbing = false;
 }
 
 void AutoClimbHigh::Interrupted() {
+    this->climbing = false;
 	// Brake all subsystems and stop timer
 	Robot::m_Arm->MoveArm(0.0);
 	Robot::m_Leg->MoveLeg(0.0);
 	Robot::m_DriveTrain->TankDrive(0.0, 0.0);
 	Robot::m_CrawlDrive->Move(0.0);
-    ClimbManager::CurrentClimbState = ClimbManager::ClimbState::kInactive;
-    this->hasClimbed = true;
-	this->pTimer->Stop();
+    this->pTimer->Stop();
+}
+
+bool AutoClimbHigh::IsClimbing() {
+    return this->climbing;
 }

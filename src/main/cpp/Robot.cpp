@@ -152,7 +152,7 @@ void Robot::AutonomousInit() {
   // if (m_autonomousCommand != nullptr) {
   //   m_autonomousCommand->Start();
   // }
-  Header("Auto commands starting.. ");
+  Header("AutonomousInit starting.. ");
   this->SharedInit();
   EndHeader();
 
@@ -191,8 +191,8 @@ void Robot::SharedInit(){
   if (this->pTriggerDrive        != nullptr) { this->pTriggerDrive->Start();        }
   if (this->pPullArm             != nullptr) { this->pPullArm->Start();             }
   if (this->pPullLeg             != nullptr) { this->pPullLeg->Start();             }
-	if (this->pControlSlider       != nullptr) { this->pControlSlider->Start();	      }
-  if (this->pControlCompressor   != nullptr) { this->pControlCompressor->Start();	  }
+  if (this->pControlSlider       != nullptr) { this->pControlSlider->Start();	    }
+  if (this->pControlCompressor   != nullptr) { this->pControlCompressor->Start();	}
   if (this->pControlHatchGripper != nullptr) { this->pControlHatchGripper->Start();	}
   if (this->pControlCargo        != nullptr) { this->pControlCargo->Start();        }
   if (this->pControlLight        != nullptr) { this->pControlLight->Start();        }
@@ -200,22 +200,30 @@ void Robot::SharedInit(){
 }
 
 void Robot::SharedPeriodic(){
-  if (ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kActive){
-    // Start the climb commands
-    if (this->pClimb != nullptr){
-      this->pClimb->Start();
+
+    // Active certain commands if we want to start climbing
+    switch (ClimbManager::CurrentClimbState) {
+        case ClimbManager::ClimbState::kInactive: 
+            this->pClimbManager->UpdateRumble();
+            break;
+        case ClimbManager::ClimbState::kActive:
+            if (this->pClimb != nullptr) {
+                this->pClimb->Start(); // Start manual climb commands
+                this->pClimbManager->UpdateRumble(); // rumble controller
+            }
+            break;
+        case ClimbManager::ClimbState::kAuto:
+            if ( ! this->pAutoClimbHigh->IsClimbing())
+                if (this->pAutoClimbHigh != nullptr) {
+                    this->pAutoClimbHigh->Start(); // Start auto climb command
+                    this->pClimbManager->UpdateRumble(); // rumble controller
+                }
+            break;
+        default:
+            Log("ClimbManager's climb state was invalid, setting to Inactive");
+            ClimbManager::CurrentClimbState = ClimbManager::ClimbState::kInactive;
+            break;
     }
-  }
-  if (ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kAuto) {
-    // Start the auto climb
-    if (this->pAutoClimbHigh->hasClimbed == false) {
-        if (this->pAutoClimbHigh != nullptr) {
-            this->pAutoClimbHigh->Start();
-        }
-    } else {
-        ClimbManager::CurrentClimbState = ClimbManager::ClimbState::kInactive;
-    }
-  }
 
   if(this->driverStation.GetAlliance() == frc::DriverStation::Alliance::kBlue){
     if(this->driverStation.IsOperatorControl()){

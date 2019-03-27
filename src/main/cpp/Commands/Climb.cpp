@@ -45,7 +45,11 @@ void Climb::Execute() {
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool Climb::IsFinished() { return false; }
+bool Climb::IsFinished() {
+    
+    // Stop if we're no longer is manual climb mode
+    return ClimbManager::CurrentClimbState != ClimbManager::kActive;
+}
 
 // Called once after isFinished returns true
 void Climb::End() {}

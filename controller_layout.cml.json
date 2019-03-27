@@ -52,29 +52,29 @@
 			},
 			"Right":{
 				"X":"",
-				"Y":"",
-				"Btn":""
+				"Y":"(Manual Climb Mode): Moves arms",
+				"Btn":"Combo with D-pad to switch climb modes (see Dpad)"
 			}
 		},
 		"Dpad":{
-			"Up":"",
-			"Down":"",
-			"Left":"",
-			"Right":""
+			"Up":"(Manual Climb Mode): Crawl forwards",
+			"Down":"(Manual Climb Mode): Crawl backwards",
+            "Left":" + Right Stick Press: Start/Cancel Auto High Climb",
+			"Right":" + Right Stick Press: Start/Stop Manual Climb"
 		},
 		"Button Pad":{
 			"A":"",
 			"B":"",
 			"X":"",
-			"Y":""
+			"Y":"Hold to lower Finger"
 		},
 		"Triggers":{
-			"Left":"",
+			"Left":"Cargo",
 			"Right":"Shoot hatch (85% pull)"
 		},
 		"Bumpers":{
-			"Left":"",
-			"Right":""
+			"Left":"(Manual Climb Mode): Lower legs",
+			"Right":"(Manual Climb Mode): Raise legs"
 		},
 		"Other":{
 			"Start":"Enable Compressor",

@@ -11,8 +11,6 @@
 #include <frc/commands/Command.h>
 #include <frc/Timer.h>
 
-
-
 class AutoClimbHigh : public frc::Command {
 public:
 	AutoClimbHigh();
@@ -27,7 +25,7 @@ public:
 	void Execute_Drive(void);		//!< Execute stage DRIVE stuff
 	void Execute_Raiseleg(void);	//!< Execute stage RAISE_LEG stuff
 
-    bool hasClimbed ;
+    bool IsClimbing() ;
 private:
 	/**
 	 * @brief Enum for tracking which stage of climb the robot is on
@@ -46,6 +44,7 @@ private:
 
 	bool onFloor ;
 
+    bool climbing ;
 };
 
 #endif /* _AUTOCLIMBHIGH_HG_ */
