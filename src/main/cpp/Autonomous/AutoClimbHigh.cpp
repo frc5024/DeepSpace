@@ -8,6 +8,7 @@
 #include "Autonomous/AutoClimbHigh.h"
 #include "Robot.h"
 
+
 AutoClimbHigh::AutoClimbHigh() {
 	Requires(Robot::m_Arm);
 	Requires(Robot::m_Leg);
@@ -16,6 +17,7 @@ AutoClimbHigh::AutoClimbHigh() {
 	this->pTimer = new frc::Timer();
 	this->stage = S_LOWER_ARM;
 	this->onFloor = true;
+    this->hasClimbed = false;
 }
 
 void AutoClimbHigh::Initialize() {
@@ -27,14 +29,16 @@ void AutoClimbHigh::Initialize() {
 
 void AutoClimbHigh::Execute() {
 	// Execute the appropriate function for the current stage of climb
-	switch (this->stage) {
-		case S_LOWER_ARM : this->Execute_LowerArm() ; break;
-		case S_LOWER_LEG : this->Execute_LowerLeg() ; break;
-		case S_CRAWL	 : this->Execute_Crawl()	; break;
-		case S_DRIVE	 : this->Execute_Drive()	; break;
-		case S_RAISE_LEG : this->Execute_Raiseleg() ; break;
-		default : this->stage = S_FINISHED ; break;
-	}
+    if (!this->hasClimbed) {
+        switch (this->stage) {
+            case S_LOWER_ARM : this->Execute_LowerArm() ; break;
+            case S_LOWER_LEG : this->Execute_LowerLeg() ; break;
+            case S_CRAWL	 : this->Execute_Crawl()	; break;
+            case S_DRIVE	 : this->Execute_Drive()	; break;
+            case S_RAISE_LEG : this->Execute_Raiseleg() ; break;
+            default : this->stage = S_FINISHED ; break;
+        }
+    }
 }
 
 void AutoClimbHigh::Execute_LowerArm(void) {
@@ -127,6 +131,8 @@ void AutoClimbHigh::End() {
 	Robot::m_Leg->MoveLeg(0.0);
 	Robot::m_DriveTrain->TankDrive(0.0, 0.0);
 	Robot::m_CrawlDrive->Move(0.0);
+    ClimbManager::CurrentClimbState = ClimbManager::ClimbState::kInactive;
+    this->hasClimbed = true;
 	this->pTimer->Stop();
 }
 
@@ -136,5 +142,7 @@ void AutoClimbHigh::Interrupted() {
 	Robot::m_Leg->MoveLeg(0.0);
 	Robot::m_DriveTrain->TankDrive(0.0, 0.0);
 	Robot::m_CrawlDrive->Move(0.0);
+    ClimbManager::CurrentClimbState = ClimbManager::ClimbState::kInactive;
+    this->hasClimbed = true;
 	this->pTimer->Stop();
 }

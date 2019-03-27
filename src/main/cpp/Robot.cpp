@@ -206,10 +206,14 @@ void Robot::SharedPeriodic(){
       this->pClimb->Start();
     }
   }
-  if (ClimbManager::CurrentClimbSate == ClimbManager::ClimbSate::kAuto) {
+  if (ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kAuto) {
     // Start the auto climb
-    if (this->pAutoClimbHigh != nullptr) {
-      this->pAutoClimbHigh->Start();
+    if (this->pAutoClimbHigh->hasClimbed == false) {
+        if (this->pAutoClimbHigh != nullptr) {
+            this->pAutoClimbHigh->Start();
+        }
+    } else {
+        ClimbManager::CurrentClimbState = ClimbManager::ClimbState::kInactive;
     }
   }
 
