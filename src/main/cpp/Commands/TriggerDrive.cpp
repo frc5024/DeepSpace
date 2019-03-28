@@ -46,7 +46,8 @@ void TriggerDrive::Execute() {
 
 
 bool TriggerDrive::IsFinished() { 
-  return !(ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kInactive); 
+    // Stop if in Auto climb, we still need to drive in kActive mode though
+    return (ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kAuto); 
 }
 
 // Called once after isFinished returns true

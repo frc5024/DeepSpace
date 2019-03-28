@@ -12,7 +12,6 @@ AutoClimbHigh::AutoClimbHigh() {
 	Requires(Robot::m_Arm);
 	Requires(Robot::m_Leg);
 	Requires(Robot::m_CrawlDrive);
-	Requires(Robot::m_DriveTrain);
 	this->pTimer = new frc::Timer();
 	this->stage = S_LOWER_ARM;
 	this->onFloor = true;
