@@ -6,6 +6,7 @@
 #include <Subsystems/Leg.h>
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
+#include "Commands/ClimbManager.h"
 
 class PullLeg : public frc::Command {
   public:

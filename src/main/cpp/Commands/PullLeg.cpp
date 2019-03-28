@@ -14,9 +14,13 @@ void PullLeg::Initialize() {
     this->speed = 0.0;
 }
 
-//Called repeatedly when this Command is scheduled to run
+// Called repeatedly when this Command is scheduled to run
 void PullLeg::Execute() {
     this->speed = this->pJoyDebug->GetY(Hand::kRightHand);
+
+    if(frc::RobotController::GetUserButton()){
+        this->speed = 1;
+    }
 
     Robot::m_Leg->MoveLeg(this->speed);
 }
