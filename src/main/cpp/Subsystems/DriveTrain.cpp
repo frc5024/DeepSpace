@@ -151,10 +151,10 @@ void DriveTrain::RawDrive(double l, double r){
 TankProfile* DriveTrain::LoadProfile(const char * name){
 	// const char *path = "/home/lvuser/deploy/paths/" + name;
 	Log("Config PID");
-	double P = 0.0;
+	double P = 1.0;
 	double I = 0.0;
 	double D = 0.0;
-	double A = 2.0;
+	double A = 0.0;
 
 	Log("Build TankProfile");
 	// Create a TankProfile to return
@@ -196,7 +196,7 @@ TankProfile* DriveTrain::LoadProfile(const char * name){
 			P,
 			I,
 			D,
-			1.0 / MAX_VELOCITY,
+			0.5 / MAX_VELOCITY,
 			A
 	};
 
@@ -207,7 +207,7 @@ TankProfile* DriveTrain::LoadProfile(const char * name){
 			P,
 			I,
 			D,
-			1.0 / MAX_VELOCITY,
+			0.5 / MAX_VELOCITY,
 			A
 	};
 
@@ -237,9 +237,9 @@ void DriveTrain::Follow(TankProfile *profile){
 	}
 	// Get motor speeds for point
 	// std::cout << "config: " << sizeof(profile->leftConfig) << " follower: " << sizeof(profile->leftFollower) << " trajectory: " << sizeof(profile->leftTrajectory) << std::endl;
-	double l = pathfinder_follow_encoder(profile->leftConfig, &profile->leftFollower, profile->leftTrajectory, profile->length, this->GetLeftTicks());
+	double l = pathfinder_follow_encoder(profile->leftConfig, &profile->leftFollower, profile->rightTrajectory, profile->length, this->GetLeftTicks());
 	// Log("Built left speed");
-	double r = pathfinder_follow_encoder(profile->rightConfig, &profile->rightFollower, profile->rightTrajectory, profile->length, this->GetRightTicks());
+	double r = pathfinder_follow_encoder(profile->rightConfig, &profile->rightFollower, profile->leftTrajectory, profile->length, this->GetRightTicks());
 
 	// find gyro error
 	Log("Converting gyro to output");
