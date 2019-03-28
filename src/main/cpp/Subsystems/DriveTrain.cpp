@@ -7,8 +7,8 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	this->pLeftRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_REAR_MOTOR);
 	this->pLeftRearMotor->Follow(*pLeftFrontMotor);
 
-	this->pLeftFrontMotor->SetInverted(false);
-	this->pLeftRearMotor->SetInverted(false);
+	this->pLeftFrontMotor->SetInverted(true);
+	this->pLeftRearMotor->SetInverted(true);
 	// this->pLeftFrontMotor->SetNeutralMode(NeutralMode::Coast);
 	// this->pLeftRearMotor->SetNeutralMode(NeutralMode::Coast);
 
@@ -91,8 +91,8 @@ void DriveTrain::InitDefaultCommand() {
 }
 
 void DriveTrain::ArcadeDrive(double xSpeed, double zRotation) {
-	this->pRobotDrive->ArcadeDrive(zRotation, xSpeed); // API parameter order is incorrect
-	std::cout << "Left: " << this->GetLeftTicks() << " Right: " << this->GetRightTicks() << std::endl;
+	this->pRobotDrive->ArcadeDrive(xSpeed, zRotation); // API parameter order is incorrect
+	// std::cout << "Left: " << this->GetLeftTicks() << " Right: " << this->GetRightTicks() << std::endl;
 	return;
 }
 
@@ -148,46 +148,48 @@ void DriveTrain::RawDrive(double l, double r){
 	this->pRightFrontMotor->Set(r);
 }
 
-TankProfile DriveTrain::LoadProfile(const char * path){
+TankProfile* DriveTrain::LoadProfile(const char * name){
+	// const char *path = "/home/lvuser/deploy/paths/" + name;
 	Log("Config PID");
-	double P = 1.0;
+	double P = 0.0;
 	double I = 0.0;
 	double D = 0.0;
-	double A = 0.0;
+	double A = 2.0;
 
 	Log("Build TankProfile");
 	// Create a TankProfile to return
-	TankProfile output;
+	TankProfile *output = (TankProfile*) malloc(sizeof(TankProfile));
+	
 
 	// Over-sized Trajectory to store raw input
 	Segment trajectory[1024];
 	memset(trajectory, 0, sizeof(Segment) * 1024);
 
 	// Load the file
-	Log("Opening csv");
-	Log(path);
-	FILE *fp = fopen(path, "r");
-	output.length = pathfinder_deserialize_csv(fp, trajectory);
+	Log("Opening left csv");
+	Log(name);
+	FILE *fp = fopen(name, "r");
+	output->length = pathfinder_deserialize_csv(fp, trajectory);
 	fclose(fp);
 // malloc()
-	// output.leftTrajectory  = (Segment*) malloc(sizeof(Segment) * output.length);
-	// if (output.leftTrajectory == nullptr)
+	// output->leftTrajectory  = (Segment*) malloc(sizeof(Segment) * output->length);
+	// if (output->leftTrajectory == nullptr)
 	// 	Log("It bad.");
-	// output.rightTrajectory = (Segment*) malloc(sizeof(Segment) * output.length);
-	// if (output.leftTrajectory == nullptr)
+	// output->rightTrajectory = (Segment*) malloc(sizeof(Segment) * output->length);
+	// if (output->leftTrajectory == nullptr)
 	// 	Log("It bad 2.");
 
-	// *(output.leftTrajectory + output.length) = NULL;
+	// *(output->leftTrajectory + output->length) = NULL;
 
-	memset(output.leftTrajectory, 0, sizeof(Segment) * output.length);
-	memset(output.rightTrajectory, 0, sizeof(Segment) * output.length);
+	memset(output->leftTrajectory, 0, sizeof(Segment) * output->length);
+	memset(output->rightTrajectory, 0, sizeof(Segment) * output->length);
 
 
 	// Parse left and right sides
-	pathfinder_modify_tank(trajectory, output.length, output.leftTrajectory, output.rightTrajectory, ROBOT_WIDTH);
+	pathfinder_modify_tank(trajectory, output->length, output->leftTrajectory, output->rightTrajectory, ROBOT_WIDTH);
 
 	// Create encoder configs
-	output.leftConfig = {
+	output->leftConfig = {
 			this->GetLeftTicks(),
 			TALLON_TPR,
 			WHEEL_CIRC,
@@ -198,7 +200,7 @@ TankProfile DriveTrain::LoadProfile(const char * path){
 			A
 	};
 
-	output.rightConfig = {
+	output->rightConfig = {
 			this->GetRightTicks(),
 			TALLON_TPR,
 			WHEEL_CIRC,
@@ -208,6 +210,12 @@ TankProfile DriveTrain::LoadProfile(const char * path){
 			1.0 / MAX_VELOCITY,
 			A
 	};
+
+	output->leftFollower.finished = 0;
+	output->leftFollower.segment = 0;
+
+	output->rightFollower.finished = 0;
+	output->rightFollower.segment = 0;
 
 	return output;
 }

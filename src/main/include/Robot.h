@@ -22,6 +22,7 @@
 #include "Commands/Climb.h"
 #include "Commands/ControlSlider.h"
 #include "Commands/ControlCargo.h"
+#include "Autonomous/AutoLeft.h"
 
 // Interfaces
 #include "OI.h"
@@ -70,6 +71,8 @@ class Robot : public frc::TimedRobot {
   ControlLight        *pControlLight;        //!< Pointer for the vision light control command
   ClimbManager        *pClimbManager;        //!< Pointer for the climb management command
   Climb               *pClimb;               //!< Pointer for the climb control command
+  
+  AutoLeft *pAutoLeft;
 
   // Robot methods
   void RobotInit()          override; //!< Runs once on robot boot

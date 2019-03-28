@@ -11,6 +11,7 @@
 
 #include <pathfinder.h>
 #include <AHRS.h>
+#include <frc/Filesystem.h>
 
 
 struct TankProfile{
@@ -65,7 +66,7 @@ class DriveTrain : public frc::Subsystem {
 
 	void RawDrive(double l, double r);
 
-	TankProfile LoadProfile(const char * path);
+	TankProfile* LoadProfile(const char * name);
 	void Follow(TankProfile *profile);
 	void ResetProfile(TankProfile *profile);
 

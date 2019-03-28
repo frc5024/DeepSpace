@@ -34,7 +34,7 @@ private:
 	
 	frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller because we are lazy
 
-  TankProfile testProfile;
+  TankProfile *testProfile;
 };
 
 #endif // _TRIGGERDRIVE_HG_

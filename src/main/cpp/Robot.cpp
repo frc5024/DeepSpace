@@ -56,6 +56,7 @@ void Robot::RobotInit() {
   this->pControlLight        = new ControlLight();
   this->pClimbManager        = new ClimbManager();
   this->pClimb               = new Climb();
+  this->pAutoLeft = new AutoLeft();
   EndHeader();
 
   // Init camera
@@ -152,7 +153,10 @@ void Robot::AutonomousInit() {
   //   m_autonomousCommand->Start();
   // }
   Header("Auto commands starting.. ");
-  this->SharedInit();
+  // this->SharedInit();
+  if (this->pAutoLeft != nullptr){
+    this->pAutoLeft->Start();
+   }
   EndHeader();
 
   Header("Resetting gyro.. ");
