@@ -13,6 +13,7 @@
 
 // Commands
 #include "Commands/TriggerDrive.h"
+#include "Commands/JoystickTankDrive.h"
 #include "Commands/ControlCompressor.h"
 #include "Commands/PullArm.h"
 #include "Commands/PullLeg.h"
@@ -62,6 +63,7 @@ class Robot : public frc::TimedRobot {
 
 	// Commands
   TriggerDrive        *pTriggerDrive;        //!< Pointer for the TriggerDrive command
+  JoystickTankDrive   *pJoystickTankDrive;   //!< Pointer for the Tank Drive command
   PullArm             *pPullArm;             //!< Pointer for the arm debugging command
   PullLeg             *pPullLeg;             //!< Pointer for the leg debugging command
   ControlHatchGripper *pControlHatchGripper; //!< Pointer for the finger control command

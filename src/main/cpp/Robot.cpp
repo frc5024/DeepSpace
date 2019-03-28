@@ -188,15 +188,27 @@ void Robot::TeleopPeriodic() {
 }
 
 void Robot::SharedInit(){
-  if (this->pTriggerDrive        != nullptr) { this->pTriggerDrive->Start();        }
-  if (this->pPullArm             != nullptr) { this->pPullArm->Start();             }
-  if (this->pPullLeg             != nullptr) { this->pPullLeg->Start();             }
-  if (this->pControlSlider       != nullptr) { this->pControlSlider->Start();	    }
-  if (this->pControlCompressor   != nullptr) { this->pControlCompressor->Start();	}
-  if (this->pControlHatchGripper != nullptr) { this->pControlHatchGripper->Start();	}
-  if (this->pControlCargo        != nullptr) { this->pControlCargo->Start();        }
-  if (this->pControlLight        != nullptr) { this->pControlLight->Start();        }
-  if (this->pClimbManager        != nullptr) { this->pClimbManager->Start();        }
+    if (this->pTriggerDrive        != nullptr) { this->pTriggerDrive->Start();        }
+    if (this->pPullArm             != nullptr) { this->pPullArm->Start();             }
+    if (this->pPullLeg             != nullptr) { this->pPullLeg->Start();             }
+    if (this->pControlSlider       != nullptr) { this->pControlSlider->Start();	    }
+    if (this->pControlCompressor   != nullptr) { this->pControlCompressor->Start();	}
+    if (this->pControlHatchGripper != nullptr) { this->pControlHatchGripper->Start();   }
+    if (this->pControlCargo        != nullptr) { this->pControlCargo->Start();          }
+    if (this->pControlLight        != nullptr) { this->pControlLight->Start();        }
+    if (this->pClimbManager        != nullptr) { this->pClimbManager->Start();        }
+
+    std::string gameData = frc::DriverStation::GetInstance().GetGameSpecificMessage();
+    for (char c : gameData) c = std::tolower(c) ; // Make it all lowercase
+    if (gameData == "tank") {
+        if (this->pJoystickTankDrive != nullptr) {
+            this->pJoystickTankDrive->Start() ;
+        }
+    } else {
+        if (this->pTriggerDrive != nullptr) {
+            this->pTriggerDrive->Start();
+        }
+    }
 }
 
 void Robot::SharedPeriodic(){
