@@ -15,8 +15,8 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	this->pRightRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_RIGHT_REAR_MOTOR);
 	this->pRightRearMotor->Follow(*pRightFrontMotor);
 
-	this->pRightFrontMotor->SetInverted(true); // change this based on test or production robot
-	this->pRightRearMotor->SetInverted(true); // change this based on test or production robot
+	this->pRightFrontMotor->SetInverted(false); // change this based on test or production robot
+	this->pRightRearMotor->SetInverted(false); // change this based on test or production robot
 	// this->pRightFrontMotor->SetNeutralMode(NeutralMode::Brake);
 	// this->pRightRearMotor->SetNeutralMode(NeutralMode::Brake);
 
@@ -44,7 +44,7 @@ void DriveTrain::InitDefaultCommand() {
 }
 
 void DriveTrain::ArcadeDrive(double xSpeed, double zRotation) {
-	this->pRobotDrive->ArcadeDrive(zRotation, xSpeed); // API parameter order is incorrect
+	this->pRobotDrive->ArcadeDrive(xSpeed, zRotation);
 	return;
 }
 

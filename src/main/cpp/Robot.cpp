@@ -47,6 +47,7 @@ void Robot::RobotInit() {
   // Init commands
   Header("Creating Commands.. ");
   this->pTriggerDrive        = new TriggerDrive();
+  this->pJoystickTankDrive   = new JoystickTankDrive();
   this->pPullArm             = new PullArm();
   this->pPullLeg             = new PullLeg();
   this->pControlSlider       = new ControlSlider();
@@ -200,6 +201,7 @@ void Robot::SharedInit(){
 
     std::string gameData = frc::DriverStation::GetInstance().GetGameSpecificMessage();
     for (char c : gameData) c = std::tolower(c) ; // Make it all lowercase
+    Log("gameData = " << gameData)
     if (gameData == "tank") {
         if (this->pJoystickTankDrive != nullptr) {
             this->pJoystickTankDrive->Start() ;
