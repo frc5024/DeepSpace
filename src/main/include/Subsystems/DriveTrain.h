@@ -40,6 +40,8 @@ class DriveTrain : public frc::Subsystem {
 	void RadialDrive(double magnitude, double radial);
 
 	void RawDrive(double l, double r);
+	void Coast();
+	void Break();
 
   private:
   	can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor

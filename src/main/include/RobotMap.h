@@ -29,9 +29,10 @@
 #define TALLON_TPR 4096
 
 // Driving PID
-#define ARCADE_KP 0.0
+#define ARCADE_KP 0.25
 #define ARCADE_KI 0.0
 #define ARCADE_KD 0.0
+#define SLEW_LIMIT 0.05
 
 // DriveTrain motor invertions
 #define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT  false

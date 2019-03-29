@@ -36,16 +36,32 @@ void TriggerDrive::Execute() {
   this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
   // Breaks
-  if (this->pJoyDrive->GetBumper(Hand::kLeftHand)){
-    Robot::m_DriveTrain->RawDrive(0, 0);
-  }else{
-    Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
-  }
+  if (this->pJoyDrive->GetBumperPressed(Hand::kLeftHand)){
+    Robot::m_DriveTrain->Coast();
+  }else if (this->pJoyDrive->GetBumperReleased(Hand::kLeftHand)){
+    Robot::m_DriveTrain->Break();
+  };
+
+  // Slew limit the joystick
+
+  double change = this->speed - this->speedOutput;
+  if (change > SLEW_LIMIT) {
+    change = SLEW_LIMIT;
+  }else if(change < (-SLEW_LIMIT)){
+    change = -SLEW_LIMIT;
+  };
+
+  this->speedOutput += change;
+  Log(change);
+  Log(this->speedOutput + change);
+
+  Robot::m_DriveTrain->ArcadeDrive(this->speedOutput, this->rotation);
   
   // Reset the speed and rotation
   // while this does have some negitive side effects while driving,
   // It is for saftey. (and so we don't have a run-away bot slam into a wall again)
   this->speed    = 0.00;
+  // this->speedOutput = 0.0;
   this->rotation = 0.00;
 }
 

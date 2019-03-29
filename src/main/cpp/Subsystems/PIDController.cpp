@@ -15,11 +15,12 @@ rr::PIDController::PIDController(double kp, double ki, double kd) {
     this->prevError = 0.0;
 }
 
-double rr::PIDController::Feed(double input){
-    this->error = input - output;
+double rr::PIDController::Feed(double input, double current){
+    this->error = input - current;
     this->i += (error * ROBOT_PERIOD);
     this->d = (error - this->prevError) / ROBOT_PERIOD;
     this->output = (this->kp * this->error) + (this->ki * this->i) + (this->kd * this->d);
     this->prevError = this->error;
+    std::cout << "IN: " << input << " err: " << this->error << " i: " << this->i << " d: " << this->d << " out: " << this->output << std::endl;
     return this->output;
 }

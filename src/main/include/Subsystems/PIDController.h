@@ -13,7 +13,7 @@ namespace rr{
   class PIDController {
   public:
     PIDController(double kp, double ki, double kd);
-    double Feed(double input);
+    double Feed(double input, double current);
 
   private:
     double kp, ki, kd;
