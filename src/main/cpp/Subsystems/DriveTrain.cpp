@@ -6,8 +6,8 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	this->pLeftRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_REAR_MOTOR);
 	this->pLeftRearMotor->Follow(*pLeftFrontMotor);
 
-	this->pLeftFrontMotor->SetInverted(false);
-	this->pLeftRearMotor->SetInverted(false);
+	this->pLeftFrontMotor->SetInverted(true);
+	this->pLeftRearMotor->SetInverted(true);
 	// this->pLeftFrontMotor->SetNeutralMode(NeutralMode::Brake);
 	// this->pLeftRearMotor->SetNeutralMode(NeutralMode::Brake);
 
@@ -37,6 +37,9 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 
 	this->pLeftFrontMotor->SetSensorPhase(true);
 	this->pRightFrontMotor->SetSensorPhase(true);
+
+	// Create the Arcade controller
+	this->pArcadeController = new rr::PIDController(ARCADE_KP, ARCADE_KI, ARCADE_KD);
 }
 
 void DriveTrain::InitDefaultCommand() {
@@ -44,7 +47,8 @@ void DriveTrain::InitDefaultCommand() {
 }
 
 void DriveTrain::ArcadeDrive(double xSpeed, double zRotation) {
-	this->pRobotDrive->ArcadeDrive(zRotation, xSpeed); // API parameter order is incorrect
+	double speed = this->pArcadeController->Feed(xSpeed);
+	this->pRobotDrive->ArcadeDrive(speed, zRotation);
 	return;
 }
 
@@ -70,4 +74,9 @@ void DriveTrain::RadialDrive(double magnitude, double radial){
   // pass to tankdrive
   this->pRobotDrive->TankDrive(leftSpeed, rightSpeed);
   return;
+}
+
+void DriveTrain::RawDrive(double l, double r){
+	this->pLeftFrontMotor->Set(l);
+	this->pRightFrontMotor->Set(r);
 }

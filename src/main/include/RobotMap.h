@@ -14,6 +14,8 @@
 
 #define DODEBUG 0
 
+#define ROBOT_PERIOD 0.02
+
 // Camera mappings
 #define CAMERASERVER_DRIVER_CAMERA 1
 #define CAMERASERVER_VISION_CAMERA 0
@@ -25,6 +27,11 @@
 #define DRIVETRAIN_RIGHT_REAR_MOTOR  4
 
 #define TALLON_TPR 4096
+
+// Driving PID
+#define ARCADE_KP 0.0
+#define ARCADE_KI 0.0
+#define ARCADE_KD 0.0
 
 // DriveTrain motor invertions
 #define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT  false

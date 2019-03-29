@@ -8,6 +8,7 @@
 #include <frc/drive/DifferentialDrive.h>
 #include "RobotMap.h"
 #include <Commands/DriveWithJoystick.h>
+#include <Subsystems/PIDController.h>
 
 class DriveTrain : public frc::Subsystem {
  public:
@@ -38,11 +39,15 @@ class DriveTrain : public frc::Subsystem {
 	 */
 	void RadialDrive(double magnitude, double radial);
 
- private:
-  can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
+	void RawDrive(double l, double r);
+
+  private:
+  	can::WPI_TalonSRX* pLeftFrontMotor; //!< Pointer for left front motor
 	can::WPI_TalonSRX* pLeftRearMotor;  //!< Pointer for left rear motor
 	can::WPI_TalonSRX* pRightFrontMotor;//!< Pointer for right front motor
 	can::WPI_TalonSRX* pRightRearMotor; //!< Pointer for right rear motor
+
+	rr::PIDController *pArcadeController;
 
 	frc::DifferentialDrive* pRobotDrive; //!< Pointer for a differential drivebase made up of 2 motor pairs
 };
