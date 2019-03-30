@@ -25,7 +25,7 @@ void ControlHatchGripper::Execute() {
   }
 }
 
-
+ 
 bool ControlHatchGripper::IsFinished() { return false; }
 
 // Called once after isFinished returns true

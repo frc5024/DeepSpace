@@ -32,7 +32,9 @@
 #define ARCADE_KP 0.25
 #define ARCADE_KI 0.0
 #define ARCADE_KD 0.0
-#define SLEW_LIMIT 0.05
+
+#define SLEW_LIMIT 0.06
+#define R_SLEW_LIMIT 0.04
 
 // DriveTrain motor invertions
 #define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT  false

@@ -17,6 +17,8 @@ void TriggerDrive::Initialize() {
   //set Speed and Rotation
   this->speed    = 0.0;
   this->rotation = 0.0;
+  this->rotationOutput = 0.0;
+  this->speedOutput = 0.0;
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -50,10 +52,16 @@ void TriggerDrive::Execute() {
   }else if(change < (-SLEW_LIMIT)){
     change = -SLEW_LIMIT;
   };
-
   this->speedOutput += change;
-  Log(change);
-  Log(this->speedOutput + change);
+
+  // // Rotation slew
+  // double rchange = this->rotation - this->rotationOutput;
+  // if (change > R_SLEW_LIMIT) {
+  //   rchange = R_SLEW_LIMIT;
+  // }else if(change < (-R_SLEW_LIMIT)){
+  //   rchange = -R_SLEW_LIMIT;
+  // };
+  // this->rotationOutput += rchange;
 
   Robot::m_DriveTrain->ArcadeDrive(this->speedOutput, this->rotation);
   

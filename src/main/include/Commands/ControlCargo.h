@@ -27,7 +27,7 @@ class ControlCargo : public frc::Command {
   void Interrupted() override; //!< Runs once if the command is forced to stop
   
 private:	
-	frc::XboxController* pJoyOp; //!< A mnemonic for the operator's controller because we are lazy
+	frc::XboxController* pJoyDrive; //!< A mnemonic for the operator's controller because we are lazy
 };
 
 #endif // _ControlCargo_HG_
