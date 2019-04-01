@@ -40,6 +40,7 @@ class DriveTrain : public frc::Subsystem {
 	void RadialDrive(double magnitude, double radial);
 
 	void RawDrive(double l, double r);
+	void MagicDrive(double left, double right, double magnitude);
 	void Coast();
 	void Break();
 

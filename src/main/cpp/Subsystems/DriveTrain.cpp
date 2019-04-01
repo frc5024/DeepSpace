@@ -34,6 +34,9 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	// this->pRightRearMotor->SetSafetyEnabled(false);
 	this->pRobotDrive->SetSafetyEnabled(false);
 
+	// Create the Arcade controller
+	this->pArcadeController = new rr::PIDController(ARCADE_KP, ARCADE_KI, ARCADE_KD);
+
 	// Configure encoders
 	this->pLeftFrontMotor->ConfigFactoryDefault();
 	this->pRightFrontMotor->ConfigFactoryDefault();
@@ -41,8 +44,46 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	this->pLeftFrontMotor->SetSensorPhase(true);
 	this->pRightFrontMotor->SetSensorPhase(true);
 
-	// Create the Arcade controller
-	this->pArcadeController = new rr::PIDController(ARCADE_KP, ARCADE_KI, ARCADE_KD);
+	this->pRightFrontMotor->SetStatusFramePeriod(StatusFrameEnhanced::Status_13_Base_PIDF0, 10, 10);
+	this->pRightFrontMotor->SetStatusFramePeriod(StatusFrameEnhanced::Status_10_MotionMagic, 10, 10);
+
+	/* Set the peak and nominal outputs */
+	this->pRightFrontMotor->ConfigNominalOutputForward(0, 10);
+	this->pRightFrontMotor->ConfigNominalOutputReverse(0, 10);
+	this->pRightFrontMotor->ConfigPeakOutputForward(1, 10);
+	this->pRightFrontMotor->ConfigPeakOutputReverse(-1, 10);
+
+	/* Set Motion Magic gains in slot0 - see documentation */
+	this->pRightFrontMotor->SelectProfileSlot(0, 0);
+	this->pRightFrontMotor->Config_kF(0, 0.3, 10);
+	this->pRightFrontMotor->Config_kP(0, 0.1, 10);
+	this->pRightFrontMotor->Config_kI(0, 0.0, 10);
+	this->pRightFrontMotor->Config_kD(0, 0.0, 10);
+
+	/* Set acceleration and vcruise velocity - see documentation */
+	this->pRightFrontMotor->ConfigMotionCruiseVelocity(1500, 10);
+	this->pRightFrontMotor->ConfigMotionAcceleration(1500, 10);
+
+
+	this->pLeftFrontMotor->SetStatusFramePeriod(StatusFrameEnhanced::Status_13_Base_PIDF0, 10, 10);
+	this->pLeftFrontMotor->SetStatusFramePeriod(StatusFrameEnhanced::Status_10_MotionMagic, 10, 10);
+
+	/* Set the peak and nominal outputs */
+	this->pLeftFrontMotor->ConfigNominalOutputForward(0, 10);
+	this->pLeftFrontMotor->ConfigNominalOutputReverse(0, 10);
+	this->pLeftFrontMotor->ConfigPeakOutputForward(1, 10);
+	this->pLeftFrontMotor->ConfigPeakOutputReverse(-1, 10);
+
+	/* Set Motion Magic gains in slot0 - see documentation */
+	this->pLeftFrontMotor->SelectProfileSlot(0, 0);
+	this->pLeftFrontMotor->Config_kF(0, 0.3, 10);
+	this->pLeftFrontMotor->Config_kP(0, 0.1, 10);
+	this->pLeftFrontMotor->Config_kI(0, 0.0, 10);
+	this->pLeftFrontMotor->Config_kD(0, 0.0, 10);
+
+	/* Set acceleration and vcruise velocity - see documentation */
+	this->pLeftFrontMotor->ConfigMotionCruiseVelocity(1500, 10);
+	this->pLeftFrontMotor->ConfigMotionAcceleration(1500, 10);
 }
 
 void DriveTrain::InitDefaultCommand() {
@@ -98,4 +139,11 @@ void DriveTrain::Break(){
 
 	this->pRightFrontMotor->SetNeutralMode(NeutralMode::Brake);
 	this->pRightRearMotor->SetNeutralMode(NeutralMode::Brake);
+}
+
+void DriveTrain::MagicDrive(double left, double right, double magnitude){
+	this->pLeftFrontMotor->Set(ControlMode::MotionMagic, left * TALLON_TPR * magnitude);
+	this->pRightFrontMotor->Set(ControlMode::MotionMagic, right * TALLON_TPR * magnitude);
+	std::cout << left * TALLON_TPR * magnitude << " | " << right * TALLON_TPR * magnitude << std::endl;
+	std::cout << this->pLeftFrontMotor->GetClosedLoopError(0) << " | " << this->pRightFrontMotor->GetClosedLoopError(0) << std::endl;
 }
