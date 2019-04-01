@@ -63,7 +63,16 @@ void TriggerDrive::Execute() {
   // };
   // this->rotationOutput += rchange;
 
-  Robot::m_DriveTrain->ArcadeDrive(this->speedOutput, this->rotation);
+  // Get turret control position
+  double turret = this->pJoyDrive->GetX(Hand::kRightHand);
+
+  // Decide if the robot should drive normally or not
+  if (fabs(turret) > 0.3) {
+    Robot::m_DriveTrain->MagicDrive(turret, turret * -1, TURRET_ROTATIONS);
+  }else{
+    Robot::m_DriveTrain->ArcadeDrive(this->speedOutput, this->rotation);
+  }
+  
   
   // Reset the speed and rotation
   // while this does have some negitive side effects while driving,

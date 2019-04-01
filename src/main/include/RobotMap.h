@@ -28,6 +28,8 @@
 
 #define TALLON_TPR 360
 
+#define TURRET_ROTATIONS 5
+
 // Driving PID
 #define ARCADE_KP 0.25
 #define ARCADE_KI 0.0
