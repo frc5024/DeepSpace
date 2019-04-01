@@ -3,6 +3,7 @@
 
 TriggerDrive::TriggerDrive() {
     Requires(Robot::m_DriveTrain);
+    this->pGyro = new AHRS(SPI::kMXP);
     this->pJoyDrive = Robot::m_oi->GetJoystickDrive();
     this->isReversed = false;
     this->xSpeed = 0.0;
@@ -17,6 +18,9 @@ void TriggerDrive::Initialize() {
 
 void TriggerDrive::Execute() {
 
+    // Check the (X) button, for if the driver wants to reverse directions
+    if (this->pJoyDrive->GetXButtonPressed()) this->isReversed = ! this->isReversed;
+
     // Get whether the right bumper is held or not
     bool isBumperHeld = this->pJoyDrive->GetBumper(Hand::kRightHand);
 
@@ -28,10 +32,7 @@ void TriggerDrive::Execute() {
 
     // Slow down by 60% if right bumper is held
     if (isBumperHeld) this->xSpeed *= 0.6;
-
-    // Check the (X) button, for if the driver wants to reverse directions
-    if (this->pJoyDrive->GetXButtonPressed()) this->isReversed;
-
+    
     // Check reverse direction
     if (this->isReversed) this->xSpeed = - this->xSpeed;
 
@@ -48,8 +49,6 @@ void TriggerDrive::Execute() {
     if (isBumperHeld) this->zRotation *= 0.7;
 
     Robot::m_DriveTrain->ArcadeDrive(this->xSpeed, this->zRotation);
-
-    Robot::m_Dr
 
 }
 

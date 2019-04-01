@@ -7,6 +7,7 @@
 #include "RobotMap.h"
 #include <frc/GenericHID.h>
 #include "Commands/ClimbManager.h"
+#include <AHRS.h>
 
 class TriggerDrive : public frc::Command {
 public:
@@ -22,6 +23,7 @@ private:
     double zRotation;               //!< Store the frequently accessed zRotation for faster runtime
     bool isReversed;                //!< Boolean for reversing x direction
 	frc::XboxController* pJoyDrive; //!< Pointer to the driver controller
+    AHRS* pGyro;                    //!< Pointer to the gyro
 
 };
 
