@@ -49,7 +49,7 @@ void DriveTrain::ArcadeDrive(double xSpeed, double zRotation) {
 }
 
 void DriveTrain::TankDrive(double leftSpeed, double rightSpeed) {
-	this->pRobotDrive->TankDrive(leftSpeed, rightSpeed);
+	this->pRobotDrive->TankDrive(-leftSpeed, -rightSpeed);
 	return;
 }
 

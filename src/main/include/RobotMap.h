@@ -85,6 +85,7 @@
 
 // DriveWithJoystick Settings
 #define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
+#define DRIVEWITHJOYSTICK
 
 // Xbox controllers
 #define XBOX_CONTROLLER_DRIVE_PORT    0

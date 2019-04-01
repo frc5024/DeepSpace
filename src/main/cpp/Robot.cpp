@@ -58,6 +58,7 @@ void Robot::RobotInit() {
   this->pClimbManager        = new ClimbManager();
   this->pAutoClimbHigh       = new AutoClimbHigh();
   this->pClimb               = new Climb();
+  this->pTestFriction        = new TestFriction(); //    <-------- TEMP --------<
   EndHeader();
 
   // Init camera
@@ -206,6 +207,12 @@ void Robot::SharedInit(){
         if (this->pJoystickTankDrive != nullptr) {
             this->pJoystickTankDrive->Start() ;
         }
+    }
+    else if (gameData == "static") {
+        if (this->pTestFriction != nullptr) {
+            this->pTestFriction->Start();
+        }
+        //brennan was here •_•
     } else {
         if (this->pTriggerDrive != nullptr) {
             this->pTriggerDrive->Start();

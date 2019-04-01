@@ -2,46 +2,55 @@
 #include "Robot.h"
 
 TriggerDrive::TriggerDrive() {
-  // Use Requires() here to declare subsystem dependencies
-  Requires(Robot::m_DriveTrain);
-  this->pJoyDrive = Robot::m_oi->GetJoystickDrive();
+    Requires(Robot::m_DriveTrain);
+    this->pJoyDrive = Robot::m_oi->GetJoystickDrive();
+    this->isReversed = false;
+    this->xSpeed = 0.0;
+    this->zRotation = 0.0;
 }
 
-// Called just before this Command runs the first time
-// aka: every time teleop is enabled
 void TriggerDrive::Initialize() {
-  // Set speed and direction multipliers
-  this->directionMultiplier = 1;
-  this->speedMultiplier     = 1;
-
-  //set Speed and Rotation
-  this->speed    = 0.0;
-  this->rotation = 0.0;
+    // Don't reset isReversed, as ClimbMode resets this command
+    this->xSpeed = 0.0;
+    this->zRotation = 0.0;
 }
 
-// Called repeatedly when this Command is scheduled to run
 void TriggerDrive::Execute() {
 
-  // Deal with reversing and slow mode
-	this->directionMultiplier *= (this->pJoyDrive->GetXButtonReleased())? -1 : 1;
-  this->speedMultiplier      = (this->pJoyDrive->GetBumper(Hand::kRightHand)) ? 0.6 : 1;
+    // Get whether the right bumper is held or not
+    bool isBumperHeld = this->pJoyDrive->GetBumper(Hand::kRightHand);
 
-  // Get movement data form controller
-  // Speed = Right trigger - left trigger
-  this->speed = (this->pJoyDrive->GetTriggerAxis(Hand::kRightHand) - this->pJoyDrive->GetTriggerAxis(Hand::kLeftHand));
-	this->rotation = this->pJoyDrive->GetX(Hand::kLeftHand);
-	
-	// Multiply each value with it's multiplier(s)
-  this->speed    *= (this->speedMultiplier * this->directionMultiplier);
-  this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
+    // Grab triggers values for x - speed
+    this->xSpeed = this->pJoyDrive->GetTriggerAxis(Hand::kRightHand) - this->pJoyDrive->GetTriggerAxis(Hand::kLeftHand);
 
-  Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
-  
-  // Reset the speed and rotation
-  // while this does have some negitive side effects while driving,
-  // It is for saftey. (and so we don't have a run-away bot slam into a wall again)
-  this->speed    = 0.00;
-  this->rotation = 0.00;
+    // Square the x-speed to create a wide input mapping
+    this->xSpeed *= fabs(this->xSpeed);
+
+    // Slow down by 60% if right bumper is held
+    if (isBumperHeld) this->xSpeed *= 0.6;
+
+    // Check the (X) button, for if the driver wants to reverse directions
+    if (this->pJoyDrive->GetXButtonPressed()) this->isReversed;
+
+    // Check reverse direction
+    if (this->isReversed) this->xSpeed = - this->xSpeed;
+
+    // Grab x-joystick value for z rotation
+    this->zRotation = this->pJoyDrive->GetX(Hand::kLeftHand);
+
+    // Square the z-rotation to create a wide input mapping
+    this->zRotation *= fabs(this->zRotation);
+
+    // Lessen the turn rate for easier control
+    this->zRotation *= DRIVEWITHJOYSTICK_ROTATION_LIMITER;
+
+    // Slow down rotation if right bumper is held
+    if (isBumperHeld) this->zRotation *= 0.7;
+
+    Robot::m_DriveTrain->ArcadeDrive(this->xSpeed, this->zRotation);
+
+    Robot::m_Dr
+
 }
 
 

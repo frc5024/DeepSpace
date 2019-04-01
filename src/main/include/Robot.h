@@ -24,6 +24,7 @@
 #include "Commands/Climb.h"
 #include "Commands/ControlSlider.h"
 #include "Commands/ControlCargo.h"
+#include "Commands/TestFriction.h" //    <-------- TEMP --------<
 
 // Interfaces
 #include "OI.h"
@@ -74,6 +75,8 @@ class Robot : public frc::TimedRobot {
   ClimbManager        *pClimbManager;        //!< Pointer for the climb management command
   AutoClimbHigh       *pAutoClimbHigh;       //!< Pointer for the auto high climb command
   Climb               *pClimb;               //!< Pointer for the climb control command
+
+  TestFriction* pTestFriction; // <-------- TEMP --------
 
   // Robot methods
   void RobotInit()          override; //!< Runs once on robot boot
