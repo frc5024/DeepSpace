@@ -61,8 +61,8 @@
 #define ARM_PIN_LOWERED		4
 
 // Motor hold speeds
-#define ARM_HOLD_SPEED 0.2
-#define LEG_HOLD_SPEED 0.1
+#define ARM_HOLD_SPEED  0.2
+#define LEG_HOLD_SPEED -0.1
 
 // Slider
 #define SLIDER_MOTOR 7

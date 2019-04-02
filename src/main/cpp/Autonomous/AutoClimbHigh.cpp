@@ -45,13 +45,13 @@ void AutoClimbHigh::Execute() {
 
 void AutoClimbHigh::Execute_LowerArm(void) {
 
-    // Moves arm from 35% to 100% throughout 2 seconds, then caps at 100%
-	float speed = 0.35 + std::min(this->pTimer->Get(), 2.0) * 0.325 ;
+    // Moves arm from 35% to 100% throughout 1 seconds, then caps at 100%
+	float speed = 0.4 + std::min(this->pTimer->Get(), 1.0) * 0.60 ;
     Robot::m_Arm->MoveArm(speed);
 
 	// If arm is lowered or it's been 5 seconds, go to next stage
 	if (Robot::m_Arm->GetSensor()
-	||  this->pTimer->Get() > 5.0) {
+	||  this->pTimer->Get() > 3.0) {
 		this->stage = S_LOWER_LEG;
 		this->pTimer->Reset();
 	}
@@ -59,8 +59,8 @@ void AutoClimbHigh::Execute_LowerArm(void) {
 
 void AutoClimbHigh::Execute_LowerLeg(void) {
 
-	Robot::m_Arm->MoveArm(0.75); // Keep arm down
-	Robot::m_Leg->MoveLeg(-1.0); // Bring leg down
+	Robot::m_Arm->MoveArm(ARM_HOLD_SPEED);  // Keep arm down
+	Robot::m_Leg->MoveLeg(-1.0);            // Bring leg down
 
 	// If leg is at bottom or it's been 6 seconds, go to the next stage
 	if (Robot::m_Leg->AtBottom()
@@ -72,8 +72,8 @@ void AutoClimbHigh::Execute_LowerLeg(void) {
 
 void AutoClimbHigh::Execute_Crawl(void) {
 
-	Robot::m_Arm->MoveArm(1.0);                 // Keep arm down
-	Robot::m_Leg->MoveLeg(-1.0);                // Keep leg down
+	Robot::m_Arm->MoveArm(ARM_HOLD_SPEED);      // Keep arm down
+	Robot::m_Leg->MoveLeg(LEG_HOLD_SPEED);      // Keep leg down
 	Robot::m_CrawlDrive->Move(1.0);             // Crawl forward
 	Robot::m_DriveTrain->ArcadeDrive(0.6, 0.0); // Drive forward
 
@@ -98,9 +98,9 @@ void AutoClimbHigh::Execute_Crawl(void) {
 
 void AutoClimbHigh::Execute_Drive(void) {
 
-	Robot::m_Arm->MoveArm(-0.25);    // Bring arm up slowly
-	Robot::m_Leg->MoveLeg(-1.0);    // Keep leg down
-	Robot::m_CrawlDrive->Move(0.0); // Brake the crawlDrive
+	Robot::m_Arm->MoveArm(-0.25);           // Bring arm up slowly
+	Robot::m_Leg->MoveLeg(LEG_HOLD_SPEED);  // Keep leg down
+	Robot::m_CrawlDrive->Move(0.0);         // Brake the crawlDrive
 
     // Drives from 60% to 20% throughout 2 seconds then flatlines at 20%
     double power = 0.6 - std::min(this->pTimer->Get(), 2.0) * 0.2 ;
