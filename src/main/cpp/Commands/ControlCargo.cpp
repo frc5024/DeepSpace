@@ -15,7 +15,7 @@ void ControlCargo::Initialize() {}
 void ControlCargo::Execute() {
 
   // Control piston
-  if(this->pJoyDrive->GetYButton()){
+  if(this->pJoyDrive->GetAButton()){
     Robot::m_Flap->Deploy();
   }else{
     Robot::m_Flap->Retract();
