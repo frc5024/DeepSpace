@@ -49,9 +49,9 @@ void AutoClimbHigh::Execute_LowerArm(void) {
 	float speed = 0.4 + std::min(this->pTimer->Get(), 1.0) * 0.60 ;
     Robot::m_Arm->MoveArm(speed);
 
-	// If arm is lowered or it's been 5 seconds, go to next stage
+	// If arm is lowered or it's been 3.5 seconds, go to next stage
 	if (Robot::m_Arm->GetSensor()
-	||  this->pTimer->Get() > 3.0) {
+	||  this->pTimer->Get() > 3.5) {
 		this->stage = S_LOWER_LEG;
 		this->pTimer->Reset();
 	}
@@ -62,7 +62,7 @@ void AutoClimbHigh::Execute_LowerLeg(void) {
 	Robot::m_Arm->MoveArm(ARM_HOLD_SPEED);  // Keep arm down
 	Robot::m_Leg->MoveLeg(-1.0);            // Bring leg down
 
-	// If leg is at bottom or it's been 6 seconds, go to the next stage
+	// If leg is at bottom or it's been 10 seconds, go to the next stage
 	if (Robot::m_Leg->AtBottom()
 	||  this->pTimer->Get() > 10.0) {
 		this->stage = S_CRAWL;
@@ -79,7 +79,6 @@ void AutoClimbHigh::Execute_Crawl(void) {
 
 	// Get if we are NOW on the floor
 	bool nowOnFloor = Robot::m_CrawlDrive->GetSensor();
-
 	// If we were in the air and are now on the floor, go to the next stage
 	if (!this->onFloor && nowOnFloor) {
 		this->stage = S_DRIVE;
@@ -106,11 +105,11 @@ void AutoClimbHigh::Execute_Drive(void) {
     double power = 0.6 - std::min(this->pTimer->Get(), 2.0) * 0.2 ;
     Robot::m_DriveTrain->ArcadeDrive(power, 0.0);
 
-	// We do this for only 2.1 seconds, no sensors for this part
-	if (this->pTimer->Get() > 2.1) {
+	// We do this for only 2.2 seconds, no sensors for this part
+	if (this->pTimer->Get() >= 2.2) {
 		this->stage = S_RAISE_LEG;
 		this->pTimer->Reset();
-        Robot::m_DriveTrain->ArcadeDrive(-0.3, 0.0);
+        Robot::m_DriveTrain->ArcadeDrive(-0.1, 0.0);
 	}
 }
 
