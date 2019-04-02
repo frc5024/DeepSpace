@@ -32,10 +32,8 @@ private:
 	
 	double speed;    //!< Speed value that will be passed into DriveTrain::ArcadeDrive
 	double rotation; //!< Rotation value that will be passed into DriveTrain::ArcadeDrive
-  double speedOutput = 0.0;
-  double rotationOutput = 0.0;
-
-  frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller because we are lazy
+	
+	frc::XboxController* pJoyDrive; //!< A mnemonic for the driver's controller because we are lazy
 };
 
 #endif // _TRIGGERDRIVE_HG_

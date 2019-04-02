@@ -17,8 +17,6 @@ void TriggerDrive::Initialize() {
   //set Speed and Rotation
   this->speed    = 0.0;
   this->rotation = 0.0;
-  this->rotationOutput = 0.0;
-  this->speedOutput = 0.0;
 }
 
 // Called repeatedly when this Command is scheduled to run
@@ -37,46 +35,18 @@ void TriggerDrive::Execute() {
   this->speed    *= (this->speedMultiplier * this->directionMultiplier);
   this->rotation *= (this->speedMultiplier * DRIVEWITHJOYSTICK_ROTATION_LIMITER);
 
-  // Breaks
-  if (this->pJoyDrive->GetBumperPressed(Hand::kLeftHand)){
-    Robot::m_DriveTrain->Coast();
-  }else if (this->pJoyDrive->GetBumperReleased(Hand::kLeftHand)){
-    Robot::m_DriveTrain->Break();
-  };
-
-  // Slew limit the joystick
-
-  double change = this->speed - this->speedOutput;
-  if (change > SLEW_LIMIT) {
-    change = SLEW_LIMIT;
-  }else if(change < (-SLEW_LIMIT)){
-    change = -SLEW_LIMIT;
-  };
-  this->speedOutput += change;
-
-  // // Rotation slew
-  // double rchange = this->rotation - this->rotationOutput;
-  // if (change > R_SLEW_LIMIT) {
-  //   rchange = R_SLEW_LIMIT;
-  // }else if(change < (-R_SLEW_LIMIT)){
-  //   rchange = -R_SLEW_LIMIT;
-  // };
-  // this->rotationOutput += rchange;
-
-  Robot::m_DriveTrain->ArcadeDrive(this->speedOutput, this->rotation);
+  Robot::m_DriveTrain->ArcadeDrive(this->speed, this->rotation);
   
   // Reset the speed and rotation
   // while this does have some negitive side effects while driving,
   // It is for saftey. (and so we don't have a run-away bot slam into a wall again)
   this->speed    = 0.00;
-  // this->speedOutput = 0.0;
   this->rotation = 0.00;
 }
 
 
 bool TriggerDrive::IsFinished() { 
-    // Stop if in Auto climb, we still need to drive in kActive mode though
-    return (ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kAuto); 
+  return !(ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kInactive); 
 }
 
 // Called once after isFinished returns true

@@ -6,22 +6,19 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 	this->pLeftRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_LEFT_REAR_MOTOR);
 	this->pLeftRearMotor->Follow(*pLeftFrontMotor);
 
-	// this->pLeftFrontMotor->SetInverted(true);
-	// this->pLeftRearMotor->SetInverted(true);
-	
+	this->pLeftFrontMotor->SetInverted(false);
+	this->pLeftRearMotor->SetInverted(false);
+	// this->pLeftFrontMotor->SetNeutralMode(NeutralMode::Brake);
+	// this->pLeftRearMotor->SetNeutralMode(NeutralMode::Brake);
 
 	this->pRightFrontMotor = new can::WPI_TalonSRX(DRIVETRAIN_RIGHT_FRONT_MOTOR);
 	this->pRightRearMotor = new can::WPI_TalonSRX(DRIVETRAIN_RIGHT_REAR_MOTOR);
 	this->pRightRearMotor->Follow(*pRightFrontMotor);
 
-	// this->pRightFrontMotor->SetInverted(true); // change this based on test or production robot
-	// this->pRightRearMotor->SetInverted(true); // change this based on test or production robot
-	
-	this->pLeftFrontMotor->SetNeutralMode(NeutralMode::Brake);
-	this->pLeftRearMotor->SetNeutralMode(NeutralMode::Brake);
-
-	this->pRightFrontMotor->SetNeutralMode(NeutralMode::Brake);
-	this->pRightRearMotor->SetNeutralMode(NeutralMode::Brake);
+	this->pRightFrontMotor->SetInverted(true); // change this based on test or production robot
+	this->pRightRearMotor->SetInverted(true); // change this based on test or production robot
+	// this->pRightFrontMotor->SetNeutralMode(NeutralMode::Brake);
+	// this->pRightRearMotor->SetNeutralMode(NeutralMode::Brake);
 
   // Create a DifferentialDrive class using our motors
 	this->pRobotDrive = new frc::DifferentialDrive(*pLeftFrontMotor, *pRightFrontMotor);
@@ -40,9 +37,6 @@ DriveTrain::DriveTrain() : frc::Subsystem("DriveTrain") {
 
 	this->pLeftFrontMotor->SetSensorPhase(true);
 	this->pRightFrontMotor->SetSensorPhase(true);
-
-	// Create the Arcade controller
-	this->pArcadeController = new rr::PIDController(ARCADE_KP, ARCADE_KI, ARCADE_KD);
 }
 
 void DriveTrain::InitDefaultCommand() {
@@ -50,8 +44,7 @@ void DriveTrain::InitDefaultCommand() {
 }
 
 void DriveTrain::ArcadeDrive(double xSpeed, double zRotation) {
-	// double speed = this->pArcadeController->Feed(xSpeed, (this->pLeftFrontMotor->GetSelectedSensorVelocity()));
-	this->pRobotDrive->ArcadeDrive(xSpeed, zRotation);
+	this->pRobotDrive->ArcadeDrive(zRotation, xSpeed); // API parameter order is incorrect
 	return;
 }
 
@@ -77,25 +70,4 @@ void DriveTrain::RadialDrive(double magnitude, double radial){
   // pass to tankdrive
   this->pRobotDrive->TankDrive(leftSpeed, rightSpeed);
   return;
-}
-
-void DriveTrain::RawDrive(double l, double r){
-	this->pLeftFrontMotor->Set(l);
-	this->pRightFrontMotor->Set(r);
-}
-
-void DriveTrain::Coast(){
-	this->pLeftFrontMotor->SetNeutralMode(NeutralMode::Coast);
-	this->pLeftRearMotor->SetNeutralMode(NeutralMode::Coast);
-
-	this->pRightFrontMotor->SetNeutralMode(NeutralMode::Coast);
-	this->pRightRearMotor->SetNeutralMode(NeutralMode::Coast);
-}
-
-void DriveTrain::Break(){
-	this->pLeftFrontMotor->SetNeutralMode(NeutralMode::Brake);
-	this->pLeftRearMotor->SetNeutralMode(NeutralMode::Brake);
-
-	this->pRightFrontMotor->SetNeutralMode(NeutralMode::Brake);
-	this->pRightRearMotor->SetNeutralMode(NeutralMode::Brake);
 }

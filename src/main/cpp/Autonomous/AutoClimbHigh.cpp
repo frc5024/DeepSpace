@@ -12,6 +12,7 @@ AutoClimbHigh::AutoClimbHigh() {
 	Requires(Robot::m_Arm);
 	Requires(Robot::m_Leg);
 	Requires(Robot::m_CrawlDrive);
+	Requires(Robot::m_DriveTrain);
 	this->pTimer = new frc::Timer();
 	this->stage = S_LOWER_ARM;
 	this->onFloor = true;
@@ -97,18 +98,19 @@ void AutoClimbHigh::Execute_Crawl(void) {
 
 void AutoClimbHigh::Execute_Drive(void) {
 
-	Robot::m_Arm->MoveArm(-0.2);    // Bring arm up slowly
+	Robot::m_Arm->MoveArm(-0.25);    // Bring arm up slowly
 	Robot::m_Leg->MoveLeg(-1.0);    // Keep leg down
 	Robot::m_CrawlDrive->Move(0.0); // Brake the crawlDrive
 
-    // Drives from 60% to 30% throughout 2 seconds then flatlines at 30%
-    double power = 0.6 - std::min(this->pTimer->Get(), 2.0) * 0.15 ;
+    // Drives from 60% to 20% throughout 2 seconds then flatlines at 20%
+    double power = 0.6 - std::min(this->pTimer->Get(), 2.0) * 0.2 ;
     Robot::m_DriveTrain->ArcadeDrive(power, 0.0);
 
-	// We do this for only 2 seconds, no sensors for this part
-	if (this->pTimer->Get() > 2.0) {
+	// We do this for only 2.1 seconds, no sensors for this part
+	if (this->pTimer->Get() > 2.1) {
 		this->stage = S_RAISE_LEG;
 		this->pTimer->Reset();
+        Robot::m_DriveTrain->ArcadeDrive(-0.3, 0.0);
 	}
 }
 
@@ -118,9 +120,9 @@ void AutoClimbHigh::Execute_Raiseleg(void) {
 	Robot::m_DriveTrain->TankDrive(0.0,0.0);    // Brake
 	Robot::m_Leg->MoveLeg(1.0);                 // Bring legs back up
 
-	// If leg is at top or it's been 3 seconds, we are finished
+	// If leg is at top or it's been 3.2 seconds, we are finished
 	if (Robot::m_Leg->AtTop()
-	||	this->pTimer->Get() > 3.0) {
+	||	this->pTimer->Get() > 3.2) {
 		this->stage = S_FINISHED ;
 	}	
 }

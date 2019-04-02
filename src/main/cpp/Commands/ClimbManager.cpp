@@ -15,9 +15,11 @@ void ClimbManager::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
 void ClimbManager::Execute() {
+    bool RightStickPressed = this->pJoyOp->GetStickButtonPressed(GenericHID::kRightHand);
+    short pov = this->pJoyOp->GetPOV();
 
     // If operator is holding left on D-pad and hits the left trigger
-    if ( (this->pJoyOp->GetPOV() == 270) &&  (this->pJoyOp->GetStickButtonPressed(GenericHID::kRightHand)) ) {
+    if ( (pov == 270) & (RightStickPressed) ) {
 
         // If we're already running Auto climb
         if (ClimbManager::CurrentClimbState == ClimbManager::kAuto) {
@@ -34,7 +36,7 @@ void ClimbManager::Execute() {
         }
     } 
     // If operator is holding right on D-pad and hits the left trigger
-    else if ( (this->pJoyOp->GetPOV() == 90) &&  (this->pJoyOp->GetStickButtonPressed(GenericHID::kRightHand)) ) {
+    else if ( (pov == 90) & (RightStickPressed) ) {
         
         // If we're already in manual climb mode
         if (ClimbManager::CurrentClimbState == ClimbManager::kActive) {

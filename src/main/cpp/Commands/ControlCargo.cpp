@@ -4,7 +4,7 @@
 ControlCargo::ControlCargo() {
   // Use Requires() here to declare subsystem dependencies
   Requires(Robot::m_Flap);
-  this->pJoyDrive = Robot::m_oi->GetJoystickDrive();
+  this->pJoyOp = Robot::m_oi->GetJoystickOperator();
 }
 
 // Called just before this Command runs the first time
@@ -15,12 +15,11 @@ void ControlCargo::Initialize() {}
 void ControlCargo::Execute() {
 
   // Control piston
-  if(this->pJoyDrive->GetYButton()){
+  if(this->pJoyOp->GetTriggerAxis(Hand::kLeftHand) > 0.8){
     Robot::m_Flap->Deploy();
   }else{
     Robot::m_Flap->Retract();
   }
-
 }
 
 
