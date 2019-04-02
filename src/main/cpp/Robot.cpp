@@ -225,7 +225,10 @@ void Robot::SharedPeriodic(){
     // Active certain commands if we want to start climbing
     switch (ClimbManager::CurrentClimbState) {
         case ClimbManager::ClimbState::kInactive: 
-            this->pClimbManager->UpdateRumble();
+            if (this->pTriggerDrive != nullptr) {
+                this->pTriggerDrive->Start();
+                this->pClimbManager->UpdateRumble();
+            }
             break;
         case ClimbManager::ClimbState::kActive:
             if (this->pClimb != nullptr) {

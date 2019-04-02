@@ -83,9 +83,12 @@
 #define FLAP_ID_FORWARD 5
 #define FLAP_ID_REVERSE 6
 
-// DriveWithJoystick Settings
-#define DRIVEWITHJOYSTICK_ROTATION_LIMITER 0.95
-#define DRIVEWITHJOYSTICK
+// Trigger Drive Settings
+#define DRIVEWITHJOYSTICK_ROTATION_LIMITER      0.95
+#define STATIC_FRICTION_MIN_DRIVE_MOTOR_OUTPUT  0.3
+#define STATIC_FRICTION_MIN_ROTATE_MOTOR_OUTPUT 0.4
+#define MOTOR_OUTPUT_ACCELERATION               0.03 //!< percent per cycle
+#define MOTOR_OUTPUT_ROTATION_ACCELERATION      0.05 //!< percent per cycle
 
 // Xbox controllers
 #define XBOX_CONTROLLER_DRIVE_PORT    0

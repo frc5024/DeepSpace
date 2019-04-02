@@ -46,11 +46,10 @@ void ClimbManager::Execute() {
         } else {
 
             // Otherwise, Start manual climb commands
-            this->CurrentClimbState = this->ClimbState::kActive;
+            ClimbManager::CurrentClimbState = ClimbManager::kActive;
             UpdateRumble();
         }
     }
-
 }
 
 // Make this return true when this Command no longer needs to run execute()

@@ -21,6 +21,8 @@ public:
 private:
     double xSpeed;                  //!< Store the frequently accessed xSpeed for faster runtime
     double zRotation;               //!< Store the frequently accessed zRotation for faster runtime
+    double xSpeedPrev;              //!< Store the last used x speed for difference calculations
+    double zRotationPrev;           //!< Store the last used z rotation for difference calculations
     bool isReversed;                //!< Boolean for reversing x direction
 	frc::XboxController* pJoyDrive; //!< Pointer to the driver controller
     AHRS* pGyro;                    //!< Pointer to the gyro

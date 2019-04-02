@@ -8,13 +8,11 @@ TriggerDrive::TriggerDrive() {
     this->isReversed = false;
     this->xSpeed = 0.0;
     this->zRotation = 0.0;
+    this->xSpeedPrev = 0.0;
+    this->zRotationPrev = 0.0;
 }
 
-void TriggerDrive::Initialize() {
-    // Don't reset isReversed, as ClimbMode resets this command
-    this->xSpeed = 0.0;
-    this->zRotation = 0.0;
-}
+void TriggerDrive::Initialize() {}
 
 void TriggerDrive::Execute() {
 
@@ -32,6 +30,15 @@ void TriggerDrive::Execute() {
 
     // Slow down by 60% if right bumper is held
     if (isBumperHeld) this->xSpeed *= 0.6;
+
+    double xSpeedDelta = this->xSpeed - fabs(this->xSpeedPrev);
+    if (xSpeedDelta > MOTOR_OUTPUT_ACCELERATION)
+        xSpeedDelta = MOTOR_OUTPUT_ACCELERATION;
+    
+    // If we're trying to move, but aren't, add a little kick
+    if (this->xSpeed >= 0.05)
+        if ( ! this->pGyro->IsMoving())
+            this->xSpeed += STATIC_FRICTION_MIN_DRIVE_MOTOR_OUTPUT;
     
     // Check reverse direction
     if (this->isReversed) this->xSpeed = - this->xSpeed;
@@ -48,18 +55,30 @@ void TriggerDrive::Execute() {
     // Slow down rotation if right bumper is held
     if (isBumperHeld) this->zRotation *= 0.7;
 
+    double zRotationDelta = this->zRotation - this->zRotationPrev;
+    if (zRotationDelta > MOTOR_OUTPUT_ROTATION_ACCELERATION) { // Speeding up too fast
+        this->zRotation = this->zRotationPrev + MOTOR_OUTPUT_ROTATION_ACCELERATION;
+    } else { // Speeding up below limit
+        this->zRotation = this->zRotationPrev + zRotationDelta;
+    }
+    
+    // DRIVE! VROOM VROOM!
     Robot::m_DriveTrain->ArcadeDrive(this->xSpeed, this->zRotation);
 
+    // Update past values
+    this->xSpeedPrev = this->xSpeed;
+    this->zRotationPrev = this->zRotation;
 }
-
 
 bool TriggerDrive::IsFinished() { 
-  return !(ClimbManager::CurrentClimbState == ClimbManager::ClimbState::kInactive); 
+    // Stop the command if we're in auto mode, robot will restart command when out of auto mode
+    return ClimbManager::CurrentClimbState == ClimbManager::kAuto;
 }
 
-// Called once after isFinished returns true
-void TriggerDrive::End() {}
+void TriggerDrive::End() {
+    Robot::m_DriveTrain->ArcadeDrive(0.0, 0.0);
+}
 
-// Called when another command which requires one or more of the same
-// subsystems is scheduled to run
-void TriggerDrive::Interrupted() {}
+void TriggerDrive::Interrupted() {
+    Robot::m_DriveTrain->ArcadeDrive(0.0, 0.0);
+}
