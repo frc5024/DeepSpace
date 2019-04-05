@@ -37,15 +37,26 @@
 #include "Subsystems/Piston.h"
 #include "Subsystems/HatchGripper.h"
 #include "Subsystems/Flap.h"
-#include "Subsystems/Light.h"
+#include "Subsystems/Light.h" 
 
 // Telemetry devices
 #include <frc/PowerDistributionPanel.h>
 #include <frc/DriverStation.h>
 #include "AHRS.h"
 
-class Robot : public frc::TimedRobot {
- public:
+// Logging
+#include <string>
+#include <iostream>
+#include <vector>
+#include <time.h>
+
+
+void Log(std::string msg);
+void Display(clock_t start, clock_t current);
+
+class Robot : public frc::TimedRobot
+{
+public:
 
 	// Subsystems
   static cCompressor  *m_cCompressor;  //!< Pointer for the cCompressor
@@ -102,6 +113,8 @@ private:
   std::shared_ptr<NetworkTable> ntTelemetry; //!< A pointer to the /SmartDashboard/Telemetry table
 
   AHRS* pGyro;
+
+  clock_t logStart, logCurrent;
 };
 
 #endif //_ROBOT_HG_

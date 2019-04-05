@@ -23,7 +23,33 @@ HatchGripper *Robot::m_HatchGripper;
 Flap         *Robot::m_Flap;
 Light        *Robot::m_Light;
 
+// Logging
+std::vector<std::string> logBuffer;
+
+void Log(std::string message){
+    logBuffer.push_back(message);
+}
+
+void vector_print(std::vector<std::string> const &input)
+{
+	for (auto const& i: input) {
+        std::cout << i << std::endl;
+    }
+}
+
+void Display(clock_t start, clock_t current){
+    double duration = (double)(current - start) / CLOCKS_PER_SEC;
+    std::cout << "-- " << duration << " seconds since boot --" << std::endl;
+    vector_print(logBuffer);
+    logBuffer.clear();
+}
+
+
+// Robot
 void Robot::RobotInit() {
+  // Start logging timer
+  this->logStart = clock();
+
   // Print out a banner to the shell
   std::cout << "   Welcome 5024!"    << std::endl;
   std::cout << "-------------------" << std::endl;
@@ -107,6 +133,12 @@ void Robot::RobotPeriodic() {
   this->ntTelemetry->PutBoolean("DSconn",  dsAttached);
   this->ntTelemetry->PutBoolean("FMSconn", fmsAttached);
   this->ntTelemetry->PutNumber("Angle", gyroAngle);
+
+  // Push logs to network
+  this->logCurrent = clock();
+  if(logBuffer.size() > 0){
+    Display(this->logStart, this->logCurrent);
+  }
 }
 
 /**
