@@ -39,7 +39,7 @@ void vector_print(std::vector<std::string> const &input)
 
 void Display(clock_t start, clock_t current){
     double duration = (double)(current - start) / CLOCKS_PER_SEC;
-    std::cout << "-- " << duration << " seconds since boot --" << std::endl;
+    std::cout << "-- " << duration << " since boot --" << std::endl;
     vector_print(logBuffer);
     logBuffer.clear();
 }

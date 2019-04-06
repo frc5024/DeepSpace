@@ -1,0 +1,5018 @@
+
+********** Robot program starting **********
+   Welcome 5024!
+-------------------
+Robot Starting..
+Creating Subsystems.. DONE
+Creating Commands.. DONE
+CS: Back: Connecting to USB camera on /dev/video1
+Starting CameraServer.. DONE
+CS: Front: Connecting to USB camera on /dev/video0
+CS: Front: SetConfigJson: setting pixelFormat 1
+CS: Back: set format 1 res 160x120
+CS: Front: set format 1 res 160x120
+CS: Front: SetConfigJson: setting width 160, height 120
+CS: Front: SetConfigJson: setting property 'connect_verbose' to 1
+CS: Front: SetConfigJson: setting property 'raw_brightness' to 50
+CS: Front: SetConfigJson: setting property 'brightness' to 9
+CS: Front: SetConfigJson: setting property 'raw_contrast' to 10
+CS: Front: SetConfigJson: setting property 'contrast' to 100
+CS: Front: SetConfigJson: setting property 'raw_saturation' to 20
+CS: Front: SetConfigJson: setting property 'saturation' to 10
+CS: Front: SetConfigJson: setting property 'white_balance_temperature_auto' to 0
+CS: Front: SetConfigJson: setting property 'power_line_frequency' to 2
+CS: Front: SetConfigJson: setting property 'white_balance_temperature' to 2800
+CS: Front: SetConfigJson: setting property 'raw_sharpness' to 0
+CS: Front: SetConfigJson: setting property 'sharpness' to 0
+CS: Front: SetConfigJson: setting property 'backlight_compensation' to 0
+CS: Front: SetConfigJson: setting property 'exposure_auto' to 1
+CS: Front: SetConfigJson: setting property 'raw_exposure_absolute' to 78
+CS: Front: SetConfigJson: setting property 'exposure_absolute' to 32
+CS: Front: SetConfigJson: setting property 'pan_absolute' to 0
+CS: Front: SetConfigJson: setting property 'tilt_absolute' to 0
+CS: Front: SetConfigJson: setting property 'zoom_absolute' to 0
+CS: Back: SetConfigJson: setting pixelFormat 1
+CS: Back: SetConfigJson: setting width 160, height 120
+CS: Back: SetConfigJson: setting property 'connect_verbose' to 1
+CS: Back: SetConfigJson: setting property 'raw_brightness' to 50
+CS: Back: SetConfigJson: setting property 'brightness' to 9
+CS: Back: SetConfigJson: setting property 'raw_contrast' to 10
+CS: Back: SetConfigJson: setting property 'contrast' to 100
+CS: Back: SetConfigJson: setting property 'raw_saturation' to 20
+CS: Back: SetConfigJson: setting property 'saturation' to 10
+CS: Back: SetConfigJson: setting property 'white_balance_temperature_auto' to 0
+CS: Back: SetConfigJson: setting property 'power_line_frequency' to 2
+CS: Back: SetConfigJson: setting property 'white_balance_temperature' to 2800
+CS: Back: SetConfigJson: setting property 'raw_sharpness' to 0
+CS: Back: SetConfigJson: setting property 'sharpness' to 0
+CS: Back: SetConfigJson: setting property 'backlight_compensation' to 0
+CS: Back: SetConfigJson: setting property 'exposure_auto' to 1
+CS: Back: SetConfigJson: setting property 'raw_exposure_absolute' to 78
+CS: Back: SetConfigJson: setting property 'exposure_absolute' to 32
+CS: Back: SetConfigJson: setting property 'pan_absolute' to 0
+CS: Back: SetConfigJson: setting property 'tilt_absolute' to 0
+CS: Back: SetConfigJson: setting property 'zoom_absolute' to 0
+Setting camera config.. DONE
+Resetting Gyro.. Instantiating navX-Sensor on SPI Port 4.
+navX-Sensor Yaw Reset request ignored - startup calibration is currently in progress.
+DONE
+Connecting to telemetry table.. DONE
+navX-Sensor startup initialization and startup calibration complete.
+navX-Sensor onboard startup calibration complete.
+navX-Sensor Yaw angle auto-reset to 0.0 due to startup calibration.
+Robot disabling.. DONE
+NT: server: client CONNECTED: 169.254.48.36 port 49286
+NT: server: client CONNECTED: 10.50.24.22 port 64279
+AutonomousInit starting.. DONE
+Resetting gyro.. navX-Sensor Software Yaw Reset completed.
+DONE
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000137s
+	AutonomousPeriodic(): 0.020185s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000201s
+	AutonomousPeriodic(): 0.020409s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000131s
+	AutonomousPeriodic(): 0.022892s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000181s
+	AutonomousPeriodic(): 0.026160s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000131s
+	AutonomousPeriodic(): 0.024272s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000120s
+	AutonomousPeriodic(): 0.033902s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000182s
+	AutonomousPeriodic(): 0.032950s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000134s
+	AutonomousPeriodic(): 0.023884s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000300s
+	AutonomousPeriodic(): 0.027654s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000128s
+	AutonomousPeriodic(): 0.031805s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000130s
+	AutonomousPeriodic(): 0.036297s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000130s
+	AutonomousPeriodic(): 0.026691s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000389s
+	AutonomousPeriodic(): 0.034628s
+-- 150.796 since boot --
+Finger Down!
+-- 150.832 since boot --
+Finger Down!
+-- 150.849 since boot --
+Finger Down!
+-- 150.881 since boot --
+Finger Down!
+-- 150.895 since boot --
+Finger Down!
+-- 150.921 since boot --
+Finger Down!
+-- 150.946 since boot --
+Finger Down!
+-- 150.96 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 150.975 since boot --
+Finger Down!
+-- 151.027 since boot --
+Finger Down!
+-- 151.052 since boot --
+Finger Down!
+-- 151.066 since boot --
+Finger Down!
+-- 151.091 since boot --
+Finger Down!
+Robot disabling.. DONE
+Teleop commands starting.. DONE
+-- 151.32 since boot --
+Finger Down!
+-- 151.335 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 151.375 since boot --
+Finger Down!
+	RobotPeriodic(): 0.003606s
+	TeleopPeriodic(): 0.032796s
+-- 151.407 since boot --
+Finger Down!
+-- 151.431 since boot --
+Finger Down!
+-- 151.438 since boot --
+Finger Down!
+-- 151.477 since boot --
+Finger Down!
+-- 151.49 since boot --
+Finger Down!
+-- 151.515 since boot --
+Finger Down!
+-- 151.526 since boot --
+Finger Down!
+-- 151.562 since boot --
+Finger Down!
+-- 151.593 since boot --
+Finger Down!
+-- 151.605 since boot --
+Finger Down!
+-- 151.627 since boot --
+Finger Down!
+-- 151.663 since boot --
+Finger Down!
+-- 151.682 since boot --
+Finger Down!
+-- 151.698 since boot --
+Finger Down!
+-- 151.738 since boot --
+Finger Down!
+-- 151.767 since boot --
+Finger Down!
+-- 151.792 since boot --
+Finger Down!
+-- 151.817 since boot --
+Finger Down!
+-- 151.846 since boot --
+Finger Down!
+-- 151.871 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 151.885 since boot --
+Finger Down!
+-- 151.916 since boot --
+Finger Down!
+-- 151.948 since boot --
+Finger Down!
+-- 151.963 since boot --
+Finger Down!
+-- 152.002 since boot --
+Finger Down!
+-- 152.015 since boot --
+Finger Down!
+-- 152.027 since boot --
+Finger Down!
+-- 152.051 since boot --
+Finger Down!
+-- 152.086 since boot --
+Finger Down!
+-- 152.111 since boot --
+Finger Down!
+-- 152.146 since boot --
+Finger Down!
+-- 152.151 since boot --
+Finger Down!
+-- 152.155 since boot --
+Finger Down!
+-- 152.183 since boot --
+Finger Down!
+-- 152.207 since boot --
+Finger Down!
+-- 152.219 since boot --
+Finger Down!
+-- 152.234 since boot --
+Finger Down!
+-- 152.278 since boot --
+Finger Down!
+-- 152.31 since boot --
+Finger Down!
+-- 152.326 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 152.365 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000206s
+	TeleopPeriodic(): 0.025809s
+-- 152.379 since boot --
+Finger Down!
+-- 152.405 since boot --
+Finger Down!
+-- 152.42 since boot --
+Finger Down!
+-- 152.46 since boot --
+Finger Down!
+-- 152.499 since boot --
+Finger Down!
+-- 152.514 since boot --
+Finger Down!
+-- 152.544 since boot --
+Finger Down!
+-- 152.566 since boot --
+Finger Down!
+-- 152.58 since boot --
+Finger Down!
+-- 152.598 since boot --
+Finger Down!
+-- 152.625 since boot --
+Finger Down!
+-- 152.63 since boot --
+Finger Down!
+-- 152.635 since boot --
+Finger Down!
+-- 152.64 since boot --
+Finger Down!
+-- 152.645 since boot --
+Finger Down!
+-- 152.653 since boot --
+Finger Down!
+-- 152.675 since boot --
+Finger Down!
+-- 152.716 since boot --
+Finger Down!
+-- 152.73 since boot --
+Finger Down!
+-- 152.742 since boot --
+Finger Down!
+-- 152.766 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 152.779 since boot --
+Finger Down!
+-- 152.818 since boot --
+Finger Down!
+-- 152.842 since boot --
+Finger Down!
+-- 152.857 since boot --
+Finger Down!
+-- 152.893 since boot --
+Finger Down!
+-- 152.918 since boot --
+Finger Down!
+-- 152.936 since boot --
+Finger Down!
+-- 152.95 since boot --
+Finger Down!
+-- 152.99 since boot --
+Finger Down!
+-- 153.011 since boot --
+Finger Down!
+-- 153.042 since boot --
+Finger Down!
+-- 153.059 since boot --
+Finger Down!
+-- 153.099 since boot --
+Finger Down!
+-- 153.115 since boot --
+Finger Down!
+-- 153.137 since boot --
+Finger Down!
+-- 153.154 since boot --
+Finger Down!
+-- 153.195 since boot --
+Finger Down!
+-- 153.22 since boot --
+Finger Down!
+-- 153.235 since boot --
+Finger Down!
+-- 153.277 since boot --
+Finger Down!
+-- 153.289 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+-- 153.315 since boot --
+Finger Down!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000986s
+	TeleopPeriodic(): 0.021331s
+-- 153.348 since boot --
+Finger Down!
+-- 153.369 since boot --
+Finger Down!
+-- 153.406 since boot --
+Finger Down!
+-- 153.423 since boot --
+Finger Down!
+-- 153.441 since boot --
+Finger Down!
+-- 153.468 since boot --
+Finger Down!
+-- 153.492 since boot --
+Finger Down!
+-- 153.51 since boot --
+Finger Down!
+-- 153.556 since boot --
+Finger Down!
+-- 153.587 since boot --
+Finger Down!
+-- 153.6 since boot --
+Finger Down!
+-- 153.638 since boot --
+Finger Down!
+-- 153.652 since boot --
+Finger Down!
+-- 153.666 since boot --
+Finger Down!
+-- 153.688 since boot --
+Finger Down!
+-- 153.697 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 153.718 since boot --
+Finger Down!
+-- 153.74 since boot --
+Finger Down!
+-- 153.771 since boot --
+Finger Down!
+-- 153.788 since boot --
+Finger Down!
+-- 153.793 since boot --
+Finger Down!
+-- 153.832 since boot --
+Finger Down!
+-- 153.843 since boot --
+Finger Down!
+-- 153.855 since boot --
+Finger Down!
+-- 153.879 since boot --
+Finger Down!
+-- 153.91 since boot --
+Finger Down!
+-- 153.95 since boot --
+Finger Down!
+-- 153.981 since boot --
+Finger Down!
+-- 154.004 since boot --
+Finger Down!
+-- 154.018 since boot --
+Finger Down!
+-- 154.043 since boot --
+Finger Down!
+-- 154.053 since boot --
+Finger Down!
+-- 154.058 since boot --
+Finger Down!
+-- 154.075 since boot --
+Finger Down!
+-- 154.083 since boot --
+Finger Down!
+-- 154.104 since boot --
+Finger Down!
+-- 154.124 since boot --
+Finger Down!
+-- 154.158 since boot --
+Finger Down!
+-- 154.196 since boot --
+Finger Down!
+-- 154.212 since boot --
+Finger Down!
+-- 154.226 since boot --
+Finger Down!
+-- 154.265 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 154.293 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000245s
+	TeleopPeriodic(): 0.022314s
+-- 154.311 since boot --
+Finger Down!
+-- 154.322 since boot --
+Finger Down!
+-- 154.328 since boot --
+Finger Down!
+-- 154.347 since boot --
+Finger Down!
+-- 154.368 since boot --
+Finger Down!
+-- 154.39 since boot --
+Finger Down!
+-- 154.412 since boot --
+Finger Down!
+-- 154.432 since boot --
+Finger Down!
+-- 154.455 since boot --
+Finger Down!
+-- 154.479 since boot --
+Finger Down!
+-- 154.509 since boot --
+Finger Down!
+-- 154.563 since boot --
+Finger Down!
+-- 154.577 since boot --
+Finger Down!
+-- 154.601 since boot --
+Finger Down!
+-- 154.619 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 154.653 since boot --
+Finger Down!
+-- 154.667 since boot --
+Finger Down!
+-- 154.704 since boot --
+Finger Down!
+-- 154.732 since boot --
+Finger Down!
+-- 154.758 since boot --
+Finger Down!
+-- 154.771 since boot --
+Finger Down!
+-- 154.782 since boot --
+Finger Down!
+-- 154.817 since boot --
+Finger Down!
+-- 154.843 since boot --
+Finger Down!
+-- 154.865 since boot --
+Finger Down!
+-- 154.883 since boot --
+Finger Down!
+-- 154.915 since boot --
+Finger Down!
+-- 154.928 since boot --
+Finger Down!
+-- 154.951 since boot --
+Finger Down!
+-- 154.967 since boot --
+Finger Down!
+-- 154.995 since boot --
+Finger Down!
+-- 155.028 since boot --
+Finger Down!
+-- 155.044 since boot --
+Finger Down!
+-- 155.082 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000424s
+	TeleopPeriodic(): 0.023727s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000287s
+	TeleopPeriodic(): 0.027370s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000630s
+	TeleopPeriodic(): 0.020600s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000124s
+	TeleopPeriodic(): 0.034281s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000393s
+	TeleopPeriodic(): 0.025234s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000136s
+	TeleopPeriodic(): 0.024849s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000121s
+	TeleopPeriodic(): 0.032229s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000126s
+	TeleopPeriodic(): 0.024097s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000134s
+	TeleopPeriodic(): 0.022077s
+Joystick Axis missing, check if all controllers are plugged in
+-- 163.578 since boot --
+Finger Down!
+-- 163.617 since boot --
+Finger Down!
+-- 163.633 since boot --
+Finger Down!
+-- 163.67 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+-- 163.695 since boot --
+Finger Down!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.001301s
+	TeleopPeriodic(): 0.020759s
+-- 163.716 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 163.766 since boot --
+Finger Down!
+-- 163.78 since boot --
+Finger Down!
+-- 163.795 since boot --
+Finger Down!
+-- 163.833 since boot --
+Finger Down!
+-- 163.846 since boot --
+Finger Down!
+-- 163.855 since boot --
+Finger Down!
+-- 163.879 since boot --
+Finger Down!
+-- 163.916 since boot --
+Finger Down!
+-- 163.942 since boot --
+Finger Down!
+-- 163.967 since boot --
+Finger Down!
+-- 163.981 since boot --
+Finger Down!
+-- 164.018 since boot --
+Finger Down!
+-- 164.031 since boot --
+Finger Down!
+-- 164.046 since boot --
+Finger Down!
+-- 164.082 since boot --
+Finger Down!
+-- 164.118 since boot --
+Finger Down!
+-- 164.136 since boot --
+Finger Down!
+-- 164.141 since boot --
+Finger Down!
+-- 164.146 since boot --
+Finger Down!
+-- 164.167 since boot --
+Finger Down!
+-- 164.198 since boot --
+Finger Down!
+-- 164.211 since boot --
+Finger Down!
+-- 164.215 since boot --
+Finger Down!
+-- 164.232 since boot --
+Finger Down!
+-- 164.237 since boot --
+Finger Down!
+-- 164.242 since boot --
+Finger Down!
+-- 164.247 since boot --
+Finger Down!
+-- 164.252 since boot --
+Finger Down!
+-- 164.275 since boot --
+Finger Down!
+-- 164.312 since boot --
+Finger Down!
+-- 164.335 since boot --
+Finger Down!
+-- 164.36 since boot --
+Finger Down!
+-- 164.389 since boot --
+Finger Down!
+-- 164.402 since boot --
+Finger Down!
+-- 164.415 since boot --
+Finger Down!
+-- 164.454 since boot --
+Finger Down!
+-- 164.494 since boot --
+Finger Down!
+-- 164.506 since boot --
+Finger Down!
+-- 164.542 since boot --
+Finger Down!
+-- 164.555 since boot --
+Finger Down!
+-- 164.58 since boot --
+Watchdog not fed within 0.020000s
+Finger Down!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.002544s
+	TeleopPeriodic(): 0.019202s
+-- 164.595 since boot --
+Finger Down!
+-- 164.634 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 164.654 since boot --
+Finger Down!
+-- 164.667 since boot --
+Finger Down!
+-- 164.704 since boot --
+Finger Down!
+-- 164.729 since boot --
+Finger Down!
+-- 164.743 since boot --
+Finger Down!
+-- 164.758 since boot --
+Finger Down!
+-- 164.795 since boot --
+Finger Down!
+-- 164.816 since boot --
+Finger Down!
+-- 164.848 since boot --
+Finger Down!
+-- 164.862 since boot --
+Finger Down!
+-- 164.899 since boot --
+Finger Down!
+-- 164.913 since boot --
+Finger Down!
+-- 164.939 since boot --
+Finger Down!
+-- 164.969 since boot --
+Finger Down!
+-- 165.007 since boot --
+Finger Down!
+-- 165.02 since boot --
+Finger Down!
+-- 165.046 since boot --
+Finger Down!
+-- 165.069 since boot --
+Finger Down!
+-- 165.083 since boot --
+Finger Down!
+-- 165.106 since boot --
+Finger Down!
+-- 165.128 since boot --
+Finger Down!
+-- 165.157 since boot --
+Finger Down!
+-- 165.181 since boot --
+Finger Down!
+-- 165.209 since boot --
+Finger Down!
+-- 165.243 since boot --
+Finger Down!
+-- 165.265 since boot --
+Finger Down!
+-- 165.28 since boot --
+Finger Down!
+-- 165.304 since boot --
+Finger Down!
+-- 165.362 since boot --
+Finger Down!
+-- 165.377 since boot --
+Finger Down!
+-- 165.393 since boot --
+Finger Down!
+-- 165.424 since boot --
+Finger Down!
+-- 165.438 since boot --
+Finger Down!
+-- 165.458 since boot --
+Finger Down!
+-- 165.473 since boot --
+Finger Down!
+-- 165.5 since boot --
+Watchdog not fed within Finger Down!
+0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.005020s
+	TeleopPeriodic(): 0.019686s
+-- 165.54 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 165.567 since boot --
+Finger Down!
+-- 165.593 since boot --
+Finger Down!
+-- 165.618 since boot --
+Finger Down!
+-- 165.633 since boot --
+Finger Down!
+-- 165.656 since boot --
+Finger Down!
+-- 165.684 since boot --
+Finger Down!
+-- 165.72 since boot --
+Finger Down!
+-- 165.735 since boot --
+Finger Down!
+-- 165.772 since boot --
+Finger Down!
+-- 165.788 since boot --
+Finger Down!
+-- 165.798 since boot --
+Finger Down!
+-- 165.81 since boot --
+Finger Down!
+-- 165.829 since boot --
+Finger Down!
+-- 165.85 since boot --
+Finger Down!
+-- 165.894 since boot --
+Finger Down!
+-- 165.909 since boot --
+Finger Down!
+-- 165.946 since boot --
+Finger Down!
+-- 165.97 since boot --
+Finger Down!
+-- 165.983 since boot --
+Finger Down!
+-- 165.997 since boot --
+Finger Down!
+-- 166.039 since boot --
+Finger Down!
+-- 166.067 since boot --
+Finger Down!
+-- 166.097 since boot --
+Finger Down!
+-- 166.124 since boot --
+Finger Down!
+-- 166.151 since boot --
+Finger Down!
+-- 166.174 since boot --
+Finger Down!
+-- 166.186 since boot --
+Finger Down!
+-- 166.226 since boot --
+Finger Down!
+-- 166.249 since boot --
+Finger Down!
+-- 166.263 since boot --
+Finger Down!
+-- 166.301 since boot --
+Finger Down!
+-- 166.315 since boot --
+Finger Down!
+-- 166.339 since boot --
+Finger Down!
+-- 166.351 since boot --
+Finger Down!
+-- 166.39 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 166.419 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000217s
+	TeleopPeriodic(): 0.025364s
+Joystick Axis missing, check if all controllers are plugged in
+-- 166.447 since boot --
+Finger Down!
+-- 166.476 since boot --
+Finger Down!
+-- 166.501 since boot --
+Finger Down!
+-- 166.516 since boot --
+Finger Down!
+-- 166.556 since boot --
+Finger Down!
+-- 166.583 since boot --
+Finger Down!
+-- 166.612 since boot --
+Finger Down!
+-- 166.638 since boot --
+Finger Down!
+-- 166.669 since boot --
+Finger Down!
+-- 166.683 since boot --
+Finger Down!
+-- 166.709 since boot --
+Finger Down!
+-- 166.734 since boot --
+Finger Down!
+-- 166.777 since boot --
+Finger Down!
+-- 166.805 since boot --
+Finger Down!
+-- 166.834 since boot --
+Finger Down!
+-- 166.859 since boot --
+Finger Down!
+-- 166.875 since boot --
+Finger Down!
+-- 166.889 since boot --
+Finger Down!
+-- 166.929 since boot --
+Finger Down!
+-- 166.954 since boot --
+Finger Down!
+-- 166.981 since boot --
+Finger Down!
+-- 167.005 since boot --
+Finger Down!
+-- 167.033 since boot --
+Finger Down!
+-- 167.046 since boot --
+Finger Down!
+-- 167.073 since boot --
+Finger Down!
+-- 167.087 since boot --
+Finger Down!
+-- 167.135 since boot --
+Finger Down!
+-- 167.153 since boot --
+Finger Down!
+-- 167.168 since boot --
+Finger Down!
+-- 167.203 since boot --
+Finger Down!
+-- 167.229 since boot --
+Finger Down!
+-- 167.242 since boot --
+Finger Down!
+-- 167.257 since boot --
+Finger Down!
+-- 167.296 since boot --
+Finger Down!
+-- 167.318 since boot --
+Finger Down!
+-- 167.343 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 167.371 since boot --
+Finger Down!
+	RobotPeriodic(): 0.010745s
+	TeleopPeriodic(): 0.024876s
+-- 167.396 since boot --
+Finger Down!
+-- 167.42 since boot --
+Finger Down!
+-- 167.434 since boot --
+Finger Down!
+-- 167.461 since boot --
+Finger Down!
+-- 167.496 since boot --
+Finger Down!
+-- 167.51 since boot --
+Finger Down!
+-- 167.544 since boot --
+Finger Down!
+-- 167.56 since boot --
+Finger Down!
+-- 167.575 since boot --
+Finger Down!
+-- 167.6 since boot --
+Finger Down!
+-- 167.64 since boot --
+Finger Down!
+-- 167.665 since boot --
+Finger Down!
+-- 167.696 since boot --
+Finger Down!
+-- 167.718 since boot --
+Finger Down!
+-- 167.745 since boot --
+Finger Down!
+-- 167.76 since boot --
+Finger Down!
+-- 167.773 since boot --
+Finger Down!
+-- 167.81 since boot --
+Finger Down!
+-- 167.828 since boot --
+Finger Down!
+-- 167.85 since boot --
+Finger Down!
+-- 167.873 since boot --
+Finger Down!
+-- 167.911 since boot --
+Finger Down!
+-- 167.926 since boot --
+Finger Down!
+-- 167.933 since boot --
+Finger Down!
+-- 167.949 since boot --
+Finger Down!
+-- 167.958 since boot --
+Finger Down!
+-- 167.985 since boot --
+Finger Down!
+-- 168.014 since boot --
+Finger Down!
+-- 168.032 since boot --
+Finger Down!
+-- 168.042 since boot --
+Finger Down!
+-- 168.051 since boot --
+Finger Down!
+-- 168.057 since boot --
+Finger Down!
+-- 168.062 since boot --
+Finger Down!
+-- 168.091 since boot --
+Finger Down!
+-- 168.11 since boot --
+Finger Down!
+-- 168.124 since boot --
+Finger Down!
+-- 168.155 since boot --
+Finger Down!
+-- 168.178 since boot --
+Finger Down!
+-- 168.199 since boot --
+Finger Down!
+-- 168.222 since boot --
+Finger Down!
+-- 168.248 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 168.284 since boot --
+Finger Down!
+-- 168.295 since boot --
+Finger Down!
+-- 168.321 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+-- 168.346 since boot --
+Finger Down!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000332s
+	TeleopPeriodic(): 0.020951s
+-- 168.386 since boot --
+Finger Down!
+-- 168.401 since boot --
+Finger Down!
+-- 168.444 since boot --
+Finger Down!
+-- 168.462 since boot --
+Finger Down!
+-- 168.474 since boot --
+Finger Down!
+-- 168.489 since boot --
+Finger Down!
+-- 168.528 since boot --
+Finger Down!
+-- 168.553 since boot --
+Finger Down!
+-- 168.578 since boot --
+Finger Down!
+-- 168.589 since boot --
+Finger Down!
+-- 168.633 since boot --
+Finger Down!
+-- 168.66 since boot --
+Finger Down!
+-- 168.675 since boot --
+Finger Down!
+-- 168.706 since boot --
+Finger Down!
+-- 168.738 since boot --
+Finger Down!
+-- 168.749 since boot --
+Finger Down!
+-- 168.76 since boot --
+Finger Down!
+-- 168.796 since boot --
+Finger Down!
+-- 168.81 since boot --
+Finger Down!
+-- 168.837 since boot --
+Finger Down!
+-- 168.858 since boot --
+Finger Down!
+-- 168.886 since boot --
+Finger Down!
+-- 168.927 since boot --
+Finger Down!
+-- 168.94 since boot --
+Finger Down!
+-- 168.967 since boot --
+Finger Down!
+-- 168.991 since boot --
+Finger Down!
+-- 169.005 since boot --
+Finger Down!
+-- 169.017 since boot --
+Finger Down!
+-- 169.051 since boot --
+Finger Down!
+-- 169.082 since boot --
+Finger Down!
+-- 169.1 since boot --
+Finger Down!
+-- 169.119 since boot --
+Finger Down!
+-- 169.153 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 169.169 since boot --
+Finger Down!
+-- 169.193 since boot --
+Finger Down!
+-- 169.208 since boot --
+Finger Down!
+-- 169.221 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 169.26 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000212s
+	TeleopPeriodic(): 0.028058s
+-- 169.292 since boot --
+Finger Down!
+-- 169.319 since boot --
+Finger Down!
+-- 169.349 since boot --
+Finger Down!
+-- 169.36 since boot --
+Finger Down!
+-- 169.374 since boot --
+Finger Down!
+-- 169.41 since boot --
+Finger Down!
+-- 169.43 since boot --
+Finger Down!
+-- 169.463 since boot --
+Finger Down!
+-- 169.501 since boot --
+Finger Down!
+-- 169.515 since boot --
+Finger Down!
+-- 169.527 since boot --
+Finger Down!
+-- 169.551 since boot --
+Finger Down!
+-- 169.574 since boot --
+Finger Down!
+-- 169.615 since boot --
+Finger Down!
+-- 169.627 since boot --
+Finger Down!
+-- 169.639 since boot --
+Finger Down!
+-- 169.679 since boot --
+Finger Down!
+-- 169.702 since boot --
+Finger Down!
+-- 169.718 since boot --
+Finger Down!
+-- 169.744 since boot --
+Finger Down!
+-- 169.771 since boot --
+Finger Down!
+-- 169.798 since boot --
+Finger Down!
+-- 169.822 since boot --
+Finger Down!
+-- 169.851 since boot --
+Finger Down!
+-- 169.875 since boot --
+Finger Down!
+-- 169.899 since boot --
+Finger Down!
+-- 169.915 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000305s
+	TeleopPeriodic(): 0.024609s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000190s
+	TeleopPeriodic(): 0.021089s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000339s
+	TeleopPeriodic(): 0.025628s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000227s
+	TeleopPeriodic(): 0.028835s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.001482s
+	TeleopPeriodic(): 0.020841s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000135s
+	TeleopPeriodic(): 0.036671s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000128s
+	TeleopPeriodic(): 0.027371s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000135s
+	TeleopPeriodic(): 0.028187s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000140s
+	TeleopPeriodic(): 0.021529s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000201s
+	TeleopPeriodic(): 0.020194s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000391s
+	TeleopPeriodic(): 0.027272s
+-- 180.811 since boot --
+Finger Down!
+-- 180.838 since boot --
+Finger Down!
+-- 180.87 since boot --
+Finger Down!
+-- 180.882 since boot --
+Finger Down!
+-- 180.917 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 180.938 since boot --
+Finger Down!
+-- 180.962 since boot --
+Finger Down!
+-- 180.986 since boot --
+Finger Down!
+-- 181.008 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 181.036 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000196s
+	TeleopPeriodic(): 0.022501s
+-- 181.063 since boot --
+Finger Down!
+-- 181.092 since boot --
+Finger Down!
+-- 181.118 since boot --
+Finger Down!
+-- 181.134 since boot --
+Finger Down!
+-- 181.147 since boot --
+Finger Down!
+-- 181.189 since boot --
+Finger Down!
+-- 181.222 since boot --
+Finger Down!
+-- 181.238 since boot --
+Finger Down!
+-- 181.263 since boot --
+Finger Down!
+-- 181.288 since boot --
+Finger Down!
+-- 181.303 since boot --
+Finger Down!
+-- 181.329 since boot --
+Finger Down!
+-- 181.342 since boot --
+Finger Down!
+-- 181.392 since boot --
+Finger Down!
+-- 181.416 since boot --
+Finger Down!
+-- 181.432 since boot --
+Finger Down!
+-- 181.465 since boot --
+Finger Down!
+-- 181.483 since boot --
+Finger Down!
+-- 181.497 since boot --
+Finger Down!
+-- 181.519 since boot --
+Finger Down!
+-- 181.547 since boot --
+Finger Down!
+-- 181.577 since boot --
+Finger Down!
+-- 181.596 since boot --
+Finger Down!
+-- 181.631 since boot --
+Finger Down!
+-- 181.647 since boot --
+Finger Down!
+-- 181.665 since boot --
+Finger Down!
+-- 181.686 since boot --
+Finger Down!
+-- 181.712 since boot --
+Finger Down!
+-- 181.742 since boot --
+Finger Down!
+-- 181.764 since boot --
+Finger Down!
+-- 181.776 since boot --
+Finger Down!
+-- 181.822 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 181.841 since boot --
+Finger Down!
+-- 181.853 since boot --
+Finger Down!
+-- 181.891 since boot --
+Finger Down!
+-- 181.906 since boot --
+Finger Down!
+-- 181.927 since boot --
+Finger Down!
+-- 181.957 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+-- 181.986 since boot --
+Finger Down!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000392s
+	TeleopPeriodic(): 0.020175s
+-- 182.015 since boot --
+Finger Down!
+-- 182.037 since boot --
+Finger Down!
+-- 182.054 since boot --
+Finger Down!
+-- 182.098 since boot --
+Finger Down!
+-- 182.108 since boot --
+Finger Down!
+-- 182.125 since boot --
+Finger Down!
+-- 182.14 since boot --
+Finger Down!
+-- 182.182 since boot --
+Finger Down!
+-- 182.196 since boot --
+Finger Down!
+-- 182.222 since boot --
+Finger Down!
+-- 182.26 since boot --
+Finger Down!
+-- 182.289 since boot --
+Finger Down!
+-- 182.309 since boot --
+Finger Down!
+-- 182.323 since boot --
+Finger Down!
+-- 182.361 since boot --
+Finger Down!
+-- 182.375 since boot --
+Finger Down!
+-- 182.388 since boot --
+Finger Down!
+-- 182.418 since boot --
+Finger Down!
+-- 182.45 since boot --
+Finger Down!
+-- 182.481 since boot --
+Finger Down!
+-- 182.499 since boot --
+Finger Down!
+-- 182.54 since boot --
+Finger Down!
+-- 182.554 since boot --
+Finger Down!
+-- 182.579 since boot --
+Finger Down!
+-- 182.605 since boot --
+Finger Down!
+-- 182.641 since boot --
+Finger Down!
+-- 182.667 since boot --
+Finger Down!
+-- 182.68 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000117s
+	TeleopPeriodic(): 0.033393s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.001438s
+	TeleopPeriodic(): 0.025820s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000146s
+	TeleopPeriodic(): 0.024859s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000132s
+	TeleopPeriodic(): 0.022245s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000132s
+	TeleopPeriodic(): 0.025665s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000144s
+	TeleopPeriodic(): 0.031527s
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000125s
+	TeleopPeriodic(): 0.029622s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 189.011 since boot --
+Finger Down!
+-- 189.023 since boot --
+Finger Down!
+-- 189.038 since boot --
+Finger Down!
+-- 189.075 since boot --
+Finger Down!
+-- 189.096 since boot --
+Finger Down!
+-- 189.114 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 189.134 since boot --
+Finger Down!
+-- 189.171 since boot --
+Finger Down!
+-- 189.184 since boot --
+Finger Down!
+-- 189.197 since boot --
+Finger Down!
+-- 189.221 since boot --
+Finger Down!
+-- 189.232 since boot --
+Finger Down!
+-- 189.253 since boot --
+Finger Down!
+-- 189.283 since boot --
+Finger Down!
+-- 189.297 since boot --
+Finger Down!
+-- 189.31 since boot --
+Finger Down!
+-- 189.346 since boot --
+Finger Down!
+-- 189.369 since boot --
+Finger Down!
+-- 189.381 since boot --
+Finger Down!
+-- 189.396 since boot --
+Finger Down!
+-- 189.415 since boot --
+Finger Down!
+-- 189.45 since boot --
+Finger Down!
+-- 189.467 since boot --
+Finger Down!
+-- 189.498 since boot --
+Finger Down!
+-- 189.525 since boot --
+Finger Down!
+-- 189.553 since boot --
+Finger Down!
+-- 189.578 since boot --
+Finger Down!
+-- 189.594 since boot --
+Finger Down!
+-- 189.629 since boot --
+Finger Down!
+-- 189.658 since boot --
+Finger Down!
+-- 189.671 since boot --
+Finger Down!
+-- 189.695 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000503s
+	TeleopPeriodic(): 0.019968s
+-- 189.718 since boot --
+Finger Down!
+-- 189.732 since boot --
+Finger Down!
+-- 189.758 since boot --
+Finger Down!
+-- 189.796 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 189.836 since boot --
+Finger Down!
+-- 189.852 since boot --
+Finger Down!
+-- 189.888 since boot --
+Finger Down!
+-- 189.901 since boot --
+Finger Down!
+-- 189.915 since boot --
+Finger Down!
+-- 189.936 since boot --
+Finger Down!
+-- 189.963 since boot --
+Finger Down!
+-- 190.002 since boot --
+Finger Down!
+-- 190.014 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 190.05 since boot --
+Finger Down!
+-- 190.067 since boot --
+Finger Down!
+-- 190.092 since boot --
+Finger Down!
+-- 190.106 since boot --
+Finger Down!
+-- 190.141 since boot --
+Finger Down!
+-- 190.179 since boot --
+Finger Down!
+-- 190.19 since boot --
+Finger Down!
+-- 190.203 since boot --
+Finger Down!
+-- 190.239 since boot --
+Finger Down!
+-- 190.252 since boot --
+Finger Down!
+-- 190.265 since boot --
+Finger Down!
+-- 190.299 since boot --
+Finger Down!
+-- 190.329 since boot --
+Finger Down!
+-- 190.364 since boot --
+Finger Down!
+-- 190.401 since boot --
+Finger Down!
+-- 190.416 since boot --
+Finger Down!
+-- 190.433 since boot --
+Finger Down!
+-- 190.453 since boot --
+Finger Down!
+-- 190.478 since boot --
+Finger Down!
+-- 190.512 since boot --
+Finger Down!
+-- 190.531 since boot --
+Finger Down!
+-- 190.546 since boot --
+Finger Down!
+-- 190.592 since boot --
+Finger Down!
+-- 190.61 since boot --
+Finger Down!
+-- 190.623 since boot --
+Finger Down!
+-- 190.633 since boot --
+Finger Down!
+-- 190.668 since boot --
+Finger Down!
+-- 190.694 since boot --
+Finger Down!
+-- 190.721 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 190.751 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000534s
+	TeleopPeriodic(): 0.024083s
+-- 190.784 since boot --
+Finger Down!
+-- 190.804 since boot --
+Finger Down!
+-- 190.828 since boot --
+Finger Down!
+-- 190.861 since boot --
+Finger Down!
+-- 190.875 since boot --
+Finger Down!
+-- 190.885 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 190.922 since boot --
+Finger Down!
+-- 190.942 since boot --
+Finger Down!
+-- 190.966 since boot --
+Finger Down!
+-- 190.975 since boot --
+Finger Down!
+-- 191.015 since boot --
+Finger Down!
+-- 191.021 since boot --
+Finger Down!
+-- 191.035 since boot --
+Finger Down!
+-- 191.054 since boot --
+Finger Down!
+-- 191.06 since boot --
+Finger Down!
+-- 191.065 since boot --
+Finger Down!
+-- 191.071 since boot --
+Finger Down!
+-- 191.076 since boot --
+Finger Down!
+-- 191.092 since boot --
+Finger Down!
+-- 191.109 since boot --
+Finger Down!
+-- 191.115 since boot --
+Finger Down!
+-- 191.133 since boot --
+Finger Down!
+-- 191.171 since boot --
+Finger Down!
+-- 191.203 since boot --
+Finger Down!
+-- 191.228 since boot --
+Finger Down!
+-- 191.264 since boot --
+Finger Down!
+-- 191.282 since boot --
+Finger Down!
+-- 191.306 since boot --
+Finger Down!
+-- 191.321 since boot --
+Finger Down!
+-- 191.35 since boot --
+Finger Down!
+-- 191.383 since boot --
+Finger Down!
+-- 191.406 since boot --
+Finger Down!
+-- 191.419 since boot --
+Finger Down!
+-- 191.433 since boot --
+Finger Down!
+-- 191.459 since boot --
+Finger Down!
+-- 191.481 since boot --
+Finger Down!
+-- 191.506 since boot --
+Finger Down!
+-- 191.53 since boot --
+Finger Down!
+-- 191.543 since boot --
+Finger Down!
+-- 191.579 since boot --
+Finger Down!
+-- 191.592 since boot --
+Finger Down!
+-- 191.617 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 191.655 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000779s
+	TeleopPeriodic(): 0.034244s
+-- 191.685 since boot --
+Finger Down!
+-- 191.699 since boot --
+Finger Down!
+-- 191.738 since boot --
+Finger Down!
+-- 191.753 since boot --
+Finger Down!
+-- 191.777 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 191.8 since boot --
+Finger Down!
+-- 191.827 since boot --
+Finger Down!
+-- 191.861 since boot --
+Finger Down!
+-- 191.876 since boot --
+Finger Down!
+-- 191.901 since boot --
+Finger Down!
+-- 191.927 since boot --
+Finger Down!
+-- 191.941 since boot --
+Finger Down!
+-- 191.955 since boot --
+Finger Down!
+-- 191.998 since boot --
+Finger Down!
+-- 192.019 since boot --
+Finger Down!
+-- 192.043 since boot --
+Finger Down!
+-- 192.062 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000144s
+	TeleopPeriodic(): 0.040427s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000125s
+	TeleopPeriodic(): 0.024547s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000145s
+	TeleopPeriodic(): 0.025017s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000769s
+	TeleopPeriodic(): 0.019680s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000145s
+	TeleopPeriodic(): 0.023503s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000254s
+	TeleopPeriodic(): 0.032354s
+-- 198.073 since boot --
+Finger Down!
+-- 198.087 since boot --
+Finger Down!
+-- 198.113 since boot --
+Finger Down!
+-- 198.13 since boot --
+Finger Down!
+-- 198.151 since boot --
+Finger Down!
+-- 198.172 since boot --
+Finger Down!
+-- 198.2 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 198.236 since boot --
+Finger Down!
+-- 198.28 since boot --
+Finger Down!
+-- 198.294 since boot --
+Finger Down!
+-- 198.307 since boot --
+Finger Down!
+-- 198.353 since boot --
+Finger Down!
+-- 198.384 since boot --
+Finger Down!
+-- 198.397 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 198.434 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000212s
+	TeleopPeriodic(): 0.028947s
+-- 198.449 since boot --
+Finger Down!
+-- 198.477 since boot --
+Finger Down!
+-- 198.49 since boot --
+Finger Down!
+-- 198.51 since boot --
+Finger Down!
+-- 198.54 since boot --
+Finger Down!
+-- 198.568 since boot --
+Finger Down!
+-- 198.585 since boot --
+Finger Down!
+-- 198.612 since boot --
+Finger Down!
+-- 198.637 since boot --
+Finger Down!
+-- 198.651 since boot --
+Finger Down!
+-- 198.664 since boot --
+Finger Down!
+-- 198.702 since boot --
+Finger Down!
+-- 198.728 since boot --
+Finger Down!
+-- 198.753 since boot --
+Finger Down!
+-- 198.782 since boot --
+Finger Down!
+-- 198.793 since boot --
+Finger Down!
+-- 198.798 since boot --
+Finger Down!
+-- 198.803 since boot --
+Finger Down!
+-- 198.808 since boot --
+Finger Down!
+-- 198.826 since boot --
+Finger Down!
+-- 198.841 since boot --
+Finger Down!
+-- 198.88 since boot --
+Finger Down!
+-- 198.904 since boot --
+Finger Down!
+-- 198.933 since boot --
+Finger Down!
+-- 198.992 since boot --
+Finger Down!
+-- 199.009 since boot --
+Finger Down!
+-- 199.026 since boot --
+Finger Down!
+-- 199.065 since boot --
+Finger Down!
+-- 199.089 since boot --
+Finger Down!
+-- 199.118 since boot --
+Finger Down!
+-- 199.134 since boot --
+Finger Down!
+-- 199.164 since boot --
+Finger Down!
+-- 199.183 since boot --
+Finger Down!
+-- 199.209 since boot --
+Finger Down!
+-- 199.236 since boot --
+Finger Down!
+-- 199.272 since boot --
+Finger Down!
+-- 199.292 since boot --
+Finger Down!
+-- 199.323 since boot --
+Finger Down!
+-- 199.344 since boot --
+Finger Down!
+-- 199.358 since boot --
+Finger Down!
+-- 199.384 since boot --
+Finger Down!
+-- 199.425 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 199.465 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000253s
+	TeleopPeriodic(): 0.035993s
+-- 199.486 since boot --
+Finger Down!
+-- 199.525 since boot --
+Finger Down!
+-- 199.539 since boot --
+Finger Down!
+-- 199.553 since boot --
+Finger Down!
+-- 199.593 since boot --
+Finger Down!
+-- 199.635 since boot --
+Finger Down!
+-- 199.651 since boot --
+Finger Down!
+-- 199.689 since boot --
+Finger Down!
+-- 199.704 since boot --
+Finger Down!
+-- 199.711 since boot --
+Finger Down!
+-- 199.738 since boot --
+Finger Down!
+-- 199.766 since boot --
+Finger Down!
+-- 199.804 since boot --
+Finger Down!
+-- 199.829 since boot --
+Finger Down!
+-- 199.848 since boot --
+Finger Down!
+-- 199.872 since boot --
+Finger Down!
+-- 199.891 since boot --
+Finger Down!
+-- 199.908 since boot --
+Finger Down!
+-- 199.929 since boot --
+Finger Down!
+-- 199.96 since boot --
+Finger Down!
+-- 199.996 since boot --
+Finger Down!
+-- 200.022 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 200.055 since boot --
+Finger Down!
+-- 200.068 since boot --
+Finger Down!
+-- 200.092 since boot --
+Finger Down!
+-- 200.106 since boot --
+Finger Down!
+-- 200.148 since boot --
+Finger Down!
+-- 200.168 since boot --
+Finger Down!
+-- 200.182 since boot --
+Finger Down!
+-- 200.218 since boot --
+Finger Down!
+-- 200.238 since boot --
+Finger Down!
+-- 200.252 since boot --
+Finger Down!
+-- 200.266 since boot --
+Finger Down!
+-- 200.305 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 200.347 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000222s
+	TeleopPeriodic(): 0.027026s
+-- 200.363 since boot --
+Finger Down!
+-- 200.396 since boot --
+Finger Down!
+-- 200.418 since boot --
+Finger Down!
+-- 200.446 since boot --
+Finger Down!
+-- 200.466 since boot --
+Finger Down!
+-- 200.513 since boot --
+Finger Down!
+-- 200.527 since boot --
+Finger Down!
+-- 200.551 since boot --
+Finger Down!
+-- 200.578 since boot --
+Finger Down!
+-- 200.594 since boot --
+Finger Down!
+-- 200.621 since boot --
+Finger Down!
+-- 200.66 since boot --
+Finger Down!
+-- 200.697 since boot --
+Finger Down!
+-- 200.712 since boot --
+Finger Down!
+-- 200.738 since boot --
+Finger Down!
+-- 200.761 since boot --
+Finger Down!
+-- 200.776 since boot --
+Finger Down!
+-- 200.788 since boot --
+Finger Down!
+-- 200.826 since boot --
+Finger Down!
+-- 200.862 since boot --
+Finger Down!
+-- 200.876 since boot --
+Finger Down!
+-- 200.889 since boot --
+Finger Down!
+-- 200.925 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 200.94 since boot --
+Finger Down!
+-- 200.965 since boot --
+Finger Down!
+-- 200.977 since boot --
+Finger Down!
+-- 201.001 since boot --
+Finger Down!
+-- 201.032 since boot --
+Finger Down!
+-- 201.065 since boot --
+Finger Down!
+-- 201.081 since boot --
+Finger Down!
+-- 201.119 since boot --
+Finger Down!
+-- 201.134 since boot --
+Finger Down!
+-- 201.148 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000131s
+	TeleopPeriodic(): 0.020605s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000139s
+	TeleopPeriodic(): 0.023077s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000123s
+	TeleopPeriodic(): 0.028111s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000130s
+	TeleopPeriodic(): 0.028667s
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000817s
+	TeleopPeriodic(): 0.027568s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+-- 205.487 since boot --
+Finger Down!
+-- 205.515 since boot --
+Finger Down!
+-- 205.539 since boot --
+Finger Down!
+-- 205.556 since boot --
+Finger Down!
+-- 205.596 since boot --
+Finger Down!
+-- 205.613 since boot --
+Finger Down!
+-- 205.641 since boot --
+Finger Down!
+-- 205.681 since boot --
+Finger Down!
+-- 205.708 since boot --
+Finger Down!
+-- 205.733 since boot --
+Finger Down!
+-- 205.746 since boot --
+Finger Down!
+-- 205.787 since boot --
+Finger Down!
+-- 205.799 since boot --
+Finger Down!
+-- 205.815 since boot --
+Finger Down!
+-- 205.853 since boot --
+Finger Down!
+-- 205.879 since boot --
+Finger Down!
+-- 205.902 since boot --
+Finger Down!
+-- 205.916 since boot --
+Finger Down!
+-- 205.956 since boot --
+Finger Down!
+-- 205.972 since boot --
+Finger Down!
+-- 205.998 since boot --
+Finger Down!
+-- 206.02 since boot --
+Finger Down!
+-- 206.059 since boot --
+Finger Down!
+-- 206.09 since boot --
+Finger Down!
+-- 206.104 since boot --
+Finger Down!
+-- 206.141 since boot --
+Finger Down!
+-- 206.155 since boot --
+Finger Down!
+-- 206.168 since boot --
+Finger Down!
+-- 206.198 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000516s
+	TeleopPeriodic(): 0.025469s
+-- 206.227 since boot --
+Finger Down!
+-- 206.258 since boot --
+Finger Down!
+-- 206.276 since boot --
+Finger Down!
+-- 206.296 since boot --
+Finger Down!
+-- 206.318 since boot --
+Finger Down!
+-- 206.34 since boot --
+Finger Down!
+-- 206.368 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 206.379 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 206.426 since boot --
+Finger Down!
+-- 206.443 since boot --
+Finger Down!
+-- 206.448 since boot --
+Finger Down!
+-- 206.453 since boot --
+Finger Down!
+-- 206.459 since boot --
+Finger Down!
+-- 206.467 since boot --
+Finger Down!
+-- 206.479 since boot --
+Finger Down!
+-- 206.487 since boot --
+Finger Down!
+-- 206.496 since boot --
+Finger Down!
+-- 206.505 since boot --
+Finger Down!
+-- 206.513 since boot --
+Finger Down!
+-- 206.518 since boot --
+Finger Down!
+-- 206.544 since boot --
+Finger Down!
+-- 206.573 since boot --
+Finger Down!
+-- 206.596 since boot --
+Finger Down!
+-- 206.637 since boot --
+Finger Down!
+-- 206.651 since boot --
+Finger Down!
+-- 206.675 since boot --
+Finger Down!
+-- 206.702 since boot --
+Finger Down!
+-- 206.727 since boot --
+Finger Down!
+-- 206.741 since boot --
+Finger Down!
+-- 206.761 since boot --
+Finger Down!
+-- 206.783 since boot --
+Finger Down!
+-- 206.805 since boot --
+Finger Down!
+-- 206.845 since boot --
+Finger Down!
+-- 206.874 since boot --
+Finger Down!
+-- 206.883 since boot --
+Finger Down!
+-- 206.908 since boot --
+Finger Down!
+-- 206.943 since boot --
+Finger Down!
+-- 206.962 since boot --
+Finger Down!
+-- 206.992 since boot --
+Finger Down!
+-- 207.012 since boot --
+Finger Down!
+-- 207.039 since boot --
+Finger Down!
+-- 207.065 since boot --
+Finger Down!
+-- 207.08 since boot --
+Finger Down!
+-- 207.103 since boot --
+Finger Down!
+-- 207.154 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000225s
+	TeleopPeriodic(): 0.031098s
+-- 207.171 since boot --
+Finger Down!
+-- 207.205 since boot --
+Finger Down!
+-- 207.224 since boot --
+Finger Down!
+-- 207.25 since boot --
+Finger Down!
+-- 207.263 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 207.29 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 207.338 since boot --
+Finger Down!
+-- 207.349 since boot --
+Finger Down!
+-- 207.375 since boot --
+Finger Down!
+-- 207.398 since boot --
+Finger Down!
+-- 207.415 since boot --
+Finger Down!
+-- 207.432 since boot --
+Finger Down!
+-- 207.472 since boot --
+Finger Down!
+-- 207.505 since boot --
+Finger Down!
+-- 207.523 since boot --
+Finger Down!
+-- 207.563 since boot --
+Finger Down!
+-- 207.578 since boot --
+Finger Down!
+-- 207.601 since boot --
+Finger Down!
+-- 207.613 since boot --
+Finger Down!
+-- 207.641 since boot --
+Finger Down!
+-- 207.664 since boot --
+Finger Down!
+-- 207.686 since boot --
+Finger Down!
+-- 207.702 since boot --
+Finger Down!
+-- 207.736 since boot --
+Finger Down!
+-- 207.764 since boot --
+Finger Down!
+-- 207.778 since boot --
+Finger Down!
+-- 207.791 since boot --
+Finger Down!
+-- 207.831 since boot --
+Finger Down!
+-- 207.859 since boot --
+Finger Down!
+-- 207.88 since boot --
+Finger Down!
+-- 207.894 since boot --
+Finger Down!
+-- 207.916 since boot --
+Finger Down!
+-- 207.94 since boot --
+Finger Down!
+-- 207.974 since boot --
+Finger Down!
+-- 207.99 since boot --
+Finger Down!
+-- 208.034 since boot --
+Finger Down!
+-- 208.054 since boot --
+Finger Down!
+-- 208.069 since boot --
+Finger Down!
+-- 208.109 since boot --
+Finger Down!
+-- 208.122 since boot --
+Finger Down!
+-- 208.149 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 208.189 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000725s
+	TeleopPeriodic(): 0.037800s
+-- 208.209 since boot --
+Finger Down!
+-- 208.236 since boot --
+Finger Down!
+-- 208.259 since boot --
+Finger Down!
+-- 208.272 since boot --
+Finger Down!
+-- 208.313 since boot --
+Finger Down!
+-- 208.339 since boot --
+Finger Down!
+-- 208.365 since boot --
+Finger Down!
+-- 208.401 since boot --
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Finger Down!
+-- 208.417 since boot --
+Finger Down!
+-- 208.43 since boot --
+Finger Down!
+-- 208.448 since boot --
+Finger Down!
+-- 208.47 since boot --
+Finger Down!
+-- 208.515 since boot --
+Finger Down!
+-- 208.529 since boot --
+Finger Down!
+-- 208.553 since boot --
+Finger Down!
+-- 208.589 since boot --
+Finger Down!
+-- 208.601 since boot --
+Finger Down!
+-- 208.615 since boot --
+Finger Down!
+-- 208.651 since boot --
+Finger Down!
+-- 208.666 since boot --
+Finger Down!
+-- 208.703 since boot --
+Finger Down!
+-- 208.717 since boot --
+Finger Down!
+-- 208.755 since boot --
+Finger Down!
+-- 208.767 since boot --
+Finger Down!
+-- 208.791 since boot --
+Finger Down!
+-- 208.805 since boot --
+Finger Down!
+-- 208.839 since boot --
+Finger Down!
+-- 208.865 since boot --
+Finger Down!
+-- 208.88 since boot --
+Finger Down!
+-- 208.916 since boot --
+Finger Down!
+-- 208.932 since boot --
+Finger Down!
+-- 208.955 since boot --
+Finger Down!
+-- 208.969 since boot --
+Finger Down!
+-- 209.009 since boot --
+Finger Down!
+-- 209.035 since boot --
+Finger Down!
+-- 209.059 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 209.07 since boot --
+Finger Down!
+-- 209.106 since boot --
+Finger Down!
+-- 209.12 since boot --
+Finger Down!
+-- 209.135 since boot --
+Finger Down!
+-- 209.174 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000431s
+	TeleopPeriodic(): 0.021570s
+-- 209.215 since boot --
+Finger Down!
+-- 209.229 since boot --
+Finger Down!
+-- 209.272 since boot --
+Finger Down!
+-- 209.286 since boot --
+Finger Down!
+-- 209.317 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 209.361 since boot --
+Finger Down!
+-- 209.393 since boot --
+Finger Down!
+-- 209.408 since boot --
+Finger Down!
+-- 209.434 since boot --
+Finger Down!
+-- 209.461 since boot --
+Finger Down!
+-- 209.478 since boot --
+Finger Down!
+-- 209.486 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000128s
+	TeleopPeriodic(): 0.021147s
+-- 210.486 since boot --
+Finger Down!
+-- 210.502 since boot --
+Finger Down!
+-- 210.532 since boot --
+Finger Down!
+-- 210.55 since boot --
+Finger Down!
+-- 210.563 since boot --
+Finger Down!
+-- 210.589 since boot --
+Finger Down!
+-- 210.616 since boot --
+Finger Down!
+-- 210.651 since boot --
+Finger Down!
+-- 210.678 since boot --
+Finger Down!
+-- 210.694 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 210.732 since boot --
+Finger Down!
+-- 210.745 since boot --
+Finger Down!
+-- 210.759 since boot --
+Finger Down!
+-- 210.792 since boot --
+Finger Down!
+-- 210.815 since boot --
+Finger Down!
+-- 210.856 since boot --
+Finger Down!
+-- 210.893 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 210.916 since boot --
+Finger Down!
+-- 210.932 since boot --
+Finger Down!
+-- 210.952 since boot --
+Finger Down!
+-- 210.969 since boot --
+Finger Down!
+-- 210.998 since boot --
+Finger Down!
+-- 211.018 since boot --
+Finger Down!
+-- 211.044 since boot --
+Finger Down!
+-- 211.082 since boot --
+Finger Down!
+-- 211.101 since boot --
+Finger Down!
+-- 211.118 since boot --
+Finger Down!
+-- 211.133 since boot --
+Finger Down!
+-- 211.155 since boot --
+Finger Down!
+-- 211.178 since boot --
+Finger Down!
+-- 211.197 since boot --
+Finger Down!
+-- 211.232 since boot --
+Finger Down!
+-- 211.255 since boot --
+Finger Down!
+-- 211.282 since boot --
+Finger Down!
+-- 211.297 since boot --
+Finger Down!
+-- 211.32 since boot --
+Finger Down!
+-- 211.347 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000495s
+	TeleopPeriodic(): 0.021485s
+-- 211.386 since boot --
+Finger Down!
+-- 211.399 since boot --
+Finger Down!
+-- 211.436 since boot --
+Finger Down!
+-- 211.454 since boot --
+Finger Down!
+-- 211.469 since boot --
+Finger Down!
+-- 211.5 since boot --
+Finger Down!
+-- 211.521 since boot --
+Finger Down!
+-- 211.54 since boot --
+Finger Down!
+-- 211.56 since boot --
+Finger Down!
+-- 211.603 since boot --
+Finger Down!
+-- 211.629 since boot --
+Finger Down!
+-- 211.657 since boot --
+Finger Down!
+-- 211.672 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+-- 211.695 since boot --
+Finger Down!
+Loop time of 2.000000e-02s overrun
+
+-- 211.736 since boot --
+Finger Down!
+-- 211.766 since boot --
+Finger Down!
+-- 211.779 since boot --
+Finger Down!
+-- 211.807 since boot --
+Finger Down!
+-- 211.83 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 211.855 since boot --
+Finger Down!
+-- 211.87 since boot --
+Finger Down!
+-- 211.909 since boot --
+Finger Down!
+-- 211.942 since boot --
+Finger Down!
+-- 211.962 since boot --
+Finger Down!
+-- 211.987 since boot --
+Finger Down!
+-- 212.014 since boot --
+Finger Down!
+-- 212.029 since boot --
+Finger Down!
+-- 212.041 since boot --
+Finger Down!
+-- 212.074 since boot --
+Finger Down!
+-- 212.103 since boot --
+Finger Down!
+-- 212.135 since boot --
+Finger Down!
+-- 212.172 since boot --
+Finger Down!
+-- 212.188 since boot --
+Finger Down!
+-- 212.211 since boot --
+Finger Down!
+-- 212.224 since boot --
+Finger Down!
+-- 212.246 since boot --
+Finger Down!
+-- 212.287 since boot --
+Finger Down!
+	RobotPeriodic(): 0.001059s
+	TeleopPeriodic(): 0.023627s
+-- 212.302 since boot --
+Finger Down!
+-- 212.334 since boot --
+Finger Down!
+-- 212.362 since boot --
+Finger Down!
+-- 212.378 since boot --
+Finger Down!
+-- 212.395 since boot --
+Finger Down!
+-- 212.431 since boot --
+Finger Down!
+-- 212.455 since boot --
+Finger Down!
+-- 212.483 since boot --
+Finger Down!
+-- 212.499 since boot --
+Finger Down!
+-- 212.539 since boot --
+Finger Down!
+-- 212.565 since boot --
+Finger Down!
+-- 212.58 since boot --
+Finger Down!
+-- 212.595 since boot --
+Finger Down!
+-- 212.644 since boot --
+Finger Down!
+-- 212.658 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 212.697 since boot --
+Finger Down!
+-- 212.715 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 212.744 since boot --
+Finger Down!
+-- 212.771 since boot --
+Finger Down!
+-- 212.787 since boot --
+Finger Down!
+-- 212.814 since boot --
+Finger Down!
+-- 212.839 since boot --
+Finger Down!
+-- 212.853 since boot --
+Finger Down!
+-- 212.89 since boot --
+Finger Down!
+-- 212.903 since boot --
+Finger Down!
+-- 212.919 since boot --
+Finger Down!
+-- 212.957 since boot --
+Finger Down!
+-- 212.995 since boot --
+Finger Down!
+-- 213.008 since boot --
+Finger Down!
+-- 213.046 since boot --
+Finger Down!
+-- 213.06 since boot --
+Finger Down!
+-- 213.074 since boot --
+Finger Down!
+-- 213.081 since boot --
+Finger Down!
+-- 213.09 since boot --
+Finger Down!
+-- 213.099 since boot --
+Finger Down!
+-- 213.111 since boot --
+Finger Down!
+-- 213.162 since boot --
+Finger Down!
+-- 213.185 since boot --
+Finger Down!
+-- 213.189 since boot --
+Finger Down!
+-- 213.203 since boot --
+Finger Down!
+-- 213.221 since boot --
+Finger Down!
+-- 213.25 since boot --
+Finger Down!
+-- 213.266 since boot --
+Finger Down!
+-- 213.274 since boot --
+Finger Down!
+-- 213.311 since boot --
+Finger Down!
+-- 213.338 since boot --
+Finger Down!
+-- 213.363 since boot --
+Finger Down!
+-- 213.387 since boot --
+Finger Down!
+	RobotPeriodic(): 0.005207s
+	TeleopPeriodic(): 0.016683s
+-- 213.411 since boot --
+Finger Down!
+-- 213.426 since boot --
+Finger Down!
+-- 213.451 since boot --
+Finger Down!
+-- 213.465 since boot --
+Finger Down!
+-- 213.499 since boot --
+Finger Down!
+-- 213.526 since boot --
+Finger Down!
+-- 213.539 since boot --
+Finger Down!
+-- 213.559 since boot --
+Finger Down!
+-- 213.588 since boot --
+Finger Down!
+-- 213.61 since boot --
+Finger Down!
+-- 213.625 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 213.658 since boot --
+Finger Down!
+-- 213.677 since boot --
+Finger Down!
+-- 213.719 since boot --
+Finger Down!
+-- 213.731 since boot --
+Finger Down!
+-- 213.765 since boot --
+Finger Down!
+-- 213.782 since boot --
+Finger Down!
+-- 213.807 since boot --
+Finger Down!
+-- 213.821 since boot --
+Finger Down!
+-- 213.861 since boot --
+Finger Down!
+-- 213.882 since boot --
+Finger Down!
+-- 213.9 since boot --
+Finger Down!
+-- 213.938 since boot --
+Finger Down!
+-- 213.95 since boot --
+Finger Down!
+-- 213.97 since boot --
+Finger Down!
+-- 213.984 since boot --
+Finger Down!
+-- 214.002 since boot --
+Finger Down!
+-- 214.031 since boot --
+Finger Down!
+-- 214.045 since boot --
+Finger Down!
+-- 214.052 since boot --
+Finger Down!
+-- 214.074 since boot --
+Finger Down!
+-- 214.079 since boot --
+Finger Down!
+-- 214.083 since boot --
+Finger Down!
+-- 214.089 since boot --
+Finger Down!
+-- 214.131 since boot --
+Finger Down!
+-- 214.14 since boot --
+Finger Down!
+-- 214.145 since boot --
+Finger Down!
+-- 214.15 since boot --
+Finger Down!
+-- 214.155 since boot --
+Finger Down!
+-- 214.165 since boot --
+Finger Down!
+-- 214.181 since boot --
+Finger Down!
+-- 214.224 since boot --
+Finger Down!
+-- 214.243 since boot --
+Finger Down!
+-- 214.249 since boot --
+Finger Down!
+-- 214.254 since boot --
+Finger Down!
+-- 214.284 since boot --
+Finger Down!
+	RobotPeriodic(): 0.002799s
+	TeleopPeriodic(): 0.026730s
+-- 214.299 since boot --
+Finger Down!
+-- 214.304 since boot --
+Finger Down!
+-- 214.309 since boot --
+Finger Down!
+-- 214.333 since boot --
+Finger Down!
+-- 214.349 since boot --
+Finger Down!
+-- 214.374 since boot --
+Finger Down!
+-- 214.415 since boot --
+Finger Down!
+-- 214.435 since boot --
+Finger Down!
+-- 214.459 since boot --
+Finger Down!
+-- 214.491 since boot --
+Finger Down!
+-- 214.505 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 214.548 since boot --
+Finger Down!
+-- 214.575 since boot --
+Finger Down!
+-- 214.599 since boot --
+Finger Down!
+-- 214.637 since boot --
+Finger Down!
+-- 214.651 since boot --
+Finger Down!
+-- 214.664 since boot --
+Finger Down!
+-- 214.691 since boot --
+Finger Down!
+-- 214.713 since boot --
+Finger Down!
+-- 214.755 since boot --
+Finger Down!
+-- 214.772 since boot --
+Finger Down!
+-- 214.808 since boot --
+Finger Down!
+-- 214.833 since boot --
+Finger Down!
+-- 214.847 since boot --
+Finger Down!
+-- 214.861 since boot --
+Finger Down!
+-- 214.893 since boot --
+Finger Down!
+-- 214.926 since boot --
+Finger Down!
+-- 214.953 since boot --
+Finger Down!
+-- 214.969 since boot --
+Finger Down!
+-- 215.007 since boot --
+Finger Down!
+-- 215.032 since boot --
+Finger Down!
+-- 215.047 since boot --
+Finger Down!
+-- 215.072 since boot --
+Finger Down!
+-- 215.108 since boot --
+Finger Down!
+-- 215.12 since boot --
+Finger Down!
+-- 215.144 since boot --
+Finger Down!
+-- 215.173 since boot --
+Finger Down!
+-- 215.189 since boot --
+Finger Down!
+-- 215.213 since boot --
+Finger Down!
+-- 215.252 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000491s
+	TeleopPeriodic(): 0.022556s
+-- 215.281 since boot --
+Finger Down!
+-- 215.305 since boot --
+Finger Down!
+-- 215.318 since boot --
+Finger Down!
+-- 215.353 since boot --
+Finger Down!
+-- 215.366 since boot --
+Finger Down!
+-- 215.38 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 215.421 since boot --
+Finger Down!
+-- 215.451 since boot --
+Finger Down!
+-- 215.475 since boot --
+Finger Down!
+-- 215.503 since boot --
+Finger Down!
+-- 215.526 since boot --
+Finger Down!
+-- 215.544 since boot --
+Finger Down!
+-- 215.571 since boot --
+Finger Down!
+-- 215.586 since boot --
+Finger Down!
+-- 215.631 since boot --
+Finger Down!
+-- 215.665 since boot --
+Finger Down!
+-- 215.679 since boot --
+Finger Down!
+-- 215.703 since boot --
+Finger Down!
+-- 215.732 since boot --
+Finger Down!
+-- 215.747 since boot --
+Finger Down!
+-- 215.757 since boot --
+Finger Down!
+-- 215.791 since boot --
+Finger Down!
+-- 215.819 since boot --
+Finger Down!
+-- 215.846 since boot --
+Finger Down!
+-- 215.88 since boot --
+Finger Down!
+-- 215.897 since boot --
+Finger Down!
+-- 215.91 since boot --
+Finger Down!
+-- 215.936 since boot --
+Finger Down!
+-- 215.975 since boot --
+Finger Down!
+-- 215.993 since boot --
+Finger Down!
+-- 216.012 since boot --
+Finger Down!
+-- 216.029 since boot --
+Finger Down!
+-- 216.08 since boot --
+Finger Down!
+-- 216.098 since boot --
+Finger Down!
+-- 216.112 since boot --
+Finger Down!
+-- 216.145 since boot --
+Finger Down!
+-- 216.161 since boot --
+Finger Down!
+-- 216.194 since boot --
+Finger Down!
+-- 216.215 since boot --
+Finger Down!
+-- 216.242 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000230s
+	TeleopPeriodic(): 0.021151s
+-- 216.267 since boot --
+Finger Down!
+-- 216.29 since boot --
+Finger Down!
+-- 216.303 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 216.329 since boot --
+Finger Down!
+-- 216.373 since boot --
+Finger Down!
+-- 216.386 since boot --
+Finger Down!
+-- 216.424 since boot --
+Finger Down!
+-- 216.437 since boot --
+Finger Down!
+-- 216.461 since boot --
+Watchdog not fed within Finger Down!
+0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 216.485 since boot --
+Finger Down!
+-- 216.513 since boot --
+Finger Down!
+-- 216.552 since boot --
+Finger Down!
+-- 216.567 since boot --
+Finger Down!
+-- 216.589 since boot --
+Finger Down!
+-- 216.619 since boot --
+Finger Down!
+-- 216.634 since boot --
+Finger Down!
+-- 216.649 since boot --
+Finger Down!
+-- 216.703 since boot --
+Finger Down!
+-- 216.724 since boot --
+Finger Down!
+-- 216.738 since boot --
+Finger Down!
+-- 216.773 since boot --
+Finger Down!
+-- 216.786 since boot --
+Finger Down!
+-- 216.801 since boot --
+Finger Down!
+-- 216.825 since boot --
+Finger Down!
+-- 216.849 since boot --
+Finger Down!
+-- 216.878 since boot --
+Finger Down!
+-- 216.915 since boot --
+Finger Down!
+-- 216.93 since boot --
+Finger Down!
+-- 216.966 since boot --
+Finger Down!
+-- 216.982 since boot --
+Finger Down!
+-- 216.998 since boot --
+Finger Down!
+-- 217.036 since boot --
+Finger Down!
+-- 217.057 since boot --
+Finger Down!
+-- 217.081 since boot --
+Finger Down!
+-- 217.101 since boot --
+Finger Down!
+-- 217.139 since boot --
+Finger Down!
+-- 217.151 since boot --
+Finger Down!
+-- 217.176 since boot --
+Finger Down!
+	RobotPeriodic(): 0.001943s
+	TeleopPeriodic(): 0.020806s
+-- 217.192 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000146s
+	TeleopPeriodic(): 0.023872s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000132s
+	TeleopPeriodic(): 0.022220s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000126s
+	TeleopPeriodic(): 0.021612s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000149s
+	TeleopPeriodic(): 0.028532s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000145s
+	TeleopPeriodic(): 0.020065s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000142s
+	TeleopPeriodic(): 0.028604s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000136s
+	TeleopPeriodic(): 0.031552s
+-- 224.31 since boot --
+Finger Down!
+-- 224.325 since boot --
+Finger Down!
+-- 224.363 since boot --
+Finger Down!
+-- 224.375 since boot --
+Finger Down!
+-- 224.4 since boot --
+Finger Down!
+-- 224.412 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+-- 224.438 since boot --
+Finger Down!
+Loop time of 2.000000e-02s overrun
+
+-- 224.477 since boot --
+Finger Down!
+-- 224.498 since boot --
+Finger Down!
+-- 224.513 since boot --
+Finger Down!
+-- 224.549 since boot --
+Finger Down!
+-- 224.562 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 224.577 since boot --
+Finger Down!
+-- 224.615 since boot --
+Finger Down!
+-- 224.642 since boot --
+Finger Down!
+-- 224.673 since boot --
+Finger Down!
+-- 224.716 since boot --
+Finger Down!
+-- 224.73 since boot --
+Finger Down!
+-- 224.756 since boot --
+Finger Down!
+-- 224.771 since boot --
+Finger Down!
+-- 224.819 since boot --
+Finger Down!
+	RobotPeriodic(): 0.005054s
+	TeleopPeriodic(): 0.022984s
+-- 224.842 since boot --
+Finger Down!
+-- 224.847 since boot --
+Finger Down!
+-- 224.86 since boot --
+Finger Down!
+-- 224.906 since boot --
+Finger Down!
+-- 224.921 since boot --
+Finger Down!
+-- 224.937 since boot --
+Finger Down!
+-- 224.975 since boot --
+Finger Down!
+-- 224.998 since boot --
+Finger Down!
+-- 225.025 since boot --
+Finger Down!
+-- 225.051 since boot --
+Finger Down!
+-- 225.078 since boot --
+Finger Down!
+-- 225.102 since boot --
+Finger Down!
+-- 225.116 since boot --
+Finger Down!
+-- 225.154 since boot --
+Finger Down!
+-- 225.182 since boot --
+Finger Down!
+-- 225.198 since boot --
+Finger Down!
+-- 225.222 since boot --
+Finger Down!
+-- 225.237 since boot --
+Finger Down!
+-- 225.258 since boot --
+Finger Down!
+-- 225.281 since boot --
+Finger Down!
+-- 225.302 since boot --
+Finger Down!
+-- 225.322 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 225.362 since boot --
+Finger Down!
+-- 225.389 since boot --
+Finger Down!
+-- 225.404 since boot --
+Finger Down!
+-- 225.422 since boot --
+Finger Down!
+-- 225.441 since boot --
+Finger Down!
+-- 225.461 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 225.484 since boot --
+Finger Down!
+-- 225.505 since boot --
+Finger Down!
+-- 225.525 since boot --
+Finger Down!
+-- 225.572 since boot --
+Finger Down!
+-- 225.618 since boot --
+Finger Down!
+-- 225.623 since boot --
+Finger Down!
+-- 225.629 since boot --
+Finger Down!
+-- 225.669 since boot --
+Finger Down!
+-- 225.682 since boot --
+Finger Down!
+-- 225.69 since boot --
+Finger Down!
+-- 225.695 since boot --
+Finger Down!
+-- 225.709 since boot --
+Finger Down!
+-- 225.722 since boot --
+Finger Down!
+-- 225.739 since boot --
+Finger Down!
+-- 225.753 since boot --
+Finger Down!
+-- 225.757 since boot --
+Finger Down!
+-- 225.768 since boot --
+Finger Down!
+-- 225.784 since boot --
+Finger Down!
+-- 225.826 since boot --
+Finger Down!
+-- 225.866 since boot --
+Finger Down!
+-- 225.871 since boot --
+Finger Down!
+-- 225.876 since boot --
+Finger Down!
+-- 225.902 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000726s
+	TeleopPeriodic(): 0.022550s
+-- 225.93 since boot --
+Finger Down!
+-- 225.958 since boot --
+Finger Down!
+-- 225.972 since boot --
+Finger Down!
+-- 226.021 since boot --
+Finger Down!
+-- 226.041 since boot --
+Finger Down!
+-- 226.067 since boot --
+Finger Down!
+-- 226.096 since boot --
+Finger Down!
+-- 226.11 since boot --
+Finger Down!
+-- 226.135 since boot --
+Finger Down!
+-- 226.172 since boot --
+Finger Down!
+-- 226.198 since boot --
+Finger Down!
+-- 226.223 since boot --
+Finger Down!
+-- 226.235 since boot --
+Finger Down!
+-- 226.262 since boot --
+Finger Down!
+-- 226.283 since boot --
+Finger Down!
+-- 226.296 since boot --
+Finger Down!
+-- 226.309 since boot --
+Finger Down!
+-- 226.351 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 226.382 since boot --
+Finger Down!
+-- 226.395 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 226.435 since boot --
+Finger Down!
+-- 226.448 since boot --
+Finger Down!
+-- 226.474 since boot --
+Finger Down!
+-- 226.487 since boot --
+Finger Down!
+-- 226.513 since boot --
+Finger Down!
+-- 226.529 since boot --
+Finger Down!
+-- 226.567 since boot --
+Finger Down!
+-- 226.583 since boot --
+Finger Down!
+-- 226.596 since boot --
+Finger Down!
+-- 226.633 since boot --
+Finger Down!
+-- 226.647 since boot --
+Finger Down!
+-- 226.661 since boot --
+Finger Down!
+-- 226.697 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000125s
+	TeleopPeriodic(): 0.023282s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.007673s
+	TeleopPeriodic(): 0.020620s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000124s
+	TeleopPeriodic(): 0.022716s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000139s
+	TeleopPeriodic(): 0.027595s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 230.713 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000395s
+	TeleopPeriodic(): 0.023060s
+-- 230.728 since boot --
+Finger Down!
+-- 230.749 since boot --
+Finger Down!
+-- 230.769 since boot --
+Finger Down!
+-- 230.793 since boot --
+Finger Down!
+-- 230.818 since boot --
+Finger Down!
+-- 230.826 since boot --
+Finger Down!
+-- 230.863 since boot --
+Finger Down!
+-- 230.882 since boot --
+Finger Down!
+-- 230.914 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 230.937 since boot --
+Finger Down!
+-- 230.981 since boot --
+Finger Down!
+-- 231.007 since boot --
+Finger Down!
+-- 231.022 since boot --
+Finger Down!
+-- 231.06 since boot --
+Finger Down!
+-- 231.091 since boot --
+Finger Down!
+-- 231.107 since boot --
+Finger Down!
+-- 231.148 since boot --
+Finger Down!
+-- 231.161 since boot --
+Finger Down!
+-- 231.188 since boot --
+Finger Down!
+-- 231.217 since boot --
+Finger Down!
+-- 231.24 since boot --
+Finger Down!
+-- 231.28 since boot --
+Finger Down!
+-- 231.295 since boot --
+Finger Down!
+-- 231.321 since boot --
+Finger Down!
+-- 231.333 since boot --
+Finger Down!
+-- 231.349 since boot --
+Finger Down!
+-- 231.364 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 231.409 since boot --
+Finger Down!
+-- 231.446 since boot --
+Finger Down!
+-- 231.462 since boot --
+Finger Down!
+-- 231.503 since boot --
+Finger Down!
+-- 231.518 since boot --
+Finger Down!
+-- 231.545 since boot --
+Finger Down!
+-- 231.559 since boot --
+Finger Down!
+-- 231.611 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000236s
+	TeleopPeriodic(): 0.021560s
+-- 231.638 since boot --
+Finger Down!
+-- 231.661 since boot --
+Finger Down!
+-- 231.695 since boot --
+Finger Down!
+-- 231.712 since boot --
+Finger Down!
+-- 231.736 since boot --
+Finger Down!
+-- 231.767 since boot --
+Finger Down!
+-- 231.803 since boot --
+Finger Down!
+-- 231.821 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 231.856 since boot --
+Finger Down!
+-- 231.871 since boot --
+Finger Down!
+-- 231.892 since boot --
+Finger Down!
+-- 231.912 since boot --
+Finger Down!
+-- 231.94 since boot --
+Finger Down!
+-- 231.977 since boot --
+Finger Down!
+-- 231.994 since boot --
+Finger Down!
+-- 232.023 since boot --
+Finger Down!
+-- 232.054 since boot --
+Finger Down!
+-- 232.07 since boot --
+Finger Down!
+-- 232.085 since boot --
+Finger Down!
+-- 232.126 since boot --
+Finger Down!
+-- 232.164 since boot --
+Finger Down!
+-- 232.183 since boot --
+Finger Down!
+-- 232.221 since boot --
+Finger Down!
+-- 232.234 since boot --
+Finger Down!
+-- 232.259 since boot --
+Finger Down!
+-- 232.273 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 232.319 since boot --
+Finger Down!
+-- 232.339 since boot --
+Finger Down!
+-- 232.346 since boot --
+Finger Down!
+-- 232.389 since boot --
+Finger Down!
+-- 232.406 since boot --
+Finger Down!
+-- 232.421 since boot --
+Finger Down!
+-- 232.441 since boot --
+Finger Down!
+-- 232.479 since boot --
+Finger Down!
+-- 232.505 since boot --
+Finger Down!
+-- 232.524 since boot --
+Finger Down!
+-- 232.542 since boot --
+Finger Down!
+-- 232.568 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000404s
+	TeleopPeriodic(): 0.022464s
+-- 232.593 since boot --
+Finger Down!
+-- 232.605 since boot --
+Finger Down!
+-- 232.618 since boot --
+Finger Down!
+-- 232.656 since boot --
+Finger Down!
+-- 232.691 since boot --
+Finger Down!
+-- 232.705 since boot --
+Finger Down!
+-- 232.741 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 232.758 since boot --
+Finger Down!
+-- 232.782 since boot --
+Finger Down!
+-- 232.802 since boot --
+Finger Down!
+-- 232.839 since boot --
+Finger Down!
+-- 232.872 since boot --
+Finger Down!
+-- 232.892 since boot --
+Finger Down!
+-- 232.931 since boot --
+Finger Down!
+-- 232.945 since boot --
+Finger Down!
+-- 232.959 since boot --
+Finger Down!
+-- 232.994 since boot --
+Finger Down!
+-- 233.018 since boot --
+Finger Down!
+-- 233.051 since boot --
+Finger Down!
+-- 233.091 since boot --
+Finger Down!
+-- 233.105 since boot --
+Finger Down!
+-- 233.119 since boot --
+Finger Down!
+-- 233.145 since boot --
+Finger Down!
+-- 233.171 since boot --
+Finger Down!
+-- 233.209 since boot --
+Finger Down!
+-- 233.223 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 233.262 since boot --
+Finger Down!
+-- 233.283 since boot --
+Finger Down!
+-- 233.298 since boot --
+Finger Down!
+-- 233.314 since boot --
+Finger Down!
+-- 233.319 since boot --
+Finger Down!
+-- 233.354 since boot --
+Finger Down!
+-- 233.379 since boot --
+Finger Down!
+-- 233.399 since boot --
+Finger Down!
+-- 233.405 since boot --
+Finger Down!
+-- 233.41 since boot --
+Finger Down!
+-- 233.415 since boot --
+Finger Down!
+-- 233.433 since boot --
+Finger Down!
+-- 233.439 since boot --
+Finger Down!
+-- 233.449 since boot --
+Finger Down!
+-- 233.459 since boot --
+Finger Down!
+-- 233.484 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000357s
+	TeleopPeriodic(): 0.022114s
+-- 233.499 since boot --
+Finger Down!
+-- 233.52 since boot --
+Finger Down!
+-- 233.565 since boot --
+Finger Down!
+-- 233.58 since boot --
+Finger Down!
+-- 233.62 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 233.635 since boot --
+Finger Down!
+-- 233.66 since boot --
+Finger Down!
+-- 233.697 since boot --
+Finger Down!
+-- 233.716 since boot --
+Finger Down!
+-- 233.751 since boot --
+Finger Down!
+-- 233.76 since boot --
+Finger Down!
+-- 233.766 since boot --
+Finger Down!
+-- 233.787 since boot --
+Finger Down!
+-- 233.816 since boot --
+Finger Down!
+-- 233.831 since boot --
+Finger Down!
+-- 233.849 since boot --
+Finger Down!
+-- 233.898 since boot --
+Finger Down!
+-- 233.923 since boot --
+Finger Down!
+-- 233.939 since boot --
+Finger Down!
+-- 233.977 since boot --
+Finger Down!
+-- 233.991 since boot --
+Finger Down!
+-- 234.017 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000131s
+	TeleopPeriodic(): 0.029440s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000130s
+	TeleopPeriodic(): 0.028187s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000138s
+	TeleopPeriodic(): 0.020679s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000138s
+	TeleopPeriodic(): 0.021067s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000121s
+	TeleopPeriodic(): 0.020616s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000346s
+	TeleopPeriodic(): 0.025577s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000183s
+	TeleopPeriodic(): 0.022942s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000453s
+	TeleopPeriodic(): 0.033141s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000226s
+	TeleopPeriodic(): 0.020483s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000120s
+	TeleopPeriodic(): 0.033215s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000232s
+	TeleopPeriodic(): 0.033730s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000135s
+	TeleopPeriodic(): 0.021451s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000144s
+	TeleopPeriodic(): 0.022147s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000141s
+	TeleopPeriodic(): 0.029970s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000136s
+	TeleopPeriodic(): 0.030114s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000131s
+	TeleopPeriodic(): 0.028092s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000134s
+	TeleopPeriodic(): 0.033450s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000637s
+	TeleopPeriodic(): 0.027148s
+-- 251.277 since boot --
+Finger Down!
+-- 251.293 since boot --
+Finger Down!
+-- 251.32 since boot --
+Finger Down!
+-- 251.346 since boot --
+Finger Down!
+-- 251.383 since boot --
+Finger Down!
+-- 251.41 since boot --
+Finger Down!
+-- 251.424 since boot --
+Finger Down!
+-- 251.463 since boot --
+Finger Down!
+-- 251.478 since boot --
+Finger Down!
+-- 251.491 since boot --
+Finger Down!
+-- 251.528 since boot --
+Finger Down!
+-- 251.543 since boot --
+Finger Down!
+-- 251.581 since boot --
+Finger Down!
+-- 251.62 since boot --
+Finger Down!
+-- 251.638 since boot --
+Finger Down!
+-- 251.664 since boot --
+Finger Down!
+-- 251.681 since boot --
+Finger Down!
+-- 251.725 since boot --
+Finger Down!
+-- 251.745 since boot --
+Finger Down!
+-- 251.758 since boot --
+Finger Down!
+-- 251.812 since boot --
+Finger Down!
+-- 251.828 since boot --
+Finger Down!
+-- 251.844 since boot --
+Finger Down!
+-- 251.878 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 251.914 since boot --
+Finger Down!
+-- 251.944 since boot --
+Finger Down!
+-- 251.981 since boot --
+Finger Down!
+-- 251.997 since boot --
+Finger Down!
+-- 252.02 since boot --
+Finger Down!
+-- 252.034 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 252.075 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000218s
+	TeleopPeriodic(): 0.024144s
+-- 252.099 since boot --
+Finger Down!
+-- 252.114 since boot --
+Finger Down!
+-- 252.152 since boot --
+Finger Down!
+-- 252.168 since boot --
+Finger Down!
+-- 252.193 since boot --
+Finger Down!
+-- 252.223 since boot --
+Finger Down!
+-- 252.242 since boot --
+Finger Down!
+-- 252.272 since boot --
+Finger Down!
+-- 252.295 since boot --
+Finger Down!
+-- 252.322 since boot --
+Finger Down!
+-- 252.352 since boot --
+Finger Down!
+-- 252.366 since boot --
+Finger Down!
+-- 252.391 since boot --
+Finger Down!
+-- 252.432 since boot --
+Finger Down!
+-- 252.454 since boot --
+Finger Down!
+-- 252.47 since boot --
+Finger Down!
+-- 252.508 since boot --
+Finger Down!
+-- 252.522 since boot --
+Finger Down!
+-- 252.535 since boot --
+Finger Down!
+-- 252.561 since boot --
+Finger Down!
+-- 252.588 since boot --
+Finger Down!
+-- 252.638 since boot --
+Finger Down!
+-- 252.659 since boot --
+Finger Down!
+-- 252.682 since boot --
+Finger Down!
+-- 252.707 since boot --
+Finger Down!
+-- 252.724 since boot --
+Finger Down!
+-- 252.73 since boot --
+Finger Down!
+-- 252.736 since boot --
+Finger Down!
+-- 252.743 since boot --
+Finger Down!
+-- 252.75 since boot --
+Finger Down!
+-- 252.76 since boot --
+Finger Down!
+-- 252.769 since boot --
+Finger Down!
+-- 252.777 since boot --
+Finger Down!
+-- 252.785 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 252.793 since boot --
+Finger Down!
+-- 252.8 since boot --
+Finger Down!
+-- 252.821 since boot --
+Finger Down!
+-- 252.838 since boot --
+Finger Down!
+-- 252.859 since boot --
+Finger Down!
+-- 252.89 since boot --
+Finger Down!
+-- 252.931 since boot --
+Finger Down!
+-- 252.968 since boot --
+Finger Down!
+-- 252.995 since boot --
+Finger Down!
+-- 253.019 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 253.06 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000231s
+	TeleopPeriodic(): 0.025206s
+-- 253.085 since boot --
+Finger Down!
+-- 253.103 since boot --
+Finger Down!
+-- 253.136 since boot --
+Finger Down!
+-- 253.156 since boot --
+Finger Down!
+-- 253.194 since boot --
+Finger Down!
+-- 253.211 since boot --
+Finger Down!
+-- 253.216 since boot --
+Finger Down!
+-- 253.247 since boot --
+Finger Down!
+-- 253.267 since boot --
+Finger Down!
+-- 253.295 since boot --
+Finger Down!
+-- 253.324 since boot --
+Finger Down!
+-- 253.366 since boot --
+Finger Down!
+-- 253.382 since boot --
+Finger Down!
+-- 253.401 since boot --
+Finger Down!
+-- 253.424 since boot --
+Finger Down!
+-- 253.447 since boot --
+Finger Down!
+-- 253.475 since boot --
+Finger Down!
+-- 253.504 since boot --
+Finger Down!
+-- 253.527 since boot --
+Finger Down!
+-- 253.566 since boot --
+Finger Down!
+-- 253.581 since boot --
+Finger Down!
+-- 253.621 since boot --
+Finger Down!
+-- 253.634 since boot --
+Finger Down!
+-- 253.647 since boot --
+Finger Down!
+-- 253.679 since boot --
+Finger Down!
+-- 253.702 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 253.742 since boot --
+Finger Down!
+-- 253.773 since boot --
+Finger Down!
+-- 253.798 since boot --
+Finger Down!
+-- 253.811 since boot --
+Finger Down!
+-- 253.836 since boot --
+Finger Down!
+-- 253.85 since boot --
+Finger Down!
+-- 253.903 since boot --
+Finger Down!
+-- 253.936 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 253.973 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000424s
+	TeleopPeriodic(): 0.034406s
+-- 253.989 since boot --
+Finger Down!
+-- 254.004 since boot --
+Finger Down!
+-- 254.042 since boot --
+Finger Down!
+-- 254.069 since boot --
+Finger Down!
+-- 254.096 since boot --
+Finger Down!
+-- 254.114 since boot --
+Finger Down!
+-- 254.14 since boot --
+Finger Down!
+-- 254.162 since boot --
+Finger Down!
+-- 254.188 since boot --
+Finger Down!
+-- 254.201 since boot --
+Finger Down!
+-- 254.238 since boot --
+Finger Down!
+-- 254.27 since boot --
+Finger Down!
+-- 254.284 since boot --
+Finger Down!
+-- 254.339 since boot --
+Finger Down!
+-- 254.352 since boot --
+Finger Down!
+-- 254.366 since boot --
+Finger Down!
+-- 254.402 since boot --
+Finger Down!
+-- 254.428 since boot --
+Finger Down!
+-- 254.457 since boot --
+Finger Down!
+-- 254.472 since boot --
+Finger Down!
+-- 254.512 since boot --
+Finger Down!
+-- 254.525 since boot --
+Finger Down!
+-- 254.55 since boot --
+Finger Down!
+-- 254.586 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 254.621 since boot --
+Finger Down!
+-- 254.636 since boot --
+Finger Down!
+-- 254.674 since boot --
+Finger Down!
+-- 254.688 since boot --
+Finger Down!
+-- 254.712 since boot --
+Finger Down!
+-- 254.734 since boot --
+Finger Down!
+-- 254.759 since boot --
+Finger Down!
+-- 254.794 since boot --
+Finger Down!
+-- 254.809 since boot --
+Finger Down!
+-- 254.822 since boot --
+Finger Down!
+-- 254.859 since boot --
+Finger Down!
+-- 254.873 since boot --
+Finger Down!
+-- 254.888 since boot --
+Finger Down!
+-- 254.92 since boot --
+Finger Down!
+-- 254.959 since boot --
+Finger Down!
+-- 254.973 since boot --
+Finger Down!
+-- 254.989 since boot --
+Finger Down!
+-- 255.024 since boot --
+Finger Down!
+-- 255.038 since boot --
+Finger Down!
+-- 255.062 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000534s
+	TeleopPeriodic(): 0.019728s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000133s
+	TeleopPeriodic(): 0.030113s
+Joystick Axis missing, check if all controllers are plugged in
+-- 256.505 since boot --
+Pushing legs down!
+-- 256.519 since boot --
+Pushing legs down!
+-- 256.549 since boot --
+Pushing legs down!
+-- 256.577 since boot --
+Pushing legs down!
+-- 256.597 since boot --
+Pushing legs down!
+-- 256.602 since boot --
+Pushing legs down!
+-- 256.607 since boot --
+Pushing legs down!
+-- 256.634 since boot --
+Pushing legs down!
+-- 256.64 since boot --
+Pushing legs down!
+-- 256.644 since boot --
+Pushing legs down!
+-- 256.649 since boot --
+Pushing legs down!
+-- 256.678 since boot --
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000133s
+	TeleopPeriodic(): 0.031576s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000145s
+	TeleopPeriodic(): 0.035879s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000158s
+	TeleopPeriodic(): 0.024821s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000128s
+	TeleopPeriodic(): 0.033582s
+-- 260.528 since boot --
+Pushing legs down!
+-- 260.554 since boot --
+Pushing legs down!
+-- 260.595 since boot --
+Pushing legs down!
+-- 260.624 since boot --
+Pushing legs down!
+-- 260.648 since boot --
+Pushing legs down!
+-- 260.677 since boot --
+Pushing legs down!
+-- 260.704 since boot --
+Pushing legs down!
+-- 260.72 since boot --
+Pushing legs down!
+-- 260.757 since boot --
+Pushing legs down!
+	RobotPeriodic(): 0.000511s
+	TeleopPeriodic(): 0.031486s
+-- 260.795 since boot --
+Pushing legs down!
+-- 260.812 since boot --
+Pushing legs down!
+-- 260.829 since boot --
+Pushing legs down!
+-- 260.866 since boot --
+Pushing legs down!
+-- 260.878 since boot --
+Pushing legs down!
+-- 260.904 since boot --
+Pushing legs down!
+-- 260.916 since boot --
+Pushing legs down!
+-- 260.938 since boot --
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 260.992 since boot --
+Pushing legs down!
+-- 261.005 since boot --
+Pushing legs down!
+-- 261.033 since boot --
+Pushing legs down!
+-- 261.055 since boot --
+Pushing legs down!
+-- 261.069 since boot --
+Pushing legs down!
+-- 261.082 since boot --
+Pushing legs down!
+-- 261.123 since boot --
+Pushing legs down!
+-- 261.153 since boot --
+Pushing legs down!
+-- 261.176 since boot --
+Pushing legs down!
+-- 261.216 since boot --
+Pushing legs down!
+-- 261.231 since boot --
+Pushing legs down!
+-- 261.254 since boot --
+Pushing legs down!
+-- 261.268 since boot --
+Pushing legs down!
+-- 261.299 since boot --
+Pushing legs down!
+-- 261.33 since boot --
+Pushing legs down!
+-- 261.345 since boot --
+Pushing legs down!
+-- 261.38 since boot --
+Pushing legs down!
+-- 261.408 since boot --
+Pushing legs down!
+-- 261.422 since boot --
+Pushing legs down!
+-- 261.437 since boot --
+Pushing legs down!
+-- 261.471 since boot --
+Pushing legs down!
+-- 261.497 since boot --
+Pushing legs down!
+-- 261.521 since boot --
+Pushing legs down!
+-- 261.55 since boot --
+Pushing legs down!
+-- 261.573 since boot --
+Pushing legs down!
+-- 261.597 since boot --
+Pushing legs down!
+-- 261.61 since boot --
+Pushing legs down!
+-- 261.642 since boot --
+Pushing legs down!
+	RobotPeriodic(): 0.000441s
+	TeleopPeriodic(): 0.028598s
+-- 261.672 since boot --
+Pushing legs down!
+-- 261.686 since boot --
+Pushing legs down!
+-- 261.726 since boot --
+Pushing legs down!
+-- 261.74 since boot --
+Pushing legs down!
+-- 261.764 since boot --
+Pushing legs down!
+-- 261.791 since boot --
+Pushing legs down!
+-- 261.813 since boot --
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 261.854 since boot --
+Pushing legs down!
+-- 261.868 since boot --
+Pushing legs down!
+-- 261.902 since boot --
+Pushing legs down!
+-- 261.918 since boot --
+Pushing legs down!
+-- 261.932 since boot --
+Pushing legs down!
+-- 261.968 since boot --
+Pushing legs down!
+-- 261.999 since boot --
+Pushing legs down!
+-- 262.024 since boot --
+Pushing legs down!
+-- 262.039 since boot --
+Pushing legs down!
+-- 262.077 since boot --
+Pushing legs down!
+-- 262.09 since boot --
+Pushing legs down!
+-- 262.116 since boot --
+Pushing legs down!
+-- 262.131 since boot --
+Pushing legs down!
+-- 262.181 since boot --
+Pushing legs down!
+-- 262.204 since boot --
+Pushing legs down!
+-- 262.217 since boot --
+Pushing legs down!
+-- 262.246 since boot --
+Pushing legs down!
+-- 262.263 since boot --
+Pushing legs down!
+-- 262.278 since boot --
+Pushing legs down!
+-- 262.304 since boot --
+Pushing legs down!
+-- 262.336 since boot --
+Pushing legs down!
+-- 262.355 since boot --
+Pushing legs down!
+-- 262.383 since boot --
+Pushing legs down!
+-- 262.416 since boot --
+Pushing legs down!
+-- 262.435 since boot --
+Pushing legs down!
+-- 262.46 since boot --
+Pushing legs down!
+-- 262.475 since boot --
+Pushing legs down!
+-- 262.499 since boot --
+Pushing legs down!
+-- 262.519 since boot --
+Pushing legs down!
+-- 262.534 since boot --
+Pushing legs down!
+-- 262.542 since boot --
+Pushing legs down!
+-- 262.558 since boot --
+Pushing legs down!
+-- 262.586 since boot --
+Pushing legs down!
+	RobotPeriodic(): 0.000337s
+	TeleopPeriodic(): 0.020898s
+-- 262.621 since boot --
+Pushing legs down!
+-- 262.639 since boot --
+Pushing legs down!
+-- 262.66 since boot --
+Pushing legs down!
+-- 262.689 since boot --
+Pushing legs down!
+-- 262.715 since boot --
+Pushing legs down!
+-- 262.739 since boot --
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 262.767 since boot --
+Pushing legs down!
+-- 262.79 since boot --
+Pushing legs down!
+-- 262.814 since boot --
+Pushing legs down!
+-- 262.828 since boot --
+Pushing legs down!
+-- 262.869 since boot --
+Pushing legs down!
+-- 262.892 since boot --
+Pushing legs down!
+-- 262.905 since boot --
+Pushing legs down!
+-- 262.927 since boot --
+Pushing legs down!
+-- 262.943 since boot --
+Pushing legs down!
+-- 262.962 since boot --
+Pushing legs down!
+-- 262.975 since boot --
+Pushing legs down!
+-- 262.998 since boot --
+Pushing legs down!
+-- 263.039 since boot --
+Pushing legs down!
+-- 263.065 since boot --
+Pushing legs down!
+-- 263.089 since boot --
+Pushing legs down!
+-- 263.115 since boot --
+Pushing legs down!
+-- 263.138 since boot --
+Pushing legs down!
+-- 263.152 since boot --
+Pushing legs down!
+-- 263.168 since boot --
+Pushing legs down!
+-- 263.207 since boot --
+Pushing legs down!
+-- 263.24 since boot --
+Pushing legs down!
+-- 263.253 since boot --
+Pushing legs down!
+-- 263.292 since boot --
+Pushing legs down!
+-- 263.307 since boot --
+Pushing legs down!
+-- 263.334 since boot --
+Pushing legs down!
+-- 263.35 since boot --
+Pushing legs down!
+-- 263.401 since boot --
+Pushing legs down!
+-- 263.432 since boot --
+Pushing legs down!
+-- 263.444 since boot --
+Pushing legs down!
+-- 263.485 since boot --
+Pushing legs down!
+-- 263.499 since boot --
+Pushing legs down!
+-- 263.514 since boot --
+Pushing legs down!
+-- 263.552 since boot --
+Pushing legs down!
+-- 263.591 since boot --
+Pushing legs down!
+	RobotPeriodic(): 0.000240s
+	TeleopPeriodic(): 0.020489s
+-- 263.615 since boot --
+Pushing legs down!
+-- 263.641 since boot --
+Pushing legs down!
+-- 263.656 since boot --
+Pushing legs down!
+-- 263.679 since boot --
+Pushing legs down!
+-- 263.693 since boot --
+Pushing legs down!
+-- 263.738 since boot --
+Pushing legs down!
+-- 263.755 since boot --
+Pushing legs down!
+-- 263.766 since boot --
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 263.798 since boot --
+Pushing legs down!
+-- 263.827 since boot --
+Pushing legs down!
+-- 263.842 since boot --
+Pushing legs down!
+-- 263.855 since boot --
+Pushing legs down!
+-- 263.89 since boot --
+Pushing legs down!
+-- 263.911 since boot --
+Pushing legs down!
+-- 263.94 since boot --
+Pushing legs down!
+-- 263.954 since boot --
+Pushing legs down!
+-- 263.99 since boot --
+Pushing legs down!
+-- 264.004 since boot --
+Pushing legs down!
+-- 264.026 since boot --
+Pushing legs down!
+-- 264.04 since boot --
+Pushing legs down!
+-- 264.074 since boot --
+Pushing legs down!
+-- 264.098 since boot --
+Pushing legs down!
+-- 264.11 since boot --
+Pushing legs down!
+-- 264.141 since boot --
+Pushing legs down!
+-- 264.162 since boot --
+Pushing legs down!
+-- 264.173 since boot --
+Pushing legs down!
+-- 264.177 since boot --
+Pushing legs down!
+-- 264.193 since boot --
+Pushing legs down!
+-- 264.197 since boot --
+Pushing legs down!
+-- 264.203 since boot --
+Pushing legs down!
+-- 264.217 since boot --
+Pushing legs down!
+-- 264.242 since boot --
+Pushing legs down!
+-- 264.281 since boot --
+Pushing legs down!
+-- 264.293 since boot --
+Pushing legs down!
+-- 264.32 since boot --
+Pushing legs down!
+-- 264.344 since boot --
+Pushing legs down!
+-- 264.358 since boot --
+Pushing legs down!
+-- 264.368 since boot --
+Pushing legs down!
+-- 264.406 since boot --
+Pushing legs down!
+-- 264.428 since boot --
+Pushing legs down!
+-- 264.451 since boot --
+Pushing legs down!
+-- 264.469 since boot --
+Pushing legs down!
+-- 264.506 since boot --
+Pushing legs down!
+	RobotPeriodic(): 0.000335s
+	TeleopPeriodic(): 0.031513s
+-- 264.521 since boot --
+Pushing legs down!
+-- 264.543 since boot --
+Pushing legs down!
+-- 264.556 since boot --
+Pushing legs down!
+-- 264.581 since boot --
+Pushing legs down!
+-- 264.619 since boot --
+Pushing legs down!
+-- 264.642 since boot --
+Pushing legs down!
+-- 264.662 since boot --
+Pushing legs down!
+-- 264.69 since boot --
+Pushing legs down!
+-- 264.705 since boot --
+Pushing legs down!
+-- 264.719 since boot --
+Pushing legs down!
+-- 264.755 since boot --
+Pushing legs down!
+Watchdog not fed within 0.020000s
+-- 264.779 since boot --
+Pushing legs down!
+Loop time of 2.000000e-02s overrun
+
+-- 264.806 since boot --
+Pushing legs down!
+-- 264.847 since boot --
+Pushing legs down!
+-- 264.859 since boot --
+Pushing legs down!
+-- 264.882 since boot --
+Pushing legs down!
+-- 264.895 since boot --
+Pushing legs down!
+-- 264.916 since boot --
+Pushing legs down!
+-- 264.96 since boot --
+Pushing legs down!
+-- 264.974 since boot --
+Pushing legs down!
+-- 265.008 since boot --
+Pushing legs down!
+-- 265.04 since boot --
+Pushing legs down!
+-- 265.056 since boot --
+Pushing legs down!
+-- 265.071 since boot --
+Pushing legs down!
+-- 265.113 since boot --
+Pushing legs down!
+-- 265.147 since boot --
+Pushing legs down!
+-- 265.168 since boot --
+Pushing legs down!
+-- 265.208 since boot --
+Pushing legs down!
+-- 265.23 since boot --
+Pushing legs down!
+-- 265.246 since boot --
+Pushing legs down!
+-- 265.274 since boot --
+Pushing legs down!
+-- 265.313 since boot --
+Pushing legs down!
+-- 265.326 since boot --
+Pushing legs down!
+-- 265.367 since boot --
+Pushing legs down!
+	RobotPeriodic(): 0.000249s
+	TeleopPeriodic(): 0.033131s
+-- 265.382 since boot --
+Pushing legs down!
+-- 265.406 since boot --
+Pushing legs down!
+-- 265.423 since boot --
+Pushing legs down!
+-- 265.456 since boot --
+Pushing legs down!
+-- 265.491 since boot --
+Pushing legs down!
+-- 265.513 since boot --
+Pushing legs down!
+-- 265.549 since boot --
+Pushing legs down!
+-- 265.564 since boot --
+Pushing legs down!
+-- 265.58 since boot --
+Pushing legs down!
+-- 265.615 since boot --
+Pushing legs down!
+-- 265.656 since boot --
+Watchdog not fed within 0.020000s
+Pushing legs down!
+Loop time of 2.000000e-02s overrun
+
+-- 265.672 since boot --
+Pushing legs down!
+-- 265.685 since boot --
+Pushing legs down!
+-- 265.722 since boot --
+Pushing legs down!
+-- 265.736 since boot --
+Pushing legs down!
+-- 265.747 since boot --
+Pushing legs down!
+-- 265.76 since boot --
+Pushing legs down!
+-- 265.778 since boot --
+Pushing legs down!
+-- 265.822 since boot --
+Pushing legs down!
+-- 265.854 since boot --
+Pushing legs down!
+-- 265.867 since boot --
+Pushing legs down!
+-- 265.893 since boot --
+Pushing legs down!
+-- 265.916 since boot --
+Pushing legs down!
+-- 265.93 since boot --
+Pushing legs down!
+-- 265.944 since boot --
+Pushing legs down!
+-- 265.983 since boot --
+Pushing legs down!
+-- 266.023 since boot --
+Pushing legs down!
+-- 266.043 since boot --
+Pushing legs down!
+-- 266.077 since boot --
+Pushing legs down!
+-- 266.094 since boot --
+Pushing legs down!
+-- 266.125 since boot --
+Pushing legs down!
+-- 266.158 since boot --
+Pushing legs down!
+-- 266.185 since boot --
+Pushing legs down!
+-- 266.197 since boot --
+Pushing legs down!
+-- 266.227 since boot --
+Pushing legs down!
+-- 266.263 since boot --
+Pushing legs down!
+	RobotPeriodic(): 0.001288s
+	TeleopPeriodic(): 0.019761s
+-- 266.277 since boot --
+Pushing legs down!
+-- 266.293 since boot --
+Pushing legs down!
+-- 266.336 since boot --
+Pushing legs down!
+-- 266.356 since boot --
+Pushing legs down!
+-- 266.388 since boot --
+Pushing legs down!
+-- 266.413 since boot --
+Pushing legs down!
+-- 266.446 since boot --
+Pushing legs down!
+-- 266.464 since boot --
+Pushing legs down!
+-- 266.482 since boot --
+Pushing legs down!
+-- 266.496 since boot --
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 266.55 since boot --
+Pushing legs down!
+-- 266.564 since boot --
+Pushing legs down!
+-- 266.602 since boot --
+Pushing legs down!
+-- 266.619 since boot --
+Pushing legs down!
+-- 266.643 since boot --
+Pushing legs down!
+-- 266.665 since boot --
+Pushing legs down!
+-- 266.693 since boot --
+Pushing legs down!
+-- 266.721 since boot --
+Pushing legs down!
+-- 266.743 since boot --
+Pushing legs down!
+-- 266.77 since boot --
+Pushing legs down!
+-- 266.795 since boot --
+Pushing legs down!
+-- 266.809 since boot --
+Pushing legs down!
+-- 266.821 since boot --
+Pushing legs down!
+-- 266.876 since boot --
+Pushing legs down!
+-- 266.902 since boot --
+Pushing legs down!
+-- 266.911 since boot --
+Pushing legs down!
+-- 266.937 since boot --
+Pushing legs down!
+-- 266.962 since boot --
+Pushing legs down!
+-- 266.978 since boot --
+Pushing legs down!
+-- 267.004 since boot --
+Pushing legs down!
+-- 267.031 since boot --
+Pushing legs down!
+-- 267.054 since boot --
+Pushing legs down!
+-- 267.078 since boot --
+Pushing legs down!
+-- 267.107 since boot --
+Pushing legs down!
+-- 267.141 since boot --
+Pushing legs down!
+-- 267.165 since boot --
+Pushing legs down!
+-- 267.182 since boot --
+Pushing legs down!
+-- 267.223 since boot --
+Pushing legs down!
+	RobotPeriodic(): 0.000453s
+	TeleopPeriodic(): 0.035033s
+-- 267.251 since boot --
+Pushing legs down!
+-- 267.274 since boot --
+Pushing legs down!
+-- 267.309 since boot --
+Pushing legs down!
+-- 267.327 since boot --
+Pushing legs down!
+-- 267.341 since boot --
+Pushing legs down!
+-- 267.367 since boot --
+Pushing legs down!
+-- 267.389 since boot --
+Pushing legs down!
+-- 267.422 since boot --
+Pushing legs down!
+-- 267.444 since boot --
+Pushing legs down!
+-- 267.459 since boot --
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 267.494 since boot --
+Pushing legs down!
+-- 267.518 since boot --
+Pushing legs down!
+-- 267.531 since boot --
+Pushing legs down!
+-- 267.544 since boot --
+Pushing legs down!
+-- 267.573 since boot --
+Pushing legs down!
+-- 267.587 since boot --
+Pushing legs down!
+-- 267.615 since boot --
+Pushing legs down!
+-- 267.645 since boot --
+Pushing legs down!
+-- 267.658 since boot --
+Pushing legs down!
+-- 267.694 since boot --
+Pushing legs down!
+-- 267.708 since boot --
+Pushing legs down!
+-- 267.732 since boot --
+Pushing legs down!
+-- 267.759 since boot --
+Pushing legs down!
+-- 267.789 since boot --
+Pushing legs down!
+-- 267.808 since boot --
+Pushing legs down!
+-- 267.822 since boot --
+Pushing legs down!
+-- 267.859 since boot --
+Pushing legs down!
+-- 267.873 since boot --
+Pushing legs down!
+-- 267.896 since boot --
+Pushing legs down!
+-- 267.921 since boot --
+Pushing legs down!
+-- 267.948 since boot --
+Pushing legs down!
+-- 267.971 since boot --
+Pushing legs down!
+-- 267.987 since boot --
+Pushing legs down!
+-- 267.992 since boot --
+Pushing legs down!
+-- 267.996 since boot --
+Pushing legs down!
+-- 268.002 since boot --
+Pushing legs down!
+-- 268.007 since boot --
+Pushing legs down!
+-- 268.015 since boot --
+Pushing legs down!
+-- 268.053 since boot --
+Pushing legs down!
+-- 268.07 since boot --
+Pushing legs down!
+-- 268.111 since boot --
+Pushing legs down!
+	RobotPeriodic(): 0.001726s
+	TeleopPeriodic(): 0.035721s
+-- 268.152 since boot --
+Pushing legs down!
+-- 268.167 since boot --
+Pushing legs down!
+-- 268.204 since boot --
+Pushing legs down!
+-- 268.218 since boot --
+Pushing legs down!
+-- 268.231 since boot --
+Pushing legs down!
+-- 268.254 since boot --
+Pushing legs down!
+-- 268.269 since boot --
+Pushing legs down!
+-- 268.325 since boot --
+Pushing legs down!
+-- 268.357 since boot --
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 268.397 since boot --
+Pushing legs down!
+-- 268.413 since boot --
+Pushing legs down!
+-- 268.427 since boot --
+Pushing legs down!
+-- 268.461 since boot --
+Pushing legs down!
+-- 268.485 since boot --
+Pushing legs down!
+-- 268.516 since boot --
+Pushing legs down!
+-- 268.54 since boot --
+Pushing legs down!
+-- 268.572 since boot --
+Pushing legs down!
+-- 268.587 since boot --
+Pushing legs down!
+-- 268.615 since boot --
+Pushing legs down!
+-- 268.644 since boot --
+Pushing legs down!
+-- 268.683 since boot --
+Pushing legs down!
+-- 268.697 since boot --
+Pushing legs down!
+-- 268.731 since boot --
+Pushing legs down!
+-- 268.76 since boot --
+Pushing legs down!
+-- 268.774 since boot --
+Pushing legs down!
+-- 268.787 since boot --
+Pushing legs down!
+-- 268.818 since boot --
+Pushing legs down!
+-- 268.836 since boot --
+Pushing legs down!
+-- 268.842 since boot --
+Pushing legs down!
+-- 268.848 since boot --
+Pushing legs down!
+-- 268.883 since boot --
+Pushing legs down!
+-- 268.9 since boot --
+Pushing legs down!
+-- 268.943 since boot --
+Pushing legs down!
+-- 268.964 since boot --
+Pushing legs down!
+-- 268.974 since boot --
+Pushing legs down!
+-- 269.003 since boot --
+Pushing legs down!
+-- 269.042 since boot --
+Pushing legs down!
+-- 269.065 since boot --
+Pushing legs down!
+-- 269.106 since boot --
+Pushing legs down!
+	RobotPeriodic(): 0.003149s
+	TeleopPeriodic(): 0.017311s
+-- 269.12 since boot --
+Pushing legs down!
+-- 269.144 since boot --
+Pushing legs down!
+-- 269.18 since boot --
+Pushing legs down!
+-- 269.197 since boot --
+Pushing legs down!
+-- 269.224 since boot --
+Pushing legs down!
+-- 269.248 since boot --
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 269.287 since boot --
+Pushing legs down!
+-- 269.3 since boot --
+Pushing legs down!
+-- 269.316 since boot --
+Pushing legs down!
+-- 269.346 since boot --
+Pushing legs down!
+-- 269.371 since boot --
+Pushing legs down!
+-- 269.388 since boot --
+Pushing legs down!
+-- 269.403 since boot --
+Pushing legs down!
+-- 269.454 since boot --
+Pushing legs down!
+-- 269.472 since boot --
+Pushing legs down!
+-- 269.498 since boot --
+Pushing legs down!
+-- 269.512 since boot --
+Pushing legs down!
+-- 269.547 since boot --
+Pushing legs down!
+-- 269.591 since boot --
+Pushing legs down!
+-- 269.608 since boot --
+Pushing legs down!
+-- 269.649 since boot --
+Pushing legs down!
+-- 269.665 since boot --
+Pushing legs down!
+-- 269.68 since boot --
+Pushing legs down!
+-- 269.712 since boot --
+Pushing legs down!
+-- 269.736 since boot --
+Pushing legs down!
+-- 269.776 since boot --
+Pushing legs down!
+-- 269.814 since boot --
+Pushing legs down!
+-- 269.828 since boot --
+Pushing legs down!
+-- 269.852 since boot --
+Pushing legs down!
+-- 269.866 since boot --
+Pushing legs down!
+-- 269.902 since boot --
+Pushing legs down!
+-- 269.932 since boot --
+Pushing legs down!
+-- 269.946 since boot --
+Pushing legs down!
+-- 269.962 since boot --
+Pushing legs down!
+-- 270.006 since boot --
+Pushing legs down!
+	RobotPeriodic(): 0.000683s
+	TeleopPeriodic(): 0.023165s
+-- 270.022 since boot --
+Pushing legs down!
+-- 270.037 since boot --
+Pushing legs down!
+-- 270.081 since boot --
+Pushing legs down!
+-- 270.106 since boot --
+Pushing legs down!
+-- 270.132 since boot --
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000128s
+	TeleopPeriodic(): 0.033010s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 271.627 since boot --
+Pushing legs down!
+-- 271.651 since boot --
+Pushing legs down!
+-- 271.682 since boot --
+Pushing legs down!
+-- 271.7 since boot --
+Pushing legs down!
+-- 271.719 since boot --
+Pushing legs down!
+-- 271.748 since boot --
+Pushing legs down!
+-- 271.759 since boot --
+Pushing legs down!
+-- 271.77 since boot --
+Pushing legs down!
+-- 271.779 since boot --
+Pushing legs down!
+-- 271.793 since boot --
+Pushing legs down!
+-- 271.805 since boot --
+Pushing legs down!
+-- 271.81 since boot --
+Pushing legs down!
+-- 271.816 since boot --
+Pushing legs down!
+-- 271.82 since boot --
+Pushing legs down!
+-- 271.825 since boot --
+Pushing legs down!
+-- 271.84 since boot --
+Pushing legs down!
+	RobotPeriodic(): 0.000116s
+	TeleopPeriodic(): 0.032460s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Robot disabling.. DONE
