@@ -24,12 +24,13 @@ void ClimbManager::Execute() {
 
             // Cancel the auto climb
             ClimbManager::CurrentClimbState = ClimbManager::kInactive;
+            Log("Auto climb is being cancled");
             UpdateRumble();
-
         } else {
 
             // Otherwise, Start auto climb command
             ClimbManager::CurrentClimbState = ClimbManager::kAuto;
+            Log("Auto climb starting");
             UpdateRumble();
         }
     } 
@@ -41,12 +42,13 @@ void ClimbManager::Execute() {
 
             // Stop manual climb
             ClimbManager::CurrentClimbState = ClimbManager::kInactive;
+            Log("Manual climb is being cancled");
             UpdateRumble();
-
         } else {
 
             // Otherwise, Start manual climb commands
             this->CurrentClimbState = this->ClimbState::kActive;
+            Log("Manual climb starting");
             UpdateRumble();
         }
     }

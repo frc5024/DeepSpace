@@ -18,6 +18,7 @@ void ControlHatchGripper::Execute() {
 	if(this->pJoyOp->GetYButton()) {
     Robot::m_HatchGripper->Deploy();
     Utils::EdgeLight::Append(LedColour::kSOLID_GREEN);
+    Log("Finger Down!");
   }
   else
   {

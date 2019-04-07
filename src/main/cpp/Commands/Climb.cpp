@@ -33,6 +33,10 @@ void Climb::Execute() {
         Log("Pushing legs down!");
     }
 
+    if(fabs(this->armSpeed) > 0.8){
+        Log("Arms are being full-forced!");
+    }
+
     // Set motor outputs
     Robot::m_Arm->MoveArm(this->armSpeed);
     Robot::m_CrawlDrive->Move(this->crawlSpeed);

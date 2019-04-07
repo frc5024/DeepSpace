@@ -40,6 +40,7 @@ void TriggerDrive::Execute() {
   // Breaks
   if (this->pJoyDrive->GetBumperPressed(Hand::kLeftHand)){
     Robot::m_DriveTrain->Coast();
+    Log("Coasting");
   }else if (this->pJoyDrive->GetBumperReleased(Hand::kLeftHand)){
     Robot::m_DriveTrain->Break();
   };

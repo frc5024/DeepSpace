@@ -115,6 +115,6 @@
 #define Header(x) std::cout << x
 #define EndHeader() std::cout << "DONE" << std::endl
 
-#define Log(x) std::cout << x << std::endl;
+// #define Log(x) std::cout << x << std::endl;
 
 #endif // _ROBOTMAP_HG_
