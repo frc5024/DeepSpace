@@ -24,11 +24,11 @@
         },
         {
             "name": "raw_saturation",
-            "value": 20
+            "value": 14
         },
         {
             "name": "saturation",
-            "value": 10
+            "value": 7
         },
         {
             "name": "white_balance_temperature_auto",

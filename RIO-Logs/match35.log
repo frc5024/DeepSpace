@@ -1,0 +1,2225 @@
+
+********** Robot program starting **********
+   Welcome 5024!
+-------------------
+Robot Starting..
+Creating Subsystems.. DONE
+Creating Commands.. DONE
+CS: Back: Connecting to USB camera on /dev/video1
+Starting CameraServer.. DONE
+CS: Front: Connecting to USB camera on /dev/video0
+CS: Front: SetConfigJson: setting pixelFormat 1
+CS: Back: set format 1 res 160x120
+CS: Front: set format 1 res 160x120
+CS: Front: SetConfigJson: setting width 160, height 120
+CS: Front: SetConfigJson: setting property 'connect_verbose' to 1
+CS: Front: SetConfigJson: setting property 'raw_brightness' to 50
+CS: Front: SetConfigJson: setting property 'brightness' to 9
+CS: Front: SetConfigJson: setting property 'raw_contrast' to 10
+CS: Front: SetConfigJson: setting property 'contrast' to 100
+CS: Front: SetConfigJson: setting property 'raw_saturation' to 14
+CS: Front: SetConfigJson: setting property 'saturation' to 7
+CS: Front: SetConfigJson: setting property 'white_balance_temperature_auto' to 0
+CS: Front: SetConfigJson: setting property 'power_line_frequency' to 2
+CS: Front: SetConfigJson: setting property 'white_balance_temperature' to 2800
+CS: Front: SetConfigJson: setting property 'raw_sharpness' to 0
+CS: Front: SetConfigJson: setting property 'sharpness' to 0
+CS: Front: SetConfigJson: setting property 'backlight_compensation' to 0
+CS: Front: SetConfigJson: setting property 'exposure_auto' to 1
+CS: Front: SetConfigJson: setting property 'raw_exposure_absolute' to 78
+CS: Front: SetConfigJson: setting property 'exposure_absolute' to 32
+CS: Front: SetConfigJson: setting property 'pan_absolute' to 0
+CS: Front: SetConfigJson: setting property 'tilt_absolute' to 0
+CS: Front: SetConfigJson: setting property 'zoom_absolute' to 0
+CS: Back: SetConfigJson: setting pixelFormat 1
+CS: Back: SetConfigJson: setting width 160, height 120
+CS: Back: SetConfigJson: setting property 'connect_verbose' to 1
+CS: Back: SetConfigJson: setting property 'raw_brightness' to 50
+CS: Back: SetConfigJson: setting property 'brightness' to 9
+CS: Back: SetConfigJson: setting property 'raw_contrast' to 10
+CS: Back: SetConfigJson: setting property 'contrast' to 100
+CS: Back: SetConfigJson: setting property 'raw_saturation' to 14
+CS: Back: SetConfigJson: setting property 'saturation' to 7
+CS: Back: SetConfigJson: setting property 'white_balance_temperature_auto' to 0
+CS: Back: SetConfigJson: setting property 'power_line_frequency' to 2
+CS: Back: SetConfigJson: setting property 'white_balance_temperature' to 2800
+CS: Back: SetConfigJson: setting property 'raw_sharpness' to 0
+CS: Back: SetConfigJson: setting property 'sharpness' to 0
+CS: Back: SetConfigJson: setting property 'backlight_compensation' to 0
+CS: Back: SetConfigJson: setting property 'exposure_auto' to 1
+CS: Back: SetConfigJson: setting property 'raw_exposure_absolute' to 78
+CS: Back: SetConfigJson: setting property 'exposure_absolute' to 32
+CS: Back: SetConfigJson: setting property 'pan_absolute' to 0
+CS: Back: SetConfigJson: setting property 'tilt_absolute' to 0
+CS: Back: SetConfigJson: setting property 'zoom_absolute' to 0
+Setting camera config.. DONE
+Resetting Gyro.. Instantiating navX-Sensor on SPI Port 4.
+navX-Sensor Yaw Reset request ignored - startup calibration is currently in progress.
+DONE
+Connecting to telemetry table.. DONE
+navX-Sensor startup initialization and startup calibration complete.
+navX-Sensor onboard startup calibration complete.
+navX-Sensor Yaw angle auto-reset to 0.0 due to startup calibration.
+Robot disabling.. DONE
+NT: server: client CONNECTED: 10.50.24.22 port 56850
+NT: server: client CONNECTED: 169.254.48.36 port 55410
+AutonomousInit starting.. DONE
+Resetting gyro.. navX-Sensor Software Yaw Reset completed.
+DONE
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000123s
+	AutonomousPeriodic(): 0.046131s
+	AutonomousInit(): 0.005397s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000219s
+	AutonomousPeriodic(): 0.030246s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000127s
+	AutonomousPeriodic(): 0.026218s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000121s
+	AutonomousPeriodic(): 0.022903s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000124s
+	AutonomousPeriodic(): 0.022356s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000124s
+	AutonomousPeriodic(): 0.026027s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000102s
+	AutonomousPeriodic(): 0.046344s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000133s
+	AutonomousPeriodic(): 0.034123s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.001140s
+	AutonomousPeriodic(): 0.025553s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000156s
+	AutonomousPeriodic(): 0.020285s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000145s
+	AutonomousPeriodic(): 0.024763s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000754s
+	AutonomousPeriodic(): 0.030402s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000904s
+	AutonomousPeriodic(): 0.045495s
+Joystick Axis missing, check if all controllers are plugged in
+-- 156.074 since boot --
+Finger Down!
+-- 156.104 since boot --
+Finger Down!
+-- 156.135 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+-- 156.185 since boot --
+Finger Down!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000491s
+	AutonomousPeriodic(): 0.020491s
+Joystick Axis missing, check if all controllers are plugged in
+-- 156.249 since boot --
+Finger Down!
+-- 156.285 since boot --
+Finger Down!
+-- 156.314 since boot --
+Finger Down!
+-- 156.342 since boot --
+Finger Down!
+-- 156.371 since boot --
+Finger Down!
+-- 156.397 since boot --
+Finger Down!
+-- 156.435 since boot --
+Finger Down!
+-- 156.488 since boot --
+Finger Down!
+-- 156.534 since boot --
+Finger Down!
+-- 156.581 since boot --
+Finger Down!
+-- 156.63 since boot --
+Finger Down!
+-- 156.656 since boot --
+Finger Down!
+-- 156.731 since boot --
+Finger Down!
+-- 156.764 since boot --
+Finger Down!
+-- 156.804 since boot --
+Finger Down!
+-- 156.864 since boot --
+Finger Down!
+-- 156.927 since boot --
+Finger Down!
+-- 156.973 since boot --
+Finger Down!
+-- 157.002 since boot --
+Finger Down!
+-- 157.028 since boot --
+Finger Down!
+-- 157.056 since boot --
+Finger Down!
+-- 157.085 since boot --
+Finger Down!
+-- 157.11 since boot --
+Finger Down!
+-- 157.137 since boot --
+Finger Down!
+-- 157.158 since boot --
+Finger Down!
+-- 157.201 since boot --
+Finger Down!
+-- 157.233 since boot --
+Finger Down!
+-- 157.262 since boot --
+Finger Down!
+-- 157.304 since boot --
+Finger Down!
+Robot disabling.. DONE
+Teleop commands starting.. DONE
+-- 157.637 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 157.686 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 157.752 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000539s
+	TeleopPeriodic(): 0.026210s
+-- 157.793 since boot --
+Finger Down!
+-- 157.828 since boot --
+Finger Down!
+-- 157.86 since boot --
+Finger Down!
+-- 157.893 since boot --
+Finger Down!
+-- 157.94 since boot --
+Finger Down!
+-- 157.974 since boot --
+Finger Down!
+-- 158.005 since boot --
+Finger Down!
+-- 158.047 since boot --
+Finger Down!
+-- 158.127 since boot --
+Finger Down!
+-- 158.176 since boot --
+Finger Down!
+-- 158.221 since boot --
+Finger Down!
+-- 158.26 since boot --
+Finger Down!
+-- 158.289 since boot --
+Finger Down!
+-- 158.321 since boot --
+Finger Down!
+-- 158.354 since boot --
+Finger Down!
+-- 158.387 since boot --
+Finger Down!
+-- 158.417 since boot --
+Finger Down!
+-- 158.445 since boot --
+Finger Down!
+-- 158.476 since boot --
+Finger Down!
+-- 158.507 since boot --
+Finger Down!
+-- 158.543 since boot --
+Finger Down!
+-- 158.584 since boot --
+Finger Down!
+-- 158.641 since boot --
+Finger Down!
+-- 158.697 since boot --
+Finger Down!
+-- 158.739 since boot --
+Finger Down!
+-- 158.772 since boot --
+Finger Down!
+-- 158.811 since boot --
+Finger Down!
+-- 158.85 since boot --
+Finger Down!
+-- 158.883 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+-- 158.936 since boot --
+Finger Down!
+-- 158.98 since boot --
+Finger Down!
+-- 158.999 since boot --
+Finger Down!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 159.067 since boot --
+Finger Down!
+	RobotPeriodic(): 0.000219s
+	TeleopPeriodic(): 0.024870s
+-- 159.115 since boot --
+Finger Down!
+-- 159.149 since boot --
+Finger Down!
+-- 159.206 since boot --
+Finger Down!
+-- 159.275 since boot --
+Finger Down!
+-- 159.34 since boot --
+Finger Down!
+-- 159.408 since boot --
+Finger Down!
+-- 159.481 since boot --
+Finger Down!
+-- 159.556 since boot --
+Finger Down!
+-- 159.637 since boot --
+Finger Down!
+-- 159.705 since boot --
+Finger Down!
+-- 159.765 since boot --
+Finger Down!
+-- 159.832 since boot --
+Finger Down!
+-- 159.871 since boot --
+Finger Down!
+-- 159.926 since boot --
+Finger Down!
+-- 159.959 since boot --
+Finger Down!
+-- 159.984 since boot --
+Finger Down!
+-- 160.007 since boot --
+Finger Down!
+-- 160.026 since boot --
+Finger Down!
+-- 160.049 since boot --
+Finger Down!
+-- 160.073 since boot --
+Finger Down!
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000128s
+	TeleopPeriodic(): 0.042761s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000120s
+	TeleopPeriodic(): 0.027376s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000269s
+	TeleopPeriodic(): 0.022663s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000126s
+	TeleopPeriodic(): 0.032050s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000126s
+	TeleopPeriodic(): 0.037663s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000125s
+	TeleopPeriodic(): 0.023003s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000142s
+	TeleopPeriodic(): 0.027239s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000124s
+	TeleopPeriodic(): 0.034029s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000125s
+	TeleopPeriodic(): 0.030660s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000122s
+	TeleopPeriodic(): 0.035261s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000146s
+	TeleopPeriodic(): 0.031638s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000453s
+	TeleopPeriodic(): 0.029966s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000139s
+	TeleopPeriodic(): 0.026934s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000143s
+	TeleopPeriodic(): 0.022712s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000109s
+	TeleopPeriodic(): 0.023173s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000272s
+	TeleopPeriodic(): 0.028501s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000123s
+	TeleopPeriodic(): 0.023494s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000574s
+	TeleopPeriodic(): 0.026726s
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000128s
+	TeleopPeriodic(): 0.023575s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.002167s
+	TeleopPeriodic(): 0.020908s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000124s
+	TeleopPeriodic(): 0.024524s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000324s
+	TeleopPeriodic(): 0.029071s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000120s
+	TeleopPeriodic(): 0.027910s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000107s
+	TeleopPeriodic(): 0.022436s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000126s
+	TeleopPeriodic(): 0.026087s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000121s
+	TeleopPeriodic(): 0.044778s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000120s
+	TeleopPeriodic(): 0.025325s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000132s
+	TeleopPeriodic(): 0.027720s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000681s
+	TeleopPeriodic(): 0.026309s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000122s
+	TeleopPeriodic(): 0.020756s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000125s
+	TeleopPeriodic(): 0.025364s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000267s
+	TeleopPeriodic(): 0.028357s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000223s
+	TeleopPeriodic(): 0.023459s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.001552s
+	TeleopPeriodic(): 0.023450s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000160s
+	TeleopPeriodic(): 0.020957s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000126s
+	TeleopPeriodic(): 0.031196s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000131s
+	TeleopPeriodic(): 0.021504s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000104s
+	TeleopPeriodic(): 0.023904s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000121s
+	TeleopPeriodic(): 0.024302s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000149s
+	TeleopPeriodic(): 0.020161s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000476s
+	TeleopPeriodic(): 0.023942s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000404s
+	TeleopPeriodic(): 0.020791s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000129s
+	TeleopPeriodic(): 0.026237s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000155s
+	TeleopPeriodic(): 0.022406s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000968s
+	TeleopPeriodic(): 0.037452s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000124s
+	TeleopPeriodic(): 0.029675s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000420s
+	TeleopPeriodic(): 0.023499s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000119s
+	TeleopPeriodic(): 0.028188s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000141s
+	TeleopPeriodic(): 0.031591s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000118s
+	TeleopPeriodic(): 0.029712s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000435s
+	TeleopPeriodic(): 0.028598s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000122s
+	TeleopPeriodic(): 0.027256s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000125s
+	TeleopPeriodic(): 0.023881s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000279s
+	TeleopPeriodic(): 0.029634s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000108s
+	TeleopPeriodic(): 0.024924s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000284s
+	TeleopPeriodic(): 0.026750s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000143s
+	TeleopPeriodic(): 0.031184s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000122s
+	TeleopPeriodic(): 0.025725s
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000120s
+	TeleopPeriodic(): 0.029412s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000125s
+	TeleopPeriodic(): 0.030163s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000129s
+	TeleopPeriodic(): 0.025899s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000124s
+	TeleopPeriodic(): 0.024431s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000158s
+	TeleopPeriodic(): 0.025718s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000228s
+	TeleopPeriodic(): 0.025194s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.001670s
+	TeleopPeriodic(): 0.033469s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000137s
+	TeleopPeriodic(): 0.026040s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000220s
+	TeleopPeriodic(): 0.025470s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000707s
+	TeleopPeriodic(): 0.030557s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.001285s
+	TeleopPeriodic(): 0.020420s
+Joystick Axis missing, check if all controllers are plugged in
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000139s
+	TeleopPeriodic(): 0.034358s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000380s
+	TeleopPeriodic(): 0.020757s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000397s
+	TeleopPeriodic(): 0.021931s
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000152s
+	TeleopPeriodic(): 0.025561s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000126s
+	TeleopPeriodic(): 0.033329s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+	RobotPeriodic(): 0.000952s
+	TeleopPeriodic(): 0.028972s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000467s
+	TeleopPeriodic(): 0.028337s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000125s
+	TeleopPeriodic(): 0.025124s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000692s
+	TeleopPeriodic(): 0.020271s
+Joystick Axis missing, check if all controllers are plugged in
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.003332s
+	TeleopPeriodic(): 0.017944s
+Joystick Axis missing, check if all controllers are plugged in
+-- 270.256 since boot --
+Manual climb starting
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000139s
+	TeleopPeriodic(): 0.025657s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000124s
+	TeleopPeriodic(): 0.026994s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000122s
+	TeleopPeriodic(): 0.035423s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000125s
+	TeleopPeriodic(): 0.035585s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000142s
+	TeleopPeriodic(): 0.034854s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000131s
+	TeleopPeriodic(): 0.023612s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000225s
+	TeleopPeriodic(): 0.021986s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000181s
+	TeleopPeriodic(): 0.021469s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000155s
+	TeleopPeriodic(): 0.032747s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000181s
+	TeleopPeriodic(): 0.021737s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000286s
+	TeleopPeriodic(): 0.021219s
+-- 284.381 since boot --
+Arms are being full-forced!
+-- 284.412 since boot --
+Arms are being full-forced!
+-- 284.448 since boot --
+Arms are being full-forced!
+-- 284.489 since boot --
+Arms are being full-forced!
+-- 284.525 since boot --
+Arms are being full-forced!
+-- 284.562 since boot --
+Arms are being full-forced!
+-- 284.602 since boot --
+Arms are being full-forced!
+-- 284.641 since boot --
+Arms are being full-forced!
+-- 284.678 since boot --
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000118s
+	TeleopPeriodic(): 0.025829s
+-- 285.416 since boot --
+Arms are being full-forced!
+-- 285.484 since boot --
+Arms are being full-forced!
+-- 285.537 since boot --
+Arms are being full-forced!
+-- 285.588 since boot --
+Arms are being full-forced!
+-- 285.642 since boot --
+Arms are being full-forced!
+-- 285.669 since boot --
+Arms are being full-forced!
+-- 285.703 since boot --
+Arms are being full-forced!
+-- 285.725 since boot --
+Arms are being full-forced!
+-- 285.747 since boot --
+Arms are being full-forced!
+-- 285.776 since boot --
+Arms are being full-forced!
+-- 285.83 since boot --
+Arms are being full-forced!
+-- 285.851 since boot --
+Arms are being full-forced!
+-- 285.893 since boot --
+Arms are being full-forced!
+-- 285.924 since boot --
+Arms are being full-forced!
+-- 285.961 since boot --
+Arms are being full-forced!
+-- 285.99 since boot --
+Arms are being full-forced!
+-- 286.016 since boot --
+Arms are being full-forced!
+-- 286.039 since boot --
+Arms are being full-forced!
+-- 286.059 since boot --
+Arms are being full-forced!
+-- 286.085 since boot --
+Arms are being full-forced!
+-- 286.113 since boot --
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+-- 286.156 since boot --
+Arms are being full-forced!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000642s
+	TeleopPeriodic(): 0.021048s
+-- 286.206 since boot --
+Arms are being full-forced!
+-- 286.238 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.259 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.276 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.302 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.316 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.373 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.39 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.421 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.444 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.474 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.503 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.554 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.595 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.645 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.698 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.742 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.787 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.824 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.862 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.902 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.936 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 286.969 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.003 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.049 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.09 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.113 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.139 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.162 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.185 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.209 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.231 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.256 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.285 since boot --
+Pushing legs down!
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+-- 287.338 since boot --
+Pushing legs down!
+Arms are being full-forced!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000208s
+	TeleopPeriodic(): 0.020917s
+-- 287.376 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.414 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.459 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.518 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.548 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.581 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.618 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.691 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.744 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.772 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.806 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.848 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.893 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.93 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 287.965 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.004 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.042 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.087 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.133 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.165 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.217 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.265 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.308 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.351 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.39 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.43 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.473 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.515 since boot --
+Pushing legs down!
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 288.559 since boot --
+Pushing legs down!
+Arms are being full-forced!
+	RobotPeriodic(): 0.009445s
+	TeleopPeriodic(): 0.023268s
+-- 288.619 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.655 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.705 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.75 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.777 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.821 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.864 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.92 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 288.962 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.048 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.096 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.122 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.147 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.172 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.197 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.219 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.243 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.269 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.295 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.336 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.378 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.419 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.458 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.497 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.535 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.578 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.617 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.653 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.697 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.742 since boot --
+Pushing legs down!
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.006898s
+	TeleopPeriodic(): 0.016549s
+-- 289.796 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.836 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.865 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.881 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.922 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.96 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 289.995 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.035 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.08 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.12 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.151 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.187 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.225 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.256 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.288 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.319 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.351 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.384 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.417 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.449 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.483 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.516 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.548 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.579 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.616 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.653 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.693 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.719 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.764 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.803 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.846 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.894 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 290.932 since boot --
+Pushing legs down!
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 290.978 since boot --
+Pushing legs down!
+Arms are being full-forced!
+	RobotPeriodic(): 0.000233s
+	TeleopPeriodic(): 0.024394s
+-- 291.013 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.047 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.079 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.113 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.146 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.179 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.213 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.248 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.286 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.319 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.35 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.382 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.419 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.473 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.501 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.556 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.593 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.626 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.684 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.721 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.75 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.797 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.834 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.86 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.887 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.921 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.956 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 291.987 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.044 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.071 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.112 since boot --
+Pushing legs down!
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+-- 292.18 since boot --
+Pushing legs down!
+Arms are being full-forced!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000201s
+	TeleopPeriodic(): 0.020240s
+-- 292.212 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.255 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.308 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.353 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.43 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.468 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.502 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.528 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.568 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.593 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.629 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.661 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.693 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.727 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.757 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.784 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.862 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.905 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 292.956 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.001 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.037 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.085 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.11 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.144 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.176 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.215 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.258 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.302 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.354 since boot --
+Pushing legs down!
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+-- 293.408 since boot --
+Pushing legs down!
+Arms are being full-forced!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000229s
+	TeleopPeriodic(): 0.020411s
+-- 293.452 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.491 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.516 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.545 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.572 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.597 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.634 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.698 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.75 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.821 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.873 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.91 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.93 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.954 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.974 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 293.998 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.025 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.043 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.095 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.139 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.177 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.207 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.268 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.32 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.35 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.38 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.406 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.439 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.498 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.555 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.606 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.65 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.682 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.724 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.758 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.79 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.823 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.857 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.888 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.92 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.955 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 294.987 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.021 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.054 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.083 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.126 since boot --
+Pushing legs down!
+Watchdog not fed within 0.020000s
+Arms are being full-forced!
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.005058s
+	TeleopPeriodic(): 0.018216s
+-- 295.194 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.25 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.311 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.37 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.427 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.481 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.53 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.593 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.657 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.706 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.786 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.856 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.92 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 295.989 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.056 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.112 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.138 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.194 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.23 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.321 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.387 since boot --
+Pushing legs down!
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 296.474 since boot --
+Pushing legs down!
+Arms are being full-forced!
+	RobotPeriodic(): 0.000620s
+	TeleopPeriodic(): 0.035097s
+-- 296.52 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.594 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.625 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.68 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.716 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.773 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.824 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.888 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.933 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 296.987 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.042 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.117 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.143 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.168 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.22 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.288 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.347 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.385 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.438 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.475 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.53 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.571 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.612 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.632 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.652 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.671 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.692 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.711 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.733 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.757 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.79 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.822 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 297.852 since boot --
+Pushing legs down!
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 297.911 since boot --
+Pushing legs down!
+Arms are being full-forced!
+	RobotPeriodic(): 0.011482s
+	TeleopPeriodic(): 0.026426s
+-- 297.966 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.007 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.052 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.096 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.149 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.191 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.24 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.279 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.31 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.344 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.367 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.391 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.414 since boot --
+Arms are being full-forced!
+-- 298.436 since boot --
+Arms are being full-forced!
+-- 298.458 since boot --
+Arms are being full-forced!
+-- 298.481 since boot --
+Arms are being full-forced!
+-- 298.504 since boot --
+Arms are being full-forced!
+-- 298.524 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.6 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.644 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.719 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.763 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.823 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.886 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 298.949 since boot --
+Arms are being full-forced!
+-- 299.005 since boot --
+Arms are being full-forced!
+-- 299.036 since boot --
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 299.101 since boot --
+Arms are being full-forced!
+-- 299.13 since boot --
+Arms are being full-forced!
+-- 299.202 since boot --
+Arms are being full-forced!
+	RobotPeriodic(): 0.000113s
+	TeleopPeriodic(): 0.027603s
+-- 299.441 since boot --
+Arms are being full-forced!
+-- 299.477 since boot --
+Arms are being full-forced!
+-- 299.522 since boot --
+Arms are being full-forced!
+-- 299.567 since boot --
+Arms are being full-forced!
+-- 299.619 since boot --
+Arms are being full-forced!
+-- 299.668 since boot --
+Arms are being full-forced!
+-- 299.711 since boot --
+Arms are being full-forced!
+-- 299.749 since boot --
+Arms are being full-forced!
+-- 299.777 since boot --
+Arms are being full-forced!
+-- 299.806 since boot --
+Arms are being full-forced!
+-- 299.834 since boot --
+Arms are being full-forced!
+-- 299.863 since boot --
+Arms are being full-forced!
+-- 299.891 since boot --
+Arms are being full-forced!
+-- 299.92 since boot --
+Arms are being full-forced!
+-- 299.95 since boot --
+Arms are being full-forced!
+-- 299.979 since boot --
+Arms are being full-forced!
+-- 300.009 since boot --
+Arms are being full-forced!
+-- 300.035 since boot --
+Arms are being full-forced!
+-- 300.217 since boot --
+Arms are being full-forced!
+-- 300.278 since boot --
+Arms are being full-forced!
+-- 300.334 since boot --
+Arms are being full-forced!
+-- 300.373 since boot --
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+-- 300.418 since boot --
+Arms are being full-forced!
+-- 300.477 since boot --
+Arms are being full-forced!
+-- 300.525 since boot --
+Arms are being full-forced!
+	RobotPeriodic(): 0.003224s
+	TeleopPeriodic(): 0.037629s
+-- 300.59 since boot --
+Arms are being full-forced!
+-- 300.607 since boot --
+Arms are being full-forced!
+-- 300.658 since boot --
+Arms are being full-forced!
+-- 300.718 since boot --
+Arms are being full-forced!
+-- 300.76 since boot --
+Arms are being full-forced!
+-- 300.795 since boot --
+Arms are being full-forced!
+-- 300.835 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 300.907 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 300.966 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 300.994 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.026 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.057 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.103 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.14 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.208 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.241 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.306 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.338 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.393 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.439 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.487 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.531 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.569 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.623 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.67 since boot --
+Pushing legs down!
+Arms are being full-forced!
+-- 301.709 since boot --
+Watchdog not fed within 0.020000s
+Pushing legs down!
+Arms are being full-forced!
+Loop time of 2.000000e-02s overrun
+
+-- 301.763 since boot --
+Pushing legs down!
+Arms are being full-forced!
+	RobotPeriodic(): 0.001133s
+	TeleopPeriodic(): 0.021488s
+-- 301.8 since boot --
+Arms are being full-forced!
+-- 301.869 since boot --
+Arms are being full-forced!
+-- 301.919 since boot --
+Arms are being full-forced!
+-- 301.954 since boot --
+Arms are being full-forced!
+-- 301.996 since boot --
+Arms are being full-forced!
+-- 302.036 since boot --
+Arms are being full-forced!
+-- 302.083 since boot --
+Arms are being full-forced!
+-- 302.123 since boot --
+Arms are being full-forced!
+-- 302.16 since boot --
+Arms are being full-forced!
+-- 302.203 since boot --
+Arms are being full-forced!
+-- 302.246 since boot --
+Arms are being full-forced!
+-- 302.286 since boot --
+Arms are being full-forced!
+-- 302.328 since boot --
+Arms are being full-forced!
+-- 302.37 since boot --
+Arms are being full-forced!
+-- 302.41 since boot --
+Arms are being full-forced!
+-- 302.449 since boot --
+Arms are being full-forced!
+-- 302.493 since boot --
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000129s
+	TeleopPeriodic(): 0.025584s
+-- 303.089 since boot --
+Arms are being full-forced!
+-- 303.128 since boot --
+Arms are being full-forced!
+-- 303.168 since boot --
+Arms are being full-forced!
+-- 303.219 since boot --
+Arms are being full-forced!
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000141s
+	TeleopPeriodic(): 0.024416s
+-- 305.242 since boot --
+Manual climb is being cancled
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000131s
+	TeleopPeriodic(): 0.030298s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.001563s
+	TeleopPeriodic(): 0.019933s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.002894s
+	TeleopPeriodic(): 0.028464s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000136s
+	TeleopPeriodic(): 0.034130s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.002639s
+	TeleopPeriodic(): 0.034648s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000362s
+	TeleopPeriodic(): 0.029375s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000127s
+	TeleopPeriodic(): 0.031958s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000127s
+	TeleopPeriodic(): 0.025905s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000291s
+	TeleopPeriodic(): 0.030429s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000121s
+	TeleopPeriodic(): 0.027862s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000123s
+	TeleopPeriodic(): 0.022492s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000252s
+	TeleopPeriodic(): 0.020788s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000107s
+	TeleopPeriodic(): 0.027832s
+Watchdog not fed within 0.020000s
+Loop time of 2.000000e-02s overrun
+
+	RobotPeriodic(): 0.000109s
+	TeleopPeriodic(): 0.023314s
+Robot disabling.. DONE
