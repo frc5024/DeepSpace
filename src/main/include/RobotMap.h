@@ -16,6 +16,12 @@
 
 #define ROBOT_PERIOD 0.02
 
+// Current limiting (amps)
+#define ARM_CURRENT_THRESHOLD 35
+#define ARM_CURRENT_HOLD      33
+#define ARM_PEAK_TIMEOUT      0
+#define ARM_CURRENT_TIMEOUT   30
+
 // Camera mappings
 #define CAMERASERVER_DRIVER_CAMERA 1
 #define CAMERASERVER_VISION_CAMERA 0
@@ -48,7 +54,7 @@
 
 //Climb Motors
 #define CLIMB_ARM_MOTOR			5
-#define CLIMB_ARM_MOTOR_2		6
+#define CLIMB_ARM_MOTOR_2		7
 #define CLIMB_LEG_MOTOR			8
 #define CRAWL_LEFT_MOTOR		1
 #define CRAWL_RIGHT_MOTOR		0
@@ -75,7 +81,7 @@
 #define LEG_HOLD_SPEED 0.1
 
 // Slider
-#define SLIDER_MOTOR 7
+#define SLIDER_MOTOR 6
 
 // Piston
 #define PCM_CAN_ID 11
