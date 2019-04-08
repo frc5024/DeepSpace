@@ -24,6 +24,9 @@ var dir_722972e7b214f0021fb9fa10ce7918e4 =
     [ "Light.h", "Light_8h.html", [
       [ "Light", "classLight.html", "classLight" ]
     ] ],
+    [ "PIDController.h", "PIDController_8h.html", [
+      [ "PIDController", "classrr_1_1PIDController.html", "classrr_1_1PIDController" ]
+    ] ],
     [ "Piston.h", "Piston_8h.html", [
       [ "Piston", "classPiston.html", "classPiston" ]
     ] ],

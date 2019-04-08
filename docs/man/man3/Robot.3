@@ -1,9 +1,8 @@
-.TH "Robot" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "Robot" 3 "Mon Apr 8 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Robot \- Main robot class that is called by wpilib\&.  
-
+Robot
 .SH SYNOPSIS
 .br
 .PP
@@ -99,6 +98,10 @@ Inherits TimedRobot\&.
 .br
 .RI "Pointer for the climb management command\&. "
 .ti -1c
+.RI "\fBAutoClimbHigh\fP * \fBpAutoClimbHigh\fP"
+.br
+.RI "Pointer for the auto high climb command\&. "
+.ti -1c
 .RI "\fBClimb\fP * \fBpClimb\fP"
 .br
 .RI "Pointer for the climb control command\&. "
@@ -176,12 +179,16 @@ Inherits TimedRobot\&.
 .ti -1c
 .RI "AHRS * \fBpGyro\fP"
 .br
+.ti -1c
+.RI "clock_t \fBlogStart\fP"
+.br
+.ti -1c
+.RI "clock_t \fBlogCurrent\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
-Main robot class that is called by wpilib\&. 
-.PP
-Definition at line 46 of file Robot\&.h\&.
+Definition at line 57 of file Robot\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void Robot::AutonomousInit ()\fC [override]\fP"
@@ -191,31 +198,31 @@ Runs once at the start of auto\&. Usually while the announcer starts counting do
 .PP
 You can add additional auto modes by adding additional commands to the chooser code above (like the commented example) or additional comparisons to the if-else structure below with additional strings & commands\&. 
 .PP
-Definition at line 135 of file Robot\&.cpp\&.
+Definition at line 173 of file Robot\&.cpp\&.
 .SS "void Robot::AutonomousPeriodic ()\fC [override]\fP"
 
 .PP
 Runs in a loop during auto\&. 
 .PP
-Definition at line 158 of file Robot\&.cpp\&.
+Definition at line 196 of file Robot\&.cpp\&.
 .SS "void Robot::DisabledInit ()\fC [override]\fP"
 
 .PP
 Runs once every time the robot is disabled\&. This function is called once each time the robot enters Disabled mode\&. You can use it to reset any subsystem information you want to clear when the robot is disabled\&. 
 .PP
-Definition at line 113 of file Robot\&.cpp\&.
+Definition at line 149 of file Robot\&.cpp\&.
 .SS "void Robot::DisabledPeriodic ()\fC [override]\fP"
 
 .PP
 Runs in a loop while the robot is disabled\&. 
 .PP
-Definition at line 122 of file Robot\&.cpp\&.
+Definition at line 160 of file Robot\&.cpp\&.
 .SS "void Robot::RobotInit ()\fC [override]\fP"
 
 .PP
 Runs once on robot boot\&. 
 .PP
-Definition at line 24 of file Robot\&.cpp\&.
+Definition at line 49 of file Robot\&.cpp\&.
 .SS "void Robot::RobotPeriodic ()\fC [override]\fP"
 
 .PP
@@ -223,37 +230,37 @@ Runs in a loop while the robot is turned on in any mode\&. This function is call
 .PP
 This runs after the mode specific periodic functions, but before LiveWindow and SmartDashboard integrated updating\&. 
 .PP
-Definition at line 96 of file Robot\&.cpp\&.
+Definition at line 126 of file Robot\&.cpp\&.
 .SS "void Robot::SharedInit ()"
 
 .PP
 Used to initalize commands for both auto and teleop\&. (2019 only) 
 .PP
-Definition at line 184 of file Robot\&.cpp\&.
+Definition at line 222 of file Robot\&.cpp\&.
 .SS "void Robot::SharedPeriodic ()"
 
 .PP
 Runs during teleop and auto\&. 
 .PP
-Definition at line 196 of file Robot\&.cpp\&.
+Definition at line 234 of file Robot\&.cpp\&.
 .SS "void Robot::TeleopInit ()\fC [override]\fP"
 
 .PP
 Runs once at the start of teleop when the bell sounds\&. 
 .PP
-Definition at line 164 of file Robot\&.cpp\&.
+Definition at line 202 of file Robot\&.cpp\&.
 .SS "void Robot::TeleopPeriodic ()\fC [override]\fP"
 
 .PP
 Runs in a loop during teleop\&. 
 .PP
-Definition at line 178 of file Robot\&.cpp\&.
+Definition at line 216 of file Robot\&.cpp\&.
 .SS "void Robot::TestPeriodic ()\fC [override]\fP"
 
 .PP
 Runs in a loop during test mode\&. 
 .PP
-Definition at line 223 of file Robot\&.cpp\&.
+Definition at line 284 of file Robot\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "frc::DriverStation& Robot::driverStation = frc::DriverStation::GetInstance()\fC [private]\fP"
@@ -261,159 +268,173 @@ Definition at line 223 of file Robot\&.cpp\&.
 .PP
 DriverStation instance\&. 
 .PP
-Definition at line 97 of file Robot\&.h\&.
+Definition at line 110 of file Robot\&.h\&.
 .SS "cs::UsbCamera Robot::frontCam\fC [private]\fP"
 
 .PP
 Variable for the front camera\&. 
 .PP
-Definition at line 89 of file Robot\&.h\&.
+Definition at line 102 of file Robot\&.h\&.
+.SS "clock_t Robot::logCurrent\fC [private]\fP"
+
+.PP
+Definition at line 117 of file Robot\&.h\&.
+.SS "clock_t Robot::logStart\fC [private]\fP"
+
+.PP
+Definition at line 117 of file Robot\&.h\&.
 .SS "\fBArm\fP * Robot::m_Arm\fC [static]\fP"
 
 .PP
 Pointer for the \fBArm\fP\&. 
 .PP
-Definition at line 54 of file Robot\&.h\&.
+Definition at line 66 of file Robot\&.h\&.
 .SS "\fBcCompressor\fP * Robot::m_cCompressor\fC [static]\fP"
 
 .PP
 Pointer for the \fBcCompressor\fP\&. 
 .PP
-Definition at line 50 of file Robot\&.h\&.
+Definition at line 62 of file Robot\&.h\&.
 .SS "frc::SendableChooser<frc::Command*> Robot::m_chooser\fC [private]\fP"
 
 .PP
-Definition at line 95 of file Robot\&.h\&.
+Definition at line 108 of file Robot\&.h\&.
 .SS "\fBCrawlDrive\fP * Robot::m_CrawlDrive\fC [static]\fP"
 
 .PP
 Pointer for the \fBDriveTrain\fP\&. 
 .PP
-Definition at line 53 of file Robot\&.h\&.
+Definition at line 65 of file Robot\&.h\&.
 .SS "\fBDriveTrain\fP * Robot::m_DriveTrain\fC [static]\fP"
 
 .PP
 Pointer for the \fBDriveTrain\fP\&. 
 .PP
-Definition at line 51 of file Robot\&.h\&.
+Definition at line 63 of file Robot\&.h\&.
 .SS "\fBFlap\fP * Robot::m_Flap\fC [static]\fP"
 
 .PP
 Pointer for the Cargo \fBFlap\fP\&. 
 .PP
-Definition at line 59 of file Robot\&.h\&.
+Definition at line 71 of file Robot\&.h\&.
 .SS "\fBHatchGripper\fP * Robot::m_HatchGripper\fC [static]\fP"
 
 .PP
 Pointer for the Hatch Gripper\&. 
 .PP
-Definition at line 58 of file Robot\&.h\&.
+Definition at line 70 of file Robot\&.h\&.
 .SS "\fBLeg\fP * Robot::m_Leg\fC [static]\fP"
 
 .PP
 Pointer for the \fBLeg\fP\&. 
 .PP
-Definition at line 55 of file Robot\&.h\&.
+Definition at line 67 of file Robot\&.h\&.
 .SS "\fBLight\fP * Robot::m_Light\fC [static]\fP"
 
 .PP
 Pointer for the \fBLight\fP\&. 
 .PP
-Definition at line 60 of file Robot\&.h\&.
+Definition at line 72 of file Robot\&.h\&.
 .SS "\fBOI\fP * Robot::m_oi\fC [static]\fP"
 
 .PP
 Pointer for the Operator Interface (\fBOI\fP) 
 .PP
-Definition at line 56 of file Robot\&.h\&.
+Definition at line 68 of file Robot\&.h\&.
 .SS "\fBPiston\fP * Robot::m_Piston\fC [static]\fP"
 
 .PP
 Pointer for the \fBPiston\fP\&. 
 .PP
-Definition at line 52 of file Robot\&.h\&.
+Definition at line 64 of file Robot\&.h\&.
 .SS "\fBSlider\fP * Robot::m_Slider\fC [static]\fP"
 
 .PP
 Pointer for the \fBSlider\fP\&. 
 .PP
-Definition at line 57 of file Robot\&.h\&.
+Definition at line 69 of file Robot\&.h\&.
 .SS "std::shared_ptr<NetworkTable> Robot::ntTelemetry\fC [private]\fP"
 
 .PP
 A pointer to the /SmartDashboard/Telemetry table\&. 
 .PP
-Definition at line 100 of file Robot\&.h\&.
+Definition at line 113 of file Robot\&.h\&.
+.SS "\fBAutoClimbHigh\fP* Robot::pAutoClimbHigh"
+
+.PP
+Pointer for the auto high climb command\&. 
+.PP
+Definition at line 84 of file Robot\&.h\&.
 .SS "\fBClimb\fP* Robot::pClimb"
 
 .PP
 Pointer for the climb control command\&. 
 .PP
-Definition at line 72 of file Robot\&.h\&.
+Definition at line 85 of file Robot\&.h\&.
 .SS "\fBClimbManager\fP* Robot::pClimbManager"
 
 .PP
 Pointer for the climb management command\&. 
 .PP
-Definition at line 71 of file Robot\&.h\&.
+Definition at line 83 of file Robot\&.h\&.
 .SS "\fBControlCargo\fP* Robot::pControlCargo"
 
 .PP
 Pointer for the cargo control command\&. 
 .PP
-Definition at line 69 of file Robot\&.h\&.
+Definition at line 81 of file Robot\&.h\&.
 .SS "\fBControlCompressor\fP* Robot::pControlCompressor"
 
 .PP
 Pointer for the \fBControlCompressor\fP command\&. 
 .PP
-Definition at line 68 of file Robot\&.h\&.
+Definition at line 80 of file Robot\&.h\&.
 .SS "\fBControlHatchGripper\fP* Robot::pControlHatchGripper"
 
 .PP
 Pointer for the finger control command\&. 
 .PP
-Definition at line 66 of file Robot\&.h\&.
+Definition at line 78 of file Robot\&.h\&.
 .SS "\fBControlLight\fP* Robot::pControlLight"
 
 .PP
 Pointer for the vision light control command\&. 
 .PP
-Definition at line 70 of file Robot\&.h\&.
+Definition at line 82 of file Robot\&.h\&.
 .SS "\fBControlSlider\fP* Robot::pControlSlider"
 
 .PP
 Pointer for the \fBControlSlider\fP command\&. 
 .PP
-Definition at line 67 of file Robot\&.h\&.
+Definition at line 79 of file Robot\&.h\&.
 .SS "AHRS* Robot::pGyro\fC [private]\fP"
 
 .PP
-Definition at line 102 of file Robot\&.h\&.
+Definition at line 115 of file Robot\&.h\&.
 .SS "\fBPullArm\fP* Robot::pPullArm"
 
 .PP
 Pointer for the arm debugging command\&. 
 .PP
-Definition at line 64 of file Robot\&.h\&.
+Definition at line 76 of file Robot\&.h\&.
 .SS "\fBPullLeg\fP* Robot::pPullLeg"
 
 .PP
 Pointer for the leg debugging command\&. 
 .PP
-Definition at line 65 of file Robot\&.h\&.
+Definition at line 77 of file Robot\&.h\&.
 .SS "\fBTriggerDrive\fP* Robot::pTriggerDrive"
 
 .PP
 Pointer for the \fBTriggerDrive\fP command\&. 
 .PP
-Definition at line 63 of file Robot\&.h\&.
+Definition at line 75 of file Robot\&.h\&.
 .SS "cs::UsbCamera Robot::visionCam\fC [private]\fP"
 
 .PP
 Variable for the Vision camera\&. 
 .PP
-Definition at line 90 of file Robot\&.h\&.
+Definition at line 103 of file Robot\&.h\&.
 
 .SH "Author"
 .PP 

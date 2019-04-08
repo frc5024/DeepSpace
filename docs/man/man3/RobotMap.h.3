@@ -1,4 +1,4 @@
-.TH "src/main/include/RobotMap.h" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "src/main/include/RobotMap.h" 3 "Mon Apr 8 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,11 +6,29 @@ src/main/include/RobotMap.h
 .SH SYNOPSIS
 .br
 .PP
+\fC#include <iostream>\fP
+.br
+
 .SS "Macros"
 
 .in +1c
 .ti -1c
 .RI "#define \fBDODEBUG\fP   0"
+.br
+.ti -1c
+.RI "#define \fBROBOT_PERIOD\fP   0\&.02"
+.br
+.ti -1c
+.RI "#define \fBARM_CURRENT_THRESHOLD\fP   35"
+.br
+.ti -1c
+.RI "#define \fBARM_CURRENT_HOLD\fP   33"
+.br
+.ti -1c
+.RI "#define \fBARM_PEAK_TIMEOUT\fP   0"
+.br
+.ti -1c
+.RI "#define \fBARM_CURRENT_TIMEOUT\fP   30"
 .br
 .ti -1c
 .RI "#define \fBCAMERASERVER_DRIVER_CAMERA\fP   1"
@@ -29,6 +47,24 @@ src/main/include/RobotMap.h
 .br
 .ti -1c
 .RI "#define \fBDRIVETRAIN_RIGHT_REAR_MOTOR\fP   4"
+.br
+.ti -1c
+.RI "#define \fBTALLON_TPR\fP   4096"
+.br
+.ti -1c
+.RI "#define \fBARCADE_KP\fP   0\&.25"
+.br
+.ti -1c
+.RI "#define \fBARCADE_KI\fP   0\&.0"
+.br
+.ti -1c
+.RI "#define \fBARCADE_KD\fP   0\&.0"
+.br
+.ti -1c
+.RI "#define \fBSLEW_LIMIT\fP   0\&.15"
+.br
+.ti -1c
+.RI "#define \fBR_SLEW_LIMIT\fP   0\&.04"
 .br
 .ti -1c
 .RI "#define \fBDRIVETRAIN_LEFT_FRONT_MOTOR_INVERT\fP   false"
@@ -52,7 +88,7 @@ src/main/include/RobotMap.h
 .RI "#define \fBCLIMB_ARM_MOTOR\fP   5"
 .br
 .ti -1c
-.RI "#define \fBCLIMB_ARM_MOTOR_2\fP   6"
+.RI "#define \fBCLIMB_ARM_MOTOR_2\fP   7"
 .br
 .ti -1c
 .RI "#define \fBCLIMB_LEG_MOTOR\fP   8"
@@ -67,10 +103,40 @@ src/main/include/RobotMap.h
 .RI "#define \fBCLIMB_ULTRASONIC\fP   1"
 .br
 .ti -1c
+.RI "#define \fBOPTICAL_PIN\fP   7"
+.br
+.ti -1c
 .RI "#define \fBDRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF\fP   0\&.8"
 .br
 .ti -1c
-.RI "#define \fBSLIDER_MOTOR\fP   7"
+.RI "#define \fBCLIMB_M\fP   0\&.6"
+.br
+.ti -1c
+.RI "#define \fBCLIMB_B\fP   0\&.3"
+.br
+.ti -1c
+.RI "#define \fBCLIMB_MAX_HEIGHT\fP   100"
+.br
+.ti -1c
+.RI "#define \fBLEG_PIN_TOP\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLEG_PIN_MIDDLE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBLEG_PIN_BOTTOM\fP   6"
+.br
+.ti -1c
+.RI "#define \fBARM_PIN_LOWERED\fP   4"
+.br
+.ti -1c
+.RI "#define \fBARM_HOLD_SPEED\fP   0\&.2"
+.br
+.ti -1c
+.RI "#define \fBLEG_HOLD_SPEED\fP   0\&.1"
+.br
+.ti -1c
+.RI "#define \fBSLIDER_MOTOR\fP   6"
 .br
 .ti -1c
 .RI "#define \fBPCM_CAN_ID\fP   11"
@@ -132,166 +198,250 @@ src/main/include/RobotMap.h
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define CAMERASERVER_DRIVER_CAMERA   1"
+.SS "#define ARCADE_KD   0\&.0"
 
 .PP
-Definition at line 16 of file RobotMap\&.h\&.
-.SS "#define CAMERASERVER_VISION_CAMERA   0"
-
-.PP
-Definition at line 17 of file RobotMap\&.h\&.
-.SS "#define CLIMB_ARM_MOTOR   5"
-
-.PP
-Definition at line 36 of file RobotMap\&.h\&.
-.SS "#define CLIMB_ARM_MOTOR_2   6"
-
-.PP
-Definition at line 38 of file RobotMap\&.h\&.
-.SS "#define CLIMB_LEG_MOTOR   8"
+Definition at line 40 of file RobotMap\&.h\&.
+.SS "#define ARCADE_KI   0\&.0"
 
 .PP
 Definition at line 39 of file RobotMap\&.h\&.
-.SS "#define CLIMB_ULTRASONIC   1"
+.SS "#define ARCADE_KP   0\&.25"
 
 .PP
-Definition at line 45 of file RobotMap\&.h\&.
-.SS "#define CRAWL_LEFT_MOTOR   1"
-
-.PP
-Definition at line 41 of file RobotMap\&.h\&.
-.SS "#define CRAWL_RIGHT_MOTOR   0"
-
-.PP
-Definition at line 42 of file RobotMap\&.h\&.
-.SS "#define DODEBUG   0"
-The RobotMap is a mapping from the ports sensors and actuators are wired into to a variable name\&. This provides flexibility changing wiring, makes checking the wiring easier and significantly reduces the number of magic numbers floating around\&. 
-.PP
-Definition at line 13 of file RobotMap\&.h\&.
-.SS "#define DRIVETRAIN_LEFT_FRONT_MOTOR   1"
-
-.PP
-Definition at line 20 of file RobotMap\&.h\&.
-.SS "#define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT   false"
-
-.PP
-Definition at line 26 of file RobotMap\&.h\&.
-.SS "#define DRIVETRAIN_LEFT_REAR_MOTOR   2"
+Definition at line 38 of file RobotMap\&.h\&.
+.SS "#define ARM_CURRENT_HOLD   33"
 
 .PP
 Definition at line 21 of file RobotMap\&.h\&.
-.SS "#define DRIVETRAIN_LEFT_REAR_MOTOR_INVERT   false"
+.SS "#define ARM_CURRENT_THRESHOLD   35"
 
 .PP
-Definition at line 27 of file RobotMap\&.h\&.
-.SS "#define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF   0\&.8"
-
-.PP
-Definition at line 46 of file RobotMap\&.h\&.
-.SS "#define DRIVETRAIN_RIGHT_FRONT_MOTOR   3"
-
-.PP
-Definition at line 22 of file RobotMap\&.h\&.
-.SS "#define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT   true"
-
-.PP
-Definition at line 28 of file RobotMap\&.h\&.
-.SS "#define DRIVETRAIN_RIGHT_REAR_MOTOR   4"
+Definition at line 20 of file RobotMap\&.h\&.
+.SS "#define ARM_CURRENT_TIMEOUT   30"
 
 .PP
 Definition at line 23 of file RobotMap\&.h\&.
-.SS "#define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT   true"
+.SS "#define ARM_HOLD_SPEED   0\&.2"
 
 .PP
-Definition at line 29 of file RobotMap\&.h\&.
-.SS "#define DRIVEWITHJOYSTICK_ROTATION_LIMITER   0\&.95"
+Definition at line 80 of file RobotMap\&.h\&.
+.SS "#define ARM_PEAK_TIMEOUT   0"
 
 .PP
-Definition at line 68 of file RobotMap\&.h\&.
-.SS "#define elif   else if"
-
-.PP
-Definition at line 78 of file RobotMap\&.h\&.
-.SS "#define EndHeader()   std::cout << 'DONE' << std::endl"
-
-.PP
-Definition at line 87 of file RobotMap\&.h\&.
-.SS "#define False   false"
-
-.PP
-Definition at line 76 of file RobotMap\&.h\&.
-.SS "#define FLAP_ID_FORWARD   5"
-
-.PP
-Definition at line 64 of file RobotMap\&.h\&.
-.SS "#define FLAP_ID_REVERSE   6"
-
-.PP
-Definition at line 65 of file RobotMap\&.h\&.
-.SS "#define Hand   frc::GenericHID::JoystickHand"
-
-.PP
-Definition at line 81 of file RobotMap\&.h\&.
-.SS "#define HatchGripper_FORWARD_ID   1"
-
-.PP
-Definition at line 61 of file RobotMap\&.h\&.
-.SS "#define HatchGripper_REVERSE_ID   2"
-
-.PP
-Definition at line 62 of file RobotMap\&.h\&.
-.SS "#define Header(x)   std::cout << x"
-
-.PP
-Definition at line 86 of file RobotMap\&.h\&.
-.SS "#define LEDCONTROLLER_ID   2"
-
-.PP
-Definition at line 58 of file RobotMap\&.h\&.
-.SS "#define LIGHT_ID   0"
-
-.PP
-Definition at line 57 of file RobotMap\&.h\&.
-.SS "#define PCM_CAN_ID   11"
-
-.PP
-Definition at line 52 of file RobotMap\&.h\&.
-.SS "#define PISTON_ID   7"
-
-.PP
-Definition at line 54 of file RobotMap\&.h\&.
-.SS "#define SLIDER_MOTOR   7"
-
-.PP
-Definition at line 49 of file RobotMap\&.h\&.
-.SS "#define True   true"
+Definition at line 22 of file RobotMap\&.h\&.
+.SS "#define ARM_PIN_LOWERED   4"
 
 .PP
 Definition at line 77 of file RobotMap\&.h\&.
-.SS "#define WinGame(_class_)   frc::StartRobot<_class_>()"
+.SS "#define CAMERASERVER_DRIVER_CAMERA   1"
 
 .PP
-Definition at line 84 of file RobotMap\&.h\&.
-.SS "#define XBOX_CONTROLLER_DEBUG_PORT   2"
+Definition at line 26 of file RobotMap\&.h\&.
+.SS "#define CAMERASERVER_VISION_CAMERA   0"
 
 .PP
-Definition at line 73 of file RobotMap\&.h\&.
-.SS "#define XBOX_CONTROLLER_DRIVE_PORT   0"
+Definition at line 27 of file RobotMap\&.h\&.
+.SS "#define CLIMB_ARM_MOTOR   5"
+
+.PP
+Definition at line 56 of file RobotMap\&.h\&.
+.SS "#define CLIMB_ARM_MOTOR_2   7"
+
+.PP
+Definition at line 57 of file RobotMap\&.h\&.
+.SS "#define CLIMB_B   0\&.3"
+
+.PP
+Definition at line 69 of file RobotMap\&.h\&.
+.SS "#define CLIMB_LEG_MOTOR   8"
+
+.PP
+Definition at line 58 of file RobotMap\&.h\&.
+.SS "#define CLIMB_M   0\&.6"
+
+.PP
+Definition at line 68 of file RobotMap\&.h\&.
+.SS "#define CLIMB_MAX_HEIGHT   100"
 
 .PP
 Definition at line 71 of file RobotMap\&.h\&.
-.SS "#define XBOX_CONTROLLER_OPERATOR_PORT   1"
+.SS "#define CLIMB_ULTRASONIC   1"
 
 .PP
-Definition at line 72 of file RobotMap\&.h\&.
-.SS "#define XBOX_DEADZONE_LEFT_JOY   0\&.1"
+Definition at line 63 of file RobotMap\&.h\&.
+.SS "#define CRAWL_LEFT_MOTOR   1"
 
 .PP
-Definition at line 33 of file RobotMap\&.h\&.
-.SS "#define XBOX_DEADZONE_RIGHT_JOY   0\&.1"
+Definition at line 59 of file RobotMap\&.h\&.
+.SS "#define CRAWL_RIGHT_MOTOR   0"
+
+.PP
+Definition at line 60 of file RobotMap\&.h\&.
+.SS "#define DODEBUG   0"
+The RobotMap is a mapping from the ports sensors and actuators are wired into to a variable name\&. This provides flexibility changing wiring, makes checking the wiring easier and significantly reduces the number of magic numbers floating around\&. 
+.PP
+Definition at line 15 of file RobotMap\&.h\&.
+.SS "#define DRIVETRAIN_LEFT_FRONT_MOTOR   1"
+
+.PP
+Definition at line 30 of file RobotMap\&.h\&.
+.SS "#define DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT   false"
+
+.PP
+Definition at line 46 of file RobotMap\&.h\&.
+.SS "#define DRIVETRAIN_LEFT_REAR_MOTOR   2"
+
+.PP
+Definition at line 31 of file RobotMap\&.h\&.
+.SS "#define DRIVETRAIN_LEFT_REAR_MOTOR_INVERT   false"
+
+.PP
+Definition at line 47 of file RobotMap\&.h\&.
+.SS "#define DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF   0\&.8"
+
+.PP
+Definition at line 65 of file RobotMap\&.h\&.
+.SS "#define DRIVETRAIN_RIGHT_FRONT_MOTOR   3"
 
 .PP
 Definition at line 32 of file RobotMap\&.h\&.
+.SS "#define DRIVETRAIN_RIGHT_FRONT_MOTOR_INVERT   true"
+
+.PP
+Definition at line 48 of file RobotMap\&.h\&.
+.SS "#define DRIVETRAIN_RIGHT_REAR_MOTOR   4"
+
+.PP
+Definition at line 33 of file RobotMap\&.h\&.
+.SS "#define DRIVETRAIN_RIGHT_REAR_MOTOR_INVERT   true"
+
+.PP
+Definition at line 49 of file RobotMap\&.h\&.
+.SS "#define DRIVEWITHJOYSTICK_ROTATION_LIMITER   0\&.95"
+
+.PP
+Definition at line 103 of file RobotMap\&.h\&.
+.SS "#define elif   else if"
+
+.PP
+Definition at line 113 of file RobotMap\&.h\&.
+.SS "#define EndHeader()   std::cout << 'DONE' << std::endl"
+
+.PP
+Definition at line 122 of file RobotMap\&.h\&.
+.SS "#define False   false"
+
+.PP
+Definition at line 111 of file RobotMap\&.h\&.
+.SS "#define FLAP_ID_FORWARD   5"
+
+.PP
+Definition at line 99 of file RobotMap\&.h\&.
+.SS "#define FLAP_ID_REVERSE   6"
+
+.PP
+Definition at line 100 of file RobotMap\&.h\&.
+.SS "#define Hand   frc::GenericHID::JoystickHand"
+
+.PP
+Definition at line 116 of file RobotMap\&.h\&.
+.SS "#define HatchGripper_FORWARD_ID   1"
+
+.PP
+Definition at line 96 of file RobotMap\&.h\&.
+.SS "#define HatchGripper_REVERSE_ID   2"
+
+.PP
+Definition at line 97 of file RobotMap\&.h\&.
+.SS "#define Header(x)   std::cout << x"
+
+.PP
+Definition at line 121 of file RobotMap\&.h\&.
+.SS "#define LEDCONTROLLER_ID   2"
+
+.PP
+Definition at line 93 of file RobotMap\&.h\&.
+.SS "#define LEG_HOLD_SPEED   0\&.1"
+
+.PP
+Definition at line 81 of file RobotMap\&.h\&.
+.SS "#define LEG_PIN_BOTTOM   6"
+
+.PP
+Definition at line 76 of file RobotMap\&.h\&.
+.SS "#define LEG_PIN_MIDDLE   5"
+
+.PP
+Definition at line 75 of file RobotMap\&.h\&.
+.SS "#define LEG_PIN_TOP   1"
+
+.PP
+Definition at line 74 of file RobotMap\&.h\&.
+.SS "#define LIGHT_ID   0"
+
+.PP
+Definition at line 92 of file RobotMap\&.h\&.
+.SS "#define OPTICAL_PIN   7"
+
+.PP
+Definition at line 64 of file RobotMap\&.h\&.
+.SS "#define PCM_CAN_ID   11"
+
+.PP
+Definition at line 87 of file RobotMap\&.h\&.
+.SS "#define PISTON_ID   7"
+
+.PP
+Definition at line 89 of file RobotMap\&.h\&.
+.SS "#define R_SLEW_LIMIT   0\&.04"
+
+.PP
+Definition at line 43 of file RobotMap\&.h\&.
+.SS "#define ROBOT_PERIOD   0\&.02"
+
+.PP
+Definition at line 17 of file RobotMap\&.h\&.
+.SS "#define SLEW_LIMIT   0\&.15"
+
+.PP
+Definition at line 42 of file RobotMap\&.h\&.
+.SS "#define SLIDER_MOTOR   6"
+
+.PP
+Definition at line 84 of file RobotMap\&.h\&.
+.SS "#define TALLON_TPR   4096"
+
+.PP
+Definition at line 35 of file RobotMap\&.h\&.
+.SS "#define True   true"
+
+.PP
+Definition at line 112 of file RobotMap\&.h\&.
+.SS "#define WinGame(_class_)   frc::StartRobot<_class_>()"
+
+.PP
+Definition at line 119 of file RobotMap\&.h\&.
+.SS "#define XBOX_CONTROLLER_DEBUG_PORT   2"
+
+.PP
+Definition at line 108 of file RobotMap\&.h\&.
+.SS "#define XBOX_CONTROLLER_DRIVE_PORT   0"
+
+.PP
+Definition at line 106 of file RobotMap\&.h\&.
+.SS "#define XBOX_CONTROLLER_OPERATOR_PORT   1"
+
+.PP
+Definition at line 107 of file RobotMap\&.h\&.
+.SS "#define XBOX_DEADZONE_LEFT_JOY   0\&.1"
+
+.PP
+Definition at line 53 of file RobotMap\&.h\&.
+.SS "#define XBOX_DEADZONE_RIGHT_JOY   0\&.1"
+
+.PP
+Definition at line 52 of file RobotMap\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DeepSpace from the source code\&.

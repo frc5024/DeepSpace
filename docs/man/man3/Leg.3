@@ -1,4 +1,4 @@
-.TH "Leg" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "Leg" 3 "Mon Apr 8 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,14 +14,29 @@ Inherits Subsystem\&.
 
 .in +1c
 .ti -1c
-.RI "\fBLeg\fP ()"
+.RI "\fBLeg\fP (void)"
 .br
+.RI "Construct a new \fBLeg\fP object\&. "
 .ti -1c
 .RI "void \fBInitDefaultCommand\fP () override"
 .br
+.RI "Who uses this? You dont need to\&. "
 .ti -1c
 .RI "void \fBMoveLeg\fP (double Speed)"
 .br
+.RI "Move climb leg up or down\&. "
+.ti -1c
+.RI "bool \fBAtTop\fP (void)"
+.br
+.RI "Returns whether the legs are at the top most position\&. "
+.ti -1c
+.RI "bool \fBAtMiddle\fP (void)"
+.br
+.RI "Returns whether the legs are at the middle position\&. "
+.ti -1c
+.RI "bool \fBAtBottom\fP (void)"
+.br
+.RI "Returns whether the legs are at the bottom most position\&. "
 .in -1c
 .SS "Private Attributes"
 
@@ -29,42 +44,137 @@ Inherits Subsystem\&.
 .ti -1c
 .RI "can::WPI_TalonSRX * \fBpLegMotor\fP"
 .br
-.RI "Pointer for climb leg motor\&. "
+.RI "Pointer for the climb leg motor Works off a winch system to pull up and down But is used like a talon motor\&. "
+.ti -1c
+.RI "frc::DigitalInput * \fBpTopHall\fP"
+.br
+.RI "Sensor for when the leg is as far up as it can go If this sensor is tripped, the legs are above the wheels and it is now safe to drive\&. "
+.ti -1c
+.RI "frc::DigitalInput * \fBpMiddleHall\fP"
+.br
+.RI "Sensor for when the leg is at the middle position If this sensor is tripped, the robot is above the low raised platform\&. "
+.ti -1c
+.RI "frc::DigitalInput * \fBpBottomHall\fP"
+.br
+.RI "Sensor for when the leg is as far down as it can go If this sensor is tripped, the robot is above the highest platform\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line 9 of file Leg\&.h\&.
+Definition at line 10 of file Leg\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "Leg::Leg ()"
+.SS "Leg::Leg (void)"
 
+.PP
+Construct a new \fBLeg\fP object\&. 
 .PP
 Definition at line 3 of file Leg\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "void Leg::InitDefaultCommand ()\fC [override]\fP"
+.SS "bool Leg::AtBottom (void)"
 
 .PP
-Definition at line 12 of file Leg\&.cpp\&.
-.SS "void Leg::MoveLeg (double Speed)"
-Move climb leg up or down
+Returns whether the legs are at the bottom most position\&. 
 .PP
-\fBParameters:\fP
+\fBReturns:\fP
 .RS 4
-\fISpeed\fP speed (from -1 to 1) 
+true Sensor is tripped, we are at the bottom 
+.PP
+false Sensor is not tripped, we are not at the bottom 
 .RE
 .PP
 
 .PP
-Definition at line 17 of file Leg\&.cpp\&.
+Definition at line 42 of file Leg\&.cpp\&.
+.SS "bool Leg::AtMiddle (void)"
+
+.PP
+Returns whether the legs are at the middle position\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Sensor is tripped, we are at the middle 
+.PP
+false Sensor is not tripped, we are not at the middle 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file Leg\&.cpp\&.
+.SS "bool Leg::AtTop (void)"
+
+.PP
+Returns whether the legs are at the top most position\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Sensor is tripped, we are at the top 
+.PP
+false Sensor is not tripped, we are not at the top 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file Leg\&.cpp\&.
+.SS "void Leg::InitDefaultCommand ()\fC [override]\fP"
+
+.PP
+Who uses this? You dont need to\&. 
+.PP
+Definition at line 18 of file Leg\&.cpp\&.
+.SS "void Leg::MoveLeg (double Speed)"
+
+.PP
+Move climb leg up or down\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fISpeed\fP range:(-1\&.00, 1\&.00) where 1\&.00 or 100% is upwards 
+.RE
+.PP
+
+.PP
+Definition at line 23 of file Leg\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
+.SS "frc::DigitalInput* Leg::pBottomHall\fC [private]\fP"
+
+.PP
+Sensor for when the leg is as far down as it can go If this sensor is tripped, the robot is above the highest platform\&. 
+.PP
+\fBRemarks:\fP
+.RS 4
+When moving the leg down, stop when this gets tripped 
+.RE
+.PP
+
+.PP
+Definition at line 78 of file Leg\&.h\&.
 .SS "can::WPI_TalonSRX* Leg::pLegMotor\fC [private]\fP"
 
 .PP
-Pointer for climb leg motor\&. 
+Pointer for the climb leg motor Works off a winch system to pull up and down But is used like a talon motor\&. 
 .PP
-Definition at line 21 of file Leg\&.h\&.
+Definition at line 57 of file Leg\&.h\&.
+.SS "frc::DigitalInput* Leg::pMiddleHall\fC [private]\fP"
+
+.PP
+Sensor for when the leg is at the middle position If this sensor is tripped, the robot is above the low raised platform\&. 
+.PP
+Definition at line 71 of file Leg\&.h\&.
+.SS "frc::DigitalInput* Leg::pTopHall\fC [private]\fP"
+
+.PP
+Sensor for when the leg is as far up as it can go If this sensor is tripped, the legs are above the wheels and it is now safe to drive\&. 
+.PP
+\fBRemarks:\fP
+.RS 4
+When moving the leg up, stop when this gets tripped 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file Leg\&.h\&.
 
 .SH "Author"
 .PP 

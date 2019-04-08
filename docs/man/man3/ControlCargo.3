@@ -1,4 +1,4 @@
-.TH "ControlCargo" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "ControlCargo" 3 "Mon Apr 8 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -42,7 +42,7 @@ Inherits Command\&.
 
 .in +1c
 .ti -1c
-.RI "frc::XboxController * \fBpJoyOp\fP"
+.RI "frc::XboxController * \fBpJoyDrive\fP"
 .br
 .RI "A mnemonic for the operator's controller because we are lazy\&. "
 .in -1c
@@ -66,7 +66,7 @@ Definition at line 4 of file ControlCargo\&.cpp\&.
 .PP
 Runs once when \fBIsFinished()\fP returns true\&. 
 .PP
-Definition at line 29 of file ControlCargo\&.cpp\&.
+Definition at line 30 of file ControlCargo\&.cpp\&.
 .SS "void ControlCargo::Execute ()\fC [override]\fP"
 
 .PP
@@ -84,7 +84,7 @@ Definition at line 12 of file ControlCargo\&.cpp\&.
 .PP
 Runs once if the command is forced to stop\&. 
 .PP
-Definition at line 33 of file ControlCargo\&.cpp\&.
+Definition at line 34 of file ControlCargo\&.cpp\&.
 .SS "bool ControlCargo::IsFinished ()\fC [override]\fP"
 Used to tell wpilib if the command is fully finished\&. This should never return true Because we always want to be able to drive the bot during teleop
 .PP
@@ -95,10 +95,10 @@ True if command is finished, else false
 .PP
 
 .PP
-Definition at line 26 of file ControlCargo\&.cpp\&.
+Definition at line 27 of file ControlCargo\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
-.SS "frc::XboxController* ControlCargo::pJoyOp\fC [private]\fP"
+.SS "frc::XboxController* ControlCargo::pJoyDrive\fC [private]\fP"
 
 .PP
 A mnemonic for the operator's controller because we are lazy\&. 

@@ -1,4 +1,4 @@
-.TH "Climb" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "Climb" 3 "Mon Apr 8 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -55,7 +55,7 @@ Inherits Command\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line 10 of file Climb\&.h\&.
+Definition at line 11 of file Climb\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "Climb::Climb ()"
@@ -71,7 +71,7 @@ Definition at line 4 of file Climb\&.cpp\&.
 .PP
 Runs once when \fBIsFinished()\fP returns true\&. 
 .PP
-Definition at line 46 of file Climb\&.cpp\&.
+Definition at line 59 of file Climb\&.cpp\&.
 .SS "void Climb::Execute ()\fC [override]\fP"
 
 .PP
@@ -89,7 +89,7 @@ Definition at line 12 of file Climb\&.cpp\&.
 .PP
 Runs once if the command is forced to stop\&. 
 .PP
-Definition at line 50 of file Climb\&.cpp\&.
+Definition at line 63 of file Climb\&.cpp\&.
 .SS "bool Climb::IsFinished ()\fC [override]\fP"
 Used to tell wpilib if the command is fully finished\&. This should never return true Because we always want to be able to drive the bot during teleop
 .PP
@@ -100,25 +100,25 @@ True if command is finished, else false
 .PP
 
 .PP
-Definition at line 43 of file Climb\&.cpp\&.
+Definition at line 52 of file Climb\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "double Climb::armSpeed\fC [private]\fP"
 
 .PP
-Definition at line 28 of file Climb\&.h\&.
+Definition at line 29 of file Climb\&.h\&.
 .SS "double Climb::crawlSpeed\fC [private]\fP"
 
 .PP
-Definition at line 29 of file Climb\&.h\&.
+Definition at line 30 of file Climb\&.h\&.
 .SS "double Climb::legSpeed\fC [private]\fP"
 
 .PP
-Definition at line 30 of file Climb\&.h\&.
+Definition at line 31 of file Climb\&.h\&.
 .SS "frc::XboxController* Climb::pJoyOp\fC [private]\fP"
 
 .PP
-Definition at line 32 of file Climb\&.h\&.
+Definition at line 33 of file Climb\&.h\&.
 
 .SH "Author"
 .PP 

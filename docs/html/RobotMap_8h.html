@@ -86,13 +86,24 @@ $(document).ready(function(){initNavTree('RobotMap_8h.html','');});
 <div class="title">RobotMap.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+</div>
 <p><a href="RobotMap_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:aefc47346bd5140a39b6d744385796e56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#aefc47346bd5140a39b6d744385796e56">DODEBUG</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:aefc47346bd5140a39b6d744385796e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a6371da6e8d9e8f812c78abfaa5fa0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a25a6371da6e8d9e8f812c78abfaa5fa0">ROBOT_PERIOD</a>&#160;&#160;&#160;0.02</td></tr>
+<tr class="separator:a25a6371da6e8d9e8f812c78abfaa5fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe883928c3c9229ec2c62d37bd43603e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#abe883928c3c9229ec2c62d37bd43603e">ARM_CURRENT_THRESHOLD</a>&#160;&#160;&#160;35</td></tr>
+<tr class="separator:abe883928c3c9229ec2c62d37bd43603e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ced29fc93ce4f19cbae866c92a32ae0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a5ced29fc93ce4f19cbae866c92a32ae0">ARM_CURRENT_HOLD</a>&#160;&#160;&#160;33</td></tr>
+<tr class="separator:a5ced29fc93ce4f19cbae866c92a32ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87e1bdc9e9a3992d48ce68957ac116e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#ac87e1bdc9e9a3992d48ce68957ac116e">ARM_PEAK_TIMEOUT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ac87e1bdc9e9a3992d48ce68957ac116e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b5dc38ba04fd13308842ff4dae9610"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#af1b5dc38ba04fd13308842ff4dae9610">ARM_CURRENT_TIMEOUT</a>&#160;&#160;&#160;30</td></tr>
+<tr class="separator:af1b5dc38ba04fd13308842ff4dae9610"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac23a6cdb4a4eac82f49aa3f45ce06168"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#ac23a6cdb4a4eac82f49aa3f45ce06168">CAMERASERVER_DRIVER_CAMERA</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:ac23a6cdb4a4eac82f49aa3f45ce06168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e1f6ad3dc982521bec442024dcde5f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a3e1f6ad3dc982521bec442024dcde5f8">CAMERASERVER_VISION_CAMERA</a>&#160;&#160;&#160;0</td></tr>
@@ -105,6 +116,18 @@ Macros</h2></td></tr>
 <tr class="separator:abad1c5fc99c931209ad7447c73315b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68427b547613236bec20a86d04321cbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a68427b547613236bec20a86d04321cbc">DRIVETRAIN_RIGHT_REAR_MOTOR</a>&#160;&#160;&#160;4</td></tr>
 <tr class="separator:a68427b547613236bec20a86d04321cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1289e6f6e449f58dd0f2df3650f5bc16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a1289e6f6e449f58dd0f2df3650f5bc16">TALLON_TPR</a>&#160;&#160;&#160;4096</td></tr>
+<tr class="separator:a1289e6f6e449f58dd0f2df3650f5bc16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc194ec20a6a6c16ceb7326b7e8da782"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#adc194ec20a6a6c16ceb7326b7e8da782">ARCADE_KP</a>&#160;&#160;&#160;0.25</td></tr>
+<tr class="separator:adc194ec20a6a6c16ceb7326b7e8da782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f7f6672c7750e0a990b298122e3ac70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a1f7f6672c7750e0a990b298122e3ac70">ARCADE_KI</a>&#160;&#160;&#160;0.0</td></tr>
+<tr class="separator:a1f7f6672c7750e0a990b298122e3ac70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18ff5f10f13cff2b5f932eac52f68833"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a18ff5f10f13cff2b5f932eac52f68833">ARCADE_KD</a>&#160;&#160;&#160;0.0</td></tr>
+<tr class="separator:a18ff5f10f13cff2b5f932eac52f68833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97fc1280b25fdd7f2ff4fca5dd498b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#aa97fc1280b25fdd7f2ff4fca5dd498b5">SLEW_LIMIT</a>&#160;&#160;&#160;0.15</td></tr>
+<tr class="separator:aa97fc1280b25fdd7f2ff4fca5dd498b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b68b9f8dadec5206c0e31073db581d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a9b68b9f8dadec5206c0e31073db581d2">R_SLEW_LIMIT</a>&#160;&#160;&#160;0.04</td></tr>
+<tr class="separator:a9b68b9f8dadec5206c0e31073db581d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab53fe26a24673fbfd067b86d7c63fd5a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#ab53fe26a24673fbfd067b86d7c63fd5a">DRIVETRAIN_LEFT_FRONT_MOTOR_INVERT</a>&#160;&#160;&#160;false</td></tr>
 <tr class="separator:ab53fe26a24673fbfd067b86d7c63fd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa60cd274aa644c7ba071e8caf906c06d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#aa60cd274aa644c7ba071e8caf906c06d">DRIVETRAIN_LEFT_REAR_MOTOR_INVERT</a>&#160;&#160;&#160;false</td></tr>
@@ -119,7 +142,7 @@ Macros</h2></td></tr>
 <tr class="separator:a4f09f1ab95a40f7ca6f96834cabc3521"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2a53531f41cd32dc0c4e356f96abc38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#ac2a53531f41cd32dc0c4e356f96abc38">CLIMB_ARM_MOTOR</a>&#160;&#160;&#160;5</td></tr>
 <tr class="separator:ac2a53531f41cd32dc0c4e356f96abc38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a021f5b9905a9e5af9e70d939a4671ebd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a021f5b9905a9e5af9e70d939a4671ebd">CLIMB_ARM_MOTOR_2</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memitem:a021f5b9905a9e5af9e70d939a4671ebd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a021f5b9905a9e5af9e70d939a4671ebd">CLIMB_ARM_MOTOR_2</a>&#160;&#160;&#160;7</td></tr>
 <tr class="separator:a021f5b9905a9e5af9e70d939a4671ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d4434e8398186183f9563467894c3dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a1d4434e8398186183f9563467894c3dc">CLIMB_LEG_MOTOR</a>&#160;&#160;&#160;8</td></tr>
 <tr class="separator:a1d4434e8398186183f9563467894c3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,9 +152,29 @@ Macros</h2></td></tr>
 <tr class="separator:a566075319790055dba04f1386020bbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb4df0426b06ba5efb4972e37b704647"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#adb4df0426b06ba5efb4972e37b704647">CLIMB_ULTRASONIC</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:adb4df0426b06ba5efb4972e37b704647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace7169eebc0c5e6b952cc5fc78735535"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#ace7169eebc0c5e6b952cc5fc78735535">OPTICAL_PIN</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:ace7169eebc0c5e6b952cc5fc78735535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa820a88c82df45b9c418da35eae21e46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#aa820a88c82df45b9c418da35eae21e46">DRIVETRAIN_RADIAL_SENSITIVITY_CUTOFF</a>&#160;&#160;&#160;0.8</td></tr>
 <tr class="separator:aa820a88c82df45b9c418da35eae21e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa904ac443cb51bcd6c3ccd6799065890"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#aa904ac443cb51bcd6c3ccd6799065890">SLIDER_MOTOR</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memitem:af671fb543481f46440eb3ca370dbeea9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#af671fb543481f46440eb3ca370dbeea9">CLIMB_M</a>&#160;&#160;&#160;0.6</td></tr>
+<tr class="separator:af671fb543481f46440eb3ca370dbeea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15459bcfd7776b8cb1ebd3b5e94d5518"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a15459bcfd7776b8cb1ebd3b5e94d5518">CLIMB_B</a>&#160;&#160;&#160;0.3</td></tr>
+<tr class="separator:a15459bcfd7776b8cb1ebd3b5e94d5518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceefbe7548e4c886fb5b75cc9a9cf7de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#aceefbe7548e4c886fb5b75cc9a9cf7de">CLIMB_MAX_HEIGHT</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:aceefbe7548e4c886fb5b75cc9a9cf7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70bdb967728291f26c95cd0af09ea54d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a70bdb967728291f26c95cd0af09ea54d">LEG_PIN_TOP</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a70bdb967728291f26c95cd0af09ea54d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1ede62afd87a40b579c13c557e1b33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#afd1ede62afd87a40b579c13c557e1b33">LEG_PIN_MIDDLE</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:afd1ede62afd87a40b579c13c557e1b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76cc7d1791863155f726fef62e5720c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a76cc7d1791863155f726fef62e5720c0">LEG_PIN_BOTTOM</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:a76cc7d1791863155f726fef62e5720c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2444b59e847a5503ed03c5df59e86278"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a2444b59e847a5503ed03c5df59e86278">ARM_PIN_LOWERED</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a2444b59e847a5503ed03c5df59e86278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9b749f21c9557528c07902e9512764b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#aa9b749f21c9557528c07902e9512764b">ARM_HOLD_SPEED</a>&#160;&#160;&#160;0.2</td></tr>
+<tr class="separator:aa9b749f21c9557528c07902e9512764b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04c626b16bf47f0fb6b7af70620ac9ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a04c626b16bf47f0fb6b7af70620ac9ab">LEG_HOLD_SPEED</a>&#160;&#160;&#160;0.1</td></tr>
+<tr class="separator:a04c626b16bf47f0fb6b7af70620ac9ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa904ac443cb51bcd6c3ccd6799065890"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#aa904ac443cb51bcd6c3ccd6799065890">SLIDER_MOTOR</a>&#160;&#160;&#160;6</td></tr>
 <tr class="separator:aa904ac443cb51bcd6c3ccd6799065890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c2a39bc44ce849f651bed17725eaca7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RobotMap_8h.html#a5c2a39bc44ce849f651bed17725eaca7">PCM_CAN_ID</a>&#160;&#160;&#160;11</td></tr>
 <tr class="separator:a5c2a39bc44ce849f651bed17725eaca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,6 +216,150 @@ Macros</h2></td></tr>
 <tr class="separator:a4d88ee8d6095ded78f78e7eabaecf648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a18ff5f10f13cff2b5f932eac52f68833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18ff5f10f13cff2b5f932eac52f68833">&#9670;&nbsp;</a></span>ARCADE_KD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARCADE_KD&#160;&#160;&#160;0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00040">40</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="a1f7f6672c7750e0a990b298122e3ac70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f7f6672c7750e0a990b298122e3ac70">&#9670;&nbsp;</a></span>ARCADE_KI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARCADE_KI&#160;&#160;&#160;0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00039">39</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="adc194ec20a6a6c16ceb7326b7e8da782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc194ec20a6a6c16ceb7326b7e8da782">&#9670;&nbsp;</a></span>ARCADE_KP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARCADE_KP&#160;&#160;&#160;0.25</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00038">38</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="a5ced29fc93ce4f19cbae866c92a32ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ced29fc93ce4f19cbae866c92a32ae0">&#9670;&nbsp;</a></span>ARM_CURRENT_HOLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARM_CURRENT_HOLD&#160;&#160;&#160;33</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00021">21</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="abe883928c3c9229ec2c62d37bd43603e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe883928c3c9229ec2c62d37bd43603e">&#9670;&nbsp;</a></span>ARM_CURRENT_THRESHOLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARM_CURRENT_THRESHOLD&#160;&#160;&#160;35</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00020">20</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="af1b5dc38ba04fd13308842ff4dae9610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b5dc38ba04fd13308842ff4dae9610">&#9670;&nbsp;</a></span>ARM_CURRENT_TIMEOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARM_CURRENT_TIMEOUT&#160;&#160;&#160;30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00023">23</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="aa9b749f21c9557528c07902e9512764b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b749f21c9557528c07902e9512764b">&#9670;&nbsp;</a></span>ARM_HOLD_SPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARM_HOLD_SPEED&#160;&#160;&#160;0.2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00080">80</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="ac87e1bdc9e9a3992d48ce68957ac116e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87e1bdc9e9a3992d48ce68957ac116e">&#9670;&nbsp;</a></span>ARM_PEAK_TIMEOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARM_PEAK_TIMEOUT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00022">22</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="a2444b59e847a5503ed03c5df59e86278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2444b59e847a5503ed03c5df59e86278">&#9670;&nbsp;</a></span>ARM_PIN_LOWERED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARM_PIN_LOWERED&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00077">77</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
 <a id="ac23a6cdb4a4eac82f49aa3f45ce06168"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac23a6cdb4a4eac82f49aa3f45ce06168">&#9670;&nbsp;</a></span>CAMERASERVER_DRIVER_CAMERA</h2>
 
@@ -185,7 +372,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00016">16</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00026">26</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -201,7 +388,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00017">17</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00027">27</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -217,7 +404,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00036">36</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00056">56</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -228,12 +415,28 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CLIMB_ARM_MOTOR_2&#160;&#160;&#160;6</td>
+          <td class="memname">#define CLIMB_ARM_MOTOR_2&#160;&#160;&#160;7</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00038">38</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00057">57</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="a15459bcfd7776b8cb1ebd3b5e94d5518"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15459bcfd7776b8cb1ebd3b5e94d5518">&#9670;&nbsp;</a></span>CLIMB_B</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLIMB_B&#160;&#160;&#160;0.3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00069">69</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -249,7 +452,39 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00039">39</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00058">58</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="af671fb543481f46440eb3ca370dbeea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af671fb543481f46440eb3ca370dbeea9">&#9670;&nbsp;</a></span>CLIMB_M</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLIMB_M&#160;&#160;&#160;0.6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00068">68</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="aceefbe7548e4c886fb5b75cc9a9cf7de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceefbe7548e4c886fb5b75cc9a9cf7de">&#9670;&nbsp;</a></span>CLIMB_MAX_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLIMB_MAX_HEIGHT&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00071">71</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -265,7 +500,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00045">45</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00063">63</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -281,7 +516,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00041">41</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00059">59</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -297,7 +532,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00042">42</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00060">60</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -314,7 +549,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>The RobotMap is a mapping from the ports sensors and actuators are wired into to a variable name. This provides flexibility changing wiring, makes checking the wiring easier and significantly reduces the number of magic numbers floating around. </p>
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00013">13</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00015">15</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -330,7 +565,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00020">20</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00030">30</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -346,7 +581,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00026">26</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00046">46</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -362,7 +597,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00021">21</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00031">31</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -378,7 +613,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00027">27</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00047">47</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -394,7 +629,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00046">46</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00065">65</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -410,7 +645,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00022">22</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00032">32</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -426,7 +661,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00028">28</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00048">48</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -442,7 +677,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00023">23</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00033">33</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -458,7 +693,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00029">29</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00049">49</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -474,7 +709,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00068">68</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00103">103</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -490,7 +725,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00078">78</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00113">113</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -509,7 +744,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00087">87</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00122">122</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -525,7 +760,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00076">76</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00111">111</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -541,7 +776,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00064">64</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00099">99</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -557,7 +792,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00065">65</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00100">100</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -573,7 +808,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00081">81</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00116">116</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -589,7 +824,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00061">61</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00096">96</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -605,7 +840,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00062">62</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00097">97</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -625,7 +860,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00086">86</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00121">121</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -641,7 +876,71 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00058">58</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00093">93</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="a04c626b16bf47f0fb6b7af70620ac9ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04c626b16bf47f0fb6b7af70620ac9ab">&#9670;&nbsp;</a></span>LEG_HOLD_SPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEG_HOLD_SPEED&#160;&#160;&#160;0.1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00081">81</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="a76cc7d1791863155f726fef62e5720c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76cc7d1791863155f726fef62e5720c0">&#9670;&nbsp;</a></span>LEG_PIN_BOTTOM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEG_PIN_BOTTOM&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00076">76</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="afd1ede62afd87a40b579c13c557e1b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd1ede62afd87a40b579c13c557e1b33">&#9670;&nbsp;</a></span>LEG_PIN_MIDDLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEG_PIN_MIDDLE&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00075">75</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="a70bdb967728291f26c95cd0af09ea54d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70bdb967728291f26c95cd0af09ea54d">&#9670;&nbsp;</a></span>LEG_PIN_TOP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEG_PIN_TOP&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00074">74</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -657,7 +956,23 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00057">57</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00092">92</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="ace7169eebc0c5e6b952cc5fc78735535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace7169eebc0c5e6b952cc5fc78735535">&#9670;&nbsp;</a></span>OPTICAL_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPTICAL_PIN&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00064">64</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -673,7 +988,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00052">52</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00087">87</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -689,7 +1004,55 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00054">54</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00089">89</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="a9b68b9f8dadec5206c0e31073db581d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b68b9f8dadec5206c0e31073db581d2">&#9670;&nbsp;</a></span>R_SLEW_LIMIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define R_SLEW_LIMIT&#160;&#160;&#160;0.04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00043">43</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="a25a6371da6e8d9e8f812c78abfaa5fa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a6371da6e8d9e8f812c78abfaa5fa0">&#9670;&nbsp;</a></span>ROBOT_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ROBOT_PERIOD&#160;&#160;&#160;0.02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00017">17</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="aa97fc1280b25fdd7f2ff4fca5dd498b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa97fc1280b25fdd7f2ff4fca5dd498b5">&#9670;&nbsp;</a></span>SLEW_LIMIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SLEW_LIMIT&#160;&#160;&#160;0.15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00042">42</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -700,12 +1063,28 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SLIDER_MOTOR&#160;&#160;&#160;7</td>
+          <td class="memname">#define SLIDER_MOTOR&#160;&#160;&#160;6</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00049">49</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00084">84</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+
+</div>
+</div>
+<a id="a1289e6f6e449f58dd0f2df3650f5bc16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1289e6f6e449f58dd0f2df3650f5bc16">&#9670;&nbsp;</a></span>TALLON_TPR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TALLON_TPR&#160;&#160;&#160;4096</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00035">35</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -721,7 +1100,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00077">77</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00112">112</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -741,7 +1120,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00084">84</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00119">119</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -757,7 +1136,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00073">73</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00108">108</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -773,7 +1152,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00071">71</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00106">106</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -789,7 +1168,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00072">72</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00107">107</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -805,7 +1184,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00033">33</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00053">53</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>
@@ -821,7 +1200,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00032">32</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RobotMap_8h_source.html#l00052">52</a> of file <a class="el" href="RobotMap_8h_source.html">RobotMap.h</a>.</p>
 
 </div>
 </div>

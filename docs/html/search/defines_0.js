@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['cameraserver_5fdriver_5fcamera',['CAMERASERVER_DRIVER_CAMERA',['../RobotMap_8h.html#ac23a6cdb4a4eac82f49aa3f45ce06168',1,'RobotMap.h']]],
-  ['cameraserver_5fvision_5fcamera',['CAMERASERVER_VISION_CAMERA',['../RobotMap_8h.html#a3e1f6ad3dc982521bec442024dcde5f8',1,'RobotMap.h']]],
-  ['climb_5farm_5fmotor',['CLIMB_ARM_MOTOR',['../RobotMap_8h.html#ac2a53531f41cd32dc0c4e356f96abc38',1,'RobotMap.h']]],
-  ['climb_5farm_5fmotor_5f2',['CLIMB_ARM_MOTOR_2',['../RobotMap_8h.html#a021f5b9905a9e5af9e70d939a4671ebd',1,'RobotMap.h']]],
-  ['climb_5fleg_5fmotor',['CLIMB_LEG_MOTOR',['../RobotMap_8h.html#a1d4434e8398186183f9563467894c3dc',1,'RobotMap.h']]],
-  ['climb_5fultrasonic',['CLIMB_ULTRASONIC',['../RobotMap_8h.html#adb4df0426b06ba5efb4972e37b704647',1,'RobotMap.h']]],
-  ['crawl_5fleft_5fmotor',['CRAWL_LEFT_MOTOR',['../RobotMap_8h.html#a1dfa803bd82207845f754e8f9d1134b4',1,'RobotMap.h']]],
-  ['crawl_5fright_5fmotor',['CRAWL_RIGHT_MOTOR',['../RobotMap_8h.html#a566075319790055dba04f1386020bbab',1,'RobotMap.h']]]
+  ['arcade_5fkd',['ARCADE_KD',['../RobotMap_8h.html#a18ff5f10f13cff2b5f932eac52f68833',1,'RobotMap.h']]],
+  ['arcade_5fki',['ARCADE_KI',['../RobotMap_8h.html#a1f7f6672c7750e0a990b298122e3ac70',1,'RobotMap.h']]],
+  ['arcade_5fkp',['ARCADE_KP',['../RobotMap_8h.html#adc194ec20a6a6c16ceb7326b7e8da782',1,'RobotMap.h']]],
+  ['arm_5fcurrent_5fhold',['ARM_CURRENT_HOLD',['../RobotMap_8h.html#a5ced29fc93ce4f19cbae866c92a32ae0',1,'RobotMap.h']]],
+  ['arm_5fcurrent_5fthreshold',['ARM_CURRENT_THRESHOLD',['../RobotMap_8h.html#abe883928c3c9229ec2c62d37bd43603e',1,'RobotMap.h']]],
+  ['arm_5fcurrent_5ftimeout',['ARM_CURRENT_TIMEOUT',['../RobotMap_8h.html#af1b5dc38ba04fd13308842ff4dae9610',1,'RobotMap.h']]],
+  ['arm_5fhold_5fspeed',['ARM_HOLD_SPEED',['../RobotMap_8h.html#aa9b749f21c9557528c07902e9512764b',1,'RobotMap.h']]],
+  ['arm_5fpeak_5ftimeout',['ARM_PEAK_TIMEOUT',['../RobotMap_8h.html#ac87e1bdc9e9a3992d48ce68957ac116e',1,'RobotMap.h']]],
+  ['arm_5fpin_5flowered',['ARM_PIN_LOWERED',['../RobotMap_8h.html#a2444b59e847a5503ed03c5df59e86278',1,'RobotMap.h']]]
 ];

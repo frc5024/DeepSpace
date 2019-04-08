@@ -8,6 +8,7 @@ var dir_1c9150798a8a01c1856270addf08aa3f =
     [ "HatchGripper.cpp", "HatchGripper_8cpp.html", null ],
     [ "Leg.cpp", "Leg_8cpp.html", null ],
     [ "Light.cpp", "Light_8cpp.html", null ],
+    [ "PIDController.cpp", "PIDController_8cpp.html", null ],
     [ "Piston.cpp", "Piston_8cpp.html", null ],
     [ "Slider.cpp", "Slider_8cpp.html", null ]
 ];

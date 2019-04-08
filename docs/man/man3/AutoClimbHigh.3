@@ -1,0 +1,204 @@
+.TH "AutoClimbHigh" 3 "Mon Apr 8 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AutoClimbHigh
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AutoClimbHigh\&.h>\fP
+.PP
+Inherits Command\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAutoClimbHigh\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP () override"
+.br
+.ti -1c
+.RI "void \fBExecute\fP () override"
+.br
+.RI "Switch checks the stage and then calls the appropriate Execute_<Stage>() function\&. "
+.ti -1c
+.RI "bool \fBIsFinished\fP () override"
+.br
+.ti -1c
+.RI "void \fBEnd\fP () override"
+.br
+.ti -1c
+.RI "void \fBInterrupted\fP () override"
+.br
+.ti -1c
+.RI "void \fBExecute_LowerArm\fP (void)"
+.br
+.RI "Execute stage LOWER_ARM stuff\&. "
+.ti -1c
+.RI "void \fBExecute_LowerLeg\fP (void)"
+.br
+.RI "Execute stage LOWER_LEG stuff\&. "
+.ti -1c
+.RI "void \fBExecute_Crawl\fP (void)"
+.br
+.RI "Execute stage CRAWL stuff\&. "
+.ti -1c
+.RI "void \fBExecute_Drive\fP (void)"
+.br
+.RI "Execute stage DRIVE stuff\&. "
+.ti -1c
+.RI "void \fBExecute_Raiseleg\fP (void)"
+.br
+.RI "Execute stage RAISE_LEG stuff\&. "
+.ti -1c
+.RI "bool \fBIsClimbing\fP ()"
+.br
+.RI "Returns whether the robot is in the middle of climbing\&. "
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBStage\fP : uint8_t { \fBS_LOWER_ARM\fP, \fBS_LOWER_LEG\fP, \fBS_CRAWL\fP, \fBS_DRIVE\fP, \fBS_RAISE_LEG\fP, \fBS_FINISHED\fP }
+.RI "Enum for tracking which stage of climb the robot is on The stage is changed in the Execute_<Stage>() functions\&. ""
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "enum \fBAutoClimbHigh::Stage\fP \fBstage\fP"
+.br
+.ti -1c
+.RI "frc::Timer * \fBpTimer\fP"
+.br
+.RI "Timer for timing out stages if it takes too long\&. "
+.ti -1c
+.RI "bool \fBonFloor\fP"
+.br
+.RI "Bool for tracking whether the robot is off the floor or not\&. "
+.ti -1c
+.RI "bool \fBclimbing\fP"
+.br
+.RI "Bool for tracking whether the robot is in the middle of auto climb\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 14 of file AutoClimbHigh\&.h\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBAutoClimbHigh::Stage\fP : uint8_t\fC [private]\fP"
+
+.PP
+Enum for tracking which stage of climb the robot is on The stage is changed in the Execute_<Stage>() functions\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIS_LOWER_ARM \fP\fP
+.TP
+\fB\fIS_LOWER_LEG \fP\fP
+.TP
+\fB\fIS_CRAWL \fP\fP
+.TP
+\fB\fIS_DRIVE \fP\fP
+.TP
+\fB\fIS_RAISE_LEG \fP\fP
+.TP
+\fB\fIS_FINISHED \fP\fP
+.PP
+Definition at line 33 of file AutoClimbHigh\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AutoClimbHigh::AutoClimbHigh ()"
+
+.PP
+Definition at line 11 of file AutoClimbHigh\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void AutoClimbHigh::End ()\fC [override]\fP"
+
+.PP
+Definition at line 146 of file AutoClimbHigh\&.cpp\&.
+.SS "void AutoClimbHigh::Execute ()\fC [override]\fP"
+
+.PP
+Switch checks the stage and then calls the appropriate Execute_<Stage>() function\&. 
+.PP
+Definition at line 29 of file AutoClimbHigh\&.cpp\&.
+.SS "void AutoClimbHigh::Execute_Crawl (void)"
+
+.PP
+Execute stage CRAWL stuff\&. 
+.PP
+Definition at line 72 of file AutoClimbHigh\&.cpp\&.
+.SS "void AutoClimbHigh::Execute_Drive (void)"
+
+.PP
+Execute stage DRIVE stuff\&. 
+.PP
+Definition at line 98 of file AutoClimbHigh\&.cpp\&.
+.SS "void AutoClimbHigh::Execute_LowerArm (void)"
+
+.PP
+Execute stage LOWER_ARM stuff\&. 
+.PP
+Definition at line 45 of file AutoClimbHigh\&.cpp\&.
+.SS "void AutoClimbHigh::Execute_LowerLeg (void)"
+
+.PP
+Execute stage LOWER_LEG stuff\&. 
+.PP
+Definition at line 59 of file AutoClimbHigh\&.cpp\&.
+.SS "void AutoClimbHigh::Execute_Raiseleg (void)"
+
+.PP
+Execute stage RAISE_LEG stuff\&. 
+.PP
+Definition at line 115 of file AutoClimbHigh\&.cpp\&.
+.SS "void AutoClimbHigh::Initialize ()\fC [override]\fP"
+
+.PP
+Definition at line 21 of file AutoClimbHigh\&.cpp\&.
+.SS "void AutoClimbHigh::Interrupted ()\fC [override]\fP"
+
+.PP
+Definition at line 156 of file AutoClimbHigh\&.cpp\&.
+.SS "bool AutoClimbHigh::IsClimbing ()"
+
+.PP
+Returns whether the robot is in the middle of climbing\&. 
+.PP
+Definition at line 166 of file AutoClimbHigh\&.cpp\&.
+.SS "bool AutoClimbHigh::IsFinished ()\fC [override]\fP"
+
+.PP
+Definition at line 128 of file AutoClimbHigh\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool AutoClimbHigh::climbing\fC [private]\fP"
+
+.PP
+Bool for tracking whether the robot is in the middle of auto climb\&. 
+.PP
+Definition at line 44 of file AutoClimbHigh\&.h\&.
+.SS "bool AutoClimbHigh::onFloor\fC [private]\fP"
+
+.PP
+Bool for tracking whether the robot is off the floor or not\&. 
+.PP
+Definition at line 43 of file AutoClimbHigh\&.h\&.
+.SS "frc::Timer* AutoClimbHigh::pTimer\fC [private]\fP"
+
+.PP
+Timer for timing out stages if it takes too long\&. 
+.PP
+Definition at line 42 of file AutoClimbHigh\&.h\&.
+.SS "enum \fBAutoClimbHigh::Stage\fP  AutoClimbHigh::stage\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

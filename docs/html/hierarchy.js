@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "Command", null, [
+      [ "AutoClimbHigh", "classAutoClimbHigh.html", null ],
       [ "Climb", "classClimb.html", null ],
       [ "ClimbManager", "classClimbManager.html", null ],
       [ "ControlCargo", "classControlCargo.html", null ],
@@ -11,13 +12,10 @@ var hierarchy =
       [ "DriveWithJoystick", "classDriveWithJoystick.html", null ],
       [ "PullArm", "classPullArm.html", null ],
       [ "PullLeg", "classPullLeg.html", null ],
-      [ "testUltra", "classtestUltra.html", null ],
       [ "TriggerDrive", "classTriggerDrive.html", null ]
     ] ],
-    [ "CommandGroup", null, [
-      [ "DeployClimb", "classDeployClimb.html", null ]
-    ] ],
     [ "OI", "classOI.html", null ],
+    [ "rr::PIDController", "classrr_1_1PIDController.html", null ],
     [ "Subsystem", null, [
       [ "Arm", "classArm.html", null ],
       [ "cCompressor", "classcCompressor.html", null ],
@@ -29,10 +27,6 @@ var hierarchy =
       [ "Light", "classLight.html", null ],
       [ "Piston", "classPiston.html", null ],
       [ "Slider", "classSlider.html", null ]
-    ] ],
-    [ "TimedCommand", null, [
-      [ "DeployArm", "classDeployArm.html", null ],
-      [ "DeployLeg", "classDeployLeg.html", null ]
     ] ],
     [ "TimedRobot", null, [
       [ "Robot", "classRobot.html", null ]

@@ -116,6 +116,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6a4f2dceef2730b2cded41f143e90037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4956c96e32ae9d405f15676112fa7b23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriveTrain.html#a4956c96e32ae9d405f15676112fa7b23">RadialDrive</a> (double magnitude, double radial)</td></tr>
 <tr class="separator:a4956c96e32ae9d405f15676112fa7b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0d20aac17c758604258bea8363c04f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriveTrain.html#a6c0d20aac17c758604258bea8363c04f">RawDrive</a> (double l, double r)</td></tr>
+<tr class="separator:a6c0d20aac17c758604258bea8363c04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3238a769b9ca2c7f0d035392079cbbea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriveTrain.html#a3238a769b9ca2c7f0d035392079cbbea">Coast</a> ()</td></tr>
+<tr class="separator:a3238a769b9ca2c7f0d035392079cbbea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa90f22cc95f9de160aaf65baba16fc6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriveTrain.html#aa90f22cc95f9de160aaf65baba16fc6c">Break</a> ()</td></tr>
+<tr class="separator:aa90f22cc95f9de160aaf65baba16fc6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -131,6 +137,8 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a2298f9c2466c92b790c33bb5840664c9"><td class="memItemLeft" align="right" valign="top">can::WPI_TalonSRX *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriveTrain.html#a2298f9c2466c92b790c33bb5840664c9">pRightRearMotor</a></td></tr>
 <tr class="memdesc:a2298f9c2466c92b790c33bb5840664c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer for right rear motor.  <a href="#a2298f9c2466c92b790c33bb5840664c9">More...</a><br /></td></tr>
 <tr class="separator:a2298f9c2466c92b790c33bb5840664c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd9a062aa89dc2664017b644c3260b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrr_1_1PIDController.html">rr::PIDController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriveTrain.html#a5cd9a062aa89dc2664017b644c3260b2">pArcadeController</a></td></tr>
+<tr class="separator:a5cd9a062aa89dc2664017b644c3260b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abede5f4bb190b30133f496c6742c6eac"><td class="memItemLeft" align="right" valign="top">frc::DifferentialDrive *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDriveTrain.html#abede5f4bb190b30133f496c6742c6eac">pRobotDrive</a></td></tr>
 <tr class="memdesc:abede5f4bb190b30133f496c6742c6eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer for a differential drivebase made up of 2 motor pairs.  <a href="#abede5f4bb190b30133f496c6742c6eac">More...</a><br /></td></tr>
 <tr class="separator:abede5f4bb190b30133f496c6742c6eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,7 +146,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A subsystem that interfaces with the drivebase on the robot. </p>
 
-<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00012">12</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00013">13</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a90af56eee49c93d5b7d77065b42f660b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a90af56eee49c93d5b7d77065b42f660b">&#9670;&nbsp;</a></span>DriveTrain()</h2>
@@ -196,7 +204,45 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00039">39</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00053">53</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa90f22cc95f9de160aaf65baba16fc6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa90f22cc95f9de160aaf65baba16fc6c">&#9670;&nbsp;</a></span>Break()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DriveTrain::Break </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00096">96</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3238a769b9ca2c7f0d035392079cbbea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3238a769b9ca2c7f0d035392079cbbea">&#9670;&nbsp;</a></span>Coast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DriveTrain::Coast </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00088">88</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
 
 </div>
 </div>
@@ -225,7 +271,7 @@ Private Attributes</h2></td></tr>
 
 <p>Initalizes the default command for this subsystem (<a class="el" href="classDriveWithJoystick.html" title="An interface command for driving the robot with an xbox controller. ">DriveWithJoystick</a>) </p>
 
-<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00035">35</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00049">49</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +309,37 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00049">49</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00064">64</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6c0d20aac17c758604258bea8363c04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c0d20aac17c758604258bea8363c04f">&#9670;&nbsp;</a></span>RawDrive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DriveTrain::RawDrive </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00083">83</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
 
 </div>
 </div>
@@ -301,11 +377,35 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00044">44</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8cpp_source.html#l00059">59</a> of file <a class="el" href="DriveTrain_8cpp_source.html">DriveTrain.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5cd9a062aa89dc2664017b644c3260b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd9a062aa89dc2664017b644c3260b2">&#9670;&nbsp;</a></span>pArcadeController</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classrr_1_1PIDController.html">rr::PIDController</a>* DriveTrain::pArcadeController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00052">52</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
+
+</div>
+</div>
 <a id="afb83a3f5cedd6d9d293edbc07f12b47a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb83a3f5cedd6d9d293edbc07f12b47a">&#9670;&nbsp;</a></span>pLeftFrontMotor</h2>
 
@@ -328,7 +428,7 @@ Private Attributes</h2></td></tr>
 
 <p>Pointer for left front motor. </p>
 
-<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00042">42</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00047">47</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
 
 </div>
 </div>
@@ -354,7 +454,7 @@ Private Attributes</h2></td></tr>
 
 <p>Pointer for left rear motor. </p>
 
-<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00043">43</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00048">48</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
 
 </div>
 </div>
@@ -380,7 +480,7 @@ Private Attributes</h2></td></tr>
 
 <p>Pointer for right front motor. </p>
 
-<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00044">44</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00049">49</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
 
 </div>
 </div>
@@ -406,7 +506,7 @@ Private Attributes</h2></td></tr>
 
 <p>Pointer for right rear motor. </p>
 
-<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00045">45</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00050">50</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
 
 </div>
 </div>
@@ -432,7 +532,7 @@ Private Attributes</h2></td></tr>
 
 <p>Pointer for a differential drivebase made up of 2 motor pairs. </p>
 
-<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00047">47</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DriveTrain_8h_source.html#l00054">54</a> of file <a class="el" href="DriveTrain_8h_source.html">DriveTrain.h</a>.</p>
 
 </div>
 </div>

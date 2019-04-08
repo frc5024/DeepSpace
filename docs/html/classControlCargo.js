@@ -6,5 +6,5 @@ var classControlCargo =
     [ "Initialize", "classControlCargo.html#a60d320358de2198fcefbbfddfe510541", null ],
     [ "Interrupted", "classControlCargo.html#a04edbd9db17fb57ac974fcbd07a820cf", null ],
     [ "IsFinished", "classControlCargo.html#aad2d0f38d853c21db16f5da12b5ba61e", null ],
-    [ "pJoyOp", "classControlCargo.html#aacf69799ff5d55718346462f426adcee", null ]
+    [ "pJoyDrive", "classControlCargo.html#ad570d89399a29a261de1e359c4d99223", null ]
 ];

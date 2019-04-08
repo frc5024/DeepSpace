@@ -1,7 +1,9 @@
 var annotated_dup =
 [
+    [ "rr", "namespacerr.html", "namespacerr" ],
     [ "Utils", "namespaceUtils.html", null ],
     [ "Arm", "classArm.html", "classArm" ],
+    [ "AutoClimbHigh", "classAutoClimbHigh.html", "classAutoClimbHigh" ],
     [ "cCompressor", "classcCompressor.html", "classcCompressor" ],
     [ "Climb", "classClimb.html", "classClimb" ],
     [ "ClimbManager", "classClimbManager.html", "classClimbManager" ],
@@ -11,9 +13,6 @@ var annotated_dup =
     [ "ControlLight", "classControlLight.html", "classControlLight" ],
     [ "ControlSlider", "classControlSlider.html", "classControlSlider" ],
     [ "CrawlDrive", "classCrawlDrive.html", "classCrawlDrive" ],
-    [ "DeployArm", "classDeployArm.html", "classDeployArm" ],
-    [ "DeployClimb", "classDeployClimb.html", "classDeployClimb" ],
-    [ "DeployLeg", "classDeployLeg.html", "classDeployLeg" ],
     [ "DriveTrain", "classDriveTrain.html", "classDriveTrain" ],
     [ "DriveWithJoystick", "classDriveWithJoystick.html", "classDriveWithJoystick" ],
     [ "Flap", "classFlap.html", "classFlap" ],
@@ -26,6 +25,5 @@ var annotated_dup =
     [ "PullLeg", "classPullLeg.html", "classPullLeg" ],
     [ "Robot", "classRobot.html", "classRobot" ],
     [ "Slider", "classSlider.html", "classSlider" ],
-    [ "testUltra", "classtestUltra.html", "classtestUltra" ],
     [ "TriggerDrive", "classTriggerDrive.html", "classTriggerDrive" ]
 ];

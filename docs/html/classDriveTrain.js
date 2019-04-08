@@ -2,9 +2,13 @@ var classDriveTrain =
 [
     [ "DriveTrain", "classDriveTrain.html#a90af56eee49c93d5b7d77065b42f660b", null ],
     [ "ArcadeDrive", "classDriveTrain.html#aee63999ae98aa26e4c2866444eab2c4a", null ],
+    [ "Break", "classDriveTrain.html#aa90f22cc95f9de160aaf65baba16fc6c", null ],
+    [ "Coast", "classDriveTrain.html#a3238a769b9ca2c7f0d035392079cbbea", null ],
     [ "InitDefaultCommand", "classDriveTrain.html#a999d090ed884fc00d23d294b33120938", null ],
     [ "RadialDrive", "classDriveTrain.html#a4956c96e32ae9d405f15676112fa7b23", null ],
+    [ "RawDrive", "classDriveTrain.html#a6c0d20aac17c758604258bea8363c04f", null ],
     [ "TankDrive", "classDriveTrain.html#a6a4f2dceef2730b2cded41f143e90037", null ],
+    [ "pArcadeController", "classDriveTrain.html#a5cd9a062aa89dc2664017b644c3260b2", null ],
     [ "pLeftFrontMotor", "classDriveTrain.html#afb83a3f5cedd6d9d293edbc07f12b47a", null ],
     [ "pLeftRearMotor", "classDriveTrain.html#a33a1f6f57affe0cea1184357bbccfd07", null ],
     [ "pRightFrontMotor", "classDriveTrain.html#acb66db7164b520869682a90d73be9c78", null ],

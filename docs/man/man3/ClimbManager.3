@@ -1,4 +1,4 @@
-.TH "ClimbManager" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "ClimbManager" 3 "Mon Apr 8 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,7 +14,7 @@ Inherits Command\&.
 
 .in +1c
 .ti -1c
-.RI "enum \fBClimbState\fP { \fBkInactive\fP, \fBkActive\fP }"
+.RI "enum \fBClimbState\fP { \fBkInactive\fP, \fBkAuto\fP, \fBkActive\fP }"
 .br
 .in -1c
 .SS "Public Member Functions"
@@ -43,6 +43,10 @@ Inherits Command\&.
 .RI "void \fBInterrupted\fP () override"
 .br
 .RI "Runs once if the command is forced to stop\&. "
+.ti -1c
+.RI "void \fBUpdateRumble\fP (void)"
+.br
+.RI "Updates whether the controller should be rumbleing or not\&. "
 .in -1c
 .SS "Public Attributes"
 
@@ -71,6 +75,8 @@ Definition at line 8 of file ClimbManager\&.h\&.
 .TP
 \fB\fIkInactive \fP\fP
 .TP
+\fB\fIkAuto \fP\fP
+.TP
 \fB\fIkActive \fP\fP
 .PP
 Definition at line 10 of file ClimbManager\&.h\&.
@@ -89,36 +95,35 @@ Definition at line 8 of file ClimbManager\&.cpp\&.
 .PP
 Runs once when \fBIsFinished()\fP returns true\&. 
 .PP
-Definition at line 35 of file ClimbManager\&.cpp\&.
+Definition at line 62 of file ClimbManager\&.cpp\&.
 .SS "void ClimbManager::Execute ()\fC [override]\fP"
 
 .PP
 Called in a loop during Teleop\&. 
 .PP
-Definition at line 18 of file ClimbManager\&.cpp\&.
+Definition at line 17 of file ClimbManager\&.cpp\&.
 .SS "void ClimbManager::Initialize ()\fC [override]\fP"
 
 .PP
 Runs once on initalization\&. 
 .PP
-Definition at line 15 of file ClimbManager\&.cpp\&.
+Definition at line 14 of file ClimbManager\&.cpp\&.
 .SS "void ClimbManager::Interrupted ()\fC [override]\fP"
 
 .PP
 Runs once if the command is forced to stop\&. 
 .PP
-Definition at line 40 of file ClimbManager\&.cpp\&.
+Definition at line 70 of file ClimbManager\&.cpp\&.
 .SS "bool ClimbManager::IsFinished ()\fC [override]\fP"
-Used to tell wpilib if the command is fully finished\&. This should never return true Because we always want to be able to drive the bot during teleop
-.PP
-\fBReturns:\fP
-.RS 4
-True if command is finished, else false 
-.RE
-.PP
 
 .PP
-Definition at line 32 of file ClimbManager\&.cpp\&.
+Definition at line 59 of file ClimbManager\&.cpp\&.
+.SS "void ClimbManager::UpdateRumble (void)"
+
+.PP
+Updates whether the controller should be rumbleing or not\&. 
+.PP
+Definition at line 76 of file ClimbManager\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "\fBClimbManager::ClimbState\fP ClimbManager::CurrentClimbState\fC [static]\fP"
@@ -128,7 +133,7 @@ Definition at line 15 of file ClimbManager\&.h\&.
 .SS "frc::XboxController* ClimbManager::pJoyOp"
 
 .PP
-Definition at line 33 of file ClimbManager\&.h\&.
+Definition at line 23 of file ClimbManager\&.h\&.
 
 .SH "Author"
 .PP 

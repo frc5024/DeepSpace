@@ -1,4 +1,4 @@
-.TH "TriggerDrive" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "TriggerDrive" 3 "Mon Apr 8 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -58,6 +58,12 @@ Inherits Command\&.
 .br
 .RI "Rotation value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. "
 .ti -1c
+.RI "double \fBspeedOutput\fP = 0\&.0"
+.br
+.ti -1c
+.RI "double \fBrotationOutput\fP = 0\&.0"
+.br
+.ti -1c
 .RI "frc::XboxController * \fBpJoyDrive\fP"
 .br
 .RI "A mnemonic for the driver's controller because we are lazy\&. "
@@ -66,7 +72,7 @@ Inherits Command\&.
 .PP 
 An interface command for driving the robot with an xbox controller\&. 
 .PP
-Definition at line 11 of file TriggerDrive\&.h\&.
+Definition at line 12 of file TriggerDrive\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "TriggerDrive::TriggerDrive ()"
@@ -82,13 +88,13 @@ Definition at line 4 of file TriggerDrive\&.cpp\&.
 .PP
 Runs once when \fBIsFinished()\fP returns true\&. 
 .PP
-Definition at line 50 of file TriggerDrive\&.cpp\&.
+Definition at line 84 of file TriggerDrive\&.cpp\&.
 .SS "void TriggerDrive::Execute ()\fC [override]\fP"
 
 .PP
 Called in a loop during Teleop\&. 
 .PP
-Definition at line 23 of file TriggerDrive\&.cpp\&.
+Definition at line 25 of file TriggerDrive\&.cpp\&.
 .SS "void TriggerDrive::Initialize ()\fC [override]\fP"
 
 .PP
@@ -100,7 +106,7 @@ Definition at line 12 of file TriggerDrive\&.cpp\&.
 .PP
 Runs once if the command is forced to stop\&. 
 .PP
-Definition at line 54 of file TriggerDrive\&.cpp\&.
+Definition at line 88 of file TriggerDrive\&.cpp\&.
 .SS "bool TriggerDrive::IsFinished ()\fC [override]\fP"
 Used to tell wpilib if the command is fully finished\&. This should never return true Because we always want to be able to drive the bot during teleop
 .PP
@@ -111,7 +117,7 @@ True if command is finished, else false
 .PP
 
 .PP
-Definition at line 47 of file TriggerDrive\&.cpp\&.
+Definition at line 78 of file TriggerDrive\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "int TriggerDrive::directionMultiplier\fC [private]\fP"
@@ -119,31 +125,39 @@ Definition at line 47 of file TriggerDrive\&.cpp\&.
 .PP
 Can be 1 or -1\&. Determines the direction the the robot moves in\&. 
 .PP
-Definition at line 29 of file TriggerDrive\&.h\&.
+Definition at line 30 of file TriggerDrive\&.h\&.
 .SS "frc::XboxController* TriggerDrive::pJoyDrive\fC [private]\fP"
 
 .PP
 A mnemonic for the driver's controller because we are lazy\&. 
 .PP
-Definition at line 35 of file TriggerDrive\&.h\&.
+Definition at line 38 of file TriggerDrive\&.h\&.
 .SS "double TriggerDrive::rotation\fC [private]\fP"
 
 .PP
 Rotation value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. 
 .PP
-Definition at line 33 of file TriggerDrive\&.h\&.
+Definition at line 34 of file TriggerDrive\&.h\&.
+.SS "double TriggerDrive::rotationOutput = 0\&.0\fC [private]\fP"
+
+.PP
+Definition at line 36 of file TriggerDrive\&.h\&.
 .SS "double TriggerDrive::speed\fC [private]\fP"
 
 .PP
 Speed value that will be passed into \fBDriveTrain::ArcadeDrive\fP\&. 
 .PP
-Definition at line 32 of file TriggerDrive\&.h\&.
+Definition at line 33 of file TriggerDrive\&.h\&.
 .SS "double TriggerDrive::speedMultiplier\fC [private]\fP"
 
 .PP
 The speed of the robot is multiplied by this number\&. Used for slowmode\&. 
 .PP
-Definition at line 30 of file TriggerDrive\&.h\&.
+Definition at line 31 of file TriggerDrive\&.h\&.
+.SS "double TriggerDrive::speedOutput = 0\&.0\fC [private]\fP"
+
+.PP
+Definition at line 35 of file TriggerDrive\&.h\&.
 
 .SH "Author"
 .PP 

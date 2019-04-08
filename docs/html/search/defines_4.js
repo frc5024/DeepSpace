@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['hand',['Hand',['../RobotMap_8h.html#a401e131de9ff23c4f45cce5c842eb2ab',1,'RobotMap.h']]],
-  ['hatchgripper_5fforward_5fid',['HatchGripper_FORWARD_ID',['../RobotMap_8h.html#a2332299078e9bc9ce3ce59e2a5339fd6',1,'RobotMap.h']]],
-  ['hatchgripper_5freverse_5fid',['HatchGripper_REVERSE_ID',['../RobotMap_8h.html#ac581f63240b4822eaae84c79cfacd978',1,'RobotMap.h']]],
-  ['header',['Header',['../RobotMap_8h.html#a6c3816b59db0016a0e10d76413919ec9',1,'RobotMap.h']]]
+  ['false',['False',['../RobotMap_8h.html#a306ebd41c0cd1303b1372c6153f0caf8',1,'RobotMap.h']]],
+  ['flap_5fid_5fforward',['FLAP_ID_FORWARD',['../RobotMap_8h.html#a5b3f8b8d689a9bf39c27447a44393ede',1,'RobotMap.h']]],
+  ['flap_5fid_5freverse',['FLAP_ID_REVERSE',['../RobotMap_8h.html#a77b7a6aa701be9546d33dc55ffb6c272',1,'RobotMap.h']]]
 ];

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['directionmultiplier',['directionMultiplier',['../classDriveWithJoystick.html#a87ceb621790dae15f245fa6b559202ee',1,'DriveWithJoystick::directionMultiplier()'],['../classTriggerDrive.html#abc836db7bd8464e344c3d318f9da3f9c',1,'TriggerDrive::directionMultiplier()']]],
-  ['drivemode',['driveMode',['../classDriveWithJoystick.html#a11d7c09c5a0bced3aa504c775cb9d7e3',1,'DriveWithJoystick']]],
-  ['driverstation',['driverStation',['../classRobot.html#a6f2299fbdf5016ab845a8d68febbc08f',1,'Robot']]]
+  ['climbing',['climbing',['../classAutoClimbHigh.html#a2ddab4fbfd562bd02cafcd070d1b1746',1,'AutoClimbHigh']]],
+  ['cml',['cml',['../namespacebuildcml.html#a9a25c9a0b15692804f8fd45b324099f7',1,'buildcml']]],
+  ['crawlspeed',['crawlSpeed',['../classClimb.html#a13b72b55c54b36de72bb768e20c7a092',1,'Climb']]],
+  ['currentclimbstate',['CurrentClimbState',['../classClimbManager.html#aa32106f26c21ea5d2d7b511226e5e497',1,'ClimbManager']]]
 ];

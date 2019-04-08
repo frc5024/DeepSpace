@@ -1,4 +1,4 @@
-.TH "src/main/include/Robot.h" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "src/main/include/Robot.h" 3 "Mon Apr 8 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,23 +16,25 @@ src/main/include/Robot.h
 .br
 \fC#include <cscore_oo\&.h>\fP
 .br
+\fC#include <iostream>\fP
+.br
 \fC#include <networktables/NetworkTable\&.h>\fP
 .br
 \fC#include 'Commands/TriggerDrive\&.h'\fP
 .br
 \fC#include 'Commands/ControlCompressor\&.h'\fP
 .br
-\fC#include 'Commands/testUltra\&.h'\fP
-.br
 \fC#include 'Commands/PullArm\&.h'\fP
 .br
 \fC#include 'Commands/PullLeg\&.h'\fP
 .br
+\fC#include 'Autonomous/AutoClimbHigh\&.h'\fP
+.br
+\fC#include 'Commands/ClimbManager\&.h'\fP
+.br
 \fC#include 'Commands/ControlHatchGripper\&.h'\fP
 .br
 \fC#include 'Commands/ControlLight\&.h'\fP
-.br
-\fC#include 'Commands/ClimbManager\&.h'\fP
 .br
 \fC#include 'Commands/Climb\&.h'\fP
 .br
@@ -68,6 +70,12 @@ src/main/include/Robot.h
 .br
 \fC#include 'AHRS\&.h'\fP
 .br
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
 
 .SS "Classes"
 
@@ -75,8 +83,30 @@ src/main/include/Robot.h
 .ti -1c
 .RI "class \fBRobot\fP"
 .br
-.RI "Main robot class that is called by wpilib\&. "
 .in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBLog\fP (std::string msg)"
+.br
+.RI "Main robot class that is called by wpilib\&. "
+.ti -1c
+.RI "void \fBDisplay\fP (clock_t start, clock_t current)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void Display (clock_t start, clock_t current)"
+
+.PP
+Definition at line 20 of file logging\&.cpp\&.
+.SS "void Log (std::string msg)"
+
+.PP
+Main robot class that is called by wpilib\&. 
+.PP
+Definition at line 9 of file logging\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DeepSpace from the source code\&.

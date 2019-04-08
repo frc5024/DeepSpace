@@ -83,7 +83,6 @@ $(document).ready(function(){initNavTree('classArm.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classArm-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Arm Class Reference</div>  </div>
@@ -111,9 +110,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a036af1484477a15e3316e92a28fe25fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalizes the default command for this subsystem (<a class="el" href="classArm.html" title="A subsystem that controls the Arm of the robot. ">Arm</a>)  <a href="#a036af1484477a15e3316e92a28fe25fb">More...</a><br /></td></tr>
 <tr class="separator:a036af1484477a15e3316e92a28fe25fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d1db8ec48f7d59cf9f9dafcf721e50b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a3d1db8ec48f7d59cf9f9dafcf721e50b">MoveArm</a> (double Speed)</td></tr>
+<tr class="memdesc:a3d1db8ec48f7d59cf9f9dafcf721e50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move <a class="el" href="classArm.html" title="A subsystem that controls the Arm of the robot. ">Arm</a> arm up or down.  <a href="#a3d1db8ec48f7d59cf9f9dafcf721e50b">More...</a><br /></td></tr>
 <tr class="separator:a3d1db8ec48f7d59cf9f9dafcf721e50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc3f0d8c447d6888f1ee960fa80840d7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#afc3f0d8c447d6888f1ee960fa80840d7">getDistanceFromFloor</a> ()</td></tr>
-<tr class="separator:afc3f0d8c447d6888f1ee960fa80840d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae734aa2d6698c313ad956c163644b596"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#ae734aa2d6698c313ad956c163644b596">GetSensor</a> (void)</td></tr>
+<tr class="memdesc:ae734aa2d6698c313ad956c163644b596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the hall effects is tripped This is the sensor for when the arm is lowered.  <a href="#ae734aa2d6698c313ad956c163644b596">More...</a><br /></td></tr>
+<tr class="separator:ae734aa2d6698c313ad956c163644b596"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -123,18 +124,14 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aa4ebde9ace145953abda99c849480d30"><td class="memItemLeft" align="right" valign="top">can::WPI_TalonSRX *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#aa4ebde9ace145953abda99c849480d30">pArmMotor2</a></td></tr>
 <tr class="memdesc:aa4ebde9ace145953abda99c849480d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer for <a class="el" href="classArm.html" title="A subsystem that controls the Arm of the robot. ">Arm</a> arm motor.  <a href="#aa4ebde9ace145953abda99c849480d30">More...</a><br /></td></tr>
 <tr class="separator:aa4ebde9ace145953abda99c849480d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f62cd67102d47d3eacc648f001910da"><td class="memItemLeft" align="right" valign="top">frc::AnalogInput&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#a6f62cd67102d47d3eacc648f001910da">m_ultrasonic</a> {<a class="el" href="RobotMap_8h.html#adb4df0426b06ba5efb4972e37b704647">CLIMB_ULTRASONIC</a>}</td></tr>
-<tr class="separator:a6f62cd67102d47d3eacc648f001910da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:ad3b395285375cc495d50f4b34934d9cc"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#ad3b395285375cc495d50f4b34934d9cc">kValueToInches</a> = 0.125</td></tr>
-<tr class="separator:ad3b395285375cc495d50f4b34934d9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d606d5c9ad2d0070302acc2d9f62d0"><td class="memItemLeft" align="right" valign="top">frc::DigitalInput *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArm.html#ae5d606d5c9ad2d0070302acc2d9f62d0">pArmHall</a></td></tr>
+<tr class="memdesc:ae5d606d5c9ad2d0070302acc2d9f62d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">hall effects for arm is lowered enough  <a href="#ae5d606d5c9ad2d0070302acc2d9f62d0">More...</a><br /></td></tr>
+<tr class="separator:ae5d606d5c9ad2d0070302acc2d9f62d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A subsystem that controls the <a class="el" href="classArm.html" title="A subsystem that controls the Arm of the robot. ">Arm</a> of the robot. </p>
 
-<p class="definition">Definition at line <a class="el" href="Arm_8h_source.html#l00013">13</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Arm_8h_source.html#l00015">15</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a920d0f828c6e76188827cf0c073963de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a920d0f828c6e76188827cf0c073963de">&#9670;&nbsp;</a></span>Arm()</h2>
@@ -156,23 +153,28 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="afc3f0d8c447d6888f1ee960fa80840d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc3f0d8c447d6888f1ee960fa80840d7">&#9670;&nbsp;</a></span>getDistanceFromFloor()</h2>
+<a id="ae734aa2d6698c313ad956c163644b596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae734aa2d6698c313ad956c163644b596">&#9670;&nbsp;</a></span>GetSensor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double Arm::getDistanceFromFloor </td>
+          <td class="memname">bool Arm::GetSensor </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>returns distance from floor </p>
 
-<p class="definition">Definition at line <a class="el" href="Arm_8cpp_source.html#l00026">26</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+<p>Returns whether the hall effects is tripped This is the sensor for when the arm is lowered. </p>
+<dl class="section return"><dt>Returns</dt><dd>true The arm is fully lowered, the sensor is tripped </dd>
+<dd>
+false Sensor is not tripped </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Arm_8cpp_source.html#l00043">43</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
 
 </div>
 </div>
@@ -201,7 +203,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Initalizes the default command for this subsystem (<a class="el" href="classArm.html" title="A subsystem that controls the Arm of the robot. ">Arm</a>) </p>
 
-<p class="definition">Definition at line <a class="el" href="Arm_8cpp_source.html#l00016">16</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Arm_8cpp_source.html#l00032">32</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
 
 </div>
 </div>
@@ -220,21 +222,22 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Move <a class="el" href="classArm.html" title="A subsystem that controls the Arm of the robot. ">Arm</a> arm up or down</p>
+
+<p>Move <a class="el" href="classArm.html" title="A subsystem that controls the Arm of the robot. ">Arm</a> arm up or down. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Speed</td><td>speed (from -1 to 1) </td></tr>
+    <tr><td class="paramname">Speed</td><td>speed (from -1 to 1), where 1 is forward-down </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Arm_8cpp_source.html#l00021">21</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Arm_8cpp_source.html#l00037">37</a> of file <a class="el" href="Arm_8cpp_source.html">Arm.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad3b395285375cc495d50f4b34934d9cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3b395285375cc495d50f4b34934d9cc">&#9670;&nbsp;</a></span>kValueToInches</h2>
+<a id="ae5d606d5c9ad2d0070302acc2d9f62d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d606d5c9ad2d0070302acc2d9f62d0">&#9670;&nbsp;</a></span>pArmHall</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,31 +246,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr double Arm::kValueToInches = 0.125</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Arm_8h_source.html#l00037">37</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
-
-</div>
-</div>
-<a id="a6f62cd67102d47d3eacc648f001910da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f62cd67102d47d3eacc648f001910da">&#9670;&nbsp;</a></span>m_ultrasonic</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">frc::AnalogInput Arm::m_ultrasonic {<a class="el" href="RobotMap_8h.html#adb4df0426b06ba5efb4972e37b704647">CLIMB_ULTRASONIC</a>}</td>
+          <td class="memname">frc::DigitalInput* Arm::pArmHall</td>
         </tr>
       </table>
   </td>
@@ -277,7 +256,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Arm_8h_source.html#l00036">36</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+<p>hall effects for arm is lowered enough </p>
+
+<p class="definition">Definition at line <a class="el" href="Arm_8h_source.html#l00039">39</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
 
 </div>
 </div>
@@ -303,7 +284,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Pointer for <a class="el" href="classArm.html" title="A subsystem that controls the Arm of the robot. ">Arm</a> arm motor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Arm_8h_source.html#l00034">34</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Arm_8h_source.html#l00036">36</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
 
 </div>
 </div>
@@ -329,7 +310,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Pointer for <a class="el" href="classArm.html" title="A subsystem that controls the Arm of the robot. ">Arm</a> arm motor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Arm_8h_source.html#l00035">35</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Arm_8h_source.html#l00037">37</a> of file <a class="el" href="Arm_8h_source.html">Arm.h</a>.</p>
 
 </div>
 </div>

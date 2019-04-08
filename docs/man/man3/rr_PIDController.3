@@ -1,0 +1,115 @@
+.TH "rr::PIDController" 3 "Mon Apr 8 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rr::PIDController
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PIDController\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPIDController\fP (double \fBkp\fP, double \fBki\fP, double \fBkd\fP)"
+.br
+.ti -1c
+.RI "double \fBFeed\fP (double input, double current)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBkp\fP"
+.br
+.ti -1c
+.RI "double \fBki\fP"
+.br
+.ti -1c
+.RI "double \fBkd\fP"
+.br
+.ti -1c
+.RI "double \fBp\fP"
+.br
+.ti -1c
+.RI "double \fBi\fP"
+.br
+.ti -1c
+.RI "double \fBd\fP"
+.br
+.ti -1c
+.RI "double \fBerror\fP"
+.br
+.ti -1c
+.RI "double \fBoutput\fP"
+.br
+.ti -1c
+.RI "double \fBprevError\fP"
+.br
+.ti -1c
+.RI "double \fBlastOutput\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 13 of file PIDController\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "rr::PIDController::PIDController (double kp, double ki, double kd)"
+
+.PP
+Definition at line 10 of file PIDController\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double rr::PIDController::Feed (double input, double current)"
+
+.PP
+Definition at line 18 of file PIDController\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "double rr::PIDController::d\fC [private]\fP"
+
+.PP
+Definition at line 20 of file PIDController\&.h\&.
+.SS "double rr::PIDController::error\fC [private]\fP"
+
+.PP
+Definition at line 21 of file PIDController\&.h\&.
+.SS "double rr::PIDController::i\fC [private]\fP"
+
+.PP
+Definition at line 20 of file PIDController\&.h\&.
+.SS "double rr::PIDController::kd\fC [private]\fP"
+
+.PP
+Definition at line 19 of file PIDController\&.h\&.
+.SS "double rr::PIDController::ki\fC [private]\fP"
+
+.PP
+Definition at line 19 of file PIDController\&.h\&.
+.SS "double rr::PIDController::kp\fC [private]\fP"
+
+.PP
+Definition at line 19 of file PIDController\&.h\&.
+.SS "double rr::PIDController::lastOutput\fC [private]\fP"
+
+.PP
+Definition at line 22 of file PIDController\&.h\&.
+.SS "double rr::PIDController::output\fC [private]\fP"
+
+.PP
+Definition at line 21 of file PIDController\&.h\&.
+.SS "double rr::PIDController::p\fC [private]\fP"
+
+.PP
+Definition at line 20 of file PIDController\&.h\&.
+.SS "double rr::PIDController::prevError\fC [private]\fP"
+
+.PP
+Definition at line 21 of file PIDController\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

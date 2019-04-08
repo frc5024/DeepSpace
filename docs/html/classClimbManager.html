@@ -104,6 +104,7 @@ Inheritance diagram for ClimbManager:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:aa8a1da87b8f289b481c3229fecdd445c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClimbManager.html#aa8a1da87b8f289b481c3229fecdd445c">ClimbState</a> { <a class="el" href="classClimbManager.html#aa8a1da87b8f289b481c3229fecdd445ca483b53bee532a8faa5d46f879d9e4d6f">kInactive</a>, 
+<a class="el" href="classClimbManager.html#aa8a1da87b8f289b481c3229fecdd445ca0d44bcd99f1ea3d292c59ac8a5df149c">kAuto</a>, 
 <a class="el" href="classClimbManager.html#aa8a1da87b8f289b481c3229fecdd445caec679f694cf1c6f97df6e07f7b8e4fef">kActive</a>
  }</td></tr>
 <tr class="separator:aa8a1da87b8f289b481c3229fecdd445c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a736228b57869d3b881d233868df2ed1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClimbManager.html#a736228b57869d3b881d233868df2ed1f">Interrupted</a> () override</td></tr>
 <tr class="memdesc:a736228b57869d3b881d233868df2ed1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs once if the command is forced to stop.  <a href="#a736228b57869d3b881d233868df2ed1f">More...</a><br /></td></tr>
 <tr class="separator:a736228b57869d3b881d233868df2ed1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22043fb499d255533dc36ec62a009206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClimbManager.html#a22043fb499d255533dc36ec62a009206">UpdateRumble</a> (void)</td></tr>
+<tr class="memdesc:a22043fb499d255533dc36ec62a009206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates whether the controller should be rumbleing or not.  <a href="#a22043fb499d255533dc36ec62a009206">More...</a><br /></td></tr>
+<tr class="separator:a22043fb499d255533dc36ec62a009206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -155,6 +159,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa8a1da87b8f289b481c3229fecdd445ca483b53bee532a8faa5d46f879d9e4d6f"></a>kInactive&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa8a1da87b8f289b481c3229fecdd445ca0d44bcd99f1ea3d292c59ac8a5df149c"></a>kAuto&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa8a1da87b8f289b481c3229fecdd445caec679f694cf1c6f97df6e07f7b8e4fef"></a>kActive&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -210,7 +215,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Runs once when <a class="el" href="classClimbManager.html#aab599e402efe832267e1555bd5e474b7">IsFinished()</a> returns true. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClimbManager_8cpp_source.html#l00035">35</a> of file <a class="el" href="ClimbManager_8cpp_source.html">ClimbManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClimbManager_8cpp_source.html#l00062">62</a> of file <a class="el" href="ClimbManager_8cpp_source.html">ClimbManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -239,7 +244,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Called in a loop during Teleop. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClimbManager_8cpp_source.html#l00018">18</a> of file <a class="el" href="ClimbManager_8cpp_source.html">ClimbManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClimbManager_8cpp_source.html#l00017">17</a> of file <a class="el" href="ClimbManager_8cpp_source.html">ClimbManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -268,7 +273,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Runs once on initalization. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClimbManager_8cpp_source.html#l00015">15</a> of file <a class="el" href="ClimbManager_8cpp_source.html">ClimbManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClimbManager_8cpp_source.html#l00014">14</a> of file <a class="el" href="ClimbManager_8cpp_source.html">ClimbManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -297,7 +302,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Runs once if the command is forced to stop. </p>
 
-<p class="definition">Definition at line <a class="el" href="ClimbManager_8cpp_source.html#l00040">40</a> of file <a class="el" href="ClimbManager_8cpp_source.html">ClimbManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClimbManager_8cpp_source.html#l00070">70</a> of file <a class="el" href="ClimbManager_8cpp_source.html">ClimbManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -323,10 +328,30 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Used to tell wpilib if the command is fully finished. This should never return true Because we always want to be able to drive the bot during teleop</p>
-<dl class="section return"><dt>Returns</dt><dd>True if command is finished, else false </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ClimbManager_8cpp_source.html#l00032">32</a> of file <a class="el" href="ClimbManager_8cpp_source.html">ClimbManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClimbManager_8cpp_source.html#l00059">59</a> of file <a class="el" href="ClimbManager_8cpp_source.html">ClimbManager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a22043fb499d255533dc36ec62a009206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22043fb499d255533dc36ec62a009206">&#9670;&nbsp;</a></span>UpdateRumble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClimbManager::UpdateRumble </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates whether the controller should be rumbleing or not. </p>
+
+<p class="definition">Definition at line <a class="el" href="ClimbManager_8cpp_source.html#l00076">76</a> of file <a class="el" href="ClimbManager_8cpp_source.html">ClimbManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -367,7 +392,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ClimbManager_8h_source.html#l00033">33</a> of file <a class="el" href="ClimbManager_8h_source.html">ClimbManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ClimbManager_8h_source.html#l00023">23</a> of file <a class="el" href="ClimbManager_8h_source.html">ClimbManager.h</a>.</p>
 
 </div>
 </div>

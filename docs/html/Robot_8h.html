@@ -81,7 +81,8 @@ $(document).ready(function(){initNavTree('Robot_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Robot.h File Reference</div>  </div>
 </div><!--header-->
@@ -91,15 +92,16 @@ $(document).ready(function(){initNavTree('Robot_8h.html','');});
 <code>#include &lt;frc/TimedRobot.h&gt;</code><br />
 <code>#include &lt;frc/WPILib.h&gt;</code><br />
 <code>#include &lt;cscore_oo.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;networktables/NetworkTable.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="TriggerDrive_8h_source.html">Commands/TriggerDrive.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ControlCompressor_8h_source.html">Commands/ControlCompressor.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="testUltra_8h_source.html">Commands/testUltra.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PullArm_8h_source.html">Commands/PullArm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PullLeg_8h_source.html">Commands/PullLeg.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AutoClimbHigh_8h_source.html">Autonomous/AutoClimbHigh.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ClimbManager_8h_source.html">Commands/ClimbManager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ControlHatchGripper_8h_source.html">Commands/ControlHatchGripper.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ControlLight_8h_source.html">Commands/ControlLight.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ClimbManager_8h_source.html">Commands/ClimbManager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Climb_8h_source.html">Commands/Climb.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ControlSlider_8h_source.html">Commands/ControlSlider.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ControlCargo_8h_source.html">Commands/ControlCargo.h</a>&quot;</code><br />
@@ -117,15 +119,78 @@ $(document).ready(function(){initNavTree('Robot_8h.html','');});
 <code>#include &lt;frc/PowerDistributionPanel.h&gt;</code><br />
 <code>#include &lt;frc/DriverStation.h&gt;</code><br />
 <code>#include &quot;AHRS.h&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
 </div>
 <p><a href="Robot_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobot.html">Robot</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main robot class that is called by wpilib.  <a href="classRobot.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a55fa50be9360d756a7cf448d7e9e0cc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Robot_8h.html#a55fa50be9360d756a7cf448d7e9e0cc9">Log</a> (std::string msg)</td></tr>
+<tr class="memdesc:a55fa50be9360d756a7cf448d7e9e0cc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main robot class that is called by wpilib.  <a href="#a55fa50be9360d756a7cf448d7e9e0cc9">More...</a><br /></td></tr>
+<tr class="separator:a55fa50be9360d756a7cf448d7e9e0cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe4d3595226743da6b7de6ea0acd72ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Robot_8h.html#abe4d3595226743da6b7de6ea0acd72ec">Display</a> (clock_t start, clock_t current)</td></tr>
+<tr class="separator:abe4d3595226743da6b7de6ea0acd72ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="abe4d3595226743da6b7de6ea0acd72ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe4d3595226743da6b7de6ea0acd72ec">&#9670;&nbsp;</a></span>Display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Display </td>
+          <td>(</td>
+          <td class="paramtype">clock_t&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">clock_t&#160;</td>
+          <td class="paramname"><em>current</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="logging_8cpp_source.html#l00020">20</a> of file <a class="el" href="logging_8cpp_source.html">logging.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a55fa50be9360d756a7cf448d7e9e0cc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55fa50be9360d756a7cf448d7e9e0cc9">&#9670;&nbsp;</a></span>Log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Log </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Main robot class that is called by wpilib. </p>
+
+<p class="definition">Definition at line <a class="el" href="logging_8cpp_source.html#l00009">9</a> of file <a class="el" href="logging_8cpp_source.html">logging.cpp</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['kactive',['kActive',['../classClimbManager.html#aa8a1da87b8f289b481c3229fecdd445caec679f694cf1c6f97df6e07f7b8e4fef',1,'ClimbManager']]],
+  ['kauto',['kAuto',['../classClimbManager.html#aa8a1da87b8f289b481c3229fecdd445ca0d44bcd99f1ea3d292c59ac8a5df149c',1,'ClimbManager']]],
   ['kbeat_5fblue',['kBEAT_BLUE',['../EdgeLight_8h.html#a45f7e912b1c2f6e32420069794517698a16ebac7a580ac2c5e9d9582bdd519d44',1,'EdgeLight.h']]],
   ['kbeat_5fred',['kBEAT_RED',['../EdgeLight_8h.html#a45f7e912b1c2f6e32420069794517698a5cefccc6ba43e4559a4fddf3c1a52fe7',1,'EdgeLight.h']]],
   ['kchase_5fblue',['kCHASE_BLUE',['../EdgeLight_8h.html#a45f7e912b1c2f6e32420069794517698ad85eb63b829051a9287ec22fb96dd52e',1,'EdgeLight.h']]],

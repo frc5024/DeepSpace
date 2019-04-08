@@ -1,4 +1,4 @@
-.TH "CrawlDrive" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "CrawlDrive" 3 "Mon Apr 8 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,6 +25,11 @@ Inherits Subsystem\&.
 .ti -1c
 .RI "void \fBMove\fP (double Speed)"
 .br
+.RI "Drive, (or crawl), forwards or backwards Moves the wheels attached to the arms\&. What wheels do\&. "
+.ti -1c
+.RI "bool \fBGetSensor\fP (void)"
+.br
+.RI "Returns true if its on the floor\&. "
 .in -1c
 .SS "Private Attributes"
 
@@ -37,12 +42,15 @@ Inherits Subsystem\&.
 .RI "frc::Spark * \fBpCrawlRight\fP"
 .br
 .RI "Pointer for the right crawl motor\&. "
+.ti -1c
+.RI "frc::DigitalInput * \fBpFloorSensor\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
 A subsytem that interfaces with the climberbase on the robot\&. 
 .PP
-Definition at line 10 of file CrawlDrive\&.h\&.
+Definition at line 11 of file CrawlDrive\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "CrawlDrive::CrawlDrive ()"
@@ -53,25 +61,40 @@ Class constructor\&.
 Definition at line 3 of file CrawlDrive\&.cpp\&.
 .SH "Member Function Documentation"
 .PP 
+.SS "bool CrawlDrive::GetSensor (void)"
+
+.PP
+Returns true if its on the floor\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Something is right in front of it (on the floor) 
+.PP
+false Nothing in front of it (in the air) 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file CrawlDrive\&.cpp\&.
 .SS "void CrawlDrive::InitDefaultCommand ()\fC [override]\fP"
 
 .PP
 Initalizes the default command for this subsystem () 
 .PP
-Definition at line 20 of file CrawlDrive\&.cpp\&.
+Definition at line 23 of file CrawlDrive\&.cpp\&.
 .SS "void CrawlDrive::Move (double Speed)"
-Pass data to wpilib's ArcadeDrive
+
+.PP
+Drive, (or crawl), forwards or backwards Moves the wheels attached to the arms\&. What wheels do\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIxSpeed\fP Forward speed (form -1 to 1) 
-.br
-\fIzRotation\fP Rotation (from -1 to 1) 
+\fISpeed\fP Percent power to go\&. 100% drives forwards 
 .RE
 .PP
 
 .PP
-Definition at line 24 of file CrawlDrive\&.cpp\&.
+Definition at line 32 of file CrawlDrive\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "frc::Spark* CrawlDrive::pCrawlLeft\fC [private]\fP"
@@ -79,13 +102,17 @@ Definition at line 24 of file CrawlDrive\&.cpp\&.
 .PP
 Pointer for the left crawl motor\&. 
 .PP
-Definition at line 24 of file CrawlDrive\&.h\&.
+Definition at line 31 of file CrawlDrive\&.h\&.
 .SS "frc::Spark* CrawlDrive::pCrawlRight\fC [private]\fP"
 
 .PP
 Pointer for the right crawl motor\&. 
 .PP
-Definition at line 25 of file CrawlDrive\&.h\&.
+Definition at line 32 of file CrawlDrive\&.h\&.
+.SS "frc::DigitalInput* CrawlDrive::pFloorSensor\fC [private]\fP"
+
+.PP
+Definition at line 33 of file CrawlDrive\&.h\&.
 
 .SH "Author"
 .PP 

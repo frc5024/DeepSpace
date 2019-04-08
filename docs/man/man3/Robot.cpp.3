@@ -1,4 +1,4 @@
-.TH "src/main/cpp/Robot.cpp" 3 "Tue Mar 12 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.TH "src/main/cpp/Robot.cpp" 3 "Mon Apr 8 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,15 +25,52 @@ src/main/cpp/Robot.cpp
 
 .in +1c
 .ti -1c
+.RI "void \fBLog\fP (std::string message)"
+.br
+.RI "Main robot class that is called by wpilib\&. "
+.ti -1c
+.RI "void \fBvector_print\fP (std::vector< std::string > const &input)"
+.br
+.ti -1c
+.RI "void \fBDisplay\fP (clock_t start, clock_t current)"
+.br
+.ti -1c
 .RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "std::vector< std::string > \fBlogBuffer\fP"
 .br
 .in -1c
 .SH "Function Documentation"
 .PP 
+.SS "void Display (clock_t start, clock_t current)"
+
+.PP
+Definition at line 40 of file Robot\&.cpp\&.
+.SS "void Log (std::string message)"
+
+.PP
+Main robot class that is called by wpilib\&. 
+.PP
+Definition at line 29 of file Robot\&.cpp\&.
 .SS "int main ()"
 
 .PP
-Definition at line 226 of file Robot\&.cpp\&.
+Definition at line 288 of file Robot\&.cpp\&.
+.SS "void vector_print (std::vector< std::string > const & input)"
+
+.PP
+Definition at line 33 of file Robot\&.cpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "std::vector<std::string> logBuffer"
+
+.PP
+Definition at line 27 of file Robot\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DeepSpace from the source code\&.
