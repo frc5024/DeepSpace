@@ -24,11 +24,11 @@
         },
         {
             "name": "raw_saturation",
-            "value": 14
+            "value": 8
         },
         {
             "name": "saturation",
-            "value": 7
+            "value": 4
         },
         {
             "name": "white_balance_temperature_auto",
@@ -64,7 +64,7 @@
         },
         {
             "name": "exposure_absolute",
-            "value": 32
+            "value": 34
         },
         {
             "name": "pan_absolute",

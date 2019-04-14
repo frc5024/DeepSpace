@@ -8,11 +8,11 @@
         },
         {
             "name": "raw_brightness",
-            "value": 32
+            "value": 30
         },
         {
             "name": "brightness",
-            "value": 1
+            "value": 0
         },
         {
             "name": "raw_contrast",
@@ -24,11 +24,11 @@
         },
         {
             "name": "raw_saturation",
-            "value": 14
+            "value": 24
         },
         {
             "name": "saturation",
-            "value": 7
+            "value": 12
         },
         {
             "name": "white_balance_temperature_auto",
@@ -40,7 +40,7 @@
         },
         {
             "name": "white_balance_temperature",
-            "value": 2800
+            "value": 4082
         },
         {
             "name": "raw_sharpness",
@@ -64,11 +64,11 @@
         },
         {
             "name": "exposure_absolute",
-            "value": 34
+            "value": 36
         },
         {
             "name": "pan_absolute",
-            "value": 0
+            "value": 7200
         },
         {
             "name": "tilt_absolute",
