@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['flap_2ecpp',['Flap.cpp',['../Flap_8cpp.html',1,'']]],
-  ['flap_2eh',['Flap.h',['../Flap_8h.html',1,'']]]
+  ['edgelight_2ecpp',['EdgeLight.cpp',['../EdgeLight_8cpp.html',1,'']]],
+  ['edgelight_2eh',['EdgeLight.h',['../EdgeLight_8h.html',1,'']]]
 ];

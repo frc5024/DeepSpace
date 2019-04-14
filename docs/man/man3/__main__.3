@@ -1,0 +1,580 @@
+.TH "__main__" 3 "Sun Apr 14 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__main__
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBCameraConfig\fP"
+.br
+.ti -1c
+.RI "class \fBFPS\fP"
+.br
+.ti -1c
+.RI "class \fBVideoShow\fP"
+.br
+.ti -1c
+.RI "class \fBWebcamVideoStream\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBflipImage\fP (\fBframe\fP)"
+.br
+.ti -1c
+.RI "def \fBblurImg\fP (\fBframe\fP, blur_radius)"
+.br
+.ti -1c
+.RI "def \fBthreshold_range\fP (im, lo, hi)"
+.br
+.ti -1c
+.RI "def \fBthreshold_video\fP (lower_color, upper_color, blur)"
+.br
+.ti -1c
+.RI "def \fBfindTargets\fP (\fBframe\fP, mask)"
+.br
+.ti -1c
+.RI "def \fBfindCargo\fP (\fBframe\fP, mask)"
+.br
+.ti -1c
+.RI "def \fBfindHatch\fP (\fBframe\fP, mask)"
+.br
+.ti -1c
+.RI "def \fBfindBall\fP (contours, image, centerX, centerY)"
+.br
+.ti -1c
+.RI "def \fBfindHatches\fP (contours, image, centerX, centerY)"
+.br
+.ti -1c
+.RI "def \fBfindTape\fP (contours, image, centerX, centerY)"
+.br
+.ti -1c
+.RI "def \fBcheckContours\fP (cntSize, hullSize)"
+.br
+.ti -1c
+.RI "def \fBcheckBall\fP (cntSize, cntAspectRatio)"
+.br
+.ti -1c
+.RI "def \fBcheckHatch\fP (cntSize, cntAspectRatio)"
+.br
+.ti -1c
+.RI "def \fBtranslateRotation\fP (rotation, width, height)"
+.br
+.ti -1c
+.RI "def \fBcalculateDistance\fP (heightOfCamera, heightOfTarget, pitch)"
+.br
+.ti -1c
+.RI "def \fBcalculateDistWPILib\fP (cntHeight)"
+.br
+.ti -1c
+.RI "def \fBcalculateYaw\fP (pixelX, centerX, hFocalLength)"
+.br
+.ti -1c
+.RI "def \fBcalculatePitch\fP (pixelY, centerY, vFocalLength)"
+.br
+.ti -1c
+.RI "def \fBgetEllipseRotation\fP (image, cnt)"
+.br
+.ti -1c
+.RI "def \fBparseError\fP (str)"
+.br
+.ti -1c
+.RI "def \fBreadCameraConfig\fP (config)"
+.br
+.ti -1c
+.RI "def \fBreadConfig\fP ()"
+.br
+.ti -1c
+.RI "def \fBstartCamera\fP (config)"
+.br
+.ti -1c
+.RI "def \fBswitchCam\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBframeStop\fP = 0"
+.br
+.ti -1c
+.RI "int \fBImageCounter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBimage_width\fP = 416"
+.br
+.ti -1c
+.RI "int \fBimage_height\fP = 240"
+.br
+.ti -1c
+.RI "\fBdiagonalView\fP = math\&.radians(68\&.5)"
+.br
+.ti -1c
+.RI "int \fBhorizontalAspect\fP = 16"
+.br
+.ti -1c
+.RI "int \fBverticalAspect\fP = 9"
+.br
+.ti -1c
+.RI "\fBdiagonalAspect\fP = math\&.hypot(\fBhorizontalAspect\fP, \fBverticalAspect\fP)"
+.br
+.ti -1c
+.RI "int \fBhorizontalView\fP = math\&.atan(math\&.tan(\fBdiagonalView\fP / 2) * (\fBhorizontalAspect\fP / \fBdiagonalAspect\fP)) * 2"
+.br
+.ti -1c
+.RI "int \fBverticalView\fP = math\&.atan(math\&.tan(\fBdiagonalView\fP / 2) * (\fBverticalAspect\fP / \fBdiagonalAspect\fP)) * 2"
+.br
+.ti -1c
+.RI "int \fBH_FOCAL_LENGTH\fP = \fBimage_width\fP / (2 * math\&.tan((\fBhorizontalView\fP / 2)))"
+.br
+.ti -1c
+.RI "int \fBV_FOCAL_LENGTH\fP = \fBimage_height\fP / (2 * math\&.tan((\fBverticalView\fP / 2)))"
+.br
+.ti -1c
+.RI "int \fBgreen_blur\fP = 1"
+.br
+.ti -1c
+.RI "int \fBorange_blur\fP = 27"
+.br
+.ti -1c
+.RI "int \fByellow_blur\fP = 27"
+.br
+.ti -1c
+.RI "\fBlower_green\fP = np\&.array([40, 75, 75])"
+.br
+.ti -1c
+.RI "\fBupper_green\fP = np\&.array([96, 255, 255])"
+.br
+.ti -1c
+.RI "\fBlower_orange\fP = np\&.array([0, 193, 92])"
+.br
+.ti -1c
+.RI "\fBupper_orange\fP = np\&.array([23, 255, 255])"
+.br
+.ti -1c
+.RI "\fBlower_yellow\fP = np\&.array([36, 50, 80])"
+.br
+.ti -1c
+.RI "\fBupper_yellow\fP = np\&.array([55, 120, 120])"
+.br
+.ti -1c
+.RI "int \fBswitch\fP = 1"
+.br
+.ti -1c
+.RI "list \fBavg\fP = [0 for i in range(0, 8)]"
+.br
+.ti -1c
+.RI "string \fBconfigFile\fP = '/boot/frc\&.json'"
+.br
+.RI "FRC VISION PI Image Specific #############\&. "
+.ti -1c
+.RI "int \fBteam\fP = 5024"
+.br
+.ti -1c
+.RI "bool \fBserver\fP = \fBTrue\fP"
+.br
+.ti -1c
+.RI "list \fBcameraConfigs\fP = []"
+.br
+.ti -1c
+.RI "int \fBcurrentCam\fP = 0"
+.br
+.ti -1c
+.RI "\fBntinst\fP = NetworkTablesInstance\&.getDefault()"
+.br
+.ti -1c
+.RI "\fBnetworkTable\fP = NetworkTables\&.getTable('ChickenVision')"
+.br
+.ti -1c
+.RI "\fBnetworkTableMatch\fP = NetworkTables\&.getTable('FMSInfo')"
+.br
+.ti -1c
+.RI "list \fBcameras\fP = []"
+.br
+.ti -1c
+.RI "list \fBstreams\fP = []"
+.br
+.ti -1c
+.RI "\fBcs\fP"
+.br
+.ti -1c
+.RI "\fBcameraCapture\fP"
+.br
+.ti -1c
+.RI "list \fBwebcam\fP = \fBcameras\fP[\fBcurrentCam\fP]"
+.br
+.ti -1c
+.RI "list \fBcameraServer\fP = \fBstreams\fP[\fBcurrentCam\fP]"
+.br
+.ti -1c
+.RI "\fBcap\fP = \fBWebcamVideoStream\fP(\fBwebcam\fP, \fBcameraServer\fP, \fBimage_width\fP, \fBimage_height\fP)\&.\fBstart\fP()"
+.br
+.ti -1c
+.RI "\fBimg\fP = np\&.zeros(shape=(\fBimage_height\fP, \fBimage_width\fP, 3), dtype=np\&.uint8)"
+.br
+.ti -1c
+.RI "\fBstreamViewer\fP = \fBVideoShow\fP(\fBimage_width\fP, \fBimage_height\fP, \fBcameraServer\fP, \fBframe\fP=\fBimg\fP)\&.\fBstart\fP()"
+.br
+.ti -1c
+.RI "bool \fBtape\fP = \fBTrue\fP"
+.br
+.ti -1c
+.RI "\fBfps\fP = \fBFPS\fP()\&.\fBstart\fP()"
+.br
+.ti -1c
+.RI "\fBmatchNumberDefault\fP = random\&.randint(1, 1000)"
+.br
+.ti -1c
+.RI "int \fBprocessed\fP = 0"
+.br
+.ti -1c
+.RI "\fBtimestamp\fP"
+.br
+.ti -1c
+.RI "\fBmatchNumber\fP = networkTableMatch\&.getNumber('MatchNumber', 0)"
+.br
+.ti -1c
+.RI "def \fBframe\fP = \fBflipImage\fP(\fBimg\fP)"
+.br
+.ti -1c
+.RI "bool \fBswitched\fP = \fBTrue\fP"
+.br
+.ti -1c
+.RI "bool \fBstart\fP = \fBFalse\fP"
+.br
+.ti -1c
+.RI "def \fBthreshold\fP = \fBthreshold_video\fP(\fBlower_green\fP, \fBupper_green\fP, \fBframe\fP)"
+.br
+.ti -1c
+.RI "def \fBboxBlur\fP = \fBblurImg\fP(\fBframe\fP, \fBorange_blur\fP)"
+.br
+.ti -1c
+.RI "int \fBk\fP = cv2\&.waitKey(60) & 0xff"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def __main__\&.blurImg ( frame,  blur_radius)"
+
+.PP
+Definition at line 226 of file __main__\&.py\&.
+.SS "def __main__\&.calculateDistance ( heightOfCamera,  heightOfTarget,  pitch)"
+
+.PP
+Definition at line 753 of file __main__\&.py\&.
+.SS "def __main__\&.calculateDistWPILib ( cntHeight)"
+
+.PP
+Definition at line 780 of file __main__\&.py\&.
+.SS "def __main__\&.calculatePitch ( pixelY,  centerY,  vFocalLength)"
+
+.PP
+Definition at line 824 of file __main__\&.py\&.
+.SS "def __main__\&.calculateYaw ( pixelX,  centerX,  hFocalLength)"
+
+.PP
+Definition at line 818 of file __main__\&.py\&.
+.SS "def __main__\&.checkBall ( cntSize,  cntAspectRatio)"
+
+.PP
+Definition at line 736 of file __main__\&.py\&.
+.SS "def __main__\&.checkContours ( cntSize,  hullSize)"
+
+.PP
+Definition at line 730 of file __main__\&.py\&.
+.SS "def __main__\&.checkHatch ( cntSize,  cntAspectRatio)"
+
+.PP
+Definition at line 739 of file __main__\&.py\&.
+.SS "def __main__\&.findBall ( contours,  image,  centerX,  centerY)"
+
+.PP
+Definition at line 332 of file __main__\&.py\&.
+.SS "def __main__\&.findCargo ( frame,  mask)"
+
+.PP
+Definition at line 294 of file __main__\&.py\&.
+.SS "def __main__\&.findHatch ( frame,  mask)"
+
+.PP
+Definition at line 311 of file __main__\&.py\&.
+.SS "def __main__\&.findHatches ( contours,  image,  centerX,  centerY)"
+
+.PP
+Definition at line 435 of file __main__\&.py\&.
+.SS "def __main__\&.findTape ( contours,  image,  centerX,  centerY)"
+
+.PP
+Definition at line 541 of file __main__\&.py\&.
+.SS "def __main__\&.findTargets ( frame,  mask)"
+
+.PP
+Definition at line 267 of file __main__\&.py\&.
+.SS "def __main__\&.flipImage ( frame)"
+
+.PP
+Definition at line 221 of file __main__\&.py\&.
+.SS "def __main__\&.getEllipseRotation ( image,  cnt)"
+
+.PP
+Definition at line 831 of file __main__\&.py\&.
+.SS "def __main__\&.parseError ( str)"
+
+.PP
+.nf
+Report parse error.
+.fi
+.PP
+ 
+.PP
+Definition at line 879 of file __main__\&.py\&.
+.SS "def __main__\&.readCameraConfig ( config)"
+
+.PP
+Definition at line 886 of file __main__\&.py\&.
+.SS "def __main__\&.readConfig ()"
+
+.PP
+Definition at line 912 of file __main__\&.py\&.
+.SS "def __main__\&.startCamera ( config)"
+
+.PP
+Definition at line 962 of file __main__\&.py\&.
+.SS "def __main__\&.switchCam ()"
+
+.PP
+Definition at line 975 of file __main__\&.py\&.
+.SS "def __main__\&.threshold_range ( im,  lo,  hi)"
+
+.PP
+Definition at line 231 of file __main__\&.py\&.
+.SS "def __main__\&.threshold_video ( lower_color,  upper_color,  blur)"
+
+.PP
+Definition at line 240 of file __main__\&.py\&.
+.SS "def __main__\&.translateRotation ( rotation,  width,  height)"
+
+.PP
+Definition at line 744 of file __main__\&.py\&.
+.SH "Variable Documentation"
+.PP 
+.SS "list __main__\&.avg = [0 for i in range(0, 8)]"
+
+.PP
+Definition at line 778 of file __main__\&.py\&.
+.SS "def __main__\&.boxBlur = \fBblurImg\fP(\fBframe\fP, \fBorange_blur\fP)"
+
+.PP
+Definition at line 1137 of file __main__\&.py\&.
+.SS "__main__\&.cameraCapture"
+
+.PP
+Definition at line 1014 of file __main__\&.py\&.
+.SS "list __main__\&.cameraConfigs = []"
+
+.PP
+Definition at line 874 of file __main__\&.py\&.
+.SS "list __main__\&.cameras = []"
+
+.PP
+Definition at line 1011 of file __main__\&.py\&.
+.SS "list __main__\&.cameraServer = \fBstreams\fP[\fBcurrentCam\fP]"
+
+.PP
+Definition at line 1020 of file __main__\&.py\&.
+.SS "def __main__\&.cap = \fBWebcamVideoStream\fP(\fBwebcam\fP, \fBcameraServer\fP, \fBimage_width\fP, \fBimage_height\fP)\&.\fBstart\fP()"
+
+.PP
+Definition at line 1022 of file __main__\&.py\&.
+.SS "__main__\&.configFile = '/boot/frc\&.json'"
+
+.PP
+FRC VISION PI Image Specific #############\&. 
+.PP
+Definition at line 866 of file __main__\&.py\&.
+.SS "__main__\&.cs"
+
+.PP
+Definition at line 1014 of file __main__\&.py\&.
+.SS "int __main__\&.currentCam = 0"
+
+.PP
+Definition at line 973 of file __main__\&.py\&.
+.SS "__main__\&.diagonalAspect = math\&.hypot(\fBhorizontalAspect\fP, \fBverticalAspect\fP)"
+
+.PP
+Definition at line 194 of file __main__\&.py\&.
+.SS "__main__\&.diagonalView = math\&.radians(68\&.5)"
+
+.PP
+Definition at line 187 of file __main__\&.py\&.
+.SS "__main__\&.fps = \fBFPS\fP()\&.\fBstart\fP()"
+
+.PP
+Definition at line 1032 of file __main__\&.py\&.
+.SS "__main__\&.frame = \fBflipImage\fP(\fBimg\fP)"
+
+.PP
+Definition at line 1071 of file __main__\&.py\&.
+.SS "int __main__\&.frameStop = 0"
+
+.PP
+Definition at line 176 of file __main__\&.py\&.
+.SS "int __main__\&.green_blur = 1"
+
+.PP
+Definition at line 203 of file __main__\&.py\&.
+.SS "int __main__\&.H_FOCAL_LENGTH = \fBimage_width\fP / (2 * math\&.tan((\fBhorizontalView\fP / 2)))"
+
+.PP
+Definition at line 200 of file __main__\&.py\&.
+.SS "int __main__\&.horizontalAspect = 16"
+
+.PP
+Definition at line 190 of file __main__\&.py\&.
+.SS "int __main__\&.horizontalView = math\&.atan(math\&.tan(\fBdiagonalView\fP / 2) * (\fBhorizontalAspect\fP / \fBdiagonalAspect\fP)) * 2"
+
+.PP
+Definition at line 196 of file __main__\&.py\&.
+.SS "int __main__\&.image_height = 240"
+
+.PP
+Definition at line 183 of file __main__\&.py\&.
+.SS "int __main__\&.image_width = 416"
+
+.PP
+Definition at line 182 of file __main__\&.py\&.
+.SS "int __main__\&.ImageCounter = 0"
+
+.PP
+Definition at line 177 of file __main__\&.py\&.
+.SS "__main__\&.img = np\&.zeros(shape=(\fBimage_height\fP, \fBimage_width\fP, 3), dtype=np\&.uint8)"
+
+.PP
+Definition at line 1026 of file __main__\&.py\&.
+.SS "int __main__\&.k = cv2\&.waitKey(60) & 0xff"
+
+.PP
+Definition at line 1171 of file __main__\&.py\&.
+.SS "__main__\&.lower_green = np\&.array([40, 75, 75])"
+
+.PP
+Definition at line 208 of file __main__\&.py\&.
+.SS "__main__\&.lower_orange = np\&.array([0, 193, 92])"
+
+.PP
+Definition at line 211 of file __main__\&.py\&.
+.SS "__main__\&.lower_yellow = np\&.array([36, 50, 80])"
+
+.PP
+Definition at line 214 of file __main__\&.py\&.
+.SS "__main__\&.matchNumber = networkTableMatch\&.getNumber('MatchNumber', 0)"
+
+.PP
+Definition at line 1064 of file __main__\&.py\&.
+.SS "__main__\&.matchNumberDefault = random\&.randint(1, 1000)"
+
+.PP
+Definition at line 1045 of file __main__\&.py\&.
+.SS "__main__\&.networkTable = NetworkTables\&.getTable('ChickenVision')"
+
+.PP
+Definition at line 999 of file __main__\&.py\&.
+.SS "__main__\&.networkTableMatch = NetworkTables\&.getTable('FMSInfo')"
+
+.PP
+Definition at line 1001 of file __main__\&.py\&.
+.SS "__main__\&.ntinst = NetworkTablesInstance\&.getDefault()"
+
+.PP
+Definition at line 997 of file __main__\&.py\&.
+.SS "int __main__\&.orange_blur = 27"
+
+.PP
+Definition at line 204 of file __main__\&.py\&.
+.SS "def __main__\&.processed = 0"
+
+.PP
+Definition at line 1049 of file __main__\&.py\&.
+.SS "bool __main__\&.server = \fBTrue\fP"
+
+.PP
+Definition at line 873 of file __main__\&.py\&.
+.SS "bool __main__\&.start = \fBFalse\fP"
+
+.PP
+Definition at line 1094 of file __main__\&.py\&.
+.SS "list __main__\&.streams = []"
+
+.PP
+Definition at line 1012 of file __main__\&.py\&.
+.SS "__main__\&.streamViewer = \fBVideoShow\fP(\fBimage_width\fP, \fBimage_height\fP, \fBcameraServer\fP, \fBframe\fP=\fBimg\fP)\&.\fBstart\fP()"
+
+.PP
+Definition at line 1028 of file __main__\&.py\&.
+.SS "int __main__\&.switch = 1"
+
+.PP
+Definition at line 217 of file __main__\&.py\&.
+.SS "bool __main__\&.switched = \fBTrue\fP"
+
+.PP
+Definition at line 1092 of file __main__\&.py\&.
+.SS "bool __main__\&.tape = \fBTrue\fP"
+
+.PP
+Definition at line 1031 of file __main__\&.py\&.
+.SS "int __main__\&.team = 5024"
+
+.PP
+Definition at line 872 of file __main__\&.py\&.
+.SS "def __main__\&.threshold = \fBthreshold_video\fP(\fBlower_green\fP, \fBupper_green\fP, \fBframe\fP)"
+
+.PP
+Definition at line 1126 of file __main__\&.py\&.
+.SS "__main__\&.timestamp"
+
+.PP
+Definition at line 1062 of file __main__\&.py\&.
+.SS "__main__\&.upper_green = np\&.array([96, 255, 255])"
+
+.PP
+Definition at line 209 of file __main__\&.py\&.
+.SS "__main__\&.upper_orange = np\&.array([23, 255, 255])"
+
+.PP
+Definition at line 212 of file __main__\&.py\&.
+.SS "__main__\&.upper_yellow = np\&.array([55, 120, 120])"
+
+.PP
+Definition at line 215 of file __main__\&.py\&.
+.SS "int __main__\&.V_FOCAL_LENGTH = \fBimage_height\fP / (2 * math\&.tan((\fBverticalView\fP / 2)))"
+
+.PP
+Definition at line 201 of file __main__\&.py\&.
+.SS "int __main__\&.verticalAspect = 9"
+
+.PP
+Definition at line 191 of file __main__\&.py\&.
+.SS "int __main__\&.verticalView = math\&.atan(math\&.tan(\fBdiagonalView\fP / 2) * (\fBverticalAspect\fP / \fBdiagonalAspect\fP)) * 2"
+
+.PP
+Definition at line 197 of file __main__\&.py\&.
+.SS "list __main__\&.webcam = \fBcameras\fP[\fBcurrentCam\fP]"
+
+.PP
+Definition at line 1019 of file __main__\&.py\&.
+.SS "int __main__\&.yellow_blur = 27"
+
+.PP
+Definition at line 205 of file __main__\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

@@ -1,8 +1,21 @@
 var searchData=
 [
-  ['getjoystickdebug',['GetJoystickDebug',['../classOI.html#af44fd2ab4dcf13e3615e5c43e3577566',1,'OI']]],
-  ['getjoystickdrive',['GetJoystickDrive',['../classOI.html#a9facc170b5ac69ea63eda4ceabe4d12e',1,'OI']]],
-  ['getjoystickoperator',['GetJoystickOperator',['../classOI.html#a41cf0361ed435447b69562e79addf35c',1,'OI']]],
-  ['getsensor',['GetSensor',['../classArm.html#ae734aa2d6698c313ad956c163644b596',1,'Arm::GetSensor()'],['../classCrawlDrive.html#ab25479654856a91bb0ac2f8f3b06fb02',1,'CrawlDrive::GetSensor()']]],
-  ['gettriggers',['getTriggers',['../classDriveWithJoystick.html#ad71ea9e372b00ece4b89acaa93290b96',1,'DriveWithJoystick']]]
+  ['false',['False',['../RobotMap_8h.html#a306ebd41c0cd1303b1372c6153f0caf8',1,'RobotMap.h']]],
+  ['feed',['Feed',['../classrr_1_1PIDController.html#a619120c2527c1d35e1e78ff3d3fb4112',1,'rr::PIDController']]],
+  ['findball',['findBall',['../namespace____main____.html#a88ee527f8a219a0f7c60da2724f37f53',1,'__main__']]],
+  ['findcargo',['findCargo',['../namespace____main____.html#ab41b734cc6f57e818db093c4354a92f4',1,'__main__']]],
+  ['findhatch',['findHatch',['../namespace____main____.html#a75785ab16d7a568ea097ba2da97f103f',1,'__main__']]],
+  ['findhatches',['findHatches',['../namespace____main____.html#a8b17644ea1127d224f03849ba9d77cfd',1,'__main__']]],
+  ['findtape',['findTape',['../namespace____main____.html#a3e01fedc42c4587272b68873400905f3',1,'__main__']]],
+  ['findtargets',['findTargets',['../namespace____main____.html#a0006b8d0bec56588e17e7d416840ddbb',1,'__main__']]],
+  ['flap',['Flap',['../classFlap.html',1,'Flap'],['../classFlap.html#a9d811db192d51a21c663edf45c7e02d3',1,'Flap::Flap()']]],
+  ['flap_2ecpp',['Flap.cpp',['../Flap_8cpp.html',1,'']]],
+  ['flap_2eh',['Flap.h',['../Flap_8h.html',1,'']]],
+  ['flap_5fid_5fforward',['FLAP_ID_FORWARD',['../RobotMap_8h.html#a5b3f8b8d689a9bf39c27447a44393ede',1,'RobotMap.h']]],
+  ['flap_5fid_5freverse',['FLAP_ID_REVERSE',['../RobotMap_8h.html#a77b7a6aa701be9546d33dc55ffb6c272',1,'RobotMap.h']]],
+  ['flipimage',['flipImage',['../namespace____main____.html#ad0aff6d0fd9e4d4c4fe3144d4166b422',1,'__main__']]],
+  ['fps',['FPS',['../class____main_____1_1FPS.html',1,'__main__.FPS'],['../class____main_____1_1FPS.html#a3e5025cd471220b88db352835779b0d4',1,'__main__.FPS.fps()'],['../namespace____main____.html#a327b9bc914e027061f2643a58b96ff15',1,'__main__.fps()']]],
+  ['frame',['frame',['../class____main_____1_1VideoShow.html#ab282786aec7d59a2823c5bc5604161fb',1,'__main__.VideoShow.frame()'],['../namespace____main____.html#a840c6fc97ae7bd4cbc868b9469a83789',1,'__main__.frame()']]],
+  ['framestop',['frameStop',['../namespace____main____.html#a4ae10c9bf4365c1fb1e90f071dc4bd6f',1,'__main__']]],
+  ['frontcam',['frontCam',['../classRobot.html#a1a1d7afea01f4031a6b6cda75c0854a1',1,'Robot']]]
 ];

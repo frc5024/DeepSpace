@@ -1,0 +1,68 @@
+.TH "VisionMode/visionmode.py" 3 "Sun Apr 14 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+VisionMode/visionmode.py
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBvisionmode\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBvisionmode\&.centrePoint\fP (box)"
+.br
+.ti -1c
+.RI "def \fBvisionmode\&.midPoint\fP (box1, box2)"
+.br
+.ti -1c
+.RI "def \fBvisionmode\&.init\fP (config)"
+.br
+.ti -1c
+.RI "def \fBvisionmode\&.run\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBvisionmode\&.camera\fP = None"
+.br
+.ti -1c
+.RI "\fBvisionmode\&.cvsink\fP = None"
+.br
+.ti -1c
+.RI "\fBvisionmode\&.outputStreamStd\fP = None"
+.br
+.ti -1c
+.RI "int \fBvisionmode\&.height\fP = 480"
+.br
+.ti -1c
+.RI "int \fBvisionmode\&.width\fP = 640"
+.br
+.ti -1c
+.RI "int \fBvisionmode\&.cutoff\fP = 50"
+.br
+.ti -1c
+.RI "\fBvisionmode\&.source\fP = np\&.zeros(shape=(height, width, 3), dtype=np\&.uint8)"
+.br
+.ti -1c
+.RI "\fBvisionmode\&.output\fP = np\&.zeros(shape=(height, width, 3), dtype=np\&.uint8)"
+.br
+.ti -1c
+.RI "string \fBvisionmode\&.config_path\fP = '/boot/frc\&.json'"
+.br
+.ti -1c
+.RI "\fBvisionmode\&.config\fP = json\&.load(open(config_path))"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

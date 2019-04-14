@@ -1,9 +1,22 @@
 var searchData=
 [
-  ['deploy',['Deploy',['../classFlap.html#a0cdea0282233f2577b0c1deb4a78cf36',1,'Flap::Deploy()'],['../classHatchGripper.html#a1b04c75f807fd1d4edd061c07432c314',1,'HatchGripper::Deploy()'],['../classPiston.html#acb73e8a01121170782cbbec40e98b5f9',1,'Piston::Deploy()']]],
-  ['disabledinit',['DisabledInit',['../classRobot.html#a810e6143a208a6314491366e3c714357',1,'Robot']]],
-  ['disabledperiodic',['DisabledPeriodic',['../classRobot.html#a8c7309f5f1cb242ea8c74f1abf03b540',1,'Robot']]],
-  ['display',['Display',['../logging_8cpp.html#abe4d3595226743da6b7de6ea0acd72ec',1,'Display(clock_t start, clock_t current):&#160;logging.cpp'],['../Robot_8cpp.html#abe4d3595226743da6b7de6ea0acd72ec',1,'Display(clock_t start, clock_t current):&#160;Robot.cpp'],['../Robot_8h.html#abe4d3595226743da6b7de6ea0acd72ec',1,'Display(clock_t start, clock_t current):&#160;logging.cpp']]],
-  ['drivetrain',['DriveTrain',['../classDriveTrain.html#a90af56eee49c93d5b7d77065b42f660b',1,'DriveTrain']]],
-  ['drivewithjoystick',['DriveWithJoystick',['../classDriveWithJoystick.html#aec663d65d48661b956e8db0011092140',1,'DriveWithJoystick']]]
+  ['calculatedistance',['calculateDistance',['../namespace____main____.html#a98174906d92fc9453680f7122b56f890',1,'__main__']]],
+  ['calculatedistwpilib',['calculateDistWPILib',['../namespace____main____.html#a6a5e5954d458bdf64615862ff06615de',1,'__main__']]],
+  ['calculatepitch',['calculatePitch',['../namespace____main____.html#a5ead618be36f56c2b6a08105f144fb03',1,'__main__']]],
+  ['calculateyaw',['calculateYaw',['../namespace____main____.html#affb798b01d04b53dc923b00b75bec152',1,'__main__']]],
+  ['ccompressor',['cCompressor',['../classcCompressor.html#a8addd4e63a0c1ae2a37c1a679a79dd99',1,'cCompressor']]],
+  ['center',['Center',['../classSlider.html#a7b229e46d635a54c9b06b8c1d0ca45f4',1,'Slider']]],
+  ['centrepoint',['centrePoint',['../namespacevisionmode.html#a2cb363ab8621903f1ebb642521680772',1,'visionmode']]],
+  ['checkball',['checkBall',['../namespace____main____.html#af8ad0a748c7af14d66206b32a64de221',1,'__main__']]],
+  ['checkcontours',['checkContours',['../namespace____main____.html#ab2a80f661f3aa35254ac2a450909428a',1,'__main__']]],
+  ['checkhatch',['checkHatch',['../namespace____main____.html#a7a3279aa6c1ea6ef98bdc79655200b54',1,'__main__']]],
+  ['climb',['Climb',['../classClimb.html#ab2b55f2e3a94e081165d7124d1dacac0',1,'Climb']]],
+  ['climbmanager',['ClimbManager',['../classClimbManager.html#a986e298fa1a6d5eea387550eb48939a2',1,'ClimbManager']]],
+  ['coast',['Coast',['../classDriveTrain.html#a3238a769b9ca2c7f0d035392079cbbea',1,'DriveTrain']]],
+  ['controlcargo',['ControlCargo',['../classControlCargo.html#a7dc1408073348c7cf711bec7b8383454',1,'ControlCargo']]],
+  ['controlcompressor',['ControlCompressor',['../classControlCompressor.html#a57f0763440241c85c9568886137cd7ed',1,'ControlCompressor']]],
+  ['controlhatchgripper',['ControlHatchGripper',['../classControlHatchGripper.html#a213ec4cca59f173c7320d57fc0d44383',1,'ControlHatchGripper']]],
+  ['controllight',['ControlLight',['../classControlLight.html#ae100fe19101d5b007663184fec604d77',1,'ControlLight']]],
+  ['controlslider',['ControlSlider',['../classControlSlider.html#af60057476d259e3dc89990a5c04509dc',1,'ControlSlider']]],
+  ['crawldrive',['CrawlDrive',['../classCrawlDrive.html#ad53bca7266917feb5b696e8c9ba036f8',1,'CrawlDrive']]]
 ];

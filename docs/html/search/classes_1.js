@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['cameraconfig',['CameraConfig',['../class____main_____1_1CameraConfig.html',1,'__main__']]],
   ['ccompressor',['cCompressor',['../classcCompressor.html',1,'']]],
   ['climb',['Climb',['../classClimb.html',1,'']]],
   ['climbmanager',['ClimbManager',['../classClimbManager.html',1,'']]],

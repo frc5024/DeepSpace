@@ -1,0 +1,271 @@
+.TH "VisionMode/CameraTuner/__main__.py" 3 "Sun Apr 14 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+VisionMode/CameraTuner/__main__.py
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fB__main__\&.FPS\fP"
+.br
+.ti -1c
+.RI "class \fB__main__\&.VideoShow\fP"
+.br
+.ti -1c
+.RI "class \fB__main__\&.WebcamVideoStream\fP"
+.br
+.ti -1c
+.RI "class \fB__main__\&.CameraConfig\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fB__main__\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__main__\&.flipImage\fP (frame)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.blurImg\fP (frame, blur_radius)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.threshold_range\fP (im, lo, hi)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.threshold_video\fP (lower_color, upper_color, blur)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.findTargets\fP (frame, mask)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.findCargo\fP (frame, mask)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.findHatch\fP (frame, mask)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.findBall\fP (contours, image, centerX, centerY)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.findHatches\fP (contours, image, centerX, centerY)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.findTape\fP (contours, image, centerX, centerY)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.checkContours\fP (cntSize, hullSize)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.checkBall\fP (cntSize, cntAspectRatio)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.checkHatch\fP (cntSize, cntAspectRatio)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.translateRotation\fP (rotation, width, height)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.calculateDistance\fP (heightOfCamera, heightOfTarget, pitch)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.calculateDistWPILib\fP (cntHeight)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.calculateYaw\fP (pixelX, centerX, hFocalLength)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.calculatePitch\fP (pixelY, centerY, vFocalLength)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.getEllipseRotation\fP (image, cnt)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.parseError\fP (str)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.readCameraConfig\fP (config)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.readConfig\fP ()"
+.br
+.ti -1c
+.RI "def \fB__main__\&.startCamera\fP (config)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.switchCam\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fB__main__\&.frameStop\fP = 0"
+.br
+.ti -1c
+.RI "int \fB__main__\&.ImageCounter\fP = 0"
+.br
+.ti -1c
+.RI "int \fB__main__\&.image_width\fP = 416"
+.br
+.ti -1c
+.RI "int \fB__main__\&.image_height\fP = 240"
+.br
+.ti -1c
+.RI "\fB__main__\&.diagonalView\fP = math\&.radians(68\&.5)"
+.br
+.ti -1c
+.RI "int \fB__main__\&.horizontalAspect\fP = 16"
+.br
+.ti -1c
+.RI "int \fB__main__\&.verticalAspect\fP = 9"
+.br
+.ti -1c
+.RI "\fB__main__\&.diagonalAspect\fP = math\&.hypot(horizontalAspect, verticalAspect)"
+.br
+.ti -1c
+.RI "int \fB__main__\&.horizontalView\fP = math\&.atan(math\&.tan(diagonalView / 2) * (horizontalAspect / diagonalAspect)) * 2"
+.br
+.ti -1c
+.RI "int \fB__main__\&.verticalView\fP = math\&.atan(math\&.tan(diagonalView / 2) * (verticalAspect / diagonalAspect)) * 2"
+.br
+.ti -1c
+.RI "int \fB__main__\&.H_FOCAL_LENGTH\fP = image_width / (2 * math\&.tan((horizontalView / 2)))"
+.br
+.ti -1c
+.RI "int \fB__main__\&.V_FOCAL_LENGTH\fP = image_height / (2 * math\&.tan((verticalView / 2)))"
+.br
+.ti -1c
+.RI "int \fB__main__\&.green_blur\fP = 1"
+.br
+.ti -1c
+.RI "int \fB__main__\&.orange_blur\fP = 27"
+.br
+.ti -1c
+.RI "int \fB__main__\&.yellow_blur\fP = 27"
+.br
+.ti -1c
+.RI "\fB__main__\&.lower_green\fP = np\&.array([40, 75, 75])"
+.br
+.ti -1c
+.RI "\fB__main__\&.upper_green\fP = np\&.array([96, 255, 255])"
+.br
+.ti -1c
+.RI "\fB__main__\&.lower_orange\fP = np\&.array([0, 193, 92])"
+.br
+.ti -1c
+.RI "\fB__main__\&.upper_orange\fP = np\&.array([23, 255, 255])"
+.br
+.ti -1c
+.RI "\fB__main__\&.lower_yellow\fP = np\&.array([36, 50, 80])"
+.br
+.ti -1c
+.RI "\fB__main__\&.upper_yellow\fP = np\&.array([55, 120, 120])"
+.br
+.ti -1c
+.RI "int \fB__main__\&.switch\fP = 1"
+.br
+.ti -1c
+.RI "list \fB__main__\&.avg\fP = [0 for i in range(0, 8)]"
+.br
+.ti -1c
+.RI "string \fB__main__\&.configFile\fP = '/boot/frc\&.json'"
+.br
+.RI "FRC VISION PI Image Specific #############\&. "
+.ti -1c
+.RI "int \fB__main__\&.team\fP = 5024"
+.br
+.ti -1c
+.RI "bool \fB__main__\&.server\fP = \fBTrue\fP"
+.br
+.ti -1c
+.RI "list \fB__main__\&.cameraConfigs\fP = []"
+.br
+.ti -1c
+.RI "int \fB__main__\&.currentCam\fP = 0"
+.br
+.ti -1c
+.RI "\fB__main__\&.ntinst\fP = NetworkTablesInstance\&.getDefault()"
+.br
+.ti -1c
+.RI "\fB__main__\&.networkTable\fP = NetworkTables\&.getTable('ChickenVision')"
+.br
+.ti -1c
+.RI "\fB__main__\&.networkTableMatch\fP = NetworkTables\&.getTable('FMSInfo')"
+.br
+.ti -1c
+.RI "list \fB__main__\&.cameras\fP = []"
+.br
+.ti -1c
+.RI "list \fB__main__\&.streams\fP = []"
+.br
+.ti -1c
+.RI "\fB__main__\&.cs\fP"
+.br
+.ti -1c
+.RI "\fB__main__\&.cameraCapture\fP"
+.br
+.ti -1c
+.RI "list \fB__main__\&.webcam\fP = cameras[currentCam]"
+.br
+.ti -1c
+.RI "list \fB__main__\&.cameraServer\fP = streams[currentCam]"
+.br
+.ti -1c
+.RI "\fB__main__\&.cap\fP = WebcamVideoStream(webcam, cameraServer, image_width, image_height)\&.start()"
+.br
+.ti -1c
+.RI "\fB__main__\&.img\fP = np\&.zeros(shape=(image_height, image_width, 3), dtype=np\&.uint8)"
+.br
+.ti -1c
+.RI "\fB__main__\&.streamViewer\fP = VideoShow(image_width, image_height, cameraServer, frame=img)\&.start()"
+.br
+.ti -1c
+.RI "bool \fB__main__\&.tape\fP = \fBTrue\fP"
+.br
+.ti -1c
+.RI "\fB__main__\&.fps\fP = FPS()\&.start()"
+.br
+.ti -1c
+.RI "\fB__main__\&.matchNumberDefault\fP = random\&.randint(1, 1000)"
+.br
+.ti -1c
+.RI "int \fB__main__\&.processed\fP = 0"
+.br
+.ti -1c
+.RI "\fB__main__\&.timestamp\fP"
+.br
+.ti -1c
+.RI "\fB__main__\&.matchNumber\fP = networkTableMatch\&.getNumber('MatchNumber', 0)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.frame\fP = flipImage(img)"
+.br
+.ti -1c
+.RI "bool \fB__main__\&.switched\fP = \fBTrue\fP"
+.br
+.ti -1c
+.RI "bool \fB__main__\&.start\fP = \fBFalse\fP"
+.br
+.ti -1c
+.RI "def \fB__main__\&.threshold\fP = threshold_video(lower_green, upper_green, frame)"
+.br
+.ti -1c
+.RI "def \fB__main__\&.boxBlur\fP = blurImg(frame, orange_blur)"
+.br
+.ti -1c
+.RI "int \fB__main__\&.k\fP = cv2\&.waitKey(60) & 0xff"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

@@ -1,0 +1,121 @@
+.TH "visionmode" 3 "Sun Apr 14 2019" "Version 2019" "DeepSpace" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+visionmode
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBcentrePoint\fP (box)"
+.br
+.ti -1c
+.RI "def \fBmidPoint\fP (box1, box2)"
+.br
+.ti -1c
+.RI "def \fBinit\fP (\fBconfig\fP)"
+.br
+.ti -1c
+.RI "def \fBrun\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBcamera\fP = None"
+.br
+.ti -1c
+.RI "\fBcvsink\fP = None"
+.br
+.ti -1c
+.RI "\fBoutputStreamStd\fP = None"
+.br
+.ti -1c
+.RI "int \fBheight\fP = 480"
+.br
+.ti -1c
+.RI "int \fBwidth\fP = 640"
+.br
+.ti -1c
+.RI "int \fBcutoff\fP = 50"
+.br
+.ti -1c
+.RI "\fBsource\fP = np\&.zeros(shape=(\fBheight\fP, \fBwidth\fP, 3), dtype=np\&.uint8)"
+.br
+.ti -1c
+.RI "\fBoutput\fP = np\&.zeros(shape=(\fBheight\fP, \fBwidth\fP, 3), dtype=np\&.uint8)"
+.br
+.ti -1c
+.RI "string \fBconfig_path\fP = '/boot/frc\&.json'"
+.br
+.ti -1c
+.RI "\fBconfig\fP = json\&.load(open(\fBconfig_path\fP))"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def visionmode\&.centrePoint ( box)"
+
+.PP
+Definition at line 26 of file visionmode\&.py\&.
+.SS "def visionmode\&.init ( config)"
+
+.PP
+Definition at line 37 of file visionmode\&.py\&.
+.SS "def visionmode\&.midPoint ( box1,  box2)"
+
+.PP
+Definition at line 30 of file visionmode\&.py\&.
+.SS "def visionmode\&.run ()"
+
+.PP
+Definition at line 48 of file visionmode\&.py\&.
+.SH "Variable Documentation"
+.PP 
+.SS "visionmode\&.camera = None"
+
+.PP
+Definition at line 12 of file visionmode\&.py\&.
+.SS "visionmode\&.config = json\&.load(open(\fBconfig_path\fP))"
+
+.PP
+Definition at line 137 of file visionmode\&.py\&.
+.SS "visionmode\&.config_path = '/boot/frc\&.json'"
+
+.PP
+Definition at line 132 of file visionmode\&.py\&.
+.SS "int visionmode\&.cutoff = 50"
+
+.PP
+Definition at line 21 of file visionmode\&.py\&.
+.SS "visionmode\&.cvsink = None"
+
+.PP
+Definition at line 13 of file visionmode\&.py\&.
+.SS "int visionmode\&.height = 480"
+
+.PP
+Definition at line 18 of file visionmode\&.py\&.
+.SS "visionmode\&.output = np\&.zeros(shape=(\fBheight\fP, \fBwidth\fP, 3), dtype=np\&.uint8)"
+
+.PP
+Definition at line 24 of file visionmode\&.py\&.
+.SS "visionmode\&.outputStreamStd = None"
+
+.PP
+Definition at line 14 of file visionmode\&.py\&.
+.SS "visionmode\&.source = np\&.zeros(shape=(\fBheight\fP, \fBwidth\fP, 3), dtype=np\&.uint8)"
+
+.PP
+Definition at line 23 of file visionmode\&.py\&.
+.SS "int visionmode\&.width = 640"
+
+.PP
+Definition at line 19 of file visionmode\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DeepSpace from the source code\&.

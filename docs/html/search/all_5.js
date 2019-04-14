@@ -1,11 +1,16 @@
 var searchData=
 [
-  ['false',['False',['../RobotMap_8h.html#a306ebd41c0cd1303b1372c6153f0caf8',1,'RobotMap.h']]],
-  ['feed',['Feed',['../classrr_1_1PIDController.html#a619120c2527c1d35e1e78ff3d3fb4112',1,'rr::PIDController']]],
-  ['flap',['Flap',['../classFlap.html',1,'Flap'],['../classFlap.html#a9d811db192d51a21c663edf45c7e02d3',1,'Flap::Flap()']]],
-  ['flap_2ecpp',['Flap.cpp',['../Flap_8cpp.html',1,'']]],
-  ['flap_2eh',['Flap.h',['../Flap_8h.html',1,'']]],
-  ['flap_5fid_5fforward',['FLAP_ID_FORWARD',['../RobotMap_8h.html#a5b3f8b8d689a9bf39c27447a44393ede',1,'RobotMap.h']]],
-  ['flap_5fid_5freverse',['FLAP_ID_REVERSE',['../RobotMap_8h.html#a77b7a6aa701be9546d33dc55ffb6c272',1,'RobotMap.h']]],
-  ['frontcam',['frontCam',['../classRobot.html#a1a1d7afea01f4031a6b6cda75c0854a1',1,'Robot']]]
+  ['edgelight_2ecpp',['EdgeLight.cpp',['../EdgeLight_8cpp.html',1,'']]],
+  ['edgelight_2eh',['EdgeLight.h',['../EdgeLight_8h.html',1,'']]],
+  ['elapsed',['elapsed',['../class____main_____1_1FPS.html#af203fa2b58111106df9b7dacdb329633',1,'__main__::FPS']]],
+  ['elif',['elif',['../RobotMap_8h.html#a536da5a9011e776134af73232c4b3ce2',1,'RobotMap.h']]],
+  ['end',['End',['../classAutoClimbHigh.html#a92b4efa862dbacb787b1d83b839b0fc4',1,'AutoClimbHigh::End()'],['../classClimb.html#a0c0aac65f8e5f553bad90532a536ba5b',1,'Climb::End()'],['../classClimbManager.html#aea6c1857b1e437778d204372ff5662fd',1,'ClimbManager::End()'],['../classControlCargo.html#a381201dae2d011cfe0a89c661ce4370e',1,'ControlCargo::End()'],['../classControlCompressor.html#a95971025589dc45d321a64359f5497c0',1,'ControlCompressor::End()'],['../classControlHatchGripper.html#adca02d4a11b27eb11fcccf3a9cf08834',1,'ControlHatchGripper::End()'],['../classControlLight.html#a9efa89a800723b8d1ccce0f3fc41e9f3',1,'ControlLight::End()'],['../classControlSlider.html#a5474b23ea4faf503a62069c4d00978f9',1,'ControlSlider::End()'],['../classDriveWithJoystick.html#a8cf3328b991790b93c6615116f7c0434',1,'DriveWithJoystick::End()'],['../classPullArm.html#aa6c5d610e274b3442e4a07dd9aa21f95',1,'PullArm::End()'],['../classPullLeg.html#af133f5819a1ef12e6ada489963dfb671',1,'PullLeg::End()'],['../classTriggerDrive.html#affac8f87144c911be3c3ed40ed828ba3',1,'TriggerDrive::End()']]],
+  ['endheader',['EndHeader',['../RobotMap_8h.html#a4d88ee8d6095ded78f78e7eabaecf648',1,'RobotMap.h']]],
+  ['error',['error',['../classrr_1_1PIDController.html#a1ef07b814baa13a3681223d4bc19db87',1,'rr::PIDController']]],
+  ['execute',['Execute',['../classAutoClimbHigh.html#a239fa0968de8c4cd2bbb5e2de1d71859',1,'AutoClimbHigh::Execute()'],['../classClimb.html#a88027966400e15ac8053d25485bb9830',1,'Climb::Execute()'],['../classClimbManager.html#a0a3e245eac30123b894798b3d7b30a78',1,'ClimbManager::Execute()'],['../classControlCargo.html#a36b4e6596a86d9b88e3695709249c634',1,'ControlCargo::Execute()'],['../classControlCompressor.html#a28f8d2dd08c83f30d82722d34570a82e',1,'ControlCompressor::Execute()'],['../classControlHatchGripper.html#a156bc53642cff8d60d66720a66132dff',1,'ControlHatchGripper::Execute()'],['../classControlLight.html#a43c9a4d076002279b43a63dd9ba47a6e',1,'ControlLight::Execute()'],['../classControlSlider.html#a3822b3b901068b5b76a19b7640e883c0',1,'ControlSlider::Execute()'],['../classDriveWithJoystick.html#ae47c234f069c5f4d5004dba287f47e7b',1,'DriveWithJoystick::Execute()'],['../classPullArm.html#ada081fbca5104a0e39155d92167dd39b',1,'PullArm::Execute()'],['../classPullLeg.html#a1259c64cf1ab17fe75565014e5f6d781',1,'PullLeg::Execute()'],['../classTriggerDrive.html#a452d665729c476c5883d6a2bb80e67d0',1,'TriggerDrive::Execute()']]],
+  ['execute_5fcrawl',['Execute_Crawl',['../classAutoClimbHigh.html#a43c4ddb480690cdbed446d535876cc63',1,'AutoClimbHigh']]],
+  ['execute_5fdrive',['Execute_Drive',['../classAutoClimbHigh.html#a85bb33b6f9fcf6205556462fa0a7d8a8',1,'AutoClimbHigh']]],
+  ['execute_5flowerarm',['Execute_LowerArm',['../classAutoClimbHigh.html#a1120d86c2cde36618fb3cf1550ee01fc',1,'AutoClimbHigh']]],
+  ['execute_5flowerleg',['Execute_LowerLeg',['../classAutoClimbHigh.html#a31f9a012135bbde62af36b0a3291fc70',1,'AutoClimbHigh']]],
+  ['execute_5fraiseleg',['Execute_Raiseleg',['../classAutoClimbHigh.html#a70b72037c165ba09e284134e5634a12b',1,'AutoClimbHigh']]]
 ];
